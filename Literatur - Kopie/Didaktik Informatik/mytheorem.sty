@@ -1,0 +1,21 @@
+\newtheoremstyle{mydef}{15pt}{15pt} %
+    {\normalfont}{}{\bfseries}{}{\newline}{}
+    
+\newtheoremstyle{mysatz}{12pt}{12pt} %
+	{\itshape}{}{\bfseries}{}{\newline}{}
+    
+\newcounter{secnum}
+
+\swapnumbers
+\theoremstyle{mysatz} \newtheorem{thm}{Theorem}[section]
+\theoremstyle{mydef} \newtheorem{defn}[thm]{Definition}
+\theoremstyle{mysatz} \newtheorem{satz}[thm]{Satz}
+\theoremstyle{mydef} \newtheorem{bem}[thm]{Bemerkung}
+\theoremstyle{mysatz} \newtheorem{korollar}[thm]{Korollar}
+\theoremstyle{mysatz} \newtheorem{lemma}[thm]{Lemma}
+\theoremstyle{mydef} \newtheorem{bsp}[thm]{Beispiel}
+\theoremstyle{mydef} \newtheorem{nota}[thm]{Notation}
+\theoremstyle{mydef} \newtheorem{wdh}[thm]{Wiederholung}
+\theoremstyle{mysatz} \newtheorem{hsatz}[thm]{Hilfssatz}
+\theoremstyle{mydef} \newtheorem{folg}[thm]{Folgerung}
+\theoremstyle{mydef} \newtheorem{ra}[thm]{Restgliedabschätzungen}

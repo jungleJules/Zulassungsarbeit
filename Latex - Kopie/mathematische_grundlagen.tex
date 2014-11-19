@@ -1,0 +1,181 @@
+\chapter{Mathematische Grundlagen}\label{chap2}
+%
+In diesem Kapitel werden wir die Angeordneten Gruppen, deren Eigenschaften sowie die Wohlordnung auf Gruppen einführen. Anschließend betrachten wir die konvexen Untergruppen einer angeordneten Gruppe.  
+%
+\section{Angeordnete Gruppen}
+%
+\begin{defn}\label{defgs}
+Eine Menge A heißt teilweise geordnet, wenn die Relation $ \leqslant $ folgende Eigenschaften, für alle a,b,c$ \in $ A  erfüllt.
+%
+\begin{enumerate}
+\item[T1:] \textit{Reflexivität} a $\leqslant $ a,
+\item[T2:] \textit{Antisymmetrie} aus a $\leqslant $ b, b$ \leqslant $ a folgt a = b,
+\item[T3:] \textit{Transitivät} aus a $ \leqslant $ b, b $\leqslant $ c folgt a $ \leqslant $ c
+\end{enumerate}
+%
+$ \leqslant $ bezeichnet eine teilweise Ordnung auf A.
+\end{defn}
+
+Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 anschließende Bedingung erfüllt ist:
+%
+\begin{enumerate}
+\item[T4] Für alle a, b $ \in $ A besteht entweder a < b, oder a = b, oder a > b. (bisher nach Lsazlo Fuchs alles)
+\end{enumerate}
+%
+%
+\vspace{0.2cm}
+\noindent
+%
+%
+\begin{defn}\label{twgG}
+Eine teilweise geordnete Gruppe G ist eine Menge G mit folgenden Eigenschaften: (nach Fuchs)
+%
+\begin{enumerate}
+\item[G1:] G ist eine Gruppe bezüglich der Multiplikation,
+\item[G2:] eine teilweise geordnete Menge wie in \ref{defgs} bezüglich einer Relation $ \leqslant $ 
+\item[G3:] das Monotoniegesetz ist erfüllt: für a, b $\in $ G gilt aus a $ \leqslant $ b folgt ca $ \leqslant $ cb und ac $\leqslant $ bc für $\forall$ c $\in$ G.
+\end{enumerate}
+% 
+\end{defn}
+%
+%
+\begin{defn}\label{agG}
+Eine Gruppe wird als angeordnete Gruppe bezeichnet, wenn ihre Ordnung total ist.
+\end{defn}
+%
+%ab jetzt nach Priess crampe
+\begin{satz} \label{satzaGtf} 
+Eine angeordnete Gruppe ist torsionsfrei.
+\end{satz}
+%
+\beweis{
+Klar, denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit den Monotoniegesetz G4 ergeben. (formal siehe kleiner Block)
+}
+%
+%
+\begin{satz}\label{afG}
+%
+Genügt eine Teilmenge P einer Gruppe G den Bedingungen P1- P3, so ist (G,$\circ $) anordnungsfähig.
+%
+\begin{enumerate}
+\item[P1] {0} $\cup $P $\cup$ -P = G, P $\cap$ -P = $\varnothing$ 
+\item[P2] P $\circ$ P $\subseteq$ P
+\item[P3] P ist normal in G / % oder P vereinigt -P = G ??
+\end{enumerate}
+%(stimmt das?)
+\end{satz}
+%
+%
+\subsection{Archimedisch angeordnete Gruppen}
+%
+%
+\begin{defn}\label{archim}
+Eine Gruppe (G,+) heisst \textit{archimedisch}, wenn es $\forall$ a,b $\in$ G  mit 0 < a < b ein n $\in$ $\N $ gibt, mit b < na.
+\end{defn}
+%
+%
+\begin{defn}\label{uek}
+Seien a,b $\in$ G, wobei G eine angeordnete Gruppe. Das Element a wird als \textit{unendlich kleiner} als b bezeichnet, wenn gilt: \\
+\centerline{$|a|^n < |b|$  $\forall n \in \N $}
+\end{defn}
+%
+\begin{defn}\label{aae}
+Sei G eine angeordnete Gruppe, sei $|a|$ der absolute Betrag eines Elements a $\in$ G. Zwei Elemente a,b $\in$ G werden als \textit{archimedisch äquivalent} bezeichnet, a~b, wenn positive Zahlen m und n existieren, so dass: 
+$|a| < |b|^m $ und $|b| < |a|^n$. 
+\end{defn}
+%
+\newpage
+Daraus folgt, dass für jedes Paar von Elemente a,b$\in$ G genau eine der anschließenden Relationen gilt: (nach Fuchs)
+\begin{multicols}{3}
+\begin{enumerate}
+\item[(i)] a $\ll$ b, 
+\item[(ii)] a $\sim$ b,
+\item[(iii)] b $\ll$ a.
+\end{enumerate}
+\end{multicols}{3}
+%
+Des weiteren folgern wir aus Definition \ref{uek}, \ref{aae}:
+\begin{enumerate}
+\item[(i)] aus a $\ll$ b folgt $x^{-1}ax $ $\ll$ $x^{-1}bx$ $\forall$ x$\in$ G;
+\item[(ii)] aus a $\ll$ b und a $\sim$ b folgt c $\ll$ b;
+\item[(iii)] aus a $\ll$ b und b $\sim$ d, folgt a $\ll$ d;
+\item[(iv)] aus a $\ll$ b und b $\ll$ c folgt a $\ll$ c;
+\item[(v)] aus a $\sim$ b und b $\sim$ c folgt a $\sim$ c.
+\end{enumerate}
+Sind alle Elemente einer Gruppe archimedisch äquivalent, so ist die Gruppe archimedisch angeordnet. \\ Durch die archimedische Äquivalenz werden die Elemente von G in disjunkte Klassen unterteilt, die angeordnet werden können. (nach Fuchs) Bezeichne [x] die archimedische Klasse, in der das Element x $\in$ G liegt, [G] die Gesamtheit aller archimedischen Klassen von G. \\
+Sind zwei Elemente a, b $\in$ G nicht archimedisch äquivalent, gilt entweder:
+$\forall$ n $\in \N$ gilt: n*|a|<|b| oder $\exists$ n $\in \N $ sodass: n*|b| <|a|
+%
+\begin{satz}\label{agkku}
+Eine archimedische Gruppe enthält keine konvexen Untergruppen außer sich selbst und der trivialen.
+\end{satz}
+%
+%
+\beweis{
+??`machen!}
+%
+%
+\begin{satz}\label{aga} (nach Hölder)
+Eine angeordnete Gruppe ist genau dann archimedisch, wenn sie einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist. 
+Folglich sind alle archimedisch angeordneten Gruppen kommutativ.
+\end{satz}
+%
+%
+\beweis{
+"$\leftarrow$" Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe G gelten muss. \\
+"$\rightarrow$" 
+Beweis über archimedische Eigenschaft, o-Isomorphie einer einelementigen Gruppe zu der Gruppe der ganzen Zahlen (siehe S8 priess crampe), kommutativität von G, Dedekindschen Schnitt und Homomorphismus (s. fuchs S75) } 
+%
+%
+\subsection{Kette konvexer Untergruppen}
+In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten Gruppe. Eine Untergruppe einer angeordneten Gruppe nennen wir \textit{konvex}, wenn aus a $\in$ U, x $\in$ G, mit 0 < |x| < |a| folgt x $\in$ U. (nach \cite{priesscrampe69})
+Bezeichne $\sum$ die Kette konvexer Untergruppen einer angeordneten Gruppe G. $\sum$ besitzt folgende Eigenschaften:
+\begin{enumerate}
+\item[(1)] Gilt e $\in \sum$ und G $\in$ $\sum$ dann gilt, wenn $C_\lambda$ Untergruppe, dann gilt $\cup C_\lambda$ und $\cap C_\lambda$ liegen in $\sum$.
+\item[(2)] Ist C $\in\sum$ und g $\in\sum$, so ist $g^{-1}Cg\in\sum$
+\item[(3)] Sei D $\subset$ C und $\sum$ enthält keine Untergruppe zwischen C und D, so ist D normal in C und C/D ist isomorph zu einer Untergruppe der reellen Zahlen.
+\item[(4)] Sei D $\subset$ C und $\sum$ enthält keine Untergruppe zwischen C und D, so erzeugen dei Hauptautomorphismen von C/D einen Integritätsbereich $\Phi{C/D}$ im Endomorphismenring $\Psi{C/D}$. Der durch $\Phi{C/D}$ und durch die Quadratwurzeln der Hauptautomorphismen erzeugte Körper $\Gamma{C/D}$ ist einem Unterkörper der reellen Zahlen isomorph.
+\end{enumerate}
+%
+\begin{defn}\label{SkUgr}  (nach Malzew)
+Ein System $\sum$ aus Untergruppen einer Gruppe G ist System aller konvexen Untergruppen einer Anordnung von G, genau dann wenn $\sum$ den obigen Bedingungen (1)-(4) genügt.
+\end{defn}
+%
+%
+\subsection{Bewertung einer angeordneten abelschen Gruppe}
+Im Nachfolgenden betrachten wir (G,+) eine angeordnete abelsche Gruppe und eine angeordnete Menge $\Theta$ mit einem maximalen Element $\mu$. 
+%
+%
+\begin{defn}\label{bew}
+Eine \textit{Bewertung $\omega{a}$} mit $a\in$ G ist eine Funktion $\omega$: G -> $\Theta$, so dass
+%
+\begin{enumerate}
+\item[(i)] $\omega{(a)} = \mu $  <=> a = 0,
+\item[(ii)]  $\omega{(na)} = \omega{(a)} \forall n \in \N $
+\item[(iii)] $ \omega{(a+ b)} \ge min{(\omega{(a)}, \omega{b})}$
+\end{enumerate}
+%
+\end{defn}
+Die Gleichheit in der Bedingung (iii) gilt dann, wenn $\omega{(a)} \ne \omega{(b)} $. Zwei Bewertungen $\upsilon, \upsilon' $ auf G mit den Wertemengen $\Gamma , \Gamma' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma : \Gamma  \Gamma' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $
+Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil (Potenzringe/Laurentreihen) noch erörtert wird. %\referenz einfügen
+% 
+%
+\subsection{Der Hahnsche Einbettungssatz}
+%
+Wie in den vorherigen Paragraphen ausgeführt sind archimedische Gruppen abelsch und Untergruppen der additiven Gruppe der reellen Zahlen. Das heißt es gibt einen injektiven monotonen Homomorphismus f: G $\mapsto$ ($\R $, +). Existiert ein weiterer solcher Homomorphismus, g: G $\mapsto$ ($\R$, +), dann existiert genau eine reelle Zahl $\lambda$ > 0, mit g(x) = r*f(x), wobei x $\in$ G
+%
+\begin{satz}
+Jede angeordnete abelsche Gruppe ist zu einer Untergruppe eines angeordneten Vektorraumes über $\Q$ ordnungsisomorph. 
+\end{satz}
+%
+\begin{satz} (Hahn Einbettung nach Fuchs)
+Jeder angeordnete Vektorraum G über K(x), wobei K(x) der rationales Funktionenkörper, ist einem Unterraum des lexikographisch geordneten Funktionenraums W(G) o-isomorph. 
+\end{satz}
+
+
+\begin{satz} \label{hebs} (Hahn Einbettung nach Priess Crampe)
+ (Hahnscher Einbettungssatz, Hahn 1907)
+Eine angeordnete abelsche Gruppe A lässt sich ordnungstreu in die Hahn-Gruppe H($ \Gamma $, $ \R $) einbinden, wobei $ \Gamma$ = [A]\{[0]} .
+\end{satz}
+%
+%

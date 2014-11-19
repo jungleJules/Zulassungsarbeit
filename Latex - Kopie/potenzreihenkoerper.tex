@@ -1,0 +1,42 @@
+\chapter{Potenzreihenkörper}\label{chap3}
+%
+Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Über die Eigenschaften des Potenzreihenrings weisen wir nach, dass der Körper der formalen Laurentreihen dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht.
+Allgemein ist ein Ring folgendermaßen definiert:
+\begin{defn}\label{Ring} %nach Skript Funktionentheorie Kaiser
+Sei R eine nichtleere Menge und seien $\oplus: R \times R \to R \text{ und } \odot: R \times R \to R $ zwei Verknüpfungen auf R. Das Tripel (R, $\oplus, \odot$)
+%
+\begin{enumerate}
+\item[R1:] (R, $\oplus$ ) ist eine abelsche Gruppe,
+\item[R2:] (R, $\odot$) ist ein Monoid,
+\item[R3:] (Distributivgesetze) Für alle a,b,c $\in$ R gilt a $\cdot(b +c) = a \cdot b + a \cdot c \text{ und } (a+b) \cdot c = a \cdot c + b \cdot c $
+\end{enumerate}
+\end{defn}
+Das neutrale Element bezüglich der Addition wird mit $0_R$, das neutrale Element bezüglich der Multiplikation mit $1_R$ bezeichnet.
+Hervorzuheben ist, dass z keine Variable, die für eine Zahl steht repräsentiert, sondern eine Unbestimmte darstellt. Daraus ergibt sich die Irrelevanz von Konvergenzfragen in der Theorie der formalen Potenzreihenringe und -körper.
+%
+\section{Der Potenzreihenring}
+% kurze einführung in die potenzreihen mit Defintiion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
+Wir betrachten im Folgenden zunächst den Ring der formalen Potenzreihen über den komplexen Zahlen $\C$.
+Mit $\C [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in \C \rbrace $ wird die Menge der formalen Potenzreihen in z über $\C$ mit komplexen Koeffizienten bezeichnet. $\C [[z]] $ ist ein Ring bezüglich der Addition und Multiplikation wie in \ref{Rechnen} bewiesen. 
+
+\subsection{Rechnen im Potenzreihenring} \label{Rechnen}
+Im Folgenden werden Addition und Multiplikation in $\C[[z]]$ definiert sowie durch einen Nachweis der Ringaxiome (R1-R3) \ref{Ring} gezeigt, dass $\C[[z]]$ der Ring der formalen Potenzreihen ist. \\ \\
+Die Addition zweier formaler Potenzreihen erfolgt komponentenweise: \\ \\
+%
+$+: \C [[z]] \times \C [[z]] \to \C[[z]] \text{ , } \left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n $ \\ \\
+%
+$\cdot:  \C [[z]] \times \C [[z]] \to \C[[z]]: \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)= \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \\= \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)x_n$
+%
+%Einheiten im Potenzreihenring
+\\ \\ Sei $ f(x) := \sum_{n=0}^\infty  (-a_n)x^n$
+Das neutrale Element der Addition $0_R$ ist die Nullreihe  $ g(x) := \sum_{n=0}^\infty  (a_n)x^n$ , wobei $a_k= 0 \text{ für alle k } \in \N $. Dann folgt: $ \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \left(a_n+b_n\right)z^n = \sum_{n=0}^\infty a_nz^n $ 
+\\ \\
+Wir bezeichnen $ -f(x) := \sum_{n=0}^\infty  (-a_n)x^n$ als das Inverse der Addition.
+% noch zu bearbeiten nur copy paste bisher!        Das neutrale Element der Multiplikation ist die Einsreihe:  $ g(x) := \sum_{n=0}^\infty  (a_n)x^n$, wobei   Denn es gilt für $a_k= 0 \text{ für alle k } \in \N $ $ \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \left(a_n+b_n\right)z^n = \sum_{n=0}^\infty a_nz^n $ 
+\section{Der Potenzreihenkörper}
+%
+\subsection{Träger über ganzen Zahlen}
+\subsection{Träger über angeordneter abelscher Gruppe}
+\subsection{Addition und Multiplikation im Potenzreihenkörper}
+\subsection{Algebraische Abgeschlossenheit} %zusatz bachelorarbeit
+%
