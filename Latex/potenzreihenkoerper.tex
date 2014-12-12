@@ -1,0 +1,291 @@
+\chapter{Potenzreihenkörper}\label{chap3}
+%
+Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Als Beispiel eines Potenzreihenkörpers betrachten wir den Körper der Laurentreihen genauer, der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem ein Körper durch Einbettung des Ringes entsteht. Der dadurch entstandene Körper, wird als \textit{Potenzreihenkörper} bezeichnet. \\ 
+\section{Der Potenzreihenring}
+Allgemein ist ein Ring folgendermaßen definiert:
+\begin{defn}\label{Ring} %nach Skript Funktionentheorie Kaiser
+\cite{fischer08} Sei R eine nichtleere Menge und seien $\oplus: R \times R \to R \text{ und } \odot: R \times R \to R $ zwei Verknüpfungen auf R. Das Tripel (R, $\oplus, \odot$)
+%
+\begin{enumerate}
+\item[R1:] (R, $\oplus$ ) ist eine abelsche Gruppe,
+\item[R2:] (R, $\odot$) ist ein Monoid,
+\item[R3:] (Distributivgesetze) Für alle a,b,c $\in$ R gilt a $\cdot(b +c) = a \cdot b + a \cdot c \text{ und } \\
+(a+b) \cdot c = a \cdot c + b \cdot c $  
+\end{enumerate}
+\end{defn}
+Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
+%
+% kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
+Wir betrachten im Folgenden nur den Ring der formalen Potenzreihen K[[z]] über einem beliebigen Körper K. Hervorzuheben ist, dass z keine Variable, die für eine Zahl steht, repräsentiert, sondern eine Unbestimmte darstellt. Daraus ergibt sich die Irrelevanz von Konvergenzfragen in der Theorie der formalen Potenzreihenringe und -körper.
+Mit $K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace $ wird die Menge der formalen Potenzreihen in z über K bezeichnet. $K [[z]] $ ist ein Ring bezüglich der Addition und Multiplikation, wie in \ref{Rechnen} bewiesen wird. 
+
+\subsection{Rechnen im Potenzreihenring} \label{Rechnen}
+Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert sowie durch einen Nachweis der Ringaxiome \ref{Ring} \text{(R1-R3)} gezeigt, dass $K[[z]]$ der Ring der formalen Potenzreihen ist. \\ \\
+Formale Potenzreihen werden komponentenweise addiert: \\ \\
+%
+$+: K [[z]] \times K [[z]] \to K[[z]] \text{ , } \left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n $ \\ \\
+%
+Die Multiplikation zweier formaler Potenzreihen erfolgt durch die sogenannte Faltung:
+$\cdot:  K [[z]] \times K [[z]] \to K[[z]]: \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)  
+= \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n $
+\vspace{8pt}
+\\$= \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)x_n$
+%
+%Einheiten im Potenzreihenring
+\\ \\ Sei $ f(x) := \sum_{n=0}^\infty  (-a_n)x^n$. Das \textit{neutrale Element der Addition} $0_R$ ist die Nullreihe. Sei   \\
+$ g(x) := \sum_{n=0}^\infty  (a_n)x^n$ , wobei $a_k= 0 \text{ für alle k } \in \N $. Dann folgt: \\ $ \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \left(a_n+b_n\right)z^n = \sum_{n=0}^\infty a_nz^n $.
+\\ \\
+Wir bezeichnen $ -f(x) := \sum_{n=0}^\infty  (-a_n)x^n$ als das \textit{Inverse der Addition}.\\ Es gilt: $ f(x) + (-f(x)) = \sum_{n=0}^\infty  (a_n)x^n + (\sum_{n=0}^\infty  (-a_n)x^n) = \sum_{n=0}^{\infty}(a_n-a_n)z^n = 0_R. $ Das \textit{neutrale Element der Multiplikation} ist die Einsreihe.  Darunter verstehen wir diejenige Reihe, bei der nur der konstante Koeffizient $a_0$ = 1 und alle anderen gleich 0 sind:  $ g(x) := \sum_{n=0}^\infty  (a_n)x^n$, wobei $a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N\setminus\lbrace 0\rbrace $. \\ 
+Damit folgt: $ \sum_{j=0}^\infty a_jz^j \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
+Für das \textit{Inverse der Multiplikation} muss für zwei Potenzreihen $f, g \in K[[z]]$ nach Defintion gelten:
+\begin{center}
+$fg = \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)  
+\stackrel{\mathrm{def}}= \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \stackrel{\mathrm{!}}= 1$
+\end{center}
+Folglich muss $a_0b_0 = 1 \Rightarrow b_0 = \frac{1}{a_0} $ erfüllt sein. Außerdem folgt für die restlichen Koeffizientenwerte:
+\begin{center}
+$\sum_{j+k=n} (a_j b_k) = \sum_{k=0}^{n} a_nb_{n-k} = 0$, $\forall n \in \N, n > 0$. 
+\end{center}
+Die Koeffizienten $b_n$ werden rekursiv durch diese Gleichungen definiert und die so entstandene Potenzreihe ist die Inverse. \label{inverse}
+%
+
+%
+\subsection{Eigenschaften des Potenzreihenrings}
+Zunächst betrachten wir die Einheiten im Potenzreihenring bevor für die Erweiterung des Potenzreihenrings zu einem Körper wichtige Folgerungen bewiesen werden. 
+%evtl noch möglich zu zeigen dass c[[z]] ein nullteilerfreier Ring ist stellt sich nur die Frage ob das iwie nötig ist...
+%
+\begin{satz}\label{potenzreihenringEinheit}
+Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe P = $\sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ \\ \\
+\end{satz}
+\beweis{$"\Leftarrow" \text{ Beweis über Induktion.} \\
+\text{Sei } a_0 \neq 0 \Rightarrow \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1. \\ \text{Finde entsprechendes } \sum_{k=0}^{\infty}b_mz^m. \\ 
+\text{ Für } b_0 \text{ muss gelten } a_0b_0= 1. \text{ Da gilt } a_0 \neq 0 \text{ besitzt sie eine eindeutige Lösung,nämlich } b_0 = a_0^{-1}. \\
+\text{ Angenommen } \exists b_k \text{ mit } k < n \text{ sodass alle } c_m := a_j*b_k, 1\subseteq m < n \text{ gleich 0 sind.} \\
+\text{ Für den n-ten Koeffizienten ergibt sich } 0 \stackrel{\mathrm{def}} c_m = a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0 \\
+\text{Bis auf }b_n\text{ sind alle Werte festgelegt. Da } a_0 \neq 0 \text{ ist die Lösung für } b_n \text{ eindeutig.} \\
+"\Rightarrow" \text{  Es gilt } \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. \text{ Zu zeigen ist: } a_0 \neq 0.  \\
+\text{Es folgt } \sum_{j+k=n}a_jb_k = 0 \text{ für } n > 0  \text{ und } a_0b_0 = 1 \Rightarrow a_0 \neq 0 $}
+%
+%
+Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich 0 ist. 
+\begin{satz}\label{intring}
+Der Ring $K[[z]]$ ist ein Integritätsring.
+\end{satz}
+%
+\beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
+Seien $ f(x) := \sum_{n=0}^\infty  (a_n)x^n \text{ und } g(x) := \sum_{n=0}^\infty  (b_n)x^n$ mit 
+\begin{center}
+$ f(x) \cdot g(x) =  \sum a_nz^n \cdot \sum b_nz^n = 0$.
+\end{center} 
+Nach Definition der Multiplikation gilt also 
+\begin{center}
+$\sum_{j+k=n}a_jb_k = 0, \forall n \in \N $
+\end{center} 
+Sei nun o.B.d.A. $\sum a_nz^n \neq 0.$ Zu zeigen ist: $\sum b_nz^n = 0$.
+Dazu zeigen wir, dass kein Index n existiert für den $b_n = 0$ und somit:
+$[b_0, b_1,... ,b_{n-1} = 0 \Rightarrow b_n=0], \forall n \in\N$ 
+Sei k der erste Index sodass $a_k \neq 0$ gilt. 
+\begin{center}
+$\sum_{k+l=k} a_kb_l = \sum_{k+0=k} a_kb_0 = 0 $% da k+l=k
+\end{center} 
+Damit gilt $b_0=0$. 
+Seien jetzt $ b_0... b_{n-1}= 0. $ Mit $\sum_{k+l=n+l} a_kb_{n-k} = a_l b_n= 0$. Es folgt daher auch $b_n= 0$.}
+%
+%
+\begin{satz}\label{konvergentUnterring}
+Betrachte $\C\langle T \rangle$ die Menge der konvergenten Potenzreihen über dem Körper $\C$. $\C\langle T \rangle$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[x]$. %TODO: ich glaub das geht schon auch mit K, einfach einfügen wenn Kaiser anderes zeug korrigiert hat.
+\end{satz}
+\beweis{Wir haben bereits in \ref{intring} gezeigt, dass $\C[[z]$ ein Integritätsring ist. Nun bleibt für $\C\langle T \rangle$ noch zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
+Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des $min\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt besitzt denselben Konvergenzradius, da beide Reihen im Radius $min\lbrace r_1, r_2\rbrace $ absolut konvergieren und somit nach dem großen Umordnungssatz auch das Cauchyprodukt gegen den gleichen Wert. } %TODO:  Skript Funktionentheorie Beweis nachschauen!
+%
+%
+%
+%
+\begin{satz}\label{quotkoerper}
+Die Menge $Quot(R) : =  \lbrace(\tilde a, \tilde b) \in R \times (R\smallsetminus{0}): a\tilde b = \tilde a b\rbrace)$ mit R Integritätsring ist zusammen mit der \\
+Addition $Quot(R) \times Quot(R) \rightarrow Quot(R), \left(x,y\right) \mapsto x + y, \\
+\text{ und der Multiplikation: } Quot(R) \times Quot(R) \rightarrow Quot(R), (x,y) \mapsto x \cdot y$ ein Körper. \\Man bezeichnet ihn als \textit{Quotientenkörper} von R. \cite{fischer08}  %muss ich das beweisen? 
+\end{satz}
+\beweis{Es genügt die Körperaxiome nachzurechnen. (siehe \cite{fischer08} S. 173)
+%Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. \textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
+}
+Der Quotientenkörper ist bis auf Isomorphie der kleinste Körper in den R als Unterring eingebettet werden kann.
+%
+%
+\begin{bsp}
+Ist D $\leqslant \C$ ein Gebiet, so ist der Ring $ \Theta (D) $ der in G holomorphen Funktionen ein Integritätsring. Man nennt \\
+$ \Phi \left(D\right) := Quot\left( \Theta \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \Phi (D), g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert, sind also damit Definitionslücken in g. 
+\end{bsp}
+%
+%
+\begin{satz}\label{bewring}
+$K[[z]] $ ist ein diskreter Bewertungsring. \footnote{https://www.mathematik.uni-osnabrueck.de/fileadmin/mathematik/downloads/2012AlgKurven.pdf}
+\end{satz}
+%
+\beweis{Nach \ref{potenzreihenringEinheit} folgt $K[[z]]$ besitzt genau ein maximales Ideal nämlich $\mathfrak{m} = (z)$. Für eine Potenzreihe P, mit P $\notin K[[z]]^* $ gilt $a_0 \neq 0$. Somit lässt sich jede derartige Potenzreihe schreiben als $P=T \widetilde{P}, \text{ wobei } \widetilde{P} \text{ die umindizierte Potenzreihe bezeichnet. } \\
+\text{ Die Nullteilerfreiheit folgt wie in }\ref{intring} \text{ausführlicher gezeigt, denn: }
+\\
+\text{Für die Produktreihe FG, wobei F,G } \in K[[z]] \text{ und F, G von Null verschieden, gilt, dass ab den }\\
+\text{Indizes i, j gilt } a_i, \text{ } b_j \text{ } \neq 0 \text{ und somit } c_n := a_ib_j \neq 0. \\ K[[z]] \text{ ist noethersch, da } K[[z]] \text{ ein Hauptidealring, denn jedes Ideal } \neq 0 \text{ ist erzeugt von } z^j, \\
+\text{wobei j der kleinste Index ist, ab dem die Koeffizienten } c_n \text{ der Potenzreihen} \neq 0 \\
+\text{in dem Ideal sind.} 
+\text{ Denn für das maximale Ideal muss gelten, dass es von einem Element erzeugt}\\
+\text{ wird für das gilt: } a_0 = 0. \\
+\text{Andernfalls wäre die entsprechende Potenzreihe eine Einheit und würde somit ganz K[[z]]}
+\text{erzeugen.}  $} 
+ %
+ %
+Damit folgt, dass $K[[z]]$ isomorph zu einem, wie in Punkt \ref{chap2} beschriebenen Bewertungsring $ A:= {0} \cup \{x \in K * | v(x) \geqslant 0\}$ ist.  \\
+Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z)^3 \subset (z)^4 \subset ... $. \\
+
+
+\begin{satz}\label{quotbewring}
+Ist R ein diskreter Bewertungsring, so ist Quot(R) ein diskret bewerteter Körper mit der Bewertung v(a/b)=v(a)-v(b). 
+\end{satz}
+Nach \ref{quot} können wir jetzt zeigen, dass der Quotientenkörper des Ringes der formalen Potenzreihen, dem Körper der formalen Laurentreihen entspricht, auf den wir später näher eingehen werden. Anschließend definieren wir eine entsprechende Bewertung auf dem Körper der formalen Laurentreihen.
+
+%TODO: Definiere Bewertung auf Laurentreihenkörper - passt glaub ich :)
+%TODO: Beweise über Umformung zu Brüchen der Laurentreihen, dass es Quotientenkörper ist.- Beweis in Skript nachschaun
+%TODO: Definiere Träger des Körpers der formalen Laurentreihen
+%TODO: Überleting zu großem Hauptteil, dass es nicth nur Körper ist wenn Träger Z sondern auch bei angeordneter Gruppe -> WARUM?? 
+
+\section{Der Körper der formalen Laurentreihen}
+%
+Eine Erweiterung des Begriffs einer formalen Potenzreihe führt zu der formalen Laurentreihe. Diese unterscheidet sich bezüglich ihres Anfangsindex $n_0 \in \Z$ von den formalen Potenzreihen. Wir bezeichnen mit K((z)) die Menge aller Abbildungen f von $\Z$ in einen kommutativen Körper K, für die es ein Element x $\in \Z$ gibt, mit f(y) = 0 für alle $y < x $. Wenn wir von K sprechen ist im Folgenden immer ein kommutativer Körper gemeint. \newline 
+Laurentreihen spielen eine wichtige Rolle in der Funktionentheorie, da sie komplexe Funktionen beschreiben, welche auf einem Kreisring holomorph sind. In dieser Arbeit wird jedoch auf Konvergenzbetrachtungen verzichtet und nur formale Laurentreihen, also Laurentreihen in einer Unbestimmten z behandelt. % Quelle:  [H74] HENRICI, Peter: Applied and computational complex analysis, Volume 1, WileyInterscience publication, New York 1974.
+
+%
+\begin{defn}
+Eine Laurentreihe ist eine Reihe $\sum_{n= - k}^{\infty}a_nz^n$ mit $k \in \Z \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N $, wobei K ein kommutativer Körper ist. Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
+\end{defn}
+%
+ 
+Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da ansonsten die Multiplikation nicht definiert werden kann. Der Träger der Laurentreihe, also der Definitionsbereich der Funktion, die die Laurentreihe darstellt, ist folgendermaßen definiert: supp(f) := $\lbrace n \in \Z | a_n \neq 0 \rbrace$ \label{traeger}. 
+Zwei Laurentreihen werden addiert, indem man ihre entsprechenden Koeffizienten addiert. 
+%
+\begin{center}
+$ + : \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n $. 
+%
+%TODO: muss ich hier noch extra hinzufuegen, dass a_n = 0 fuer alle n < -k?? UND: stimmt das??? wichtig falls nicht BEWEIS ZU BEWERTUNG ÜBERARBEITEN \ref{LaurentreiheBewertung} 
+%
+\end{center} 
+Wie bereits erwähnt besitzen formale Laurentreihen nur endliche viele Terme mit negativen Exponenten, das bedeutet der Hauptteil besteht aus nur endlich vielen Summanden. Dadurch kann das Produkt zweier solcher Reihen durch Faltung definiert werden. \\
+Eine derartige Darstellung existiert, da $\text{K}((z)) $ als Quotientenkörper von K[[z]] definiert ist, wie in \ref{quot} gezeigt wird. \\
+Da jede Potenzreihe $\sum_{n=0}^{\infty} a_nz^n \text{ mit } a_0\neq0$ invertierbar in K[[z]], dem Ring der formalen Potenzreihen, ist, wird der Quotient $\frac{\sum_{n=0}^{\infty}  a_nz^n}{\sum_{m=0}^\infty b_mz^m}$ bis auf eine Potenz von z im Nenner gekürzt. 
+%
+\begin{center}
+$\cdot : \sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i + b_j\right) z^n $.  \cite{Lueneburg08}
+%
+%TODO: angeben dass m,n,i,j,k  element von Z sind?? muss ich da nicht auch sagen wobei i >... und j >= ...    Fußnote besser?!
+%
+\end{center}  
+%
+%
+%
+\begin{satz}\label{Laurentreihenkoerper}
+Sei K ein kommutativer Körper, und bezeichne K((z)) den Körper der formalen Laurentreihen. Dann ist K((z)) tatsächlich ein Körper. \cite{Lueneburg08}
+\end{satz}
+\beweis{ Sei f $\in$ K((z)). Dann gibt es ein i $\in \Z$ sodass die Potenzsumme mit Startwert i für alle Indizes n $\in Z $ mit n > i ungleich, für alle n < i gleich Null ist. Um zu zeigen, dass K((z)) ein Körper ist muss zu jedem Element von K((z)) ein Inverses existieren. Wir definieren g $\in K((z))$ rekursiv und zeigen, dass die so definierte Laurentreihe invers zu f ist.  Setze $g(n) := 0 \text{ für alle } n < -i \text{ und } g(-i) := f(i) ^{-1}.$ Sei $w \in \N$ und $g(-i)...g(-i+w-1)$ bereits definiert. Dann gilt nach Definition der Multiplikation in $K((z))$ und für $g(-i+w) := - f(i)^{-1} \sum_{m= -i}^{-i+w-1} g(m)f(w-m): $ 
+\begin{center}
+$ (gf)(w) = \sum_{n = i-i}^{\infty}\sum_{k+l=n}^{}\left(a_k + b_l\right) z^n  = \sum_{n = -i}^{-i + w}g(n)f(w-n).$  
+\end{center}
+Im Fall $w < 0 $ ist die Summe f(w-n) für $ -i \leq n \leq -i+w $ leer. <für $w= 0 $ folgt $gf(0) = g(-i)f(i)= 1$. Es bleibt der Fall $w > 0 $ zu  berücksichtigen: 
+\begin{center}
+$(gf)(w)= \sum_{n = -i}^{-i + w - 1}g(n)f(w-n) + g(-i+w)f(i) \stackrel{\mathrm{def von g}}= 0$
+\end{center}
+Also ist gf = 1 und aufgrund der Kommutativität folgt fg = 1, womit K((z)) ein Körper ist.
+}
+%
+%
+Mithilfe von \ref{quotkoerper} zeigen wir nun, dass der Körper der formalen Laurentreihen dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. 
+%
+\begin{satz}\label{quot}
+Es gilt $\K((z)) = Quot(K[[z]])$.
+\end{satz}
+\beweis{Nach Konstruktion von $K((z)) $ ist klar, dass $K[[z]]\subseteq K((z)) $ Da weiter jede Laurentreihe $ f = \sum_{n\in\N} a_nz^n $ die Gestalt $\frac{g}{z^m}$ wobei $g\in K[[z]]$ und $m\in\N$ so ist $K((z)) $ der Quotientenkörper (siehe \ref{quotkoerper}) von $K[[z]]$
+}
+%TODO: Genauer Beweis hierzu: http://www.mathematik.uni-muenchen.de/~schotten/FT/loesungsskizzen/blatt-2-lsg.pdf
+%
+%
+Für $K((z))$ gilt, dass der Körper nur Reihen mit Hauptteilen aus endlichen vielen Summanden enthält. $K((z))$ ist definiert wie in \ref{quot} gezeigt als der Quotientenkörper des Ringes der formalen Potenzreihen. Jede Potenzreihe $\sum_{n\ge k} a_nz^n$ mit $a_0 \neq 0$ ist invertierbar in $K[[z]]$. Die Elemente können durch Quotienten dargestellt werden, bei denen alles bis auf eine Potenz von z aus dem Nenner gekürzt wird.
+Aus $\sum{n \subseteq k}a_nz^n = z^k \sum{n \subseteq 0}a_{n+k}z^n $ folgt, dass der Hauptteil aus endlich vielen negativen Koeffizienten besteht.  \\
+%
+Die formalen Laurentreihen bilden einen Oberring der Potenzreihen und stellen als Körper eine Körpererweiterung um das transzendente Element z dar. %\footnote{http://www.mathematik.uni-muenchen.de/~schotten/MIA/Muster/4_4.pdf}
+%
+%
+\begin{satz}
+Der Quotientenkörper von  $\C\langle z\rangle$ ist isomorph zum Körper der konvergenten Laurentreihen $\C_L \langle z \rangle$. %TODO: hier gilt gleiches wie oben, evtl zu K statt \C ändern.
+\end{satz}
+\beweis{ Wie in Beweis \ref{inverse} konstruieren wir das formale Inverse zu einer formalen Potenzreihe $f = \sum_{n= 0}^{\infty} a_nz^n \in \C\langle T\rangle $ mit $a_0 \neq 0$. Wir müssen zeigen, dass auch dieses Inverse konvergiert. Nach Voraussetzung konvergiert $f$ und wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N}$ in f beschränkt ist, also $|a_n| \le a, \forall n \in  \N, a \in \C$. Betrachte $f(z_0) = \sum_{n = -k}^{\infty} a_n {z_0}^n $ konvergente Laurentreihe mit $|z_0| > 0$. Da $f(z_0)$ konvergent, ist die Folge ${(a_n|z_0|)}_{n\in\N} $ beschränkt und für die Potenzreihe gilt: \\
+\begin{center}
+$\overline{f}(\omega) := \sum_{n=0}^{\infty}a_n{z_0}^n {\frac{z}{z_0}}^n = \sum_{n=0}^{\infty}a_nz^n =  f(z)$ mit $ \omega:= \frac{z}{z_0}$
+\end{center} 
+Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ der inversen wie in \ref{inverse}. Es gilt:
+\begin{center}
+$b_n = - \sum_{k=1}^{n} a_k b_{n-k}$. 
+\end{center}
+Indem wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$ geben wir eine positive untere Schranke an den Konvergenzradius an und zeigen somit das Inverse konvergiert. Wir zeigen mithilfe von Induktion, es existiert ein $C > 1$ mit $C \in \R $ sodass:  
+\begin{center}
+$|b_n| \le (aC)^n$
+\end{center}
+Nach Konstruktion des Inversen \ref{inverse} ist die Ungleichung für $b_0$ erfüllt. Gelte die Abschätzung für $b_n$. Wähle $ C:= \frac{a}{a-1}$. Dann gilt: \\
+$|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le aC^n\sum_{k=1}^{n+1}a^k \le aC^n\frac{a^{n+1}}{a-1} \le \left(aC\right)^{n+1}$.
+Wie in \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren ist noch zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist, dies wurde bereits in \ref{konvergentUnterring} für Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist natürlich wieder konvergent, man muss nur den Nebenteil betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multpliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+Nun definieren wir wie in \ref{quot} die Abbildung $\Phi:\C_L\langle z \rangle \rightarrow Quot(\C \langle z \rangle ) $
+$ \sum_{n= -m}^{\infty} a_n z^n \mapsto  \begin{cases}
+  \lbrack \left( z^{m} \sum_{n= -m}^{\infty}a_n z^n , z^m \right)\rbrack,  & \text{wenn }m < 0,\\
+  \lbrack \sum_{n= -m}^{\infty} a_n z^n, 1 \rbrack, & \text{wenn } m > 0.
+\end{cases} $. Wie in \ref{quot} bereits gezeigt, handelt es sich um einen Isomorphismus und die Behauptung ist somit bewiesen. %TODO: in \ref{quot} den Beweis von Schotten dass Isomorphismus ist nnoch durchführen.
+}
+%
+%
+%
+Wie in \ref{bewring} gezeigt, ist $K[[z]]$ ein diskreter Bewertungsring und der kleinste vorkommende Exponent eines Monoms liefert die Bewertung einer Potenzreihe. Der Quotientenkörper eines diskreten Bewertungsrings besitzt ebenso eine Bewertung \ref{quotbewring}. So können wir auf dem Körper der Laurentreihen eine Bewertung finden.
+Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp(f) := $\lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus (nach B3 \ref{bewKoerper}). Betrachte $min\{\left(supp(f)\right)\}$, eindeutig bestimmt durch den kleinsten Index $n_0$ der Laurentreihe ab dem der Koeffizient $a_{n_0} \neq 0 $. Die Menge all dieser Elemente bildet eine angeordnete abelsche Gruppe $\Psi $ und es gibt einen Isomorphismus von $\psi: \text{ }\Psi \rightarrow \Z$. \\
+%
+%
+%
+\begin{satz} \label{LaurentreiheBewertung}
+Betrachte die Laurentreihe $ f(z)=\sum_{n = n_0}^{\infty}a_n z^n \text{, mit } a_{n_0} \neq 0 \text{ Die Abbildung } v:K((z))-> \Z \text{ definiert durch } v(f)=n_0$ ist eine diskrete Bewertung.
+\end{satz}
+%
+\beweis{Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $ v(f) = min\{\lbrace(supp(f)\rbrace)\}$. Nach \ref{bewKoerper} sind noch (B1-B3') nachzuweisen mit der angeordneten abelschen Gruppe ($\Z$, +) als Bildmenge. 
+\begin{enumerate}
+\item [zu B1]: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
+\item[zu B2]: Sei $f(z)=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g(z)=\sum_{m = m_0}^{\infty}b_m z^m. \text{ Dann ist } v(f) = n_0 \text{ und } v(g) = m_0 \text{ Damit gilt: } v(f) + v(g) = n_0 + m_0.$ \\
+$v(f*g) = v( \sum_{n \in \Z}\sum_{n= m+k}a_mb_kz^n) = $, wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0 \text{ für }k < m_0$. Betrachte $ n < n_0 + m_0 $. Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. Nach Voraussetzung folgt entweder $a_m = 0 \text{ oder } b_k = 0 \text{ und somit ist auch das Produkt } a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0 \text{ und } b_{m_0} \neq 0. \text{ Sei } n = n_0 + m_0. \text{ Das Produkt } \\ a_{n_0}b_{m_0} \neq 0 \text{ und daher } v(fg) = n_0+m_0. $
+\item[zu B3]: Für  v(f+g) gilt, wenn f, g wie oben definiert: $v\left(f+g\right) = v\left( \sum_{n = min\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) = min\lbrace n_0,m_0 \rbrace \leqslant  max \lbrace n_0, m_0\rbrace \stackrel{\mathrm{def}}= max\lbrace v(f), v(g)\rbrace$.
+\end{enumerate}
+} 
+
+
+
+
+%
+%\begin{satz}
+%Der Körper der formalen Laurentreihen über $\C$ $\C((z)) = \lbrace \sum_{n = n_0}^{\infty}a_nz^n: n_0 \in \Z, a_n \in \C, a_{n_0} \neq 0\rbrace\ $ist vollständig bezüglich der in \ref{LaurentreiheBewertung} definierten diskreten Bewertung. 
+%\end{satz}
+%\beweis{Betrachte die Cauchy-Folge ${(\sum_{n= n_i}^{\infty}a_{n,i}z^n)}_{i\in\N}$. Die Menge der Startindizies $n_i$ ist nach unten beschränkt, und kann nicht beliebig klein werden. Damit ist der Träger  }%TODO: siehe forum matheraum: beweisen mit cauchyfolge
+%Der Träger einer formalen Laurentreihe $f(z)=sum{n = n_0}{\infty}a_n z^n$ konzentriert sich auf die Menge $ \mathtt{T}  := supp(f) = \lbrace n_0, n_0 + 1, n_0 +2, ..., deg(f)\rbrace \subseteq \Z $.
+
+
+
+
+
+
+\section{Der Potenzreihenkörper}
+%
+\subsection{Träger über ganzen Zahlen}\label{traegerGanz}
+Betrachte wieder den Körper der formalen Laurentreihen über dem Körper K. Wie in \ref{traeger} definiert ist $\mathtt{T}$ eine Teilmenge der ganzen Zahlen und da für jede Teilmenge ein Minimum existieren, ist $\mathtt{T}$ wohlgeordnet nach \ref{wohlgeordn}. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper K((z)). 
+%
+%
+\subsection{Träger über angeordneter abelscher Gruppe}
+Wir haben im vorherigen Kapitel festgestellt, dass die bisher betrachteten Potenzreihen immer auf den natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) definiert waren. In \ref{traegerGanz} wurde gezeigt, dass die Mengen auf denen wir Potenzreihenringe definieren können eine bestimmte unverzichtbare Eigenschaft innewohnt, die Wohlordnung. Im Folgenden betrachten wir bestimmte Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten Gruppen. Die nachfolgenden Ausführungen orientieren sich an \cite{fuchs66}.\\
+%
+Sei G eine angeordnete Gruppe und K ein Körper. 
+\begin{defn}\label{formaleSumme}
+$\Phi := \sum_{a \in G}^{} \Phi_a a$ mit ($\Phi_a \in F$), wobei $supp(\Phi) = \lbrack a \in G | \Phi_a \neq 0\rbrack$ wohlgeordnet sei bezüglich der Anordnung von G. $\Phi$ nennt man eine formale Potenzreihe auf G über K.
+\end{defn}
+\subsection{Addition und Multiplikation im Potenzreihenkörper}
+\subsection{Algebraische Abgeschlossenheit} %zusatz bachelorarbeit
+%

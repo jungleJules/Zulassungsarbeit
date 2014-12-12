@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: alphadin.bst
+Database file #1: literaturverzeichnis.bib
+Warning--entry type for "priesscrampe69" isn't style-file defined
+--line 22 of file literaturverzeichnis.bib
+Warning--empty chapter in hoelder1901
+You can't pop an empty literal stack for entry hoelder1901
+while executing---line 2205 of file alphadin.bst
+Warning--empty chapter in Lueneburg08
+You can't pop an empty literal stack for entry Lueneburg08
+while executing---line 2205 of file alphadin.bst
+Warning--empty chapter in malzew48
+You can't pop an empty literal stack for entry malzew48
+while executing---line 2205 of file alphadin.bst
+(There were 3 error messages)

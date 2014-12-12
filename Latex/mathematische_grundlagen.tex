@@ -1,0 +1,220 @@
+\chapter{Mathematische Grundlagen}\label{chap2}
+%TODO: WOHLORDNUNG DEFINIEREN!!!
+In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die später benötigt werden. Zunächst betrachten wir die wichtigsten Eigenschaften angeordneter Gruppen. Die Kette der konvexen Untergruppen spielt eine wichtige Rolle bei der Anordnungsfähigkeit von Gruppen. Hölders Aussage, archimedisch angeordnete Gruppen lassen sich in die additive Gruppe des $\R$ einbetten,  führt uns zur allgemeineren Form: dem Hahnschen Einbettungssatz. Dieser besagt, dass angeordnete abelsche Gruppen auch als Untergruppen eines lexikographisch geordneten reellen Funktionenraums, beispielsweise der Körper der Laurentreihen, verstanden werden können. \\
+Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die reellen Funktionen die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann.  
+%
+\section{Angeordnete Gruppen}
+%
+\begin{defn}\label{defgs} 
+Eine Menge A heißt \textit{teilweise geordnet}, wenn die Relation $ "\leqslant" $ folgende Eigenschaften, für alle a,b,c $ \in $ A  erfüllt.
+%
+\begin{enumerate}
+\item[T1:] \textit{Reflexivität} a $\leqslant $ a,
+\item[T2:] \textit{Antisymmetrie} aus a $\leqslant $ b, b$ \leqslant $ a folgt a = b,
+\item[T3:] \textit{Transitivät} aus a $ \leqslant $ b, b $\leqslant $ c folgt a $ \leqslant $ c
+\end{enumerate}
+%
+"$ \leqslant $" bezeichnet eine teilweise Ordnung auf A.
+\end{defn}
+Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 anschließende Bedingung erfüllt ist:
+%
+\begin{enumerate}
+\item[T4:] Für alle a, b $ \in $ A besteht entweder a < b, oder a = b, oder a > b. \cite{fuchs66}
+\end{enumerate}
+%
+%
+\begin{defn}\label{twgG}
+Eine \textit{teilweise geordnete Gruppe G} bezeichnet eine Menge G mit folgenden Eigenschaften: 
+%
+\begin{enumerate}
+\item[G1:] G ist eine Gruppe bezüglich der Multiplikation,
+\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $" \leqslant "$, wie in \ref{defgs} 
+\item[G3:] das Monotoniegesetz ist erfüllt: für a, b $\in $ G gilt aus a $ \leqslant $ b folgt ca $ \leqslant $ cb und ac $\leqslant $ bc für $\forall$ c $\in$ G. \cite{fuchs66}
+\end{enumerate}
+% 
+\end{defn}
+%
+%
+\begin{defn}\label{agG}
+Eine Gruppe wird als \textit{angeordnete Gruppe} bezeichnet, wenn ihre Ordnung total ist.
+\end{defn}
+%
+%ab jetzt nach Priess crampe
+\begin{satz} \label{satzaGtf} 
+Jede angeordnete Gruppe ist torsionsfrei. \cite{priesscrampe83}
+\end{satz}
+%
+\beweis{
+Klar, denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz [G4] \ref{twgG} ergeben. %(formal siehe kleiner Block)
+}
+%
+%
+\begin{defn}\label{afG}
+%
+Genügt eine Teilmenge P einer Gruppe G den Bedingungen P1- P3, so nennt man (G,$\circ $) \textit{anordnungsfähig}.
+%
+\begin{enumerate}
+\item[P1:] {0} $\cup $P $\cup$ -P = G, P $\cap$ -P = $\varnothing$ 
+\item[P2:] P $\circ$ P $\subseteq$ P
+\item[P3:] P ist normal in G / % oder P vereinigt -P = G ??
+\end{enumerate}
+%(stimmt das?)
+\end{defn}
+%
+%
+Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen.
+G $\neq \, \text{ versehen mit der Ordnungsrelation }\prec$. 
+\begin{defn} \label{wohlgeordn}
+Eine angeordnete Menge nennt man \textit{wohlgeordnet}, wenn für jede nichtleere Teilmenge V von W ein kleinstes Element enthält. Das heisst $\exists x \in V, \text{ mit } u \le v, \forall v \in V.$ \cite{fuchs66} 
+\end{defn}
+%
+Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Die Anordnung der natürlichen Zahlen $ \N$ ist eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung "$\prec$" total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
+\begin{lemma}
+Ist M $ \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat M ein eindeutig bestimmtes kleinstes Element. \cite{rainer08}
+\end{lemma} 
+\beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
+}
+
+%TODO: soll ich beweisen, wie ganze Zahlen konstruiert werden? Und dass natürliche Zahlen wohlgeordnet sind?
+%
+\begin{bsp}
+Betrachte die Ordnung: $ a\prec b \Leftrightarrow (|a| \le|b| \vee |a| = |b|, a > 0).$ \newline %\footnote{http://www.mathematik.tu-dortmund.de/lsviii/new/media/veranstaltungen/wise1011/mathinf1/SkriptRek.pdf}. 
+Daher gilt in $\Z$: $ 0 \prec 1 \prec -1 \prec 2 \prec -2 ...$. \newline
+Das kleinste Element von $\Z$ in dieser Ordnung entspricht dem Element mit dem kleinsten Index. 
+\end{bsp}
+\subsection{Archimedisch angeordnete Gruppen}
+%
+Die folgenden Ausführungen sind angelehnt an das Kapitel $"$Angeordnete Gruppen" (S. 73- 93) in \cite{fuchs66}, sowie Arbeiten von Priess- Crampe \cite{priesscrampe69}, \cite{priesscrampe83}.
+%
+\begin{defn}\label{archim}
+Eine angeordnete Gruppe (G,+) heisst \textit{archimedisch}, wenn es $\forall$ a, b $\in$ G  mit $0 < a < b$ ein $n \in \N $ gibt, mit $b < na$.
+\end{defn}
+%
+%
+\begin{defn}\label{uek}
+Seien a, b $\in$ G, wobei G eine angeordnete Gruppe sei. Das Element a wird als \textit{unendlich kleiner} als b bezeichnet, wenn gilt: \\
+\centerline{$|a|^n < |b|$  $\forall n \in \N $}
+\end{defn}
+%
+\begin{defn}\label{aae}
+Sei G eine angeordnete Gruppe, und $|a|$ der absolute Betrag eines Elements a $\in$ G. Zwei Elemente a,b $\in$ G werden als \textit{archimedisch äquivalent} bezeichnet,$ a \sim b $, wenn positive Zahlen m und n existieren, so dass: 
+$|a| < |b|^m $ und $|b| < |a|^n$. 
+\end{defn}
+%
+\begin{folg}
+Daraus folgt, dass für jedes Paar von Elemente a, b $\in$ G genau eine der anschließenden Relationen gilt: 
+\begin{multicols}{3}
+\begin{enumerate}
+\item[(i)] a $\ll$ b, 
+\item[(ii)] a $\sim$ b,
+\item[(iii)] b $\ll$ a. 
+\end{enumerate}
+\end{multicols}
+%
+Des weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
+\begin{enumerate}
+\item[(i)] aus a $\ll$ b folgt $x^{-1}ax $ $\ll$ $x^{-1}bx$ $\forall$ x$\in$ G;
+\item[(ii)] aus a $\ll$ b und a $\sim$ b folgt c $\ll$ b;
+\item[(iii)] aus a $\ll$ b und b $\sim$ d, folgt a $\ll$ d;
+\item[(iv)] aus a $\ll$ b und b $\ll$ c folgt a $\ll$ c;
+\item[(v)] aus a $\sim$ b und b $\sim$ c folgt a $\sim$ c.
+\end{enumerate}
+Sind alle Elemente einer Gruppe archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
+Durch die archimedische Äquivalenz werden die Elemente von G in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne [x] die \textit{archimedische Klasse} in der das Element x $\in$ G liegt, [G] die Gesamtheit aller archimedischen Klassen von G. \\
+Sind zwei Elemente a, b $\in$ G nicht archimedisch äquivalent, gilt entweder:
+$\forall$ n $\in \N$: n*|a|<|b| oder $\exists$ n $\in \N $ sodass: n*|b| <|a|.
+\end{folg}
+%
+%\begin{satz}\label{agkku}
+%Eine archimedische Gruppe G enthält keine konvexen Untergruppen außer sich selbst und der trivialen.
+%\end{satz}
+%
+%
+%\beweis{
+%Angenommen es gibt eine Untergruppe $\left(U, \circ\right))$ $\subseteq$ G, mit $ U \neq \varnothing und U \neq G$. Nach den Untergruppenaxiomen gilt für $a, b \in U: a\circ b \in U$ Da G archimedisch geordnet ist und alle Elemente aus U natürlich auch in G liegen, muss für $a, b \in U \text{ gelten, wenn 0 < a < b dann gibt es ein n \in \N: } b < na.$ Da U echte Untergruppe von G, gibt es ein Element $x\in G, \text{ aber } x \notin U$. Da G archimedisch geordnet gibt es ein   }
+%
+%
+\begin{satz}\label{aga} 
+Eine angeordnete Gruppe ist genau dann archimedisch, wenn sie einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist. 
+Folglich sind alle archimedisch angeordneten Gruppen kommutativ.   \cite{hoelder1901}
+\end{satz}
+%
+%
+\beweis{
+"$\Leftarrow$" Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe G gelten muss. \\
+"$\Rightarrow$" 
+Beweis über archimedische Eigenschaft, o-Isomorphie einer einelementigen Gruppe zu der Gruppe der ganzen Zahlen (\cite{priesscrampe69} S. 8), Kommutativität von G, Dedekindschen Schnitt und Homomorphismus (\cite{fuchs66} S. 75) } 
+%
+%
+\subsection{Kette konvexer Untergruppen}
+In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten Gruppe. Untergruppen angeordneter Gruppen besitzen eine durch die teilweise Gruppenordnung induzierte teilweise Ordnung. Wir bezeichnen die Untergruppen als angeordnet, falls die ursprüngliche teilweise Ordnung ebenso eine Anordnung war.
+\begin{defn}
+Eine Untergruppe U einer angeordneten Gruppe G nennen wir \textit{konvex}, wenn aus a $\in$ U, x $\in$ G, mit 0 < |x| < |a| folgt x $\in$ U. (nach \cite{priesscrampe69})
+Bezeichne "$\sum$"  die \textit{Kette konvexer Untergruppen} einer angeordneten Gruppe G. $\sum$ besitzt folgende Eigenschaften:
+\begin{enumerate}
+\item[S1:] Gilt e $\in \sum$ und G $\in$ $\sum$ dann gilt, wenn $C_\lambda$ Untergruppe, dann gilt $\cup \text{ }C_\lambda$ und $\cap \text{ } C_\lambda$ liegen in $\sum$.
+\item[S2:] Ist C $\in\sum$ und g $\in\sum$, so ist $g^{-1}Cg\in\sum$
+\item[S3:] Sei D $\subset$ C und $\sum$ enthält keine Untergruppe zwischen C und D, so ist D normal in C und C/D ist isomorph zu einer Untergruppe der reellen Zahlen.
+\item[S4:] Sei D $\subset$ C und $\sum$ enthält keine Untergruppe zwischen C und D, so erzeugen die Hauptautomorphismen von C/D einen Integritätsbereich $\Phi{C/D}$ im Endomorphismenring $\Psi\lbrace C/D \rbrace$. Der durch $\Psi\lbrace C/D\rbrace$ und durch die Quadratwurzeln der Hauptautomorphismen erzeugte Körper $\Gamma\lbrace C/D\rbrace$ ist einem Unterkörper der reellen Zahlen isomorph.
+\end{enumerate}
+\end{defn}
+%
+\begin{bem}
+Für konvexe Untergruppen gelten folgende Eigenschaften:
+\begin{enumerate}
+\item Eine konvexe Untergruppe ist auch bezüglich der ganzen Gruppe konvex.
+\item Der Durchschnitt konvexer Untergruppen ist ebenso wieder eine konvexe Untergruppe.
+\end{enumerate}
+\end{bem}
+\begin{defn}\label{SkUgr}  
+Ein System $\sum$ aus Untergruppen einer Gruppe G nennen wir \textit{System aller konvexen Untergruppen} einer Anordnung von G, genau dann wenn $\sum$ den obigen Bedingungen S1 - S4 genügt. \cite{malzew48}
+\end{defn}
+%
+%
+\subsection{Einblick in die Bewertungstheorie}
+Im Nachfolgenden betrachten wir (G,+), eine angeordnete abelsche Gruppe und eine angeordnete Menge $\Theta$ mit einem maximalen Element $\mu$. 
+%
+%
+\begin{defn}\label{bew}
+Eine \textit{Bewertung $\omega\left(a\right)$} mit $a\in$ G ist eine Funktion $\omega$: G -> $\Theta$, so dass folgende drei Eigenschaften erfüllt sind:
+%
+\begin{enumerate}
+\item[B1:] $\omega{(a)} = \mu $  <=> a = 0,
+\item[B2:]  $\omega{(na)} = \omega{(a)} \text{  } \forall n \in \N $,
+\item[B3:] $ \omega{(a+ b)} \ge min\{(\omega{(a)}, \omega{(b)}\}$.
+\end{enumerate}
+%
+\end{defn}
+Die Gleichheit in der Bedingung (iii) gilt dann, wenn $\omega{(a)} \ne \omega{(b)} $. Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf G mit den Wertemengen $\Gamma , \Gamma' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma : \Gamma \text{ } \rightarrow \text{ } \Gamma' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $.\\
+Sei (G, +) eine angeordnete Gruppe, dann nennt man die Abbildung a $\mapsto$ [a]: G $\to$ [G] die \textit{natürliche Bewertung}. \cite{priesscrampe83}
+\begin{defn} \cite{priesscrampe83} \label{bewKoerper}
+Sei K ein Körper, ($\Theta, \cdot$) eine angeordnete abelsche Gruppe und $\overline{\Theta}  = \Theta \cup {0} $ mit 0 als absorbierendes Element für alle 0 < $\gamma \in \Theta$. Eine Abbildung $\omega: K \to \overline{\Theta} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie \ref{bew} [B1] erfüllt und zusätzlich folgendes gilt:
+%
+\begin{enumerate}
+\item[B2':] $\omega(ab) = \omega\left(a\right)\omega\left(b\right)) $ für alle $ a, b \in K$
+\item[B3':] $\omega\left(a+b\right) \leq max\lbrace v(a),\omega\left(b \right)\rbrace \text{ für alle }  a, b \in K. $
+\end{enumerate}
+\end{defn}
+Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil (Potenzringe/Laurentreihen) \ref{chap3} \ref*{LaurentreiheBewertung} noch erörtert wird. %\referenz einfügen
+Man bezeichnet $\omega: K \to \overline{\Theta} $ als diskrete Bewertung, falls gilt $ \overline{\Theta} = \Z$
+% 
+%
+\subsection{Der Hahnsche Einbettungssatz}
+%
+Wie in den vorherigen Paragraphen ausgeführt sind archimedische Gruppen abelsch und isomorph zu Untergruppen der additiven Gruppe der reellen Zahlen. Das heißt es gibt einen injektiven monotonen Homomorphismus f: G $\mapsto$ ($\R $, +). Existiert ein weiterer solcher Homomorphismus, g: G $\mapsto$ ($\R$, +), dann existiert genau eine reelle Zahl $\lambda$ > 0, mit g(x) = r*f(x), wobei x $\in$ G
+%
+\begin{satz}
+Jede angeordnete abelsche Gruppe ist zu einer Untergruppe eines angeordneten Vektorraumes über $\Q$ ordnungsisomorph. 
+\end{satz}
+%
+\begin{satz} 
+Jeder angeordnete Vektorraum G über K(x), wobei K(x) der rationales Funktionenkörper, ist einem Unterraum des lexikographisch geordneten Funktionenraums W(G) o-isomorph. 
+\end{satz}
+
+
+\begin{satz} \label{hebs} \cite{priesscrampe83}
+ (Hahnscher Einbettungssatz, Hahn 1907)
+Eine angeordnete abelsche Gruppe A lässt sich ordnungstreu in die Hahn-Gruppe H($ \Gamma $, $ \R $) einbinden, wobei $ \Gamma$ =$ [A]\ \{[0]\} $.
+\end{satz}
+%
+%TODO: ausarbeiten hahnscher und kette konvex!! zusammenhänge deutlich machen
