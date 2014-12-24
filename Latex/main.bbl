@@ -7,6 +7,13 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Car48]{carruth48}
+\textsc{Carruth}, Philip~W.:
+\newblock \emph{Generalized power series fields}.
+\newblock
+  \url{http://www.ams.org/journals/tran/1948-063-03/S0002-9947-1948-0024883-6/S0002-9947-1948-0024883-6.pdf}.
+\newblock \,Version:\,May 1948
+
 \bibitem[Fis08]{fischer08}
 \textsc{Fischer}, Gerd:
 \newblock \emph{Lehrbuch der Algebra}.

@@ -6,12 +6,12 @@ Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen
 \section{Angeordnete Gruppen}
 %
 \begin{defn}\label{defgs} 
-Eine Menge A heißt \textit{teilweise geordnet}, wenn die Relation $ "\leqslant" $ folgende Eigenschaften, für alle a,b,c $ \in $ A  erfüllt.
+Eine Menge A heißt \textit{teilweise geordnet}, wenn die Relation $ "\leqslant" $ folgende Eigenschaften für alle a,b,c $ \in $ A  erfüllt.
 %
 \begin{enumerate}
-\item[T1:] \textit{Reflexivität} a $\leqslant $ a,
-\item[T2:] \textit{Antisymmetrie} aus a $\leqslant $ b, b$ \leqslant $ a folgt a = b,
-\item[T3:] \textit{Transitivät} aus a $ \leqslant $ b, b $\leqslant $ c folgt a $ \leqslant $ c
+\item[T1:] \textit{Reflexivität: } a $\leqslant $ a,
+\item[T2:] \textit{Antisymmetrie: } Aus a $\leqslant $ b, b$ \leqslant $ a folgt a = b,
+\item[T3:] \textit{Transitivät: } Aus a $ \leqslant $ b, b $\leqslant $ c folgt a $ \leqslant $ c
 \end{enumerate}
 %
 "$ \leqslant $" bezeichnet eine teilweise Ordnung auf A.
@@ -19,7 +19,7 @@ Eine Menge A heißt \textit{teilweise geordnet}, wenn die Relation $ "\leqslant"
 Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 anschließende Bedingung erfüllt ist:
 %
 \begin{enumerate}
-\item[T4:] Für alle a, b $ \in $ A besteht entweder a < b, oder a = b, oder a > b. \cite{fuchs66}
+\item[T4:] Für alle a, b $ \in $ A besteht entweder a < b, oder a = b, oder a > b, wobei a < b $\Leftrightarrow a \leqslant b und a \neq b$. \cite{fuchs66}
 \end{enumerate}
 %
 %
@@ -28,8 +28,8 @@ Eine \textit{teilweise geordnete Gruppe G} bezeichnet eine Menge G mit folgenden
 %
 \begin{enumerate}
 \item[G1:] G ist eine Gruppe bezüglich der Multiplikation,
-\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $" \leqslant "$, wie in \ref{defgs} 
-\item[G3:] das Monotoniegesetz ist erfüllt: für a, b $\in $ G gilt aus a $ \leqslant $ b folgt ca $ \leqslant $ cb und ac $\leqslant $ bc für $\forall$ c $\in$ G. \cite{fuchs66}
+\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $" \leqslant "$, wie in \ref{defgs}, 
+\item[G3:] das Monotoniegesetz ist erfüllt: Für a, b $\in $ G gilt: Aus a $ \leqslant $ b folgt ca $ \leqslant $ cb und ac $\leqslant $ bc für alle c $\in$ G. \cite{fuchs66}
 \end{enumerate}
 % 
 \end{defn}
@@ -45,60 +45,77 @@ Jede angeordnete Gruppe ist torsionsfrei. \cite{priesscrampe83}
 \end{satz}
 %
 \beweis{
-Klar, denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz [G4] \ref{twgG} ergeben. %(formal siehe kleiner Block)
+Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe \ref{aGa}. Denn: Angenommen die angeordnete Gruppe wäre nicht torsionsfrei so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz [G3] \ref{twgG} ergeben. %(formal siehe kleiner Block)
 }
 %
 %
-\begin{defn}\label{afG}
+\begin{bem}\label{afG}
 %
-Genügt eine Teilmenge P einer Gruppe G den Bedingungen P1- P3, so nennt man (G,$\circ $) \textit{anordnungsfähig}.
+Genügt eine Teilmenge $P := \lbrace x \in G | x \geqslant 0\rbrace$ einer Gruppe G den Bedingungen P1- P3, so nennt man (G,$\circ $) \textit{anordnungsfähig}. Wir nennen $P$ den Positivbereich von G.
 %
 \begin{enumerate}
-\item[P1:] {0} $\cup $P $\cup$ -P = G, P $\cap$ -P = $\varnothing$ 
+\item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$ 
 \item[P2:] P $\circ$ P $\subseteq$ P
 \item[P3:] P ist normal in G / % oder P vereinigt -P = G ??
 \end{enumerate}
 %(stimmt das?)
-\end{defn}
+\end{bem}
 %
+\begin{bem}\label{angeordnetAbelsch}
+Eine angeordnete Gruppe G ist eine abelsche Gruppe zusammen mit einem Positivbereich P. Man definiert dann $a \leq b \Leftrightarrow b - a \in P für a, b \in G$.
+%aus: http://wwwmath.uni-muenster.de/users/ischebeck/algebra.pdf 
+\end{bem}
+\begin{defn} \label{betrag}
+Der absolute Betrag $|a|$ eines Elements a $\in $ G, wobei G eine angeordnete Gruppe sei, ist definiert als $|a| = max\lbrace a, -a \rbrace$
+\end{defn}
 %
 Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen.
-G $\neq \, \text{ versehen mit der Ordnungsrelation }\prec$. 
+G $\neq \varnothing, \text{ versehen mit der Ordnungsrelation }\leqslant$. 
 \begin{defn} \label{wohlgeordn}
-Eine angeordnete Menge nennt man \textit{wohlgeordnet}, wenn für jede nichtleere Teilmenge V von W ein kleinstes Element enthält. Das heisst $\exists x \in V, \text{ mit } u \le v, \forall v \in V.$ \cite{fuchs66} 
+Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge V von W ein kleinstes Element enthält. Das heisst es existiert ein Element$ x \in V, \text{ mit } u \le v $ für alle $ v \in V.$ \cite{fuchs66} 
 \end{defn}
 %
-Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Die Anordnung der natürlichen Zahlen $ \N$ ist eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung "$\prec$" total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
-\begin{lemma}
+Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Die Anordnung der natürlichen Zahlen $ \N$ ist eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung "$\leqslant$" total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
+\begin{bem}
 Ist M $ \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat M ein eindeutig bestimmtes kleinstes Element. \cite{rainer08}
-\end{lemma} 
-\beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
-}
+\end{bem} 
+%Der Beweis wird nicht benötigt. \beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
+%}
 
-%TODO: soll ich beweisen, wie ganze Zahlen konstruiert werden? Und dass natürliche Zahlen wohlgeordnet sind?
+%
+%TODO IN ALGEBRA BUCH BEISPIEL NOCHMAL ANSCHAUN!
+%\begin{bsp}
+%Betrachte auf $\Z$ die Ordnung: $ a\prec b \Leftrightarrow (|a| \le|b| \vee |a| = |b|, a > 0).$ \newline %\footnote{http://www.mathematik.tu-dortmund.de/lsviii/new/media/veranstaltungen/wise1011/mathinf1/SkriptRek.pdf}. 
+%Daher gilt in $\Z$: $ 0 \prec 1 \prec -1 \prec 2 \prec -2 ...$. \newline
+%Das kleinste Element von $\Z$ in dieser Ordnung entspricht dem Element mit dem kleinsten Index. 
+%\end{bsp}
+%
 %
 \begin{bsp}
-Betrachte die Ordnung: $ a\prec b \Leftrightarrow (|a| \le|b| \vee |a| = |b|, a > 0).$ \newline %\footnote{http://www.mathematik.tu-dortmund.de/lsviii/new/media/veranstaltungen/wise1011/mathinf1/SkriptRek.pdf}. 
-Daher gilt in $\Z$: $ 0 \prec 1 \prec -1 \prec 2 \prec -2 ...$. \newline
-Das kleinste Element von $\Z$ in dieser Ordnung entspricht dem Element mit dem kleinsten Index. 
+Betrachte die Relation $\glqq \preceq \grqq $ auf $ \Z$ :  \\
+\centerline{$a \preceq b \Leftrightarrow |a| \leq |b| \text{ und } \left( |a| = |b| \Rightarrow a \leq  b \right)$.} \\
+ $\glqq \preceq \grqq $ ist eine Wohlordnung auf $\Z$ und es gilt: ... $-1 \preceq 1 \preceq -2 \preceq 2 \preceq -3 \preceq 3 ... $ 
 \end{bsp}
+
+
 \subsection{Archimedisch angeordnete Gruppen}
 %
-Die folgenden Ausführungen sind angelehnt an das Kapitel $"$Angeordnete Gruppen" (S. 73- 93) in \cite{fuchs66}, sowie Arbeiten von Priess- Crampe \cite{priesscrampe69}, \cite{priesscrampe83}.
+Die folgenden Ausführungen sind angelehnt an das Kapitel $\glqq$Angeordnete Gruppen" (S. 73- 93) in \cite{fuchs66}, sowie Arbeiten von Priess- Crampe \cite{priesscrampe69}, \cite{priesscrampe83}.
 %
 \begin{defn}\label{archim}
-Eine angeordnete Gruppe (G,+) heisst \textit{archimedisch}, wenn es $\forall$ a, b $\in$ G  mit $0 < a < b$ ein $n \in \N $ gibt, mit $b < na$.
+Eine angeordnete Gruppe (G,+) heisst \textit{archimedisch}, wenn es für alle a, b $\in$ G  mit $0 < a < b$ ein $n \in \N $ gibt, mit $b < na$.
 \end{defn}
 %
 %
 \begin{defn}\label{uek}
-Seien a, b $\in$ G, wobei G eine angeordnete Gruppe sei. Das Element a wird als \textit{unendlich kleiner} als b bezeichnet, wenn gilt: \\
-\centerline{$|a|^n < |b|$  $\forall n \in \N $}
+Seien a, b $\in$ G, wobei G eine angeordnete Gruppe sei. Das Element a wird als \textit{unendlich kleiner} als b bezeichnet, wenn für alle $  n \in \N $ gilt: \\
+\centerline{$n|a| < |b|$} \\
+In Zeichen schreiben wir: $a \glqq \ll \grqq b$.
 \end{defn}
 %
 \begin{defn}\label{aae}
-Sei G eine angeordnete Gruppe, und $|a|$ der absolute Betrag eines Elements a $\in$ G. Zwei Elemente a,b $\in$ G werden als \textit{archimedisch äquivalent} bezeichnet,$ a \sim b $, wenn positive Zahlen m und n existieren, so dass: 
-$|a| < |b|^m $ und $|b| < |a|^n$. 
+Sei G eine angeordnete Gruppe, und $|a|$ der absolute Betrag eines Elements a $\in$ G. Zwei Elemente a,b $\in$ G werden als \textit{archimedisch äquivalent} bezeichnet, wir schreiben: $ a \sim b $, wenn natürliche Zahlen m und n existieren, so dass: 
+$|a| < m|b| $ und $|b| < n|a|$. 
 \end{defn}
 %
 \begin{folg}
@@ -113,16 +130,16 @@ Daraus folgt, dass für jedes Paar von Elemente a, b $\in$ G genau eine der ansc
 %
 Des weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \begin{enumerate}
-\item[(i)] aus a $\ll$ b folgt $x^{-1}ax $ $\ll$ $x^{-1}bx$ $\forall$ x$\in$ G;
-\item[(ii)] aus a $\ll$ b und a $\sim$ b folgt c $\ll$ b;
-\item[(iii)] aus a $\ll$ b und b $\sim$ d, folgt a $\ll$ d;
-\item[(iv)] aus a $\ll$ b und b $\ll$ c folgt a $\ll$ c;
-\item[(v)] aus a $\sim$ b und b $\sim$ c folgt a $\sim$ c.
+\item[(i)] Aus a $\ll$ b folgt $x^{-1}ax $ $\ll$ $x^{-1}bx$ für alle x$\in$ G;
+\item[(ii)] Aus a $\ll$ b und a $\sim$ c folgt c $\ll$ b;
+\item[(iii)] Aus a $\ll$ b und b $\sim$ d, folgt a $\ll$ d;
+\item[(iv)] Aus a $\ll$ b und b $\ll$ c folgt a $\ll$ c;
+\item[(v)] Aus a $\sim$ b und b $\sim$ c folgt a $\sim$ c.
 \end{enumerate}
 Sind alle Elemente einer Gruppe archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
 Durch die archimedische Äquivalenz werden die Elemente von G in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne [x] die \textit{archimedische Klasse} in der das Element x $\in$ G liegt, [G] die Gesamtheit aller archimedischen Klassen von G. \\
 Sind zwei Elemente a, b $\in$ G nicht archimedisch äquivalent, gilt entweder:
-$\forall$ n $\in \N$: n*|a|<|b| oder $\exists$ n $\in \N $ sodass: n*|b| <|a|.
+$\forall$ n $\in \N$: n|a|<|b| oder $\forall$ n $\in \N $ sodass: n|b| <|a|.
 \end{folg}
 %
 %\begin{satz}\label{agkku}
@@ -133,6 +150,13 @@ $\forall$ n $\in \N$: n*|a|<|b| oder $\exists$ n $\in \N $ sodass: n*|b| <|a|.
 %\beweis{
 %Angenommen es gibt eine Untergruppe $\left(U, \circ\right))$ $\subseteq$ G, mit $ U \neq \varnothing und U \neq G$. Nach den Untergruppenaxiomen gilt für $a, b \in U: a\circ b \in U$ Da G archimedisch geordnet ist und alle Elemente aus U natürlich auch in G liegen, muss für $a, b \in U \text{ gelten, wenn 0 < a < b dann gibt es ein n \in \N: } b < na.$ Da U echte Untergruppe von G, gibt es ein Element $x\in G, \text{ aber } x \notin U$. Da G archimedisch geordnet gibt es ein   }
 %
+\begin{defn}\label{ordnungsisomorph}
+Ist G mit dem Positivbereich P eine angeordnete Gruppe,
+so ist G auch mit dem Positivbereich (−P) eine angeordnete Gruppe. Die Abbildung
+$a \rightarrow −a$ ist ein \textit{ordnungserhaltender Isomorphismus} zwischen diesen
+beiden Gruppen. Man nennt einen solchen Isomorphismus einen \textit{Ordnungsisomorphismus}.
+Man nennt Gruppen ordnungsisomoroh, wenn es zwischen ihnen einen Ordnungsisomorphismus gibt.
+\end{defn}
 %
 \begin{satz}\label{aga} 
 Eine angeordnete Gruppe ist genau dann archimedisch, wenn sie einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist. 
@@ -141,9 +165,34 @@ Folglich sind alle archimedisch angeordneten Gruppen kommutativ.   \cite{hoelder
 %
 %
 \beweis{
-"$\Leftarrow$" Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe G gelten muss. \\
-"$\Rightarrow$" 
-Beweis über archimedische Eigenschaft, o-Isomorphie einer einelementigen Gruppe zu der Gruppe der ganzen Zahlen (\cite{priesscrampe69} S. 8), Kommutativität von G, Dedekindschen Schnitt und Homomorphismus (\cite{fuchs66} S. 75) } 
+$\grqq\Leftarrow \grqq:$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe G gelten muss. \\
+$\grqq \Rightarrow \glqq$: Sei G eine angeordnete Gruppe. Nach \ref{angeordnetAbelsch} ist G ebenso abelsch und besitzt einen Positivbereich $P$. Nach Voraussetzung erfüllt G die archimedische Eigenschaft. Sei $G \neq \lbrace e_G\rbrace$, wobei $e_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre G isomorph zu $ßbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
+Somit ist $P$ nicht leer und wir nehmen ein Element $\alpha \in P$ beliebig. Für jedes $g \in G$ und $g \in P$ definieren wir:\\
+\centerline{$S_g := \lbrace \frac{m}{n} \in \Q^{+} | m, n \in \N, m\alpha \le ng$} \\
+Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p \alpha$. Die Darstellung von $r \in \Q^{+}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r \in S_g$ enthalten ist.\\
+Um die Behauptung zu zeigen, genügt es einen Monomorphismus zu finden der G auf die additive Gruppe der reellen Zahlen abbildet. Wir zeigen nun folgende Aussagen: \\
+\begin{enumerate}
+\item[(i)] Für alle $g\in S_g$ gilt $S_g \neq \varnothing \text{ und } S_g \neq \Q^{+}$. Für $r, s \in \Q^{+} \text{ mit } r < s und s \in S_g. \Rightarrow r \in S_g.$
+\item[(ii)] Sei $S_g \subseteq \Q^{+}$, wobei $S_g$ nicht leer nd beschränkt. Die Abbildung $\Phi: P \rightarrow \R^{+}, g \mapsto sup S_g$ ist somit wohldefiniert.  
+\item[(iii)]Für alle $g, h \in \Q^{+}.$ gilt: $g \le h \Leftrightarrow S_g \subseteq S_h \Leftrightarrow \Phi(g) \le \Phi(h)$.  
+\item[(iv)] Sei $g, h \in P$ und $r,s \in \Q^{+}$. Sei $r \in S_g \text{ und } s \in S_h \text{ so folgt } r+s \in S_{g+h}$. Sei $r \notin S_g \text{ und } s \notin S_h \text{, so folgt } r+s \notin S_{g+h}$. 
+\item[(v)] Es gilt: $\Phi\left( g+h\right) = \Phi\left(g\right) + \Phi\left(h\right)$ für alle $g, h \in P$. 
+\item[(vi)] $\Phi$ wird fortgesetzt auf die gesamte Gruppe G durch $\Phi\left(e_G\right) = 0 \text{ und } \Phi \left(-g\right) = \Phi \left(g\right)$ für alle g $\in P$. \\ 
+\end{enumerate}
+Insgesamt ist $\Phi$ ein Monomorphismus abelscher Gruppen und damit ist G isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.\\ 
+zu (i): Wegen der archimedischen Eigenschaft gibt es zu jedem Element $g \in p$ ein $n \in \N$ mit $ng < \alpha$. Nach Definition von $S_g$ gilt $\frac{1}{n} \in S_g$ und somit ist $S_g$ nicht leer.\\ Angenommen $S_g = \Q^{+}$, dann wäe $n \in S_g$ und $n\alpha \le g$ für alle $n\in\N$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
+Seien $r, s \in \Q^{+} \text{ mit } r < s und s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und da $s \in S_g: m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in \Q^{+}$.\\
+zu (ii): Wir haben bereits gezeigt, dass $S_g$ nicht leer ist. Angenommen $S_g$ wäre unbeschränkt, dann gäbe es für jedes $n \in \N$ ein $r \in S_g$ mit n < r. Nach (i) folgt daraus $n \in S_g$was impliziert, dass für alle $n \in \N$ folgt: $ n\alpha \le g$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
+zu (iii): 
+}
+
+
+
+
+
+
+
+%Beweis über archimedische Eigenschaft, o-Isomorphie einer einelementigen Gruppe zu der Gruppe der ganzen Zahlen (\cite{priesscrampe69} S. 8), Kommutativität von G, Dedekindschen Schnitt und Homomorphismus (\cite{fuchs66} S. 75) } 
 %
 %
 \subsection{Kette konvexer Untergruppen}

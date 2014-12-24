@@ -3,6 +3,8 @@ The style file: alphadin.bst
 Database file #1: literaturverzeichnis.bib
 Warning--entry type for "priesscrampe69" isn't style-file defined
 --line 22 of file literaturverzeichnis.bib
+Warning--entry type for "carruth48" isn't style-file defined
+--line 28 of file literaturverzeichnis.bib
 Warning--empty chapter in hoelder1901
 You can't pop an empty literal stack for entry hoelder1901
 while executing---line 2205 of file alphadin.bst

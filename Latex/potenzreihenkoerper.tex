@@ -17,7 +17,7 @@ Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutra
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
 Wir betrachten im Folgenden nur den Ring der formalen Potenzreihen K[[z]] über einem beliebigen Körper K. Hervorzuheben ist, dass z keine Variable, die für eine Zahl steht, repräsentiert, sondern eine Unbestimmte darstellt. Daraus ergibt sich die Irrelevanz von Konvergenzfragen in der Theorie der formalen Potenzreihenringe und -körper.
-Mit $K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace $ wird die Menge der formalen Potenzreihen in z über K bezeichnet. $K [[z]] $ ist ein Ring bezüglich der Addition und Multiplikation, wie in \ref{Rechnen} bewiesen wird. 
+Mit $K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace $ wird die Menge der formalen Potenzreihen in z über K bezeichnet. $K [[z]] $ ist ein Ring bezüglich der Addition und Multiplikation, wie in \ref{Rechnen} bewiesen wird. \label{potenzreihenring}
 
 \subsection{Rechnen im Potenzreihenring} \label{Rechnen}
 Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert sowie durch einen Nachweis der Ringaxiome \ref{Ring} \text{(R1-R3)} gezeigt, dass $K[[z]]$ der Ring der formalen Potenzreihen ist. \\ \\
@@ -275,17 +275,79 @@ $v(f*g) = v( \sum_{n \in \Z}\sum_{n= m+k}a_mb_kz^n) = $, wobei $a_m = 0 \text{ f
 
 \section{Der Potenzreihenkörper}
 %
+Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Die so definierten Potenzreihen erlaubten nicht nur mehr Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Als erster stelle er Potenzreihen mit verallgemeinerten Exponenten vor wie:
+\centerline{$f = 1 + z^{log 2} + z^{log 3} + z^{log 4} + ... $}
+\centerline{$g = \frac{1}{2}z^{\frac{1}{2}} + \frac{3}{4}z^\frac{3}{4} + \frac{7}{8}z^\frac{7}{8} + ... + z + \frac{3}{2}z^\frac{3}{2} + ... + 2z^2 + ...$} 
+Hahn konnte im Laufe des Beweises des Hahnschen Einbettungssatzes zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
+Bevor wir uns der Konstruktion der Hahnschen Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
+
 \subsection{Träger über ganzen Zahlen}\label{traegerGanz}
-Betrachte wieder den Körper der formalen Laurentreihen über dem Körper K. Wie in \ref{traeger} definiert ist $\mathtt{T}$ eine Teilmenge der ganzen Zahlen und da für jede Teilmenge ein Minimum existieren, ist $\mathtt{T}$ wohlgeordnet nach \ref{wohlgeordn}. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper K((z)). 
+Wir kennen bereits die in \ref{potenzreihenring} definierten Potenzreihen sowie ihre Verallgemeinerung, die Laurentreihen. Bisher haben wir uns nur mit Potenzreihen beschäftigt, deren Elemente auf einer Teilmenge der ganzen Zahlen indiziert werden. Die Exponenten der Unbestimmten der indozierten algebraischen Struktur $\left(K[[z]], K((z))\right) $ gehören in beiden Fällen ebenso einer Teilmenge der ganzen Zahlen an. \\
+Betrachten wir den Körper der formalen Laurentreihen über dem Körper K. Wie in \ref{traeger} definiert, ist $\mathtt{T}$ eine Teilmenge der ganzen Zahlen und da für jede Teilmenge ein Minimum existieren, ist $\mathtt{T}$ wohlgeordnet nach \ref{wohlgeordn}. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper K((z)). 
 %
 %
 \subsection{Träger über angeordneter abelscher Gruppe}
-Wir haben im vorherigen Kapitel festgestellt, dass die bisher betrachteten Potenzreihen immer auf den natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) definiert waren. In \ref{traegerGanz} wurde gezeigt, dass die Mengen auf denen wir Potenzreihenringe definieren können eine bestimmte unverzichtbare Eigenschaft innewohnt, die Wohlordnung. Im Folgenden betrachten wir bestimmte Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten Gruppen. Die nachfolgenden Ausführungen orientieren sich an \cite{fuchs66}.\\
+Wir haben im vorherigen Kapitel festgestellt, dass die bisher betrachteten Potenzreihen immer auf den natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) definiert waren. In \ref{traegerGanz} wurde gezeigt, dass die Mengen auf denen wir Potenzreihenringe definieren können eine bestimmte unverzichtbare Eigenschaft innewohnt, die Wohlordnung. Im Folgenden betrachten wir bestimmte Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten Gruppen. Die nachfolgenden Ausführungen orientieren sich an \cite{fuchs66}.\\\\
+Für einen Körper K und $\left(\Gamma, \cdot \right)$ eine angeordnete Gruppe, die Menge aller Funktionen von $\Gamma$ nach K. Die Addition derartiger Funktionen f,g ist definiert durch: $\left(f + g\right)(x) = f(x) + g(x) \text{ für alle } x \in \Gamma$. Sei $\lambda \in K$ dann ist  $\left(\lambda f\right)(x) = \lambda f(x)$ für x $\in \Gamma$, $\lambda \in K$ und $f \in K[[\Gamma]].$ \\
+Wir bezeichnen $X^a \in K[[\Gamma]]$, wobei für die Funktion $z^a$ gilt, dass $z^a(a) = 1 \text{ und } z^a(x) = 0 \text{ wenn } x \neq a$. \\
+Jedes Element $f \in K[[\Gamma]]$ kann geschrieben werden, als $ f= \sum_{a \in \Gamma}^{}f(a)z^a.$ 
+Somit sehen wir auch, dass $\Gamma$ kanonisch in $K[[\Gamma]]$ eingebettet ist vermöge der Abbildung $\Gamma \mapsto K[[\Gamma]]$, $g \longmapsto \sum_{a \in \Gamma}^{} f(a)z^a$ mit $z^a(a) = 1 \text{ und } z^a(b) = 0 \text{ für alle } a \neq b$. \\
+\vspace{0.5cm}\\
 %
-Sei G eine angeordnete Gruppe und K ein Körper. 
+Dementsprechend definieren wir die Gesamtheit dieser Elemente. Sei $\left( \Gamma, \cdot \right)$ eine angeordnete Gruppe und K ein Körper.
 \begin{defn}\label{formaleSumme}
-$\Phi := \sum_{a \in G}^{} \Phi_a a$ mit ($\Phi_a \in F$), wobei $supp(\Phi) = \lbrack a \in G | \Phi_a \neq 0\rbrack$ wohlgeordnet sei bezüglich der Anordnung von G. $\Phi$ nennt man eine formale Potenzreihe auf G über K.
+$F := \sum_{x \in \Gamma}^{}\Phi_x z^x$ mit ($\Phi_x \in K$). $F$ nennt man eine formale Potenzreihe auf $\Gamma$ über K. Die Gesamtheit dieser formalen Potenzreihen wird im Folgenden mit $K[[z^{\Gamma}]]$ bezeichnet.
 \end{defn}
-\subsection{Addition und Multiplikation im Potenzreihenkörper}
+
+Die Definition von $F$ verlangt, dass die Koeffizienten $\Phi_x \in K$ liegen und $supp(F) = \lbrack x \in \Gamma | \Phi_x \neq 0\rbrack $ wohlgeordnet sei bezüglich der Anordnung von $\Gamma$. \\
+Die Exponenten x der Unbestimmten z sind ebenfalls Element der angeordneten Gruppe $\Gamma$. Die Potenzreihen werden aufsummiert über einer Untermenge U bestehend aus Elementen x aus $\Gamma$. Die Anordnung der Gruppe G überträgt sich auf die Untermenge U nach \ref{chap2}\ref{agG}. Der Träger besitzt somit ein kleinstes Element. Alternativ lässt sich die Reihe als 
+$ F = \Phi_{x_1}z^{x_1} + \Phi_{x_2}z^{x_2} + ... + \Phi_{x_p}z^{x_p} + ..., $ 
+Summation über den Ordinalzahlen p bis zu einem fixierten $a \in \Gamma$ und Exponenten $x_1 \le ...\le x_p ...$ die bezüglich der Anordnung $\glqq \le \grqq$ von $\Gamma$ monoton steigend geordnet sind. \cite{carruth48}\\
+Eine formale Potenzreihe bezeichnet eine Funktion $\Phi: G \mapsto K$, die in der Anordnung von $\Gamma$ einen wohlgeordneten Träger $supp(\Phi) = \lbrace g \in G | f(g) \neq 0 \rbrace$ besitzt. \\\\
+\vspace{0.8cm}
+\centerline{$K[[z^{\Gamma}]] = \lbrace F :=  \sum_{x \in \Gamma}^{}a_x z^x | supp(F) \text{ ist wohlgeordnet.}\rbrace$} \\
+%
+%
+\subsection{Definition der Addition und Multiplikation in $K[[z^{\Gamma}]]$}
+Seien F, G zwei formale Potenzreihen auf $\Gamma$, mit $F = \sum_{a \in \Gamma}^{} \Phi_a a \text{ und } G = \sum_{a \in \Gamma}^{} \Psi_a a \text{ wobei } \Phi_a, \Psi_a \in K). $ \\
+Die Summe $ F + G := \sum_{a \in \Gamma}^{} \Phi_a z^a + \sum_{a \in \Gamma}^{} \Psi_a z^a = \sum_{a \in \Gamma}^{}\left(\Phi_a + \Psi_a\right)z^a $ ist gegeben durch die Addition der Koeffizientenfolgen. \\
+Der Träger der Summe F + G ist wohlgeordnet, da $supp(F) =\lbrace g \in \Gamma| \Phi_{g} \neq 0 \rbrace \text{ und } supp(G)=\lbrace g \in \Gamma| \Psi_{g} \neq 0 \rbrace$ wohlgeordnet sind und somit das kleinste Element von supp(F+G) existiert und $min\lbrace supp(F+ G) = min\lbrace min\lbrace supp(F)\rbrace, min\lbrace supp(G)\rbrace \rbrace $. $\Phi + \Psi$ ist somit eine formale Potenzreihe. \\
+%
+Für jedes Element $\lambda \in K$ gilt, das Produkt mit einem Körperelement $\lambda F = \lambda (\sum_{x \in \Gamma}^{}a_x z^x) = \sum_{x \in \Gamma}^{}\lambda a_x z^x \in K[[z^{\Gamma}]]$.  
+Bevor wir die Multiplikation der Koeffizienten zweier formaler Potenzreihen betrachten, schauen wir uns zunächst an, was mit den Exponenten der Variablen z geschieht. Sei $F, G \in K[[z^{\Gamma}]]$ mit $ F = \sum_{g \in \Gamma}^{} \Phi_g z^g \text{ und } G = \sum_{h \in Gamma}^{} \Psi_h z^h $. \\
+Alternativ lassen sich unsere Reihen folgendermaßen schreiben: 
+$ F*G = \left(\Phi_{g_1}z^{g_1} + \Phi_{g_2}z^{g_2} + ... + \Phi_{g_p}z^{g_p} + ...\right) *\left( \Psi_{h_1}z^{h_1} + \Psi_{h_2}z^{h_2} + ... + \Psi_{h_p}z^{h_p} + ...\right) $. \\
+Betrachten wir zunächst das Produkt einzelner Monome: $\Phi_gz^g  \Psi_hz^h = \Phi_g  \Psi_h z^{g+h} $. Für die Variable z gilt nach den Potenzgesetzen $z^{g1} * z^{h1} = z^{g1 + h1}$. Die distributive Forsetzung führt zur Definition der Multiplikation in $K[[z^{\Gamma}]]$. Wir erhalten das Produkt als Summe über der Summe des Produkts der einzelnen Koeffizienten: \\
+ $\cdot: F = \sum_{a \in \Gamma}^{} \Phi_a z^a \text{ und } G = \sum_{a \in \Gamma}^{} \Psi_a z^a \text{ wobei } \Phi_a, \Psi_a \in K). FG = \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}z^a$.  \label{multPotenzreihenkoerper}                            \\
+Um eine Aussage treffen zu können, ob dieses Produkt definiert ist, müssen wir zeigen, dass der Träger des Produkts wohlgeordnet ist. Beachte, dass $supp(FG) \leqq Supp(F) + supp(G)$. Sei $supp(FG) := \lbrace a_1, a_2 \in G | \Phi_{a_1} \Psi_{a_2} \neq 0\rbrace.$ Nach der Definition des Trägers folgt, dass die Menge angeordnet ist, denn als Untermenge von $\Gamma$ überträgt sich die Anordnung. Wir müssen zeigen, dass jede Teilmenge von supp(FG) ein kleinstes Element besitzt nach \ref{wohlgeordn}. Nach Definition der Multiplikation in unserem Körper K gilt: \\
+ $\Phi_{a_1} \Psi_{a_2} \neq 0 \Leftrightarrow \Phi_{a_1} \neq 0 \text{ oder } \Psi_{a_2} \neq 0 $. Das bedeutet, dass das Produkt erst dann ungleich Null ist, wenn beide Faktoren ungleich Null sind. Da $\Gamma$ eine angeordnete Gruppe \ref{agG} lassen sich $min\lbrace supp(F)\rbrace \text{ und } min\lbrace supp(F)\rbrace$ vergleichen.
+\begin{equation}
+   min \lbrace min\lbrace supp(F)\rbrace , min\lbrace supp(G)\rbrace \rbrace=
+   \begin{cases}
+     min\lbrace supp(F)\rbrace & \text{f"ur } min\lbrace supp(F)\rbrace \le min\lbrace supp(G)\rbrace \\
+    min\lbrace supp(G)\rbrace & \text{f"ur } min\lbrace supp(G)\rbrace \le min\lbrace supp(F)\rbrace \\
+   \end{cases}
+\end{equation} %kann ich mir das so überlegen oder muss ich doch übr Folgen argumentieren.... weil es sind ja nicht die gleichen Element des Trägers also die Koeffizienten die ein Minimales Element haben... 
+%
+Die Summe $\sum_{a_1  a_2 = a}^{}\Phi_{a_1} \Psi_{a_2} z^a$ \ref{multPotenzreihenkoerper} ist endlich: Angenommen es gäbe unendliche viele $a_1$ für welche $\Phi_{a_1} \neq 0 \text{ und } \Psi_{{a_1^{-1}}a} $
+%
+%
+
+\begin{satz}
+$K[[z^\Gamma]]$ ist ein Ring über K. 
+\end{satz}
+\beweis{Es gilt $K[[z^{\Gamma}]]$ ist eine abelsche Gruppe bezüglich der Addition, denn: 
+\begin{itemize}
+\item \textit{Assoziativität:} Für alle F, G, H $\in K[[z^{\Gamma}]].$ gilt nach Definition der Addition: $F+\left(G+H\right) = \sum_{a \in \Gamma}^{} \Phi_a z^a + \left( \sum_{a \in \Gamma}^{} \Psi_a z^a + \sum_{a \in \Gamma}^{} \Lambda_a z^a \right) = \sum_{a \in \Gamma}^{} \Phi_a z^a + \sum_{a \in \Gamma}^{} \left(\Psi_a + \Lambda_a\right) z^a = \sum_{a \in \Gamma}^{} \left(\Phi_a + \Psi_a + \Lambda_a\right) z^a = \sum_{a \in \Gamma}^{} \left(\Phi_a + \Psi_a\right) z^a + \sum_{a \in G}^{} \Lambda_a z^a$.
+\item \textit{Neutrales Element der Addition:} Bezeichne $\epsilon$ das neutrale Element der Addition $\epsilon := \sum_{a \in \Gamma}^{} \Phi_a z^a$, wobei ähnlich \ref{Rechnen} $\Phi_a = 0$ für alle $a \in \Gamma$.
+\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement F gibt es ein Inverses Element der Addition $F^{-1} := \sum_{a \in \Gamma}^{} -\Phi_a z^a$, mit $F+ F^{-1} = \epsilon$.
+\item \textit{Kommutativität:} $K[[z^{\Gamma}]]$ ist abelsch da K ein Körper und nach Definition der Addition gilt: $F+ G = \sum_{a \in \Gamma}^{} \Phi_a z^a + \sum_{a \in \Gamma}^{} \Psi_a z^a = \sum_{a \in \Gamma}^{}\left(\Phi_a + \Psi_a\right) z^a \stackrel{\mathrm{\Phi, \Psi \in K}}= \sum_{a \in \Gamma}^{}\left(\Psi_a + \Phi_a\right) z^a = \sum_{a \in \Gamma}^{} \Psi_a z^a + \sum_{a \in \Gamma}^{} \Phi_a z^a = G + F.$ 
+\end{itemize}}
+%
+%
+\begin{bsp}
+Sei $\Gamma = \N$ und $\le$ die natürliche Ordnung, dann ist $K[[z^\Gamma]] \cong K[[z]]$ wie in \ref{potenzreihenring} beschrieben.
+\end{bsp}
+
 \subsection{Algebraische Abgeschlossenheit} %zusatz bachelorarbeit
 %
