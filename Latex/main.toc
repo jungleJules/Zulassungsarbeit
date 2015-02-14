@@ -1,18 +1,19 @@
 \select@language {ngerman}
-\contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}Mathematische Grundlagen}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Angeordnete Gruppen}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Archimedisch angeordnete Gruppen}{6}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Kette konvexer Untergruppen}{9}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Einblick in die Bewertungstheorie}{10}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Der Hahnsche Einbettungssatz}{10}{subsection.2.1.4}
-\contentsline {chapter}{\numberline {3}Potenzreihenk\IeC {\"o}rper}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Der Potenzreihenring}{12}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Rechnen im Potenzreihenring}{13}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Eigenschaften des Potenzreihenrings}{14}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Der Potenzreihenk\IeC {\"o}rper}{20}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Tr\IeC {\"a}ger \IeC {\"u}ber ganzen Zahlen}{20}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Tr\IeC {\"a}ger \IeC {\"u}ber angeordneter abelscher Gruppe}{21}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{22}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Algebraische Abgeschlossenheit}{23}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {1}Einleitung}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Angeordnete Gruppen}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Wohlordnung}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Archimedisch angeordnete Gruppen}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Die angeordnete Menge konvexer Untergruppen}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Einblick in die Bewertungstheorie}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Der Hahnsche Einbettungssatz}{19}{section.2.5}
+\contentsline {chapter}{\numberline {3}Potenzreihenk\IeC {\"o}rper}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Der Potenzreihenring}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Rechnen im Potenzreihenring}{26}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Eigenschaften des Potenzreihenrings}{29}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{31}{section.3.2}
+\contentsline {section}{\numberline {3.3}Der Potenzreihenk\IeC {\"o}rper}{37}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Potenzreihenstrukturen mit Tr\IeC {\"a}ger \IeC {\"u}ber den ganzen Zahlen}{38}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Formale Potenzreihen auf angeordneten abelschen Gruppen}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{39}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Der Ring der formalen Potenzreihen}{41}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{43}{subsection.3.3.5}
