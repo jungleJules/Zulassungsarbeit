@@ -1,4 +1,47 @@
-\chapter{Angeordnete Gruppen}\label{chap2}
+\chapter{Mathematische Grundlagen}
+In diesem Kapitel werden die für das Weitere benötigten Grundlagen zusammengestellt. 
+%Erster Teil: Definition Gruppe, Ring, Körper (Algebraische Strukturen)
+%Zweiter Teil: Bewertung (Einblick in die Bewertungstheorie) 
+%Dritter Teil: Anordnung Wohlordnung Definitionen.(Ordnungsbegriff) viell. erst auf teilweise Ordnung -> Anordnung -> Wohlordnung
+\section{Algebraische Strukturen}
+Wir definieren zunächst die elementaren algebraischen Strukturen Gruppe, Ring, Körper und Quotientenkörper. Die Vertrautheit mit grundlegenden Begriffen über Mengen und Abbildungen, sowie den wichtigen Zahlenmengen $\N, \Z, \Q, \R$ und $\C$ wird vorausgesetzt. 
+%
+\begin{defn}\label{Gruppe}
+Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightarrow G, \left( a, b\right) \mapsto a \circ b$ heißt \textit{Gruppe}, wenn die folgenden Bedingungen erfüllt sind:
+\begin{enumerate}
+\item[i] $a\circ \left(b\circ c\right) = \left(a\circ b\right) \circ c$ für alle $a, b, c \in G$ (Assoziativgesetz).
+\item[ii] Es gibt ein eindeutig bestimmtes Element $1_G \in G$ mit $1_G \circ a  = a \circ 1_G = a$ für alle $a \in G$. Man bezeichnet $1_G$ als das neutrale Element der Gruppe G.
+\item[iii] Zu jedem $a \in G$ gibt es ein Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. Man bezeichnet $a^{-1}$ als das inverse Element zu $a$.
+\item[iv] Die Gruppe heißt \textit{abelsch}, wenn das Kommutativgesetz $a \circ b = b \circ a$ für alle $a, b \in G$ erfüllt ist.  
+\end{enumerate} 
+\end{defn}
+\begin{defn}\label{Untergruppe}
+Sei $\left(G, \circ\right)$ eine Gruppe mit neutralem Element $1_G$. Die Teilmenge $U\subseteq G$ heißt \textit{Untergruppe}, wenn gilt:
+\begin{enumerate}
+\item[i] $1_G \in U$
+\item[ii] $a, b \in U \Rightarrow ab \in U$
+\item[iii] $a \in U \Rightarrow a^{-1} \in U$ 
+\end{enumerate} 
+\end{defn}
+
+Allgemein ist ein Ring folgendermaßen definiert:
+\begin{defn}\label{Ring} %\cite{fischer08} nach Skript Funktionentheorie Kaiser
+Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot: R \times R \to R $ zwei Verknüpfungen auf $R$. Das Tripel $\left(R, +, \cdot\right)$ bezeichnen wir als \textit{Ring}, wenn gilt:
+%
+\begin{enumerate}
+\item[R1:] $(R, +)$ ist eine abelsche Gruppe,
+\item[R2:] $\left(R, \cdot\right)$ ist ein Monoid,
+\item[R3:] (Distributivgesetze) Für alle a,b,c $\in$ R gilt:\\
+\[(a \cdot(b +c) = a \cdot b + a \cdot c \text{ und }
+(a+b) \cdot c = a \cdot c + b \cdot c \] 
+\end{enumerate}
+\end{defn}
+Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
+ 
+\chapter{Angeordnete abelsche Gruppen}\label{chap2} %TODO: Wichtig hier nur alles was abelsch ist rein!!!
+%Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
+%Teil 2: Zusammenhang angeordnete abelsche Gruppe mit Wohlordnung
+%Teil 3: Satz von Hölder
 In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Zunächst betrachten wir die wichtigsten Eigenschaften angeordneter Gruppen. Nach einer Einführung in die Theorie angeordneter Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Eigenschaft der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. An den Satz von Hölder, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können,  schließt die zentrale Aussage des Kapitels an: der Hahnsche Einbettungssatz. Dieser besagt, dass angeordnete abelsche Gruppen auch als Untergruppen eines lexikographisch geordneten reellen Funktionenraums, beispielsweise des Körpers der Laurentreihen, verstanden werden können. \\
 Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
