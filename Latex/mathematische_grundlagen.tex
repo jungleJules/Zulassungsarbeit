@@ -81,7 +81,7 @@ Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+, \cdot$
 
 
 %Quotientenkörper Definition
-In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
+%In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
 
 \begin{satz}\label{quotkoerper} %\cite{Lueneburg08}
 Es sei $R$ ein Integritätsbereich, bestehend aus wenigstens zwei Elementen. Wir definieren auf $R\times R^*$ eine Äquivalenzrelation $\grqq\sim\grqq$ durch $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$, wir können also schreiben: \\
@@ -98,9 +98,95 @@ Wir setzen Quot$(R) := (R\times R^*)/\sim$ und bezeichnen die Äquivalenzklasse 
 %Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. \textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
 }
 Der Quotientenkörper ist bis auf Isomorphie der kleinste Körper in den $R$ als Unterring eingebettet werden kann.
+\section{Einblick in die Bewertungstheorie}
+Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $\left(G,+\right)$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
 %
-\section{Angeordnete Gruppen}
-\section{Wohlordnung}
+%
+\begin{defn} %\cite{priesscrampe83}\label{bew}
+Eine \textit{Bewertung $v\left(a\right)$} mit $a\in G$ ist eine surjektive Funktion $v\colon G \rightarrow \Theta$, so dass folgende drei Eigenschaften erfüllt sind:
+%
+\begin{enumerate}
+\item[B1:] $v{(a)} = 0 \Leftrightarrow a = 0$ für alle $a\in G$,
+\item[B2:]  $v{(a)} = -v{(a)} \text{  } \text{ für alle } a \in G $,
+\item[B3:] $ v{(a+ b)} \le$ max$\{(v{(a)}, v{(b)}\}$ für alle $ a, b \in G$ .
+\end{enumerate}
+%
+\end{defn}
+Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $. Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $.\\
+Sei $\left(G, +\right)$ eine angeordnete Gruppe, mit $[a]$ bezeichnen wir die Klasse, in der das Element $a\in G$ , $[G]$ bezeichne die Gesamtheit der archimedischen Klassen von G. Die Abbildung %TODO: satz!
+ \\$a \mapsto [a] \colon G \to [G]$ nennt man \textit{natürliche Bewertung}. %\cite{priesscrampe83}
+\begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
+Sei $K$ ein Körper, ($\Theta, +$) eine angeordnete abelsche Gruppe und $\overline{\Theta}  = \Theta \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{\Theta} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
+%TODO: Quelle checken
+\begin{enumerate}
+\item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,
+\item[B2':] $v(ab) = v\left(a\right)+v\left(b\right) $ für alle $ a, b \in K$,
+\item[B3':] $v\left(a+b\right) \ge $ min$\lbrace v(a),v\left(b \right)\rbrace \text{ für alle }  a, b \in K. $
+\end{enumerate}
+\end{defn}
+Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil \ref*{LaurentreiheBewertung} noch erörtert wird. 
+Man bezeichnet $v\colon K \to \overline{\Theta} $ als diskrete Bewertung, falls gilt ${\Theta} = \Z$.
+%
+\begin{defn} %\cite{hulek12} \label{bewertungsring}
+Ein Integritätsring $R$ heisst \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper Quot$(R)$ von $R$ eine Bewertung $v: Quot(R)^* \rightarrow \Z$ gibt, mit:
+\begin{enumerate}
+\item[D1: ]$v(ab) = v(a)+ v(b)$, 
+\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
+sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
+\end{enumerate}
+\[R = \lbrace x \in Quot(R)^*: v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace.\]
+\end{defn}
+Neukirch liefert in seinen Ausführungen zur algebraischen Zahlentheorie \cite[S. 126]{neukirch92} eine äquivalente Definition anhand der eindeutigen Eigenschaften eines diskreten Bewertungsrings:
+\begin{defn} %\cite{neukirch92}
+Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen maximalen Ideal $\mathfrak{p}$.
+\end{defn} 
+%
+%
+\section{Ordnungen}
+\subsection{Anordnung}
+\begin{defn}\label{defgs} 
+Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $ \grqq\leq\grqq $ auf $A$ gibt mit: folgende Eigenschaften für alle$ a,b,c \in A$  erfüllt.
+%
+\begin{enumerate}
+\item[T1:] \textit{Reflexivität: } $a \leq  a$,
+\item[T2:] \textit{Antisymmetrie: } Aus $a \leq  b$, $b~ \leq a$ folgt $a = b$,
+\item[T3:] \textit{Transitivät: } Aus $a \leq b$, $b \leq c$ folgt $a \leq c$.
+\end{enumerate}
+%
+Die Relation $\glqq \leq\grqq$ bezeichnet eine teilweise Ordnung auf $A$.
+\end{defn}
+Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 die anschließende Bedingung erfüllt ist:
+%
+\begin{enumerate}
+\item[T4:] Für alle $a, b \in A$ besteht entweder $a < b$, oder $a = b$, oder $a > b$. Dabei gilt $a < b$ genau dann, wenn $a \leq b$ und $a\neq b$. 
+\end{enumerate}
+%
+%
+\begin{defn}\label{twgG} % \cite{fuchs66}
+Eine \textit{teilweise geordnete Gruppe G} bezeichnet eine Menge G mit folgenden Eigenschaften: 
+%
+\begin{enumerate}
+\item[G1:] $G$ ist eine Gruppe bezüglich der Multiplikation,
+\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $ \grqq\leq\grqq $, wie in \ref{defgs}, 
+\item[G3:] das Monotoniegesetz ist erfüllt: Für $a, b \in  G$ gilt: Aus $a \leq b$ folgt $ca \leq  cb$ und \\ $ac \leq bc$ für alle $c \in G$.
+\end{enumerate}
+% 
+\end{defn}
+%
+%
+\begin{defn}\label{agG}
+Eine Gruppe wird als \textit{angeordnete Gruppe} bezeichnet, wenn ihre Ordnung total ist.
+\end{defn}
+%
+%ab jetzt nach Priess crampe
+\begin{satz} \label{angeordnetFolgtTorsionsfrei} %\cite{priesscrampe83}
+Jede angeordnete Gruppe ist torsionsfrei. 
+\end{satz}
+%
+\beweis{
+Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe \ref{aga}. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 \ref{twgG} ergeben. %(formal siehe kleiner Block)
+}
+\subsection{Wohlordnung}
 Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. 
 Im Folgenden sei $G \neq \varnothing$ eine angeordnete Gruppe versehen mit der Ordnungsrelation $\glqq\leq \grqq$. Aufbauend auf Ideen in \cite[S. 16]{fuchs66} entwickeln wir die grundlegenden Eigenschaften wohlgeordneter Mengen.
 \begin{defn} \label{wohlgeordn} %\cite{fuchs66} 
@@ -144,50 +230,8 @@ In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur B
 Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
-\section{Angeordnete Gruppen}
 %
-\begin{defn}\label{defgs} 
-Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $ \grqq\leq\grqq $ auf $A$ gibt mit: folgende Eigenschaften für alle$ a,b,c \in A$  erfüllt.
-%
-\begin{enumerate}
-\item[T1:] \textit{Reflexivität: } $a \leq  a$,
-\item[T2:] \textit{Antisymmetrie: } Aus $a \leq  b$, $b~ \leq a$ folgt $a = b$,
-\item[T3:] \textit{Transitivät: } Aus $a \leq b$, $b \leq c$ folgt $a \leq c$.
-\end{enumerate}
-%
-Die Relation $\glqq \leq\grqq$ bezeichnet eine teilweise Ordnung auf $A$.
-\end{defn}
-Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 die anschließende Bedingung erfüllt ist:
-%
-\begin{enumerate}
-\item[T4:] Für alle $a, b \in A$ besteht entweder $a < b$, oder $a = b$, oder $a > b$. Dabei gilt $a < b$ genau dann, wenn $a \leq b$ und $a\neq b$. 
-\end{enumerate}
-%
-%
-\begin{defn}\label{twgG} % \cite{fuchs66}
-Eine \textit{teilweise geordnete Gruppe G} bezeichnet eine Menge G mit folgenden Eigenschaften: 
-%
-\begin{enumerate}
-\item[G1:] $G$ ist eine Gruppe bezüglich der Multiplikation,
-\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $ \grqq\leq\grqq $, wie in \ref{defgs}, 
-\item[G3:] das Monotoniegesetz ist erfüllt: Für $a, b \in  G$ gilt: Aus $a \leq b$ folgt $ca \leq  cb$ und \\ $ac \leq bc$ für alle $c \in G$.
-\end{enumerate}
-% 
-\end{defn}
-%
-%
-\begin{defn}\label{agG}
-Eine Gruppe wird als \textit{angeordnete Gruppe} bezeichnet, wenn ihre Ordnung total ist.
-\end{defn}
-%
-%ab jetzt nach Priess crampe
-\begin{satz} \label{angeordnetFolgtTorsionsfrei} %\cite{priesscrampe83}
-Jede angeordnete Gruppe ist torsionsfrei. 
-\end{satz}
-%
-\beweis{
-Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe \ref{aga}. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 \ref{twgG} ergeben. %(formal siehe kleiner Block)
-}
+
 %
 \begin{defn} %\cite{priesscrampe83}
 Eine abelsche Gruppe $\left(G, +\right))$ heißt \textit{teilbar}, wenn zu jedem $a\in G$ und $n \in \N$ ein Element $b \in$ $G$ mit $nb = a$ existiert.
@@ -229,7 +273,7 @@ Ist $|k| >l$, so ist:
 \[|k+l| = |-|k| + l| = |k| - l \le |k|\le |k| + |l|.\]                                                                                                                       
 %
 \newpage
-
+\section{Wohlordnung in angeordnet abelschen Gruppen}
 Die folgenden Aussagen orientieren sich an der Arbeit \cite{xin04} von Guoce Xin, der sich mit den Eigenschaften Hahnscher, respektive Malcev-Neumann-Potenzreihen auseinandersetzte. 
 \begin{satz}\label{wohlgeordnetabnehmendeFolge} 
 Sei $\grqq\le\grqq$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine unendlich abnehmende Folge in $W$ gibt.
@@ -445,49 +489,7 @@ Zu S2: Für $g \in C$ ist offensichtlich $g^{-1}Cg = C \in \Sigma$. Falls $g \no
 Zu S3: Nach Voraussetzung gilt $D \prec C$ und offensichtlich erfüllt jedes Element $g \in G$ die Bedingung $g^{-1}D_1g \prec  g^{-1}C_1g$. Weiterhin erhalten wir im Fall $g\in C$, dass  $g^{-1}C_1g = C$, und da $D \subset C$ ist $g^{-1}D_1g = D$. Infolgedessen ist $D$ normal in $C$ und die Faktorgruppe $C/D$ enthält, da in $\Sigma$ keine Untergruppe zwischen $C$ und $D$ existiert, dementsprechend nur die trivialen konvexen Untergruppen. In $C/D$ ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und nach Satz von Hölder \ref{aga} isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.}
 %
 %
-\section{Einblick in die Bewertungstheorie}
-Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $\left(G,+\right)$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
-%
-%
-\begin{defn} %\cite{priesscrampe83}\label{bew}
-Eine \textit{Bewertung $v\left(a\right)$} mit $a\in G$ ist eine surjektive Funktion $v\colon G \rightarrow \Theta$, so dass folgende drei Eigenschaften erfüllt sind:
-%
-\begin{enumerate}
-\item[B1:] $v{(a)} = 0 \Leftrightarrow a = 0$ für alle $a\in G$,
-\item[B2:]  $v{(a)} = -v{(a)} \text{  } \text{ für alle } a \in G $,
-\item[B3:] $ v{(a+ b)} \le$ max$\{(v{(a)}, v{(b)}\}$ für alle $ a, b \in G$ .
-\end{enumerate}
-%
-\end{defn}
-Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $. Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $.\\
-Sei $\left(G, +\right)$ eine angeordnete Gruppe, mit $[a]$ bezeichnen wir die Klasse, in der das Element $a\in G$ , $[G]$ bezeichne die Gesamtheit der archimedischen Klassen von G. Die Abbildung %TODO: satz!
- \\$a \mapsto [a] \colon G \to [G]$ nennt man \textit{natürliche Bewertung}. %\cite{priesscrampe83}
-\begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
-Sei $K$ ein Körper, ($\Theta, +$) eine angeordnete abelsche Gruppe und $\overline{\Theta}  = \Theta \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{\Theta} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
-%TODO: Quelle checken
-\begin{enumerate}
-\item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,
-\item[B2':] $v(ab) = v\left(a\right)+v\left(b\right) $ für alle $ a, b \in K$,
-\item[B3':] $v\left(a+b\right) \ge $ min$\lbrace v(a),v\left(b \right)\rbrace \text{ für alle }  a, b \in K. $
-\end{enumerate}
-\end{defn}
-Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil \ref*{LaurentreiheBewertung} noch erörtert wird. 
-Man bezeichnet $v\colon K \to \overline{\Theta} $ als diskrete Bewertung, falls gilt ${\Theta} = \Z$.
-%
-\begin{defn} %\cite{hulek12} \label{bewertungsring}
-Ein Integritätsring $R$ heisst \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper Quot$(R)$ von $R$ eine Bewertung $v: Quot(R)^* \rightarrow \Z$ gibt, mit:
-\begin{enumerate}
-\item[D1: ]$v(ab) = v(a)+ v(b)$, 
-\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
-sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
-\end{enumerate}
-\[R = \lbrace x \in Quot(R)^*: v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace.\]
-\end{defn}
-Neukirch liefert in seinen Ausführungen zur algebraischen Zahlentheorie \cite[S. 126]{neukirch92} eine äquivalente Definition anhand der eindeutigen Eigenschaften eines diskreten Bewertungsrings:
-\begin{defn} %\cite{neukirch92}
-Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen maximalen Ideal $\mathfrak{p}$.
-\end{defn} 
-%
+
 \section{Der Hahnsche Einbettungssatz}\label{HahnscheEinbettungssatz}
 %
 Wie in den vorherigen Paragraphen ausgeführt, sind archimedische Gruppen abelsch und isomorph zu Untergruppen der additiven Gruppe der reellen Zahlen. Das heißt, es gibt einen injektiven monotonen Homomorphismus $f\colon G \mapsto$ $\left(\R , +\right)$. Existiert ein weiterer solcher Homomorphismus $g\colon G \mapsto$ $\left(\R, +\right)$, dann existiert genau eine reelle Zahl $r > 0$, mit $g(x) = r\cdot f(x)$ für alle $x \in G$, siehe Satz \ref{homomorphismus nach R}.\\
