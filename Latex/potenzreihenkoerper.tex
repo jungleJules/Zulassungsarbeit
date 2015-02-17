@@ -5,19 +5,7 @@ Diese sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürl
 
 %Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Anschließend beschäftigen wir uns mit dem Körper der Laurentreihen K((z)), der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem durch Einbettung des Ringes ein Körper entsteht. Der dadurch entstandene Körper wird als \textit{allgemeiner Potenzreihenkörper} bezeichnet. \\ 
 \section{Der Potenzreihenring}\label{potenzreihenring}
-Allgemein ist ein Ring folgendermaßen definiert:
-\begin{defn}\label{Ring} %\cite{fischer08} nach Skript Funktionentheorie Kaiser
-Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot: R \times R \to R $ zwei Verknüpfungen auf $R$. Das Tripel $\left(R, +, \cdot\right)$ bezeichnen wir als \textit{Ring}, wenn gilt:
-%
-\begin{enumerate}
-\item[R1:] $(R, +)$ ist eine abelsche Gruppe,
-\item[R2:] $\left(R, \cdot\right)$ ist ein Monoid,
-\item[R3:] (Distributivgesetze) Für alle a,b,c $\in$ R gilt:\\
-\[(a \cdot(b +c) = a \cdot b + a \cdot c \text{ und }
-(a+b) \cdot c = a \cdot c + b \cdot c \] 
-\end{enumerate}
-\end{defn}
-Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
+
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
 Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper K. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte. Konvergenzbetrachtungen sind in der Theorie der formalen Potenzreihenringe und -körper daher irrelevant. \\
@@ -132,29 +120,7 @@ Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$
 %
 %
 %
-In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
-\begin{satz}\label{quotkoerper} %\cite{Lueneburg08}
-Es sei $R$ ein Integritätsbereich, bestehend aus wenigstens zwei Elementen. Wir definieren auf $R\times R^*$ eine Äquivalenzrelation $\grqq\sim\grqq$ durch $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$, wir können also schreiben: \\
-\[rwv = rvw = suw = swu = tvu = tuv.\]
-Nach Voraussetzung ist $R$ ein Integritätsbereich und da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Auf $R\times R^*$ definieren wir eine Addition und eine Multiplikation durch 
-\[\left(r,u\right)+ \left(s,v\right) := \left(rv + su, uv\right),\]
-\[\left(r,u\right)\left(s,v\right) := \left(rs, uv\right)\text{ definiert.}\] %TODO 
-Wir setzen Quot$(R) := (R\times R^*)/\sim$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$, so gilt: 
-\[\frac{r}{u} + \frac{s}{v} = \frac{rv + su}{uv}\]
-\[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}\]
-(Quot $R, +, \cdot)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
-\end{satz}
-\beweis{Es genügt, die Körperaxiome für (Quot(R), +, $\cdot$) nachzurechnen.
-%Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. \textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
-}
-Der Quotientenkörper ist bis auf Isomorphie der kleinste Körper in den $R$ als Unterring eingebettet werden kann.
-%
-%
-\begin{bsp}
-Ist D $\subseteq \C$ ein Gebiet, so ist der Ring $ \mathcal{O} (D) $ der in $D$ holomorphen Funktionen ein Integritätsring. Man nennt: \\
-$ M \left(D\right) := $Quot$\left( \mathcal{O} \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \mathcal{O} (D), ~g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert. 
-\end{bsp}
-%
+
 
 Im nächsten Teil können wir zeigen, dass der Quotientenkörper des Ringes der formalen Potenzreihen, dem Körper der formalen Laurentreihen entspricht, auf den wir später näher eingehen werden. Anschließend definieren wir eine entsprechende Bewertung auf dem Körper der formalen Laurentreihen.
 

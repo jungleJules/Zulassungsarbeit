@@ -3,40 +3,138 @@ In diesem Kapitel werden die für das Weitere benötigten Grundlagen zusammenges
 %Erster Teil: Definition Gruppe, Ring, Körper (Algebraische Strukturen)
 %Zweiter Teil: Bewertung (Einblick in die Bewertungstheorie) 
 %Dritter Teil: Anordnung Wohlordnung Definitionen.(Ordnungsbegriff) viell. erst auf teilweise Ordnung -> Anordnung -> Wohlordnung
-\section{Algebraische Strukturen}
+\section{Grundlegende algebraische Strukturen}
 Wir definieren zunächst die elementaren algebraischen Strukturen Gruppe, Ring, Körper und Quotientenkörper. Die Vertrautheit mit grundlegenden Begriffen über Mengen und Abbildungen, sowie den wichtigen Zahlenmengen $\N, \Z, \Q, \R$ und $\C$ wird vorausgesetzt. 
 %
 \begin{defn}\label{Gruppe}
 Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightarrow G, \left( a, b\right) \mapsto a \circ b$ heißt \textit{Gruppe}, wenn die folgenden Bedingungen erfüllt sind:
 \begin{enumerate}
-\item[i] $a\circ \left(b\circ c\right) = \left(a\circ b\right) \circ c$ für alle $a, b, c \in G$ (Assoziativgesetz).
-\item[ii] Es gibt ein eindeutig bestimmtes Element $1_G \in G$ mit $1_G \circ a  = a \circ 1_G = a$ für alle $a \in G$. Man bezeichnet $1_G$ als das neutrale Element der Gruppe G.
-\item[iii] Zu jedem $a \in G$ gibt es ein Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. Man bezeichnet $a^{-1}$ als das inverse Element zu $a$.
-\item[iv] Die Gruppe heißt \textit{abelsch}, wenn das Kommutativgesetz $a \circ b = b \circ a$ für alle $a, b \in G$ erfüllt ist.  
+\item[(i)] (Assoziativgesetz) $a\circ \left(b\circ c\right) = \left(a\circ b\right) \circ c$ für alle $a, b, c \in G$.
+\item[(ii)] (Neutrales Element) Es gibt ein eindeutig bestimmtes Element $1_G \in G$ mit $1_G \circ a  = a \circ 1_G = a$ für alle $a \in G$.
+\item[(iii)] (Inverses Element) Zu jedem $a \in G$ gibt es ein Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. \\
+Die Gruppe heißt \textit{abelsch}, falls folgendes gilt: 
+\item[(iv)] (Kommutativgesetz) $a \circ b = b \circ a$ für alle $a, b \in G$ erfüllt ist.  
 \end{enumerate} 
 \end{defn}
+%
+%
+\begin{bem}
+Wenn $\left(G, \circ\right)$ eine Gruppe ist, so wird das Inverse eines Elements $a\in G$ mit $a^{-1}$ bezeichnet. In abelschen Gruppen verwenden wir als Verknüpfung $+$ und nennen das neutrale Element $0_G$ und $-a$ das Inverse zu $a\in G$. 
+\end{bem}
+%
+\begin{bsp}
+$\left( \Z, +\right), \left(\Q, +\right)$ und$\left(\R, +\right)$ sind abelsche Gruppen. 
+\end{bsp}
+%
 \begin{defn}\label{Untergruppe}
 Sei $\left(G, \circ\right)$ eine Gruppe mit neutralem Element $1_G$. Die Teilmenge $U\subseteq G$ heißt \textit{Untergruppe}, wenn gilt:
 \begin{enumerate}
-\item[i] $1_G \in U$
-\item[ii] $a, b \in U \Rightarrow ab \in U$
-\item[iii] $a \in U \Rightarrow a^{-1} \in U$ 
+\item[(i)] $1_G \in U$.
+\item[(ii)] $a, b \in U \Rightarrow ab \in U$.
+\item[(iii)] $a \in U \Rightarrow a^{-1} \in U$.
 \end{enumerate} 
 \end{defn}
 
-Allgemein ist ein Ring folgendermaßen definiert:
+
 \begin{defn}\label{Ring} %\cite{fischer08} nach Skript Funktionentheorie Kaiser
 Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot: R \times R \to R $ zwei Verknüpfungen auf $R$. Das Tripel $\left(R, +, \cdot\right)$ bezeichnen wir als \textit{Ring}, wenn gilt:
 %
 \begin{enumerate}
-\item[R1:] $(R, +)$ ist eine abelsche Gruppe,
-\item[R2:] $\left(R, \cdot\right)$ ist ein Monoid,
-\item[R3:] (Distributivgesetze) Für alle a,b,c $\in$ R gilt:\\
+\item[(i)] $(R, +)$ ist eine abelsche Gruppe,
+\item[(ii)] Die Multiplikation $\cdot$ ist assoziativ: Für $a, b,c \in R$ gilt $a\cdot \left(b \cdot c\right) = \left(a \cdot b \right) \cdot c$.%Blöd weil ich Monoid brauche: $\left(R, \cdot\right)$ ist ein Monoid,
+\item[(iii)] (Distributivgesetze) Für alle a,b,c $\in$ R gilt:\\
 \[(a \cdot(b +c) = a \cdot b + a \cdot c \text{ und }
 (a+b) \cdot c = a \cdot c + b \cdot c \] 
 \end{enumerate}
 \end{defn}
 Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
+
+\begin{bem} %evtl doch keine extra Bemerkung
+Ist die Multiplikation kommutativ, so heißt $\left(R, +, \cdot\right)$ \textit{kommutativer Ring mit Eins}. Anstelle von $\left(R, +, \cdot\right)$ sprechen wir vereinfachend von dem Ring $R$.
+\end{bem}
+%
+%evtl Definition von Nullteiler, Einheit, Integritätsbereich?
+%
+\begin{defn}
+Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+, \cdot$ zwei Verknüpfungen auf $K$. Genau dann ist $\left(K, +, \cdot\right)$ ein \textit{Körper}, wenn folgende Gesetze gelten:
+\begin{enumerate}
+\item[(a)] Addition
+\begin{enumerate}
+\item[(i)] (Assoziativgesetz) Für alle $a, b, c \in K$ ist $\left(a + b \right) + c = a + \left(b +c\right)$.
+\item[(ii)] (Kommutativgesetz) Für alle $a, b \in K$ ist $a+b = b + a$.
+\item[(iii)] (Nullelement) Es gibt genau ein Element $0_K \in K$ mit $0_K + a = a + 0_K = a$ für alle $a \in K$.
+\item[(iv)] (Negatives Element) Zu jedem $a \in K$ gibt es (genau) ein $-a \in K$ mit $\left(-a\right)+ a = a + \left(-a\right)= 0$.
+\end{enumerate} 
+\item[(b)] Multiplikation:
+\begin{enumerate}
+\item[(i)] (Assoziativgesetz) Für alle $a, b, c \in K$ ist $\left(ab\right)c = a\left(bc)\right)$.
+\item[(ii)] (Kommutativgesetz) Für alle $a, b \in K$ ist $ab = ba$.
+\item[(iii)] (Einselement) Es gibt genau ein Element $1_K \in K$ mit $1_K a = a 1_K = a$ für alle $a \in K$.
+\item[(iv)] (Inverses Element) Zu jedem $a \in K$ mit $a\neq 0 $ gibt es genau ein $a^{-1} \in K$ mit $a^{-1} a = a a^{-1} = 1$.
+\end{enumerate}
+\item[(c)] Distributivgesetz:
+\begin{itemize}
+\item Für alle $a, b, c \in K$ ist $a\left(b +c\right) = ab + bc$.
+\end{itemize}
+\end{enumerate}
+\end{defn}
+
+
+%Quotientenkörper Definition
+In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
+
+\begin{satz}\label{quotkoerper} %\cite{Lueneburg08}
+Es sei $R$ ein Integritätsbereich, bestehend aus wenigstens zwei Elementen. Wir definieren auf $R\times R^*$ eine Äquivalenzrelation $\grqq\sim\grqq$ durch $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$, wir können also schreiben: \\
+\[rwv = rvw = suw = swu = tvu = tuv.\]
+Nach Voraussetzung ist $R$ ein Integritätsbereich und da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Auf $R\times R^*$ definieren wir eine Addition und eine Multiplikation durch 
+\[\left(r,u\right)+ \left(s,v\right) := \left(rv + su, uv\right),\]
+\[\left(r,u\right)\left(s,v\right) := \left(rs, uv\right)\text{ definiert.}\] %TODO 
+Wir setzen Quot$(R) := (R\times R^*)/\sim$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$, so gilt: 
+\[\frac{r}{u} + \frac{s}{v} = \frac{rv + su}{uv}\]
+\[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}\]
+(Quot $R, +, \cdot)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
+\end{satz}
+\beweis{Es genügt, die Körperaxiome für (Quot(R), +, $\cdot$) nachzurechnen.
+%Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. \textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
+}
+Der Quotientenkörper ist bis auf Isomorphie der kleinste Körper in den $R$ als Unterring eingebettet werden kann.
+%
+\section{Angeordnete Gruppen}
+\section{Wohlordnung}
+Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. 
+Im Folgenden sei $G \neq \varnothing$ eine angeordnete Gruppe versehen mit der Ordnungsrelation $\glqq\leq \grqq$. Aufbauend auf Ideen in \cite[S. 16]{fuchs66} entwickeln wir die grundlegenden Eigenschaften wohlgeordneter Mengen.
+\begin{defn} \label{wohlgeordn} %\cite{fuchs66} 
+Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge $V$ von $W$ ein kleinstes Element enthält. Es existiert also ein Element $ x \in V, \text{ mit } u \le v $ für alle $ v \in V.$ 
+\end{defn}
+%
+Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Dieses Theorem, so stellte sich nach erfolglosen Widerlegungsversuchen zahlreicher Mathematiker heraus, ist äquivalent zum Auswahlaxiom und dem Lemma von Zorn. \\
+Beispielsweise ist die natürliche Anordnung der natürlichen Zahlen $\N$ eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $\glqq\leq\grqq$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
+\begin{bem} %\cite{rainer08}
+Ist $M \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $M$ ein eindeutig bestimmtes kleinstes Element. 
+\end{bem} 
+%Der Beweis wird nicht benötigt. \beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
+%}
+
+%
+
+%\begin{bsp}
+%Betrachte auf $\Z$ die Ordnung: $ a\prec b \Leftrightarrow (|a| \le|b| \vee |a| = |b|, a > 0).$ \newline %\footnote{http://www.mathematik.tu-dortmund.de/lsviii/new/media/veranstaltungen/wise1011/mathinf1/SkriptRek.pdf}. 
+%Daher gilt in $\Z$: $ 0 \prec 1 \prec -1 \prec 2 \prec -2 ...$. \newline
+%Das kleinste Element von $\Z$ in dieser Ordnung entspricht dem Element mit dem kleinsten Index. 
+%\end{bsp}
+%
+%
+\begin{bsp}
+Betrachte die Relation $\grqq\preceq \grqq $ auf $\Z$ :  
+\[a \preceq b \text{ genau dann, wenn } |a| \leq |b| \text{ und } \left( |a| = |b| \Rightarrow a \leq  b \right).\]
+ $\grqq\preceq \grqq $ ist eine Wohlordnung auf $\Z$ und es gilt: 0$  \preceq 1 \preceq -1 \preceq 2 \preceq -2 \preceq -3 \preceq 3 ... $ 
+\end{bsp}
+%
+\begin{bsp}
+Ist D $\subseteq \C$ ein Gebiet, so ist der Ring $ \mathcal{O} (D) $ der in $D$ holomorphen Funktionen ein Integritätsring. Man nennt: \\
+$ M \left(D\right) := $Quot$\left( \mathcal{O} \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \mathcal{O} (D), ~g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert. 
+\end{bsp}
+%
  
 \chapter{Angeordnete abelsche Gruppen}\label{chap2} %TODO: Wichtig hier nur alles was abelsch ist rein!!!
 %Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
@@ -46,7 +144,7 @@ In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur B
 Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
-%\section{Angeordnete Gruppen}
+\section{Angeordnete Gruppen}
 %
 \begin{defn}\label{defgs} 
 Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $ \grqq\leq\grqq $ auf $A$ gibt mit: folgende Eigenschaften für alle$ a,b,c \in A$  erfüllt.
@@ -131,35 +229,7 @@ Ist $|k| >l$, so ist:
 \[|k+l| = |-|k| + l| = |k| - l \le |k|\le |k| + |l|.\]                                                                                                                       
 %
 \newpage
-\section{Wohlordnung}
-Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. 
-Im Folgenden sei $G \neq \varnothing$ eine angeordnete Gruppe versehen mit der Ordnungsrelation $\glqq\leq \grqq$. Aufbauend auf Ideen in \cite[S. 16]{fuchs66} entwickeln wir die grundlegenden Eigenschaften wohlgeordneter Mengen.
-\begin{defn} \label{wohlgeordn} %\cite{fuchs66} 
-Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge $V$ von $W$ ein kleinstes Element enthält. Es existiert also ein Element $ x \in V, \text{ mit } u \le v $ für alle $ v \in V.$ 
-\end{defn}
-%
-Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Dieses Theorem, so stellte sich nach erfolglosen Widerlegungsversuchen zahlreicher Mathematiker heraus, ist äquivalent zum Auswahlaxiom und dem Lemma von Zorn. \\
-Beispielsweise ist die natürliche Anordnung der natürlichen Zahlen $\N$ eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $\glqq\leq\grqq$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
-\begin{bem} %\cite{rainer08}
-Ist $M \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $M$ ein eindeutig bestimmtes kleinstes Element. 
-\end{bem} 
-%Der Beweis wird nicht benötigt. \beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
-%}
 
-%
-
-%\begin{bsp}
-%Betrachte auf $\Z$ die Ordnung: $ a\prec b \Leftrightarrow (|a| \le|b| \vee |a| = |b|, a > 0).$ \newline %\footnote{http://www.mathematik.tu-dortmund.de/lsviii/new/media/veranstaltungen/wise1011/mathinf1/SkriptRek.pdf}. 
-%Daher gilt in $\Z$: $ 0 \prec 1 \prec -1 \prec 2 \prec -2 ...$. \newline
-%Das kleinste Element von $\Z$ in dieser Ordnung entspricht dem Element mit dem kleinsten Index. 
-%\end{bsp}
-%
-%
-\begin{bsp}
-Betrachte die Relation $\grqq\preceq \grqq $ auf $\Z$ :  
-\[a \preceq b \text{ genau dann, wenn } |a| \leq |b| \text{ und } \left( |a| = |b| \Rightarrow a \leq  b \right).\]
- $\grqq\preceq \grqq $ ist eine Wohlordnung auf $\Z$ und es gilt: 0$  \preceq 1 \preceq -1 \preceq 2 \preceq -2 \preceq -3 \preceq 3 ... $ 
-\end{bsp}
 Die folgenden Aussagen orientieren sich an der Arbeit \cite{xin04} von Guoce Xin, der sich mit den Eigenschaften Hahnscher, respektive Malcev-Neumann-Potenzreihen auseinandersetzte. 
 \begin{satz}\label{wohlgeordnetabnehmendeFolge} 
 Sei $\grqq\le\grqq$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine unendlich abnehmende Folge in $W$ gibt.

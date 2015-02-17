@@ -1,18 +1,20 @@
 \BOOKMARK [0][]{chapter.1}{Einleitung}{}% 1
-\BOOKMARK [0][]{chapter.2}{Angeordnete Gruppen}{}% 2
-\BOOKMARK [1][]{section.2.1}{Wohlordnung}{chapter.2}% 3
-\BOOKMARK [1][]{section.2.2}{Archimedisch angeordnete Gruppen}{chapter.2}% 4
-\BOOKMARK [1][]{section.2.3}{Die angeordnete Menge konvexer Untergruppen}{chapter.2}% 5
-\BOOKMARK [1][]{section.2.4}{Einblick in die Bewertungstheorie}{chapter.2}% 6
-\BOOKMARK [1][]{section.2.5}{Der Hahnsche Einbettungssatz}{chapter.2}% 7
-\BOOKMARK [0][]{chapter.3}{Potenzreihenk\366rper}{}% 8
-\BOOKMARK [1][]{section.3.1}{Der Potenzreihenring}{chapter.3}% 9
-\BOOKMARK [2][]{subsection.3.1.1}{Rechnen im Potenzreihenring}{section.3.1}% 10
-\BOOKMARK [2][]{subsection.3.1.2}{Eigenschaften des Potenzreihenrings}{section.3.1}% 11
-\BOOKMARK [1][]{section.3.2}{Der K\366rper der formalen Laurentreihen}{chapter.3}% 12
-\BOOKMARK [1][]{section.3.3}{Der Potenzreihenk\366rper}{chapter.3}% 13
-\BOOKMARK [2][]{subsection.3.3.1}{Potenzreihenstrukturen mit Tr\344ger \374ber den ganzen Zahlen}{section.3.3}% 14
-\BOOKMARK [2][]{subsection.3.3.2}{Formale Potenzreihen auf angeordneten abelschen Gruppen}{section.3.3}% 15
-\BOOKMARK [2][]{subsection.3.3.3}{Definition der Addition und Multiplikation in K[[z]]}{section.3.3}% 16
-\BOOKMARK [2][]{subsection.3.3.4}{Der Ring der formalen Potenzreihen}{section.3.3}% 17
-\BOOKMARK [2][]{subsection.3.3.5}{Die Konstruktion des Inversen in K[[z]]}{section.3.3}% 18
+\BOOKMARK [0][]{chapter.2}{Mathematische Grundlagen}{}% 2
+\BOOKMARK [1][]{section.2.1}{Grundlegende algebraische Strukturen}{chapter.2}% 3
+\BOOKMARK [0][]{chapter.3}{Angeordnete abelsche Gruppen}{}% 4
+\BOOKMARK [1][]{section.3.1}{Wohlordnung}{chapter.3}% 5
+\BOOKMARK [1][]{section.3.2}{Archimedisch angeordnete Gruppen}{chapter.3}% 6
+\BOOKMARK [1][]{section.3.3}{Die angeordnete Menge konvexer Untergruppen}{chapter.3}% 7
+\BOOKMARK [1][]{section.3.4}{Einblick in die Bewertungstheorie}{chapter.3}% 8
+\BOOKMARK [1][]{section.3.5}{Der Hahnsche Einbettungssatz}{chapter.3}% 9
+\BOOKMARK [0][]{chapter.4}{Potenzreihenk\366rper}{}% 10
+\BOOKMARK [1][]{section.4.1}{Der Potenzreihenring}{chapter.4}% 11
+\BOOKMARK [2][]{subsection.4.1.1}{Rechnen im Potenzreihenring}{section.4.1}% 12
+\BOOKMARK [2][]{subsection.4.1.2}{Eigenschaften des Potenzreihenrings}{section.4.1}% 13
+\BOOKMARK [1][]{section.4.2}{Der K\366rper der formalen Laurentreihen}{chapter.4}% 14
+\BOOKMARK [1][]{section.4.3}{Der Potenzreihenk\366rper}{chapter.4}% 15
+\BOOKMARK [2][]{subsection.4.3.1}{Potenzreihenstrukturen mit Tr\344ger \374ber den ganzen Zahlen}{section.4.3}% 16
+\BOOKMARK [2][]{subsection.4.3.2}{Formale Potenzreihen auf angeordneten abelschen Gruppen}{section.4.3}% 17
+\BOOKMARK [2][]{subsection.4.3.3}{Definition der Addition und Multiplikation in K[[z]]}{section.4.3}% 18
+\BOOKMARK [2][]{subsection.4.3.4}{Der Ring der formalen Potenzreihen}{section.4.3}% 19
+\BOOKMARK [2][]{subsection.4.3.5}{Die Konstruktion des Inversen in K[[z]]}{section.4.3}% 20
