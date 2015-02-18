@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  18 FEB 2015 18:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  18 FEB 2015 22:57
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1142,29 +1142,23 @@ LaTeX Warning: Command \grqq invalid in math mode on input line 222.
 
 [10]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 257.
+LaTeX Warning: Command \glqq invalid in math mode on input line 262.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 257.
-
-
-LaTeX Warning: Command \glqq invalid in math mode on input line 263.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 263.
+LaTeX Warning: Command \grqq invalid in math mode on input line 262.
 
 [11]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 280.
+LaTeX Warning: Command \grqq invalid in math mode on input line 279.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 280.
+LaTeX Warning: Command \grqq invalid in math mode on input line 279.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 282.
+LaTeX Warning: Command \grqq invalid in math mode on input line 281.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 282.
+LaTeX Warning: Command \grqq invalid in math mode on input line 281.
 
 [12]
 Kapitel 3.
@@ -1180,123 +1174,123 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\rm' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\rm'
-(scrbook)              by `\normalfont \rmfamily ' on input line 288.
+(scrbook)              by `\normalfont \rmfamily ' on input line 287.
 
 [13
 
 
 ]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 331.
+LaTeX Warning: Command \glqq invalid in math mode on input line 330.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 331.
+LaTeX Warning: Command \grqq invalid in math mode on input line 330.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 333.
+LaTeX Warning: Command \grqq invalid in math mode on input line 332.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 333.
+LaTeX Warning: Command \grqq invalid in math mode on input line 332.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 336.
+LaTeX Warning: Command \grqq invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 336.
+LaTeX Warning: Command \grqq invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 336.
+LaTeX Warning: Command \grqq invalid in math mode on input line 335.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 336.
+LaTeX Warning: Command \grqq invalid in math mode on input line 335.
 
 [14] [15]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 365.
+LaTeX Warning: Command \glqq invalid in math mode on input line 364.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 365.
+LaTeX Warning: Command \grqq invalid in math mode on input line 364.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 370.
+LaTeX Warning: Command \grqq invalid in math mode on input line 369.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 370.
+LaTeX Warning: Command \grqq invalid in math mode on input line 369.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 370.
+LaTeX Warning: Command \grqq invalid in math mode on input line 369.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 370.
+LaTeX Warning: Command \grqq invalid in math mode on input line 369.
 
 [16]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 390.
+LaTeX Warning: Command \grqq invalid in math mode on input line 397.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 390.
+LaTeX Warning: Command \grqq invalid in math mode on input line 397.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 390.
+LaTeX Warning: Command \glqq invalid in math mode on input line 397.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 390.
+LaTeX Warning: Command \grqq invalid in math mode on input line 397.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 391.
+LaTeX Warning: Command \glqq invalid in math mode on input line 398.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 391.
+LaTeX Warning: Command \grqq invalid in math mode on input line 398.
 
 [17] [18] [19]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 504.
+LaTeX Warning: Command \grqq invalid in math mode on input line 511.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 504.
+LaTeX Warning: Command \grqq invalid in math mode on input line 511.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 504.
+LaTeX Warning: Command \grqq invalid in math mode on input line 511.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 504.
+LaTeX Warning: Command \glqq invalid in math mode on input line 511.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
+Underfull \hbox (badness 10000) in paragraph at lines 511--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--511
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
-
- []
-
-[20]
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 504.
+LaTeX Warning: Command \grqq invalid in math mode on input line 511.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 504.
+LaTeX Warning: Command \grqq invalid in math mode on input line 511.
 
-[21] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
+[20] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
+[21]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 515.
+LaTeX Warning: Command \glqq invalid in math mode on input line 522.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 515.
+LaTeX Warning: Command \grqq invalid in math mode on input line 522.
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
 
  []
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 525.
+LaTeX Warning: Command \glqq invalid in math mode on input line 532.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 525.
+LaTeX Warning: Command \grqq invalid in math mode on input line 532.
 
 [23]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
 [24]
@@ -1495,10 +1489,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 20515 strings out of 493921
- 352032 string characters out of 3144876
- 471946 words of memory out of 3000000
- 23217 multiletter control sequences out of 15000+200000
+ 20513 strings out of 493921
+ 352001 string characters out of 3144876
+ 476918 words of memory out of 3000000
+ 23216 multiletter control sequences out of 15000+200000
  30664 words of font info for 71 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,12n,71p,1164b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1536,9 +1530,9 @@ m10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8
 a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (49 pages, 637817 bytes).
+Output written on main.pdf (49 pages, 637172 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 160 named destinations out of 1000 (max. 500000)
+ 1099 PDF objects out of 1200 (max. 8388607)
+ 159 named destinations out of 1000 (max. 500000)
  194 words of extra memory for PDF output out of 10000 (max. 10000000)
 
