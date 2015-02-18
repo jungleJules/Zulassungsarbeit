@@ -1,23 +1,23 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einleitung}{4}{chapter.1}
 \contentsline {chapter}{\numberline {2}Mathematische Grundlagen}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Grundlegende algebraische Strukturen}{5}{section.2.1}
+\contentsline {section}{\numberline {2.1}Algebraische Strukturen}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Einblick in die Bewertungstheorie}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Ordnungen}{9}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Anordnung}{9}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Wohlordnung}{10}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Angeordnete abelsche Gruppen}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wohlordnung in angeordnet abelschen Gruppen}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Archimedisch angeordnete Gruppen}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Die angeordnete Menge konvexer Untergruppen}{22}{section.3.3}
-\contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Der Potenzreihenring}{24}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Rechnen im Potenzreihenring}{25}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Eigenschaften des Potenzreihenrings}{27}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{28}{section.4.2}
-\contentsline {section}{\numberline {4.3}Der Potenzreihenk\IeC {\"o}rper}{35}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Potenzreihenstrukturen mit Tr\IeC {\"a}ger \IeC {\"u}ber den ganzen Zahlen}{35}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Formale Potenzreihen auf angeordneten abelschen Gruppen}{36}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{37}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Der Ring der formalen Potenzreihen}{39}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{41}{subsection.4.3.5}
+\contentsline {section}{\numberline {2.3}Ordnungen}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Anordnung}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Wohlordnung}{11}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Angeordnete abelsche Gruppen}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wohlordnung in angeordnet abelschen Gruppen}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Archimedisch angeordnete Gruppen}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Die angeordnete Menge konvexer Untergruppen}{23}{section.3.3}
+\contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Der Potenzreihenring}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Rechnen im Potenzreihenring}{26}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Eigenschaften des Potenzreihenrings}{28}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{29}{section.4.2}
+\contentsline {section}{\numberline {4.3}Der Potenzreihenk\IeC {\"o}rper}{36}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Potenzreihenstrukturen mit Tr\IeC {\"a}ger \IeC {\"u}ber den ganzen Zahlen}{36}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Formale Potenzreihen auf angeordneten abelschen Gruppen}{37}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{38}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Der Ring der formalen Potenzreihen}{40}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{42}{subsection.4.3.5}
