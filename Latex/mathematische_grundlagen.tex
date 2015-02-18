@@ -215,7 +215,7 @@ $A$ und $A'$ werden in diesem Fall \textit{ordnungsisomorph} genannt.
 \end{defn}
 %
 \begin{defn}\label{twgG} % \cite{fuchs66}
-Eine \textit{teilweise geordnete Gruppe G} bezeichnet eine Menge G mit folgenden Eigenschaften: 
+Eine \textit{teilweise geordnete Gruppe} bezeichnet eine Menge $G$ mit folgenden Eigenschaften: 
 %
 \begin{enumerate}
 \item[G1:] $G$ ist eine Gruppe bezüglich der Multiplikation,
@@ -236,22 +236,32 @@ Jede angeordnete Gruppe ist torsionsfrei.
 \end{satz}
 %
 \beweis{
-Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe \ref{aga}. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 \ref{twgG} ergeben. %(formal siehe kleiner Block)
+Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 ergeben. %(formal siehe kleiner Block)
 }
 %
+\begin{bem}\label{afG} %nach Fuchs S. 25
+%
+Genügt eine Teilmenge $P := \lbrace x \in G | x \geq 0\rbrace$ einer Gruppe $G$ den Bedingungen P1- P3, so nennt man $\left(G,\circ\right)$ \textit{anordnungsfähig}. Wir nennen $P$ den \textit{Positivbereich} von $G$.
+%
+\begin{enumerate}
+\item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$,
+\item[P2:] $P \circ P \subseteq P$,
+\item[P3:] $xPx^{-1} \subseteq P$ für jedes $x \in G$.
+\end{enumerate}
+
+\end{bem}
 %
 
 \subsection{Wohlordnung}
-Nun beschäftigen wir uns mit der Wohlordnung von total geordneten Gruppen. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. 
-Im Folgenden sei $G \neq \varnothing$ eine angeordnete Gruppe versehen mit der Ordnungsrelation $\glqq\leq \grqq$. Aufbauend auf Ideen in \cite[S. 16]{fuchs66} entwickeln wir die grundlegenden Eigenschaften wohlgeordneter Mengen.
+Nun beschäftigen wir uns mit dem Begriff der Wohlordnung. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. Wir definieren wohlgeordnete Mengen wie in \cite[S. 16]{fuchs66}.
 \begin{defn} \label{wohlgeordn} %\cite{fuchs66} 
-Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge $V$ von $W$ ein kleinstes Element enthält. Es existiert also ein Element $ x \in V, \text{ mit } u \le v $ für alle $ v \in V.$ 
+Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge $V$ von $W$ ein kleinstes Element enthält. Es existiert also ein Element $ u \in V, \text{ mit } u \le v $ für alle $ v \in V.$ 
 \end{defn}
 %
 Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Dieses Theorem, so stellte sich nach erfolglosen Widerlegungsversuchen zahlreicher Mathematiker heraus, ist äquivalent zum Auswahlaxiom und dem Lemma von Zorn. \\
 Beispielsweise ist die natürliche Anordnung der natürlichen Zahlen $\N$ eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $\glqq\leq\grqq$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
 \begin{bem} %\cite{rainer08}
-Ist $M \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $M$ ein eindeutig bestimmtes kleinstes Element. 
+Ist $W \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $W$ ein eindeutig bestimmtes kleinstes Element. 
 \end{bem} 
 %Der Beweis wird nicht benötigt. \beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
 %}
@@ -267,8 +277,8 @@ Ist $M \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $M$ ein eind
 %
 \begin{bsp}
 Betrachte die Relation $\grqq\preceq \grqq $ auf $\Z$ :  
-\[a \preceq b \text{ genau dann, wenn } |a| \leq |b| \text{ und } \left( |a| = |b| \Rightarrow a \leq  b \right).\]
- $\grqq\preceq \grqq $ ist eine Wohlordnung auf $\Z$ und es gilt: 0$  \preceq 1 \preceq -1 \preceq 2 \preceq -2 \preceq -3 \preceq 3 ... $ 
+\[a \preceq b \text{ genau dann, wenn } |a| \le |b| \text{ oder }  |a| = |b| \text{ und } a \leq  b.\]
+ $\grqq\preceq \grqq $ ist eine Wohlordnung auf $\Z$ und es gilt: 0$  \preceq -1 \preceq 1 \preceq -2 \preceq 2 \preceq 3 \preceq -3 ... $ 
 \end{bsp}
 %
 
@@ -278,8 +288,8 @@ Betrachte die Relation $\grqq\preceq \grqq $ auf $\Z$ :
 %Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
 %Teil 2: Zusammenhang angeordnete abelsche Gruppe mit Wohlordnung
 %Teil 3: Satz von Hölder
-In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Zunächst betrachten wir die wichtigsten Eigenschaften angeordneter Gruppen. Nach einer Einführung in die Theorie angeordneter Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Eigenschaft der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. An den Satz von Hölder, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können,  schließt die zentrale Aussage des Kapitels an: der Hahnsche Einbettungssatz. Dieser besagt, dass angeordnete abelsche Gruppen auch als Untergruppen eines lexikographisch geordneten reellen Funktionenraums, beispielsweise des Körpers der Laurentreihen, verstanden werden können. \\
-Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
+In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können. \\
+%TODO: vielleicht zu ausufernd? Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
 %
@@ -296,25 +306,15 @@ Wir betrachten $\overline{G} $, bestehend aus der Menge der Paare $\left(x, n\ri
 Die Gruppe $\overline{G}$ ist torsionsfrei, da jedes Element, bis auf das neutrale, unendliche Ordnung hat, nach Konstruktion von $\overline{G}$. Durch die Abbildung  $G \rightarrow \overline{G}, a \mapsto (a, 1)$ ist eine Einbettung von $G$ in $\overline{G}$ gegeben, die jedem Element aus $G$ ein Element in $\overline{G}$ zuordnet.\\
 Wir konstruieren eine minimal teilbare Gruppe einer teilbaren Obergruppe $G^*$ von $G$. Als minimal teilbare Untergruppe von $G^*$, die $G$ enthält nach Konstruktion, wählen wir $\Q G = \lbrace q x: q\in \Q, x\in G\rbrace$. Durch die Abbildung $(a, n) \mapsto \frac{1}{n} \cdot a$ ist ein Isomorphismus von $\overline{G}$ auf $\Q\cdot G$ definiert.}
 %
-\begin{bem}\label{afG}
-%
-Genügt eine Teilmenge $P := \lbrace x \in G | x \geq 0\rbrace$ einer Gruppe $G$ den Bedingungen P1- P3, so nennt man $\left(G,\circ\right)$ \textit{anordnungsfähig}. Wir nennen $P$ den \textit{Positivbereich} von $G$.
-%
-\begin{enumerate}
-\item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$,
-\item[P2:] $P \circ P \subseteq P$,
-\item[P3:] $P$ ist normal in $G$.
-\end{enumerate}
 
-\end{bem}
 %
 
 \begin{bem}\label{angeordnetAbelsch} %\cite{Lueneburg08} 
-Ist eine abelsche Gruppe $G$ mit dem Positivbereich $P$ angeordnet, so definiert dann $a \leq b \Leftrightarrow b - a \in P$ für $a, b \in G$.
+Ist eine abelsche Gruppe $G$ mit dem Positivbereich $P$ angeordnet, so definieren wir $a \leq b$ genau dann, wenn $b - a \in P$ ist für $a, b \in G$.
 %aus: http://wwwmath.uni-muenster.de/users/ischebeck/algebra.pdf 
 \end{bem}
 \begin{defn} \label{betrag}
-Der \textit{absolute Betrag} $|a|$ eines Elements a $\in  G$, wobei $G$ eine angeordnete Gruppe sei, ist definiert als $|a| = max\lbrace a, -a \rbrace$.
+Der \textit{absolute Betrag} $|a|$ eines Elements a $\in  G$, wobei $G$ eine angeordnete Gruppe sei, ist definiert als $|a| = \textup{max}\lbrace a, -a \rbrace$.
 \end{defn}
 
 Wenn die angeordnete Gruppe zusätzlich abelsch ist, gilt die \textit{Dreiecksungleichung} für alle $a, b \in G$:
@@ -327,52 +327,59 @@ Falls $|a| >b$ ist, erhalten wir
 %
 
 \section{Wohlordnung in angeordnet abelschen Gruppen}
-Die folgenden Aussagen orientieren sich an der Arbeit \cite{xin04} von Guoce Xin, der sich mit den Eigenschaften Hahnscher, respektive Malcev-Neumann-Potenzreihen auseinandersetzte. 
+Die folgenden Aussagen orientieren sich an der Arbeit $\glqq$A residue theorem for Malcev--Neumann series$\grqq$ von Guoce Xin.
 \begin{satz}\label{wohlgeordnetabnehmendeFolge} 
-Sei $\grqq\le\grqq$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine unendlich abnehmende Folge in $W$ gibt.
+Sei $\grqq\le\grqq$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine streng monoton fallende Folge in $W$ gibt.
 \end{satz}
-\beweis{ $\grqq \Rightarrow\grqq$: Sei W wohlgeordnet. Angenommen es gibt eine unendlich abnehmende Folge von Elementen in W, nämlich $a_1 > a_2 > a_3 > ...$. Damit erhalten wir eine Teilmenge $\lbrace a_i\rbrace_{i\in \N}$ die kein kleinstes Element besitzt. Dies ist ein Widerspruch zur Wohlordnung von $W$.\\
-$\grqq\Leftarrow\grqq $ Wir nehmen an, es gibt keine unendlich abnehmende Folge in $W$ und betrachten den Fall $W$ ist nicht wohlgeordnet. Dann gibt es eine Teilmenge $A$ von $W$, die kein kleinstes Element enthält. Für ein beliebiges Element $a_1 \in A$ finden wir $a_2 \in A$ mit $a_2 < a_1$. Dieses Verfahren lässt sich endlos fortsetzen und wir erhalten eine unendlich abnehmende Folge $a_1 > a_2 > a_3 > ...$.}
+\beweis{ $\grqq \Rightarrow\grqq$: Sei W wohlgeordnet. Angenommen es gibt eine streng monoton fallende Folge von Elementen in W, nämlich $a_1 > a_2 > a_3 > ...$. Damit erhalten wir eine Teilmenge $\left( a_i\right)_{i\in \N}$, die kein kleinstes Element besitzt. Dies ist ein Widerspruch zur Wohlordnung von $W$.\\
+$\grqq\Leftarrow\grqq $ Wir nehmen an, es gibt keine streng monoton fallende Folge in $W$ und betrachten den Fall $W$ ist nicht wohlgeordnet. Dann gibt es eine Teilmenge $A$ von $W$, die kein kleinstes Element enthält. Für ein beliebiges Element $a_1 \in A$ finden wir $a_2 \in A$ mit $a_2 < a_1$. Dieses Verfahren lässt sich endlos fortsetzen und wir erhalten eine streng monoton fallende Folge $a_1 > a_2 > a_3 > ...$, Widerspruch.}
 %Quelle: http://arxiv.org/pdf/math/0405133v1.pdf
 %
 \begin{bsp}
 Total geordnete endliche Mengen sind wohlgeordnet.
 \end{bsp}
-Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_S$ einer total geordneten Menge $S$, die nicht zwangsläufig wohlgeordnet ist. 
+Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_S$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
 \begin{lemma}\label{wohlgeordnvereinigung} %\cite{xin04}
-Sei $w_\alpha \in W_S$, dann gilt $\cap_\alpha w_\alpha \in W_S$ für alle $\alpha$ und für $w_1, w_2 \in W_S$ gilt $w_1 \cup w_2 \in W_S$.
+Sei $w_{n\in \N} \in W_A$, dann gilt $\cap_\alpha w_n \in W_A$ und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
 \end{lemma}
-\beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $w_1\cup w_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine unendlich abnehmende Folge $a_1 > a_2 > ...$ in $w_1\cup w_2$.\\
-Betrachten wir alle Elemente aus $w_1$, so können wir diese als Folge $a_{i_1} > a_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $w_1$ ist die so erhaltene abnehmende Folge endlich. Die selbe Argumentation wählen wir für $w_2$ und erhalten die endliche abnehmende Folge $a_{j_1} > a_{j_2}...$. Jedes Element der unendlichen Menge $\lbrace a_n| n\ge 1\rbrace$ abnehmender Folgen ist $\lbrace a_n\rbrace_{n\ge1}$ nach Definition in einer der beiden endlichen Folgen enthalten. Widerspruch!}
+\beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $w_1\cup w_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $a_1 > a_2 > ...$ in $w_1\cup w_2$.\\
+Betrachten wir alle Elemente der Teilmenge $w_1$. Wir können diese, da $w_1$ total geordnet ist, als Folge $a_{i_1} > a_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $w_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $w_2$ und erhalten die endliche fallende Folge $a_{j_1} > a_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $a_1 > a_2 > ...$ ist in einer der beiden endlichen Folgen enthalten.  Widerspruch!}
 %
+Die Menge $W_A$ ist somit unter endlicher Vereinigung und unendlichem Schnitt abgeschlossen.
 \begin{lemma}\label{unendlicheFolgeEigenschaften}
-Wir betrachten eine total geordnete Menge $W$. Jede unendliche Folge $a_1, a_2, ...$ in $W$ erfüllt mindestens eine der drei folgenden Eigenschaften:
+Wir betrachten eine total geordnete Menge $A$. Jede Folge $\left(a_n\right)_{n \in \N}$ in $A$ erfüllt mindestens eine der drei folgenden Eigenschaften:
 \begin{enumerate}
-\item[(1)] $a_1, a_2, ...$ enthält eine unendlich zunehmende Teilfolge.
-\item[(2)] $a_1, a_2, ...$ enthält eine unendlich konstante Teilfolge.
-\item[(3)] $a_1, a_2, ...$ enthält eine unendlich abnehmende Teilfolge.
+\item[(1)] $a_1, a_2, ...$ enthält eine streng monoton wachsende Teilfolge.
+\item[(2)] $a_1, a_2, ...$ enthält eine konstante Teilfolge.
+\item[(3)] $a_1, a_2, ...$ enthält eine streng monoton fallende Teilfolge.
 \end{enumerate}
 \beweis{
-Angenommen die Folge $a_1, a_2, ...$ erfüllt weder die Bedingung (2) noch (3). Wir wollen zeigen, dass sie eine unendliche zunehmende Teilfolge enthält.\\
-Da die Folge somit keine unendlich abnehmende Teilfolge enthält, gibt es ein kleinstes Element $a_{i_1}$, denn andernfalls ließe sich eine unendlich abnehmende Teilfolge konstruieren. Die Folge bleibt unendlich wenn wir die ersten Folgenglieder $i_1$ aus $\lbrace a_n\rbrace_{n\ge 1 }$ entfernen, da es nur endlich viele Folgenelemente nach Voraussetzung gibt, die gleich $a_{i1}$ sind. In der daraus entstandenen Folge ist jedes Element größer als $a_{i1}$ und sie enthält wiederum keine unendlich abnehmende oder unendlich konstante Teilfolge. In der so entstandenen Folge ist jedes enthaltene Element echt größer als $a_{i1}$. \\
-Wir wiederholen das durchgeführte Verfahren und konstruieren so die unendlich zunehmende Teilfolge $a_{i1} < a_{i2} <...$.\\
-Die Aussagen (2), (3) werden analog bewiesen.}
+Angenommen die Folge $\left(a_n\right)_{n \in \N}$ erfüllt weder die Bedingung (2) noch (3). Wir wollen zeigen, dass sie eine streng monoton wachsende Teilfolge enthält.\\
+Da die Folge somit keine streng monoton fallende Teilfolge enthält, gibt es ein kleinstes Element $a_{i_1}$, denn andernfalls ließe sich eine streng monoton fallende Teilfolge konstruieren. Die Folge bleibt unendlich wenn wir die ersten Folgenglieder $i_1$ aus $\lbrace a_n\rbrace_{n\ge 1 }$ entfernen, da es nur endlich viele Folgenelemente nach Voraussetzung gibt, die gleich $a_{i1}$ sind. In der daraus entstandenen Folge ist jedes Element größer als $a_{i1}$ und sie enthält wiederum keine streng monoton fallende oder konstante Teilfolge. In der so entstandenen Folge ist jedes enthaltene Element echt größer als $a_{i1}$. \\
+Wir wiederholen das durchgeführte Verfahren und konstruieren so die streng monoton wachsende Teilfolge $a_{i1} < a_{i2} <...$.\\
+}
 %
 \end{lemma}
 %
 Bernhard Hermann Neumann ein deutsch-englisch-australischer Mathematiker bewies in seinem Werk $\glqq$On ordered division rings$\grqq$ \cite[S. 206]{neumann49} die beiden folgenden wichtigen Lemmata, deren volle Bedeutung sich im Hauptteil \ref{eq: multPotenzreihenkoerper} erschließen wird. 
 \begin{lemma}\label{wohlgeordnetwennkeineabfallendeFolge} %\cite{neumann49}
-Die Menge W ist genau dann wohlgeordnet, wenn jede Folge $w_1, w_2, ...$ von Elementen aus W eine nichtabfallende Teilfolge  $w_{\tau(1)} \le w_{\tau(2)} \le ...$ enthält.
+Die Menge $W$ ist genau dann wohlgeordnet, wenn jede Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus W eine monoton steigende Teilfolge  $w_{\tau(1)} \le w_{\tau(2)} \le ...$ enthält.
 \end{lemma}
-\beweis{$\grqq\Rightarrow\grqq$ Sei die total geordnete Menge W wohlgeordnet. Dann gilt nach Lemma \ref{unendlicheFolgeEigenschaften} und der Definition der Wohlordnung, dass eine Folge $w_1, w_2, ...$ von Elementen aus $W$ entweder eine unendlich zunehmende oder konstante Teilfolge enthält.\\
-$\grqq\Leftarrow\grqq$ Jede Folge von Elementen aus W enthält eine nichtabfallende Teilfolge, damit existiert ein kleinstes Element der Teilfolge und W ist nach Definition der Wohlordnung wohlgeordnet.}
+\beweis{$\grqq\Rightarrow\grqq$ Sei die total geordnete Menge $W$ wohlgeordnet. Dann gilt nach Lemma \ref{unendlicheFolgeEigenschaften} und mit Satz \ref{wohlgeordnetabnehmendeFolge}, dass eine Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus $W$ entweder eine streng monoton steigende oder konstante Teilfolge enthält. Jede Folge aus $W$ besitzt daher eine monoton steigende Teilfolge.\\
+$\grqq\Leftarrow\grqq$ Jede Folge von Elementen aus $W$ enthält eine monoton steigende Teilfolge. Angenommen $W$ sei nicht wohlgeordnet. Nach Satz \ref{wohlgeordnetabnehmendeFolge} existiert somit eine streng monoton fallende Folge in $W$. Nach Voraussetzung muss jede Folge eine monoton steigende Teilfolge enthalten. Widerspruch, da eine streng monoton fallende Folge keine monoton steigende Teilfolge enthalten kann.}
 Wir bezeichnen mit $W_G$ die Menge der wohlgeordneten Teilmengen einer angeordneten abelschen Gruppe $G$.
-\begin{satz}\label{produktInWohlordnung}
-Sei $G$ ein total geordnetes Monoid und $w_1, w_2 \in W_G$ dann sind $w_1w_2 \in W_G$. 
-\end{satz}
-\beweis{
-Angenommen $w_1w_2$ liegt nicht in der Menge der wohlgeordneten Teilmengen $W_G$. Es gibt also eine unendlich abfallende Folge $a_1b_1 > a_2b_2 > ...$, wobei $a_i \in w_1, b_i \in w_2$. Da $w_1$ wohlgeordnet ist, enthält die unendlich abfallende Folge $\lbrace a_n\rbrace_{n\ge1} $ nach Definition der Wohlordnung keine unendlich abfallende Folge. Nach \ref{unendlicheFolgeEigenschaften} gibt es eine unendlich zunehmende oder konstante Teilfolge $a_{i1} \le a_{i2} \le ...$. Da aber gilt $a_{i1}b_{i1} > a_{i2}b_{i2} > ...$ erhalten wir eine unendlich abnehmende Folge  $b_{i1} > b_{i2} > ...$ in $w_2$. Dies widerspricht der Tatsache, dass $w_2$ wohlgeordnet ist.}
-%die drei Lemmas aus: http://arxiv.org/pdf/math/0405133v1.pdf
+%
+%
+
+%Auskommentiert, weil gleiche Aussage wie von Neumann Lemma
+%\begin{satz}\label{produktInWohlordnung}
+%Sei $G$ eine angeordnete abelsche Gruppe. Seien $w_1, w_2 \in W_S$ dann gilt $w_1+w_2 \in W_G$. 
+%\end{satz}
+%\beweis{
+%Angenommen $w_1+w_2$ liegt nicht in der Menge der wohlgeordneten Teilmengen $W_G$. Es gibt also eine streng monoton fallende Folge $a_1+b_1 > a_2+b_2 > ...$, wobei $a_i \in w_1, b_i \in w_2, \forall i \in \N$. Da $w_1$ wohlgeordnet ist, enthält die streng monoton fallende Folge $\left( a_n\right)_{n\ge1} $ nach Definition der Wohlordnung keine streng monoton fallende Folge. Nach \ref{unendlicheFolgeEigenschaften} gibt es eine streng monoton steigende oder konstante Teilfolge $a_{i1} \le a_{i2} \le ...$. Da aber gilt $a_{i1}+b_{i1} > a_{i2}+b_{i2} > ...$ erhalten wir eine  streng monoton fallende Folge $b_{i1} > b_{i2} > ...$ in $w_2$. Dies widerspricht der Tatsache, dass $w_2$ wohlgeordnet ist.}
+%%die drei Lemmas aus: http://arxiv.org/pdf/math/0405133v1.pdf
+
+
 \begin{lemma}\label{LemmaNeumann} (Lemma von B.H. Neumann) %\cite{neumann49}
 Sei $G$ eine angeordnete Gruppe und $V, W \subseteq G$ wohlgeordnet, dann ist U = V + W ebenso wohlgeordnet. 
 \end{lemma}
