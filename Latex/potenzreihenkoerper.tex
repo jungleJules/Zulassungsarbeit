@@ -1,76 +1,171 @@
 \chapter{Potenzreihenkörper}\label{chap3}
 %
-Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten, wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden, durch die Folge ihrer Koeffizienten. Die algebraische Sichtweise zieht den neuen Aspekt mit sich, dass grundsätzlich auf Konvergenzbetrachtungen verzichtet wird und dadurch auf beliebigen Körpern und Ringen gearbeitet werden kann. \\
-Diese sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den, in der Funktionentheorie häufig verwendeten, Laurentreihen her. Der Ring formaler Potenzreihen ist ein Integritätsring, woraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper, den die Laurentreihen $K((z))$ formen. Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem Träger der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
+Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten, wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln, als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden, durch die Folge ihrer Koeffizienten. Die algebraische Sichtweise zieht den neuen Aspekt mit sich, dass grundsätzlich auf Konvergenzbetrachtungen verzichtet wird und dadurch auf beliebigen Körpern und Ringen gearbeitet werden kann. \\
+Diese sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den, in der Funktionentheorie häufig verwendeten, Laurentreihen her. Der Ring formaler Potenzreihen ist ein Integritätsring, woraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper, den die Laurentreihen $K((z))$ formen. \\
+Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem Träger der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
 
 %Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Anschließend beschäftigen wir uns mit dem Körper der Laurentreihen K((z)), der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem durch Einbettung des Ringes ein Körper entsteht. Der dadurch entstandene Körper wird als \textit{allgemeiner Potenzreihenkörper} bezeichnet. \\ 
-\section{Der Potenzreihenring}\label{potenzreihenring}
+\section{Der Ring der formalen Potenzreihen}\label{potenzreihenring}
 
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
-Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper K. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte. Konvergenzbetrachtungen sind in der Theorie der formalen Potenzreihenringe und -körper daher irrelevant. \\
-Ein Ausdruck der Form
-\begin{equation}\label{eq: formalepotenzreihe}\sum_{n=0}^\infty a_n z^n = a_0 + a_1z + a_2z^1 + a_2z^2 + ...\end{equation},
-wobei $a_n \in K$, heißt formale Potenzreihe in der Unbestimmten $z$.
-Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace \]. 
+Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper K. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte.  
+\begin{defn}
+Eine \textit{formale Potenzreihe} über K ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$
+\end{defn}
+\begin{bem}
+Wir werden formale Potenzreihen im Folgenden immer als Ausdruck der Form
+\begin{equation}\label{eq: formalepotenzreihe}
+\sum_{n=0}^\infty a_n z^n = a_0 + a_1z + a_2z^1 + a_2z^2 + ...
+\end{equation}
+schreiben, mit $a_n \in K,~ \forall n \in \N_0$.
+\end{bem}
 
-\subsection{Rechnen im Potenzreihenring} \label{Rechnen}
-Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert. Mit diesen Verknüpfungen wird $K[[z]]$ zu dem Ring der formalen Potenzreihen. \\
-Formale Potenzreihen werden komponentenweise addiert: 
+Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace \]. 
+
+\subsection{Addition und Multiplikation formaler Potenzreihen} \label{Rechnen}
+%Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert. Mit diesen Verknüpfungen wird $K[[z]]$ zu dem Ring der formalen Potenzreihen. \\
+Formale Potenzreihen werden komponentenweise addiert.
 %
-\[
-+: K [[z]] \times K [[z]] \to K[[z]] \text{, } \left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n 
-\]
 %
-Die Multiplikation zweier formaler Potenzreihen erfolgt durch die sogenannte Faltung:
-\[
-\cdot:  K [[z]] \times K [[z]] \to K[[z]]: \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right) = \]\[\sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n = \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)z_n
-\]
+%
+%
+\begin{defn}\label{AdditionMultiplikationPotenzreihen}
+%
+Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei formale Potenzreihen über $K$. Wir definieren ihre \textit{Summe} $f+g$ folgendermaßen:
+\begin{eqnarray*}
++ \colon K [[z]] \times K [[z]] \to K[[z]]:&&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) \\
+&=& \sum_{n=0}^{\infty} (a_n + b_n) z^n 
+\end{eqnarray*}
+%
+%
+% 
+%
+%
+Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenannte Faltung:
+\begin{eqnarray*}
+\cdot\colon  K [[z]] \times K [[z]] \to K[[z]]:&& \left( \sum_{j=0}^\infty a_j z^j \right)\cdot \left( \sum_{k=0}^\infty b_k z^k \right) \\
+&=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \\
+&=& \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)z_n
+\end{eqnarray*}
+\end{defn}
 %
 \vspace{0.8cm}
-%Einheiten im Potenzreihenring
- Sei $ f(z) := \sum_{n=0}^\infty  a_n z^n$. Das \textit{neutrale Element der Addition} $0_R$ ist die Nullreihe $ g(z) := \sum_{n=0}^\infty  b_n z^n$, wobei $b_k= 0 \text{ für alle k } \in \N $. Denn wir erhalten als Summe von $g(z)$ und $f(z)$: 
- \[ f(z) + g(z)= \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \left(a_n+b_n\right)z^n = \sum_{n=0}^\infty a_nz^n.\]
- Weiterhin gilt: 
- \[f(z) + (-f(z)) = \sum_{n=0}^\infty  a_nz^n + (\sum_{n=0}^\infty  (-a_n)z^n) = \sum_{n=0}^{\infty}(a_n-a_n)z^n = 0_R. \]
- Wir bezeichnen daher $ -f(z) := \sum_{n=0}^\infty  (-a_n)z^n$ als das \textit{Inverse der Addition}.\\
- Das \textit{neutrale Element der Multiplikation} ist die Einsreihe. Darunter verstehen wir diejenige Reihe, bei der nur der konstante Koeffizient $a_0 = 1$ und alle anderen gleich 0 sind: 
- \[ g(z) := \sum_{n=0}^\infty  a_nz^n\], wobei \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N\setminus\lbrace 0\rbrace \].\\ 
-Damit folgt: $ \sum_{j=0}^\infty a_jz^j \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
-Für das \textit{Inverse der Multiplikation} muss für zwei Potenzreihen $f, g \in K[[z]]$ nach Definition der Multiplikation gelten:
-\[
-fg = \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)  
-\stackrel{\mathrm{def}}= \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \stackrel{\mathrm{!}}= 1\]
 %
-Sei $c_n = \sum_{j+k=n} (a_j b_k)$. Damit das Produkt der Potenzreihen dem neutralen Element der Multiplikation entspricht, müssen alle Koeffizienten mit Indizes größer Null den Wert $0$ annehmen, während $c_0 =1$ gilt. 
+%
+%
+% 
+%
+%Satz mit obigen Verknüpfungen ist das Potenzreihenring
+\begin{satz}
+Die Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +, \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
+\end{satz}
+\beweis{Wir weisen die Ringaxiome, wie in \ref{Ring} definiert, nach.\\
+Die Assoziativität und Kommutativität der Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +\right)$ lässt sich leicht nachprüfen.
+Sei $ f = \sum_{n=0}^\infty  a_n z^n$. Das \textit{neutrale Element der Addition} $0_K$ ist die Nullreihe $ g(z) := \sum_{n=0}^\infty  b_n z^n$, wobei $b_n= 0 \text{ für alle n } \in \N_0 $. Denn wir erhalten als Summe von $g$ und $f$: 
+ \begin{eqnarray*}
+ f + g&=& \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n \\
+ &=& \sum_{n=0}^\infty \left(a_n+b_n\right)z^n \\
+ &=& \sum_{n=0}^\infty a_nz^n.
+ \end{eqnarray*}
+Wir bezeichnen $ -f = \sum_{n=0}^\infty  (-a_n)z^n$ als das \textit{Inverse der Addition}, denn es gilt
+ \begin{eqnarray*}
+ f + (-f) &=& \sum_{n=0}^\infty  a_nz^n + (\sum_{n=0}^\infty  (-a_n)z^n)\\
+ &=& \sum_{n=0}^{\infty}(a_n-a_n)z^n \\
+ &=& 0_K.
+ \end{eqnarray*}
+ \\
+$\left(K\lbrack\lbrack z\rbrack\rbrack, +\right)$ ist daher eine abelsche Gruppe. 
+Die Assoziativität der Multiplikation und die Distributivgesetze rechnen wir nach. \\
+Seien $f, g, h \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$, $g = \sum_{n=0}^\infty b_n z^n$ und $h = \sum_{n=0}^\infty c_n z^n$.
+\begin{eqnarray*}
+f \cdot \left( g\cdot h\right)& =& f \cdot \sum_{n=0}^\infty \left(\sum_{j+k=n} b_j c_k\right) z^n \\
+&=& \sum_{n=0}^\infty \left(\sum_{l+j+k=n} a_l b_jc_k\right) z^n \\
+&=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \cdot h \\
+&=& \left(f \cdot g\right) \cdot h.
+\end{eqnarray*} 
+Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunter verstehen wir diejenige Reihe, bei der nur der konstante Koeffizient $a_0 = 1$ und alle anderen gleich $0$ sind: 
+ \begin{eqnarray*} 
+ g &=& \sum_{n=0}^\infty  a_nz^n,
+ \end{eqnarray*}
+wobei 
+ \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N\].\\ 
+Damit folgt: $ \sum_{j=0}^\infty a_jz^j \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
+Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. Es genügt somit ein Distributivgesetz nachzuweisen. Es gilt
+\begin{eqnarray*}
+f\cdot \left(g + h\right) &=& f \cdot \sum_{n=0}^\infty \left(b_n + c_n\right) z^n\\
+&=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j \left(b_k +c_k\right)\right) z^n\\
+&\stackrel{\mathrm{(*)}}=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k +\sum_{j+k=n} a_j c_k\right) z^n\\
+&=& \sum_{n=0}^\infty \sum_{j+k=n} a_j b_k z^n +\sum_{n=0}^\infty \sum_{j+k=n} a_j c_k z^n\\
+&=& f\cdot g + f\cdot h,
+\end{eqnarray*}
+wobei (*) aufgrund der Distributivität in $K$ folgt.\\
+ }
+%
+%
+%
+%
+%
+%
+\begin{satz} 
+Sei $f, g \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$. Wir bezeichnen $g$ als die \textit{Inverse Potenzreihe} von $f$, wenn für
+\begin{eqnarray*}
+fg &=& \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)\\  
+&\stackrel{\mathrm{def}}=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n\\ 
+\end{eqnarray*}
+%
+und 
+\begin{eqnarray*}
+\sum_{n= 0}^{\infty} c_nz^n \text{, mit } c_n = \sum_{j+k=n} (a_j b_k),
+\end{eqnarray*}
+gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N$ ist.
+%Sei $c_n = \sum_{j+k=n} (a_j b_k)$. Damit das Produkt der Potenzreihen dem neutralen Element der Multiplikation entspricht, müssen alle Koeffizienten mit Indizes größer Null den Wert $0$ annehmen, während $c_0 =1$ gilt. 
+\end{satz}
+\beweis{Sei $h =\sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n$. Wir können beliebig viele Koeffizienten aus dieser Summe herausziehen nach Definition der Addition:
+\begin{eqnarray*}
+h &=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
+&=& a_0b_0z^0 + \sum_{n=1}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
+&=& a_0b_0 + a_1b_1z^1 + \sum_{n=2}^\infty\sum_{j+k=n} (a_j b_k) z^n\\
+&=& ...
+\end{eqnarray*} 
+Nach Definition der formalen Potenzreihe stellt $z$ eine Unbestimmte dar. Man sieht leicht, dass die Summe nur den Wert $1_K$ annimmt, falls $a_0b_0= 1_K$ erfüllt.}
+%
+%
+%
 Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{j=0}^\infty a_j z^j$ genau dann die inverse Potenzreihe existiert, wenn $a_0 \neq 0 $.
 %
 %
 %
 \begin{satz}\label{potenzreihenringEinheit}
-Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $P = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
+Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
-\beweis{$\grqq\Leftarrow\grqq \text{ Beweis über Induktion:} \\
-\text{Sei } a_0 \neq 0 \text{ dann folgt } \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1.$ Wir müssen nun eine entsprechende Potenzreihe $ \sum_{k=0}^{\infty}b_mz^m$ finden. \\ 
-Für $b_0$ muss folgende Gleichung erfüllt sein: $a_0b_0= 1$. Da $a_0$ ungleich null ist besitzt die Gleichung eine eindeutige Lösung: $ b_0 = a_0^{-1}.$ \\
-Angenommen es existiert ein $ b_k$ mit $ k < n$, sodass alle $c_m := a_j b_k$, für $1\le m < n$, gleich $0$ sind. Für den n-ten Koeffizienten ergibt sich $0 = c_m = a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Bis auf $b_n$ sind alle Werte festgelegt. Da $ a_0$ ungleich $0$ ist, ist die Lösung für $ b_n $ eindeutig. \\
+\beweis{$\grqq\Leftarrow\grqq$
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass das Produkt der formalen Potenzreihen $f, g$ mit $g = \sum_{k=0}^{\infty}b_kz^k$ den Wert $1_K$ annimmt und somit $f$ eine Einheit ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass $f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1$ ist. \\
+Wir beweisen die Rückrichtung mithilfe des Prinzips der Induktion: \\ 
+Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
+Angenommen es existiert ein $ b_k$ mit $ k < n$, sodass alle $a_j b_k$, für $1\le m < n$, gleich $0$ sind. Für den n-ten Koeffizienten ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Bis auf $b_n$ sind alle Werte festgelegt. Da $ a_0$ ungleich $0$ ist, ist die Lösung für $ b_n $ eindeutig. \\
 $\grqq\Rightarrow\grqq $ Es gilt $\sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. $ \\
-Nach der Voraussetzung folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus folgt unmittelbar $ a_0b_0 = 1 $ und somit muss $a_0$ ungleich $0$ sein.}
+Nach Voraussetzung folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus erhalten wir unmittelbar $ a_0b_0 = 1 $. Somit muss $a_0$ ungleich $0$ sein.}
 %
 %
-Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe \\
-$g = \sum_{k=0}^\infty b_k z^k$ konstruieren:\\
-\vspace{0.8cm}
-\[\text{Da } c_0 = 1 \text{ gilt: } a_0b_0 = 1.\text{ Daraus folgt: } b_0 = \frac{1}{a_0}\]
-Für die restlichen Koeffizientenwerte gilt:
-\begin{equation}
-\label{eq: invers}
-\sum_{j+k=n} (a_j b_k) = \sum_{k=0}^{n} a_nb_{n-k} = 0, \forall n \in \N, n > 0.
-\end{equation}
-Die Koeffizienten $b_n$ werden rekursiv durch diese Gleichungen definiert und die so entstandene Potenzreihe ist die Inverse. 
+Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe  konstruieren.\\
+\begin{satz}\label{inverse Potenzreihe}
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die inverse Potenzreihe
+$g = \sum_{k=0}^\infty b_k z^k$ ist rekursiv definiert durch
+\begin{equation*}
+b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{k = 1}^{n} a_k b_{n-k}	 ~~~~~~\forall n\in\N.
+\end{equation*}
+\end{satz}
+\beweis{Wie im Beweis \ref{potenzreihenringEinheit} verwendet, gilt $a_0b_0 = 1$, woraus $b_0 = \frac{1}{a_0}$ folgt. Für die restlichen Koeffizientenwerte muss dementsprechend
+\begin{equation*}
+\sum_{j+k=n} (a_j b_k) = \sum_{k=0}^{n} a_nb_{n-k} = 0
+\end{equation*}
+für alle $n \in \N$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
+
+}
 %
 \begin{bsp} %\cite{taraz12}
-Es sei $q \in \R$ beliebig und $A(z) := \sum_{}^{}a_n z^n$ mit $a_n := q^n$ gleich der geometrischen Reihe. Wir bestimmen die inverse Potenzreihe $B(z) = \sum_{}^{} b_n z^n$. Dazu wenden wir die Formel aus~\eqref{eq:invers} an:
+Es sei $q \in \R$ beliebig und $A = \sum_{}^{}a_n z^n$ mit $a_n = q^n$ gleich der geometrischen Reihe. Wir bestimmen die inverse Potenzreihe $B = \sum_{}^{} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
 \begin{center}
 \begin{description}
 \item $b_0 = \frac{1}{a_0} = 1$,
@@ -80,13 +175,14 @@ Es sei $q \in \R$ beliebig und $A(z) := \sum_{}^{}a_n z^n$ mit $a_n := q^n$ glei
 \item $b_n = -\left(a_1b_{n-1} + a_2b_{n-2} + ... + a_{n-1}b_1 + a_nb_0\right) = -\left(-q^{n-1}(-q) + q^n\right) = 0$.
 \end{description}
 \end{center}
-für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $A(z)$ ist $B(z) := b_0 + b_1z = 1 - qz$. Daraus können wir schließen:
-\[\forall z \in \R \text{ mit } |z| < |\frac{1}{q}|: A(z) = \sum_{}^{}a_n z^n = \frac{1}{1-qz}\] 
+für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $A(z)$ ist $B(z) := b_0 + b_1z = 1 - qz$. 
+%Konvergenz betrachten wir ja nicht!!! Daraus können wir schließen:
+%\[\forall z \in \R \text{ mit } |z| < |\frac{1}{q}|: A(z) = \sum_{}^{}a_n z^n = \frac{1}{1-qz}\] 
 \end{bsp}
 %
 \subsection{Eigenschaften des Potenzreihenrings}
 In diesem Abschnitt zeigen wir, dass der Potenzreihenring auch ein Integritätsring ist. Im Körper $\C$ betrachten wir den Zusammenhang zwischen $K[[z]]$ und dem Ring der konvergenten Potenzreihen. \\
-Wir beweisen weiterhin, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann
+Wir beweisen weiterhin, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann
 %evtl noch möglich zu zeigen dass c[[z]] ein nullteilerfreier Ring ist stellt sich nur die Frage ob das iwie nötig ist...
 %
 
@@ -95,26 +191,41 @@ Der Ring $K[[z]]$ ist ein Integritätsring.
 \end{satz}
 %
 \beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
-Seien $ f(z) := \sum_{n=0}^\infty  a_n z^n \text{ und } g(z) := \sum_{n=0}^\infty  b_n z^n$ mit 
-\begin{center}
-$ f(z) \cdot g(z) =  \sum a_nz^n \cdot \sum b_nz^n = 0$.
-\end{center} 
-Nach Definition der Multiplikation gilt also: $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N $
-Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index n existieren, für den $b_n = 0$ ist und somit für 
-$b_0, b_1,... ,b_{n-1} = 0$ folgt $b_n=0,$, für alle $n \in \N$.\\ 
-Sei $k$ der erste Index, sodass $a_k \neq 0$ gilt. 
-\begin{center}
-$\sum_{k+l=k} a_kb_l = \sum_{k+0=k} a_kb_0 = 0. $% da k+l=k
-\end{center} 
-Damit gilt $b_0=0$. 
-Seien jetzt $ b_0... b_{n-1}= 0. $ Mit $\sum_{k+l=n+l} a_kb_{n-k} = a_l b_n= 0$. Es folgt daher auch $b_n= 0$.}
-%
+Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
+\begin{eqnarray*}
+f \cdot g &=&  \sum a_nz^n \cdot \sum b_nz^n \\
+&=& 0.
+\end{eqnarray*} 
+Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
+Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N$ ist.\\ 
+Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
+\begin{eqnarray*}
+\sum_{j+k=j} a_jb_k = \sum_{j+0=j} a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
+\end{eqnarray*} 
+Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
+Seien jetzt $ b_0,..., b_{n-1}= 0$. Mit $\sum_{j+k=n+k} a_jb_{n-j} = a_j b_n= 0$. Es folgt daher auch $b_n= 0$.
+}
+
+%TODO: nochmal checken ob das stimmt
 Da Konvergenzbetrachtungen nur im Körper der reellen und komplexen Zahlen Sinn machen, beschränken wir uns in folgendem Satz auf $\C$.  
 %
-\begin{satz}\label{konvergentUnterring}
-Sei $\C\langle z \rangle$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. $\C\langle z \rangle$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]$. 
-\end{satz}
-\beweis{Wir haben bereits in \ref{intring} gezeigt, dass $\C[[z]$ ein Integritätsring ist. Nun bleibt für $\C\langle z \rangle$ noch zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
+%
+\begin{defn}\label{konvergenz}
+Eine Potenzreihe $f = \sum_{n= 0}^{\infty}a_nz^n \in \C[[z]]$ heißt konvergent, wenn es ein $z_0\in \C$ mit $z_0 \neq 0$ gibt, sodass $\sum_{n=0}^{\infty}a_n{z_0}^n$ als Reihe in $\C$ konvergiert. \\
+Das heißt die Folge $s_n = \sum_{k=0}^{n}a_k{z_0}^k$ der Partialsummen ist konvergent und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
+\begin{align}
+s= \sum_{n=0}^{\infty}a_n{z_0}^n
+\end{align}
+\end{defn}
+
+
+%
+%
+%
+\begin{bem}\label{konvergentUnterring}
+Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
+\end{bem}
+\beweis{Wir haben bereits in \ref{intring} gezeigt, dass $\C[[z]$ ein Integritätsring ist. Nun bleibt für $\C\lbrace z \rbrace$ noch zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
 Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt besitzt denselben Konvergenzradius, da beide Reihen im Radius min$\lbrace r_1, r_2\rbrace $ absolut konvergieren und nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt gegen den gleichen Wert.} 
 %
 %
@@ -221,10 +332,10 @@ Die formalen Laurentreihen bilden einen Oberring der Potenzreihen und stellen al
 \begin{satz}
 Der Quotientenkörper von  $\C\langle z\rangle$ ist isomorph zum Körper der konvergenten Laurentreihen $\C_L \langle z \rangle$.
 \end{satz}
-\beweis{ Wie in Beweis \ref{eq: invers} konstruieren wir das formale Inverse zu einer formalen Potenzreihe $f = \sum_{n= 0}^{\infty} a_nz^n \in \C\langle z\rangle $ mit $a_0 \neq 0$. Wir müssen zeigen, dass das Inverse konvergiert. Nach Voraussetzung konvergiert $f$ und wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N}$ in $f$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N$ mit $a \in \C$. \\
+\beweis{ Wie in Beweis \ref{inverse Potenzreihe} konstruieren wir das formale Inverse zu einer formalen Potenzreihe $f = \sum_{n= 0}^{\infty} a_nz^n \in \C\langle z\rangle $ mit $a_0 \neq 0$. Wir müssen zeigen, dass das Inverse konvergiert. Nach Voraussetzung konvergiert $f$ und wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N}$ in $f$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N$ mit $a \in \C$. \\
 Betrachte $f(z_0) = \sum_{n = -k}^{\infty} a_n {z_0}^n $ eine konvergente Laurentreihe mit $|z_0| > 0$. Da $f(z_0)$ konvergiert, ist die Folge ${(a_n|z_0|)}_{n\in\N} $ beschränkt und für die Potenzreihe gilt: \\
 \[\overline{f}(\omega) := \sum_{n=0}^{\infty}a_n{z_0}^n {\frac{z}{z_0}}^n = \sum_{n=0}^{\infty}a_nz^n =  f(z)\text{ mit }\omega:= \frac{z}{z_0}\]
-Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie in \ref{eq: invers}. Es gilt:
+Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie in \ref{inverse Potenzreihe}. Es gilt:
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
@@ -232,7 +343,7 @@ Indem wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$ ge
 \[
 |b_n| \le (aC)^n
 \]
-Nach Konstruktion des Inversen \ref{eq: invers} ist die Ungleichung für $b_0$ erfüllt. Gelte die Abschätzung für $b_n$. Wähle $ C:= \frac{a}{a-1}$. Dann erhalten wir: \\
+Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. Gelte die Abschätzung für $b_n$. Wähle $ C:= \frac{a}{a-1}$. Dann erhalten wir: \\
 \[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
 \[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}.\]
 Wie in \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren ist noch zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent, es genügt, den Nebenteil betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
@@ -297,7 +408,7 @@ Ist $R$ ein diskreter Bewertungsring, so ist Quot($R$) ein diskret bewerteter K�
 
 
 
-\section{Der Potenzreihenkörper}
+\section{Der verallgemeinerte Potenzreihenkörper}
 %
 Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes \ref{HahnscheEinbettungssatz} zuallererst die sogenannten Hahnschen Potenzreihen zunächst als Gruppen \ref{Hahn-Gruppe} vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten, wie:\\
 \[ f = 1 + z^{log 2} + z^{log 3} + z^{log 4} + ... \]

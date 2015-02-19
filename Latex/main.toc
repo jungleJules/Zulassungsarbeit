@@ -11,13 +11,13 @@
 \contentsline {section}{\numberline {3.2}Archimedisch angeordnete Gruppen}{17}{section.3.2}
 \contentsline {section}{\numberline {3.3}Die angeordnete Menge konvexer Untergruppen}{21}{section.3.3}
 \contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Der Potenzreihenring}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Rechnen im Potenzreihenring}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Eigenschaften des Potenzreihenrings}{26}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{27}{section.4.2}
-\contentsline {section}{\numberline {4.3}Der Potenzreihenk\IeC {\"o}rper}{34}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Potenzreihenstrukturen mit Tr\IeC {\"a}ger \IeC {\"u}ber den ganzen Zahlen}{34}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Formale Potenzreihen auf angeordneten abelschen Gruppen}{35}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{36}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Der Ring der formalen Potenzreihen}{38}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{40}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.1}Der Ring der formalen Potenzreihen}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Addition und Multiplikation formaler Potenzreihen}{24}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Eigenschaften des Potenzreihenrings}{28}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{36}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Potenzreihenstrukturen mit Tr\IeC {\"a}ger \IeC {\"u}ber den ganzen Zahlen}{37}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Formale Potenzreihen auf angeordneten abelschen Gruppen}{37}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{38}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Der Ring der formalen Potenzreihen}{40}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{43}{subsection.4.3.5}
