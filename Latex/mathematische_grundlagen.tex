@@ -394,25 +394,25 @@ Seien V, W wohlgeordnete Teilmengen einer angeordneten Gruppe $G$, dann gibt es 
 \section{Archimedisch angeordnete Gruppen}\label{Archimedisch angeordnete Gruppen}
 %
 Erst seit dem Ende des 19. Jahrhunderts kristallisierte sich die hohe Bedeutung geordneter Strukturen in der Mathematik heraus. Man erkannte, dass das archimedische Axiom unverzichtbar für die nähere Untersuchung dieses Bereichs war, unter anderem spielte es schon eine wichtige Rolle bei der Entwicklung der reellen Zahlen mithilfe des Dedekindschen Schnittes (1872). Genau genommen ermöglicht die archimedische Eigenschaft die Herstellung von Kommutativität und Vollständigkeit. \\ %\cite{hahn07}\\
-Im hinteren Teil des Kapitels zeigen wir, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der additiven Gruppe der reellen Zahlen mit der Ordnung $\grqq{<}\grqq$ entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (1901)\cite{hoelder1901} zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890.\cite[S. 578]{Lueneburg08}\\ 
+Im hinteren Teil des Kapitels zeigen wir, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der additiven Gruppe der reellen Zahlen mit der Ordnung $\grqq{<}\grqq$ entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (1901)\cite{hoelder1901} zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890\cite[S. 578]{Lueneburg08}.\\ 
 Die folgenden Ausführungen sind angelehnt an das Kapitel $\glqq$Angeordnete Gruppen$\grqq$ in \cite[S. 73 - 93]{fuchs66}, sowie Arbeiten von Prieß-Crampe \cite{priesscrampe69}, \cite{priesscrampe83}.
 
 %
 \begin{defn}\label{archim}
-Eine angeordnete Gruppe $\left(G,+\right)$ heisst \textit{archimedisch}, wenn es für alle $a, b \in G$  mit $0 < a < b$ ein $n \in \N $ gibt, mit $b < na$.
+Eine angeordnete abelsche Gruppe $\left(G,+\right)$ heisst \textit{archimedisch}, wenn es für alle $a, b \in G$  mit $0 < a < b$ ein $n \in \N $ gibt, mit $b < na$.
 \end{defn}
 %
 %
 \begin{defn}\label{uek}
 Seien $a, b \in G$, wobei $G$ eine angeordnete Gruppe ist. Das Element $a$ wird als \textit{unendlich kleiner} als $b$ bezeichnet, wenn für alle $  n \in \N $ gilt: 
 \[n|a| < |b|.\]
-In Zeichen schreiben wir: $a \ll b$.
+In Zeichen schreiben wir $a \ll b$.
 \end{defn}
 %
 \begin{defn}\label{aae}
-Sei $G$ eine angeordnete Gruppe, und $|a|$ der absolute Betrag eines Elements $a$ aus $G$. Zwei Elemente $a,b \in G$ werden als \textit{archimedisch äquivalent} bezeichnet, wenn natürliche Zahlen $m$ und $n$ existieren, so dass: 
+Sei $G$ eine angeordnete abelsche Gruppe, und $|a|$ der absolute Betrag eines Elements $a$ aus $G$. Zwei Elemente $a,b \in G$ werden als \textit{archimedisch äquivalent} bezeichnet, wenn natürliche Zahlen $m$ und $n$ existieren, so dass: 
 \[|a| < m|b| \text{ und } |b| < n|a|.\]
-In diesem Fall schreiben wir: $ a \sim b $ 
+In diesem Fall schreiben wir $ a \sim b $. 
 \end{defn}
 %
 \begin{folg}
@@ -427,18 +427,16 @@ Für jedes Paar von Elementen $a, b \in G$ gilt genau eine der anschließenden R
 %
 Des Weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \begin{enumerate}
-\item[(i)] Aus $a \ll b$ folgt $x^{-1}ax $ $\ll$ $x^{-1}bx$ für alle $x \in G$;
+\item[(i)] Aus $a \ll b$ folgt $-g+a+g $ $\ll$ $-g+b+g$ für alle $g \in G$;
 \item[(ii)] Aus $a \ll b$ und $a \sim c$ folgt $c \ll b$;
 \item[(iii)] Aus $a \ll b$ und $b \sim d$, folgt $a \ll d$;
 \item[(iv)] Aus $a \ll b$ und $b \ll c$ folgt $a \ll c$;
 \item[(v)] Aus $a \sim b$ und $b \sim c$ folgt $a \sim c$.
 \end{enumerate}
-Sind alle Elemente einer Gruppe archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
-Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[x]$ die \textit{archimedische Klasse} in der das Element $x \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \label{archimedischeKlassen}\\
-Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder
-\[\text{für alle } n \in \N \text{ ist } n|a|<|b|\]
-\centerline{, oder}
-\[\text{für alle } n \in \N \text{ ist } n|b| <|a|.\]
+Sind alle Elemente einer Gruppe $G\setminus\lbrace 0 \rbrace$ archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
+Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse} in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \label{archimedischeKlassen}\\
+Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder für alle
+$n \in \N$ ist $n|a|<|b|$, oder für alle $n \in \N$ ist $n|b| <|a|$.
 \end{folg}
 %
 %\begin{satz}\label{agkku}
@@ -449,25 +447,25 @@ Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder
 %\beweis{
 %Angenommen es gibt eine Untergruppe $\left(U, \circ\right))$ $\subseteq$ G, mit $ U \neq \varnothing und U \neq G$. Nach den Untergruppenaxiomen gilt für $a, b \in U: a\circ b \in U$ Da G archimedisch geordnet ist und alle Elemente aus U natürlich auch in G liegen, muss für $a, b \in U \text{ gelten, wenn 0 < a < b dann gibt es ein n \in \N: } b < na.$ Da U echte Untergruppe von G, gibt es ein Element $x\in G, \text{ aber } x \notin U$. Da G archimedisch geordnet gibt es ein   }
 %
-\begin{satz}\label{archimedischangeordnet folgt abelsch} %\cite{pickert55} %bzw Priess Crampe
-Eine archimedische Gruppe $\left(G, +\right)$ ist eine abelsche Gruppe.
-\end{satz}
-\beweis{Falls $G$ ein kleinstes positives Element $z$ besitzt, so ist die von $z$ erzeugte Untergruppe $\langle z \rangle$ eine abelsche Gruppe, da jede aus einem Element erzeugte Menge eine Untergruppe ist. Nach Definition der Archimedizität \ref{archim} existiert für $0 < b \in G$ eine natürliche Zahl $n$ mit: 
-\[(n-1)\cdot z \le b < n\cdot z.\]
-Die Umkehrabbildung ${\lambda_x}^{-1} $ der bijektiven und ordnungstreuen Abbildung \[\lambda_x\colon G \to G,~ y \mapsto x+ y\] existiert und es gilt:
-\[{\lambda_x}^{-1}(a) ~ x \mapsto a-y \text{ und daher: }\]
-\[ 0 = \lambda_x{\left(n-1\right)\cdot z}^{-1}\left(\left( n-1\right) \right) ~\le ~\lambda_x{\left(n-1\right)\cdot z}^{-1}\left(b\right) ~<~ \lambda_x{\left(n-1\right)\cdot z}^{-1}(n\cdot z) = z. \]
-Da $z$ nach Voraussetzung das kleinste positive Element aus $G$ ist, erhalten wir:
-\[0 = \lambda_x{\left(n-1\right)\cdot z}^{-1}\left(b\right).\]
-Somit ist $b = (n-1)\cdot z$ und daher $L = \langle z\rangle$. $G$ ist also eine zyklische Gruppe, da sie von einem Gruppenelement erzeugt wird. Jede zyklische Gruppe ist abelsch und die Behauptung ist in diesem Fall gezeigt.\\
-Nun muss noch der Fall betrachtet werden, dass $G$ kein kleinstes positives Element besitzt. Zu jedem Element $0 < x \in G$ existiert also ein $c \in G$ mit: $0 < c < x$. Das bedeutet zwischen der Null und jedem beliebigen Element von $G$ gibt es stets noch ein Element, da kein kleinstes positives Element existiert. Es sei $x = \lambda_c{\lambda_c}^{-1}(x) = c + {\lambda_c}^{-1}(x)$, woraus wegen $c < x$ folgt, dass $0 < {\lambda_c}^{-1}(x)$ ist. Wähle $d \in G$, mit $0 < d \le $ min$\lbrace c, {\lambda_c}^{-1}(x)\rbrace$, dann gibt es für alle $x \in G$ ein derartiges Element mit $0 < 2d \le c + {\lambda_c}^{-1}(x) = x.$ Daraus folgt, es gibt natürlich auch ein Element $d' \in G$ mit $0 < 3d' \le x$.\\
-Angenommen $G$ ist nicht abelsch. Dann existieren Elemente $a, b \in G$ mit $a + b < b + a$ oder $b + a < a + b$. Wir schränken uns o.B.d.A auf den ersten Fall ein. Es sei $s \in G$ bestimmt als $s + \left(a + b\right) = 0$. Wir erhalten $0 < s + b + a$ und wir wissen, dass es ein Element $d'$ aus $G$ gibt, welches die Ungleichung $0 < 3\cdot d'\le s + \left(b + a\right)$ erfüllt. Weil $G$ archimedisch ist, gibt es ganze Zahlen $n_1, n_2$ mit $n_1 \cdot d' \le a < (n_1+1)\cdot d'$, $n_2 \cdot d' \le a < (n_2+1)\cdot d'$. Wir folgern:
-\[(n_1 + n_2) \cdot d' \le b + a < n_1 + n_2) \cdot d' + 3d' \text{ und }\]
-\[(n_1 + n_2) \cdot d' \le a + b < n_1 + n_2) \cdot d' + 3d'\].
-Aus der letzten Ungleichung folgt -($n_1 + n_2)\cdot d - 3d' < s \le - (n_1 + n_2) \cdot d$ und damit ergibt sich:
-\[s + (b + a) < 3d\]
-Wir erhalten einen Widerspruch zu unserer Annahme, daher ist die Aussage gezeigt.
-}
+%\begin{satz}\label{archimedischangeordnet folgt abelsch} %\cite{pickert55} %bzw Priess Crampe
+%Eine archimedische Gruppe $\left(G, +\right)$ ist eine abelsche Gruppe.
+%\end{satz}
+%\beweis{Falls $G$ ein kleinstes positives Element $z$ besitzt, so ist die von $z$ erzeugte Untergruppe $\langle z \rangle$ eine abelsche Gruppe, da jede aus einem Element erzeugte Menge eine Untergruppe ist. Nach Definition der Archimedizität \ref{archim} existiert für $0 < b \in G$ eine natürliche Zahl $n$ mit: 
+%\[(n-1)\cdot z \le b < n\cdot z.\]
+%Die Umkehrabbildung ${\lambda_x}^{-1} $ der bijektiven und ordnungstreuen Abbildung \[\lambda_x\colon G \to G,~ y \mapsto x+ y\] existiert und es gilt:
+%\[{\lambda_x}^{-1}(a) ~ x \mapsto a-y \text{ und daher: }\]
+%\[ 0 = \lambda_x{\left(n-1\right)\cdot z}^{-1}\left(\left( n-1\right) \right) ~\le ~\lambda_x{\left(n-1\right)\cdot z}^{-1}\left(b\right) ~<~ \lambda_x{\left(n-1\right)\cdot z}^{-1}(n\cdot z) = z. \]
+%Da $z$ nach Voraussetzung das kleinste positive Element aus $G$ ist, erhalten wir:
+%\[0 = \lambda_x{\left(n-1\right)\cdot z}^{-1}\left(b\right).\]
+%Somit ist $b = (n-1)\cdot z$ und daher $L = \langle z\rangle$. $G$ ist also eine zyklische Gruppe, da sie von einem Gruppenelement erzeugt wird. Jede zyklische Gruppe ist abelsch und die Behauptung ist in diesem Fall gezeigt.\\
+%Nun muss noch der Fall betrachtet werden, dass $G$ kein kleinstes positives Element besitzt. Zu jedem Element $0 < x \in G$ existiert also ein $c \in G$ mit: $0 < c < x$. Das bedeutet zwischen der Null und jedem beliebigen Element von $G$ gibt es stets noch ein Element, da kein kleinstes positives Element existiert. Es sei $x = \lambda_c{\lambda_c}^{-1}(x) = c + {\lambda_c}^{-1}(x)$, woraus wegen $c < x$ folgt, dass $0 < {\lambda_c}^{-1}(x)$ ist. Wähle $d \in G$, mit $0 < d \le $ min$\lbrace c, {\lambda_c}^{-1}(x)\rbrace$, dann gibt es für alle $x \in G$ ein derartiges Element mit $0 < 2d \le c + {\lambda_c}^{-1}(x) = x.$ Daraus folgt, es gibt natürlich auch ein Element $d' \in G$ mit $0 < 3d' \le x$.\\
+%Angenommen $G$ ist nicht abelsch. Dann existieren Elemente $a, b \in G$ mit $a + b < b + a$ oder $b + a < a + b$. Wir schränken uns o.B.d.A auf den ersten Fall ein. Es sei $s \in G$ bestimmt als $s + \left(a + b\right) = 0$. Wir erhalten $0 < s + b + a$ und wir wissen, dass es ein Element $d'$ aus $G$ gibt, welches die Ungleichung $0 < 3\cdot d'\le s + \left(b + a\right)$ erfüllt. Weil $G$ archimedisch ist, gibt es ganze Zahlen $n_1, n_2$ mit $n_1 \cdot d' \le a < (n_1+1)\cdot d'$, $n_2 \cdot d' \le a < (n_2+1)\cdot d'$. Wir folgern:
+%\[(n_1 + n_2) \cdot d' \le b + a < n_1 + n_2) \cdot d' + 3d' \text{ und }\]
+%\[(n_1 + n_2) \cdot d' \le a + b < n_1 + n_2) \cdot d' + 3d'\].
+%Aus der letzten Ungleichung folgt -($n_1 + n_2)\cdot d - 3d' < s \le - (n_1 + n_2) \cdot d$ und damit ergibt sich:
+%\[s + (b + a) < 3d\]
+%Wir erhalten einen Widerspruch zu unserer Annahme, daher ist die Aussage gezeigt.
+%}
 
 %
 \begin{satz}\label{aga} %\cite{hoelder1901}
@@ -477,35 +475,35 @@ Eine angeordnete abelsche Gruppe ist genau dann archimedisch, wenn sie zu einer 
 %
 \beweis{
 $\grqq\Leftarrow \grqq:$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe $G$ gelten muss. \\
-$\grqq \Rightarrow \glqq$: Sei $G$ eine angeordnete abelsche Gruppe, $G$ besitzt einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace e_G\rbrace$, wobei $e_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
-Somit ist $P$ nicht leer und wir nehmen ein Element $\alpha \in P$ beliebig. Für jedes $g \in G$ und $g \in P$ definieren wir:
+$\grqq \Rightarrow \grqq:$ Sei $G$ eine angeordnete abelsche Gruppe, $G$ besitzt einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace 0_G\rbrace$, wobei $0_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
+Somit ist $P$ nicht leer und wir nehmen ein Element $\alpha \in P$ beliebig. Für jedes $g \in G$ definieren wir:
 \[S_g := \lbrace \frac{m}{n} \in \Q^{+} | m, n \in \N, m\alpha \le ng\rbrace\]
-Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p \alpha$. Die Darstellung von $r \in \Q^{+}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r \in S_g$ enthalten ist.\\
+Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p \alpha$. Die Darstellung von $r \in \Q^{+}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r$ in $S_g$ enthalten ist.\\
 Um die Behauptung zu zeigen, genügt es, einen Monomorphismus zu finden, der $G$ auf die additive Gruppe der reellen Zahlen abbildet. Wir zeigen nun folgende Aussagen: \\
 \begin{enumerate}
-\item[(i)] Für alle $g\in S_g$ gilt $S_g \neq \varnothing \text{ und } S_g \neq \Q^{+}$. Für $r, s \in \Q^{+} \text{ mit } r < s \text{ und } s \in S_g$ und damit $r \in S_g.$
-\item[(ii)] Sei $S_g \subseteq \Q^{+}$, wobei $S_g$ nicht leer und beschränkt. Die Abbildung $\Phi: P \rightarrow \R^{+}, g \mapsto$ sup$\rbrace S_g \lbrace$ ist somit wohldefiniert.  
-\item[(iii)]Für alle $g, h \in \Q^{+}.$ gilt: $g \le h \Leftrightarrow S_g \subseteq S_h \Leftrightarrow \Phi(g) \le \Phi(h)$.  
+\item[(i)] Für alle $g\in S_g$ gilt $S_g \neq \varnothing \text{ und } S_g \neq \Q^{+}$. Für $r, s \in \Q^{+} \text{ mit } r < s \text{ und } s \in S_g$ folgt $r \in S_g.$
+\item[(ii)] Sei $S_g \subseteq \Q^{+}$, wobei $S_g$ nicht leer und beschränkt. Die Abbildung $\Phi: P \rightarrow \R^{+}, g \mapsto$ sup$\lbrace S_g \rbrace$ ist somit wohldefiniert.  
+\item[(iii)]Für alle $g, h \in P$ gilt $g \le h $ genau dann, wenn $ S_g \subseteq S_h$ genau dann, wenn $\Phi(g) \le \Phi(h)$.  
 \item[(iv)] Sei $g, h \in P$ und $r,s \in \Q^{+}$. Sei $r \in S_g \text{ und } s \in S_h \text{ so folgt } r+s \in S_{g+h}$. \\
 Sei $r \notin S_g \text{ und } s \notin S_h \text{, so folgt } r+s \notin S_{g+h}$. 
-\item[(v)] Es gilt: $\Phi\left( g+h\right) = \Phi\left(g\right) + \Phi\left(h\right)$ für alle $g, h \in P$. 
-\item[(vi)] $\Phi$ wird fortgesetzt auf die gesamte Gruppe $G$ durch $\Phi\left(e_G\right) = 0 \text{ und } \Phi \left(-g\right) = \Phi \left(g\right)$ für alle g $\in P$. \\ 
+\item[(v)] Es gilt $\Phi\left( g+h\right) = \Phi\left(g\right) + \Phi\left(h\right)$ für alle $g, h \in P$. 
+\item[(vi)] $\Phi$ wird fortgesetzt auf die gesamte Gruppe $G$ durch $\Phi\left(0_G\right) = 0 \text{ und } \Phi \left(-g\right) = -\Phi \left(g\right)$ für alle g $\in P$. \\ 
 \end{enumerate}
 Insgesamt ist $\Phi$ ein Monomorphismus abelscher Gruppen und damit ist $G$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.\\ 
-Zu (i): Wegen der archimedischen Eigenschaft gibt es zu jedem Element $g \in p$ ein $n \in \N$ mit $ng < \alpha$. Nach Definition von $S_g$ gilt $\frac{1}{n} \in S_g$ und somit ist $S_g$ nicht leer.\\ Angenommen $S_g = \Q^{+}$, dann wäre $n \in S_g$ und $n\alpha \le g$ für alle $n\in\N$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
-Seien $r, s \in \Q^{+} \text{ mit } r < s \text{ und } s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und da $s \in S_g: m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in \Q^{+}$.\\
+Zu (i): Wegen der archimedischen Eigenschaft gibt es zu jedem Element $g \in P$ ein $n \in \N$ mit $ng > \alpha$. Nach Definition von $S_g$ gilt $\frac{1}{n} \in S_g$ und somit ist $S_g$ nicht leer.\\ Angenommen $S_g = \Q^{+}$, dann wäre $n \in S_g$ und $n\alpha \le g$ für alle $n\in\N$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
+Seien $r, s \in \Q^{+} \text{ mit } r < s \text{ und } s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und da $s \in S_g: m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in S_g$.\\
 Zu (ii): Wir haben bereits gezeigt, dass $S_g$ nicht leer ist. Angenommen $S_g$ wäre unbeschränkt, dann gäbe es für jedes $n \in \N$ ein $r \in S_g$ mit n < r. Nach (i) folgt daraus $n \in S_g$ und für alle $n \in \N$ folgt: $ n\alpha \le g$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
-Zu (iii): Zunächst beweisen wir die erste Implikation. Sei  $g, h \in \Q^{+}.$ und es gilt: $g \le h$. Sei $r \in S_g$, $r:= \frac{m}{n} \text{ und } m, n \in \N $, dann gilt: $m\alpha \le ng$. Da $g \le h$ folgt $ m\alpha \le n h$ und damit $r \in S_h$. Die zweite Implikation folgt nach Definition von $\Phi$ offensichtlich.\\
+Zu (iii): Zunächst beweisen wir die erste Implikation. Sei  $g, h \in P$ und es gilt $g \le h$. Sei $r \in S_g$, $r:= \frac{m}{n}, m, n \in \N $, dann erhalten wir $m\alpha \le ng$. Da $g \le h$ folgt $ m\alpha \le n h$ und damit $r \in S_h$. Die zweite Implikation folgt nach Definition von $\Phi$ offensichtlich.\\
 Sei $\Phi\left(g\right) \le \Phi\left(h\right)$. Angenommen $g > h$, nach der archimedischen Eigenschaft gibt es ein $ n \in \N$ mit $n\left(g-h\right) > 2\alpha$. Wähle $m \in \N$ möglichst klein, mit $m\alpha < nh$. Es gilt $\frac{m}{n} \notin S_h$ und $\frac{m}{n} \geq \Phi\left(h\right)$
-Da m minimal ist, gilt die Ungleichung $\left(m-1\right)\alpha \le nh$ und wir erhalten $ \left(m+1\right)\alpha \le nh + 2\alpha < nh + n(g-h) = ng$ und $\frac{m+1}{n} \in S_g,$ also $\frac{m+1}{n} \leq$ sup$\left(S_g\right) = \Phi\left(g\right)$. Insgesamt ergibt sich $\Phi\left(h\right) \le \frac{m}{n} < \frac{m + 1}{n} \le \Phi\left(g\right)$.\\
-Zu (iv):  $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt: $k\alpha < lg $ und $ m\alpha \le nh$. Es folgt: $kn\alpha \le lng \le \text{ und } lm\alpha \le lng.$ Somit gilt für $r+1 = \frac{kn+lm}{ln} \in S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $\grqq \le\grqq$ durch $>$ ersetzt wird.\\
+Da m minimal ist, gilt die Ungleichung $\left(m-1\right)\alpha \le nh$ und wir erhalten $ \left(m+1\right)\alpha \le nh + 2\alpha < nh + n(g-h) = ng$ und $\frac{m+1}{n} \in S_g,$ also $\frac{m+1}{n} \leq$ sup$\left(S_g\right) = \Phi\left(g\right)$. Insgesamt ergibt sich $\Phi\left(h\right) \le \frac{m}{n} < \frac{m + 1}{n} \le \Phi\left(g\right)$, Widerspruch.\\
+Zu (iv): Sei $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt $k\alpha < lg $ und $ m\alpha \le nh$. Wir erhalten $kn\alpha \le lng \text{ und } lm\alpha \le lng.$ Somit liegt $r+1 = \frac{kn+lm}{ln}$ in der Menge $S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $\grqq \le\grqq$ durch $\grqq>\grqq$ ersetzt wird.\\
 Zu (v): Als erstes zeigen wir, dass $\Phi\left(g + h\right)$ eine obere Schranke von $S_{g+h}$ ist. Angenommen es gibt ein $r\in S_{g+h}$ mit $r > \Phi\left(g + h\right)$. Wähle $\epsilon = r - \Phi\left(g\right) - \Phi\left(h\right)$ und wähle s, t $\in \Q^{+}$ mit $\Phi(g) < s < \Phi(g) + \frac{\epsilon}{2} \text{ und } \Phi\left(h\right) < t < \Phi\left(h\right) +\frac{\epsilon}{2}$. Insgesamt folgt $s + t < \Phi\left(g\right) + \Phi\left(g\right) + \epsilon = r$. Da $s \notin S_g$ und $t \notin S_h$ gilt $s+t \notin S_{g+h}$ nach (i). Wir erhalten $s+ t \geq \Phi\left(g+h\right) \geq r$ und der Widerspruch $ r \le s+t < r$ zeigt, dass ein derartiges $r$ nicht existieren kann.\\
 Es bleibt zu zeigen, dass $\Phi\left(g + h\right)$ die kleinste obere Schranke von $S_{g+h}$ ist. Angenommen es gäbe eine kleinere obere Schranke $ o \in \R^{+}$ und sei $\epsilon = \Phi(g) + \Phi(h) - o$. Nach Definition der Abbildung gibt es ein $r\in S_g$ mit $r < \Phi(g) - \frac{\epsilon}{2}$ und $ s \in S_h$ mit $s < \Phi(h) - \frac{\epsilon}{2}.$ Nach (iv) ist $r+s$ in $S_{g+h} $ und daher $ r +s \le o$. Widerspruch, da $r+s >\Phi(g) + \Phi(h) - \epsilon = o$.\\
-Zu (vi): Falls $g, h > e_{G}$ wurde die Äquivalenz $g\le h \Leftrightarrow \Phi(g) + \Phi(h)$ bereits gezeigt. Die Aussage ist offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < e_G \text{ und } h > e_G$, dann folgt die Behauptung nach Definition. Die Aussage bleibt für $g, h < e_G$ zu zeigen: 
+Zu (vi): Falls $g, h > 0_{G}$ wurde die Äquivalenz $g\le h \Leftrightarrow \Phi(g) + \Phi(h)$ bereits gezeigt. Die Aussage ist offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < 0_G \text{ und } h > 0_G$, dann folgt die Behauptung nach Definition. Die Aussage bleibt für $g, h < 0_G$ zu zeigen: 
 \[g \le h \Leftrightarrow -g \geq -h \Leftrightarrow \Phi\left(-g\right) \geq \Phi\left(-h\right)n \Leftrightarrow \Phi\left(g\right) \le \Phi\left(h\right).\]
-Wir zeigen nun $\Phi(g+h) = \Phi\left(g\right) +\Phi\left(h\right)$ für beliebige $g,h \in G$. Es genügt dies für $g, h < e_G$ zu beweisen. Hier kann auf das bereits Bewiesene zurückgegriffen werden: 
+Wir zeigen nun $\Phi(g+h) = \Phi\left(g\right) +\Phi\left(h\right)$ für beliebige $g,h \in G$. Es genügt dies für $g, h < 0_G$ zu beweisen. Hier kann auf das bereits Bewiesene zurückgegriffen werden: 
 \[\Phi\left(g+h\right) = −\Phi\left((−g)+(−h)\right) = (−\Phi(−g))+(−\Phi(−h)) = \Phi(g)+\Phi(h).\]
-Zunächst betrachten wir den Fall $g\geq −h$. Dann ist $g+h \geq e_G$, und nach der bereits gezeigten Aussage folgern wir:\\
+Zunächst betrachten wir den Fall $g\geq −h$. Dann ist $g+h \geq 0_G$, und nach der bereits gezeigten Aussage folgern wir:\\
 $\Phi(g+h)+ \Phi(−h) = \Phi(g) \Leftrightarrow \Phi(g+h)−\Phi(h) = \Phi(g) \Leftrightarrow \Phi(g+h) = \Phi(g)+ \Phi(h)$.\\
 Setzen wir nun $g < −h$ voraus. Dann ist $−g−h > 0$, also $\Phi(g)+\Phi(−g−h) = \Phi(−h)$, was äquivalent zu $\Phi(g)−\Phi(g+h) = −\Phi(h)$ und zu $\Phi(g)+ \Phi(h) = \Phi(g+ h)$ ist.
 }
@@ -513,10 +511,10 @@ Setzen wir nun $g < −h$ voraus. Dann ist $−g−h > 0$, also $\Phi(g)+\Phi(�
 %
 %TODO : Nun stellt sich die Frage, wann 
 \begin{satz}\label{homomorphismus nach R} %\cite{fuchs66}
-Sei $\left(G, +\right)$ eine archimedische Gruppe und $\phi: G \rightarrow \R$ ein injektiver o-Homomorphismus. Dann gibt es eine positive reelle Zahl $r$ mit $\phi(g) = r\cdot a$ für alle $a \in G$. 
+Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gruppe der reellen Zahlen und $\phi: G \rightarrow \R$ ein injektiver o-Homomorphismus. Dann gibt es eine positive reelle Zahl $r$ mit $\phi(g) = r\cdot g$ für alle $g \in G$. 
 \end{satz}
-\beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(a_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Weiterhin gehen wir davon aus, dass $n \cdot g_1 > m\cdot g_2$ ist. Nach der archimedischen Eigenschaft der Gruppe $G$ stehen die Bilder $\phi(n\cdot g_1)$ und $\phi(m\cdot g_2)$ in umgekehrter Größenbeziehung zueinander. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
-Folglich gilt auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g} = \frac{\phi(g)}{g}$ erfüllt ist. \\
+\beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(a_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Weiterhin gehen wir davon aus, dass $n \cdot g_1 > m\cdot g_2$ ist. Nach der archimedischen Eigenschaft der Gruppe $G$ stehen die Bilder $\phi(n\cdot g_1)$ und $\phi(m\cdot g_2)$ in umgekehrter Größenbeziehung zueinander. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
+Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$. Wir erhalten somit auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
 Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{(-1)\cdot\phi(g)}{(-1)\cdot g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r := \frac{m}{n}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
 }
 Die Grundaussage dieses Satzes bewies erstmals Hion 1954 in seinem russischsprachigen Werk $\glqq$Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
