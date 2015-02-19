@@ -9,9 +9,9 @@ Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem 
 
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
-Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper K. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte.  
+Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper $K$. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte.  
 \begin{defn}
-Eine \textit{formale Potenzreihe} über K ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$
+Eine \textit{formale Potenzreihe} über $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
 \end{defn}
 \begin{bem}
 Wir werden formale Potenzreihen im Folgenden immer als Ausdruck der Form
@@ -57,7 +57,7 @@ Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenann
 % 
 %
 %Satz mit obigen Verknüpfungen ist das Potenzreihenring
-\begin{satz}
+\begin{satz}\label{RingFormalerPR}
 Die Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +, \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
 \end{satz}
 \beweis{Wir weisen die Ringaxiome, wie in \ref{Ring} definiert, nach.\\
@@ -206,16 +206,17 @@ Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
 Seien jetzt $ b_0,..., b_{n-1}= 0$. Mit $\sum_{j+k=n+k} a_jb_{n-j} = a_j b_n= 0$. Es folgt daher auch $b_n= 0$.
 }
 
-%TODO: nochmal checken ob das stimmt
+%TODO: nochmal checken ob das stimmt, sowohl oberes als auch Konvergenzdefinition
 Da Konvergenzbetrachtungen nur im Körper der reellen und komplexen Zahlen Sinn machen, beschränken wir uns in folgendem Satz auf $\C$.  
 %
 %
 \begin{defn}\label{konvergenz}
-Eine Potenzreihe $f = \sum_{n= 0}^{\infty}a_nz^n \in \C[[z]]$ heißt konvergent, wenn es ein $z_0\in \C$ mit $z_0 \neq 0$ gibt, sodass $\sum_{n=0}^{\infty}a_n{z_0}^n$ als Reihe in $\C$ konvergiert. \\
+Eine Potenzreihe $f = \sum_{n= 0}^{\infty}a_nz^n \in \C[[z]]$ heißt \textit{konvergent}, wenn es ein $z_0\in \C$ mit $z_0 \neq 0$ gibt, sodass $\sum_{n=0}^{\infty}a_n{z_0}^n$ als Reihe in $\C$ konvergiert. \\
 Das heißt die Folge $s_n = \sum_{k=0}^{n}a_k{z_0}^k$ der Partialsummen ist konvergent und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
 \begin{align}
 s= \sum_{n=0}^{\infty}a_n{z_0}^n
 \end{align}
+Auf der Menge $D$ der Punkte $z_0 \in \C$ für die $\sum_{n=0}^{\infty}a_n{z_0}^n$ konvergiert, wird somit eine Abbildung $z_0 \mapsto \sum_{n=0}^{\infty}a_n{z_0}^n $ definiert. Wir nennen $D$ den \textit{Konvergenzbereich}.
 \end{defn}
 
 
@@ -231,68 +232,117 @@ Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$
 %
 %
 %
-
-
+%
+%
 Im nächsten Teil können wir zeigen, dass der Quotientenkörper des Ringes der formalen Potenzreihen dem Körper der formalen Laurentreihen entspricht, auf den wir später näher eingehen werden. Anschließend definieren wir eine entsprechende Bewertung auf dem Körper der formalen Laurentreihen.
-
-%TODO: Definiere Bewertung auf Laurentreihenkörper - passt glaub ich :)
-%TODO: Beweise über Umformung zu Brüchen der Laurentreihen, dass es Quotientenkörper ist.- Beweis in Skript nachschaun
-%TODO: Definiere Träger des Körpers der formalen Laurentreihen
-%TODO: Überleting zu großem Hauptteil, dass es nicth nur Körper ist wenn Träger Z sondern auch bei angeordneter Gruppe -> WARUM?? 
-
+%
+%
+%
+%
 \section{Der Körper der formalen Laurentreihen}
 %
-Eine Erweiterung des Begriffs einer formalen Potenzreihe führt zu der formalen Laurentreihe. Diese unterscheidet sich bezüglich ihres Anfangsindex $n_0 \in \Z$ von den formalen Potenzreihen. Wir bezeichnen mit $K((z))$ die Menge aller Abbildungen $f$ von $\Z$ in einen kommutativen Körper $K$, für die es ein Element $x \in \Z$ gibt, mit $f(y) = 0$ für alle $y < x $. Wenn wir von $K$ sprechen, ist im Folgenden immer ein kommutativer Körper gemeint. \newline 
+Eine Erweiterung des Begriffs einer formalen Potenzreihe führt zu der formalen Laurentreihe. Diese unterscheidet sich bezüglich ihres Anfangsindex $n_0 \in \Z$ von den formalen Potenzreihen. Wir bezeichnen mit $K((z))$ die Menge aller Abbildungen $f$ von $\Z$ in einen $K$, für die es ein Element $x \in \Z$ gibt, mit $f(y) = 0$ für alle $y < x $. \newline 
 Laurentreihen spielen eine wichtige Rolle in der Funktionentheorie, da sie komplexe Funktionen beschreiben, welche auf einem Kreisring holomorph sind. In dieser Arbeit wird jedoch auf Konvergenzbetrachtungen verzichtet und nur formale Laurentreihen, also Laurentreihen in einer Unbestimmten z behandelt. % Quelle:  [H74] HENRICI, Peter: Applied and computational complex analysis, Volume 1, WileyInterscience publication, New York 1974.
-Das Kapitel basiert auf Ausführungen Lüneburgs \cite[S. 563 - 572]{Lueneburg08}.
+Wir orientieren uns dabei an \cite[S. 563 - 572]{Lueneburg08}.
 %
 \begin{defn}
-Eine Laurentreihe ist eine Reihe $\sum_{n= - k}^{\infty}a_nz^n$ mit $k \in \Z, n \ge -k, \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N $, wobei $K$ ein kommutativer Körper ist. Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
+Eine \textit{formale Laurentreihe} über dem Körper $K$ ist eine Abbildung $\Z \rightarrow K$, $n \mapsto a_n$.
 \end{defn}
 %
-Wir definieren $K((z))$ als die Menge der Abbildungen $f$ von $\Z$ in den kommutativen Körper $K$, für die es ein $a \in \Z$ gibt mit $f(i) = 0$ für alle $i < a$. 
-Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann. 
+%
+\begin{bem}
+Wir werden Laurentreihen im Folgenden meist als Reihe der Form
+\begin{equation*}
+\sum_{n= - k}^{\infty}a_nz^n mit k \in \Z, n \ge -k, \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N 
+\end{equation*} 
+Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
+\end{bem}
+%
+Wir bezeichnen die Menge der formalen Laurentreihen in $z$ auf $\Z$ über $K$ mit
+\begin{equation*} %TODO: konsistent, passt das?
+K((z)) = \lbrace \sum_{n =-m}^{\infty} a_nz^n \vert a_n \in K, m \in \Z\rbrace
+\end{equation*} 
+%
+%
+%
+%früher: als die Menge der Abbildungen $f$ von $\Z$ in den kommutativen Körper $K$, für die es ein $a \in \Z$ gibt mit $f(i) = 0$ für alle $i < a$. 
+%
+%
+%
+Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann.
+%
+%
+%
+% 
 \begin{defn}\label{traeger}
-Der Träger der Laurentreihe, also der Definitionsbereich der Funktion, die die Laurentreihe darstellt, ist folgendermaßen definiert: supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$ . 
+Der \textit{Träger} einer Laurentreihe $f = \sum_{n =m}^{\infty} a_nz^n \in K((z))$ ist folgendermaßen definiert: supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$ . 
 \end{defn}
-Zwei Laurentreihen werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
 %
-\[
-+ : \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.\] 
 %
-%TODO: muss ich hier noch extra hinzufuegen, dass a_n = 0 fuer alle n < -k?? UND: stimmt das??? wichtig falls nicht BEWEIS ZU BEWERTUNG ÜBERARBEITEN \ref{LaurentreiheBewertung} 
-
-Wie bereits erwähnt, besitzen formale Laurentreihen nur endliche viele Terme mit negativen Exponenten, das bedeutet der Hauptteil besteht aus nur endlich vielen Summanden. Deswegen kann das Produkt zweier solcher Reihen durch Faltung definiert werden. \\
+%
+%
+\begin{bem}
+Unter einem Träger einer Laurentreihe versteht man den Definitionsbereich der Funktion, die durch die Laurentreihe dargestellt wird.
+\end{bem}
+%
+%
+%
+%
+Die Addition und Mulitplikation formaler Laurentreihen erfolgt analog zur Addition und Mulitplikation formaler Potenzreihen.
+\begin{defn}
+Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=-k}^\infty a_n z^n$ und $g= \sum_{n=-m}^\infty b_n z^n$, werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
+%
+\begin{eqnarray*}
+&+& \colon \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
+\end{eqnarray*}
+%
 %Eine derartige Darstellung existiert, da $\text{K}((z)) $ als Quotientenkörper von K[[z]] definiert ist, wie in \ref{quot} gezeigt wird. \\
 %
-\[
-\cdot : \sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i + b_j\right) z^n.\text{  }  \]
+Die Multiplikation erfolgt durch Faltung der Laurentreihen.
+\begin{eqnarray*}
+\cdot \colon \sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
+\end{eqnarray*}
 %
-%TODO: angeben dass m,n,i,j,k  element von Z sind?? muss ich da nicht auch sagen wobei i >... und j >= ...    Fußnote besser?!
+
+\end{defn}
+%
+\begin{bem}
+Wie bereits erwähnt, besitzen formale Laurentreihen nur endliche viele Terme mit negativen Exponenten, das bedeutet der Hauptteil besteht aus nur endlich vielen Summanden. Diese Bedingung ist unverzichtbar zur Wohldefiniertheit der Multiplikation. 
+\end{bem}
 %
 %
 %
+%
+%
+\begin{satz}
+Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein Ring.
+\end{satz}
+\beweis{Es genügt der Nachweis der Ringaxiome. Der Beweis verläuft analog zu \ref{RingFormalerPR}.
+}
 %
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
-Sei $K$ ein kommutativer Körper und bezeichne $K((z))$ die Menge der formalen Laurentreihen. Dann ist $K((z))$ ein Körper. 
+$\left(K((z)), + \cdot\right)$ ist mit der definierten Addition und Multiplikation ein Körper. 
 \end{satz}
-\beweis{ Sei $0 \neq f \in K((z))$. Dann gibt es ein $i \in \Z$, sodass $f = \sum_{n= i}^{\infty}a_nz^n$ für alle $n \in \Z $ mit $n \geq i$ ungleich Null ist und für alle $n < i$ gleich Null ist. Um zu zeigen, dass $K((z))$ ein Körper ist, muss zu jedem Element von $K((z))$ ein Inverses existieren. Wir definieren $g \in K((z))$ rekursiv und zeigen, dass die so definierte Laurentreihe invers zu $f$ ist. \\
-Setze $g(n) := 0 \text{ für alle } n < -i \text{ und } g(-i) := f(i) ^{-1}.$ Sei $w \in \N$ und $g(-i),..., g(-i+w-1)$ bereits definiert. Dann gilt nach Definition der Multiplikation in $K((z))$ und für \\
-$g(-i+w) := - f(i)^{-1} \sum_{m= -i}^{-i+w-1} g(m)f(w-m)$ erhalten wir:
-\[
-(gf)(w) = \sum_{n = i-i}^{\infty}\sum_{k+l=n}^{}\left(a_k + b_l\right) z^n  = \sum_{n = -i}^{-i + w}g(n)f(w-n).\]  
+\beweis{ Sei $0 \neq f \in K((z))$. 
+%Dann gibt es ein $i \in \Z$, sodass $f = \sum_{n= i}^{\infty}a_nz^n$ für alle $n \in \Z $ mit $n \geq i$ ungleich Null ist und für alle $n < i$ gleich Null ist. 
+Um zu zeigen, dass $K((z))$ ein Körper ist, muss zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existieren. Wir definieren $g \in K((z))$ rekursiv und zeigen, dass die so definierte Laurentreihe invers zu $f$ ist. \\
+Setze $g(n) = 0 \text{ für alle } n < -i \text{ und } g(-i) = \frac{1}{f(i)}.$ Sei $w \in \N$ und $g(-i),..., g(-i+w-1)$ bereits definiert.  Wir wählen $g(-i+w) = - \frac{1}{f(i)} \sum_{m= -i}^{-i+w-1} g(m)f(w-m)$. Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
+\begin{eqnarray*}
+(gf)(w) &=& \sum_{n = i-i}^{\infty}\sum_{k+l=n}^{}\left(a_k \cdot b_l\right) z^n  \\
+&=& \sum_{n = -i}^{-i + w}g(n)f(w-n).
+\end{eqnarray*}  
 Im Fall $w < 0 $ ist die Summe $f(w-n)$ für $ -i \leq n \leq -i+w $ leer. Für $w= 0 $ folgt \\$gf(0) = g(-i)f(i)= 1$. Es bleibt der Fall $w > 0 $ zu  berücksichtigen: 
 \[
 (gf)(w)= \sum_{n = -i}^{-i + w - 1}g(n)f(w-n) + g(-i+w)f(i) = 0.
 \]
-Also ist $gf = 1$ und aufgrund der Kommutativität folgt $fg = 1$, womit $K((z))$ ein Körper ist.
+Also ist $gf = 1_K$ und da $K((z))$ ein kommutativer Ring ist, folgt $fg = 1-k$, womit $K((z))$ ein Körper ist.
 }
 %
 %
 Mithilfe von \ref{quotkoerper} zeigen wir nun, dass der Körper der formalen Laurentreihen dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. 
 %
 \begin{satz}\label{quot}
-Es gilt $K((z)) =$ Quot$(K[[z]])$.
+Es gilt $K((z)) =$\textup{Quot}$(K[[z]])$.
 \end{satz}
 \beweis{Nach Konstruktion von $K((z)) $ ist klar, dass $K[[z]]\subseteq K((z)) $. 
 %Genauer Beweis nach schotten:

@@ -4,7 +4,7 @@ In diesem Kapitel werden die für die Ausarbeitung benötigten theoretischen Gru
 %Zweiter Teil: Bewertung (Einblick in die Bewertungstheorie) 
 %Dritter Teil: Anordnung Wohlordnung Definitionen.(Ordnungsbegriff) viell. erst auf teilweise Ordnung -> Anordnung -> Wohlordnung
 \section{Algebraische Strukturen}
-Wir beginnen mit der Definition der elementaren algebraischen Strukturen Gruppe, Ring, Körper und Quotientenkörper. Die Vertrautheit mit grundlegenden Begriffen über Mengen und Abbildungen, sowie den wichtigen Zahlenmengen $\N, \Z, \Q, \R$ und $\C$ wird vorausgesetzt. 
+Wir beginnen mit der Definition der elementaren algebraischen Strukturen Gruppe, Ring, Körper und Quotientenkörper. Die Vertrautheit mit grundlegenden Begriffen über Mengen und Abbildungen, sowie den wichtigen Zahlenmengen $\N, \Z, \Q, \R$ und $\C$ wird vorausgesetzt. Die folgenden Ausführungen sind orientiert an \cite{rainer08} und \cite{fischer08}.
 %
 \begin{defn}\label{Gruppe}
 Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightarrow G, \left( a, b\right) \mapsto a \circ b$ heißt \textit{Gruppe}, wenn die folgenden Bedingungen erfüllt sind:
@@ -246,7 +246,7 @@ Genügt eine Teilmenge $P := \lbrace x \in G | x \geq 0\rbrace$ einer Gruppe $G$
 \begin{enumerate}
 \item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$,
 \item[P2:] $P \circ P \subseteq P$,
-\item[P3:] $xPx^{-1} \subseteq P$ für jedes $x \in G$.
+\item[P3:] $x+P+(-x) \subseteq P$ für jedes $x \in G$.
 \end{enumerate}
 
 \end{bem}
@@ -294,18 +294,18 @@ Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und
 %
 %
 
-%
-\begin{defn} %\cite{priesscrampe83}
-Eine abelsche Gruppe $\left(G, +\right))$ heißt \textit{teilbar}, wenn zu jedem $a\in G$ und $n \in \N$ ein Element $b \in$ $G$ mit $nb = a$ existiert.
-\end{defn}
-\begin{satz}\label{torsionsfreiHülle} %\cite{priesscrampe83}
-Eine torsionsfreie, abelsche Gruppe $\left(G, +\right)$ ist bis auf Isomorphie in genau einer minimalen teilbaren, abelschen Gruppe $\left((\overline{G}, +\right)$ enthalten. $\overline{G}$ heißt die teilbare Hülle von $G$. 
-\end{satz}
-\beweis{
-Wir betrachten $\overline{G} $, bestehend aus der Menge der Paare $\left(x, n\right)$ mit $x\in G$, $n\in \N$ wobei $\left(x, n\right) = \left(y, m\right)$ für $mx = ny$ gelte. Die Addition über $\overline{G}$ wird definiert durch $\left(x, n\right) + \left(y, m\right) = \left(mx + ny, mn\right)$. Mit dieser Verknüpfung ist $\overline{G}$ eine abelsche Gruppe, denn $\left(x, n\right) + \left(y, m\right) = \left(mx + ny, mn\right) = \left(ny + mx, nm\right)= \left(y, m\right) + \left(x, n\right)$, da $G$ nach Voraussetzung abelsch und $\N$ ein kommutativer Halbring ist. \\
-Die Gruppe $\overline{G}$ ist torsionsfrei, da jedes Element, bis auf das neutrale, unendliche Ordnung hat, nach Konstruktion von $\overline{G}$. Durch die Abbildung  $G \rightarrow \overline{G}, a \mapsto (a, 1)$ ist eine Einbettung von $G$ in $\overline{G}$ gegeben, die jedem Element aus $G$ ein Element in $\overline{G}$ zuordnet.\\
-Wir konstruieren eine minimal teilbare Gruppe einer teilbaren Obergruppe $G^*$ von $G$. Als minimal teilbare Untergruppe von $G^*$, die $G$ enthält nach Konstruktion, wählen wir $\Q G = \lbrace q x: q\in \Q, x\in G\rbrace$. Durch die Abbildung $(a, n) \mapsto \frac{1}{n} \cdot a$ ist ein Isomorphismus von $\overline{G}$ auf $\Q\cdot G$ definiert.}
-%
+%TODO: Kaiser Antwort abwarten.
+%\begin{defn} %\cite{priesscrampe83}
+%Eine abelsche Gruppe $\left(G, +\right))$ heißt \textit{teilbar}, wenn zu jedem $a\in G$ und $n \in \N$ ein Element $b \in$ $G$ mit $nb = a$ existiert.
+%\end{defn}
+%\begin{satz}\label{torsionsfreiHülle} %\cite{priesscrampe83}
+%Eine torsionsfreie, abelsche Gruppe $\left(G, +\right)$ ist bis auf Isomorphie in genau einer minimalen teilbaren, abelschen Gruppe $\left((\overline{G}, +\right)$ enthalten. $\overline{G}$ heißt die teilbare Hülle von $G$. 
+%\end{satz}
+%\beweis{
+%Wir betrachten $\overline{G} $, bestehend aus der Menge der Paare $\left(x, n\right)$ mit $x\in G$, $n\in \N$ wobei $\left(x, n\right) = \left(y, m\right)$ für $mx = ny$ gelte. Die Addition über $\overline{G}$ wird definiert durch $\left(x, n\right) + \left(y, m\right) = \left(mx + ny, mn\right)$. Mit dieser Verknüpfung ist $\overline{G}$ eine abelsche Gruppe, denn $\left(x, n\right) + \left(y, m\right) = \left(mx + ny, mn\right) = \left(ny + mx, nm\right)= \left(y, m\right) + \left(x, n\right)$, da $G$ nach Voraussetzung abelsch und $\N$ ein kommutativer Halbring ist. \\
+%Die Gruppe $\overline{G}$ ist torsionsfrei, da jedes Element, bis auf das neutrale, unendliche Ordnung hat, nach Konstruktion von $\overline{G}$. Durch die Abbildung  $G \rightarrow \overline{G}, a \mapsto (a, 1)$ ist eine Einbettung von $G$ in $\overline{G}$ gegeben, die jedem Element aus $G$ ein Element in $\overline{G}$ zuordnet.\\
+%Wir konstruieren eine minimal teilbare Gruppe einer teilbaren Obergruppe $G^*$ von $G$. Als minimal teilbare Untergruppe von $G^*$, die $G$ enthält nach Konstruktion, wählen wir $\Q G = \lbrace q x: q\in \Q, x\in G\rbrace$. Durch die Abbildung $(a, n) \mapsto \frac{1}{n} \cdot a$ ist ein Isomorphismus von $\overline{G}$ auf $\Q\cdot G$ definiert.}
+%%
 
 %
 
@@ -340,7 +340,7 @@ Total geordnete endliche Mengen sind wohlgeordnet.
 \end{bsp}
 Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_S$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
 \begin{lemma}\label{wohlgeordnvereinigung} %\cite{xin04}
-Sei $w_{n\in \N} \in W_A$, dann gilt $\cap_\alpha w_n \in W_A$ und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
+Sei $w_{n\in \N} \in W_A$, dann gilt $\cap_{\alpha \in \N} w_n \in W_A$ und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
 \end{lemma}
 \beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $w_1\cup w_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $a_1 > a_2 > ...$ in $w_1\cup w_2$.\\
 Betrachten wir alle Elemente der Teilmenge $w_1$. Wir können diese, da $w_1$ total geordnet ist, als Folge $a_{i_1} > a_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $w_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $w_2$ und erhalten die endliche fallende Folge $a_{j_1} > a_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $a_1 > a_2 > ...$ ist in einer der beiden endlichen Folgen enthalten.  Widerspruch!}
