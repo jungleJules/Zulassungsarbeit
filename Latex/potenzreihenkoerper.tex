@@ -315,9 +315,9 @@ Wie bereits erwähnt, besitzen formale Laurentreihen nur endliche viele Terme mi
 %
 %
 \begin{satz}
-Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein Ring.
+Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
 \end{satz}
-\beweis{Es genügt der Nachweis der Ringaxiome. Der Beweis verläuft analog zu \ref{RingFormalerPR}.
+\beweis{Es genügt das Nachrechnen der Ringaxiome. Der Beweis verläuft analog zu \ref{RingFormalerPR}.
 }
 %
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
@@ -354,16 +354,22 @@ Betrachte die Abbildung:\\
 \lbrack\sum_{n=m}^{\infty}a_nz^n\rbrack & \text{, falls } m\geq 0
 \end{cases}\]
 Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Wir beschränken unsere Abbildung, um Fallunterscheidungen zu vermeiden auf $z^k :=1$ für alle $k\leq 0$. Sei $m\leq l$:\\
-\vspace{0.8cm}
-\[\Phi \left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\]
-
-\[= \lbrack{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}, ~{z^{-m}}\rbrack =\] \[\lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n}, ~{z^{-m}}\rbrack+ \lbrack{z^{-m}\sum_{n=l}^{\infty}a_n z^n},~{z^{-m}}\rbrack = \]
-\[\lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack+ \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack = \] \[\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)\]
+\begin{eqnarray*}
+\Phi \left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\\
+&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}, ~{z^{-m}}\rbrack\\
+&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n}, ~{z^{-m}}\rbrack+ \lbrack{z^{-m}\sum_{n=l}^{\infty}a_n z^n},~{z^{-m}}\rbrack \\
+&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack+ \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack \\
+&=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
+\end{eqnarray*}
 Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun zur Multiplikation:
-\[\Phi \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\]
-\[=\lbrack{z^{-m}\left(\sum_{n=m}^{\infty}a_nz^n\right) \left(\sum_{n=l}^{\infty}b_nz^n\right)},~{z^{-m}}\rbrack =\] \[\lbrack{\left(z^{-m}\sum_{n=m}^{\infty}a_n z^n\right)\left(z^{-l}\sum_{n=l}^{\infty}b_n z^n\right)},~{z^{-m}z^{-l}}\rbrack\]
-\[=\lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack \cdot \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack \]\[=\Phi \left(\sum_{n=m}^{\infty} a_nz^n\right) \cdot \Phi\left(\sum_{n=l}^{\infty} b_nz^n \right)\]
-Der Homomorphismus ist bijektiv, denn das Bild jedes Elements \\$q := \lbrack{\sum_{n=m} a_nz^n},~{\sum_{n=l} b_nz^n}\rbrack$ liegt in $Quot\left(K[[z]]\right)$, für $\sum_{n=l} b_nz^n \neq 0$. Der Kern der Abbildung ist das neutrale Einselement und da $\Phi$ ein Homomorphismus ist, gilt die Injektivität.\\
+\begin{eqnarray*}
+\Phi \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\\
+&=&\lbrack{z^{-m}\left(\sum_{n=m}^{\infty}a_nz^n\right) \left(\sum_{n=l}^{\infty}b_nz^n\right)},~{z^{-m}}\rbrack \\ 
+&=& \lbrack{\left(z^{-m}\sum_{n=m}^{\infty}a_n z^n\right)\left(z^{-l}\sum_{n=l}^{\infty}b_n z^n\right)},~{z^{-m}z^{-l}}\rbrack  \\
+&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack \cdot \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack\\
+&=& \Phi \left(\sum_{n=m}^{\infty} a_nz^n\right) \cdot \Phi\left(\sum_{n=l}^{\infty} b_nz^n \right)
+\end{eqnarray*}
+Der Homomorphismus ist bijektiv, denn das Bild jedes Elements \\$q := \lbrack{\sum_{n=m} a_nz^n},~{\sum_{n=l} b_nz^n}\rbrack$ liegt in $Quot\left(K[[z]]\right)$, für $\sum_{n=l} b_nz^n \neq 0$. Der Kern der Abbildung ist das $0_K$ und da $\Phi$ ein Homomorphismus ist, gilt die Injektivität.\\
 Jede Laurentreihe $ f = \sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = l}^{\infty} c_nz^n $ für $c_0 \neq 0$ gebracht werden. Nach \ref{potenzreihenringEinheit} kann diese Reihe invertiert werden und wir erhalten:
 \[\lbrack{\left(\sum_{n = m}^{\infty} a_nz^n\right)\left( \sum_{n = 0}^{\infty} c_nz^n\right)^{-1}},~{z^l}\rbrack\]
 \[ = \Phi\left(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1}\right)\]
