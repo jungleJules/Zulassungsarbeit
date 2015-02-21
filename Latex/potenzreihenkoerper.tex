@@ -5,11 +5,12 @@ Diese sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürl
 Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem Träger der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
 
 %Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Anschließend beschäftigen wir uns mit dem Körper der Laurentreihen K((z)), der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem durch Einbettung des Ringes ein Körper entsteht. Der dadurch entstandene Körper wird als \textit{allgemeiner Potenzreihenkörper} bezeichnet. \\ 
-\section{Der Ring der formalen Potenzreihen}\label{potenzreihenring}
+\section{Formale Potenzreihen}\label{potenzreihenring}
 
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
-Wir betrachten im Folgenden die Menge der formalen Potenzreihen $K[[z]]$ über einem beliebigen Körper $K$. Dabei repräsentiert $z$ keine Variable, die für eine Zahl steht, sondern eine Unbestimmte.  
+In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen auf den natürlichen Zahlen. Wir definieren die Verknüpfungen zwischen formalen Potenzreihen und zeigen welche algebraischen Strukturen die Menge der formalen Potenzreihen bildet.
+  
 \begin{defn}
 Eine \textit{formale Potenzreihe} über $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
 \end{defn}
@@ -18,14 +19,15 @@ Wir werden formale Potenzreihen im Folgenden immer als Ausdruck der Form
 \begin{equation}\label{eq: formalepotenzreihe}
 \sum_{n=0}^\infty a_n z^n = a_0 + a_1z + a_2z^1 + a_2z^2 + ...
 \end{equation}
-schreiben, mit $a_n \in K,~ \forall n \in \N_0$.
+schreiben, mit $a_n \in K$, für alle $n \in \N_0$.
 \end{bem}
-
-Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace \]. 
-
+%
+%
+%
 \subsection{Addition und Multiplikation formaler Potenzreihen} \label{Rechnen}
 %Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert. Mit diesen Verknüpfungen wird $K[[z]]$ zu dem Ring der formalen Potenzreihen. \\
-Formale Potenzreihen werden komponentenweise addiert.
+Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace \].
+%Formale Potenzreihen werden komponentenweise addiert.
 %
 %
 %
@@ -55,7 +57,7 @@ Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenann
 %
 %
 % 
-%
+\subsection{Der Ring der formalen Potenzreihen}
 %Satz mit obigen Verknüpfungen ist das Potenzreihenring
 \begin{satz}\label{RingFormalerPR}
 Die Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +, \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
@@ -180,31 +182,20 @@ für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Pote
 %\[\forall z \in \R \text{ mit } |z| < |\frac{1}{q}|: A(z) = \sum_{}^{}a_n z^n = \frac{1}{1-qz}\] 
 \end{bsp}
 %
+%
+%
+%
+%
+%
+%
+%
+%
+%
 \subsection{Eigenschaften des Potenzreihenrings}
-In diesem Abschnitt zeigen wir, dass der Potenzreihenring auch ein Integritätsring ist. Im Körper $\C$ betrachten wir den Zusammenhang zwischen $K[[z]]$ und dem Ring der konvergenten Potenzreihen. \\
-Wir beweisen weiterhin, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann
+Zunächst betrachten wir den Zusammenhang zwischen dem Ring der formalen Potenzreihen und der Menge der konvergenten Potenzreihen im Körper der komplexen Zahlen $\C$. \\
+Wir beweisen weiterhin, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann.
 %evtl noch möglich zu zeigen dass c[[z]] ein nullteilerfreier Ring ist stellt sich nur die Frage ob das iwie nötig ist...
 %
-
-\begin{satz}\label{intring}
-Der Ring $K[[z]]$ ist ein Integritätsring.
-\end{satz}
-%
-\beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
-Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
-\begin{eqnarray*}
-f \cdot g &=&  \sum a_nz^n \cdot \sum b_nz^n \\
-&=& 0.
-\end{eqnarray*} 
-Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
-Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
-Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
-\begin{eqnarray*}
-\sum_{j+k=j} a_jb_k = \sum_{j+0=j} a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
-\end{eqnarray*} 
-Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
-Seien jetzt $ b_0,..., b_{n-1}= 0$. Mit $\sum_{j+k=n+k} a_jb_{n-j} = a_j b_n= 0$. Es folgt daher auch $b_n= 0$.
-}
 
 %TODO: nochmal checken ob das stimmt, sowohl oberes als auch Konvergenzdefinition
 Da Konvergenzbetrachtungen nur im Körper der reellen und komplexen Zahlen Sinn machen, beschränken wir uns in folgendem Satz auf $\C$.  
@@ -224,7 +215,7 @@ Auf der Menge $D$ der Punkte $z_0 \in \C$ für die $\sum_{n=0}^{\infty}a_n{z_0}^
 %
 %
 \begin{bem}\label{konvergentUnterring}
-Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
+Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. Die Menge $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
 \end{bem}
 \beweis{Wir haben bereits in \ref{intring} gezeigt, dass $\C[[z]$ ein Integritätsring ist. Nun bleibt für $\C\lbrace z \rbrace$ noch zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
 Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt besitzt denselben Konvergenzradius, da beide Reihen im Radius min$\lbrace r_1, r_2\rbrace $ absolut konvergieren und nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt gegen den gleichen Wert.} 
@@ -234,12 +225,42 @@ Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$
 %
 %
 %
-Im nächsten Teil können wir zeigen, dass der Quotientenkörper des Ringes der formalen Potenzreihen dem Körper der formalen Laurentreihen entspricht, auf den wir später näher eingehen werden. Anschließend definieren wir eine entsprechende Bewertung auf dem Körper der formalen Laurentreihen.
+%
+%
+\begin{satz}\label{intring}
+Der Ring $K[[z]]$ ist ein Integritätsring.
+\end{satz}
+%
+\beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
+Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
+\begin{eqnarray*}
+f \cdot g &=&  \sum a_nz^n \cdot \sum b_nz^n \\
+&=& 0.
+\end{eqnarray*} 
+Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
+Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
+Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
+\begin{eqnarray*}
+\sum_{j+k=j} a_jb_k = \sum_{j+0=j} a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
+\end{eqnarray*} 
+Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
+Seien jetzt $ b_0,..., b_{n-1}= 0$. Mit $\sum_{j+k=n+k} a_jb_{n-j} = a_j b_n= 0$. Es folgt daher auch $b_n= 0$.
+}
 %
 %
 %
 %
-\section{Der Körper der formalen Laurentreihen}
+%
+%
+%
+%
+Im nächsten Teil können wir zeigen, dass der Quotientenkörper des Ringes der formalen Potenzreihen dem Körper der formalen Laurentreihen entspricht, auf den wir später näher eingehen werden. 
+%Anschließend definieren wir eine entsprechende Bewertung auf dem Körper der formalen Laurentreihen.
+%
+%
+%
+%
+\section{Formale Laurentreihen}
 %
 Eine Erweiterung des Begriffs einer formalen Potenzreihe führt zu der formalen Laurentreihe. Diese unterscheidet sich bezüglich ihres Anfangsindex $n_0 \in \Z$ von den formalen Potenzreihen. Wir bezeichnen mit $K((z))$ die Menge aller Abbildungen $f$ von $\Z$ in einen $K$, für die es ein Element $x \in \Z$ gibt, mit $f(y) = 0$ für alle $y < x $. \newline 
 Laurentreihen spielen eine wichtige Rolle in der Funktionentheorie, da sie komplexe Funktionen beschreiben, welche auf einem Kreisring holomorph sind. In dieser Arbeit wird jedoch auf Konvergenzbetrachtungen verzichtet und nur formale Laurentreihen, also Laurentreihen in einer Unbestimmten z behandelt. % Quelle:  [H74] HENRICI, Peter: Applied and computational complex analysis, Volume 1, WileyInterscience publication, New York 1974.
@@ -258,10 +279,6 @@ Wir werden Laurentreihen im Folgenden meist als Reihe der Form
 Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
 \end{bem}
 %
-Wir bezeichnen die Menge der formalen Laurentreihen in $z$ auf $\Z$ über $K$ mit
-\begin{equation*} %TODO: konsistent, passt das?
-K((z)) = \lbrace \sum_{n =-m}^{\infty} a_nz^n \vert a_n \in K, m \in \Z\rbrace
-\end{equation*} 
 %
 %
 %
@@ -269,7 +286,6 @@ K((z)) = \lbrace \sum_{n =-m}^{\infty} a_nz^n \vert a_n \in K, m \in \Z\rbrace
 %
 %
 %
-Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann.
 %
 %
 %
@@ -288,41 +304,57 @@ Unter einem Träger einer Laurentreihe versteht man den Definitionsbereich der F
 %
 %
 %
-Die Addition und Mulitplikation formaler Laurentreihen erfolgt analog zur Addition und Mulitplikation formaler Potenzreihen.
+\subsection{Addition und Multiplikation formaler Laurentreihen}
+%
+%
+Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann.
+Wir bezeichnen die Menge der formalen Laurentreihen in $z$ auf $\Z$ über $K$ mit
+\begin{equation*} %TODO: konsistent, passt das?
+K((z)) = \lbrace \sum_{n =-m}^{\infty} a_nz^n \vert a_n \in K, m \in \Z\rbrace
+\end{equation*} 
+Die Addition und Mulitplikation formaler Laurentreihen erfolgt analog zur Addition und Multiplikation formaler Potenzreihen.
 \begin{defn}
 Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=-k}^\infty a_n z^n$ und $g= \sum_{n=-m}^\infty b_n z^n$, werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
 %
-\begin{eqnarray*}
+\begin{eqnarray}
 &+& \colon \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
-\end{eqnarray*}
+\end{eqnarray}
 %
 %Eine derartige Darstellung existiert, da $\text{K}((z)) $ als Quotientenkörper von K[[z]] definiert ist, wie in \ref{quot} gezeigt wird. \\
 %
 Die Multiplikation erfolgt durch Faltung der Laurentreihen.
-\begin{eqnarray*}
+\begin{eqnarray}
+\label{eq: multiplikationLaurent}
 \cdot \colon \sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
-\end{eqnarray*}
+\end{eqnarray}
 %
 
 \end{defn}
 %
 \begin{bem}
-Die Multiplikation formaler Laurentreihen ist unter der Bedingung wohldefiniert, dass formale Laurentreihen höchstens endliche viele Terme mit negativen Exponenten besitzen. Diese Bedingung ist gleichbedeutend mit der Forderung nach der Wohldefiniertheit des Trägers einer formalen Laurentreihe. \\
- Diese Bedingung ist unverzichtbar zur Wohldefiniertheit der Multiplikation. 
+Die Multiplikation formaler Laurentreihen ist unter der Bedingung wohldefiniert, dass formale Laurentreihen höchstens endliche viele Terme mit negativen Exponenten besitzen. \\
+Diese Forderung ist unverzichtbar, denn andernfalls wäre die Summe $\sum_{i+j=n}^{}\left(a_i \cdot b_j\right)$ in \ref{eq: multiplikationLaurent} unendlich und das Produkt somit nicht bestimmbar.
 \end{bem}
 
-\begin{satz}
-Sei $f \in K((z))$ eine formale Laurentreihe mit endlichem Hauptteil. Dann gilt, der Träger der Laurentreihe ist wohldefiniert.
+\begin{satz}\label{traegerwohlgeordnet}
+Sei $f \in K((z))$ eine formale Laurentreihe mit endlichem Hauptteil. Dann gilt, der Träger der Laurentreihe ist wohlgeordnet.
 \end{satz}
 \beweis{
 Sei $f\in K((z))$ eine formale Laurentreihe, die obige Bedingung erfüllt. Wir können $f$ nach der Definition einer formalen Laurentreihe schreiben als $f = \sum_{n= - k}^{\infty}a_nz^n = g + h = \sum_{n=1}^{k}a_{-n}z^{-n} + \sum_{n=0}^{\infty}a_nz^n$. Wie in \ref{OrdnungNundZ} gezeigt, ist die Menge der ganzen Zahlen $\Z$ total geordnet. Der Hauptteil $h$ jeder formalen Laurentreihe besteht aus endlich vielen Summanden, was die Wohlordnung von supp($h$), dem Trägers des Hauptteils, impliziert (wir erinnern an \ref{TotalGeordnetEndlichIstWOhlgeordnet}). Der Träger des Nebenteils, supp($g$), ist aufgrund der Wohlordnung der natürlichen Zahlen wohlgeordnet. \\
-Für supp$(f)$ gilt trivialierweise, dass er der Vereinigung von supp($g$) und supp($h$) entspricht. Unter Verwendung von Satz \ref{wohlgeordnvereinigung} erhalten wir die Wohlordnung des Trägers der formalen Laurentreihe. 
+Für supp$(f)$ gilt trivialerweise, dass er der Vereinigung von supp($g$) und supp($h$) entspricht. Unter Verwendung von Satz \ref{wohlgeordnvereinigung} erhalten wir die Wohlordnung des Trägers der formalen Laurentreihe. 
 }
 %
 %
 %
 %
 %
+\subsection{Der Körper der formalen Laurentreihen}
+
+In diesem Abschnitt beschäftigen wir uns mit der Menge der formalen Laurentreihen $K((z))$ und weisen deren Körperstruktur nach. Auf diesen Ergebnissen aufbauend stellen wir die Verbindung zwischen dem Körper der Laurentreihen und dem zuvor behandelten Ring der formalen Potenzreihen her. Bezugnehmend auf \ref{konvergentUnterring} betrachten wir aus Gründen der Vollständigkeit die Menge der konvergenten Laurentreihen. \\
+Abschließend konstruieren wir mithilfe der Wohlordnung des Trägers eine Bewertung auf dem Körper der formalen Laurentreihen und stellen den bewertungstheoretischen Zusammenhang zu dem Ring der formalen Potenzreihen her.
+%
+%
+% 
 \begin{satz}
 Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
 \end{satz}
@@ -413,7 +445,7 @@ Die formalen Laurentreihen bilden einen Oberring der Potenzreihen und stellen al
 %
 %
 %
-Im Folgenden beschränken wir uns aufgrund der Konvergenzbetrachtung wieder auf den Körper $\C$. 
+Im Folgenden beschränken wir uns, aufgrund der Konvergenzbetrachtung, erneut auf den Körper $\C$. 
 %
 %Nach Kaiser Skript
 \begin{defn}
@@ -454,17 +486,17 @@ Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
-Wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
+Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
 \[
 |b_n| \le (aC)^n
 \]
 ist. 
-Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. \\
-Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Wir erhalten folgende Abschätzung für den Koeffizienten $b_{n+1}$:\\
+Die Ungleichung ist für $b_0$ nach Konstruktion des Inversen \ref{inverse Potenzreihe} erfüllt. \\
+Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
 \[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
 \[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
-}
-Wie in Satz \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent, es genügt, den Nebenteil betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+ gilt.}
+Wie in Satz \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent. Um dies zu zeigen reicht es den Nebenteil zu betrachten, . Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
 Nun definieren wir wie in \ref{quot} die Abbildung 
 \[\Phi:\C_L\lbrace z \rbrace \rightarrow \textup{Quot}(\C \lbrace z \rbrace ) \]
 \begin{eqnarray} 
@@ -479,7 +511,7 @@ Der Satz \ref{quot} liefert die Isomorphie der Abbildung $\Phi$. Damit ist die B
 %
 %
 Nun versuchen wir auf dem Körper der Laurentreihen eine Bewertung finden.
-Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus (nach B3' \ref{bewKoerper}).
+Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus.
 % Betrachte min$\lbrace\left(\text{supp}(f)\right)\rbrace$, eindeutig bestimmt durch den kleinsten Index $n_0$ der Laurentreihe, ab dem der Koeffizient $a_{n_0} \neq 0 $ ist. Die Menge all dieser Elemente bildet eine angeordnete abelsche Gruppe $\Psi $ und es gibt einen Isomorphismus von $\psi: \text{ }\Psi \rightarrow \Z$. \\
 %%
 %
@@ -536,9 +568,13 @@ Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z
 %\begin{lemma}\label{quotbewring}
 %Ist $R$ ein diskreter Bewertungsring, so ist Quot($R$) ein diskret bewerteter Körper mit der Bewertung $v(a/b)=v(a)-v(b)$. 
 %\end{lemma}
-
-
-
+%
+% 
+%
+%
+%
+%
+%
 \section{Der verallgemeinerte Potenzreihenkörper}
 %
 Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes zuallererst die sogenannten Hahnschen Potenzreihen zunächst als Gruppen vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten, wie:\\
@@ -546,13 +582,30 @@ Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten 
 \[g = \frac{1}{2}z^{\frac{1}{2}} + \frac{3}{4}z^\frac{3}{4} + \frac{7}{8}z^\frac{7}{8} + ... + z + \frac{3}{2}z^\frac{3}{2} + ... + 2z^2 + ...\] 
 Im Laufe des Beweises des Hahnschen Einbettungssatzes konnte er zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden.  Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
 Bevor wir uns der Konstruktion der formalen verallgemeinerten Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
-
-\subsection{Potenzreihenstrukturen mit Träger über den ganzen Zahlen}\label{traegerGanz}
-Wir kennen bereits die in \ref{potenzreihenring} definierten Potenzreihen sowie ihre Verallgemeinerung, die Laurentreihen. Bisher haben wir uns nur mit Potenzreihen beschäftigt, deren Elemente auf einer Teilmenge der ganzen Zahlen indiziert werden. Die Exponenten der Unbestimmten der induzierten algebraischen Struktur $\left(K[[z]], K((z))\right) $ gehören in beiden Fällen ebenso einer Teilmenge der ganzen Zahlen an. \\
-Betrachten wir den Körper der formalen Laurentreihen über dem Körper $K$. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper $K((z))$.  Nun stellt sich die Frage, ob es noch allgemeinere Gruppen, als die Menge der natürlichen, oder ganzen Zahlen gibt, auf denen ein wohlgeordneter Träger von Potenzreihen definiert werden kann.
 %
 %
+%
+%
+%
+%\subsection{Potenzreihenstrukturen mit Träger über den ganzen Zahlen}\label{traegerGanz}
+%Wir kennen bereits die in \ref{potenzreihenring} definierten Potenzreihen sowie ihre Verallgemeinerung, die Laurentreihen. Bisher haben wir uns nur mit Potenzreihen beschäftigt, deren Elemente auf einer Teilmenge der ganzen Zahlen indiziert werden. Die Exponenten der Unbestimmten der induzierten algebraischen Struktur $\left(K[[z]], K((z))\right) $ gehören in beiden Fällen ebenso einer Teilmenge der ganzen Zahlen an. \\
+%Betrachten wir den Körper der formalen Laurentreihen über dem Körper $K$. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper $K((z))$.  Nun stellt sich die Frage, ob es noch allgemeinere Gruppen, als die Menge der natürlichen, oder ganzen Zahlen gibt, auf denen ein wohlgeordneter Träger von Potenzreihen definiert werden kann.
+%
+%
+%
+%
+%
+%
+%
+% 
 \subsection{Formale Potenzreihen auf angeordneten abelschen Gruppen}
+%
+% 
+%
+%
+%
+%
+Wir haben bisher ausschließlich formale Reihen betrachtet, die auf einer wohlgeordneten Teilmenge der ganzen Zahlen definiert waren. In Satz \ref
 Wir haben im vorherigen Gliederungspunkt festgestellt, dass die bisher betrachteten Potenzreihen immer auf Teilmengen der natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) konstruiert waren. In \ref{traegerGanz} wurde gezeigt, dass den Mengen, auf denen wir Potenzreihenringe definieren können, eine bestimmte, unverzichtbare Eigenschaft innewohnt: die Wohlordnung. Im Folgenden betrachten wir bestimmte Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten abelschen Gruppen. Die nachfolgenden Ausführungen orientieren sich an \cite[S. 194 - 199]{fuchs66}, \cite[S. 601 - 655]{hahn07} und \cite[S. 49 - 64]{priesscrampe83}.\\\\
 Sei $\Gamma$ eine total geordnete abelsche Gruppe. Wir beschäftigen uns in dieser Arbeit ausschließlich mit der additiv geschriebenen Gruppe $\Gamma$. Die Äquivalenzklassen, die durch die archimedische Gleichheit \ref{archimedischeKlassen} entstehen, bilden eine total geordnete Menge, wir bezeichnen sie mit $\Pi$. Durch jedes positive Element $a \in \Gamma$, respektive seine Äquivalenzklasse $[a]= \pi$ werden zwei konvexe Untergruppen $L_\pi,~ U_\pi$  definiert. \\
 Für einen Körper $K$ und $\left(\Gamma, + \right)$ eine angeordnete, abelsche Gruppe, bezeichnen wir mit H $\left(\Gamma, K \right)$ die Menge aller Funktionen von $\Gamma$ nach $K$. 
@@ -628,7 +681,7 @@ Damit ist $K\lbrack\lbrack z^{\Gamma}\rbrack\rbrack$ bezüglich der definierten 
 Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ wohlgeordnet ist.
 \end{bsp}
 %
-\subsection{Der Ring der formalen Potenzreihen} 
+\subsection{Der verallgemeinerte Ring der formalen Potenzreihen} 
 Auf der Menge der formalen Potenzreihen auf der additiven, angeordneten abelschen $\Gamma$ über dem Körper $K$, $K[[z^\Gamma]]$ haben wir nun die Addition und Multiplikation definiert. In der verwendeten Literatur (\cite{priesscrampe83}, \cite{fuchs66}) findet sich die multiplikative Schreibweise der angeordneten Gruppe $\Gamma$, da diese eine noch allgemeinere Definition der Multiplikation zum Beispiel mithilfe von Faktorsystemen ermöglicht. Auf Basis dieser Definition konnte B.H. Neumann 1949 Schiefkörper von formalen Potenzreihen konstruieren. Diese lieferten wichtige Beispiele zur Einordnung der projektiven Ebenen.
 Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem anfangs beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Diese entstehen für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ respektive $\N_0$ handelt. 
 Wir zeigen zunächst, dass $K[[z^\Gamma]]$ ein Ring über K ist.
