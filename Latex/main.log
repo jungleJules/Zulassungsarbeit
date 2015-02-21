@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  21 FEB 2015 00:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  21 FEB 2015 17:09
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1085,33 +1085,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 98.
+LaTeX Warning: Command \grqq invalid in math mode on input line 113.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 98.
+LaTeX Warning: Command \grqq invalid in math mode on input line 113.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
 [7]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 134.
+LaTeX Warning: Command \glqq invalid in math mode on input line 163.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 134.
+LaTeX Warning: Command \grqq invalid in math mode on input line 163.
 
 [8]
-Overfull \hbox (7.79991pt too wide) in paragraph at lines 169--175
+Overfull \hbox (7.79991pt too wide) in paragraph at lines 198--204
 []\T1/cmr/m/n/10.95 Ein In-te-gri-täts-ring $\OML/cmm/m/it/10.95 R$ \T1/cmr/m/n
 /10.95 heisst \T1/cmr/m/it/10.95 dis-kre-ter Be-wer-tungs-ring\T1/cmr/m/n/10.95
  , falls es auf dem Quo-ti-en-ten-kör-per Quot$\OT1/cmr/m/n/10.95 (\OML/cmm/m/i
@@ -1119,47 +1120,53 @@ t/10.95 R\OT1/cmr/m/n/10.95 )$
  []
 
 [9]
-LaTeX Font Info:    Try loading font information for U+euf on input line 180.
+LaTeX Font Info:    Try loading font information for U+euf on input line 209.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 187.
+LaTeX Warning: Command \grqq invalid in math mode on input line 216.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 187.
+LaTeX Warning: Command \grqq invalid in math mode on input line 216.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 195.
+LaTeX Warning: Command \glqq invalid in math mode on input line 224.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 195.
+LaTeX Warning: Command \grqq invalid in math mode on input line 224.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 222.
+LaTeX Warning: Command \grqq invalid in math mode on input line 244.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 222.
+LaTeX Warning: Command \grqq invalid in math mode on input line 244.
 
 [10]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 262.
+LaTeX Warning: Command \grqq invalid in math mode on input line 269.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 262.
+LaTeX Warning: Command \grqq invalid in math mode on input line 269.
 
 [11]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 279.
+LaTeX Warning: Command \glqq invalid in math mode on input line 309.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 279.
+LaTeX Warning: Command \grqq invalid in math mode on input line 309.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 281.
+LaTeX Warning: Command \grqq invalid in math mode on input line 326.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 281.
+LaTeX Warning: Command \grqq invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 328.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 328.
 
 [12]
 Kapitel 3.
@@ -1175,128 +1182,128 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\rm' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\rm'
-(scrbook)              by `\normalfont \rmfamily ' on input line 287.
+(scrbook)              by `\normalfont \rmfamily ' on input line 334.
 
 [13
 
 
 ]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 330.
+LaTeX Warning: Command \glqq invalid in math mode on input line 377.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 330.
+LaTeX Warning: Command \grqq invalid in math mode on input line 377.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 332.
+LaTeX Warning: Command \grqq invalid in math mode on input line 379.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 332.
+LaTeX Warning: Command \grqq invalid in math mode on input line 379.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
+LaTeX Warning: Command \grqq invalid in math mode on input line 382.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
+LaTeX Warning: Command \grqq invalid in math mode on input line 382.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
+LaTeX Warning: Command \grqq invalid in math mode on input line 382.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
+LaTeX Warning: Command \grqq invalid in math mode on input line 382.
 
 [14]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 364.
+LaTeX Warning: Command \glqq invalid in math mode on input line 411.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 364.
+LaTeX Warning: Command \grqq invalid in math mode on input line 411.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 369.
+LaTeX Warning: Command \grqq invalid in math mode on input line 416.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 369.
+LaTeX Warning: Command \grqq invalid in math mode on input line 416.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 369.
+LaTeX Warning: Command \grqq invalid in math mode on input line 416.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 369.
+LaTeX Warning: Command \grqq invalid in math mode on input line 416.
 
 [15]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 397.
+LaTeX Warning: Command \grqq invalid in math mode on input line 444.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 397.
+LaTeX Warning: Command \grqq invalid in math mode on input line 444.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 397.
+LaTeX Warning: Command \glqq invalid in math mode on input line 444.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 397.
+LaTeX Warning: Command \grqq invalid in math mode on input line 444.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 398.
+LaTeX Warning: Command \glqq invalid in math mode on input line 445.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 398.
+LaTeX Warning: Command \grqq invalid in math mode on input line 445.
 
 [16] [17]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--509
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 509--509
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
 
  []
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 509.
+LaTeX Warning: Command \grqq invalid in math mode on input line 556.
 
 [19] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 520.
+LaTeX Warning: Command \glqq invalid in math mode on input line 567.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 520.
+LaTeX Warning: Command \grqq invalid in math mode on input line 567.
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
 
  []
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 530.
+LaTeX Warning: Command \glqq invalid in math mode on input line 577.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 530.
+LaTeX Warning: Command \grqq invalid in math mode on input line 577.
 
 [21]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
 [22]
@@ -1351,128 +1358,124 @@ cmm/m/it/10.95 z\OT1/cmr/m/n/10.95 ))$ \T1/cmr/m/n/10.95 ist fol-gen-der-ma-ÿen
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
-
+Overfull \hbox (4.1264pt too wide) in paragraph at lines 320--320
+\T1/cmr/m/n/10.95 De-fi-ni-ti-on ei-ner for-ma-len Lau-ren-trei-he schrei-ben a
+ls $\OML/cmm/m/it/10.95 f \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 a[]z[] 
+\OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 g \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/1
+0.95 h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 a[]z[] \OT1/cmr/m/n/10.95 
++$
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
 
  []
 
 
-Overfull \hbox (49.30394pt too wide) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+
+ []
+
+[33]
+Overfull \hbox (49.30394pt too wide) in paragraph at lines 399--399
 \T1/cmr/m/n/10.95 Wir zei-gen, dass der Ho-mo-mor-phis-mus auch sur-jek-tiv ist
 . Sei $\OML/cmm/m/it/10.95 m; l \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 0$ \T1
 /cmr/m/n/10.95 und $\OML/cmm/m/it/10.95 q \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it
 /10.95 inQuot []$\T1/cmr/m/n/10.95 ,
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 464--464
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--464
-
- []
-
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 464--464
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 517--519
-
- []
-
-
-LaTeX Warning: Reference `HahnscheEinbettungssatz' on page 37 undefined on inpu
-t line 529.
-
-
-LaTeX Warning: Reference `Hahn-Gruppe' on page 37 undefined on input line 529.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
+Underfull \hbox (badness 10000) in paragraph at lines 508--508
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 541--546
+Underfull \hbox (badness 10000) in paragraph at lines 532--534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
 
 [38]
+Underfull \hbox (badness 10000) in paragraph at lines 556--561
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 558.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 558.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Gamma' on input line 564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 564.
+ []
 
 [39]
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 568.
+LaTeX Warning: Command \grqq invalid in math mode on input line 573.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 568.
+LaTeX Warning: Command \grqq invalid in math mode on input line 573.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 569.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 579.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 569.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 579.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 570.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Gamma' on input line 579.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 570.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 579.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 583.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 583.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 584.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 584.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 585.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 585.
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 586--607
+Underfull \hbox (badness 10000) in paragraph at lines 601--622
 
  []
 
 [41] [42] [43]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 662.
+(hyperref)                removing `math shift' on input line 677.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 662.
+(hyperref)                removing `superscript' on input line 677.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Gamma' on input line 662.
+(hyperref)                removing `\Gamma' on input line 677.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 662.
+(hyperref)                removing `math shift' on input line 677.
 
 [44] [45] [46] [47] [48])
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl [49]
@@ -1509,11 +1512,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 20527 strings out of 493921
- 352150 string characters out of 3144876
- 472960 words of memory out of 3000000
- 23217 multiletter control sequences out of 15000+200000
- 30664 words of font info for 71 fonts, out of 3000000 for 9000
+ 20524 strings out of 493921
+ 352125 string characters out of 3144876
+ 473019 words of memory out of 3000000
+ 23213 multiletter control sequences out of 15000+200000
+ 29991 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,14n,71p,1124b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1544,15 +1547,14 @@ amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/euf
-m10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
-msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8
-a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (51 pages, 644905 bytes).
+msy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/e
+ufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (51 pages, 640001 bytes).
 PDF statistics:
- 1131 PDF objects out of 1200 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
+ 1133 PDF objects out of 1200 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
  194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

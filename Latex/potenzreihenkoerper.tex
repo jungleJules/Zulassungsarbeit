@@ -307,8 +307,17 @@ Die Multiplikation erfolgt durch Faltung der Laurentreihen.
 \end{defn}
 %
 \begin{bem}
-Wie bereits erwähnt, besitzen formale Laurentreihen nur endliche viele Terme mit negativen Exponenten, das bedeutet der Hauptteil besteht aus nur endlich vielen Summanden. Diese Bedingung ist unverzichtbar zur Wohldefiniertheit der Multiplikation. 
+Die Multiplikation formaler Laurentreihen ist unter der Bedingung wohldefiniert, dass formale Laurentreihen höchstens endliche viele Terme mit negativen Exponenten besitzen. Diese Bedingung ist gleichbedeutend mit der Forderung nach der Wohldefiniertheit des Trägers einer formalen Laurentreihe. \\
+ Diese Bedingung ist unverzichtbar zur Wohldefiniertheit der Multiplikation. 
 \end{bem}
+
+\begin{satz}
+Sei $f \in K((z))$ eine formale Laurentreihe mit endlichem Hauptteil. Dann gilt, der Träger der Laurentreihe ist wohldefiniert.
+\end{satz}
+\beweis{
+Sei $f\in K((z))$ eine formale Laurentreihe, die obige Bedingung erfüllt. Wir können $f$ nach der Definition einer formalen Laurentreihe schreiben als $f = \sum_{n= - k}^{\infty}a_nz^n = g + h = \sum_{n=1}^{k}a_{-n}z^{-n} + \sum_{n=0}^{\infty}a_nz^n$. Wie in \ref{OrdnungNundZ} gezeigt, ist die Menge der ganzen Zahlen $\Z$ total geordnet. Der Hauptteil $h$ jeder formalen Laurentreihe besteht aus endlich vielen Summanden, was die Wohlordnung von supp($h$), dem Trägers des Hauptteils, impliziert (wir erinnern an \ref{TotalGeordnetEndlichIstWOhlgeordnet}). Der Träger des Nebenteils, supp($g$), ist aufgrund der Wohlordnung der natürlichen Zahlen wohlgeordnet. \\
+Für supp$(f)$ gilt trivialierweise, dass er der Vereinigung von supp($g$) und supp($h$) entspricht. Unter Verwendung von Satz \ref{wohlgeordnvereinigung} erhalten wir die Wohlordnung des Trägers der formalen Laurentreihe. 
+}
 %
 %
 %
@@ -436,18 +445,22 @@ In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty}
 \beweis{Zunächst konstruieren wir formal die Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
 Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben. Daher können wir ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt. \\
 Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert.  \\
-Daraus folgt die Beschränktheit der Folge ${(a_n|z_0|)}_{n\in\N_0} $. Da $g$ konvergiert, ist die Folge  beschränkt und für die inverse Potenzreihe $\overline{g} = \sum_{n=0}^{\infty}a_n\left(\frac{z}{z_0}\right)^n$  gilt: \\
-\[\overline{g} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{z}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_nz^n =  f \text{ mit }\omega:= \frac{z}{z_0}\]
+Die Folge ${(a_n|z_0|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt. Nach dem Lemma von Abel konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ in dem Konvergenzbereich $D\left(0, z_0\right)$. Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
+\[
+\sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n
+\]
+ist konvergent. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
 Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
-Wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$. Deswegen können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
+Wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
 \[
 |b_n| \le (aC)^n
 \]
 ist. 
-Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Wir erhalten folgende Abschätzung für den Koeffizienten $b_{n+1}$:\\
+Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. \\
+Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Wir erhalten folgende Abschätzung für den Koeffizienten $b_{n+1}$:\\
 \[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
 \[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
 }
@@ -476,7 +489,8 @@ Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definie
 \end{satz}
 %
 \beweis{
-%Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. 
+%TODO DIe Surjektivität bracuh ich doch??
+Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. 
 Nach Definition \ref{bewKoerper} sind noch (B1'-B3') nachzuweisen mit ($\Z \cup \lbrace \infty\rbrace$, +) als Bildmenge. 
 \begin{enumerate}
 \item [zu B1']: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
@@ -527,15 +541,15 @@ Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z
 
 \section{Der verallgemeinerte Potenzreihenkörper}
 %
-Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes \ref{HahnscheEinbettungssatz} zuallererst die sogenannten Hahnschen Potenzreihen zunächst als Gruppen \ref{Hahn-Gruppe} vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten, wie:\\
+Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes zuallererst die sogenannten Hahnschen Potenzreihen zunächst als Gruppen vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten, wie:\\
 \[ f = 1 + z^{log 2} + z^{log 3} + z^{log 4} + ... \]
 \[g = \frac{1}{2}z^{\frac{1}{2}} + \frac{3}{4}z^\frac{3}{4} + \frac{7}{8}z^\frac{7}{8} + ... + z + \frac{3}{2}z^\frac{3}{2} + ... + 2z^2 + ...\] 
-Hahn konnte im Laufe des Beweises des Hahnschen Einbettungssatzes zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden.  Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
-Bevor wir uns der Konstruktion der formalen Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
+Im Laufe des Beweises des Hahnschen Einbettungssatzes konnte er zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden.  Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
+Bevor wir uns der Konstruktion der formalen verallgemeinerten Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
 
 \subsection{Potenzreihenstrukturen mit Träger über den ganzen Zahlen}\label{traegerGanz}
 Wir kennen bereits die in \ref{potenzreihenring} definierten Potenzreihen sowie ihre Verallgemeinerung, die Laurentreihen. Bisher haben wir uns nur mit Potenzreihen beschäftigt, deren Elemente auf einer Teilmenge der ganzen Zahlen indiziert werden. Die Exponenten der Unbestimmten der induzierten algebraischen Struktur $\left(K[[z]], K((z))\right) $ gehören in beiden Fällen ebenso einer Teilmenge der ganzen Zahlen an. \\
-Betrachten wir den Körper der formalen Laurentreihen über dem Körper $K$. Wie in \ref{traeger} definiert, ist $\mathtt{T}$ eine Teilmenge der ganzen Zahlen und da für jede Teilmenge ein Minimum existiert, ist $\mathtt{T}$ wohlgeordnet nach \ref{wohlgeordn}. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper $K((z))$. Nun stellt sich die Frage, ob es noch allgemeinere Gruppen, als die Menge der natürlichen, oder ganzen Zahlen gibt, auf denen ein wohlgeordneter Träger von Potenzreihen definiert werden kann.
+Betrachten wir den Körper der formalen Laurentreihen über dem Körper $K$. Die Wohlordnung des Trägers ist eine Voraussetzung zur Definition der Multiplikation im Körper $K((z))$.  Nun stellt sich die Frage, ob es noch allgemeinere Gruppen, als die Menge der natürlichen, oder ganzen Zahlen gibt, auf denen ein wohlgeordneter Träger von Potenzreihen definiert werden kann.
 %
 %
 \subsection{Formale Potenzreihen auf angeordneten abelschen Gruppen}
