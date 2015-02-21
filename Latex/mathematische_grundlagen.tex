@@ -12,42 +12,43 @@ Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightar
 \item[G1: ] (Assoziativgesetz) $a\circ \left(b\circ c\right) = \left(a\circ b\right) \circ c$ für alle $a, b, c \in G$.
 \item[G2: ] (Neutrales Element) Es gibt ein eindeutig bestimmtes Element $1_G \in G$ mit $1_G \circ a  = a \circ 1_G = a$ für alle $a \in G$.
 \item[G3: ] (Inverses Element) Zu jedem $a \in G$ gibt es ein Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. \\
-Die Gruppe heißt \textit{abelsch}, falls folgendes gilt: 
-\item[G4: ] (Kommutativgesetz) $a \circ b = b \circ a$ für alle $a, b \in G$ erfüllt ist.  
+\item[] Die Gruppe heißt \textit{abelsch}, falls folgendes gilt: 
+\item[G4: ] (Kommutativgesetz) $a \circ b = b \circ a$ für alle $a, b \in G$.  
 \end{enumerate} 
 \end{defn}
 %
 %
 \begin{bem}
-Wenn $\left(G, \circ\right)$ eine Gruppe ist, so wird das Inverse eines Elements $a\in G$ mit $a^{-1}$ bezeichnet. In abelschen Gruppen verwenden wir als Verknüpfung $+$ und nennen das neutrale Element $0_G$ und $-a$ das Inverse zu $a\in G$. 
+Wenn $\left(G, \circ\right)$ eine Gruppe ist, so wird das Inverse eines Elements $a\in G$ mit $a^{-1}$ bezeichnet. \\
+Wenn nichts anderes gesagt ist, verwenden wir in abelschen Gruppen die Verknüpfung $+$ und nennen das neutrale Element $0_G$ und $-a$ das Inverse zu $a\in G$. 
 \end{bem}
 %
 \begin{bsp}
-$\left( \Z, +\right), \left(\Q, +\right)$ und$\left(\R, +\right)$ sind abelsche Gruppen. 
+$\left( \Z, +\right), \left(\Q, +\right)$ und $\left(\R, +\right)$ sind abelsche Gruppen. 
 \end{bsp}
 %
 \begin{defn}\label{Untergruppe}
 Sei $\left(G, \circ\right)$ eine Gruppe mit neutralem Element $1_G$. Die Teilmenge $U\subseteq G$ heißt \textit{Untergruppe}, wenn gilt:
 \begin{enumerate}
 \item[U1: ] $1_G \in U$.
-\item[U2: ] $a, b \in U \Rightarrow ab \in U$.
+\item[U2: ] $a, b \in U \Rightarrow a\circ b \in U$.
 \item[U3: ] $a \in U \Rightarrow a^{-1} \in U$.
 \end{enumerate} 
 \end{defn}
 
 
 \begin{defn}\label{Ring} %\cite{fischer08} nach Skript Funktionentheorie Kaiser
-Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot: R \times R \to R $ zwei Verknüpfungen auf $R$. Das Tripel $\left(R, +, \cdot\right)$ bezeichnen wir als \textit{Ring}, wenn gilt:
+Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot: R \times R \to R $ zwei Verknüpfungen auf $R$. Das Tripel $\left(R, +, \cdot\right)$ bezeichnen wir als \textit{Ring mit Eins}, wenn gilt:
 %
 \begin{enumerate}
-\item[R1: ] $(R, +)$ ist eine abelsche Gruppe,
-\item[R2: ] Die Multiplikation $\cdot$ ist assoziativ: Für $a, b,c \in R$ gilt $a\cdot \left(b \cdot c\right) = \left(a \cdot b \right) \cdot c$.%Blöd weil ich Monoid brauche: $\left(R, \cdot\right)$ ist ein Monoid,
+\item[R1: ] $(R, +)$ ist eine abelsche Gruppe (deren neutrales Element mit $0_R$ bezeichnet wird).
+\item[R2: ] Die Multiplikation $\cdot$ ist assoziativ: Für $a, b,c \in R$ gilt $a\cdot \left(b \cdot c\right) = \left(a \cdot b \right) \cdot c$ (das neutrale Element wird mit $1_R$ bezeichnet).%Blöd weil ich Monoid brauche: $\left(R, \cdot\right)$ ist ein Monoid,
 \item[R3: ] (Distributivgesetze) Für alle a,b,c $\in$ R gilt\\
 \[a \cdot(b +c) = a \cdot b + a \cdot c \text{ und }
 (a+b) \cdot c = a \cdot c + b \cdot c \] 
 \end{enumerate}
 \end{defn}
-Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
+%Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
 
 \begin{bem} %evtl doch keine extra Bemerkung
 Ist die Multiplikation kommutativ, so heißt $\left(R, +, \cdot\right)$ \textit{kommutativer Ring mit Eins}. Anstelle von $\left(R, +, \cdot\right)$ sprechen wir vereinfachend von dem Ring $R$.
@@ -65,11 +66,11 @@ Sei $\left(R, +, \cdot\right)$ ein kommutativer Ring mit Eins und sei $a \in R$.
 %
 %
 \begin{bem}
-Falls $a\in R$ eine Einheit ist, existiert das Inverse und ist eindeutig bestimmt. Wir bezeichnen das Inverse mit $a^{-1}$.
+Falls $a\in R$ eine Einheit ist, existiert das Inverse und es ist eindeutig bestimmt. Wir bezeichnen das Inverse mit $a^{-1}$.
 \end{bem}
 
 \begin{defn} \label{Integritätsbereich}
-Ein kommutativer Ring mit Eins, $R$, heißt \textit{Integritätsbereich}, falls es in $R$ keine Nullteiler gibt.
+Ein kommutativer Ring $R$ mit Eins heißt \textit{Integritätsbereich}, falls es in $R$ keine Nullteiler gibt.
 \end{defn}
 %
 %
@@ -82,7 +83,7 @@ Ein kommutativer Ring mit Eins, $R$, heißt \textit{Integritätsbereich}, falls 
 %
 % 
 \begin{defn}
-Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+, \cdot$ zwei Verknüpfungen auf $K$. Genau dann ist $\left(K, +, \cdot\right)$ ein \textit{Körper}, wenn folgende Gesetze gelten:
+Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+, \cdot$ zwei Verknüpfungen auf $K$. Genau dann ist $\left(K, ~+,~ \cdot\right)$ ein \textit{Körper}, wenn folgende Gesetze gelten:
 \begin{enumerate}
 \item[(a)] Addition
 \begin{enumerate}
@@ -110,9 +111,9 @@ Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+, \cdot$
 %In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
 
 \begin{satz}\label{quotkoerper} %\cite{Lueneburg08} statt RxR* mach ich RxR\0 weil R ist nicht definiert.
-Es sei $R$ ein Integritätsbereich, bestehend aus wenigstens zwei Elementen. Wir definieren auf $R\times R\setminus\lbrace 0\rbrace$ eine Äquivalenzrelation $\grqq\sim\grqq$ durch $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$, wir können also schreiben: \\
+Es sei $R$ ein Integritätsbereich bestehend aus wenigstens zwei Elementen. Wir definieren auf $R\times R\setminus\lbrace 0\rbrace$ eine Äquivalenzrelation $\sim$ durch $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$. Wir können nun schreiben: \\
 \[rwv = rvw = suw = swu = tvu = tuv.\]
-Nach Voraussetzung ist $R$ ein Integritätsbereich und da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
+Nach Voraussetzung ist $R$ ein Integritätsbereich. Da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
 \[\left(r,u\right)+ \left(s,v\right) := \left(rv + su, uv\right),\]
 \[\left(r,u\right)\left(s,v\right) := \left(rs, uv\right)\text{ definiert.}\] 
 Wir setzen \textup{Quot}$(R) := R\times R\setminus\lbrace 0\rbrace \ \sim$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$. In diesem Fall gilt: 
@@ -120,7 +121,7 @@ Wir setzen \textup{Quot}$(R) := R\times R\setminus\lbrace 0\rbrace \ \sim$ und b
 \[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}\]
 \textup{Quot}$\left(R, +, \cdot\right)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
 \end{satz}
-\beweis{Wir prüfen zunächst die Wohldefiniertheit der Verknüpfungen. \\Sei $\left(r_1, u_1 \right), \left(s_1, v_1 \right) \in R\times R\setminus\lbrace 0\rbrace$ und sei $\left(r_1, u_1 \right) \sim \left(r_2, u_2\right)$. Nach Definition der Äquivalenzrelation ist $r_1u_2 = r_2u_1$. Daher erhalten wir
+\beweis{Wir prüfen zunächst die Wohldefiniertheit der Verknüpfungen. \\Seien $\left(r_1, u_1 \right), \left(r_2, u_2\right), \left(s, v\right) \in R\times R\setminus\lbrace 0\rbrace$ und sei $\left(r_1, u_1 \right) \sim \left(r_2, u_2\right)$. Nach Definition der Äquivalenzrelation ist $r_1u_2 = r_2u_1$. Daher erhalten wir
 \begin{equation*}
 \left(r_1v + su_1\right)u_2v \\= r_1u_2v^2 + su_1u_2v \\
 =r_2u_1v^2 + su_1u_2v \\
@@ -173,9 +174,10 @@ Sei $G$ eine angeordnete abelsche Gruppe. Die surjektive Funktion $v\colon G \ri
 \end{enumerate}
 %
 \end{defn}
-Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $. Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $.\\
-Sei $\left(G, +\right)$ eine angeordnete Gruppe, mit $[a]$ bezeichnen wir die archimedische Klasse, in der das Element $a\in G$ , $[G]$ bezeichne die Gesamtheit der archimedischen Klassen von G. Die Abbildung 
- \\$G \to [G] \colon a \mapsto [a]$ nennt man \textit{natürliche Bewertung}. %\cite{priesscrampe83}
+Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
+ Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $ ist.\\
+Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen mit $[a]$ die archimedische Klasse, in der das Element $a\in G$ liegt. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung 
+ \\$G \to [G] \colon a \mapsto [a]$ definieren wir als \textit{natürliche Bewertung}. %\cite{priesscrampe83}
 \begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
 Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
 %TODO: Quelle checken
@@ -195,14 +197,14 @@ Der Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet
 Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist $A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ ein Bewertungsring.
 \end{bem}
 \begin{defn}   %\cite{hulek12}
-Ein Integritätsring $R$ heisst \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt und 
+Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt und 
 %\begin{enumerate}
 %\item[D1: ]$v(ab) = v(a)+ v(b)$, 
 %\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
 %sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
 %\end{enumerate}
 \[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
-ist der Bewertungsring von $v$.
+ist der Bewertungsring von $v$ ist.
 \end{defn}
 Eine weitere, äquivalente, Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
 \begin{defn} \label{bewertungsring}%\cite{neukirch92}
@@ -213,7 +215,7 @@ Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen 
 \section{Ordnung in algebraischen Strukturen}
 \subsection{Anordnung}
 \begin{defn}\label{defgs} 
-Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $ \grqq\leq\grqq $ auf $A$ gibt mit: folgende Eigenschaften für alle $ a,b,c \in A$  erfüllt.
+Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $ \grqq\leq\grqq $ auf $A$ gibt die folgende Eigenschaften für alle $ a,b,c \in A$  erfüllt.
 %
 \begin{enumerate}
 \item[T1:] \textit{Reflexivität: } $a \leq  a$,
@@ -275,14 +277,14 @@ Eine Untergruppe $U$ einer angeordneten Gruppe $G$ ist bezüglich der selben Rel
 Wir betrachten die natürliche Ordnung auf den natürlichen, ganzen und reellen Zahlen.
 \begin{enumerate}
 \item Die Menge der natürlichen Zahlen $\N$ ist total geordnet bezüglich der Relation $\grqq\leq\grqq$. Es gilt für $a, b \in \N$, dass
-\[ a \leq b \text{ genau dann, wenn } b-a \in \N
+\[ a \leq b \text{ ist genau dann, wenn } b-a \in \N
 \]
 für alle $a,b \in \N$.
 \item Die Menge der ganzen Zahlen $\Z$ ist total geordnet bezüglich der Relation $\grqq\leq\grqq$. Es gilt für $a, b \in \Z$, dass
 \[ a\leq b \text{ ist, genau dann, wenn } b -a \in \N \text{ oder } a = b \text{ gilt.}
 \]
 \item Die Menge der reellen Zahlen $\R$ ist total geordnet bezüglich der Relation $\grqq\leq\grqq$. Es gilt für alle $a, b \in \R$, dass
-\[a \leq b \text{ ist, genau dann, wenn } 0 < b -a \text{ oder } a = b \text{gilt.} 
+\[a \leq b \text{ ist, genau dann, wenn } 0 < b -a \text{ oder } a = b \text{ gilt.} 
 \]
 \end{enumerate}
 \end{bsp}
