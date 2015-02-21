@@ -523,13 +523,14 @@ Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definie
 \beweis{
 %TODO DIe Surjektivität bracuh ich doch??
 Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. 
-Nach Definition \ref{bewKoerper} sind noch (B1'-B3') nachzuweisen mit ($\Z \cup \lbrace \infty\rbrace$, +) als Bildmenge. 
+Nach Definition \ref{bewKoerper} sind für den Körper $K((z))$ und die angeordnet abelsche Gruppe $\Z$ noch (B1'-B3') nachzuweisen. 
 \begin{enumerate}
 \item [zu B1']: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
 \item[zu B2']: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
+Sei
 \[v(fg) = v( \sum_{n \in \Z}\sum_{n= m+k}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$. Betrachte $ n < n_0 + m_0 $. 
 %Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
-Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch das Produkt $a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0$ und $b_{m_0} \neq 0.$ Sei n = $n_0$ + $m_0$. Das Produkt $ a_{n_0}b_{m_0}$ ist ungleich Null und daher folgt: v(fg) = $n_0+m_0 = v(f) + v(g). $
+Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch das Produkt $a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0$ und $b_{m_0} \neq 0.$ Sei $n = n_0$ + $m_0$. Das Produkt $ a_{n_0}b_{m_0}$ ist ungleich Null und daher erhalten wir, dass $v(fg) = n_0+m_0 = v(f) + v(g)$ ist.
 \item[zu B3']: Wenn $f, g$ wie oben definiert sind, erhalten wir für $v(f+g)$ die folgende Ungleichung: 
 \begin{eqnarray*}
 v\left(f+g\right) &=&  v\left( \sum_{n = \text{min}\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) \\
@@ -577,11 +578,16 @@ Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z
 %
 \section{Der verallgemeinerte Potenzreihenkörper}
 %
-Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes zuallererst die sogenannten Hahnschen Potenzreihen zunächst als Gruppen vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe. Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten, wie:\\
+Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. 
+%Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes die sogenannten Hahnschen Potenzreihen zunächst als Gruppen vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe.
+Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten aus einer Teilmenge von $\R$, wie beispielsweise:\\
 \[ f = 1 + z^{log 2} + z^{log 3} + z^{log 4} + ... \]
 \[g = \frac{1}{2}z^{\frac{1}{2}} + \frac{3}{4}z^\frac{3}{4} + \frac{7}{8}z^\frac{7}{8} + ... + z + \frac{3}{2}z^\frac{3}{2} + ... + 2z^2 + ...\] 
-Im Laufe des Beweises des Hahnschen Einbettungssatzes konnte er zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden.  Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
-Bevor wir uns der Konstruktion der formalen verallgemeinerten Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
+Die einzige, unverzichtbare Bedingung, die Hahn an diese verallgemeinerten Potenzreihen stellte, war die Wohldefiniertheit des Trägers der verallgemeinerten Potenzreihe.
+Im Laufe des Beweises des Hahnschen Einbettungssatzes konnte er zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden. \\ Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
+Wir fokussieren unsere Betrachtungen auf verallgemeinerte Potenzreihen auf angeordneten abelschen Gruppen. 
+
+%Bevor wir uns der Konstruktion der formalen verallgemeinerten Potenzreihen zuwenden, wird die Rolle des Trägers der Potenzreihen bei der Konstruktion von Potenzreihenkörpern genauer erörtert. 
 %
 %
 %
@@ -605,9 +611,11 @@ Bevor wir uns der Konstruktion der formalen verallgemeinerten Potenzreihen zuwen
 %
 %
 %
-Wir haben bisher ausschließlich formale Reihen betrachtet, die auf einer wohlgeordneten Teilmenge der ganzen Zahlen definiert waren. In Satz \ref
-Wir haben im vorherigen Gliederungspunkt festgestellt, dass die bisher betrachteten Potenzreihen immer auf Teilmengen der natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) konstruiert waren. In \ref{traegerGanz} wurde gezeigt, dass den Mengen, auf denen wir Potenzreihenringe definieren können, eine bestimmte, unverzichtbare Eigenschaft innewohnt: die Wohlordnung. Im Folgenden betrachten wir bestimmte Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten abelschen Gruppen. Die nachfolgenden Ausführungen orientieren sich an \cite[S. 194 - 199]{fuchs66}, \cite[S. 601 - 655]{hahn07} und \cite[S. 49 - 64]{priesscrampe83}.\\\\
-Sei $\Gamma$ eine total geordnete abelsche Gruppe. Wir beschäftigen uns in dieser Arbeit ausschließlich mit der additiv geschriebenen Gruppe $\Gamma$. Die Äquivalenzklassen, die durch die archimedische Gleichheit \ref{archimedischeKlassen} entstehen, bilden eine total geordnete Menge, wir bezeichnen sie mit $\Pi$. Durch jedes positive Element $a \in \Gamma$, respektive seine Äquivalenzklasse $[a]= \pi$ werden zwei konvexe Untergruppen $L_\pi,~ U_\pi$  definiert. \\
+Wir haben bisher ausschließlich formale Reihen betrachtet, die auf einer wohlgeordneten Teilmenge der ganzen Zahlen definiert waren. In Satz \ref{traegerwohlgeordnet} haben wir gezeigt, dass die Wohldefiniertheit der Multiplikation mit der Wohlordnung des Trägers der Laurentreihe zusammenhängt. \\
+Im Folgenden betrachten wir allgemeinere Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten abelschen Gruppen. Wir zeigen, dass 
+%Wir haben im vorherigen Gliederungspunkt festgestellt, dass die bisher betrachteten Potenzreihen immer auf Teilmengen der natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) konstruiert waren. In \ref{traegerGanz} wurde gezeigt, dass den Mengen, auf denen wir Potenzreihenringe definieren können, eine bestimmte, unverzichtbare Eigenschaft innewohnt: die Wohlordnung.
+  Die nachfolgenden Ausführungen orientieren sich an \cite[S. 194 - 199]{fuchs66}, \cite[S. 601 - 655]{hahn07} und \cite[S. 49 - 64]{priesscrampe83}.\\\\
+Sei $\Gamma$ eine angeordnete abelsche Gruppe. Wir beschäftigen uns in dieser Arbeit ausschließlich mit der additiv geschriebenen Gruppe $\Gamma$. Die Äquivalenzklassen, die durch die archimedische Gleichheit \ref{archimedischeKlassen} entstehen, bilden eine total geordnete Menge, wir bezeichnen sie mit $\Pi$. Durch jedes positive Element $a \in \Gamma$, respektive seine Äquivalenzklasse $[a]= \pi$ werden zwei konvexe Untergruppen $L_\pi,~ U_\pi$  definiert. \\
 Für einen Körper $K$ und $\left(\Gamma, + \right)$ eine angeordnete, abelsche Gruppe, bezeichnen wir mit H $\left(\Gamma, K \right)$ die Menge aller Funktionen von $\Gamma$ nach $K$. 
 Wir nennen eine derartige Funktion $F\colon\Gamma \rightarrow K$, die in der Anordnung von $\Gamma$ einen wohlgeordneten Träger besitzt eine formale Potenzreihe auf $\Gamma$ über $K$. \\
 Die Addition derartiger Funktionen $F, G$ ist definiert durch: 

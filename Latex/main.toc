@@ -3,23 +3,24 @@
 \contentsline {chapter}{\numberline {2}Mathematische Grundlagen}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Algebraische Strukturen}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Einblick in die Bewertungstheorie}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Ordnungen}{10}{section.2.3}
+\contentsline {section}{\numberline {2.3}Ordnung in algebraischen Strukturen}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Anordnung}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Wohlordnung}{12}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Angeordnete abelsche Gruppen}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wohlordnung in angeordnet abelschen Gruppen}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Archimedisch angeordnete Gruppen}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Die angeordnete Menge konvexer Untergruppen}{21}{section.3.3}
-\contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Formale Potenzreihen}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Addition und Multiplikation formaler Potenzreihen}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Der Ring der formalen Potenzreihen}{24}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Eigenschaften des Potenzreihenrings}{28}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Formale Laurentreihen}{30}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Addition und Multiplikation formaler Laurentreihen}{31}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{32}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{38}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Formale Potenzreihen auf angeordneten abelschen Gruppen}{39}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{40}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Der verallgemeinerte Ring der formalen Potenzreihen}{42}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{44}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {3}Angeordnete abelsche Gruppen}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wohlordnung in angeordneten abelschen Gruppen}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Archimedisch angeordnete Gruppen}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Der Satz von H\IeC {\"o}lder}{19}{section.3.3}
+\contentsline {section}{\numberline {3.4}Die angeordnete Menge konvexer Untergruppen}{22}{section.3.4}
+\contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Formale Potenzreihen}{24}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Addition und Multiplikation formaler Potenzreihen}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Der Ring der formalen Potenzreihen}{25}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Eigenschaften des Potenzreihenrings}{29}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Formale Laurentreihen}{31}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Addition und Multiplikation formaler Laurentreihen}{32}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{33}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{39}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Formale Potenzreihen auf angeordneten abelschen Gruppen}{40}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Definition der Addition und Multiplikation in $K[[z^{\Gamma }]]$}{41}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Der verallgemeinerte Ring der formalen Potenzreihen}{43}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Die Konstruktion des Inversen in $K[[z^{\Gamma }]]$}{45}{subsection.4.3.4}
