@@ -89,7 +89,7 @@ Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunt
  g &=& \sum_{n=0}^\infty  a_nz^n,
  \end{eqnarray*}
 wobei 
- \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N\].\\ 
+ \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N_0\].\\ 
 Damit folgt: $ \sum_{j=0}^\infty a_jz^j \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
 Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. Es genügt somit ein Distributivgesetz nachzuweisen. Es gilt
 \begin{eqnarray*}
@@ -118,7 +118,7 @@ und
 \begin{eqnarray*}
 \sum_{n= 0}^{\infty} c_nz^n \text{, mit } c_n = \sum_{j+k=n} (a_j b_k),
 \end{eqnarray*}
-gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N$ ist.
+gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N_0$ ist.
 %Sei $c_n = \sum_{j+k=n} (a_j b_k)$. Damit das Produkt der Potenzreihen dem neutralen Element der Multiplikation entspricht, müssen alle Koeffizienten mit Indizes größer Null den Wert $0$ annehmen, während $c_0 =1$ gilt. 
 \end{satz}
 \beweis{Sei $h =\sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n$. Wir können beliebig viele Koeffizienten aus dieser Summe herausziehen nach Definition der Addition:
@@ -153,14 +153,14 @@ Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente s
 Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die inverse Potenzreihe
 $g = \sum_{k=0}^\infty b_k z^k$ ist rekursiv definiert durch
 \begin{equation*}
-b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{k = 1}^{n} a_k b_{n-k}	 ~~~~~~\forall n\in\N.
+b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{n = j +k } a_j b_{k}	 ~~~~~~\forall n\in\N_0.
 \end{equation*}
 \end{satz}
 \beweis{Wie im Beweis \ref{potenzreihenringEinheit} verwendet, gilt $a_0b_0 = 1$, woraus $b_0 = \frac{1}{a_0}$ folgt. Für die restlichen Koeffizientenwerte muss dementsprechend
 \begin{equation*}
-\sum_{j+k=n} (a_j b_k) = \sum_{k=0}^{n} a_nb_{n-k} = 0
+\sum_{n=j+k} a_j b_k = 0
 \end{equation*}
-für alle $n \in \N$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
+für alle $n \in \N_0$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
 
 }
 %
@@ -197,7 +197,7 @@ f \cdot g &=&  \sum a_nz^n \cdot \sum b_nz^n \\
 &=& 0.
 \end{eqnarray*} 
 Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
-Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N$ ist.\\ 
+Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
 Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
 \begin{eqnarray*}
 \sum_{j+k=j} a_jb_k = \sum_{j+0=j} a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
@@ -253,7 +253,7 @@ Eine \textit{formale Laurentreihe} über dem Körper $K$ ist eine Abbildung $\Z 
 \begin{bem}
 Wir werden Laurentreihen im Folgenden meist als Reihe der Form
 \begin{equation*}
-\sum_{n= - k}^{\infty}a_nz^n mit k \in \Z, n \ge -k, \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N 
+\sum_{n= - k}^{\infty}a_nz^n \text{ mit } k \in \Z, n \ge -k \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N_0 
 \end{equation*} 
 Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
 \end{bem}
@@ -323,19 +323,22 @@ Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein kommu
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
 $\left(K((z)), + \cdot\right)$ ist mit der definierten Addition und Multiplikation ein Körper. 
 \end{satz}
-\beweis{ Sei $0 \neq f \in K((z))$. 
+\beweis{ Sei $0 \neq f \in K((z))$ und $f = \sum_{n= m}^{\infty} a_nz^n$, mit $a_n\neq 0$ für alle $n \geq m$.
 %Dann gibt es ein $i \in \Z$, sodass $f = \sum_{n= i}^{\infty}a_nz^n$ für alle $n \in \Z $ mit $n \geq i$ ungleich Null ist und für alle $n < i$ gleich Null ist. 
-Um zu zeigen, dass $K((z))$ ein Körper ist, muss zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existieren. Wir definieren $g \in K((z))$ rekursiv und zeigen, dass die so definierte Laurentreihe invers zu $f$ ist. \\
-Setze $g(n) = 0 \text{ für alle } n < -i \text{ und } g(-i) = \frac{1}{f(i)}.$ Sei $w \in \N$ und $g(-i),..., g(-i+w-1)$ bereits definiert.  Wir wählen $g(-i+w) = - \frac{1}{f(i)} \sum_{m= -i}^{-i+w-1} g(m)f(w-m)$. Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
+Wir wissen bereits $K((z))$ ist ein kommutativer Ring. Um zu zeigen, dass $K((z))$ ein Körper ist, genügt es zu beweisen, dass zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existiert. Wir definieren $g \in K((z))$ rekursiv und zeigen, dass die so entstandene Laurentreihe invers zu $f$ ist. Die Konstruktion von $g$ läuft ähnlich zur Konstruktion der inversen Potenzreihe in Satz \ref{inverse Potenzreihe}. \\
+Setze $g = \sum_{n= -m}^{\infty} b_nz^n$ mit $b_n = 0_K$ für alle $n < -m$ und $b_{-m} = \frac{1}{a_m}.$ Sei $l \in \N_0$ und $b_{-m},..., b_{-m+l-1}$ bereits definiert.  Wir wählen $b_{-m+l} = - \frac{1}{a_m} \sum_{n= -m}^{-m+l-1} b_na_{l-n}$. Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
 \begin{eqnarray*}
-(gf)(w) &=& \sum_{n = i-i}^{\infty}\sum_{k+l=n}^{}\left(a_k \cdot b_l\right) z^n  \\
-&=& \sum_{n = -i}^{-i + w}g(n)f(w-n).
+b_la_l &=& \sum_{n = m-m}^{\infty}\sum_{k+j=n}^{}\left(a_k \cdot b_j\right) z^n  \\
+&=& \sum_{n = -m}^{-m + l} b_na_{l-n}.
 \end{eqnarray*}  
-Im Fall $w < 0 $ ist die Summe $f(w-n)$ für $ -i \leq n \leq -i+w $ leer. Für $w= 0 $ folgt \\$gf(0) = g(-i)f(i)= 1$. Es bleibt der Fall $w > 0 $ zu  berücksichtigen: 
-\[
-(gf)(w)= \sum_{n = -i}^{-i + w - 1}g(n)f(w-n) + g(-i+w)f(i) = 0.
-\]
-Also ist $gf = 1_K$ und da $K((z))$ ein kommutativer Ring ist, folgt $fg = 1-k$, womit $K((z))$ ein Körper ist.
+Für $l= 0 $ folgt \\$b_0a_0 = b_{-m}a_{m}= 1$. Es bleibt der Fall $l > 0 $ zu  berücksichtigen: 
+\begin{eqnarray*}
+b_la_l &=&
+\sum_{n = -m}^{-m + l - 1}b_na_{l-n} + b_{-m+l}a_m \\
+&=& 0.
+\end{eqnarray*}
+
+Also ist $gf = 1_K$ und da $K((z))$, wie bereits gezeigt, ein kommutativer Ring ist, folgt $fg = 1_K$. Wir können zu jedem Element $f\neq 0$ aus $K((z))$ folglich ein Inverses konstruieren, womit $K((z))$ ein Körper ist.
 }
 %
 %
@@ -348,89 +351,145 @@ Es gilt $K((z)) =$\textup{Quot}$(K[[z]])$.
 %Genauer Beweis nach schotten:
 Betrachte die Abbildung:\\
 \[\Phi: K((z)) \rightarrow \text{ Quot}\left(K[[z]]\right)\]
-\[\sum_{n=m}^{\infty}a_nz^n  \mapsto 
+\begin{eqnarray} \label{eq: isomorphismusQuotientenkörper}
+\sum_{n=m}^{\infty}a_nz^n  \mapsto 
 \begin{cases}
-\lbrack{z^{-m}\sum_{n=m}^{\infty}a_nz^n}, ~{z^{-m}}\rbrack & \text{, falls } m < 0 \\
-\lbrack\sum_{n=m}^{\infty}a_nz^n\rbrack & \text{, falls } m\geq 0
-\end{cases}\]
-Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Wir beschränken unsere Abbildung, um Fallunterscheidungen zu vermeiden auf $z^k :=1$ für alle $k\leq 0$. Sei $m\leq l$:\\
+\frac{{z^{-m}\sum_{n=m}^{\infty}a_nz^n}}{{z^{-m}}} & \text{, falls } m < 0 \\
+\frac{\sum_{n=m}^{\infty}a_nz^n}{1} & \text{, falls } m\geq 0
+\end{cases}
+\end{eqnarray}
+Die Abbildung ist wohldefiniert bezüglich $m$, dem kleinsten Index für den $a_m\neq0$ gilt. Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \leq 0$ existiert ein eindeutiges $g \in K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
+Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunterscheidung nach unserer Definition der Abbildung $\Phi$ nicht explizit durchführen müssen, setzen wir  $z^-k = 1$ in beiden Äquivalenzklassen von \ref{eq: isomorphismusQuotientenkörper} falls $k \geq 0$ ist. Durch diese Vereinfachung müssen wir den unteren Fall nicht gesondert formulieren. Sei $m\leq l$:\\
 \begin{eqnarray*}
-\Phi \left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\\
-&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}, ~{z^{-m}}\rbrack\\
-&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n}, ~{z^{-m}}\rbrack+ \lbrack{z^{-m}\sum_{n=l}^{\infty}a_n z^n},~{z^{-m}}\rbrack \\
-&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack+ \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack \\
+\Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
+&=& \frac{{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}}{{z^{-m}}}\\
+&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-m}\sum_{n=l}^{\infty}a_n z^n}}{{z^{-m}}} \\
+&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-l}\sum_{n=l}^{\infty}a_n z^n}}{{z^{-l}}} \\
 &=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
 \end{eqnarray*}
-Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun zur Multiplikation:
+Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir die Multiplikation. Aufgrund der oben getroffenen Vereinfachung gilt:
 \begin{eqnarray*}
-\Phi \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\\
-&=&\lbrack{z^{-m}\left(\sum_{n=m}^{\infty}a_nz^n\right) \left(\sum_{n=l}^{\infty}b_nz^n\right)},~{z^{-m}}\rbrack \\ 
-&=& \lbrack{\left(z^{-m}\sum_{n=m}^{\infty}a_n z^n\right)\left(z^{-l}\sum_{n=l}^{\infty}b_n z^n\right)},~{z^{-m}z^{-l}}\rbrack  \\
-&=& \lbrack{z^{-m}\sum_{n=m}^{\infty}a_n z^n},~{z^{-m}}\rbrack \cdot \lbrack{z^{-l}\sum_{n=l}^{\infty}a_n z^n},~{z^{-l}}\rbrack\\
+\Phi\left( \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\right)
+&=&\frac{z^{-m-l}\left(\sum_{n=m}^{\infty}a_nz^n\right) \left(\sum_{n=l}^{\infty}b_nz^n\right)}{z^{-m-l}} \\ 
+&=& \frac{\left(z^{-m}\sum_{n=m}^{\infty}a_n z^n\right)\left(z^{-l}\sum_{n=l}^{\infty}b_n z^n\right)}{z^{-m}z^{-l}}  \\
+&=& \frac{z^{-m}\sum_{n=m}^{\infty}a_n z^n}{z^{-m}} \cdot \frac{z^{-l}\sum_{n=l}^{\infty}a_n z^n}{z^{-l}}\\
 &=& \Phi \left(\sum_{n=m}^{\infty} a_nz^n\right) \cdot \Phi\left(\sum_{n=l}^{\infty} b_nz^n \right)
 \end{eqnarray*}
-Der Homomorphismus ist bijektiv, denn das Bild jedes Elements \\$q := \lbrack{\sum_{n=m} a_nz^n},~{\sum_{n=l} b_nz^n}\rbrack$ liegt in $Quot\left(K[[z]]\right)$, für $\sum_{n=l} b_nz^n \neq 0$. Der Kern der Abbildung ist das $0_K$ und da $\Phi$ ein Homomorphismus ist, gilt die Injektivität.\\
-Jede Laurentreihe $ f = \sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = l}^{\infty} c_nz^n $ für $c_0 \neq 0$ gebracht werden. Nach \ref{potenzreihenringEinheit} kann diese Reihe invertiert werden und wir erhalten:
-\[\lbrack{\left(\sum_{n = m}^{\infty} a_nz^n\right)\left( \sum_{n = 0}^{\infty} c_nz^n\right)^{-1}},~{z^l}\rbrack\]
-\[ = \Phi\left(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1}\right)\]
+Der Kern der Abbildung ist das Element $0_K$ und da $\Phi$ ein Homomorphismus ist, gilt die Injektivität.\\
+Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \ in Quot\left(K[[z]]\right)$, mit $\sum_{n=l} b_nz^n \neq 0$. \\
+Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann diese Reihe invertiert werden und wir erhalten
+\begin{eqnarray*}
+q &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \\
+&=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{z^l\sum_{n = 0}^{\infty} c_nz^n } \\
+&=& \frac{\left(\sum_{n = m}^{\infty} a_nz^n\right)\left( \sum_{n = 0}^{\infty} c_nz^n\right)^{-1}}{{z^l}}\\
+&=& \Phi\left(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1}\right).
+\end{eqnarray*}
 %
-Da somit jede Laurentreihe $ f = \sum_{n\in \Z} a_nz^n $ die Gestalt $\lbrack{g},~{z^-m}\rbrack$ für ein $m \in \N$ hat, mit $g\in K[[z]]$ und $m\in\N$, ist $K((z))$ der Quotientenkörper (siehe \ref{quotkoerper}) von $K[[z]]$.
+Wir sehen sofort, dass $(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1} \in K((z))$ ist. Der Homomorphismus ist folglich bijjektiv und die Behauptung ist gezeigt. 
+%Da somit jede Laurentreihe $ f = \sum_{n\in \Z} a_nz^n $ die Gestalt $\lbrack{g},~{z^-m}\rbrack$ für ein $m \in \N$ hat, mit $g\in K[[z]]$ und $m\in\N$, ist $K((z))$ der Quotientenkörper (siehe \ref{quotkoerper}) von $K[[z]]$.
 }
 % Genauer Beweis hierzu: http://www.mathematik.uni-muenchen.de/~schotten/FT/loesungsskizzen/blatt-2-lsg.pdf
 %
 %
-Für $K((z))$ gilt, dass der Körper nur Reihen mit Hauptteilen aus endlichen vielen Summanden enthält. $K((z))$ entspricht, wie in \ref{quot} gezeigt, dem Quotientenkörper des Ringes der formalen Potenzreihen.  
-Jede Potenzreihe $\sum_{n=0}^{\infty} a_nz^n \text{ mit } a_0\neq0$ ist invertierbar in $K[[z]]$ (siehe \ref{potenzreihenringEinheit}). In jedem Quotient $\frac{\sum_{n=0}^{\infty}  a_nz^n}{\sum_{m=0}^\infty b_mz^m}$ kann aufgrund dieser Eigenschaft alles, bis auf eine Potenz von $z$, aus dem Nenner gekürzt werden. Da  $\sum_{n \ge k}^{\infty} a_nz^n =z^k \sum_{n \ge 0} a_{n+k}z^n$ ist, enthält $K((z))$ nur Reihen, deren Hauptteil nur endlich viele negative Summanden hat. \\
+
+%Für $K((z))$ gilt, dass der Körper nur Reihen mit Hauptteilen aus endlichen vielen Summanden enthält. $K((z))$ entspricht, wie in \ref{quot} gezeigt, dem Quotientenkörper des Ringes der formalen Potenzreihen.  
+%Jede Potenzreihe $\sum_{n=0}^{\infty} a_nz^n \text{ mit } a_0\neq0$ ist invertierbar in $K[[z]]$ (siehe \ref{potenzreihenringEinheit}). In jedem Quotient $\frac{\sum_{n=0}^{\infty}  a_nz^n}{\sum_{m=0}^\infty b_mz^m}$ kann aufgrund dieser Eigenschaft alles, bis auf eine Potenz von $z$, aus dem Nenner gekürzt werden. Da  $\sum_{n \ge k}^{\infty} a_nz^n =z^k \sum_{n \ge 0} a_{n+k}z^n$ ist, enthält $K((z))$ nur Reihen, deren Hauptteil nur endlich viele negative Summanden hat. \\
 %
 Die formalen Laurentreihen bilden einen Oberring der Potenzreihen und stellen als Körper eine Körpererweiterung von $K$ um das transzendente Element $z$ dar.  %\footnote{http://www.mathematik.uni-muenchen.de/~schotten/MIA/Muster/4_4.pdf}
 %
 %
+%
+%
+% 
+%
+%
+%
+Im Folgenden beschränken wir uns aufgrund der Konvergenzbetrachtung wieder auf den Körper $\C$. 
+%
+%Nach Kaiser Skript
+\begin{defn}
+Eine Laurentreihe $f = \sum_{n=-k}^\infty a_n z^n$  konvergiert in $z_0 \in \C$, wenn deren Haupt- und Nebenteil in $z_0$ konvergieren.
+\end{defn}
+%
+%
+%TODO: Dazu könnte man Abbildungen reinpacken, will man das?
+\begin{bem}
+Ist $\frac{1}{r} \in \lbrack 0,\infty\rbrack$ der Konvergenzradius von $\sum_{n=1}^{\infty} a_{-n}\zeta^n$ und $R\in \lbrack 0,\infty\rbrack$ der Konvergenzradius des Nebenteils $\sum_{n=0}^{\infty} a_{n}z^n$, so konvergiert die Laurentreihe $\sum_{n=-k}^\infty a_n z^n$ für alle $z$ mit $r \le |z| \le R$.
+\end{bem} %nach \cite{janich99}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
 \begin{satz}
-Der Quotientenkörper von  $\C\langle z\rangle$ ist isomorph zum Körper der konvergenten Laurentreihen $\C_L \langle z \rangle$.
+Der Quotientenkörper von  $\C\lbrace z\rbrace$ ist isomorph zum Körper der konvergenten Laurentreihen $\C_L \lbrace z \rbrace$.
 \end{satz}
-\beweis{ Wie in Beweis \ref{inverse Potenzreihe} konstruieren wir das formale Inverse zu einer formalen Potenzreihe $f = \sum_{n= 0}^{\infty} a_nz^n \in \C\langle z\rangle $ mit $a_0 \neq 0$. Wir müssen zeigen, dass das Inverse konvergiert. Nach Voraussetzung konvergiert $f$ und wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N}$ in $f$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N$ mit $a \in \C$. \\
-Betrachte $f(z_0) = \sum_{n = -k}^{\infty} a_n {z_0}^n $ eine konvergente Laurentreihe mit $|z_0| > 0$. Da $f(z_0)$ konvergiert, ist die Folge ${(a_n|z_0|)}_{n\in\N} $ beschränkt und für die Potenzreihe gilt: \\
-\[\overline{f}(\omega) := \sum_{n=0}^{\infty}a_n{z_0}^n {\frac{z}{z_0}}^n = \sum_{n=0}^{\infty}a_nz^n =  f(z)\text{ mit }\omega:= \frac{z}{z_0}\]
-Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie in \ref{inverse Potenzreihe}. Es gilt:
+\beweis{Wir führen den Beweis in zwei Schritten.\\ \\
+\textbf{Zwischenbehauptung: }
+In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar für die $a_0 \neq 0$ gilt.
+
+\beweis{Zunächst konstruieren wir formal die Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
+Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben. Daher können wir ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt. \\
+Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert.  \\
+Daraus folgt die Beschränktheit der Folge ${(a_n|z_0|)}_{n\in\N_0} $. Da $g$ konvergiert, ist die Folge  beschränkt und für die inverse Potenzreihe $\overline{g} = \sum_{n=0}^{\infty}a_n\left(\frac{z}{z_0}\right)^n$  gilt: \\
+\[\overline{g} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{z}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_nz^n =  f \text{ mit }\omega:= \frac{z}{z_0}\]
+Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
-Indem wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$ geben wir eine positive untere Schranke des Konvergenzradius an und zeigen somit, das Inverse konvergiert. Wir beweisen durch Induktion, es existiert ein $C > 1$ mit $C \in \R $ sodass:  
+Wir zeigen, dass |$b_n$| beschränkt ist durch ein Vielfaches von $a^n$. Deswegen können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
 \[
 |b_n| \le (aC)^n
 \]
-Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. Gelte die Abschätzung für $b_n$. Wähle $ C:= \frac{a}{a-1}$. Dann erhalten wir: \\
+ist. 
+Nach Konstruktion des Inversen \ref{inverse Potenzreihe} ist die Ungleichung für $b_0$ erfüllt. Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Wir erhalten folgende Abschätzung für den Koeffizienten $b_{n+1}$:\\
 \[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
-\[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}.\]
-Wie in \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren ist noch zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent, es genügt, den Nebenteil betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
-Nun definieren wir wie in \ref{quot} die Abbildung 
-\[\Phi:\C_L\langle z \rangle \rightarrow Quot(\C \langle z \rangle ) \]
-\[\sum_{n= -m}^{\infty} a_n z^n \mapsto  \begin{cases}
-  \lbrack \left(z^{m} \sum_{n= -m}^{\infty}a_n z^n,~ {z^m} \right)\rbrack  & \text{wenn }m < 0,\\
-  \lbrack \sum_{n= -m}^{\infty} a_n z^n \rbrack & \text{wenn } m > 0.
-\end{cases}.\]
-Die Abbildung $\Phi$ ist, wie in \ref{quot} bereits gezeigt, ein Isomorphismus und die Behauptung ist bewiesen. 
+\[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
 }
+Wie in Satz \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent, es genügt, den Nebenteil betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+Nun definieren wir wie in \ref{quot} die Abbildung 
+\[\Phi:\C_L\lbrace z \rbrace \rightarrow \textup{Quot}(\C \lbrace z \rbrace ) \]
+\begin{eqnarray} 
+\sum_{n=m}^{\infty}a_nz^n  \mapsto 
+\begin{cases}
+\frac{{z^{-m}\sum_{n=m}^{\infty}a_nz^n}}{{z^{-m}}} & \text{, falls } m < 0 \\
+\frac{\sum_{n=m}^{\infty}a_nz^n}{1} & \text{, falls } m\geq 0
+\end{cases}
+\end{eqnarray}
+Der Satz \ref{quot} liefert die Isomorphie der Abbildung $\Phi$. Damit ist die Behauptung bewiesen.}
 %
 %
 %
 Nun versuchen wir auf dem Körper der Laurentreihen eine Bewertung finden.
-Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus (nach B3' \ref{bewKoerper}). Betrachte min$\lbrace\left(\text{supp}(f)\right)\rbrace$, eindeutig bestimmt durch den kleinsten Index $n_0$ der Laurentreihe, ab dem der Koeffizient $a_{n_0} \neq 0 $ ist. Die Menge all dieser Elemente bildet eine angeordnete abelsche Gruppe $\Psi $ und es gibt einen Isomorphismus von $\psi: \text{ }\Psi \rightarrow \Z$. \\
-%
+Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus (nach B3' \ref{bewKoerper}).
+% Betrachte min$\lbrace\left(\text{supp}(f)\right)\rbrace$, eindeutig bestimmt durch den kleinsten Index $n_0$ der Laurentreihe, ab dem der Koeffizient $a_{n_0} \neq 0 $ ist. Die Menge all dieser Elemente bildet eine angeordnete abelsche Gruppe $\Psi $ und es gibt einen Isomorphismus von $\psi: \text{ }\Psi \rightarrow \Z$. \\
+%%
 %
 %
 \begin{satz} \label{LaurentreiheBewertung}
-Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= min\left(\text{supp}(f)\right)$ ist eine diskrete Bewertung.
+Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung.
 \end{satz}
 %
-\beweis{Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. Nach \ref{bewKoerper} sind noch (B1'-B3') nachzuweisen mit der angeordneten abelschen Gruppe ($\Z \cup \lbrace \infty\rbrace$, +) als Bildmenge. 
+\beweis{
+%Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. 
+Nach Definition \ref{bewKoerper} sind noch (B1'-B3') nachzuweisen mit ($\Z \cup \lbrace \infty\rbrace$, +) als Bildmenge. 
 \begin{enumerate}
 \item [zu B1']: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
-\item[zu B2']: Sei $f(z)=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g(z)=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt: v(f) + v(g) = $n_0 + m_0$. \\
-\[v(fg) = v( \sum_{n \in \Z}\sum_{n= m+k}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g)\], wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$. Betrachte $ n < n_0 + m_0 $. Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch das Produkt $a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0$ und $b_{m_0} \neq 0.$ Sei n = $n_0$ + $m_0$. Das Produkt $ a_{n_0}b_{m_0}$ ist ungleich Null und daher folgt: v(fg) = $n_0+m_0 = v(f) + v(g). $
-\item[zu B3']: Für  $v(f+g)$ gilt, wenn $f, g$ wie oben definiert: \\
-\[v\left(f+g\right) = \]
-\[v\left( \sum_{n = \text{min}\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) = \text{ min }\lbrace n_0,m_0 \rbrace \leqslant  \text{ max } \lbrace n_0, m_0\rbrace \stackrel{\mathrm{def}}= \text{ max }\lbrace v(f), v(g)\rbrace.\]
+\item[zu B2']: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
+\[v(fg) = v( \sum_{n \in \Z}\sum_{n= m+k}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$. Betrachte $ n < n_0 + m_0 $. 
+%Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
+Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch das Produkt $a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0$ und $b_{m_0} \neq 0.$ Sei n = $n_0$ + $m_0$. Das Produkt $ a_{n_0}b_{m_0}$ ist ungleich Null und daher folgt: v(fg) = $n_0+m_0 = v(f) + v(g). $
+\item[zu B3']: Wenn $f, g$ wie oben definiert sind, erhalten wir für $v(f+g)$ die folgende Ungleichung: 
+\begin{eqnarray*}
+v\left(f+g\right) &=&  v\left( \sum_{n = \text{min}\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) \\
+&=& \min\lbrace n_0,m_0 \rbrace \\ 
+&\stackrel{\mathrm{def}}=& \min\lbrace v(f), v(g)\rbrace
+\end{eqnarray*}
 \end{enumerate}
 } 
 %
@@ -439,7 +498,7 @@ Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definie
 %\end{satz}
 %\beweis{Betrachte die Cauchy-Folge ${(\sum_{n= n_i}^{\infty}a_{n,i}z^n)}_{i\in\N}$. Die Menge der Startindizies $n_i$ ist nach unten beschränkt, und kann nicht beliebig klein werden. Damit ist der Träger  }%TODO: siehe forum matheraum: beweisen mit cauchyfolge
 %Der Träger einer formalen Laurentreihe $f(z)=sum{n = n_0}{\infty}a_n z^n$ konzentriert sich auf die Menge $ \mathtt{T}  := supp(f) = \lbrace n_0, n_0 + 1, n_0 +2, ..., deg(f)\rbrace \subseteq \Z $.
-Wie wir in \ref{quot} gezeigt haben, ist der Körper der Laurentreihen eine Obermenge des Rings der Potenzreihen $K[[z]]$. Nachdem wir auf $K((z))$ bereits eine Bewertung definiert haben, weisen wir nach, dass es sich auch bei $K[[z]]$ um einen diskreten Bewertungsring \ref{bewring} handelt und wir darauf eine Bewertung definieren können. 
+Wie wir in \ref{quot} gezeigt haben, ist der Körper der Laurentreihen eine Obermenge des Rings der Potenzreihen $K[[z]]$. Nachdem wir auf $K((z))$ bereits eine Bewertung definiert haben, weisen wir nach, dass es sich auch bei $K[[z]]$ um einen diskreten Bewertungsring \ref{bewring} handelt. 
 %Wie in \ref{bewring} gezeigt, ist $K[[z]]$ ein diskreter Bewertungsring und der kleinste vorkommende Exponent eines Monoms liefert die Bewertung einer Potenzreihe. Der Quotientenkörper eines diskreten Bewertungsrings besitzt ebenso eine Bewertung \ref{quotbewring}. 
 
 %
@@ -447,20 +506,22 @@ Wie wir in \ref{quot} gezeigt haben, ist der Körper der Laurentreihen eine Ober
 $K[[z]] $ ist ein diskreter Bewertungsring. %\footnote{https://www.mathematik.uni-osnabrueck.de/fileadmin/mathematik/downloads/2012AlgKurven.pdf}
 \end{satz}
 %
-\beweis{Wie im vorherigen Satz gezeigt, existiert auf dem Körper der Laurentreihen eine diskrete Bewertung. Wie wir in \ref{quot} bewiesen haben, ist der Quotientenkörper von $K[[z]]$ dieser Körper der Laurentreihen. Nach Definition des diskreten Bewertungsring \ref{bewring} gilt der Satz. 
-Nach \ref{potenzreihenringEinheit} folgt, $K[[z]]$ besitzt genau ein maximales Ideal nämlich $\mathfrak{m} = (z)$. Für eine Potenzreihe $P$, mit $P \notin K[[z]]^* $ gilt $a_0 \neq 0$. Somit lässt sich jede derartige Potenzreihe schreiben als $P=T \widetilde{P}$, wobei  $\widetilde{P}$ die umindizierte Potenzreihe bezeichnet.\\
-Die Nullteilerfreiheit folgt wie in \ref{intring} ausführlicher gezeigt, denn: 
-Für die Produktreihe $FG$, wobei $F,G \in K[[z]]$ und $F, G$ von Null verschieden, gilt, dass ab den Indizes i, j gilt $a_i,~ b_j\neq 0$ und somit $c_n := a_ib_j \neq 0$. Der Hauptidealring $K[[z]]$ ist noethersch, denn jedes Ideal ist erzeugt von $z^j$, wobei j der kleinste Index ist, ab dem die Koeffizienten $c_n$ der Potenzreihen ungleich 0 in dem Ideal sind. Für das maximale Ideal muss nämlich gelten, dass es von einem Element erzeugt wird, für das gilt $a_0 = 0$.
-Andernfalls wäre die entsprechende Potenzreihe eine Einheit und würde somit ganz $K[[z]]$ erzeugen. } 
+\beweis{Wie im vorherigen Satz gezeigt, existiert auf dem Körper der Laurentreihen eine diskrete Bewertung. Wie wir in \ref{quot} bewiesen haben, ist der Quotientenkörper von $K[[z]]$ dieser Körper der Laurentreihen. 
+Nach \ref{potenzreihenringEinheit} folgt, $K[[z]]$ besitzt genau ein maximales Ideal nämlich $\mathfrak{m} = (z)$. Für eine Potenzreihe $f$ die in $K[[z]]$ keine Einheit ist nimmt der konstante Term den Wert $0$ an und wir erhalten, dass $a_0 = 0$ ist. Somit lässt sich jede derartige Potenzreihe schreiben als $f=z \widetilde{f}$, wobei  $\widetilde{f}$ die umindizierte Potenzreihe bezeichnet.\\
+Die Nullteilerfreiheit folgt wie in \ref{intring} ausführlicher gezeigt. Sei $0 \neq f,g \in K[[z]]$ und wir definieren der Einfachheit halber $c_n := a_ib_j \neq 0$.  
+Für die Produktreihe $fg$ erhalten wir, ab den Indizes i, j, dass $a_i,~ b_j\neq 0$ ist. Der Hauptidealring $K[[z]]$ ist noethersch %definieren?
+, denn jedes Ideal ist erzeugt von $z^j$, wobei $j$ der kleinste Index ist, ab dem die Koeffizienten $c_n$ der Potenzreihen ungleich 0 in dem Ideal sind. Für das maximale Ideal muss gelten, dass es von einem Element erzeugt wird, für das gilt $a_0 = 0$.
+Andernfalls wäre die entsprechende Potenzreihe eine Einheit und würde somit ganz $K[[z]]$ erzeugen.
+Nach Definition des diskreten Bewertungsring \ref{bewertungsring} gilt die Behauptung.  } 
  %
  %
 Damit folgt, dass $K[[z]]$ isomorph zu einem, wie in Punkt \ref{chap2} beschriebenen Bewertungsring $ A:= {0} \cup \{x \in K * | v(x) \geqslant 0\}$ ist.  \\
 Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z)^3 \subset (z)^4 \subset ... $. \\
 
 
-\begin{lemma}\label{quotbewring}
-Ist $R$ ein diskreter Bewertungsring, so ist Quot($R$) ein diskret bewerteter Körper mit der Bewertung $v(a/b)=v(a)-v(b)$. 
-\end{lemma}
+%\begin{lemma}\label{quotbewring}
+%Ist $R$ ein diskreter Bewertungsring, so ist Quot($R$) ein diskret bewerteter Körper mit der Bewertung $v(a/b)=v(a)-v(b)$. 
+%\end{lemma}
 
 
 
@@ -555,7 +616,7 @@ Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} .
 %
 \subsection{Der Ring der formalen Potenzreihen} 
 Auf der Menge der formalen Potenzreihen auf der additiven, angeordneten abelschen $\Gamma$ über dem Körper $K$, $K[[z^\Gamma]]$ haben wir nun die Addition und Multiplikation definiert. In der verwendeten Literatur (\cite{priesscrampe83}, \cite{fuchs66}) findet sich die multiplikative Schreibweise der angeordneten Gruppe $\Gamma$, da diese eine noch allgemeinere Definition der Multiplikation zum Beispiel mithilfe von Faktorsystemen ermöglicht. Auf Basis dieser Definition konnte B.H. Neumann 1949 Schiefkörper von formalen Potenzreihen konstruieren. Diese lieferten wichtige Beispiele zur Einordnung der projektiven Ebenen.
-Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem anfangs beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Diese entstehen für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ respektive $\N$ handelt. 
+Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem anfangs beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Diese entstehen für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ respektive $\N_0$ handelt. 
 Wir zeigen zunächst, dass $K[[z^\Gamma]]$ ein Ring über K ist.
 %Sei supp(F)supp(G) :=$ \lbrace a_1, a_2 \in G | \Phi_{a_1} \Psi_{a_2} \neq 0\rbrace.$ Nach der Definition des Trägers folgt, dass die Menge angeordnet ist, denn als Untermenge von $\Gamma$ überträgt sich die Anordnung. Wir müssen zeigen, dass jede Teilmenge von supp(FG) ein kleinstes Element besitzt nach \ref{wohlgeordn}. Nach Definition der Multiplikation in unserem Körper K gilt: \\ 
 %
