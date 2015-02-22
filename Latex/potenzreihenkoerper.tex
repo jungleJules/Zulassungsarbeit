@@ -715,11 +715,11 @@ In diesem Abschnitt definieren wir die Verknüpfungen auf $K((z^{G}))$. Wir gehe
 %
 %
 \begin{defn}\label{AdditionFormalerPotenzreihen}
-Seien $f, g \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } G = \sum_{g \in G}^{} b_g z^g$, wobei $a_g, b_g \in K)$ und supp($f$), supp($g$) wohlgeordnet. \\
+Seien $f, g \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$, wobei $a_g, b_g \in K)$ und supp($f$), supp($g$) wohlgeordnet. \\
 Die Summe zweier formaler Potenzreihen $f, g$
 %
 \begin{eqnarray*}
-f + g &=& \sum_{g \in g}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g \\
+f + h &=& \sum_{g \in g}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g \\
 &=& \sum_{g \in G}^{}\left(a_g + b_g\right)z^g 
 \end{eqnarray*}
 %
@@ -731,24 +731,51 @@ ist gegeben durch die Addition der Koeffizientenfolgen.
 %
 %
 \begin{satz}\label{wohldefiniertheitAddition}
-Die in \ref{AdditionFormalerPotenzreihen} definierte Addition zweier formaler Potenzreihen $f, g \in K\left(\left(z^{G}\right)\right)$ ist wohldefiniert und die Summe $f +g$ ist wieder eine formale Potenzreihe.
+Die in \ref{AdditionFormalerPotenzreihen} definierte Addition zweier formaler Potenzreihen $f, g \in K\left(\left(z^{G}\right)\right)$ ist wohldefiniert und die Summe $f +h$ ist wieder eine formale Potenzreihe.
 \end{satz}
-\beweis{ Wir zeigen, dass der Träger der Summe $f + g$ wohlgeordnet ist.
-Es gilt offensichtlich supp$(f+ g)\subseteq $ supp$(f)\cup$ supp$(g)$ ist. Nach Lemma \ref{wohlgeordnvereinigung} ist die Vereinigung zweier wohlgeordneter Mengen wieder wohlgeordnet. Die Definition der Wohlordnung besagt, dass jede Teilmenge einer wohlgeordneten Menge wiederum wohlgeordnet ist. \\
-Nach Voraussetzung sind $ \text{supp}(f) = \lbrace g \in G \vert a_g 0\neq 0\rbrace \text{ und } \text{supp}(f) = \lbrace g \in G \vert a_g 0\neq 0\rbrace\ $  wohlgeordnet. Das kleinste Element von supp$(f+g)$ existiert und es gilt 
-\[\min\left( \text{supp}\left(f+ g\right)\right) = \text{min}\lbrace \text{min}\left( \text{supp}(f)\right), \text{min}\left( \text{supp}(g)\right) \rbrace.\]
+\beweis{ Wir zeigen, dass der Träger der Summe $f + h$ wohlgeordnet ist.
+Es gilt offensichtlich supp$(f+ h)\subseteq $ supp$(f)\cup$ supp$(h)$. Nach Lemma \ref{wohlgeordnvereinigung} ist die Vereinigung zweier wohlgeordneter Mengen wieder wohlgeordnet. Die Definition der Wohlordnung besagt, dass jede Teilmenge einer wohlgeordneten Menge wiederum wohlgeordnet ist. \\
+Nach Voraussetzung sind $ \text{supp}(f) = \lbrace g \in G \vert a_g 0\neq 0\rbrace \text{ und } \text{supp}(h) = \lbrace g \in G \vert b_g 0\neq 0\rbrace\ $  wohlgeordnet. Das kleinste Element von supp$(f+h)$ existiert und es gilt 
+\[\min\left( \text{supp}\left(f+ h\right)\right) = \text{min}\lbrace \text{min}\left( \text{supp}(f)\right), \text{min}\left( \text{supp}(h)\right) \rbrace.\]
 Somit ist $f + g$ eine formale Potenzreihe. }
 %
 %
 %
 \begin{defn}\label{MultiplikationMitKörperelement}
-Sei $\lambda \in K$ und $f \in $ ist das Produkt mit einem Körperelement definiert durch: \[\lambda F = \lambda (\sum_{x \in \Gamma}^{}a_x z^x) = \sum_{x \in \Gamma}^{}\lambda a_x z^x \in K\left(\left(z^{G}\right)\right)]].\]
+Sei $\lambda \in K$ und $f \in K\left(\left(z^{G}\right)\right)$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch: \[\lambda f = \lambda \left(\sum_{g \in g}^{} a_g z^g\right) = \sum_{g \in g}^{} \lambda a_g z^g \in K\left(\left(z^{G}\right)\right)\]
 \end{defn}
   
-Bevor wir die Multiplikation der Koeffizienten zweier formaler Potenzreihen betrachten, schauen wir uns zunächst an, was bei der multiplikativen Verknüpfung mit den Exponenten der Variablen $z$ geschieht. Sei $F,~ G \in K\left(\left(z^{G}\right)\right)]]$ mit $ F = \sum_{g \in \Gamma}^{} \Phi_g z^g \text{ und } G = \sum_{h \in \Gamma}^{} \Psi_h z^h $. \\
-Alternativ lassen sich unsere Reihen folgendermaßen schreiben: 
-\[ F\cdot G = \left(\Phi_{g_1}z^{g_1} + \Phi_{g_2}z^{g_2} + ... + \Phi_{g_p}z^{g_p} + ...\right) \cdot \left( \Psi_{h_1}z^{h_1} + \Psi_{h_2}z^{h_2} + ... + \Psi_{h_p}z^{h_p} + ...\right)\]
-Betrachten wir zunächst das Produkt einzelner Monome: $\Phi_gz^g  \Psi_hz^h = \Phi_g  \Psi_h z^{g+h} $. Für die Variable z gilt nach den Potenzgesetzen $z^{g_1} \cdot z^{h_1} = z^{g_1 + h_1}$. Die distributive Fortsetzung führt zur Definition der Multiplikation in $K\left(\left(z^{G}\right)\right)$. Wir erhalten das Produkt als Summe über der Summe des Produkts der einzelnen Koeffizienten: 
+Bevor wir die Multiplikation zweier formaler Potenzreihen definieren können, benötigen wir etwas Vorarbeit.\\
+Sei $f,~ h \in K\left(\left(z^{G}\right)\right)$ mit $ f = \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \text{ und } h = \sum_{g_2 \in G}^{} b_{g_2} z^{g_2} $. 
+%
+%
+%
+%
+%
+%
+Wir betrachten zunächst die multiplikative Verknüpfung einzelner Monome. 
+\begin{defn}
+Seien $a_{g_1} z^{g_1}, b_{g_2} z^{g_2} \in K\left(\left(z^G\right)\right)$. Das Produkt der Monome ist nach den Potenzgesetzen definiert als 
+\[a_{g_1} z^{g_1} \cdot b_{g_2}z^{g_2} = a_{g_1} b_{g_2} z^{g_1 + g_2}\]
+\end{defn}
+%
+%
+%
+%Betrachten wir zunächst das Produkt einzelner Monome: $\Phi_gz^g  \Psi_hz^h = \Phi_g  \Psi_h z^{g+h} $. Für die Unbestimmte $z$ gilt nach den Potenzgesetzen $z^{g_1} \cdot z^{g_1} = z^{g_1 + h_1}$. 
+%
+%
+%
+%
+%
+%
+Die distributive Fortsetzung der Multiplikation von Monomen führt zur Definition der Multiplikation in $K\left(\left(z^{G}\right)\right)$. Wir erhalten das Produkt als Summe über der Summe des Produkts der einzelnen Koeffizienten.
+%
+%
+%
+\begin{defn}\label{MultiplikationformalePotenzreihen}
+
+
+\end{defn}
 \[ \text{Sei } F = \sum_{a \in \Gamma}^{} \Phi_a z^a \text{ und } G = \sum_{a \in \Gamma}^{} \Psi_a z^a \text{ wobei } \Phi_a, \Psi_a \in K. \]
 \begin{equation}\label{eq: multPotenzreihenkoerper}  
 \cdot: H:= F \cdot G = \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}z^a.  
@@ -776,7 +803,7 @@ Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur au
 \[\Lambda_a = \Phi_{{a_1}_1}\Psi_{{a_2}_1} + \Phi_{{a_1}_2}\Psi_{{a_2}_2} + ... + \Phi_{{a_1}_n}\Psi_{{a_2}_n}\]
 $\Lambda_a$ sei null, wenn es für $a$ keine Darstellung als Summe der Elemente der Träger von F und G gibt.\\
 Das Produkt zweier formaler Potenzreihen auf $\Gamma$ über K ist somit wohldefiniert; der Träger der erhaltenen formalen Potenzreihe wohlgeordnet und der entstandene Koeffizient $\Lambda$ liegt, als endliche Summe des Produkts zweier Körperelemente $\Phi$ und $\Psi$, ebenfalls im Körper $K$. \\
-Damit ist $K\lbrack\lbrack z^{\Gamma}\rbrack\rbrack$ bezüglich der definierten Addition und Multiplikation abgeschlossen. \cite[Seite 601ff]{hahn07}, \cite[S. 210- 213]{neumann49}.
+Damit ist $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation abgeschlossen. \cite[Seite 601ff]{hahn07}, \cite[S. 210- 213]{neumann49}.
 %
 \begin{bsp}
 Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ wohlgeordnet ist.
@@ -843,24 +870,24 @@ Wir zeigen zunächst, dass die unendliche Summe des Produkts aus einem beliebige
 \[\overline{F} = \sum_{n=0}^{\infty}\lambda_n\cdot F^n, \text{ mit } F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0, \lambda_n \in K^*. \]
 Wieso $\lambda$ eine Einheit und der kleinste Exponent der Unbestimmten $z$, für das der zugehörige Koeffizient ungleich null ist, positiv sein muss, klären wir im Folgenden. Die Potenzreihe $\overline{F}$ kann umgeschrieben werden:
 \[\sum_{n=0}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 F^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n.\] 
-Diese Darstellung erinnert für $\lambda_0 = e$, wobei $e$ das neutrale Element der angeordneten abelschen Gruppe $\Gamma$ ist, an die geometrische Reihe. Jedes Element $G \in K\left(\left(z^{G}\right)\right)$ besitzt eine äquivalente Darstellung durch das Vielfache der Summe des neutralen Gruppenelements und einer formalen Potenzreihe deren Träger positiv ist. Denn für jede formale Potenzreihe $G \in K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ mit $G:= \sum_{\gamma \in \Gamma}^{\infty}\Psi_\gamma z^\gamma$ ist supp($G$) wohlgeordnet und es existiert damit ein kleinstes Element $g\in G$ mit $g=$min(supp(G)). Da $\Gamma$ eine angeordnete abelsche Gruppe ist und damit für jedes Element ein additives Inverses existiert, lässt sich $G$ folgendermaßen schreiben
+Diese Darstellung erinnert für $\lambda_0 = e$, wobei $e$ das neutrale Element der angeordneten abelschen Gruppe $\Gamma$ ist, an die geometrische Reihe. Jedes Element $G \in K\left(\left(z^{G}\right)\right)$ besitzt eine äquivalente Darstellung durch das Vielfache der Summe des neutralen Gruppenelements und einer formalen Potenzreihe deren Träger positiv ist. Denn für jede formale Potenzreihe $G \in K\left(\left(z^{G}\right)\right)$ mit $G:= \sum_{\gamma \in \Gamma}^{\infty}\Psi_\gamma z^\gamma$ ist supp($G$) wohlgeordnet und es existiert damit ein kleinstes Element $g\in G$ mit $g=$min(supp(G)). Da $\Gamma$ eine angeordnete abelsche Gruppe ist und damit für jedes Element ein additives Inverses existiert, lässt sich $G$ folgendermaßen schreiben
 \[G= z^g ~\sum_{\gamma \in \Gamma} \Psi_{\gamma} z^{\gamma-g}\]
 \[= z^g \left( e \Psi_g + ~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \Psi_{\gamma} z^{\gamma-g}\right) = z^g ~ \Psi_g \left(e + ~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \frac{\Psi_{\gamma}}{{\Psi_g}^{-1}} z^{\gamma-g}\right)\]
 , wobei supp($~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \frac{\Psi_{\gamma}}{{\Psi_g}^{-1}} z^{\gamma-g}) \ge 0$ ist.
 Das Inverse zu $b_g$ existiert, da der Koeffizient im Körper $K$ liegt und da für $g$ als Minimum des Trägers von $G$ gelten muss, $\Psi_g \neq 0$. 
-Nach dieser Argumentation ist klar ersichtlich, dass sich jede beliebige formale Potenzreihe $G$ aus $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ für $\lambda \in K, ~g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0$ darstellen lässt.
+Nach dieser Argumentation ist klar ersichtlich, dass sich jede beliebige formale Potenzreihe $G$ aus $K\left(\left(z^{G}\right)\right)$ für $\lambda \in K, ~g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0$ darstellen lässt.
 \[G = \lambda\cdot z^g\cdot \left(e + F\right)\] 
 
 Wir assozieren jetzt mit jedem Element $F := \sum_{a \in \Gamma} \Phi_a z^a$ des formalen Potenzreihenrings ein Symbol $e+ F$ und betrachten die Menge $\Upsilon$ aller $\mathfrak{F} = e + F$ mit $e$ als neutrales Element von $\Gamma$, $F \in K\left(\left(z^{G}\right)\right)$ und $\text{min}\left(\text{supp}\left(F\right)\right) > 0$. Diese Menge $\Upsilon$ ist eine Gruppe bezüglich der folgenden Verknüpfung \[\left(e+F\right)\left(e+G\right) = e + \left(F+G+FG\right)\]
 , wobei die Operationen zwischen den Ringelementen der Addition und Multiplikation in $K\left(\left(z^{G}\right)\right)$ entsprechen. Die Abgeschlossenheit bezüglich der Multiplikation ist aus deren Definition klar ersichtlich. Das neutrale Element von $\Upsilon$ ist $e$. Mithilfe der geometrischen Reihe konstruieren wir das Inverse zu jedem Gruppenelement $\mathfrak{F}$ und zeigen in \ref{unendlicheSummeinPotenzreihenring}, dass dieses wohldefiniert ist und ein Element des Potenzreihenrings. Nach Definition der geometrischen Reihe gilt:
 \[\frac{1}{e - F} = \sum_{n=0}^{\infty}F^n = e + \sum_{n=1}^{\infty}F^n\] oder in äquivalenter Darstellung:
 \[\frac{1}{e + F} = = e + \sum_{n=1}^{\infty}(-F)^n.\]
-Man sieht sofort, dass für jedes Gruppenelement $e+ F$ die Reihe $e + \sum_{n=1}^{\infty}(-F)^n$ invers ist. Wir müssen allerdings noch zeigen, dass $\sum_{n=1}^{\infty}(-F)^n$ im formalen Potenzreihenring $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ liegt.
+Man sieht sofort, dass für jedes Gruppenelement $e+ F$ die Reihe $e + \sum_{n=1}^{\infty}(-F)^n$ invers ist. Wir müssen allerdings noch zeigen, dass $\sum_{n=1}^{\infty}(-F)^n$ im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$ liegt.
 %
 %
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
-Sei $F\in K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ mit $\text{min}\left(\text{supp}\left(F\right)\right) > 0$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
-\[\Xi = \sum_{n=1}^{\infty}\lambda_nF^n\] in $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ und ist wohldefiniert.
+Sei $F\in K\left(\left(z^{G}\right)\right)$ mit $\text{min}\left(\text{supp}\left(F\right)\right) > 0$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
+\[\Xi = \sum_{n=1}^{\infty}\lambda_nF^n\] in $K\left(\left(z^{G}\right)\right)$ und ist wohldefiniert.
 \end{lemma}
 \beweis{Das Element liegt im Potenzreihenring, wenn der die Vereinigung der Träger supp($F^n$) wohlgeordnet ist in der Anordnung von G und es für jedes Element des Trägers $a \in $ supp($F$)nur endliche viele ganze Zahlen n gibt, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
 Die erste Bedingung gilt als erfüllt wenn es keine unendlich abfallende Folge gibt
@@ -883,8 +910,8 @@ Der erste Teil des Lemmas ist bewiesen. Wir nehmen nun an es existieren für jed
 da die Vereinigung der Träger supp($F^n$) wohlgeordnet ist existiert ein kleinstes Element $a$ der oben definierten Form. Da supp($F^n$) wohlgeordnet ist, enthält die Folge $\left({a_i}_1\right)_{i\in \N}$ nach \ref{unendlicheFolgeEigenschaften} eine nichtabnehmende unendliche Teilfolge, die wir gleich indizieren:
 \[{a_1}_1 \le {a_i}_1 \le ... \le {a_i}_1 \le ...\] und wir nehmen deshalb an, dass $\left({a_i}_1\right)_{i\in \N}$ nicht wachsend ist. Damit muss die durch $\left(a_i\right)' = -\left({a_i}_1\right) + a = {a_i}_2 + ... + {{a_i}_n}_i,~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant sein. Es gibt also ein $j \in \N$ mit $\left(a_{j+m}\right)' = \left(a_j\right)' = a'$ für alle $m \in \N$. Damit liegt $a'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $a' < a$, da $a' = -\left({a_i}_1\right) + a$ und ${a_i}_1 >e$. Dies ist ein Widerspruch zur Wahl von $a$. Damit existieren nur endlich viele ganze Zahlen $n$ für die $\left(\Phi^n\right)_n \neq 0$ ist.
 }
-Das Lemma liefert uns die gewünschte Aussage, $ \sum_{n=1}^{\infty}(F)^n$ liegt im formalen Potenzreihenring $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$. Also enthält der Potenzreihenring ebenso $\overline{F} := \sum_{n=1}^{\infty}(-F)^n $, weil die negative formale Potenzreihe $\left(-F\right)$ die Voraussetzungen des Lemmas für $\lambda_n = 1$ erfüllt, $\text{min}\left(\text{supp}\left(-F\right)\right) > 0.$ 
-Wir wissen also, dass für ein Element $\mathfrak{F} := e + F$, mit $F \in K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ der Gruppe $\Upsilon$ ein Element $\overline{\mathfrak{F}} := e +\sum_{n=1}^{\infty}(-F)^n $ in $\Upsilon$ existiert, sodass das Produkt der beiden Gruppenelemente die folgende Form hat:
+Das Lemma liefert uns die gewünschte Aussage, $ \sum_{n=1}^{\infty}(F)^n$ liegt im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$. Also enthält der Potenzreihenring ebenso $\overline{F} := \sum_{n=1}^{\infty}(-F)^n $, weil die negative formale Potenzreihe $\left(-F\right)$ die Voraussetzungen des Lemmas für $\lambda_n = 1$ erfüllt, $\text{min}\left(\text{supp}\left(-F\right)\right) > 0.$ 
+Wir wissen also, dass für ein Element $\mathfrak{F} := e + F$, mit $F \in K\left(\left(z^{G}\right)\right)$ der Gruppe $\Upsilon$ ein Element $\overline{\mathfrak{F}} := e +\sum_{n=1}^{\infty}(-F)^n $ in $\Upsilon$ existiert, sodass das Produkt der beiden Gruppenelemente die folgende Form hat:
 \[\mathfrak{F} \overline{\mathfrak{F}} \]
 \[= \left(e  + F\right) \left(e + \overline{F}\right)\]
 \[ = e + \left(F + \overline{F} + F\cdot\overline{F}\right) \]
@@ -897,10 +924,10 @@ Wir wissen also, dass für ein Element $\mathfrak{F} := e + F$, mit $F \in K\lbr
 Die Menge $\Upsilon$ stellt also tatsächlich eine Gruppe dar und wir finden zu jedem Element ein Inverses. Mithilfe dieser Erkenntnisse sind wir nun in der Lage den zentralen Satz der Ausarbeitung zu beweisen.
 \newpage
 \begin{satz}
-Die formalen Potenzreihen auf einer angeordneten Gruppe $\Gamma$ über einem Körper $K$ bilden einen Körper $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$.
+Die formalen Potenzreihen auf einer angeordneten Gruppe $\Gamma$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wie oben gezeigt, kann jedes Element $G\neq 0$ des Ringes $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$ in der Form $G = \lambda\cdot z^g\cdot \left(e + F\right)$ geschrieben werden, mit $\lambda \in K^*, g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0.$ Wir bezeichnen mit $e + \overline{F}$ das Inverse von $e + F$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $H := \left(e + \overline{F}\right)z^{-g}\lambda^{-1} \in K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element unserer angeordneten, abelschen, additiv geschriebenen Gruppe $\Gamma$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Potenzgesetzen und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ ergibt sich, dass 
+Wie oben gezeigt, kann jedes Element $G\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $G = \lambda\cdot z^g\cdot \left(e + F\right)$ geschrieben werden, mit $\lambda \in K^*, g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0.$ Wir bezeichnen mit $e + \overline{F}$ das Inverse von $e + F$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $H := \left(e + \overline{F}\right)z^{-g}\lambda^{-1} \in K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element unserer angeordneten, abelschen, additiv geschriebenen Gruppe $\Gamma$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Potenzgesetzen und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ ergibt sich, dass 
 \[G\cdot H \]
 \[= \left(\lambda\cdot z^g\left(e + F\right)\right) \cdot \left( \left(e + \overline{F}\right)z^{-g}\lambda^{-1}\right)\]
 \[ = \left(\lambda\cdot z^g z^{-g}\lambda^{-1}\right) = \left(\lambda  z^{g-g}\lambda^{-1}\right)= \left(\lambda\lambda^{-1}\right)\]
@@ -908,7 +935,7 @@ Wie oben gezeigt, kann jedes Element $G\neq 0$ des Ringes $K\lbrack\lbrack z^\Ga
 \[= \left(e + \overline{F}\right)z^{-g}\lambda^{-1}\cdot \lambda z^g \left(e + F\right)\]
 \[= H\cdot G\]
 Offensichtlich erweist sich e als Einselement von $K\left(\left(z^{G}\right)\right)$}
-Potenzreihen auf einer angeordneten abelschen Gruppe mit wohlgeordnetem Träger formen über einem Körper K somit den Körper der formalen Potenzreihen $K\lbrack\lbrack z^\Gamma\rbrack\rbrack$. \\
+Potenzreihen auf einer angeordneten abelschen Gruppe mit wohlgeordnetem Träger formen über einem Körper K somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
 Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
 Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $\Gamma = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
 %

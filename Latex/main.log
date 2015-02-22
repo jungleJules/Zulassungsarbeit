@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  22 FEB 2015 00:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  22 FEB 2015 10:10
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1431,38 +1431,38 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 693.
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 755--776
+Underfull \hbox (badness 10000) in paragraph at lines 782--803
 
  []
 
 [42] [43] [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 831.
+(hyperref)                removing `math shift' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 831.
+(hyperref)                removing `\left' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 831.
+(hyperref)                removing `\left' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 831.
+(hyperref)                removing `superscript' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 831.
+(hyperref)                removing `\right' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 831.
+(hyperref)                removing `\right' on input line 858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 831.
+(hyperref)                removing `math shift' on input line 858.
 
 [45] [46] [47] [48] [49])
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl [50]
@@ -1499,10 +1499,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 20553 strings out of 493921
- 352575 string characters out of 3144876
- 475132 words of memory out of 3000000
- 23222 multiletter control sequences out of 15000+200000
+ 20556 strings out of 493921
+ 352636 string characters out of 3144876
+ 475146 words of memory out of 3000000
+ 23223 multiletter control sequences out of 15000+200000
  29991 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,14n,71p,1124b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1539,9 +1539,9 @@ ufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (52 pages, 644324 bytes).
+Output written on main.pdf (52 pages, 643409 bytes).
 PDF statistics:
- 1173 PDF objects out of 1200 (max. 8388607)
- 196 named destinations out of 1000 (max. 500000)
+ 1175 PDF objects out of 1200 (max. 8388607)
+ 198 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
