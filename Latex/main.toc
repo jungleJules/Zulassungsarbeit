@@ -21,6 +21,6 @@
 \contentsline {subsection}{\numberline {4.2.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{33}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{39}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Formale Potenzreihen auf angeordneten abelschen Gruppen}{40}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Definition der Addition und Multiplikation in $K((z^{G}))$}{41}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Addition und Multiplikation in $K((z^{G}))$}{41}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Der verallgemeinerte Ring der formalen Potenzreihen}{43}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Die Konstruktion des Inversen in $K\left (\left (z^{G}\right )\right )$}{45}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.4}Die Konstruktion des Inversen in $K\left (\left (z^{G}\right )\right )$}{46}{subsection.4.3.4}

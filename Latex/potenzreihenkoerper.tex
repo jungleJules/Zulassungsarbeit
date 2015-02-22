@@ -276,6 +276,7 @@ Wir werden Laurentreihen im Folgenden meist als Reihe der Form
 \begin{equation*}
 \sum_{n= - k}^{\infty}a_nz^n \text{ mit } k \in \Z, n \ge -k \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N_0 
 \end{equation*} 
+schreiben.
 Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
 \end{nota}
 %
@@ -656,7 +657,7 @@ wird als \textit{formale Potenzreihe auf einer angeordnet abelschen Gruppe} beze
 %
 %
 \begin{nota}
-Wir werden im Folgenden, wenn wir von formalen Potenzreihen auf angeordneten abelschen Gruppen über einem Körper sprechen, diese vereinfachend als \textit{formale Potenzreihen} bezeichnen.
+Wenn wir ab jetzt von formalen Potenzreihen auf angeordneten abelschen Gruppen über einem Körper sprechen, bezeichnen wir diese vereinfachend als \textit{formale Potenzreihen}.
 \end{nota}
 %
 %
@@ -686,11 +687,11 @@ Wir werden im Folgenden, wenn wir von formalen Potenzreihen auf angeordneten abe
 %
 %
 %
-Wir bezeichnen die Menge aller formalen Potenzreihen auf einer angeordneten abelschen Gruppe $G$ über dem Körper $K$ folgendermaßen: 
-\[K\left(\left(z^{G}\right)\right) = \lbrace \sum_{g \in G}^{}a_g z^g | \text{ supp}(f) \text{ ist wohlgeordnet}\rbrace\]
+Wir bezeichnen die Menge aller formalen Potenzreihen auf einer angeordneten abelschen Gruppe $G$ über dem Körper $K$ mit 
+\[K\left(\left(z^{G}\right)\right) = \lbrace \sum_{g \in G}^{}a_g z^g |~ a_g \in K, \text{  supp}(f) \text{ ist wohlgeordnet}\rbrace\]
 %
 %
-\subsection{Definition der Addition und Multiplikation in $K((z^{G}))$}
+\subsection{Addition und Multiplikation in $K((z^{G}))$}
 %
 %
 %
@@ -715,15 +716,15 @@ In diesem Abschnitt definieren wir die Verknüpfungen auf $K((z^{G}))$. Wir gehe
 %
 %
 \begin{defn}\label{AdditionFormalerPotenzreihen}
-Seien $f, g \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$, wobei $a_g, b_g \in K)$ und supp($f$), supp($g$) wohlgeordnet. \\
-Die Summe zweier formaler Potenzreihen $f, g$
+Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
+Die Summe zweier formaler Potenzreihen $f, g$ ist definiert durch die Addition der Koeffizientenfolgen:
 %
 \begin{eqnarray*}
-f + h &=& \sum_{g \in g}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g \\
++ \colon f + h &=& \sum_{g \in g}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g \\
 &=& \sum_{g \in G}^{}\left(a_g + b_g\right)z^g 
 \end{eqnarray*}
 %
-ist gegeben durch die Addition der Koeffizientenfolgen. 
+
 \end{defn}
 %
 %
@@ -760,6 +761,9 @@ Seien $a_{g_1} z^{g_1}, b_{g_2} z^{g_2} \in K\left(\left(z^G\right)\right)$. Das
 \end{defn}
 %
 %
+\begin{bem}
+Wir haben die obige Definition der Multiplikation zweier Monome bereits, ohne explizite Nennung, für die Definition der Multiplikation formaler Laurentreihen und Potenzreihen verwendet. 
+\end{bem}
 %
 %Betrachten wir zunächst das Produkt einzelner Monome: $\Phi_gz^g  \Psi_hz^h = \Phi_g  \Psi_h z^{g+h} $. Für die Unbestimmte $z$ gilt nach den Potenzgesetzen $z^{g_1} \cdot z^{g_1} = z^{g_1 + h_1}$. 
 %
@@ -773,25 +777,63 @@ Die distributive Fortsetzung der Multiplikation von Monomen führt zur Definitio
 %
 %
 \begin{defn}\label{MultiplikationformalePotenzreihen}
-
-
+Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$. Die Multiplikation zweier formaler Potenzreihen $f, h$ erfolgt durch Faltung: 
+\begin{eqnarray*}\label{eq: multPotenzreihenkoerper}  
+\cdot\colon f\cdot h &=& \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \cdot \sum_{g_2 \in G}^{} b_{g_2} z^{g_2} \\
+&=& \sum_{g \in \Gamma}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g.  
+\end{eqnarray*} 
 \end{defn}
-\[ \text{Sei } F = \sum_{a \in \Gamma}^{} \Phi_a z^a \text{ und } G = \sum_{a \in \Gamma}^{} \Psi_a z^a \text{ wobei } \Phi_a, \Psi_a \in K. \]
-\begin{equation}\label{eq: multPotenzreihenkoerper}  
-\cdot: H:= F \cdot G = \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}z^a.  
-\end{equation}                         
-Um eine Aussage treffen zu können, ob dieses Produkt wohldefiniert ist, müssen wir zeigen, dass der Träger des Produkts wohlgeordnet ist. Beachte, dass supp($F\cdot G$) $\subseteq$ supp$(F)+ $supp$(G)$. \\ 
-Die Summe $\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}$ kann reduziert werden auf $a_1\in$ supp(F) und $a_2\in$ supp(G), da ansonsten der Summand null ist. \\
-Nach Voraussetzung sind sowohl supp(F), als auch supp$(G)$ wohlgeordnet. Die so entstandene Menge von Elementen aus $\Gamma$ ist also selbst wohlgeordnet. Nach dem Lemma von B.H. Neumann \ref{LemmaNeumann} ist damit supp$(F)$ + supp$(G)$ wohlgeordnet. Es ist bekannt, dass supp($F\cdot G) \subseteq$ supp$(F)$ + supp$(G)$ und jede Teilmenge einer wohlgeordneten Menge ist wieder wohlgeordnet nach der Definition der Wohlordnung (\ref{wohlgeordn}). Da jede nichtleere Teilmenge ein kleinstes Element besitzt, ist diese Teilmenge selbst wohlgeordnet. Wir erhalten die Wohlordnung des Trägers der Produktreihe supp($F\cdot G)$.
-%Angenommen sie wäre es nicht, dann enthielte die Menge der Elemente $a_1 + a_2$ eine Teilmenge ohne kleinstes Element und damit ließen sich unendlich viele Paare ${a_1}_i$ und ${a_2}_i$ finden, sodass:
-%\[{a_1}_1 + {a_2}_1 > {a_1}_2 + {a_2}_2 > ... > {a_1}_i + {a_2}_i > ...\]
-%Da alle ${a_1}_i$ einer wohlgeordneten Menge angehören existiert ein kleines Element, etwa ${{a_1}_i}_1$. Für alle $ {a_1}_i (i > i_1)$ gibt es wieder ein kleinstes Element ${{a_1}_i}_2$ und so weiter. Wir erhalten:
-%\[{{a_1}_i}_1 + {{a_2}_i}_1 > {{a_1}_i}_2 + {{a_2}_i}_2 > ... > {{a_1}_i}_n +{{a_2}_i}_n > ...\]
-%während \[{{a_1}_i}_1 \le {{a_1}_i}_2 \le ... \le {{a_1}_i}_n  \le ....\]
-%Daraus würde folgen:
-%$ {{a_2}_i}_1 > {{a_2}_i}_2 > ... > {{a_2}_i}_n  > ...$.
-%Dies ist ein Widerspruch, da nach Voraussetzung ${{a_2}_i}_n$ einer wohlgeordneten Menge angehört und somit ein kleinstes Element besitzen muss.\\
-Wir behaupten weiter, dass die Summe $\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2} z^a$ (siehe \ref{eq: multPotenzreihenkoerper}) endlich ist. Es gibt also nur eine endliche Anzahl von Paaren $a_1, a_2$, sodass $a_1 + a_2$ ein vorgegebenes Element a $\in \Gamma$ ergibt. Die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} führt direkt zu dieser Aussage.  \\
+%
+%
+%
+\begin{bemnota}
+Das Symbol für die Multiplikation wird im Folgenden oft weggelassen. Anstelle von $f\cdot h$ schreiben wir $fh$.
+\end{bemnota}
+%
+%
+%\[ \text{Sei } F = \sum_{a \in \Gamma}^{} \Phi_a z^a \text{ und } G = \sum_{a \in \Gamma}^{} \Psi_a z^a \text{ wobei } \Phi_a, \Psi_a \in K. \]
+%
+%
+%
+%
+\begin{satz}\label{wohldefiniertMultiplikation}
+Die oben definierte Multiplikation zweier formaler Potenzreihen $f, h \in K\left(\left(z^G\right)\right)$ ist wohldefiniert. Das Produkt $f h$ ist ebenso eine formale Potenzreihe in $K\left(\left(z^G\right)\right)$.
+\end{satz}
+%
+%
+\beweis{Wir untergliedern den Beweis und zeigen zunächst, dass die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ existiert und endlich ist.
+Die Summe existiert, wenn die Träger supp($(f)$ und supp$(h)$ nicht leer sind. Andernfalls erhalten wir die leere Summe. 
+Der Träger der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ kann reduziert werden auf die Elemente $g = g_1 +g_2$ für die gilt, dass $g_1\in$ supp(F) und $g_2\in$ supp(G) liegt. Andernfalls wäre $a_{g_1}$ oder $b_{g_2}$ gleich null und das Produkt somit ebenso null. Da $G$ eine angeordnete abelsche Gruppe ist und $g_1, g_2 \in G$ sind, ist aufgrund der Abgeschlossenheit der Addition $g = g_1 + g_2 \in G$. Die Summe existiert also und ist ungleich null für alle $g_1\in$ supp(F) und $g_2\in$ supp(G).\\
+Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist endlich, wenn es nur endlich viele viele Darstellungen für $g \in G$ und $g = g_1+g_2$ gibt, wobei $g_1 \in$ supp $(f)$ und  $g_2 \in $supp$(g)$. Nach Voraussetzung sind sowohl supp$(f)$, als auch supp$(g)$ wohlgeordnet. Die Gruppe $G$ ist angeordnet abelsch und wir können die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} anwenden. Die Aussage ist somit bewiesen.\\
+%
+%
+%
+%
+Nun bleibt zu zeigen, dass der Träger des Produkts supp$(fh)$ wohlgeordnet ist.
+Nach obiger Argumentation ist leicht zu sehen, dass supp($fh$) in der Summe der Träger, supp$(f)$+ supp$(h)$, enthalten ist. \\ 
+%Die Summe $\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}$ kann reduziert werden auf $a_1\in$ supp(F) und $a_2\in$ supp(G), da ansonsten der Summand null ist. \\
+Nach Voraussetzung sind supp$(f)$ und supp$(h)$ wohlgeordnet. Die Summe supp($f$) + supp$(h)$ ist nach dem Lemma von Neumann \ref{LemmaNeumann} wohlgeordnet. Jede angeordnete Teilmenge einer wohlgeordneten Menge ist wohlgeordnet laut der Definition einer Wohlordnung. Die Mengen supp$(f)$, supp$(h)$ sind als Teilmengen der angeordneten Gruppe $G$ angeordnet. Die Summe supp$(f)$ + supp$(h)$ ist aufgrund der Abgeschlossenheit der Addition in $G$, ebenso eine angeordnete Teilmenge von $G$. Daher gilt, dass supp$(fh)$, als angeordnete Teilmenge einer wohlgeordneten Menge (siehe Bemerkung \ref{Teilmengewohlgeordnet}), wohlgeordnet ist. \\
+Somit ist die Multiplikation zweier formaler Potenzreihen $f,h \in K\left(\left(z^G\right)\right)$ wohldefiniert und das Produkt $fh$ liegt in $K\left(\left(z^G\right)\right)$.
+
+
+
+%Nach dem Lemma von B.H. Neumann \ref{LemmaNeumann} ist damit supp$(F)$ + supp$(G)$ wohlgeordnet. Es ist bekannt, dass supp($F\cdot G) \subseteq$ supp$(F)$ + supp$(G)$ und jede Teilmenge einer wohlgeordneten Menge ist wieder wohlgeordnet nach der Definition der Wohlordnung (\ref{wohlgeordn}). Da jede nichtleere Teilmenge ein kleinstes Element besitzt, ist diese Teilmenge selbst wohlgeordnet. Wir erhalten die Wohlordnung des Trägers der Produktreihe supp($F\cdot G)$.
+%
+%
+%
+%
+%                        
+% % % % % %Angenommen sie wäre es nicht, dann enthielte die Menge der Elemente $a_1 + a_2$ % % % % % %eine Teilmenge ohne kleinstes Element und damit ließen sich unendlich viele % % % % % % %Paare ${a_1}_i$ und ${a_2}_i$ finden, sodass:
+% % % % %\[{a_1}_1 + {a_2}_1 > {a_1}_2 + {a_2}_2 > ... > {a_1}_i + {a_2}_i > ...\]
+% % % % % %Da alle ${a_1}_i$ einer wohlgeordneten Menge angehören existiert ein kleines   % % % % %Element, etwa ${{a_1}_i}_1$. Für alle $ {a_1}_i (i > i_1)$ gibt es wieder ein %       kleinstes Element ${{a_1}_i}_2$ und so weiter. Wir erhalten:
+%       \[{{a_1}_i}_1 + {{a_2}_i}_1 > {{a_1}_i}_2 + {{a_2}_i}_2 > ... > {{a_1}_i}_n    	% % % % % +{{a_2}_i}_n > ...\]
+%       während \[{{a_1}_i}_1 \le {{a_1}_i}_2 \le ... \le {{a_1}_i}_n  \le ....\]
+%       Daraus würde folgen:
+%       $ {{a_2}_i}_1 > {{a_2}_i}_2 > ... > {{a_2}_i}_n  > ...$.
+%       Dies ist ein Widerspruch, da nach Voraussetzung ${{a_2}_i}_n$ einer wohlgeordneten %       Menge angehört und somit ein kleinstes Element besitzen muss.\\
+%
+%
+%
 %Angenommen es gäbe unendliche viele $a_1$ für welche $\Phi_{a_1} \neq 0 \text{ und } \Psi_{a - a_1} \neq 0$. Dann würden unendlich viele Paare ${a_1}_n, {a_2}_n$ existieren, für die gilt: 
 %\[{a_1}_1 + {a_2}_1 = {a_1}_2 + {a_2}_2 = ... = {a_1}_i + {a_2}_i = ...\]
 %Da ${{a_1}_i}$ einer wohlgeordneten Menge angehören nehmen wir im Folgenden immer an, es sei:
@@ -799,11 +841,28 @@ Wir behaupten weiter, dass die Summe $\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_
 %Daraus würde wiederum folgen:\\
 %\[{a_2}_1 > {{a_2}_2} > ... > {{a_2}_i} > ....\]
 %Wir erhalten einen Widerspruch zur Wohlordnung der Menge der alle ${a_2}_n$ angehören.\\
-Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur auf endlich viele Arten möglich ist, wenn Träger der beiden zu multiplizierenden Potenzreihen wohlgeordnet sind. Der Koeffizient $\Lambda$ von $z^a$ sei dann gegeben durch:\\
-\[\Lambda_a = \Phi_{{a_1}_1}\Psi_{{a_2}_1} + \Phi_{{a_1}_2}\Psi_{{a_2}_2} + ... + \Phi_{{a_1}_n}\Psi_{{a_2}_n}\]
-$\Lambda_a$ sei null, wenn es für $a$ keine Darstellung als Summe der Elemente der Träger von F und G gibt.\\
-Das Produkt zweier formaler Potenzreihen auf $\Gamma$ über K ist somit wohldefiniert; der Träger der erhaltenen formalen Potenzreihe wohlgeordnet und der entstandene Koeffizient $\Lambda$ liegt, als endliche Summe des Produkts zweier Körperelemente $\Phi$ und $\Psi$, ebenfalls im Körper $K$. \\
-Damit ist $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation abgeschlossen. \cite[Seite 601ff]{hahn07}, \cite[S. 210- 213]{neumann49}.
+%
+%
+%
+%
+%
+%
+%
+%Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur auf endlich viele Arten möglich ist, wenn Träger der beiden zu multiplizierenden Potenzreihen wohlgeordnet sind. Der Koeffizient $\Lambda$ von $z^a$ sei dann gegeben durch:\\
+%\[\Lambda_a = \Phi_{{a_1}_1}\Psi_{{a_2}_1} + \Phi_{{a_1}_2}\Psi_{{a_2}_2} + ... + \Phi_{{a_1}_n}\Psi_{{a_2}_n}\]
+%$\Lambda_a$ sei null, wenn es für $a$ keine Darstellung als Summe der Elemente der Träger von F und G gibt.\\ %
+%
+%
+%
+%Das Produkt zweier formaler Potenzreihen auf $\Gamma$ über K ist somit wohldefiniert; der Träger der erhaltenen formalen Potenzreihe wohlgeordnet und der entstandene Koeffizient $\Lambda$ liegt, als endliche Summe des Produkts zweier Körperelemente $\Phi$ und $\Psi$, ebenfalls im Körper $K$. \\
+%
+%
+}
+
+Insgesamt erhalten wir, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation abgeschlossen ist. \cite[Seite 601ff]{hahn07}, \cite[S. 210- 213]{neumann49}.
+%
+% 
+%
 %
 \begin{bsp}
 Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ wohlgeordnet ist.
