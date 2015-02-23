@@ -220,11 +220,36 @@ für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Pote
 %
 %
 \subsection{Eigenschaften des Potenzreihenrings}
-Zunächst betrachten wir den Zusammenhang zwischen dem Ring der formalen Potenzreihen und der Menge der konvergenten Potenzreihen im Körper der komplexen Zahlen $\C$. \\
-Wir beweisen weiterhin, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann.
+
+Wir beweisen zunächst, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann.
+Anschließend betrachten wir den Zusammenhang zwischen dem Ring der formalen Potenzreihen und der Menge der konvergenten Potenzreihen im Körper der komplexen Zahlen $\C$. 
 %evtl noch möglich zu zeigen dass c[[z]] ein nullteilerfreier Ring ist stellt sich nur die Frage ob das iwie nötig ist...
 %
-
+\begin{satz}\label{intring}
+Der Ring $K[[z]]$ ist ein Integritätsring.
+\end{satz}
+%
+\beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
+Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
+\begin{eqnarray*}
+f \cdot g &=&  \sum_{n=0}^\infty  a_n z^n \cdot \sum_{n=0}^\infty  b_n z^n
+= 0.
+\end{eqnarray*} 
+Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
+Sei nun o.B.d.A. $\sum_{n=0}^\infty  a_n z^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum_{n=0}^\infty  b_n z^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
+Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
+\begin{eqnarray*}
+\sum_{i+k=j} a_ib_k = a_0b_j + a_1b_{j-1} + ... + a_jb_0 = a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
+\end{eqnarray*} 
+Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
+Seien jetzt $ b_0,..., b_{n-1}= 0$. Wir erhalten
+\begin{eqnarray*}
+\sum_{i+k=j+n} a_ib_{k} &=& a_0b_{j+n} + a_1b_{j+(n-1)} + ... +a_jb_n + a_{j+1}b_{n-1} + ... + a_{j+n}b_0\\
+&=& a_jb_n + a_{j+1}b_{n-1} + ... + a_{j+n}b_0= a_jb_n \stackrel{\mathrm{Vor.}}= 0.
+\end{eqnarray*} Da $a_j\neq 0$ ist folgt $b_n= 0$. 
+}
+%
+%
 %TODO: nochmal checken ob das stimmt, sowohl oberes als auch Konvergenzdefinition
 Da Konvergenzbetrachtungen nur im Körper der reellen und komplexen Zahlen Sinn machen, beschränken wir uns in folgendem Satz auf $\C$.  
 %
@@ -255,25 +280,6 @@ Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$
 %
 %
 %
-\begin{satz}\label{intring}
-Der Ring $K[[z]]$ ist ein Integritätsring.
-\end{satz}
-%
-\beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
-Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
-\begin{eqnarray*}
-f \cdot g &=&  \sum a_nz^n \cdot \sum b_nz^n \\
-&=& 0.
-\end{eqnarray*} 
-Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
-Sei nun o.B.d.A. $\sum a_nz^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum b_nz^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
-Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
-\begin{eqnarray*}
-\sum_{j+k=j} a_jb_k = \sum_{j+0=j} a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
-\end{eqnarray*} 
-Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
-Seien jetzt $ b_0,..., b_{n-1}= 0$. Mit $\sum_{j+k=n+k} a_jb_{n-j} = a_j b_n= 0$. Es folgt daher auch $b_n= 0$.
-}
 %
 %
 %
@@ -434,8 +440,8 @@ Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunt
 \begin{eqnarray*}
 \Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
 &=& \frac{{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}}{{z^{-m}}}\\
-&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-m}\sum_{n=l}^{\infty}a_n z^n}}{{z^{-m}}} \\
-&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-l}\sum_{n=l}^{\infty}a_n z^n}}{{z^{-l}}} \\
+&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-m}\sum_{n=l}^{\infty}b_n z^n}}{{z^{-m}}} \\
+&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-l}\sum_{n=l}^{\infty}b_n z^n}}{{z^{-l}}} \\
 &=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
 \end{eqnarray*}
 Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir die Multiplikation. Aufgrund der oben getroffenen Vereinfachung gilt:
@@ -443,11 +449,11 @@ Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir 
 \Phi\left( \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\right)
 &=&\frac{z^{-m-l}\left(\sum_{n=m}^{\infty}a_nz^n\right) \left(\sum_{n=l}^{\infty}b_nz^n\right)}{z^{-m-l}} \\ 
 &=& \frac{\left(z^{-m}\sum_{n=m}^{\infty}a_n z^n\right)\left(z^{-l}\sum_{n=l}^{\infty}b_n z^n\right)}{z^{-m}z^{-l}}  \\
-&=& \frac{z^{-m}\sum_{n=m}^{\infty}a_n z^n}{z^{-m}} \cdot \frac{z^{-l}\sum_{n=l}^{\infty}a_n z^n}{z^{-l}}\\
+&=& \frac{z^{-m}\sum_{n=m}^{\infty}a_n z^n}{z^{-m}} \cdot \frac{z^{-l}\sum_{n=l}^{\infty}b_n z^n}{z^{-l}}\\
 &=& \Phi \left(\sum_{n=m}^{\infty} a_nz^n\right) \cdot \Phi\left(\sum_{n=l}^{\infty} b_nz^n \right)
 \end{eqnarray*}
 Der Kern der Abbildung ist das Element $0_K$ und da $\Phi$ ein Homomorphismus ist, gilt die Injektivität.\\
-Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \ in Quot\left(K[[z]]\right)$, mit $\sum_{n=l} b_nz^n \neq 0$. \\
+Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \in$ Quot$\left(K[[z]]\right)$, mit $\sum_{n=l} b_nz^n \neq 0$. \\
 Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann diese Reihe invertiert werden und wir erhalten
 \begin{eqnarray*}
 q &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \\
@@ -456,7 +462,7 @@ q &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \\
 &=& \Phi\left(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1}\right).
 \end{eqnarray*}
 %
-Wir sehen sofort, dass $(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1} \in K((z))$ ist. Der Homomorphismus ist folglich bijjektiv und die Behauptung ist gezeigt. 
+Wir sehen sofort, dass $(z^{-l}\left(\sum_{n = m}^{\infty} a_nz^n\right)\left(\sum_{n = 0}^{\infty} c_nz^n\right)^{-1} \in K((z))$ ist. Der Homomorphismus ist folglich bijektiv und die Behauptung ist gezeigt. 
 %Da somit jede Laurentreihe $ f = \sum_{n\in \Z} a_nz^n $ die Gestalt $\lbrack{g},~{z^-m}\rbrack$ für ein $m \in \N$ hat, mit $g\in K[[z]]$ und $m\in\N$, ist $K((z))$ der Quotientenkörper (siehe \ref{quotkoerper}) von $K[[z]]$.
 }
 % Genauer Beweis hierzu: http://www.mathematik.uni-muenchen.de/~schotten/FT/loesungsskizzen/blatt-2-lsg.pdf
@@ -916,8 +922,8 @@ Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir
 %Sei supp(F)supp(G) :=$ \lbrace a_1, a_2 \in G | \Phi_{a_1} \Psi_{a_2} \neq 0\rbrace.$ Nach der Definition des Trägers folgt, dass die Menge angeordnet ist, denn als Untermenge von $\Gamma$ überträgt sich die Anordnung. Wir müssen zeigen, dass jede Teilmenge von supp(FG) ein kleinstes Element besitzt nach \ref{wohlgeordn}. Nach Definition der Multiplikation in unserem Körper K gilt: \\ 
 %
 %
-\begin{satz}
-$K\left(\left(z^{G}\right)\right)$ ist ein Ring über K. 
+\begin{satz}\label{verallgemeinerterPotenzreihenring}
+$K\left(\left(z^{G}\right)\right)$ ist ein kommutativer Ring über $K$. 
 \end{satz}
 \beweis{Seien im Folgenden f, h, k $\in K\left(\left(z^{G}\right)\right)$ mit
 \begin{eqnarray*}
@@ -1019,46 +1025,45 @@ Wir benötigen etwas Vorarbeit bevor wir zeigen können, dass zu jeder formalen 
 %
 %
 %
-\begin{satz}
-Jede formale Potenzreihe $f \in K\left(\left(z^{G}\right)\right)$ lässt sich in der Form  \\
+\begin{satz}\label{JedePotenzreihesoDarstellbar}
+Jede formale Potenzreihe $0 \neq f \in K\left(\left(z^{G}\right)\right)$ lässt sich in der Form  \\
 \[f = \lambda\cdot z^g\cdot \left(1_K + h\right)\text{ für } \lambda \in K, ~g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ und } \text{min}\left(\text{supp}\left(h\right)\right) > 0 \] darstellen.
 \end{satz}
 %
 %
 \beweis{
-Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{\infty}a_g z^g$. Nach Definition einer formalen Potenzreihe ist supp$(f)$ wohlgeordnet und es existiert damit ein kleinstes Element $\gamma\in G$ mit $\gamma=$min(supp$(G))$. Da $G$ eine angeordnete abelsche Gruppe ist, existiert für jedes Element ein additives Inverses. Es gilt:
+Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{\infty}a_g z^g$. Nach Voraussetzung ist supp$(f)$ wohlgeordnet. Nach Definition der Wohlordnung existiert ein kleinstes Element $\gamma\in G$ in supp$(f)$ mit $\gamma=$min(supp$(f))$. Da $G$ eine angeordnete abelsche Gruppe ist, existiert für jedes Element ein additives Inverses. Es gilt:
 \begin{eqnarray*}
-f&=& z^g ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
+f&=& z^\gamma ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
 &=& z^\gamma \left( 1_K a_\gamma + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} a_{g} z^{g -\gamma}\right) \\
-&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}} z^{g-\gamma}\right),
+&\stackrel{\mathrm{(*)}}=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}}z^{g-\gamma}\right) \\
+&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}\right),
 \end{eqnarray*}
-
-
-
-wobei supp($~\sum_{g \in G\setminus \lbrace g \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}} z^{g-\gamma}) \ge 0$ ist.
-Das Inverse zu $a_\gamma$ existiert, da der Koeffizient im Körper $K$ liegt und da $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$ ist. 
-
-
+%
+%
+mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}^{-1}}$. Die Gleichheit in (*) gilt, denn zu $a_\gamma$, mit $a_\gamma \in K$ und $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$, existiert das Inverse. \\
+Es gilt weiterhin $g-\gamma > 0$ für alle $g\in G\setminus\lbrace\gamma\rbrace$, da $\gamma = \min$supp$(f)$ und damit ist $g > \gamma$ für alle $g\in G$. Wir erhalten die Positivität des Trägers der entstandenen formalen Potenzreihe $h = \sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}$.
 }
-Wir zeigen zunächst, dass die unendliche Summe des Produkts aus einem beliebigen Körperelement mit einem Element des formalen Potenzreihenrings, mit positivem Träger wohldefiniert ist und wieder in $K\left(\left(z^{G}\right)\right)$ liegt. Dieses Element spielt eine wichtige Rolle zur Konstruktion eines Inversen. Wir definieren die folgende Reihe:
-\[\overline{F} = \sum_{n=0}^{\infty}\lambda_n\cdot F^n, \text{ mit } F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0, \lambda_n \in K^*. \]
-Wieso $\lambda$ eine Einheit und der kleinste Exponent der Unbestimmten $z$, für das der zugehörige Koeffizient ungleich null ist, positiv sein muss, klären wir im Folgenden. Die Potenzreihe $\overline{F}$ kann umgeschrieben werden:
-\[\sum_{n=0}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 F^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n.\] 
-Diese Darstellung erinnert für $\lambda_0 = e$, wobei $e$ das neutrale Element der angeordneten abelschen Gruppe $\Gamma$ ist, an die geometrische Reihe. Jedes Element $G \in K\left(\left(z^{G}\right)\right)$ besitzt eine äquivalente Darstellung durch das Vielfache der Summe des neutralen Gruppenelements und einer formalen Potenzreihe deren Träger positiv ist. 
-
-
-Wir assozieren jetzt mit jedem Element $F := \sum_{a \in \Gamma} \Phi_a z^a$ des formalen Potenzreihenrings ein Symbol $e+ F$ und betrachten die Menge $\Upsilon$ aller $\mathfrak{F} = e + F$ mit $e$ als neutrales Element von $\Gamma$, $F \in K\left(\left(z^{G}\right)\right)$ und $\text{min}\left(\text{supp}\left(F\right)\right) > 0$. Diese Menge $\Upsilon$ ist eine Gruppe bezüglich der folgenden Verknüpfung \[\left(e+F\right)\left(e+G\right) = e + \left(F+G+FG\right)\]
-, wobei die Operationen zwischen den Ringelementen der Addition und Multiplikation in $K\left(\left(z^{G}\right)\right)$ entsprechen. Die Abgeschlossenheit bezüglich der Multiplikation ist aus deren Definition klar ersichtlich. Das neutrale Element von $\Upsilon$ ist $e$. Mithilfe der geometrischen Reihe konstruieren wir das Inverse zu jedem Gruppenelement $\mathfrak{F}$ und zeigen in \ref{unendlicheSummeinPotenzreihenring}, dass dieses wohldefiniert ist und ein Element des Potenzreihenrings. Nach Definition der geometrischen Reihe gilt:
-\[\frac{1}{e - F} = \sum_{n=0}^{\infty}F^n = e + \sum_{n=1}^{\infty}F^n\] oder in äquivalenter Darstellung:
-\[\frac{1}{e + F} = = e + \sum_{n=1}^{\infty}(-F)^n.\]
-Man sieht sofort, dass für jedes Gruppenelement $e+ F$ die Reihe $e + \sum_{n=1}^{\infty}(-F)^n$ invers ist. Wir müssen allerdings noch zeigen, dass $\sum_{n=1}^{\infty}(-F)^n$ im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$ liegt.
+%
+% 
+%
+%
+%
+%
+%
+%
+% 
 %
 %
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
-Sei $F\in K\left(\left(z^{G}\right)\right)$ mit $\text{min}\left(\text{supp}\left(F\right)\right) > 0$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
-\[\Xi = \sum_{n=1}^{\infty}\lambda_nF^n\] in $K\left(\left(z^{G}\right)\right)$ und ist wohldefiniert.
+Sei $f\in K\left(\left(z^{G}\right)\right)$ mit $\text{min}\left(\text{supp}\left(f\right)\right) > 0$ und $f=\sum_{g \in G}^{\infty}a_g z^g$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
+\begin{eqnarray*}
+h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
+&=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n
+\end{eqnarray*}
+in $K\left(\left(z^{G}\right)\right)$und ist wohldefiniert.
 \end{lemma}
-\beweis{Das Element liegt im Potenzreihenring, wenn der die Vereinigung der Träger supp($F^n$) wohlgeordnet ist in der Anordnung von G und es für jedes Element des Trägers $a \in $ supp($F$)nur endliche viele ganze Zahlen n gibt, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
+\beweis{Die Reihe $h$ liegt im Potenzreihenring, wenn die Vereinigung der Träger supp($f^n$) wohlgeordnet ist in der Anordnung von G. Weiterhin dürfen für jedes Element des Trägers $a \in $ supp($f$) nur endliche viele ganze Zahlen n existieren, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
 Die erste Bedingung gilt als erfüllt wenn es keine unendlich abfallende Folge gibt
 \begin{equation}\label{eq: folgefürinvers}
 [u_1 = {a_1}_1 +{a_1}_2 + ...+ {{a_1}_n}_1 > u_2 = {a_2}_1 +{a_2}_2 + ...+ {{a_2}_n}_2 > ... > u_i = {a_i}_1 +{a_i}_2 + ...+ {{a_i}_n}_i, 
@@ -1079,38 +1084,187 @@ Der erste Teil des Lemmas ist bewiesen. Wir nehmen nun an es existieren für jed
 da die Vereinigung der Träger supp($F^n$) wohlgeordnet ist existiert ein kleinstes Element $a$ der oben definierten Form. Da supp($F^n$) wohlgeordnet ist, enthält die Folge $\left({a_i}_1\right)_{i\in \N}$ nach \ref{unendlicheFolgeEigenschaften} eine nichtabnehmende unendliche Teilfolge, die wir gleich indizieren:
 \[{a_1}_1 \le {a_i}_1 \le ... \le {a_i}_1 \le ...\] und wir nehmen deshalb an, dass $\left({a_i}_1\right)_{i\in \N}$ nicht wachsend ist. Damit muss die durch $\left(a_i\right)' = -\left({a_i}_1\right) + a = {a_i}_2 + ... + {{a_i}_n}_i,~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant sein. Es gibt also ein $j \in \N$ mit $\left(a_{j+m}\right)' = \left(a_j\right)' = a'$ für alle $m \in \N$. Damit liegt $a'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $a' < a$, da $a' = -\left({a_i}_1\right) + a$ und ${a_i}_1 >e$. Dies ist ein Widerspruch zur Wahl von $a$. Damit existieren nur endlich viele ganze Zahlen $n$ für die $\left(\Phi^n\right)_n \neq 0$ ist.
 }
-Das Lemma liefert uns die gewünschte Aussage, $ \sum_{n=1}^{\infty}(F)^n$ liegt im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$. Also enthält der Potenzreihenring ebenso $\overline{F} := \sum_{n=1}^{\infty}(-F)^n $, weil die negative formale Potenzreihe $\left(-F\right)$ die Voraussetzungen des Lemmas für $\lambda_n = 1$ erfüllt, $\text{min}\left(\text{supp}\left(-F\right)\right) > 0.$ 
-Wir wissen also, dass für ein Element $\mathfrak{F} := e + F$, mit $F \in K\left(\left(z^{G}\right)\right)$ der Gruppe $\Upsilon$ ein Element $\overline{\mathfrak{F}} := e +\sum_{n=1}^{\infty}(-F)^n $ in $\Upsilon$ existiert, sodass das Produkt der beiden Gruppenelemente die folgende Form hat:
-\[\mathfrak{F} \overline{\mathfrak{F}} \]
-\[= \left(e  + F\right) \left(e + \overline{F}\right)\]
-\[ = e + \left(F + \overline{F} + F\cdot\overline{F}\right) \]
-\[= e + \left(\sum_{a \in \Gamma}\Phi_a z^a + \sum_{n=1}^{\infty}(-F)^n + \left(\sum_{a \in \Gamma}\Phi_a z^a\right)\cdot \left(\sum_{n=1}^{\infty}(-F)^n\right)\right)\]
-\[ = e + \left( \sum_{n=2}^{\infty}(-F)^n + \left( - \sum_{n=2}^{\infty}(-F)^{n}\right)\right)\]
-\[= e + e = e\]
-\[ = e + \left(\sum_{n=1}^{\infty}(-F)^n + \sum_{a \in \Gamma}\Phi_a z^a + \left(\sum_{n=1}^{\infty}(-F)^n\right)\cdot \left(\sum_{a \in \Gamma}\Phi_a z^a\right)\right)\]
-\[ =  \left(e  + \overline{F}\right) \left(e + F\right)\]
-\[ = \mathfrak{\overline{F}}\mathfrak{F}\]
-Die Menge $\Upsilon$ stellt also tatsächlich eine Gruppe dar und wir finden zu jedem Element ein Inverses. Mithilfe dieser Erkenntnisse sind wir nun in der Lage den zentralen Satz der Ausarbeitung zu beweisen.
-\newpage
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Wir zeigen zunächst, dass die unendliche Summe des Produkts aus einem beliebigen Körperelement mit einem Element des formalen Potenzreihenrings, mit positivem Träger wohldefiniert ist und wieder in $K\left(\left(z^{G}\right)\right)$ liegt. Dieses Element spielt eine wichtige Rolle zur Konstruktion eines Inversen. 
+%
+%
+%
+%
+%
+%
+\begin{bem}
+Die in Lemma \ref{unendlicheSummeinPotenzreihenring} definierte Reihe $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n$, mit $\lambda_n \in K$ und $\sum_{g \in G}^{\infty}a_g z^g \in K\left(\left(z^{G}\right)\right)$ und  lässt sich aufgrund der Körpereigenschaften folgendermaßen umschreiben:
+\begin{eqnarray*}
+\sum_{n=0}^{\infty}\lambda_n\cdot \left(f\right)^n &=& \lambda_0 f^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot f\right)^n \\
+&=& \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot f\right)^n.
+\end{eqnarray*}
+%
+%
+%
+Diese Darstellung erinnert für $\lambda_0 = 1_K$ an die geometrische Reihe. 
+%
+%
+%
+\end{bem}
+%
+%
+%
+%
+%
+%
+%
+%Wir definieren die folgende Reihe:
+%\[\overline{F} = \sum_{n=0}^{\infty}\lambda_n\cdot F^n, \text{ mit } F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0, \lambda_n \in K^*. \]
+%Wieso $\lambda$ eine Einheit und der kleinste Exponent der Unbestimmten $z$, für das der zugehörige Koeffizient ungleich null ist, positiv sein muss, klären wir im Folgenden. Die Potenzreihe $\overline{F}$ kann umgeschrieben werden:
+%\[\sum_{n=0}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 F^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n.\] 
+ 
+\begin{defn}
+Seien $f, h\in \in K\left(\left(z^{G}\right)\right)$ und $\min(\text{supp}(f)) >0, \min(\text{supp}(h)) >0$. Wir bezeichnen die Menge aller $1_K + f$ mit $\Upsilon$ und definieren auf $\Upsilon$ die Verknüpfung
+\begin{eqnarray*}
+\cdot\colon \left(1_K + f\right) \cdot \left(1_K + h\right) = 1_K + \left(f+h+fh\right)
+\end{eqnarray*} 
+\end{defn}
+%
+%
+%
+%
+%
+%Wir assozieren jetzt mit jedem Element $F := \sum_{a \in \Gamma} \Phi_a z^a$ des formalen Potenzreihenrings ein Symbol $e+ F$ und betrachten die Menge $\Upsilon$ aller $\mathfrak{F} = e + F$ mit $e$ als neutrales Element von $\Gamma$, $F \in K\left(\left(z^{G}\right)\right)$ und $\text{min}\left(\text{supp}\left(F\right)\right) > 0$. Diese Menge $\Upsilon$ ist eine Gruppe bezüglich der folgenden Verknüpfung \[\left(e+F\right)\left(e+G\right) = e + \left(F+G+FG\right)\]
+%, wobei die Operationen zwischen den Ringelementen der Addition und Multiplikation in $K\left(\left(z^{G}\right)\right)$ entsprechen. Die Abgeschlossenheit bezüglich der Multiplikation ist aus deren Definition klar ersichtlich. Das neutrale Element von $\Upsilon$ ist $e$. Mithilfe der geometrischen Reihe konstruieren wir das Inverse zu jedem Gruppenelement $\mathfrak{F}$ und zeigen in \ref{unendlicheSummeinPotenzreihenring}, dass dieses wohldefiniert ist und ein Element des Potenzreihenrings. Nach Definition der geometrischen Reihe gilt:
+%\[\frac{1}{e - F} = \sum_{n=0}^{\infty}F^n = e + \sum_{n=1}^{\infty}F^n\] oder in äquivalenter Darstellung:
+%\[\frac{1}{e + F} = = e + \sum_{n=1}^{\infty}(-F)^n.\]
+%Man sieht sofort, dass für jedes Gruppenelement $e+ F$ die Reihe $e + \sum_{n=1}^{\infty}(-F)^n$ invers ist. Wir müssen allerdings noch zeigen, dass $\sum_{n=1}^{\infty}(-F)^n$ im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$ liegt.
+%%
+%
+
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Das Lemma liefert uns die gewünschte Aussage, $ \sum_{n=1}^{\infty}(f)^n$ liegt im formalen Potenzreihenring $K\left(\left(z^{G}\right)\right)$. \\
+%Die formale Potenzreihe $\left(-f\right)$ erfüllt die Voraussetzungen des Lemmas, denn es gilt $\text{min}\left(\text{supp}\left(-f\right)\right) > 0.$ 
+%Somit enthält der Potenzreihenring ebenso $\overline{f} = \sum_{n=1}^{\infty}(-f)^n $. 
+%
+%
+%
+%
+%
+\begin{lemma}
+Sei $1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und $\min(\text{supp}(f)) >0$. Das Element 
+\[1_K +\sum_{n=1}^{\infty}(-f)^n\]
+liegt in $\Upsilon$ und ist invers zu $1_K + f$.
+
+\end{lemma}
+Sei $\mathfrak{f} = 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und $\min$supp$(f) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt $\min$supp$(-f) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ entspricht der Vereinigung der Träger supp$(-f^n)$. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
+Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ liegt in $\Upsilon$. Die Verknüpfung der beiden Gruppenelemente $\mathfrak{f}$ und $ \overline{\mathfrak{f}}$ hat folgende Form:
+%
+%
+%
+%
+\begin{eqnarray*}
+\mathfrak{f}~ \overline{\mathfrak{f}} &=& \left(1_K + f\right) \left(1_K + \overline{f}\right) \\
+&=& 1_K + \left(f + \overline{f} + f \cdot\overline{f}\right) \\
+&=& 1_K + \left(\sum_{g \in G} a_g z^g + \sum_{n=1}^{\infty}(-f)^n + \left(\sum_{g \in G} a_g z^g\right)\cdot \left(\sum_{n=1}^{\infty}(-f)^n\right)\right) \\
+&=& 1_K + \left( \sum_{n=2}^{\infty}(-f)^n + \left( - \sum_{n=2}^{\infty}(-f)^{n}\right)\right)\\
+&=& 1_K + 1_K = 1_K \\
+&=& \mathfrak{\overline{f}}~\mathfrak{f}
+\end{eqnarray*}
+%
+%
+%
+%%
+%
+%\[ = e + \left(\sum_{n=1}^{\infty}(-F)^n + \sum_{a \in \Gamma}\Phi_a z^a + \left(\sum_{n=1}^{\infty}(-F)^n\right)\cdot \left(\sum_{a \in \Gamma}\Phi_a z^a\right)\right)\]
+%\[ =  \left(e  + \overline{F}\right) \left(e + F\right)\]
+%
+%
+%
+%
+%
+%
+\begin{bem}
+Sei $1_K + f \in \Upsilon$, und $\overline{\mathfrak{1_K +\sum_{n=1}^{\infty}(-f)^n}}$ das Inverse. Der Träger supp$(f)$ ist größer null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
+\begin{eqnarray*}
+1_K &=& \left(1_K + f\right)\left( 1_K + \sum_{n=1}^{\infty}(-f)^n \right) \Leftrightarrow\\
+\frac{1_K}{1_K + f} &=& 1_K + \sum_{n=1}^{\infty}(-f)^n \Leftrightarrow \\
+\frac{1_K}{1_K + f} &=& \sum_{n=0}^{\infty}(-f)^n \Leftrightarrow\\
+\frac{1_K}{1_K - f} &=& \sum_{n=0}^{\infty}(f)^n
+\end{eqnarray*}
+Diese Form der Darstellung zeigt deutlich die Verbindung des inversen Elements mit der geometrischen Reihe.
+\end{bem}
+%
+%
+% 
+%
+%
+%
+Mithilfe dieser Erkenntnis und Lemma \ref{JedePotenzreihesoDarstellbar} sind wir nun in der Lage den zentralen Satz der Ausarbeitung zu beweisen.
+%
 \begin{satz}
-Die formalen Potenzreihen auf einer angeordneten Gruppe $\Gamma$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
+Die formalen Potenzreihen auf einer angeordneten Gruppe $G$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wie oben gezeigt, kann jedes Element $G\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $G = \lambda\cdot z^g\cdot \left(e + F\right)$ geschrieben werden, mit $\lambda \in K^*, g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0.$ Wir bezeichnen mit $e + \overline{F}$ das Inverse von $e + F$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $H := \left(e + \overline{F}\right)z^{-g}\lambda^{-1} \in K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element unserer angeordneten, abelschen, additiv geschriebenen Gruppe $\Gamma$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Potenzgesetzen und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ ergibt sich, dass 
-\[G\cdot H \]
-\[= \left(\lambda\cdot z^g\left(e + F\right)\right) \cdot \left( \left(e + \overline{F}\right)z^{-g}\lambda^{-1}\right)\]
-\[ = \left(\lambda\cdot z^g z^{-g}\lambda^{-1}\right) = \left(\lambda  z^{g-g}\lambda^{-1}\right)= \left(\lambda\lambda^{-1}\right)\]
-\[= e \]
-\[= \left(e + \overline{F}\right)z^{-g}\lambda^{-1}\cdot \lambda z^g \left(e + F\right)\]
-\[= H\cdot G\]
-Offensichtlich erweist sich e als Einselement von $K\left(\left(z^{G}\right)\right)$}
-Potenzreihen auf einer angeordneten abelschen Gruppe mit wohlgeordnetem Träger formen über einem Körper K somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
+Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{f}$ das Inverse von $1_K + f$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $k = \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} \in K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
+%
+%
+%
+%
+% 
+%
+%
+\begin{eqnarray*}
+f\cdot k 
+&=& \left(\lambda\cdot z^g\left(1_K + h\right)\right) \cdot \left( \left(1_K + \overline{f}\right)z^{-g}\lambda^{-1}\right) \\
+&=& \left(\lambda\cdot z^g z^{-g}\lambda^{-1}\right) = \left(\lambda  z^{g-g}\lambda^{-1}\right)= \left(\lambda\lambda^{-1}\right)\\
+&=& 1_K\\
+&=& \left(1_K + \overline{f}\right)z^{-g}\lambda^{-1}\cdot \lambda z^g \left(1_K + f\right)\\
+&=& k\cdot f
+\end{eqnarray*}
+}
+
+%
+%
+%
+%
+\begin{bsp}
+Sei $G$ eine archimedisch angeordnete Gruppe. Um den verallgemeinerten Potenzreihenkörper über $K$ angeben zu können benötigen wir eine angeordnete abelsche Gruppe. Nach dem Satz von Hölder \ref{aga} lässt sich jede archimedisch geordnete Gruppe in eine Untergruppe der additiven reellen Zahlen einbetten.
+Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte Potenzreihenkörper auf $G$ über $K$ entsteht also durch Einbettung von $G$ in $K\left(\left(z^\R\right)\right)$
+\end{bsp}
+%
+%
+% 
+%
+%
+%
+%
+Potenzreihen auf einer angeordneten abelschen Gruppe $G$ mit wohlgeordnetem Träger formen über einem Körper $K$ somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
 Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
 Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $\Gamma = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
-%
-%
-%
-%
 %
 %
 %
