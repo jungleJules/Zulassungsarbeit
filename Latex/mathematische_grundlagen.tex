@@ -422,9 +422,9 @@ $\grqq\Leftarrow\grqq $ Wir nehmen an, es gibt keine streng monoton fallende Fol
 \begin{bsp}\label{TotalGeordnetEndlichIstWOhlgeordnet}
 Total geordnete endliche Mengen sind wohlgeordnet.
 \end{bsp}
-Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_S$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
+Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_A$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
 \begin{lemma}\label{wohlgeordnvereinigung} %\cite{xin04}
-Sei $w_{n\in \N} \in W_A$, dann gilt $\cap_{\alpha \in \N} w_n \in W_A$ und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
+Sei $w_{n} \in W_A$ für alle $n\in \N$, dann gilt $\bigcap_{n \in \N} w_n \in W_A$ und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
 \end{lemma}
 \beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $w_1\cup w_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $a_1 > a_2 > ...$ in $w_1\cup w_2$.\\
 Betrachten wir alle Elemente der Teilmenge $w_1$. Wir können diese, da $w_1$ total geordnet ist, als Folge $a_{i_1} > a_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $w_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $w_2$ und erhalten die endliche fallende Folge $a_{j_1} > a_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $a_1 > a_2 > ...$ ist in einer der beiden endlichen Folgen enthalten.  Widerspruch!}

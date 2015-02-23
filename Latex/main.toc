@@ -14,13 +14,13 @@
 \contentsline {chapter}{\numberline {4}Potenzreihenk\IeC {\"o}rper}{24}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formale Potenzreihen}{24}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Addition und Multiplikation formaler Potenzreihen}{25}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Der Ring der formalen Potenzreihen}{25}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Eigenschaften des Potenzreihenrings}{29}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Formale Laurentreihen}{31}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Addition und Multiplikation formaler Laurentreihen}{32}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{33}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{39}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Formale Potenzreihen auf angeordneten abelschen Gruppen}{40}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Addition und Multiplikation in $K((z^{G}))$}{41}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Der verallgemeinerte Ring der formalen Potenzreihen}{43}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Die Konstruktion des Inversen in $K\left (\left (z^{G}\right )\right )$}{46}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.1.2}Der Ring der formalen Potenzreihen}{26}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Eigenschaften des Potenzreihenrings}{30}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Formale Laurentreihen}{32}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Addition und Multiplikation formaler Laurentreihen}{33}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Der K\IeC {\"o}rper der formalen Laurentreihen}{34}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Der verallgemeinerte Potenzreihenk\IeC {\"o}rper}{40}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Formale Potenzreihen auf angeordneten abelschen Gruppen}{41}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Addition und Multiplikation in $K((z^{G}))$}{42}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Der verallgemeinerte Ring der formalen Potenzreihen}{45}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Das Inverse in $K\left (\left (z^{G}\right )\right )$}{47}{subsection.4.3.4}

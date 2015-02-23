@@ -14,22 +14,50 @@ In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen auf den 
 \begin{defn}
 Eine \textit{formale Potenzreihe} über $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
 \end{defn}
-\begin{bem}
+\begin{bemnota}
 Wir werden formale Potenzreihen im Folgenden immer als Ausdruck der Form
 \begin{equation}\label{eq: formalepotenzreihe}
 \sum_{n=0}^\infty a_n z^n = a_0 + a_1z + a_2z^1 + a_2z^2 + ...
 \end{equation}
 schreiben, mit $a_n \in K$, für alle $n \in \N_0$.
+Anstelle von $f(z)$ schreiben wir vereinfachend $f$, da wir die Unbestimmte immer mit $z$ bezeichnen.
+\end{bemnota}
+%
+%
+%
+% 
+%
+%
+%
+\begin{bsp}
+Wichtige Beispiele für formale Potenzreihen aus der Analysis sind Exponential-, Sinus- und Cosinusreihe:
+\begin{eqnarray*}
+\exp(z) &=& \sum_{n=0}^{\infty} \frac{1}{n!} z^n
+= 1 + z +\frac{1}{2!} z^2 + \frac{1}{3!} z^3 + ... \\ \\
+\sin(z) &=& \sum_{n= 0}^{\infty} \frac{\left(-1\right)^n}{\left(2n + 1\right)!} z^{2n+1} = z - \frac{1}{3!} z^3 + \frac{1}{5!} z^5 - ...\\\\
+\cos(z) &=& \sum_{n= 0}^{\infty} \frac{\left(-1\right)^n}{\left(2n\right)!} z^{2n}
+= 1 - \frac{1}{2!} z^2 + \frac{1}{4!} z^4 - ...
+\end{eqnarray*}
+\end{bsp}
+%
+\begin{bem}
+In formalen Potenzreihen müssen nicht alle Potenzen der Unbestimmten explizit auftreten. Die Koeffizienten der nicht auftretenden Potenzen sind $0$ und die Potenzen werden deshalb weggelassen.
 \end{bem}
-%
-%
 %
 \subsection{Addition und Multiplikation formaler Potenzreihen} \label{Rechnen}
 %Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert. Mit diesen Verknüpfungen wird $K[[z]]$ zu dem Ring der formalen Potenzreihen. \\
-Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace \].
+Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace. \]
 %Formale Potenzreihen werden komponentenweise addiert.
 %
 %
+Wir nehmen folgende Rechenregeln für die Unbestimmte $z$ an.
+\begin{lemma}\label{Potenzgesetze}
+Sei $G$ eine angeordnete abelsche Gruppe und seien $g_1, g_2 \in G$, dann gilt:
+\begin{itemize}
+\item[(i)] $z^{g_1} \cdot z^{g_2} = z^{g_1 + g_2}$
+\item[(ii)] $z^{0_G} = 1_K$
+\end{itemize}
+\end{lemma}
 %
 %
 \begin{defn}\label{AdditionMultiplikationPotenzreihen}
@@ -639,7 +667,7 @@ Eine \textit{formale Potenzreihe über dem Körper $K$ auf der angeordneten abel
 
 \begin{defn}\label{TraegerFormalePotenzreihe}
 Der \textit{Träger} einer formalen Potenzreihe $f$ auf einer angeordneten abelschen Gruppe $G$ über einem Körper $K$ ist folgendermaßen definiert: 
-\[ \text{supp}(f) = \lbrace g \in G \vert a_g 0\neq 0\rbrace\]
+\[ \text{supp}(f) = \lbrace g \in G \vert ~ a_g \neq 0\rbrace\]
 \end{defn}
 %
 %
@@ -647,7 +675,7 @@ Der \textit{Träger} einer formalen Potenzreihe $f$ auf einer angeordneten abels
 Wir stellen die in \ref{funktionsDefinitionFormalePotenzreihe} definierte formale Potenzreihe im Folgenden meist nicht mehr in Funktionsschreibweise, sondern als Reihe dar. Aus diesem Grund präsentieren wir diese gebräuchlichere Definition einer formalen Potenzreihe.
 \begin{defn}
 Sei $K$ ein Körper und $G$ eine angeordnete abelsche Gruppe. Die Reihe 
-\[\sum_{g \in G}^{}a_g z^g, \text{ mit} a_g \in K, \text{ deren Träger supp}(f) \text{ wohlgeordnet ist}, \]
+\[\sum_{g \in G}^{}a_g z^g, \text{ mit } a_g \in K, \text{ deren Träger supp}(f) \text{ wohlgeordnet ist}, \]
 wird als \textit{formale Potenzreihe auf einer angeordnet abelschen Gruppe} bezeichnet.
 \end{defn}
 %
@@ -797,14 +825,14 @@ Das Symbol für die Multiplikation wird im Folgenden oft weggelassen. Anstelle v
 %
 %
 \begin{satz}\label{wohldefiniertMultiplikation}
-Die oben definierte Multiplikation zweier formaler Potenzreihen $f, h \in K\left(\left(z^G\right)\right)$ ist wohldefiniert. Das Produkt $f h$ ist ebenso eine formale Potenzreihe in $K\left(\left(z^G\right)\right)$.
+Die oben definierte Multiplikation zweier formaler Potenzreihen $f, h \in K\left(\left(z^G\right)\right)$ ist wohldefiniert. Das Produkt $fh$ ist ebenso eine formale Potenzreihe in $K\left(\left(z^G\right)\right)$.
 \end{satz}
 %
 %
 \beweis{Wir untergliedern den Beweis und zeigen zunächst, dass die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ existiert und endlich ist.
 Die Summe existiert, wenn die Träger supp($(f)$ und supp$(h)$ nicht leer sind. Andernfalls erhalten wir die leere Summe. 
-Der Träger der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ kann reduziert werden auf die Elemente $g = g_1 +g_2$ für die gilt, dass $g_1\in$ supp(F) und $g_2\in$ supp(G) liegt. Andernfalls wäre $a_{g_1}$ oder $b_{g_2}$ gleich null und das Produkt somit ebenso null. Da $G$ eine angeordnete abelsche Gruppe ist und $g_1, g_2 \in G$ sind, ist aufgrund der Abgeschlossenheit der Addition $g = g_1 + g_2 \in G$. Die Summe existiert also und ist ungleich null für alle $g_1\in$ supp(F) und $g_2\in$ supp(G).\\
-Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist endlich, wenn es nur endlich viele viele Darstellungen für $g \in G$ und $g = g_1+g_2$ gibt, wobei $g_1 \in$ supp $(f)$ und  $g_2 \in $supp$(g)$. Nach Voraussetzung sind sowohl supp$(f)$, als auch supp$(g)$ wohlgeordnet. Die Gruppe $G$ ist angeordnet abelsch und wir können die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} anwenden. Die Aussage ist somit bewiesen.\\
+Der Träger der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ kann reduziert werden auf die Elemente $g = g_1 +g_2$ für die gilt, dass $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$ liegt. Andernfalls wäre $a_{g_1}$ oder $b_{g_2}$ gleich null und das Produkt somit ebenso null. Da $G$ eine angeordnete abelsche Gruppe ist und $g_1, g_2 \in G$ sind, ist aufgrund der Abgeschlossenheit der Addition $g = g_1 + g_2 \in G$. Die Existenz der Summe ist nachgewiesen. Die Summe ist ungleich null für alle $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$.\\
+Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist endlich, wenn es nur endlich viele Darstellungen für $g \in G$ in der Form $g = g_1+g_2$ gibt, wobei $g_1 \in$ supp $(f)$ und  $g_2 \in $supp$(h)$. Nach Voraussetzung sind sowohl supp$(f)$, als auch supp$(h)$ wohlgeordnet. Die Gruppe $G$ ist angeordnet abelsch und wir können die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} anwenden. Die Aussage ist somit bewiesen.\\
 %
 %
 %
@@ -848,8 +876,13 @@ Somit ist die Multiplikation zweier formaler Potenzreihen $f,h \in K\left(\left(
 %
 %
 %
-%Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur auf endlich viele Arten möglich ist, wenn Träger der beiden zu multiplizierenden Potenzreihen wohlgeordnet sind. Der Koeffizient $\Lambda$ von $z^a$ sei dann gegeben durch:\\
-%\[\Lambda_a = \Phi_{{a_1}_1}\Psi_{{a_2}_1} + \Phi_{{a_1}_2}\Psi_{{a_2}_2} + ... + \Phi_{{a_1}_n}\Psi_{{a_2}_n}\]
+%Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur auf endlich viele Arten möglich ist, wenn Träger der beiden zu multiplizierenden Potenzreihen wohlgeordnet sind. 
+%TODO. stimmt das mit endliche Teilmenge und so schon??
+\begin{bem}
+Wir haben oben gezeigt,dass die durch Multiplikation entstandene Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ aus \ref{eq: multPotenzreihenkoerper} endlich ist. Deswegen können wir den Koeffizient $\gamma_g$ der Unbestimmten $z^g$ in dem Produkt aus \ref{eq: multPotenzreihenkoerper} für ein festes $g\in G$ explizit darstellen:
+\[\gamma_g = a_{{g_1}_1}b_{{g_2}_1} + a_{{g_1}_2}b_{{g_2}_2} + ... + a_{{g_1}_n}b_{{g_2}_n}\]
+Die Variable $n$ ist Element einer endlichen Teilmenge der natürlichen Zahlen $\N$.
+\end{bem}
 %$\Lambda_a$ sei null, wenn es für $a$ keine Darstellung als Summe der Elemente der Träger von F und G gibt.\\ %
 %
 %
@@ -863,79 +896,156 @@ Insgesamt erhalten wir, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der d
 %
 % 
 %
-%
+%TODO: genauer!
 \begin{bsp}
 Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ wohlgeordnet ist.
 \end{bsp}
 %
+%
+%
+%
+%
+%
+%
+%
 \subsection{Der verallgemeinerte Ring der formalen Potenzreihen} 
-Auf $K\left(\left(z^{G}\right)\right)$, der Menge der formalen Potenzreihen auf der additiven, angeordneten abelschen $\Gamma$ über dem Körper $K$ haben wir nun die Addition und Multiplikation definiert. In der verwendeten Literatur (\cite{priesscrampe83}, \cite{fuchs66}) findet sich die multiplikative Schreibweise der angeordneten Gruppe $\Gamma$, da diese eine noch allgemeinere Definition der Multiplikation zum Beispiel mithilfe von Faktorsystemen ermöglicht. Auf Basis dieser Definition konnte B.H. Neumann 1949 Schiefkörper von formalen Potenzreihen konstruieren. Diese lieferten wichtige Beispiele zur Einordnung der projektiven Ebenen.
-Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem anfangs beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Diese entstehen für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ respektive $\N_0$ handelt. 
-Wir zeigen zunächst, dass $K\left(\left(z^{G}\right)\right)$ ein Ring über K ist.
+Wir haben bisher die Addition und Multiplikation auf $K\left(\left(z^{G}\right)\right)$ definiert. In diesem Abschnitt zeigen wir, dass $K\left(\left(z^{G}\right)\right)$ ein kommutativer Ring über $K$ ist.\\
+In der verwendeten Literatur (\cite{priesscrampe83}, \cite{fuchs66}) findet sich die multiplikative Schreibweise der angeordneten Gruppe $G$. Die multiplikative Schreibweise ermöglicht eine noch allgemeinere Definition der Multiplikation zum Beispiel mithilfe von Faktorsystemen. Auf Basis dieser Definition konnte B.H. Neumann 1949 Schiefkörper von formalen Potenzreihen konstruieren.  \\
+Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Diese entstehen für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ handelt. 
+
 %Sei supp(F)supp(G) :=$ \lbrace a_1, a_2 \in G | \Phi_{a_1} \Psi_{a_2} \neq 0\rbrace.$ Nach der Definition des Trägers folgt, dass die Menge angeordnet ist, denn als Untermenge von $\Gamma$ überträgt sich die Anordnung. Wir müssen zeigen, dass jede Teilmenge von supp(FG) ein kleinstes Element besitzt nach \ref{wohlgeordn}. Nach Definition der Multiplikation in unserem Körper K gilt: \\ 
 %
 %
 \begin{satz}
 $K\left(\left(z^{G}\right)\right)$ ist ein Ring über K. 
 \end{satz}
-\beweis{Es gilt $K\left(\left(z^{G}\right)\right)$ ist eine abelsche Gruppe bezüglich der Addition.
+\beweis{Seien im Folgenden f, h, k $\in K\left(\left(z^{G}\right)\right)$ mit
+\begin{eqnarray*}
+f &=& \sum_{g \in G}^{} a_g z^g, ~~~~~~~ h = \sum_{g \in G}^{} b_g z^g, ~~~~~~~ k = \sum_{g \in G}^{} c_g z^g.
+\end{eqnarray*}
+
+Es gilt $K\left(\left(z^{G}\right)\right)$ ist eine abelsche Gruppe bezüglich der Addition.
+
 \begin{itemize}
-\item \textit{Assoziativität:} Für alle $F, G, H \in K\left(\left(z^{G}\right)\right)
+\item \textit{Assoziativität:} Für alle $f, h, k \in K\left(\left(z^{G}\right)\right)
 $ gilt nach Definition der Addition: 
-\[F+\left(G+H\right) = \sum_{a \in \Gamma}^{} \Phi_a z^a + \left( \sum_{a \in \Gamma}^{} \Psi_a z^a + \sum_{a \in \Gamma}^{} \Lambda_a z^a \right) = \sum_{a \in \Gamma}^{} \Phi_a z^a + \sum_{a \in \Gamma}^{} \left(\Psi_a + \Lambda_a\right) z^a \]
-\[= \sum_{a \in \Gamma}^{} \left(\Phi_a + \Psi_a + \Lambda_a\right) z^a = \sum_{a \in \Gamma}^{} \left(\Phi_a + \Psi_a\right) z^a + \sum_{a \in G}^{} \Lambda_a z^a.\]
-\item \textit{Neutrales Element der Addition:} Bezeichne $e$ das neutrale Element der Addition $e := \sum_{a \in \Gamma}^{} \Phi_a z^a$, wobei ähnlich wie in \ref{Rechnen} gilt $\Phi_a = 0$ für alle $a \in \Gamma$. Der Träger von $e$ ist die leere Menge, welche nach Definition wohlgeordnet ist.
-\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement $F$ gibt es ein inverses Element der Addition $-F := \sum_{a \in \Gamma}^{} -\Phi_a z^a$, wobei supp$(F)$ = supp$(-F)$, mit $F+ F^{-1} = e$.
-\item \textit{Kommutativität:} $K\left(\left(z^{G}\right)\right)$ ist abelsch, da $K$ ein Körper ist und nach Definition der Addition gilt: 
-\[F+ G = \sum_{a \in \Gamma}^{} \Phi_a z^a + \sum_{a \in \Gamma}^{} \Psi_a z^a = \sum_{a \in \Gamma}^{}\left(\Phi_a + \Psi_a\right) z^a \stackrel{\mathrm{\Phi, \Psi \in K}}=\]
-\[ \sum_{a \in \Gamma}^{}\left(\Psi_a + \Phi_a\right) z^a = \sum_{a \in \Gamma}^{} \Psi_a z^a + \sum_{a \in \Gamma}^{} \Phi_a z^a = G + F.\]
+\begin{eqnarray*}
+ f+\left(h+k\right) &= & \sum_{g \in G}^{} a_g z^g + \left( \sum_{g \in G}^{} b_g z^g + \sum_{g \in G}^{}c_g z^g \right) \\
+& =& \sum_{g \in G}^{} a_g z^g + \sum_{g \in G}^{} \left(b_g + c_g\right) z^g \\
+&=& \sum_{g \in G}^{} \left( a_g + b_g + c_g\right) z^g \\
+& =& \sum_{g \in G}^{} \left(a_g + b_g\right) z^g + \sum_{g \in G}^{} c_g z^g.
+\end{eqnarray*}
+
+\item \textit{Neutrales Element der Addition:} Bezeichne $0_K$ das neutrale Element der Addition $0_K = \sum_{g \in G}^{} a_g z^g$, wobei ähnlich wie in \ref{Rechnen} gilt $a_g = 0$ für alle $g \in G$. Der Träger von $0_K$ ist die leere Menge, welche nach Definition wohlgeordnet ist.
+\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein inverses Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ f^{-1} = 0_K$.
+\item \textit{Kommutativität:} 
+$K\left(\left(z^{G}\right)\right)$ ist abelsch bezüglich der Addition, denn es gilt 
+\begin{eqnarray*}
+f+ h &=& \sum_{g \in G}^{} a_gz^g + \sum_{g \in G}^{} b_gz^g 
+= \sum_{g \in G}^{} \left(a_g  + b_g\right) z^g \\
+&\stackrel{\mathrm{(*)}}=& \sum_{g \in G}^{} \left(b_g  + a_g\right) z^g 
+= \sum_{g \in G}^{} b_gz^g +  \sum_{g \in G}^{} a_gz^g \\
+&=& h + f.
+\end{eqnarray*}
+Die Gleichheit in (*) gilt, da $K$ ein Körper ist und $a_g, b_g \in K$ liegen.  
 \end{itemize}
-Die oben definierte Multiplikation in $K\left(\left(z^{G}\right)\right)$ ist kommutativ, wie sich leicht sehen lässt, da für $F, G \in$ K[[$z^\Gamma$]] mit $F := \sum_{a_1 \in \Gamma}^{} {\Phi_a}_1 z^{a_1}$ und $G := \sum_{a_2 \in \Gamma}^{} {\Phi_a}_2 z^{a_2}$ gilt:
-\[FG = \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}z^a = \sum_{a \in \Gamma}^{}\sum_{a_2 + a_1 = a}^{}\Phi_{a_2} \Psi_{a_1}z^a = GF\]
-Die Gleichheit folgt unmittelbar aus der Kommutativität von $\Gamma$ und der Kommutativität der Multiplikation im Körper $K$.\\
-Des weiteren können wir die Assoziativität der Multiplikation nachweisen. Seien F, G, H $\in$ K[[$z^\Gamma$]] mit:
-\[F := \sum_{a_1 \in \Gamma}^{} {\Phi_a}_1 z^{a_1}\]
-\[G := \sum_{a_2 \in \Gamma}^{} {\Psi_a}_2 z^{a_2}\]
-\[H := \sum_{a_3 \in \Gamma}^{} {\Phi_a}_3 z^{a_3} \]
-Zur Bildung des Produkts $(F\cdot G)\cdot H$ beziehungsweise $F\cdot(G\cdot H)$ gilt die Instruktion des Index $a$ des gesuchten Koeffizienten $\Omega$ auf sämtliche Weisen als Summe $a_1 + a_2 + a_3$, beispielsweise: 
-\[{a_1}_1 + {a_2}_1 + {a_3}_1 = {a_1}_2 + {a_2}_2 + {a_3}_2 = ... =  {a_1}_n + {a_2}_n + {a_3}_n.\]
-Dann hat der Koeffizient $\Omega$ die Form: 
-\[\Phi_{{a_1}_1} \Psi_{{a_2}_1} \Lambda_{{a_3}_1} + \Phi_{{a_1}_2} \Psi_{{a_2}_2} \Lambda_{{a_3}_2} + ... + \Phi_{{a_1}_n} \Psi_{{a_2}_n} \Lambda_{{a_3}_n}.\]
-Falls keine Darstellung von $a$ als Summe der Elemente der Träger der Potenzreihen $F, G, H$ existiert, ist $\Omega$ gleich null.\\
-In $K\left(\left(z^{G}\right)\right)$ gelten die Distributivgesetze, denn:
-\begin{enumerate}
-\item[(i)]\[F\cdot(G + H) := \sum_{a \in \Gamma}^{} {\Phi_a} z^{a} \left( \sum_{a \in \Gamma}^{} {\Psi_a} z^{a} +  \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} \right) = \sum_{a \in \Gamma}^{} {\Phi_a} z^{a} \left(\sum_{a \in \Gamma}^{} \left({\Psi_a}+ \Lambda_a\right) z^{a}\right) = \]
-\[\sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} {\left(\Psi + \Lambda\right)}_{a_2}z^a = \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \left(\Psi_{a_2} + \Lambda_{a_2}\right) z^a=\]
-\[\sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Psi_{a_2}z^a + \sum_{a \in \Gamma}^{}\sum_{a_1 + a_2 = a}^{}\Phi_{a_1} \Lambda_{a_2}z^a = FG + FH\]
-\item[(ii)] \[(F + G) \cdot H = \left(\sum_{a \in \Gamma}^{} {\Phi_a} z^{a}  \sum_{a \in \Gamma}^{} {\Psi_a} z^{a}\right) \cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} = \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right)\cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} =\]
-\[ \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} \cdot \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right) =   F\cdot H + G\cdot H\]
-\end{enumerate}  
-In den Beweis der Distributivgesetze und die Gültigkeit der Gleichheit fließen die im Körper $K$ gültige Kommutativität der Multiplikation, die Potenzgesetze, beziehungsweise die Kommutativität der angeordneten abelschen Gruppe $\Gamma$ mit ein. So gilt für alle a, b $\in \Gamma$, dass: 
-\[z^a \cdot z^b = z^{a+b} = z^{b+a} = z^b \cdot z^a.\] 
+%
+%
+%
+%
+%
+%
+Die Menge $K\left(\left(z^{G}\right)\right)$ ist ein kommutatives Monoid bezüglich der oben definierten Multiplikation.
+\begin{itemize}
+\item \textit{Assoziativität:}
+\begin{eqnarray*}
+ f\cdot \left(h \cdot k\right) &= & \sum_{g \in G}^{} a_g z^g \cdot \left( \sum_{g \in G}^{} b_g z^g \cdot \sum_{g \in G}^{}c_g z^g \right) \\
+&=& \sum_{g \in G}^{} a_g z^g \cdot \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{} \left(b_{g_1} \cdot c_{g_2}\right) z^g \\
+&=&  \sum_{g \in G}^{}\sum_{g_3 + g_1 + g_2  = g}^{} a_{g_3} b_{g_1} c_{g_2} z^g \\
+& =& \left(\sum_{g \in G}^{}\sum_{g_3 + g_1 = g}^{} a_{g_3} b_{g_1}z^g\right) \sum_{g \in G}^{}c_g z^g   \\
+&=& \left(fh\right) k .
+\end{eqnarray*}
+%
+%
+%
+%
+%
+%Zur Bildung des Produkts $(F\cdot G)\cdot H$ beziehungsweise $F\cdot(G\cdot H)$ gilt die Instruktion des Index $a$ des gesuchten Koeffizienten $\Omega$ auf sämtliche Weisen als Summe $a_1 + a_2 + a_3$, beispielsweise: 
+%\[{a_1}_1 + {a_2}_1 + {a_3}_1 = {a_1}_2 + {a_2}_2 + {a_3}_2 = ... =  {a_1}_n + {a_2}_n + {a_3}_n.\]
+%Dann hat der Koeffizient $\Omega$ die Form: 
+%\[\Phi_{{a_1}_1} \Psi_{{a_2}_1} \Lambda_{{a_3}_1} + \Phi_{{a_1}_2} \Psi_{{a_2}_2} \Lambda_{{a_3}_2} + ... + \Phi_{{a_1}_n} \Psi_{{a_2}_n} \Lambda_{{a_3}_n}.\]
+%Falls keine Darstellung von $a$ als Summe der Elemente der Träger der Potenzreihen $F, G, H$ existiert, ist $\Omega$ gleich null.\\
+%
+%
+%
+%
+\item \textit{Kommutativität:} Seien $f,h \in K\left(\left(z^{G}\right)\right)$ 
+\[fh = \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g = \sum_{g \in G}^{}\sum_{g_2 + g_1 = g}^{}b_{g_2} a_{g_1}z^g = hf\]
+Die Gleichheit folgt unmittelbar aus der Kommutativität von $G$ und der Kommutativität der Multiplikation im Körper $K$.\\
+\end{itemize}
+
+Wegen der Kommutativität der Multiplikation genügt es ein Distributivgesetz nachzuweisen. Es gilt:
+\begin{eqnarray*}
+f \cdot(h + k) &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} b_g z^g + \sum_{g \in G}^{} c_g z^g\right) \\
+&=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} \left(b_g + c_g\right) z^g \right)\\
+&=& \sum_{g \in G}^{} \sum_{g_1 + g_2 = g}^{} a_{g_1}{\left(b + c\right)}_{g_2} z^g \\
+&=& \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}b_{g_2} + a_{g_1}c_{g_2} z^g \\
+&=& \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}b_{g_2}z^g + \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}c_{g_2} z^g \\
+&=& fh + fk.
+\end{eqnarray*}
+%
+%
+%
+% 
+%
+%\item[(ii)] \[(F + G) \cdot H = \left(\sum_{a \in \Gamma}^{} {\Phi_a} z^{a}  \sum_{a \in \Gamma}^{} {\Psi_a} z^{a}\right) \cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} = \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right)\cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} =\]
+%\[ \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} \cdot \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right) =   F\cdot H + G\cdot H\]
+ 
+In den Beweis der Distributivgesetze und die Gültigkeit der Gleichheit fließen die im Körper $K$ gültige Kommutativität der Multiplikation, die Rechengesetze für die Unbestimmte \ref{Potenzgesetze}, beziehungsweise die Kommutativität der angeordneten abelschen Gruppe $G$ mit ein.  
 }
 %
-\subsection{Die Konstruktion des Inversen in $K\left(\left(z^{G}\right)\right)$ }
+\subsection{Das Inverse in $K\left(\left(z^{G}\right)\right)$ }
 %
 %
 %
 %
 %
-Im vorherigen Abschnitt haben wir gezeigt, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation ein kommutativer Ring ist. 
+Im vorherigen Abschnitt haben wir gezeigt, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation ein kommutativer Ring ist. \\
+In diesem Abschnitt orientieren sich an \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49}.
+Wir benötigen etwas Vorarbeit bevor wir zeigen können, dass zu jeder formalen Potenzreihe ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.
+% 
+%
+%
+%
+%
+%
+\begin{satz}
+Jede formale Potenzreihe $f \in K\left(\left(z^{G}\right)\right)$ lässt sich in der Form  \\
+\[f = \lambda\cdot z^g\cdot \left(1_K + h\right)\text{ für } \lambda \in K, ~g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ und } \text{min}\left(\text{supp}\left(h\right)\right) > 0 \] darstellen.
+\end{satz}
+%
+%
+\beweis{
+Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{\infty}a_g z^g$. Nach Definition einer formalen Potenzreihe ist supp$(f)$ wohlgeordnet und es existiert damit ein kleinstes Element $\gamma\in G$ mit $\gamma=$min(supp$(G))$. Da $G$ eine angeordnete abelsche Gruppe ist, existiert für jedes Element ein additives Inverses. Es gilt:
+\begin{eqnarray*}
+f&=& z^g ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
+&=& z^\gamma \left( 1_K a_\gamma + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} a_{g} z^{g -\gamma}\right) \\
+&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}} z^{g-\gamma}\right),
+\end{eqnarray*}
 
 
 
-Die folgenden Ausführungen orientieren sich an \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49} vor.
+wobei supp($~\sum_{g \in G\setminus \lbrace g \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}} z^{g-\gamma}) \ge 0$ ist.
+Das Inverse zu $a_\gamma$ existiert, da der Koeffizient im Körper $K$ liegt und da $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$ ist. 
+
+
+}
 Wir zeigen zunächst, dass die unendliche Summe des Produkts aus einem beliebigen Körperelement mit einem Element des formalen Potenzreihenrings, mit positivem Träger wohldefiniert ist und wieder in $K\left(\left(z^{G}\right)\right)$ liegt. Dieses Element spielt eine wichtige Rolle zur Konstruktion eines Inversen. Wir definieren die folgende Reihe:
 \[\overline{F} = \sum_{n=0}^{\infty}\lambda_n\cdot F^n, \text{ mit } F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0, \lambda_n \in K^*. \]
 Wieso $\lambda$ eine Einheit und der kleinste Exponent der Unbestimmten $z$, für das der zugehörige Koeffizient ungleich null ist, positiv sein muss, klären wir im Folgenden. Die Potenzreihe $\overline{F}$ kann umgeschrieben werden:
 \[\sum_{n=0}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 F^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n.\] 
-Diese Darstellung erinnert für $\lambda_0 = e$, wobei $e$ das neutrale Element der angeordneten abelschen Gruppe $\Gamma$ ist, an die geometrische Reihe. Jedes Element $G \in K\left(\left(z^{G}\right)\right)$ besitzt eine äquivalente Darstellung durch das Vielfache der Summe des neutralen Gruppenelements und einer formalen Potenzreihe deren Träger positiv ist. Denn für jede formale Potenzreihe $G \in K\left(\left(z^{G}\right)\right)$ mit $G:= \sum_{\gamma \in \Gamma}^{\infty}\Psi_\gamma z^\gamma$ ist supp($G$) wohlgeordnet und es existiert damit ein kleinstes Element $g\in G$ mit $g=$min(supp(G)). Da $\Gamma$ eine angeordnete abelsche Gruppe ist und damit für jedes Element ein additives Inverses existiert, lässt sich $G$ folgendermaßen schreiben
-\[G= z^g ~\sum_{\gamma \in \Gamma} \Psi_{\gamma} z^{\gamma-g}\]
-\[= z^g \left( e \Psi_g + ~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \Psi_{\gamma} z^{\gamma-g}\right) = z^g ~ \Psi_g \left(e + ~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \frac{\Psi_{\gamma}}{{\Psi_g}^{-1}} z^{\gamma-g}\right)\]
-, wobei supp($~\sum_{\gamma \in \Gamma\setminus \lbrace g \rbrace} \frac{\Psi_{\gamma}}{{\Psi_g}^{-1}} z^{\gamma-g}) \ge 0$ ist.
-Das Inverse zu $b_g$ existiert, da der Koeffizient im Körper $K$ liegt und da für $g$ als Minimum des Trägers von $G$ gelten muss, $\Psi_g \neq 0$. 
-Nach dieser Argumentation ist klar ersichtlich, dass sich jede beliebige formale Potenzreihe $G$ aus $K\left(\left(z^{G}\right)\right)$ für $\lambda \in K, ~g \in\Gamma,~F \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(F\right)\right) > 0$ darstellen lässt.
-\[G = \lambda\cdot z^g\cdot \left(e + F\right)\] 
+Diese Darstellung erinnert für $\lambda_0 = e$, wobei $e$ das neutrale Element der angeordneten abelschen Gruppe $\Gamma$ ist, an die geometrische Reihe. Jedes Element $G \in K\left(\left(z^{G}\right)\right)$ besitzt eine äquivalente Darstellung durch das Vielfache der Summe des neutralen Gruppenelements und einer formalen Potenzreihe deren Träger positiv ist. 
+
 
 Wir assozieren jetzt mit jedem Element $F := \sum_{a \in \Gamma} \Phi_a z^a$ des formalen Potenzreihenrings ein Symbol $e+ F$ und betrachten die Menge $\Upsilon$ aller $\mathfrak{F} = e + F$ mit $e$ als neutrales Element von $\Gamma$, $F \in K\left(\left(z^{G}\right)\right)$ und $\text{min}\left(\text{supp}\left(F\right)\right) > 0$. Diese Menge $\Upsilon$ ist eine Gruppe bezüglich der folgenden Verknüpfung \[\left(e+F\right)\left(e+G\right) = e + \left(F+G+FG\right)\]
 , wobei die Operationen zwischen den Ringelementen der Addition und Multiplikation in $K\left(\left(z^{G}\right)\right)$ entsprechen. Die Abgeschlossenheit bezüglich der Multiplikation ist aus deren Definition klar ersichtlich. Das neutrale Element von $\Upsilon$ ist $e$. Mithilfe der geometrischen Reihe konstruieren wir das Inverse zu jedem Gruppenelement $\mathfrak{F}$ und zeigen in \ref{unendlicheSummeinPotenzreihenring}, dass dieses wohldefiniert ist und ein Element des Potenzreihenrings. Nach Definition der geometrischen Reihe gilt:
