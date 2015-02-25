@@ -160,56 +160,7 @@ Ist D $\subseteq \C$ ein Gebiet, so ist der Ring $ \mathcal{O} (D) $ der in $D$ 
 $ M \left(D\right) := $Quot$\left( \mathcal{O} \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \mathcal{O} (D), ~g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert. 
 \end{bsp}
 %
-\section{Einblick in die Bewertungstheorie}
-Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $\left(G,+\right)$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
-%
-%
-\begin{defn} %\cite{priesscrampe83}\label{bew}
-Sei $G$ eine angeordnete abelsche Gruppe. Die surjektive Funktion $v\colon G \rightarrow \Theta$ wird als \textit{Bewertung} bezeichnet, wenn die folgenden Eigenschaften erfüllt sind:
-%
-\begin{enumerate}
-\item[B1:] $v{(a)} = 0 \Leftrightarrow a = 0$ für alle $a\in G$,
-\item[B2:]  $v{(a)} = -v{(a)} \text{  } \text{ für alle } a \in G $,
-\item[B3:] $ v{(a+ b)} \le$ max$\{(v{(a)}, v{(b)}\}$ für alle $ a, b \in G$ .
-\end{enumerate}
-%
-\end{defn}
-Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
- Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $ ist.\\
-Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen mit $[a]$ die archimedische Klasse, in der das Element $a\in G$ liegt. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung 
- \\$G \to [G] \colon a \mapsto [a]$ definieren wir als \textit{natürliche Bewertung}. %\cite{priesscrampe83}
-\begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
-Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
-%TODO: Quelle checken
-\begin{enumerate}
-\item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,
-\item[B2':] $v(ab) = v\left(a\right)+v\left(b\right) $ für alle $ a, b \in K$,
-\item[B3':] $v\left(a+b\right) \ge $ min$\lbrace v(a),v\left(b \right)\rbrace \text{ für alle }  a, b \in K. $
-\end{enumerate}
-\end{defn}
-Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil \ref*{LaurentreiheBewertung} noch erörtert wird. 
-Man bezeichnet $v\colon K \to \overline{G} $ als \textit{diskrete Bewertung}, falls ${G} = \Z$ ist.
-%
-\begin{defn} %nach Priess Crampe S39
-Der Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet, wenn für jedes $a\in K$ gilt $a \in A$ oder $a^{-1}\in A$.
-\end{defn}
-\begin{bem}
-Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist $A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ ein Bewertungsring.
-\end{bem}
-\begin{defn}   %\cite{hulek12}
-Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt und 
-%\begin{enumerate}
-%\item[D1: ]$v(ab) = v(a)+ v(b)$, 
-%\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
-%sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
-%\end{enumerate}
-\[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
-ist der Bewertungsring von $v$ ist.
-\end{defn}
-Eine weitere, äquivalente, Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
-\begin{defn} \label{bewertungsring}%\cite{neukirch92}
-Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen maximalen Ideal $\mathfrak{p}$.
-\end{defn} 
+
 %
 %
 \section{Ordnung in algebraischen Strukturen}
@@ -360,13 +311,13 @@ Die Relation $\grqq\preceq \grqq $ ist eine Wohlordnung auf $\Z$ und wir erhalte
 %Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
 %Teil 2: Zusammenhang angeordnete abelsche Gruppe mit Wohlordnung
 %Teil 3: Satz von Hölder
-In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können. \\
+In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder, der besagt, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können. \\
 %TODO: vielleicht zu ausufernd? Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
 %
 
-%TODO: Kaiser Antwort abwarten.
+% Kaiser Antwort abwarten-> raus
 %\begin{defn} %\cite{priesscrampe83}
 %Eine abelsche Gruppe $\left(G, +\right))$ heißt \textit{teilbar}, wenn zu jedem $a\in G$ und $n \in \N$ ein Element $b \in$ $G$ mit $nb = a$ existiert.
 %\end{defn}
@@ -388,7 +339,7 @@ Eine angeordnete abelsche Gruppe ist ein Tripel $\left(G, +, \leq\right)$, wobei
 %
 %
 \begin{nota}
-Wir verwenden im Hauptteil \ref{chap3} für eine angeordnet abelsche Gruppe $\left(G, +, \leq\right)$ meist vereinfachend die Bezeichnung $G$.
+Wir verwenden im Hauptteil \ref{chap3} für eine angeordnete abelsche Gruppe $\left(G, +, \leq\right)$ meist vereinfachend die Bezeichnung $G$.
 \end{nota}
 
 \begin{bem}\label{angeordnetAbelsch} %\cite{Lueneburg08} 
@@ -413,10 +364,10 @@ Ist eine abelsche Gruppe $G$ mit dem Positivbereich $P$ angeordnet, so definiere
 \section{Wohlordnung in angeordneten abelschen Gruppen}
 Die folgenden Aussagen orientieren sich an der Arbeit $\glqq$A residue theorem for Malcev--Neumann series$\grqq$ von Guoce Xin.
 \begin{satz}\label{wohlgeordnetabnehmendeFolge} 
-Sei $\grqq\le\grqq$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine streng monoton fallende Folge in $W$ gibt.
+Sei $`` \le "$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine streng monoton fallende Folge in $W$ gibt.
 \end{satz}
-\beweis{ $\grqq \Rightarrow\grqq$: Sei W wohlgeordnet. Angenommen es gibt eine streng monoton fallende Folge von Elementen in W, nämlich $a_1 > a_2 > a_3 > ...$. Damit erhalten wir eine Teilmenge $\left( a_i\right)_{i\in \N}$, die kein kleinstes Element besitzt. Dies ist ein Widerspruch zur Wohlordnung von $W$.\\
-$\grqq\Leftarrow\grqq $ Wir nehmen an, es gibt keine streng monoton fallende Folge in $W$ und betrachten den Fall $W$ ist nicht wohlgeordnet. Dann gibt es eine Teilmenge $A$ von $W$, die kein kleinstes Element enthält. Für ein beliebiges Element $a_1 \in A$ finden wir $a_2 \in A$ mit $a_2 < a_1$. Dieses Verfahren lässt sich endlos fortsetzen und wir erhalten eine streng monoton fallende Folge $a_1 > a_2 > a_3 > ...$, Widerspruch.}
+\beweis{ $``\Rightarrow "$: Sei W wohlgeordnet. Angenommen es gibt eine streng monoton fallende Folge von Elementen in W, nämlich $a_1 > a_2 > a_3 > ...$. Damit erhalten wir eine Teilmenge $\left( a_i\right)_{i\in \N}$, die kein kleinstes Element besitzt. Dies ist ein Widerspruch zur Wohlordnung von $W$.\\
+$``\Leftarrow " $ Wir nehmen an, es gibt keine streng monoton fallende Folge in $W$ und betrachten den Fall $W$ ist nicht wohlgeordnet. Dann gibt es eine Teilmenge $A$ von $W$, die kein kleinstes Element enthält. Für ein beliebiges Element $a_1 \in A$ finden wir $a_2 \in A$ mit $a_2 < a_1$. Dieses Verfahren lässt sich endlos fortsetzen und wir erhalten eine streng monoton fallende Folge $a_1 > a_2 > a_3 > ...$, Widerspruch.}
 %Quelle: http://arxiv.org/pdf/math/0405133v1.pdf
 %
 \begin{bsp}\label{TotalGeordnetEndlichIstWOhlgeordnet}
@@ -449,8 +400,8 @@ Bernhard Hermann Neumann ein deutsch-englisch-australischer Mathematiker bewies 
 \begin{lemma}\label{wohlgeordnetwennkeineabfallendeFolge} %\cite{neumann49}
 Die Menge $W$ ist genau dann wohlgeordnet, wenn jede Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus W eine monoton steigende Teilfolge  $w_{\tau(1)} \le w_{\tau(2)} \le ...$ enthält.
 \end{lemma}
-\beweis{$\grqq\Rightarrow\grqq$ Sei die total geordnete Menge $W$ wohlgeordnet. Dann gilt nach Lemma \ref{unendlicheFolgeEigenschaften} und mit Satz \ref{wohlgeordnetabnehmendeFolge}, dass eine Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus $W$ entweder eine streng monoton steigende oder konstante Teilfolge enthält. Jede Folge aus $W$ besitzt daher eine monoton steigende Teilfolge.\\
-$\grqq\Leftarrow\grqq$ Jede Folge von Elementen aus $W$ enthält eine monoton steigende Teilfolge. Angenommen $W$ sei nicht wohlgeordnet. Nach Satz \ref{wohlgeordnetabnehmendeFolge} existiert somit eine streng monoton fallende Folge in $W$. Nach Voraussetzung muss jede Folge eine monoton steigende Teilfolge enthalten. Widerspruch, da eine streng monoton fallende Folge keine monoton steigende Teilfolge enthalten kann.}
+\beweis{$``\Rightarrow "$ Sei die total geordnete Menge $W$ wohlgeordnet. Dann gilt nach Lemma \ref{unendlicheFolgeEigenschaften} und mit Satz \ref{wohlgeordnetabnehmendeFolge}, dass eine Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus $W$ entweder eine streng monoton steigende oder konstante Teilfolge enthält. Jede Folge aus $W$ besitzt daher eine monoton steigende Teilfolge.\\
+$``\Leftarrow "$ Jede Folge von Elementen aus $W$ enthält eine monoton steigende Teilfolge. Angenommen $W$ sei nicht wohlgeordnet. Nach Satz \ref{wohlgeordnetabnehmendeFolge} existiert somit eine streng monoton fallende Folge in $W$. Nach Voraussetzung muss jede Folge eine monoton steigende Teilfolge enthalten. Widerspruch, da eine streng monoton fallende Folge keine monoton steigende Teilfolge enthalten kann.}
 Wir bezeichnen mit $W_G$ die Menge der wohlgeordneten Teilmengen einer angeordneten abelschen Gruppe $G$.
 %
 %
@@ -491,7 +442,7 @@ Seien V, W wohlgeordnete Teilmengen einer angeordneten Gruppe $G$, dann gibt es 
 %
 %
 %
-\section{Archimedisch angeordnete Gruppen}\label{Archimedisch angeordnete Gruppen}
+\section{Archimedisch angeordnete abelsche Gruppen}\label{Archimedisch angeordnete Gruppen}
 %
 Erst seit dem Ende des 19. Jahrhunderts kristallisierte sich die hohe Bedeutung geordneter Strukturen in der Mathematik heraus. Man erkannte, dass das archimedische Axiom unverzichtbar für die nähere Untersuchung dieses Bereichs war, unter anderem spielte es schon eine wichtige Rolle bei der Entwicklung der reellen Zahlen mithilfe des Dedekindschen Schnittes (1872). Genau genommen ermöglicht die archimedische Eigenschaft die Herstellung von Kommutativität und Vollständigkeit. \\ %\cite{hahn07}\\
 Wir orientieren uns an dem Kapitel $\glqq$Angeordnete Gruppen$\grqq$ in \cite[S. 73 - 93]{fuchs66}, sowie Arbeiten von Prieß-Crampe \cite{priesscrampe69}, \cite{priesscrampe83}.
@@ -598,7 +549,7 @@ $n \in \N$ ist $n|a|<|b|$, oder für alle $n \in \N$ ist $n|b| <|a|$.
 %
 %
 \section{Der Satz von Hölder}
-In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der additiven Gruppe der reellen Zahlen mit der Ordnung $\grqq{<}\grqq$ entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (1901)\cite{hoelder1901} zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890\cite[S. 578]{Lueneburg08}.\\
+In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der additiven Gruppe der reellen Zahlen mit der Ordnung $``< "$ entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (1901)\cite{hoelder1901} zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890\cite[S. 578]{Lueneburg08}.\\
 Wir orientieren uns hierbei an \cite{hoelder1901} und \cite{priesscrampe83}. 
 \begin{satz}\label{aga} %\cite{hoelder1901}
 Eine angeordnete abelsche Gruppe ist genau dann archimedisch, wenn sie zu einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist.
@@ -606,8 +557,8 @@ Eine angeordnete abelsche Gruppe ist genau dann archimedisch, wenn sie zu einer 
 %
 %
 \beweis{
-$\grqq\Leftarrow \grqq:$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe $G$ gelten muss. \\
-$\grqq \Rightarrow \grqq:$ Sei $G$ eine angeordnete abelsche Gruppe, $G$ besitzt einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace 0_G\rbrace$, wobei $0_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
+$``\Leftarrow "$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe $G$ gelten muss. \\
+$``\Rightarrow "$ Sei $G$ eine angeordnete abelsche Gruppe, $G$ besitzt einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace 0_G\rbrace$, wobei $0_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
 Somit ist $P$ nicht leer und wir nehmen ein Element $\alpha \in P$ beliebig. Für jedes $g \in G$ definieren wir:
 \[S_g := \lbrace \frac{m}{n} \in \Q^{+} | m, n \in \N, m\alpha \le ng\rbrace\]
 Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p \alpha$. Die Darstellung von $r \in \Q^{+}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r$ in $S_g$ enthalten ist.\\
@@ -628,7 +579,7 @@ Zu (ii): Wir haben bereits gezeigt, dass $S_g$ nicht leer ist. Angenommen $S_g$ 
 Zu (iii): Zunächst beweisen wir die erste Implikation. Sei  $g, h \in P$ und es gilt $g \le h$. Sei $r \in S_g$, $r:= \frac{m}{n}, m, n \in \N $, dann erhalten wir $m\alpha \le ng$. Da $g \le h$ folgt $ m\alpha \le n h$ und damit $r \in S_h$. Die zweite Implikation folgt nach Definition von $\Phi$ offensichtlich.\\
 Sei $\Phi\left(g\right) \le \Phi\left(h\right)$. Angenommen $g > h$, nach der archimedischen Eigenschaft gibt es ein $ n \in \N$ mit $n\left(g-h\right) > 2\alpha$. Wähle $m \in \N$ möglichst klein, mit $m\alpha < nh$. Es gilt $\frac{m}{n} \notin S_h$ und $\frac{m}{n} \geq \Phi\left(h\right)$
 Da m minimal ist, gilt die Ungleichung $\left(m-1\right)\alpha \le nh$ und wir erhalten $ \left(m+1\right)\alpha \le nh + 2\alpha < nh + n(g-h) = ng$ und $\frac{m+1}{n} \in S_g,$ also $\frac{m+1}{n} \leq$ sup$\left(S_g\right) = \Phi\left(g\right)$. Insgesamt ergibt sich $\Phi\left(h\right) \le \frac{m}{n} < \frac{m + 1}{n} \le \Phi\left(g\right)$, Widerspruch.\\
-Zu (iv): Sei $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt $k\alpha < lg $ und $ m\alpha \le nh$. Wir erhalten $kn\alpha \le lng \text{ und } lm\alpha \le lng.$ Somit liegt $r+1 = \frac{kn+lm}{ln}$ in der Menge $S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $\grqq \le\grqq$ durch $\grqq>\grqq$ ersetzt wird.\\
+Zu (iv): Sei $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt $k\alpha < lg $ und $ m\alpha \le nh$. Wir erhalten $kn\alpha \le lng \text{ und } lm\alpha \le lng.$ Somit liegt $r+1 = \frac{kn+lm}{ln}$ in der Menge $S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $``\le "$ durch $``> "$ ersetzt wird.\\
 Zu (v): Als erstes zeigen wir, dass $\Phi\left(g + h\right)$ eine obere Schranke von $S_{g+h}$ ist. Angenommen es gibt ein $r\in S_{g+h}$ mit $r > \Phi\left(g + h\right)$. Wähle $\epsilon = r - \Phi\left(g\right) - \Phi\left(h\right)$ und wähle s, t $\in \Q^{+}$ mit $\Phi(g) < s < \Phi(g) + \frac{\epsilon}{2} \text{ und } \Phi\left(h\right) < t < \Phi\left(h\right) +\frac{\epsilon}{2}$. Insgesamt folgt $s + t < \Phi\left(g\right) + \Phi\left(g\right) + \epsilon = r$. Da $s \notin S_g$ und $t \notin S_h$ gilt $s+t \notin S_{g+h}$ nach (i). Wir erhalten $s+ t \geq \Phi\left(g+h\right) \geq r$ und der Widerspruch $ r \le s+t < r$ zeigt, dass ein derartiges $r$ nicht existieren kann.\\
 Es bleibt zu zeigen, dass $\Phi\left(g + h\right)$ die kleinste obere Schranke von $S_{g+h}$ ist. Angenommen es gäbe eine kleinere obere Schranke $ o \in \R^{+}$ und sei $\epsilon = \Phi(g) + \Phi(h) - o$. Nach Definition der Abbildung gibt es ein $r\in S_g$ mit $r < \Phi(g) - \frac{\epsilon}{2}$ und $ s \in S_h$ mit $s < \Phi(h) - \frac{\epsilon}{2}.$ Nach (iv) ist $r+s$ in $S_{g+h} $ und daher $ r +s \le o$. Widerspruch, da $r+s >\Phi(g) + \Phi(h) - \epsilon = o$.\\
 Zu (vi): Falls $g, h > 0_{G}$ wurde die Äquivalenz $g\le h \Leftrightarrow \Phi(g) + \Phi(h)$ bereits gezeigt. Die Aussage ist offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < 0_G \text{ und } h > 0_G$, dann folgt die Behauptung nach Definition. Die Aussage bleibt für $g, h < 0_G$ zu zeigen: 
@@ -655,7 +606,7 @@ Die Grundaussage dieses Satzes bewies erstmals Hion 1954 in seinem russischsprac
 %
 %
 %
-%
+%TODO ABELSCH MACHEN!!!
 \section{Die angeordnete Menge konvexer Untergruppen}
 In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen teilweise geordneter Gruppen besitzen eine durch die teilweise Gruppenordnung induzierte teilweise Ordnung. Wir bezeichnen die Untergruppen als angeordnet, falls die ursprüngliche teilweise Ordnung ebenso eine Anordnung war.\\
 Sei $\left(G, +\right)$ eine Gruppe, $U$ eine Untergruppe und $g \in G$. 
@@ -664,7 +615,7 @@ Wir untersuchen nun die bezüglich der Inklusion linear angeordnete Menge $\Sigm
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
 Eine Untergruppe $U$ einer angeordneten Gruppe $G$ nennen wir \textit{konvex}, wenn aus $a \in U$, $x \in G$, mit $0 < |x| < |a|$ folgt $x \in U$.\\
 \end{defn}
-$\glqq\Sigma\grqq$ bezeichne nun die \textit{Menge konvexer Untergruppen} einer angeordneten Gruppe $\left(G, +\right)$. 
+$``\Sigma "$ bezeichne nun die \textit{Menge konvexer Untergruppen} einer angeordneten Gruppe $\left(G, +\right)$. 
 \begin{defn}\label{Sprung} %\cite{fuchs66}
 Sei $C, D \in \Sigma$, wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe zwischen $C$ und $D$ enthält, nennen wir das Paar $C,~D$ \textit{Sprung} in $\Sigma$ und bezeichnen es mit $D \prec C$.
 \end{defn}
@@ -687,4 +638,60 @@ Zu S2: Für $g \in C$ ist offensichtlich $g^{-1}Cg = C \in \Sigma$. Falls $g \no
 Zu S3: Nach Voraussetzung gilt $D \prec C$ und offensichtlich erfüllt jedes Element $g \in G$ die Bedingung $g^{-1}D_1g \prec  g^{-1}C_1g$. Weiterhin erhalten wir im Fall $g\in C$, dass  $g^{-1}C_1g = C$, und da $D \subset C$ ist $g^{-1}D_1g = D$. Infolgedessen ist $D$ normal in $C$ und die Faktorgruppe $C/D$ enthält, da in $\Sigma$ keine Untergruppe zwischen $C$ und $D$ existiert, dementsprechend nur die trivialen konvexen Untergruppen. In $C/D$ ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und nach Satz von Hölder \ref{aga} isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.}
 %
 %
-
+%
+%
+%
+%
+%
+%
+%
+\section{Einblick in die Bewertungstheorie}
+Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $\left(G,+\right)$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
+%
+%
+\begin{defn} %\cite{priesscrampe83}\label{bew}
+Sei $G$ eine angeordnete abelsche Gruppe. Die surjektive Funktion $v\colon G \rightarrow \Theta$ wird als \textit{Bewertung} bezeichnet, wenn die folgenden Eigenschaften erfüllt sind:
+%
+\begin{enumerate}
+\item[B1:] $v{(a)} = 0 \Leftrightarrow a = 0$ für alle $a\in G$,
+\item[B2:]  $v{(a)} = -v{(a)} \text{  } \text{ für alle } a \in G $,
+\item[B3:] $ v{(a+ b)} \le$ max$\{(v{(a)}, v{(b)}\}$ für alle $ a, b \in G$ .
+\end{enumerate}
+%
+\end{defn}
+Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
+ Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $ ist.\\
+Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen mit $[a]$ die archimedische Klasse, in der das Element $a\in G$ liegt. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung 
+ \\$G \to [G] \colon a \mapsto [a]$ definieren wir als \textit{natürliche Bewertung}. %\cite{priesscrampe83}
+\begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
+Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
+%TODO: Quelle checken
+\begin{enumerate}
+\item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,
+\item[B2':] $v(ab) = v\left(a\right)+v\left(b\right) $ für alle $ a, b \in K$,
+\item[B3':] $v\left(a+b\right) \ge $ min$\lbrace v(a),v\left(b \right)\rbrace \text{ für alle }  a, b \in K. $
+\end{enumerate}
+\end{defn}
+%Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil \ref*{LaurentreiheBewertung} noch erörtert wird. 
+Man bezeichnet $v\colon K \to \overline{G} $ als \textit{diskrete Bewertung}, falls ${G} = \Z$ ist.
+%
+\begin{defn} %nach Priess Crampe S39
+Der Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet, wenn für jedes $a\in K$ gilt $a \in A$ oder $a^{-1}\in A$.
+\end{defn}
+\begin{bem}
+Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist $A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ ein Bewertungsring.
+\end{bem}
+\begin{defn}   %\cite{hulek12}
+Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt und 
+%\begin{enumerate}
+%\item[D1: ]$v(ab) = v(a)+ v(b)$, 
+%\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
+%sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
+%\end{enumerate}
+\[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
+ist der Bewertungsring von $v$ ist.
+\end{defn}
+Eine weitere, äquivalente, Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
+\begin{defn} \label{bewertungsring}%\cite{neukirch92}
+Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen maximalen Ideal $\mathfrak{p}$.
+\end{defn} 

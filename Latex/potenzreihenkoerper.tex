@@ -750,7 +750,7 @@ In diesem Abschnitt definieren wir die Verknüpfungen auf $K((z^{G}))$. Wir gehe
 %
 %
 \begin{defn}\label{AdditionFormalerPotenzreihen}
-Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
+Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in G}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
 Die Summe zweier formaler Potenzreihen $f, g$ ist definiert durch die Addition der Koeffizientenfolgen:
 %
 \begin{eqnarray*}
@@ -814,7 +814,7 @@ Die distributive Fortsetzung der Multiplikation von Monomen führt zur Definitio
 Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in g}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$. Die Multiplikation zweier formaler Potenzreihen $f, h$ erfolgt durch Faltung: 
 \begin{eqnarray*}\label{eq: multPotenzreihenkoerper}  
 \cdot\colon f\cdot h &=& \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \cdot \sum_{g_2 \in G}^{} b_{g_2} z^{g_2} \\
-&=& \sum_{g \in \Gamma}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g.  
+&=& \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g.  
 \end{eqnarray*} 
 \end{defn}
 %
@@ -1056,33 +1056,139 @@ Es gilt weiterhin $g-\gamma > 0$ für alle $g\in G\setminus\lbrace\gamma\rbrace$
 %
 %
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
-Sei $f\in K\left(\left(z^{G}\right)\right)$ mit $\text{min}\left(\text{supp}\left(f\right)\right) > 0$ und $f=\sum_{g \in G}^{\infty}a_g z^g$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
+Sei $f\in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\text{supp}\left(f\right)\right) > 0$ und $f=\sum_{g \in G}^{\infty}a_g z^g$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
 \begin{eqnarray*}
 h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
 &=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n
 \end{eqnarray*}
-in $K\left(\left(z^{G}\right)\right)$und ist wohldefiniert.
+in $K\left(\left(z^{G}\right)\right)$ und ist wohldefiniert.
 \end{lemma}
-\beweis{Die Reihe $h$ liegt im Potenzreihenring, wenn die Vereinigung der Träger supp($f^n$) wohlgeordnet ist in der Anordnung von G. Weiterhin dürfen für jedes Element des Trägers $a \in $ supp($f$) nur endliche viele ganze Zahlen n existieren, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
-Die erste Bedingung gilt als erfüllt wenn es keine unendlich abfallende Folge gibt
+\beweis{
+%
+Wir unterteilen den Beweis in zwei Blöcke. Die unendliche Reihe $h$, wie im Lemma definiert, liegt genau dann in $K\left(\left(z^{G}\right)\right)$, wenn ihr Träger wohlgeordnet ist. Der Träger supp$(h)$ ist eine Teilmenge der Vereinigung der Träger supp$(f^n)$. Es genügt nachzuweisen, dass 
+\begin{itemize}
+\item[1. ] die Vereinigung der Träger, $\bigcup_{n\in\N}$supp$(f^n)$, ist wohlgeordnet,
+\item[2. ] für ein festes $\gamma\in G$ gibt es nur endliche viele $n \in \N$, sodass ${\left(f^n\right)}_\gamma \neq 0$ ist. Wir schreiben ${\left(f^n\right)}_\gamma = \left({\sum_{g \in G} \sum_{g_1+ ... + g_n =g} a_{g_1}a_{g_2}... a_{g_n}z^g}\right)_\gamma =  \sum_{g_1+ ... + g_n =\gamma} a_{g_1}a_{g_2}... a_{g_n}z^\gamma $
+\end{itemize} 
+%
+%
+%
+%
+%
+%
+zu 1.: Die Bedingung ist erfüllt, wenn es keine streng monoton fallende Folge
+%Die Reihe $h$ liegt im Potenzreihenring, wenn die Vereinigung der Träger supp($f^n$) wohlgeordnet ist in der Anordnung von G. Weiterhin dürfen für jedes Element des Trägers $a \in $ supp($f$) nur endliche viele ganze Zahlen n existieren, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
+
 \begin{equation}\label{eq: folgefürinvers}
-[u_1 = {a_1}_1 +{a_1}_2 + ...+ {{a_1}_n}_1 > u_2 = {a_2}_1 +{a_2}_2 + ...+ {{a_2}_n}_2 > ... > u_i = {a_i}_1 +{a_i}_2 + ...+ {{a_i}_n}_i, 
+u_1 = g_{11} +g_{12} + ...+ g_{1{n_1}} > u_2 = g_{21} +g_{22} + ...+ g_{2n_2} > ... > u_i = g_{i1} +g_{i2} + ...+ g_{in_i} > ..., 
 \end{equation} 
-$\text{mit } \left( {a_i}_k \neq 0 \right)$.
-Wir bezeichnen mit ${a_i}^* =$max$\left( {a_i}_k\right)$ das Maximum über allen k. Offensichtlich entspricht die von $u_i$ erzeugte konvexe Untergruppe, wir bezeichnen sie mit $\langle u_i\rangle$, der von dem größten Element $max_{k}\left({a_i}_k\right)$ konvexen Untergruppe. Die anderen Summanden von $u_i$ sind nach Definition des Maximums kleiner als dieses und liegen aufgrund der Konvexität der Untergruppe in dieser. Also gilt die Gleichheit$\langle u_i\rangle = \langle\text{max}\left({a_i}_k\right)\rangle$. Da der Träger supp($F^n$) wohlgeordnet ist, gibt es unter den erzeugten Untergruppen aller Elemente des Trägers eine kleinste Untergruppe U von $\Gamma$. Die konstruierte Folge \ref{eq: folgefürinvers} ist so gewählt, dass die kleinste Untergruppe möglichst klein ist. Damit bleibt die Ordnung der Folgenglieder auch für die davon erzeugten konvexen Untergruppen erhalten:
-\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ...\]
-Wir nehmen ohne Beschränkung der Allgemeinheit an, dass die von $u_i$, wobei $i$ natürliche Zahlen sind, erzeugten konvexen Untergruppen die gesamte Untergruppe erzeugt. Wir wählen nun aus jeder Folge von ${{a_i}_k}_i$ ein ${a_i}^*$, sodass die von diesem Element erzeugte konvexe Untergruppe den von $u_i$ erzeugten konvexen Untergruppen, eventuell unter weglassen endlich vieler Elemente der Folge, entspricht. Diese ist, wie oben ohne Beschränkung angenommen, ganz $U$. Da unsere Elemente $a$ aus dem Träger der Potenzreihe stammen, kann es zwar mehrere geben, die ganz $U$ erzeugen, allerdings aufgrund der Wohlordnung des Trägers nur ein kleinstes, nennen wir es $a^*$. Die von $a^*$, ${a_1}^*$ und $u_1$ erzeugten konvexen Untergruppen sind nach Annahme gleich. Für die erzeugenden Element gilt jedoch, da $a^*$ das kleinste erzeugende Element ist und $u_1$ den Summanden ${a_1}^*$ enthält, die folgende Ungleichung bezüglich der Anordnung von $G$: 
-\[a^* \le {a_1}^* \le u_1\]
-Aufgrund der Eigenschaften von konvexen Untergruppe einer angeordneten Gruppe existiert ein $p \in \N$ sodass $u_1 \le pa^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt $u_i \le pa^*$ für alle $i \in \N$. Wir wählen $p$ kleinstmöglich.
-Jedes Element unserer anfangs gewählten Folge $u_i$ kann in einer der folgenden Formen geschrieben werden, wobei $v_i$ Summen aus Elementen von ${a_i}_k$ sind:
-\begin{multicols}{2}
-\item $u_i = {a_i}^*$
-\item $u_i = v_i+{a_i}^*$
-\end{multicols}
-Da $\Gamma$ abelsch ist folgt aus diesen beiden Fällen ebenso: $u_i = {a_i}^* + v_i$. Die Elemente ${a_i}^*$ sind Elemente des Trägers und da dieser wohlgeordnet ist, gibt es keine unendlich abnehmende Folge von ${a_i}^*$ und damit existieren nur endlich viele $u_i$ der ersten Form. Da nach Voraussetzung $u_i$ eine unendlich abnehmende Folge ist muss eine unendlich abnehmende Folge $v_i$ existieren: ${v_i}_1 > {v_i}_2 > ... > {v_i}_j > ...$. Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers} und die von $v_i$ erzeugte konvexe Untergruppe entspricht der minimalen von $u_i$ erzeugten konvexen Untergruppe, da $v_i \le u_i$. Wir können also wieder eine natürliche Zahl $q$ finden, sodass $v_i \le q~a^*$ für alle $i \in \N$. Diese natürliche Zahl $q$ ist kleiner gleich dem vorher gewählten $p$, da $v_i \le u_i$ und $u_i \le p~a^*$. Daraus folgt also, dass eine Folge $v_i$ aus $u_i$ konstruiert werden kann, was ein Widerspruch zur Wahl unserer Folge und der Minimaleigenschaft darstellt. Die Vereinigung der Träger supp($F^n$) muss somit wohlgeordnet sein. \\
-Der erste Teil des Lemmas ist bewiesen. Wir nehmen nun an es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $\Gamma$ existieren unendlich viele ganze Zahlen $n \in \N$,sodass \[a = {a_i}_1 +{a_i}_2 + ... + {a_i}_n,~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {a_i}_k \in \text{supp}(F)\]
-da die Vereinigung der Träger supp($F^n$) wohlgeordnet ist existiert ein kleinstes Element $a$ der oben definierten Form. Da supp($F^n$) wohlgeordnet ist, enthält die Folge $\left({a_i}_1\right)_{i\in \N}$ nach \ref{unendlicheFolgeEigenschaften} eine nichtabnehmende unendliche Teilfolge, die wir gleich indizieren:
-\[{a_1}_1 \le {a_i}_1 \le ... \le {a_i}_1 \le ...\] und wir nehmen deshalb an, dass $\left({a_i}_1\right)_{i\in \N}$ nicht wachsend ist. Damit muss die durch $\left(a_i\right)' = -\left({a_i}_1\right) + a = {a_i}_2 + ... + {{a_i}_n}_i,~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant sein. Es gibt also ein $j \in \N$ mit $\left(a_{j+m}\right)' = \left(a_j\right)' = a'$ für alle $m \in \N$. Damit liegt $a'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $a' < a$, da $a' = -\left({a_i}_1\right) + a$ und ${a_i}_1 >e$. Dies ist ein Widerspruch zur Wahl von $a$. Damit existieren nur endlich viele ganze Zahlen $n$ für die $\left(\Phi^n\right)_n \neq 0$ ist.
+$\text{mit } g_{ik} \in \text{supp}(f)\text{, gibt.}$
+%
+%Widerspruchsannahme
+Angenommen es gäbe eine derartige Folge in $\bigcup_n\in\N$ supp$(f^n)$.
+%
+%
+% 
+%
+%
+%Konvexe Untergruppe eines Folgenelements wird von maximum der Summanden erzeugt:
+Da $G$ insbesondere eine angeordnete Gruppe ist können die $g_ik \in G$ angeordnet werden. Wir können ein maximales Element $\max\left( g_{ik}\right)$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_n \in \N \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass
+\[ \langle u_i\rangle = \langle \max_k\left( g_{ik}\right)\rangle \]
+besteht. \\
+%
+%
+%
+%Da Träger supp(F) wohlgeordnet -> gibt es kleinste erzeugt Untergruppe der Elemente des Trägers.
+Der Träger der formalen Potenzreihe $f$ ist nach Voraussetzung wohlgeordnet. Betrachte die Untermengen der von $a \in \text{supp}f$ erzeugten Untergruppe $\langle a \rangle$. Aufgrund der Wohlordnung von supp$(f)$ existiert eine kleinste Untergruppe $U$ von $G$.
+Wir wählen die Untergruppe $U$ möglichst klein.\\
+%
+%
+%
+%
+Offensichtlich gilt wegen der Konvexitätseigenschaft, 
+\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ....\]
+%
+%obda weil es gibt in jeder untermenge kleinste Untergruppe wieso sollte es die nicht schon von Anfang an geben.
+Wir nehmen ohne Beschränkung der Allgemeinheit an, dass
+\[\langle u_i \rangle = U ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
+
+ist.
+%
+%% Offensichtlich entspricht die von $u_i$ erzeugte konvexe Untergruppe, wir bezeichnen sie mit $\langle u_i\rangle$, der von dem größten Element $max_{k}\left({a_i}_k\right)$ konvexen Untergruppe. Die anderen Summanden von $u_i$ sind nach Definition des Maximums kleiner als dieses und liegen aufgrund der Konvexität der Untergruppe in dieser. Also gilt die Gleichheit $\langle u_i\rangle = \langle\text{max}\left({a_i}_k\right)\rangle$. 
+%Da der Träger supp($F^n$) wohlgeordnet ist, gibt es unter den erzeugten Untergruppen aller Elemente des Trägers eine kleinste Untergruppe U von $\Gamma$. Die konstruierte Folge \ref{eq: folgefürinvers} ist so gewählt, dass die kleinste Untergruppe möglichst klein ist. Damit bleibt die Ordnung der Folgenglieder auch für die davon erzeugten konvexen Untergruppen erhalten:
+%\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ...\]
+%
+%
+%
+%
+%
+%
+%
+%
+%Wir nehmen ohne Beschränkung der Allgemeinheit an, dass die von $u_i$, wobei $i$ natürliche Zahlen sind, erzeugten konvexen Untergruppen die gesamte Untergruppe erzeugt. 
+%Wir wählen nun aus jeder Folge von ${{a_i}_k}_i$ ein ${a_i}^*$, sodass die von diesem Element erzeugte konvexe Untergruppe den von $u_i$ erzeugten konvexen Untergruppen, eventuell unter weglassen endlich vieler Elemente der Folge, entspricht. Diese ist, wie oben ohne Beschränkung angenommen, ganz $U$. 
+%
+%
+%
+%
+%
+%Es können mehrere $g\in$supp$(f)$ existieren , kann es mehrere geben, die ganz $U$ erzeugen, allerdings aufgrund der Wohlordnung des Trägers nur ein kleinstes, nennen wir es $a^*$. Die von $a^*$, ${a_1}^*$ und $u_1$ erzeugten konvexen Untergruppen sind nach Annahme gleich. Für die erzeugenden Element gilt jedoch, da $a^*$ das kleinste erzeugende Element ist und $u_1$ den Summanden ${a_1}^*$ enthält, die folgende Ungleichung bezüglich der Anordnung von $G$: 
+%\[a^* \le {a_1}^* \le u_1\]
+%
+%
+%
+%
+%
+%
+Wir wählen nun aus jeder Folge von ${g_{ik}}_i$ ein ${g_i}^*$, sodass $\langle {g_{ik}}_i\rangle = \langle u_i \rangle =  U$ gilt.
+Es können mehrere $g\in$ supp$(f)$ existieren, die die Gleichheit $\langle g\rangle = U$ erfüllen. Aufgrund der Wohlordnung des Trägers supp$(f)$ gibt es unter diesen Elementen, bezüglich der Anordnung von $G$, ein kleinstes, wir bezeichnen es mit $g^*$. 
+Es gilt $g^* \leq {g_1}^* \leq u_1$, wobei $\langle g^*\rangle = \langle {g_1}^* \rangle = \langle u_1\rangle = U$. Die erste Ungleichung erhalten wir aufgrund der Minimalität von $g^*$. Die zweite Ungleichung folgt aus der Definition von $u_1$. \\
+%
+%
+%
+%
+%Konvexitätseigenschaft
+%
+Aufgrund der Eigenschaften von konvexen Untergruppe einer angeordneten Gruppe existiert ein $p \in \N$ sodass $u_1 \le pg^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+\[u_i \le pg^*\text{ für alle }i \in \N.\] 
+
+%
+%
+Aufgrund der Kommutativität der Gruppe $G$ kann die Darstellung der Folge $u_i$ auf die beiden folgenden Fälle eingeschränkt werden
+%
+%
+%Jedes Element unserer anfangs gewählten Folge $u_i$ kann in einer der folgenden Formen geschrieben werden, wobei $v_i$ Summen aus Elementen von ${a_i}_k$ sind:
+%
+%
+% 
+%
+\[
+u_i = {g_i}^*        u_i = v_i+{g_i}^*,
+\]
+wobei $v_i$ bestimmte Summen von $g_{ik}$ bezeichnen. 
+Die Elemente ${g_i}^*$ sind Elemente des Trägers. Nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_i}^*$. Aus diesem Grund und da die Folge ${\left(u_i\right)}_n\in \N$ nach Annahme streng monoton fallend ist, existieren nur endlich viele $u_i$ der ersten Form. \\
+Folglich muss eine streng monoton fallende Folge $v_i$ existieren: ${v_i}_1 > {v_i}_2 > ... > {v_i}_j > ...$. Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle v_i\rangle = U$ ist. Wir wissen, dass $v_i \le u_i$ ist, da $u_i = v_i+{g_i}^*$ gilt. Wir können also wieder eine natürliche Zahl $q = p-1$ finden, sodass $v_i \le q~a^*$ für alle $i \in \N$. \\ 
+Wir haben aus $u_i$ eine Folge konstruiert, die ebenso $\langle v_i\rangle = U$ und $v_i \leq \left(p-1\right)g^*$ erfüllt.
+Dies widerspricht jedoch der Minimalitätseigenschaft von $U$. 
+%
+%
+%Daraus folgt also, dass eine Folge $v_i$ aus $u_i$ konstruiert werden kann, was ein Widerspruch zur Wahl unserer Folge und der Minimaleigenschaft darstellt. 
+Die Vereinigung der Träger supp($F^n$) muss somit wohlgeordnet sein. \\
+%
+%
+%
+%
+Nach Definition \ref{wohlgeordn} und Bemerkung \ref{Teilmengewohlgeordnet} ist supp$(h)$, als Teilmenge der wohlgeordneten Menge $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet.\\
+%
+%
+%
+%
+%
+%
+zu 2.: Wir nehmen nun an es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ existieren unendlich viele ganze Zahlen $n \in \N$,sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
+Die Vereinigung der Träger supp($f^n$) ist wohlgeordnet. Somit existiert ein kleinstes Element $g$ der oben definierten Form. Nach Lemma \ref{unendlicheFolgeEigenschaften} enthält die Folge $\left({g_i}_1\right)_{i\in \N}$ eine streng monoton steigende Teilfolge, die wir gleich indizieren:
+\[g_{11} \le ... \le g_{i1} \le ... . \] 
+Die Folge $g_{i2} + ... + g_{in_i}$ für $i \in \N$ konstant ist. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die $\left(a^n\right)_n \neq 0$ ist.
 }
 %
 %
@@ -1264,7 +1370,7 @@ Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte
 %
 Potenzreihen auf einer angeordneten abelschen Gruppe $G$ mit wohlgeordnetem Träger formen über einem Körper $K$ somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
 Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
-Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $\Gamma = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
+Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $G = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
 %
 %
 %
