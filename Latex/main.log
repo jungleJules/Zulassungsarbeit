@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  25 FEB 2015 18:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  26 FEB 2015 01:44
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1103,65 +1103,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-[8]
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 169.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 169.
-
-[9]
-
-LaTeX Warning: Command \glqq invalid in math mode on input line 177.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 177.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 210.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 210.
-
-[10]
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 230.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 230.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 234.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 234.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 237.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 237.
-
-[11]
-
-LaTeX Warning: Command \glqq invalid in math mode on input line 281.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 281.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 301.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 301.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 304.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 304.
-
-[12]
+[8] [9] [10] [11] [12]
 Kapitel 3.
 
 Class scrbook Warning: Usage of deprecated font command `\rm'!
@@ -1178,12 +1120,6 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 (scrbook)              by `\normalfont \rmfamily ' on input line 310.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 335.
-
-
 LaTeX Warning: Command \glqq invalid in math mode on input line 365.
 
 
@@ -1194,36 +1130,40 @@ LaTeX Warning: Command \grqq invalid in math mode on input line 365.
 
 ] [14]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 399.
+LaTeX Warning: Command \glqq invalid in math mode on input line 420.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 399.
+LaTeX Warning: Command \grqq invalid in math mode on input line 420.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 399.
+Package hyperref Warning: Suppressing link with empty target on input line 420.
 
 
 [15]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 448.
+LaTeX Warning: Command \glqq invalid in math mode on input line 469.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 448.
+LaTeX Warning: Command \grqq invalid in math mode on input line 469.
 
 [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 524--528
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 552.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 552.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--592
+LaTeX Warning: Command \glqq invalid in math mode on input line 573.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 573.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 592--592
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
 
  []
 
@@ -1232,25 +1172,25 @@ File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
 [20]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 603.
+LaTeX Warning: Command \glqq invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 603.
+LaTeX Warning: Command \grqq invalid in math mode on input line 624.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 [21]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 649.
+LaTeX Warning: Command \glqq invalid in math mode on input line 670.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 649.
+LaTeX Warning: Command \grqq invalid in math mode on input line 670.
 
 [22]
-Overfull \hbox (4.65294pt too wide) in paragraph at lines 685--691
+Overfull \hbox (4.65294pt too wide) in paragraph at lines 706--712
 []\T1/cmr/m/n/10.95 Ein In-te-gri-täts-ring $\OML/cmm/m/it/10.95 R$ \T1/cmr/m/n
 /10.95 heiÿt \T1/cmr/m/it/10.95 dis-kre-ter Be-wer-tungs-ring\T1/cmr/m/n/10.95 
 , falls es auf dem Quo-ti-en-ten-kör-per Quot$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
@@ -1258,7 +1198,7 @@ Overfull \hbox (4.65294pt too wide) in paragraph at lines 685--691
  []
 
 [23]
-LaTeX Font Info:    Try loading font information for U+euf on input line 696.
+LaTeX Font Info:    Try loading font information for U+euf on input line 717.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ))
@@ -1286,18 +1226,6 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 178.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 178.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 178.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 178.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 181--182
@@ -1456,7 +1384,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
 Here is how much of TeX's memory you used:
  20586 strings out of 493921
  353031 string characters out of 3144876
- 475289 words of memory out of 3000000
+ 475310 words of memory out of 3000000
  23236 multiletter control sequences out of 15000+200000
  29991 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1494,7 +1422,7 @@ ufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (56 pages, 654334 bytes).
+Output written on main.pdf (56 pages, 654047 bytes).
 PDF statistics:
  1213 PDF objects out of 1440 (max. 8388607)
  215 named destinations out of 1000 (max. 500000)

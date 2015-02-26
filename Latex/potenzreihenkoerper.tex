@@ -1,7 +1,7 @@
 \chapter{Potenzreihenkörper}\label{chap3}
 %
 Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten, wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln, als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden, durch die Folge ihrer Koeffizienten. Die algebraische Sichtweise zieht den neuen Aspekt mit sich, dass grundsätzlich auf Konvergenzbetrachtungen verzichtet wird und dadurch auf beliebigen Körpern und Ringen gearbeitet werden kann. \\
-Diese sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den, in der Funktionentheorie häufig verwendeten, Laurentreihen her. Der Ring formaler Potenzreihen ist ein Integritätsring, woraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper, den die Laurentreihen $K((z))$ formen. \\
+Die sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den, in der Funktionentheorie häufig verwendeten, Laurentreihen her. Der Ring formaler Potenzreihen ist ein Integritätsring, woraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper, den die Laurentreihen $K((z))$ formen. \\
 Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem Träger der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
 
 %Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Anschließend beschäftigen wir uns mit dem Körper der Laurentreihen K((z)), der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem durch Einbettung des Ringes ein Körper entsteht. Der dadurch entstandene Körper wird als \textit{allgemeiner Potenzreihenkörper} bezeichnet. \\ 
@@ -9,7 +9,7 @@ Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem 
 
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
-In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen auf den natürlichen Zahlen. Wir definieren die Verknüpfungen zwischen formalen Potenzreihen und zeigen welche algebraischen Strukturen die Menge der formalen Potenzreihen bildet.
+In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen auf den natürlichen Zahlen. Wir definieren die Verknüpfungen zwischen formalen Potenzreihen und zeigen, welche algebraischen Strukturen die Menge der formalen Potenzreihen bildet.
   
 \begin{defn}
 Eine \textit{formale Potenzreihe} über $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
@@ -169,12 +169,12 @@ Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{j=0}^\infty a
 \begin{satz}\label{potenzreihenringEinheit}
 Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
-\beweis{$\grqq\Leftarrow\grqq$
+\beweis{$``\Leftarrow "$
 Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass das Produkt der formalen Potenzreihen $f, g$ mit $g = \sum_{k=0}^{\infty}b_kz^k$ den Wert $1_K$ annimmt und somit $f$ eine Einheit ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass $f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1$ ist. \\
 Wir beweisen die Rückrichtung mithilfe des Prinzips der Induktion: \\ 
 Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
 Angenommen es existiert ein $ b_k$ mit $ k < n$, sodass alle $a_j b_k$, für $1\le m < n$, gleich $0$ sind. Für den n-ten Koeffizienten ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Bis auf $b_n$ sind alle Werte festgelegt. Da $ a_0$ ungleich $0$ ist, ist die Lösung für $ b_n $ eindeutig. \\
-$\grqq\Rightarrow\grqq $ Es gilt $\sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. $ \\
+$``\Rightarrow "$ Es gilt $\sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. $ \\
 Nach Voraussetzung folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus erhalten wir unmittelbar $ a_0b_0 = 1 $. Somit muss $a_0$ ungleich $0$ sein.}
 %
 %
@@ -183,19 +183,19 @@ Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente s
 Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die inverse Potenzreihe
 $g = \sum_{k=0}^\infty b_k z^k$ ist rekursiv definiert durch
 \begin{equation*}
-b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{n = j +k } a_j b_{k}	 ~~~~~~\forall n\in\N_0.
+b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j +k =n} a_j b_{k}	 ~~~~~~\forall n\in\N_0.
 \end{equation*}
 \end{satz}
 \beweis{Wie im Beweis \ref{potenzreihenringEinheit} verwendet, gilt $a_0b_0 = 1$, woraus $b_0 = \frac{1}{a_0}$ folgt. Für die restlichen Koeffizientenwerte muss dementsprechend
 \begin{equation*}
-\sum_{n=j+k} a_j b_k = 0
+\sum_{j+k=n} a_j b_k = 0
 \end{equation*}
 für alle $n \in \N_0$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
 
 }
 %
 \begin{bsp} %\cite{taraz12}
-Es sei $q \in \R$ beliebig und $A = \sum_{}^{}a_n z^n$ mit $a_n = q^n$ gleich der geometrischen Reihe. Wir bestimmen die inverse Potenzreihe $B = \sum_{}^{} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
+Es sei $q \in \R$ beliebig und $A = \sum_{n=0}^{\infty}a_n z^n$ mit $a_n = q^n$ gleich der geometrischen Reihe. Wir bestimmen die inverse Potenzreihe $B = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
 \begin{center}
 \begin{description}
 \item $b_0 = \frac{1}{a_0} = 1$,
