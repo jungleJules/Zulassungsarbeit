@@ -1,0 +1,169 @@
+﻿Notation:
+was ist der Unterschied zwischen erzeugter und erzeugter konvexer Untergruppe im Symbol?
+
+Einleitung:
+Über die Wohlordnung[kein Komma] führen[statt führt]...
+
+
+
+2 Mathematische Grundlagen
+
+Ordnungen[Komma] die
+
+2.1.1 
+der Satz mit abelsch steht näher an G3 als G4
+G4: "erfüllt ist" weg,
+ stilbruch mit G1 bis G3
+
+
+
+2.1.2
+nicht jede abelsche Gruppe im Skript ist additiv, oder? evtl. schreiben, "wenn nichts anderes gesagt ist, dann ist dies die Verknüpfung..."
+
+
+
+2.1.4 
+U2: bei ab fehlt der Kringel -> evtl machen
+
+
+
+2.1.5
+muss bei einem Ring das Einselement nicht mitdefiniert werden als R4 oder so?
+
+
+
+
+2.1.6
+oben ist es nur ein Ring und unten auf einmal ein Ring mit Eins... etwas komisch/inkonsistent
+
+
+
+
+2.1.8
+... existiert das Inverse und [es] ist ...
+
+
+
+2.1.9
+, R, ... schon etwas ungewöhnlich notiert
+
+
+
+2.1.10
+... +.*zwei Verknüpfungen... fehlt da ein Leerzeichen?
+Assoziativgesetz: Klammer zu viel
+
+
+
+2.1.11
+Integritätsbereich[kein Komma] - glaube ich
+Äquvalenzrelation mit englischen Anfürungszeichen
+Sei ..., wir können also schreiben...  kein deutscher Satz ;)
+
+
+TODO: transitiv erwähnen? evtl kurz hinschreiben, was reflexiv und symmetrisch ist, wenn du schon transitiv so genau beschreibst, oder den Beweis für transitiv weglassen...
+
+
+
+Passt doch oder????                 zweimal definiert
+Quot (R) := R × R \ {0} ∼ 
+
+
+??
+Sei[en] (r1,u1)....
+(r2, u2) - wo kommt das auf einmal her? und wo kommen im Folgenden s und v her?
+
+
+
+2.1.13
+holomorph und meromorph?!?! 
+
+
+
+
+2.2.1
+angeordnete abelsche Gruppe -  angeordnet hier noch nicht definiert
+stimmt B2?
+
+
+ 
+evtl. Beispiel
+der satz mit zweimal bezeichnen ist nicht wirklich ein schönes Deutsch
+
+
+
+
+2.2.2
+folgende[n] Bedingungen
+
+
+TODO: 2.2.3
+muss K eine Bewertung haben, die sich auf A überträgt?
+
+
+
+2.2.5
+hei[ß]t
+und R=... der Bewertungsring von v ist.
+
+
+
+
+2.3.1
+Anführungszeichen
+mit[:] folgende[n]
+
+
+
+
+
+2.3.3 TODO: 
+G2 und G3 beginnen klein geschrieben, sonst war alles groß
+
+
+
+2.3.6
+Anführungszeichen
+c) Leerzeichen fehlt
+
+
+
+2.3.7
+torsionsfrei??
+
+2.3.8
+P1[] - P3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+

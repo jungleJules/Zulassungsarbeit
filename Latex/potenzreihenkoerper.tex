@@ -64,8 +64,7 @@ Sei $G$ eine angeordnete abelsche Gruppe und seien $g_1, g_2 \in G$, dann gilt:
 %
 Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei formale Potenzreihen über $K$. Wir definieren ihre \textit{Summe} $f+g$ folgendermaßen:
 \begin{eqnarray*}
-+ \colon K [[z]] \times K [[z]] \to K[[z]]:&&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) \\
-&=& \sum_{n=0}^{\infty} (a_n + b_n) z^n 
++ \colon K [[z]] \times K [[z]] \to K[[z]]:&&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n 
 \end{eqnarray*}
 %
 %
@@ -74,8 +73,8 @@ Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei f
 %
 Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenannte Faltung:
 \begin{eqnarray*}
-\cdot\colon  K [[z]] \times K [[z]] \to K[[z]]:&& \left( \sum_{j=0}^\infty a_j z^j \right)\cdot \left( \sum_{k=0}^\infty b_k z^k \right) \\
-&=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \\
+\cdot\colon  K [[z]] \times K [[z]] \to K[[z]]: \\
+\left( \sum_{j=0}^\infty a_j z^j \right)\cdot \left( \sum_{k=0}^\infty b_k z^k \right) &=&\sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \\
 &=& \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)z_n
 \end{eqnarray*}
 \end{defn}
@@ -119,7 +118,7 @@ Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunt
  g &=& \sum_{n=0}^\infty  a_nz^n,
  \end{eqnarray*}
 wobei 
- \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N_0\].\\ 
+ \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N \text{ sind. }\]\\ 
 Damit folgt: $ \sum_{j=0}^\infty a_jz^j \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
 Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. Es genügt somit ein Distributivgesetz nachzuweisen. Es gilt
 \begin{eqnarray*}
@@ -137,7 +136,7 @@ wobei (*) aufgrund der Distributivität in $K$ folgt.\\
 %
 %
 %
-\begin{satz} 
+\begin{bem} \label{InversesPotenzreihenRingAussehen}
 Sei $f, g \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$. Wir bezeichnen $g$ als die \textit{Inverse Potenzreihe} von $f$, wenn für
 \begin{eqnarray*}
 fg &=& \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)\\  
@@ -148,17 +147,21 @@ und
 \begin{eqnarray*}
 \sum_{n= 0}^{\infty} c_nz^n \text{, mit } c_n = \sum_{j+k=n} (a_j b_k),
 \end{eqnarray*}
-gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N_0$ ist.
+gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N$ ist.
 %Sei $c_n = \sum_{j+k=n} (a_j b_k)$. Damit das Produkt der Potenzreihen dem neutralen Element der Multiplikation entspricht, müssen alle Koeffizienten mit Indizes größer Null den Wert $0$ annehmen, während $c_0 =1$ gilt. 
-\end{satz}
-\beweis{Sei $h =\sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n$. Wir können beliebig viele Koeffizienten aus dieser Summe herausziehen nach Definition der Addition:
-\begin{eqnarray*}
-h &=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
-&=& a_0b_0z^0 + \sum_{n=1}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
-&=& a_0b_0 + a_1b_1z^1 + \sum_{n=2}^\infty\sum_{j+k=n} (a_j b_k) z^n\\
-&=& ...
-\end{eqnarray*} 
-Nach Definition der formalen Potenzreihe stellt $z$ eine Unbestimmte dar. Man sieht leicht, dass die Summe nur den Wert $1_K$ annimmt, falls $a_0b_0= 1_K$ erfüllt.}
+\end{bem}
+%
+%
+%
+%
+%\beweis{Sei $h =\sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n$. Wir können beliebig viele Koeffizienten aus dieser Summe herausziehen nach Definition der Addition:
+%\begin{eqnarray*}
+%h &=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
+%&=& a_0b_0z^0 + \sum_{n=1}^\infty\sum_{j+k=n} (a_j b_k) z^n \\
+%&=& a_0b_0 + \left(a_0b_1 + a_1b_0\right)z^1 + \sum_{n=2}^\infty\sum_{j+k=n} (a_j b_k) z^n\\
+%&=& ...
+%\end{eqnarray*} 
+%Nach Definition der formalen Potenzreihe stellt $z$ eine Unbestimmte dar. Man sieht leicht, dass die Summe nur den Wert $1_K$ annimmt, falls $a_0b_0= 1_K$ erfüllt.}
 %
 %
 %
@@ -170,32 +173,35 @@ Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{j=0}^\infty a
 Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
 \beweis{$``\Leftarrow "$
-Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass das Produkt der formalen Potenzreihen $f, g$ mit $g = \sum_{k=0}^{\infty}b_kz^k$ den Wert $1_K$ annimmt und somit $f$ eine Einheit ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass $f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1$ ist. \\
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass das Produkt der formalen Potenzreihen $f, g$  den Wert $1_K$ annimmt und somit $f$ eine Einheit ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass $f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1$ ist. \\
 Wir beweisen die Rückrichtung mithilfe des Prinzips der Induktion: \\ 
-Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
-Angenommen es existiert ein $ b_k$ mit $ k < n$, sodass alle $a_j b_k$, für $1\le m < n$, gleich $0$ sind. Für den n-ten Koeffizienten ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Bis auf $b_n$ sind alle Werte festgelegt. Da $ a_0$ ungleich $0$ ist, ist die Lösung für $ b_n $ eindeutig. \\
+Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist, besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
+Nach Induktionsvoraussetzung sind alle $b_0, ..., b_{n-1}$ existieren und bestimmt. Für den n-ten Koeffizienten ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Da $ a_0$ ungleich $0$ ist, existiert die Lösung für $ b_n $. Sie ist eindeutig bestimmt durch $b_n = -\frac{1}{a_0} \sum_{j+k = n, ~j>0~}^{} a_jb_k$. Damit existiert ein eindeutiges Inverses zu $f$ und $f$ ist eine Einheit. \\
 $``\Rightarrow "$ Es gilt $\sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. $ \\
-Nach Voraussetzung folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus erhalten wir unmittelbar $ a_0b_0 = 1 $. Somit muss $a_0$ ungleich $0$ sein.}
+Nach \ref{InversesPotenzreihenRingAussehen} folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus erhalten wir unmittelbar $ a_0b_0 = 1 $. Somit muss $a_0$ ungleich $0$ sein.}
 %
 %
 Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe  konstruieren.\\
-\begin{satz}\label{inverse Potenzreihe}
+\begin{korollar}\label{inverse Potenzreihe}
 Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die inverse Potenzreihe
 $g = \sum_{k=0}^\infty b_k z^k$ ist rekursiv definiert durch
 \begin{equation*}
-b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j +k =n} a_j b_{k}	 ~~~~~~\forall n\in\N_0.
+b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k = n, ~j>0~} a_j b_{k}	 ~~~~~~\forall n\in\N_0.
 \end{equation*}
-\end{satz}
-\beweis{Wie im Beweis \ref{potenzreihenringEinheit} verwendet, gilt $a_0b_0 = 1$, woraus $b_0 = \frac{1}{a_0}$ folgt. Für die restlichen Koeffizientenwerte muss dementsprechend
-\begin{equation*}
-\sum_{j+k=n} a_j b_k = 0
-\end{equation*}
-für alle $n \in \N_0$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
+\end{korollar}
+\beweis{siehe Rückrichtung im Beweis \ref{potenzreihenringEinheit}.
+
+
+%Wie im Beweis \ref{potenzreihenringEinheit} verwendet, gilt $a_0b_0 = 1$, woraus $b_0 = \frac{1}{a_0}$ folgt. Für die restlichen Koeffizientenwerte muss dementsprechend
+%\begin{equation*}
+%\sum_{j+k=n} a_j b_k = 0
+%\end{equation*}
+%für alle $n \in \N_0$ gelten. Es lässt sich leicht nachrechnen, dass das Produkt aus $f$ und der gewählten Potenzreihe $g$ diese Bedingung erfüllt und damit $fg = 1$ gilt. %TODO: evtlf,g ausschreiben und schöner formulieren?
 
 }
 %
 \begin{bsp} %\cite{taraz12}
-Es sei $q \in \R$ beliebig und $A = \sum_{n=0}^{\infty}a_n z^n$ mit $a_n = q^n$ gleich der geometrischen Reihe. Wir bestimmen die inverse Potenzreihe $B = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
+Es sei $0\neq q \in \R$ beliebig und $f = \sum_{n=0}^{\infty}a_n z^n$ mit $a_n = q^n$. Wir bestimmen die inverse Potenzreihe $g = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
 \begin{center}
 \begin{description}
 \item $b_0 = \frac{1}{a_0} = 1$,
@@ -205,7 +211,8 @@ Es sei $q \in \R$ beliebig und $A = \sum_{n=0}^{\infty}a_n z^n$ mit $a_n = q^n$ 
 \item $b_n = -\left(a_1b_{n-1} + a_2b_{n-2} + ... + a_{n-1}b_1 + a_nb_0\right) = -\left(-q^{n-1}(-q) + q^n\right) = 0$.
 \end{description}
 \end{center}
-für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $A(z)$ ist $B(z) := b_0 + b_1z = 1 - qz$. 
+für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $f$ ist $g := b_0 + b_1z = 1 - qz$. \\
+Für $q = 1$ entspricht $f$ der geometrischen Reihe. Diese konvergiert bekanntlich für $|z| < 1$ und es gilt $f = \sum_{n= 0}^{\infty} z^n = \frac{1}{1-z}$.
 %Konvergenz betrachten wir ja nicht!!! Daraus können wir schließen:
 %\[\forall z \in \R \text{ mit } |z| < |\frac{1}{q}|: A(z) = \sum_{}^{}a_n z^n = \frac{1}{1-qz}\] 
 \end{bsp}

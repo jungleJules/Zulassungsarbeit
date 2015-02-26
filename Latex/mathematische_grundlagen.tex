@@ -629,16 +629,16 @@ Die Grundaussage dieses Satzes bewies erstmals Hion 1954 in seinem russischsprac
 %
 %TODO ABELSCH MACHEN!!!
 \section{Die angeordnete Menge konvexer Untergruppen}
-In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen teilweise geordneter Gruppen besitzen eine durch die teilweise Gruppenordnung induzierte teilweise Ordnung. Wir bezeichnen die Untergruppen als angeordnet, falls die ursprüngliche teilweise Ordnung ebenso eine Anordnung war.\\
+In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten abelschen Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen teilweise geordneter Gruppen besitzen eine durch die teilweise Gruppenordnung induzierte teilweise Ordnung. Wir bezeichnen die Untergruppen als angeordnet, falls die ursprüngliche teilweise Ordnung ebenso eine Anordnung war.\\
 Sei $\left(G, +\right)$ eine Gruppe, $U$ eine Untergruppe und $g \in G$. 
 Wir untersuchen nun die bezüglich der Inklusion linear angeordnete Menge $\Sigma$ konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
 
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
-Eine Untergruppe $U$ einer angeordneten Gruppe $G$ nennen wir \textit{konvex}, wenn aus $a \in U$, $x \in G$, mit $0 < |x| < |a|$ folgt $x \in U$.\\
+Eine Untergruppe $U$ einer angeordneten abelschen Gruppe $G$ nennen wir \textit{konvex}, wenn aus $a \in U$, $x \in G$, mit $0 < |x| < |a|$ folgt $x \in U$.\\
 \end{defn}
-$``\Sigma "$ bezeichne nun die \textit{Menge konvexer Untergruppen} einer angeordneten Gruppe $\left(G, +\right)$. 
+$``\Sigma "$ bezeichne nun die \textit{Menge konvexer Untergruppen} einer angeordneten abelschen Gruppe $\left(G, +\right)$. 
 \begin{defn}\label{Sprung} %\cite{fuchs66}
-Sei $C, D \in \Sigma$, wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe zwischen $C$ und $D$ enthält, nennen wir das Paar $C,~D$ \textit{Sprung} in $\Sigma$ und bezeichnen es mit $D \prec C$.
+Sei $C, D \in \Sigma$. Wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe zwischen $C$ und $D$ enthält, nennen wir das Paar $C,~D$ \textit{Sprung} in $\Sigma$ und bezeichnen es mit $D \prec C$.
 \end{defn}
 %
 % 
@@ -649,7 +649,7 @@ Sei $C, D \in \Sigma$, wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe
 Die Menge der konvexen Untergruppen $\Sigma$ besitzt folgende Eigenschaften:
 \begin{enumerate}
 \item[S1:] Die Vereinigung und der Durchschnitt beliebig vieler Untergruppen aus $\Sigma$ liegen wieder in $\Sigma$.
-\item[S2:] Ist $C \in\Sigma$ und $g \in G$, so ist $g^{-1}Cg\in \Sigma$
+\item[S2:] Ist $C \in\Sigma$ und $g \in G$, so ist $-g+C+g\in \Sigma$
 \item[S3:] Sei $D \prec C$ in $\Sigma$, so ist $D$ normal in $C$ und $C/D$ ist isomorph zu einer Untergruppe der reellen Zahlen.
 \end{enumerate}
 \end{satz}
