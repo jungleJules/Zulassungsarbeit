@@ -949,7 +949,7 @@ $ gilt nach Definition der Addition:
 \end{eqnarray*}
 
 \item \textit{Neutrales Element der Addition:} Bezeichne $0_K$ das neutrale Element der Addition $0_K = \sum_{g \in G}^{} a_g z^g$, wobei ähnlich wie in \ref{Rechnen} gilt $a_g = 0$ für alle $g \in G$. Der Träger von $0_K$ ist die leere Menge, welche nach Definition wohlgeordnet ist.
-\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein inverses Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ f^{-1} = 0_K$.
+\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein inverses Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ \left(-f\right) = 0_K$.
 \item \textit{Kommutativität:} 
 $K\left(\left(z^{G}\right)\right)$ ist abelsch bezüglich der Addition, denn es gilt 
 \begin{eqnarray*}
@@ -959,7 +959,7 @@ f+ h &=& \sum_{g \in G}^{} a_gz^g + \sum_{g \in G}^{} b_gz^g
 = \sum_{g \in G}^{} b_gz^g +  \sum_{g \in G}^{} a_gz^g \\
 &=& h + f.
 \end{eqnarray*}
-Die Gleichheit in (*) gilt, da $K$ ein Körper ist und $a_g, b_g \in K$ liegen.  
+Die Gleichheit in (*) gilt, da $K$ ein Körper ist und $a_g, b_g \in K$ sind.  
 \end{itemize}
 %
 %
@@ -975,6 +975,7 @@ Die Menge $K\left(\left(z^{G}\right)\right)$ ist ein kommutatives Monoid bezügl
 &=& \sum_{g \in G}^{} a_g z^g \cdot \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{} \left(b_{g_1} \cdot c_{g_2}\right) z^g \\
 &=&  \sum_{g \in G}^{}\sum_{g_3 + g_1 + g_2  = g}^{} a_{g_3} b_{g_1} c_{g_2} z^g \\
 & =& \left(\sum_{g \in G}^{}\sum_{g_3 + g_1 = g}^{} a_{g_3} b_{g_1}z^g\right) \sum_{g \in G}^{}c_g z^g   \\
+&= &  \left(\sum_{g \in G}^{} a_g z^g \cdot \sum_{g \in G}^{} b_g z^g \right)\cdot \sum_{g \in G}^{}c_g z^g \\
 &=& \left(fh\right) k .
 \end{eqnarray*}
 %
@@ -1000,7 +1001,7 @@ Wegen der Kommutativität der Multiplikation genügt es ein Distributivgesetz na
 \begin{eqnarray*}
 f \cdot(h + k) &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} b_g z^g + \sum_{g \in G}^{} c_g z^g\right) \\
 &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} \left(b_g + c_g\right) z^g \right)\\
-&=& \sum_{g \in G}^{} \sum_{g_1 + g_2 = g}^{} a_{g_1}{\left(b + c\right)}_{g_2} z^g \\
+&=& \sum_{g \in G}^{} \sum_{g_1 + g_2 = g}^{} a_{g_1}{\left(b_{g_2} + c_{g_2}\right)} z^g \\
 &=& \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}b_{g_2} + a_{g_1}c_{g_2} z^g \\
 &=& \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}b_{g_2}z^g + \sum_{g \in G}^{} \sum_{g_1 + g_2= g}^{} a_{g_1}c_{g_2} z^g \\
 &=& fh + fk.
@@ -1024,7 +1025,7 @@ In den Beweis der Distributivgesetze und die Gültigkeit der Gleichheit fließen
 %
 Im vorherigen Abschnitt haben wir gezeigt, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation ein kommutativer Ring ist. \\
 In diesem Abschnitt orientieren wir uns an \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49}.
-Wir benötigen etwas Vorarbeit bevor wir zeigen können, dass zu jeder formalen Potenzreihe ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.
+Wir benötigen etwas Vorarbeit, bevor wir zeigen können, dass zu jeder formalen Potenzreihe ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.
 % 
 %
 %
@@ -1038,7 +1039,7 @@ Jede formale Potenzreihe $0 \neq f \in K\left(\left(z^{G}\right)\right)$ lässt 
 %
 %
 \beweis{
-Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{}a_g z^g$. Nach Voraussetzung ist supp$(f)$ wohlgeordnet. Nach Definition der Wohlordnung existiert ein kleinstes Element $\gamma\in G$ in supp$(f)$ mit $\gamma=$min(supp$(f))$. Da $G$ eine angeordnete abelsche Gruppe ist, existiert für jedes Element ein additives Inverses. Es gilt:
+Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{}a_g z^g$. Nach Voraussetzung ist supp$(f)$ wohlgeordnet. Nach Definition der Wohlordnung existiert ein kleinstes Element $\gamma\in G$ in supp$(f)$ mit $\gamma=$ min(supp$(f))$. Da $G$ eine angeordnete abelsche Gruppe ist, existiert für jedes Element ein additives Inverses. Es gilt:
 \begin{eqnarray*}
 f&=& z^\gamma ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
 &=& z^\gamma \left( 1_K a_\gamma + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} a_{g} z^{g -\gamma}\right) \\
@@ -1098,14 +1099,14 @@ Angenommen es gäbe eine derartige Folge in $\bigcup_{n\in\N}$ supp$(f^n)$.
 %
 %
 %Konvexe Untergruppe eines Folgenelements wird von maximum der Summanden erzeugt:
-Da $G$ insbesondere eine angeordnete Gruppe ist können die $g_ik \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( g_{ik}\right)$, bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass
+Da $G$ insbesondere eine angeordnete Gruppe ist, können die $g_ik \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( g_{ik}\right)$ für jedes $i\in\N$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass
 \[ \langle u_i\rangle = \langle \max_k\left( g_{ik}\right)\rangle \]
 besteht. \\
 %
 %
 %
 %Da Träger supp(F) wohlgeordnet -> gibt es kleinste erzeugt Untergruppe der Elemente des Trägers.
-Der Träger der formalen Potenzreihe $f$ ist nach Voraussetzung wohlgeordnet. Betrachte die Untermengen der von $a \in \text{supp}(f)$ erzeugten Untergruppe $\langle a \rangle$. Aufgrund der Wohlordnung von supp$(f)$ existiert eine kleinste Untergruppe $U$ von $G$.
+Der Träger der formalen Potenzreihe $f$ ist nach Voraussetzung wohlgeordnet. Betrachte die Menge der von $a \in \text{supp}(f)$ erzeugten Untergruppe $\langle a \rangle$. Aufgrund der Wohlordnung von supp$(f)$ existiert eine kleinste Untergruppe $U$ von $G$.
 Wir wählen die Untergruppe $U$ möglichst klein.\\
 %
 %
@@ -1155,7 +1156,7 @@ Es gilt $g^* \leq {g_1}^* \leq u_1$, wobei $\langle g^*\rangle = \langle {g_1}^*
 %
 %Konvexitätseigenschaft
 %
-Aufgrund der Eigenschaften von konvexen Untergruppe einer angeordneten Gruppe existiert ein $p \in \N$ sodass $u_1 \le pg^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+Aufgrund der Eigenschaften von konvexen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le pg^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
 \[u_i \le pg^*\text{ für alle }i \in \N.\] 
 
 %
@@ -1191,10 +1192,10 @@ Nach Definition \ref{wohlgeordn} und Bemerkung \ref{Teilmengewohlgeordnet} ist s
 %
 %
 %
-zu 2.: Wir nehmen nun an es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ unendlich viele ganze Zahlen $n \in \N$, sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
+zu 2.: Wir nehmen nun an, es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ unendlich viele ganze Zahlen $n \in \N$, sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
 Die Vereinigung der Träger supp($f^n$) ist wohlgeordnet. Somit existiert ein kleinstes Element $g$ der oben definierten Form. Nach Lemma \ref{unendlicheFolgeEigenschaften} enthält die Folge $\left({g_i}_1\right)_{i\in \N}$ eine streng monoton steigende Teilfolge, die wir gleich indizieren:
 \[g_{11} \le ... \le g_{i1} \le ... . \] 
-Die Folge $g_{i2} + ... + g_{in_i}$ ist, mit $i \in \N$, konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die $\left(a^n\right)_g \neq 0$ ist.
+Die Folge $g_{i2} + ... + g_{in_i}$ ist, mit $i \in \N$, konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die der Koeffizient der formalen Potenzreihe $\left(a^n\right)_g \neq 0$ ist.
 }
 %
 %
@@ -1222,10 +1223,10 @@ Die Folge $g_{i2} + ... + g_{in_i}$ ist, mit $i \in \N$, konstant. Damit muss di
 %
 %
 \begin{bem}
-Die in Lemma \ref{unendlicheSummeinPotenzreihenring} definierte Reihe $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n$, mit $\lambda_n \in K$ und $\sum_{g \in G}^{\infty}a_g z^g \in K\left(\left(z^{G}\right)\right)$ und  lässt sich aufgrund der Körpereigenschaften folgendermaßen umschreiben:
+Die in Lemma \ref{unendlicheSummeinPotenzreihenring} definierte Reihe $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n$ mit $\lambda_n \in K$ und $f:= \sum_{g \in G}^{\infty}a_g z^g \in K\left(\left(z^{G}\right)\right)$ ist in $K\left(\left(z^{G}\right)\right)$ und lässt sich aufgrund der Körpereigenschaften folgendermaßen umschreiben:
 \begin{eqnarray*}
-\sum_{n=0}^{\infty}\lambda_n\cdot \left(f\right)^n &=& \lambda_0 f^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot f\right)^n \\
-&=& \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot f\right)^n.
+\sum_{n=0}^{\infty}\lambda_n\cdot \left(f\right)^n &=& \lambda_0 f^0 + \sum_{n=1}^{\infty}\lambda_n\cdot \left(f\right)^n \\
+&=& \lambda_0 + \sum_{n=1}^{\infty}\lambda_n\cdot\left( f\right)^n.
 \end{eqnarray*}
 %
 %
@@ -1292,7 +1293,7 @@ Sei $1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und $\m
 liegt in $\Upsilon$ und ist invers zu $1_K + f$.
 
 \end{lemma}
-Sei $\mathfrak{f} = 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ entspricht der Vereinigung der Träger supp$(-f^n)$. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
+\beweis{Sei $\mathfrak{f} = 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ ist in der Vereinigung der Träger supp$(-f^n)$ enthalten. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
 Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ liegt in $\Upsilon$. Die Verknüpfung der beiden Gruppenelemente $\mathfrak{f}$ und $ \overline{\mathfrak{f}}$ hat folgende Form:
 %
 %
@@ -1306,6 +1307,7 @@ Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ l
 &=& 1_K + 1_K = 1_K \\
 &=& \mathfrak{\overline{f}}~\mathfrak{f}
 \end{eqnarray*}
+}
 %
 %
 %
@@ -1320,7 +1322,7 @@ Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ l
 %
 %
 \begin{bem}
-Sei $1_K + f \in \Upsilon$, und $\overline{1_K +\sum_{n=1}^{\infty}(-f)^n}$ das Inverse. Der Träger supp$(f)$ ist größer null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
+Sei $1_K + f \in \Upsilon$, und $\overline{1_K +\sum_{n=1}^{\infty}(-f)^n}$ das Inverse. Der Träger supp$(f)$ ist größer Null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
 \begin{eqnarray*}
 1_K &=& \left(1_K + f\right)\left( 1_K + \sum_{n=1}^{\infty}(-f)^n \right) \Leftrightarrow\\
 \frac{1_K}{1_K + f} &=& 1_K + \sum_{n=1}^{\infty}(-f)^n \Leftrightarrow \\
@@ -1341,7 +1343,7 @@ Mithilfe dieser Erkenntnis und Lemma \ref{JedePotenzreihesoDarstellbar} sind wir
 Die formalen Potenzreihen auf einer angeordneten Gruppe $G$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{f}$ das Inverse von $1_K + f$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $k = \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} \in K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
+Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{f}$ das Inverse von $1_K + f$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ ist in$ K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
 %
 %
 %
@@ -1364,7 +1366,7 @@ f\cdot k
 %
 %
 \begin{bsp}
-Sei $G$ eine archimedisch angeordnete Gruppe. Um den verallgemeinerten Potenzreihenkörper über $K$ angeben zu können benötigen wir eine angeordnete abelsche Gruppe. Nach dem Satz von Hölder \ref{aga} lässt sich jede archimedisch geordnete Gruppe in eine Untergruppe der additiven reellen Zahlen einbetten.
+Sei $G$ eine archimedisch angeordnete Gruppe. Um den verallgemeinerten Potenzreihenkörper über $K$ angeben zu können, benötigen wir eine angeordnete abelsche Gruppe. Nach dem Satz von Hölder \ref{aga} lässt sich jede archimedisch geordnete Gruppe in eine Untergruppe der additiven reellen Zahlen einbetten.
 Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte Potenzreihenkörper auf $G$ über $K$ entsteht also durch Einbettung von $G$ in $K\left(\left(z^\R\right)\right)$
 \end{bsp}
 %
@@ -1375,7 +1377,7 @@ Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte
 %
 %
 Potenzreihen auf einer angeordneten abelschen Gruppe $G$ mit wohlgeordnetem Träger formen über einem Körper $K$ somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
-Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
+Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden, gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
 Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $G = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
 %
 %

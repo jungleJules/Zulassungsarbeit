@@ -1,0 +1,148 @@
+﻿4.3
+nicht nur eine Gruppe ... bilden - nicht nur? wo ist das sondern auch?
+gehört der Apostroph in Mal'cev??
+algebraischen Strukturen[,] die
+
+4.3.1
+[,] wobei
+
+4.3.3
+auf einer angeordnet[en] abelschen Gruppe
+
+4.3.6
+supp(f+g) c supp(f)[Leerzeichen] u supp(h)
+Nach Voraussetzung... a_g0 ... b_g0 - 0en weg!!
+min(supp(f+h)) >= min{...} oder?!?!
+
+sind 4.3.8 und 4.3.9 nötig? schließlich wurde es ja schon analog bei Laurentreihen und 
+Potenzreihen gemacht, wie du eh sagst....
+
+4.3.10
+bei f = ... großes G statt kleinem!
+warum bei f und h nicht gleich g_1 und g_2 wie dann unten?
+
+4.3.11
+das Weglassen machst du doch auch schon die ganze Zeit über... hier finde ich diese 
+Bemerkung überflüssig, evtl. bei Gruppen/Körperdefinition am Anfang....
+
+4.3.12
+supp((f) - klammer zu viel
+g_2 e supp(h) liegt ~ deutsch!
+Die Summe ist ungleich null für alle g1 e supp(f) und g2 e supp(h)???? warum??? (stimmt nicht, glaube ich) -  außerdem null kleinem
+g_2 e [Leerzeichen] supp(h)
+supp(f)[Leerzeichen] + supp(h)
+...Addition in G[kein komma] ebenso ...
+-> insgesamt windet sich der Beweis etwas und du redest viel um den heißen Brei rum, evtl etwas straffen
+
+4.3.13
+Leerzeichen vor dass
+n ist endlich, Teilmenge nicht nötig
+
+4.3.14
+p evtl trotzdem definieren, ungleich 0 usw.
+Minuszeichen evtl vor die Bruchstriche
+
+4.3.15
+inverses Elt: f + (-f)!!
+a_g, b_g e K sind, statt liegen    Kommutativität im Körper K
+Assoz d. Mult: fehlt eig noch letzter Schritt
+Neutrales Elt der Multiplikation?
+Distributivgesetz: (b+c)_g2 eig nicht definiert, auch wenn klar ist, was du meinst, 
+	evtl. besser (b_g2 + c_g2)
+	
+
+4.3.4
+In diesem Abschnitt orientieren sich an - Grammatik
+Vorarbeit[,] bevor
+
+4.3.16
+h = 0 möglich, was ist supp(0)? bzw. min(supp(0))??
+unendlich Zeichen über der Summe weg
+Leerzeichen vor min
+Leerzeichen vor supp(f)
+
+4.3.17
+unendlich Zeichen über der Summe weg - zweimal
+...[ist] wohlgeordnet und...
+
+viel Abstand vor der streng mon fallenden Folge
+U_{n e N} Index Latex fehler, Copy paste unten nochmal
+Satz darauf: Gruppe ist[,] können
+max(g_ik) für jedes i!!! und k läuft
+supp f - Klammern fehlen!
+ich würde formulieren: Betrachte die Menge der von a e supp(f) erzeugten Untergruppen <a>
+... Eigenschaften von konvexen Untergruppe[n]...
+existiert ein p e N[,] sodass
+Abstand zwischen den beiden Fällen! 
+(u_i)_{n e N} Index fehler
+
+zu 2: Wir nehmen nun an[,]...
+	2* existieren
+	vor sodass Leerzeichen
+	unendlich viele ganze Zahlen n e N .... aber in der nächsten Zeile taucht n direkt nicht auf
+	Die Folge gi2+ ... +gin für i e N konstant ist. - Grammatik
+	nächster Satz auch kein Deutsch
+	(a^n)_n ?? wo kommt dieses a auf einmal her?
+	
+4.3.18
+unendlich Zeichen über der Summe weg - zweimal#
+f nicht definiert#
+warum kann das Lambda_n so einfach in die Potenz hineingezogen werden???#
+
+4.3.19
+ein e zu viel#
+
+4.3.20
+kein Beweis?#
+minsupp - Klammern fehlen - mehrmals #
+Der Träger von n=1(􀀀f)n entspricht der Vereinigung der Träger supp(􀀀fn)   - Teilmenge oder????#
+
+4.3.21 
+Null#
+
+4.3.22
+welches k?#
+
+4.3.23
+zu können[,]#
+Körper bilden[,] gelegt#
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
