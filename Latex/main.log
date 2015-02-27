@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  26 FEB 2015 15:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  27 FEB 2015 15:28
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1157,13 +1157,13 @@ LaTeX Warning: Command \glqq invalid in math mode on input line 573.
 
 LaTeX Warning: Command \grqq invalid in math mode on input line 573.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
 
  []
 
@@ -1172,34 +1172,39 @@ File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
 [20]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 624.
+LaTeX Warning: Command \glqq invalid in math mode on input line 664.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 624.
+LaTeX Warning: Command \grqq invalid in math mode on input line 664.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
-
+Overfull \hbox (19.84982pt too wide) in paragraph at lines 664--671
+[]\T1/cmr/m/n/10.95 Die Grund-aus-sa-ge die-ses Sat-zes be-wies Hi-on 1954 in s
+ei-nem rus-sisch-spra-chi-gen Werk $[]$Archimedisch
  []
 
 [21]
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 670.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 670.
+ []
 
 [22]
-Overfull \hbox (4.65294pt too wide) in paragraph at lines 706--712
+
+LaTeX Warning: Command \glqq invalid in math mode on input line 720.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 720.
+
+[23]
+Overfull \hbox (4.65294pt too wide) in paragraph at lines 755--761
 []\T1/cmr/m/n/10.95 Ein In-te-gri-täts-ring $\OML/cmm/m/it/10.95 R$ \T1/cmr/m/n
 /10.95 heiÿt \T1/cmr/m/it/10.95 dis-kre-ter Be-wer-tungs-ring\T1/cmr/m/n/10.95 
 , falls es auf dem Quo-ti-en-ten-kör-per Quot$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
 /10.95 R\OT1/cmr/m/n/10.95 )$
  []
 
-[23]
-LaTeX Font Info:    Try loading font information for U+euf on input line 717.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+LaTeX Font Info:    Try loading font information for U+euf on input line 766.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ))
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
@@ -1232,112 +1237,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-[30] [31] [32] [33]
-Overfull \hbox (4.1264pt too wide) in paragraph at lines 388--388
-\T1/cmr/m/n/10.95 De-fi-ni-ti-on ei-ner for-ma-len Lau-ren-trei-he schrei-ben a
-ls $\OML/cmm/m/it/10.95 f \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 a[]z[] 
-\OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 g \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/1
-0.95 h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 a[]z[] \OT1/cmr/m/n/10.95 
-+$
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
+[30] [31] [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
 
  []
 
 [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 552--552
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 552--552
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 
  []
 
 [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 608--610
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--627
+Underfull \hbox (badness 10000) in paragraph at lines 625--628
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 657--669
+Underfull \hbox (badness 10000) in paragraph at lines 658--670
 
  []
 
 [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 735.
+(hyperref)                removing `math shift' on input line 736.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 735.
+(hyperref)                removing `superscript' on input line 736.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 735.
+(hyperref)                removing `math shift' on input line 736.
 
 [42] [43]
 
-Package hyperref Warning: Suppressing link with empty target on input line 906.
+Package hyperref Warning: Suppressing link with empty target on input line 907.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 906.
+Package hyperref Warning: Suppressing link with empty target on input line 907.
 
 
-[44] [45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+[44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
+
+ []
+
+[46]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\left' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\left' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\right' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\right' on input line 1019.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1019.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
-
- []
-
-
-Overfull \hbox (3.66484pt too wide) in paragraph at lines 1053--1053
+Overfull \hbox (3.66484pt too wide) in paragraph at lines 1052--1052
 \T1/cmr/m/n/10.95 fi-ni-ti-on der Wohl-ord-nung exis-tiert ein kleins-tes Ele-m
 ent $\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \T1/cmr
 /m/n/10.95 in supp$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 
@@ -1346,7 +1343,7 @@ n/10.95 min(supp$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 ))
 $\T1/cmr/m/n/10.95 .
  []
 
-[48] [49] [50] [51] [52])
+[47] [48] [49] [50] [51] [52])
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl [53]
 
 Class scrbook Warning: Usage of deprecated font command `\rm'!
@@ -1381,13 +1378,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 20586 strings out of 493921
- 353058 string characters out of 3144876
- 475339 words of memory out of 3000000
+ 20585 strings out of 493921
+ 353048 string characters out of 3144876
+ 477339 words of memory out of 3000000
  23237 multiletter control sequences out of 15000+200000
  29991 words of font info for 67 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,14n,71p,1091b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,14n,71p,1085b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 eccc1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm0800.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -1421,9 +1418,9 @@ ufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (55 pages, 652917 bytes).
+Output written on main.pdf (55 pages, 652377 bytes).
 PDF statistics:
  1211 PDF objects out of 1440 (max. 8388607)
- 214 named destinations out of 1000 (max. 500000)
+ 213 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
