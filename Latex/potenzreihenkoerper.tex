@@ -186,8 +186,8 @@ Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{n=0}^\infty a
 Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
 \beweis{$``\Leftarrow "$
-Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass das $f\cdot g = 1_K$ ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass 
-\[f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1\] ist. \\
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass 
+\[f\cdot g= \left(\sum_{j=0}^{\infty}a_jz^j\right) \left(\sum_{k=0}^{\infty}b_kz^k\right) = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1\] ist. \\
 Der Beweis erfolgt durch Induktion.  \\ 
 Sei $n=0$, dann ist $\sum_{n=0}\sum_{j+k=n}\left(a_jb_k\right)z^n = \sum\limits_{j+k=0}\left(a_jb_k\right)z^0 = a_0b_01_K = a_0b_0$.
 Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist, besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
@@ -195,7 +195,7 @@ Nach Induktionsvoraussetzung existieren alle $b_0, ..., b_{n-1}$ und sind bereit
 Für den n-ten Koeffizienten des Produkts ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Da $ a_0$ ungleich $0$ ist, existiert die Lösung für $ b_n $. Sie ist eindeutig bestimmt durch 
 \[b_n = -\frac{1}{a_0} \sum_{j+k = n, ~j>0~}^{} a_jb_k.\] Damit existiert ein eindeutiges Inverses zu $f$ und $f$ ist eine Einheit. \\
 $``\Rightarrow "$ Es gilt $\left(\sum_{j=0}^{\infty}a_jz^j\right) \left(\sum_{k=0}^{\infty}b_kz^k \right)= 1. $ \\
-Nach Definition \ref{definitionEinheitNullteiler} folgt, dass die $\sum_{j+k=n}a_jb_k = 0 $ sein muss für $n > 0$ und damit $ a_0b_0 = 1 $ gelten muss. Somit muss $a_0$ ungleich $0$ sein, damit $b_0$ eindeutig bestimmt ist.}
+Nach Definition \ref{definitionEinheitNullteiler} folgt, dass die $\sum_{j+k=n}a_jb_k = 0 $ sein muss für $n > 0$ und damit $ a_0b_0 = 1 $ gelten muss. Somit muss $a_0$ ungleich $0$ sein.}
 %
 %
 Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe  konstruieren.\\
@@ -288,7 +288,7 @@ Das heißt, die Folge $\left(s_n = \sum_{k=0}^{n}a_k{z_0}^k\right)_{n\in\N_0}$ d
 \begin{align}
 s= \sum_{n=0}^{\infty}a_n{z_0}^n
 \end{align}
-Auf der Menge $D$ der Punkte $z_0 \in \C$, für die $\sum_{n=0}^{\infty}a_n{z_0}^n$ konvergiert, wird somit eine Abbildung $z_0 \mapsto \sum_{n=0}^{\infty}a_n{z_0}^n $ definiert. Wir nennen $D$ den \textit{Konvergenzbereich}. Wir bezeichnen die größte Zahl $r \in \R_{geq 0}\cup \infty$ für welche die Potenzreihe für alle $z_0 \in \C$ mit $|z_0| < r$ konvergiert als \textit{Konvergenzradius}. Mit $D(0, r)$ bezeichnen wir die Menge aller Punkte in der offenen Kugel um $0$ für die die Potenzreihe konvergiert.
+Auf der Menge $D$ der Punkte $z_0 \in \C$, für die $\sum_{n=0}^{\infty}a_n{z_0}^n$ konvergiert, wird somit eine Abbildung $z_0 \mapsto \sum_{n=0}^{\infty}a_n{z_0}^n $ definiert. Wir nennen $D$ den \textit{Konvergenzbereich}. Wir bezeichnen die größte Zahl $r \in \R_{geq 0}\cup \infty$, für welche die Potenzreihe für alle $z_0 \in \C$ mit $|z_0| < r$ konvergiert, als \textit{Konvergenzradius}. Mit $D(0, r)$ bezeichnen wir die Menge aller Punkte in der offenen Kugel um $0$ mit Radius $r$, für die die Potenzreihe konvergiert.
 \end{defn}
 
 
@@ -299,7 +299,7 @@ Auf der Menge $D$ der Punkte $z_0 \in \C$, für die $\sum_{n=0}^{\infty}a_n{z_0}
 Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. Die Menge $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
 \end{bem}
 \beweis{Es reicht für $\C\lbrace z \rbrace$ zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
-Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des Radius min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt konvergiert innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $, denn beide Reihen konvergieren absolut. Das Cauchyprodukt existiert, da die Menge der konvergenten Potenzreihen eine Teilmenge des Rings der formalen Potenzreihen ist, auf dem das Cauchyprodukt eindeutig definiert ist. Nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $.} 
+Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des Radius min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt konvergiert innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $, denn beide Reihen konvergieren absolut. Das Cauchyprodukt existiert, da die Menge der konvergenten Potenzreihen eine Teilmenge des Rings der formalen Potenzreihen ist, auf dem das Cauchyprodukt eindeutig definiert ist. Nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt mit Konvergenzradius $r \geq\min\lbrace r_1, r_2\rbrace $.} 
 %
 %
 %
@@ -456,7 +456,7 @@ Also ist $gf = 1_K$ und da $K((z))$, wie bereits gezeigt, ein kommutativer Ring 
 Mithilfe von \ref{quotkoerper} zeigen wir nun, dass der Körper der formalen Laurentreihen dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. 
 %
 \begin{satz}\label{quot}
-Es gilt $K((z)) =$\textup{Quot}$(K[[z]])$.
+Es gilt $K((z)) =~$\textup{Quot}$(K[[z]])$.
 \end{satz}
 \beweis{Nach Konstruktion von $K((z)) $ ist klar, dass $K[[z]]\subseteq K((z)) $. 
 %Genauer Beweis nach schotten:
@@ -469,7 +469,9 @@ Betrachte die Abbildung:\\
 \frac{\sum_{n=m}^{\infty}a_nz^n}{1} & \text{, falls } m\geq 0
 \end{cases}
 \end{eqnarray}
-Die Abbildung ist wohldefiniert im Bezug auf $m$, dem kleinsten Index für den $a_m\neq0$ gilt. Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \le 0$ existiert ein eindeutiges $g \in K[[z]]\subseteq \textup{Quot}K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
+Die Abbildung ist wohldefiniert.
+% im Bezug auf $m$, dem kleinsten Index für den $a_m\neq0$ gilt.
+ Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \le 0$ existiert ein eindeutiges $g \in K[[z]]\subseteq \textup{Quot}K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
 Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunterscheidung nach unserer Definition der Abbildung $\Phi$ nicht explizit durchführen müssen, setzen wir  $z^{-k} = 1$ in beiden Äquivalenzklassen von \ref{eq: isomorphismusQuotientenkörper} falls $k \geq 0$ ist. Durch diese Vereinfachung müssen wir den unteren Fall in \ref{eq: isomorphismusQuotientenkörper} nicht gesondert formulieren. Sei $m\leq l$:\\
 \begin{eqnarray*}
 \Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
@@ -488,7 +490,7 @@ Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir 
 \end{eqnarray*}
 Der Kern der Abbildung besteht aus dem Element $0_K$ und da $\Phi$ ein Homomorphismus ist, erhalten wir die Injektivität.\\
 Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \in$ Quot$\left(K[[z]]\right)$ mit $\sum_{n=l} b_nz^n \neq 0$. \\
-Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann diese Reihe $\sum_{n = 0}^{\infty} c_nz^n $ invertiert werden und wir erhalten
+Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann die Reihe $\sum_{n = 0}^{\infty} c_nz^n $ invertiert werden und wir erhalten
 \begin{eqnarray*}
 q &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \\
 &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{z^l\sum_{n = 0}^{\infty} c_nz^n } \\
@@ -542,7 +544,7 @@ Der Quotientenkörper von  $\C\lbrace z\rbrace$ ist isomorph zum Körper der kon
 \end{satz}
 \beweis{Wir führen den Beweis in zwei Schritten.\\ \\
 \textbf{Zwischenbehauptung: }
-In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar für die $a_0 \neq 0$ gilt.
+In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar, für die $a_0 \neq 0$ gilt.
 
 \beweis{Zunächst konstruieren wir formal das Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
 Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben.
@@ -557,7 +559,7 @@ Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $\left(a_n\right)_{n
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
-Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben.  Wir wählen $C \in R$ mit $ 1<C> \frac{a}{a-1}$. Mithilfe von Induktion beweisen wir, dass   
+Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Wir wählen $C \in R$ mit $ 1<C> \frac{a}{a-1}$. Mithilfe von Induktion beweisen wir, dass   
 \[
 |b_n| \le (aC)^n
 \]
@@ -588,7 +590,7 @@ Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f
 %
 %
 \begin{satz} \label{LaurentreiheBewertung}
-Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung wobei wir $v(\varnothing) = \infty$ setzen.
+Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung, wobei wir $v(\varnothing) = \infty$ setzen.
 \end{satz}
 %
 \beweis{
@@ -597,7 +599,7 @@ Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe 
 Nach Definition \ref{bewKoerper} sind für den Körper $K((z))$ und die angeordnete abelsche Gruppe $\Z$ noch B1'-B3' nachzuweisen. 
 \begin{description}
 \item[\normalfont{zu B1'}]: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
-\item[\normalfont{zu B2'}]: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
+\item[\normalfont{zu B2'}]: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist $v(f) = n_0$ und $v(g) = m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
 Wir wollen zeigen, dass das Bild von $fg$ unter der Abbildung
 \[v(fg) = v( \sum_{n \in \Z}\sum_{m+k=n}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] ist, wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$ gilt. Wir betrachten $ n < n_0 + m_0 $. 
 %Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
@@ -605,7 +607,7 @@ Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch d
 \item[\normalfont{zu B3'}]: Wenn $f, g$ wie oben definiert sind, erhalten wir für $v(f+g)$ die folgende Gleichung: 
 \begin{eqnarray*}
 v\left(f+g\right) &=&  v\left( \sum_{n = \text{min}\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) \\
-&\leq& \min\lbrace n_0,m_0 \rbrace \\ 
+&\geq& \min\lbrace n_0,m_0 \rbrace \\ 
 &\stackrel{\mathrm{def}}=& \min\lbrace v(f), v(g)\rbrace
 \end{eqnarray*}
 \end{description}
