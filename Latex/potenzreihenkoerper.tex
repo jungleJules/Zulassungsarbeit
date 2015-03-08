@@ -1,25 +1,25 @@
 \chapter{Potenzreihenkörper}\label{chap3}
 %
-Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten, wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln, als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden, anhand der Folge ihrer Koeffizienten. In der algebraische Sichtweise wird grundsätzlich auf Konvergenzbetrachtungen verzichtet. Dadurch kann auf beliebigen Körpern und Ringen gearbeitet werden. \\
-Die sogenannten formalen Potenzreihen in einer Unbekannte $z$, auf den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den, in der Funktionentheorie häufig verwendeten, Laurentreihen her. Der Ring der formalen Potenzreihen ist ein Integritätsring. Daraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper $K((z))$, den die Laurentreihen formen. \\
-Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von dem Träger der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
+Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln, als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden anhand der Folge ihrer Koeffizienten. In der algebraische Sichtweise wird grundsätzlich auf Konvergenzbetrachtungen verzichtet. Dadurch kann auf beliebigen Körpern und Ringen gearbeitet werden. \\
+Die sogenannten formalen Potenzreihen in einer Unbekannte $z$ mit Exponenten in den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den in der Funktionentheorie häufig verwendeten Laurentreihen her. Der Ring der formalen Potenzreihen ist ein Integritätsring. Daraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper $K((z))$, den die Laurentreihen formen. \\
+Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von den Eigenschaften der Menge der Exponenten der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen der Träger erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
 
 %Bevor wir mit der allgemeinen Untersuchung von Potenzreihenkörpern beginnen, wird in diesem Kapitel ein wichtiges Beispiel von Ringen eingeführt. Zunächst wird die Menge der formalen Potenzreihen definiert und nachgewiesen, dass es sich bezüglich komponentweiser Addition und Faltung um einen Ring handelt. Anschließend beschäftigen wir uns mit dem Körper der Laurentreihen K((z)), der dem Quotientenkörper des Ringes der formalen Potenzreihen entspricht. Die genauere Analyse der Eigenschaften des Trägers der Elemente des Körpers der Laurentreihen zeigt, dass dieser auch über einer angeordneten Gruppe definiert sein kann und trotzdem durch Einbettung des Ringes ein Körper entsteht. Der dadurch entstandene Körper wird als \textit{allgemeiner Potenzreihenkörper} bezeichnet. \\ 
 \section{Formale Potenzreihen}\label{potenzreihenring}
 
 %
 % kurze einführung in die potenzreihen mit Defintion einer formalen Potenzreihe und Eingliederung in Ring und quotientenkörper.
-In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen auf den natürlichen Zahlen. Wir definieren die Verknüpfungen zwischen formalen Potenzreihen und zeigen, welche algebraischen Strukturen die Menge der formalen Potenzreihen bildet.
+In diesem Abschnitt beschäftigen wir uns mit den formalen Potenzreihen mit Exponenten in den natürlichen Zahlen. Wir definieren die Verknüpfungen zwischen formalen Potenzreihen und zeigen, welche algebraischen Strukturen die Menge der formalen Potenzreihen bildet.
   
 \begin{defn}
-Eine \textit{formale Potenzreihe} über $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
+Eine \textit{formale Potenzreihe} über dem Körper $K$ ist eine Abbildung $\N_0 \rightarrow K$, $n \mapsto a_n$.
 \end{defn}
 \begin{bemnota}
 Wir werden formale Potenzreihen im Folgenden immer als Ausdruck der Form
 \begin{equation}\label{eq: formalepotenzreihe}
 \sum_{n=0}^\infty a_n z^n = a_0 + a_1z + a_2z^1 + a_2z^2 + ...
 \end{equation}
-schreiben, mit $a_n \in K$ für alle $n \in \N_0$.
+schreiben mit $a_n \in K$ für alle $n \in \N_0$.
 Anstelle von $f(z)$ schreiben wir vereinfachend $f$, da wir die Unbestimmte immer mit $z$ bezeichnen.
 \end{bemnota}
 %
@@ -30,7 +30,7 @@ Anstelle von $f(z)$ schreiben wir vereinfachend $f$, da wir die Unbestimmte imme
 %
 %
 \begin{bsp}
-Wichtige Beispiele für formale Potenzreihen aus der Analysis sind Exponential-, Sinus- und Cosinusreihe:
+Wichtige Beispiele für formale Potenzreihen aus der Analysis sind Exponential-, Sinus- und Kosinusreihe:
 \begin{eqnarray*}
 \exp(z) &=& \sum_{n=0}^{\infty} \frac{1}{n!} z^n
 = 1 + z +\frac{1}{2!} z^2 + \frac{1}{3!} z^3 + ... \\ \\
@@ -46,7 +46,7 @@ In formalen Potenzreihen müssen nicht alle Potenzen der Unbestimmten explizit a
 %
 \subsection{Addition und Multiplikation formaler Potenzreihen} \label{Rechnen}
 %Im Folgenden werden Addition und Multiplikation in $K[[z]]$ definiert. Mit diesen Verknüpfungen wird $K[[z]]$ zu dem Ring der formalen Potenzreihen. \\
-Wir bezeichnen die Menge der formalen Potenzreihen in $z$ auf $\N_0$ über $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace. \]
+Wir bezeichnen die Menge der formalen Potenzreihen in $z$ mit Exponenten in $\N_0$ über einem Körper $K$ mit \[K [[z]] = \lbrace \sum_{n=0}^\infty a_n z^n \vert a_n\in K \rbrace. \]
 %Formale Potenzreihen werden komponentenweise addiert.
 %
 %
@@ -64,7 +64,7 @@ Sei $G$ eine angeordnete abelsche Gruppe und seien $g_1, g_2 \in G$, dann gilt:
 %
 Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei formale Potenzreihen über $K$. Wir definieren ihre \textit{Summe} $f+g$ folgendermaßen:
 \begin{eqnarray*}
-+ \colon K [[z]] \times K [[z]] \to K[[z]]:&&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n 
+&&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n 
 \end{eqnarray*}
 %
 %
@@ -73,7 +73,6 @@ Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei f
 %
 Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenannte Faltung:
 \begin{eqnarray*}
-\cdot\colon  K [[z]] \times K [[z]] \to K[[z]]: \\
 \left( \sum_{j=0}^\infty a_j z^j \right)\cdot \left( \sum_{k=0}^\infty b_k z^k \right) &=&\sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \\
 &=& \sum_{n= 0}^\infty \left(a_0b_n + a_1b_{n-1} + a_2b_{n-2} + ... + a_nb_0 \right)z_n
 \end{eqnarray*}
@@ -86,41 +85,55 @@ Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenann
 % 
 \subsection{Der Ring der formalen Potenzreihen}
 %Satz mit obigen Verknüpfungen ist das Potenzreihenring
+%\begin{satz}\label{Potenzreihenring K-algebra}
+%Die Menge $\left(K\lbrack\lbrack z\rbrack\rbrack,+ \right)$ ist eine K-Algebra.
+%\end{satz}
+%
+%
+%
+%
+% 
+%
+%
+%
 \begin{satz}\label{RingFormalerPR}
 Die Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +, \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
 \end{satz}
 \beweis{Wir weisen die Ringaxiome, wie in \ref{Ring} definiert, nach.\\
-Die Assoziativität und Kommutativität der Menge $\left(K\lbrack\lbrack z\rbrack\rbrack, +\right)$ lassen sich leicht nachprüfen.
-Sei $ f = \sum_{n=0}^\infty  a_n z^n$. Das \textit{neutrale Element der Addition} $0_K$ ist die Nullreihe $ g(z) := \sum_{n=0}^\infty  b_n z^n$, wobei $b_n= 0 \text{ für alle n } \in \N_0 $. Denn wir erhalten als Summe von $g$ und $f$: 
- \begin{eqnarray*}
- f + g&=& \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n \\
- &=& \sum_{n=0}^\infty \left(a_n+b_n\right)z^n \\
- &=& \sum_{n=0}^\infty a_nz^n.
- \end{eqnarray*}
-Wir bezeichnen $ -f = \sum_{n=0}^\infty  (-a_n)z^n$ als das \textit{Inverse der Addition}, denn es gilt
- \begin{eqnarray*}
- f + (-f) &=& \sum_{n=0}^\infty  a_nz^n + (\sum_{n=0}^\infty  (-a_n)z^n)\\
- &=& \sum_{n=0}^{\infty}(a_n-a_n)z^n \\
- &=& 0_K.
- \end{eqnarray*}
+Die Assoziativität und Kommutativität der Addition lassen sich leicht nachprüfen.\\
+Das \textit{neutrale Element der Addition} $0_K$ ist die Nullreihe $ g(z) := \sum_{n=0}^\infty  b_n z^n$, wobei $b_n= 0 \text{ für alle n } \in \N_0 $. 
+%Denn wir erhalten als Summe von $g$ und $f$: 
+% \begin{eqnarray*}
+% f + g&=& \sum_{n=0}^\infty a_nz^n + \sum_{n=0}^\infty b_nz^n \\
+% &=& \sum_{n=0}^\infty \left(a_n+b_n\right)z^n \\
+% &=& \sum_{n=0}^\infty a_nz^n.
+% \end{eqnarray*}
+Für $f = \sum_{n=0}^\infty  (a_n)z^n$ ist $ -f = \sum_{n=0}^\infty  (-a_n)z^n$ das \textit{Negative Element der Addition}.
+% \begin{eqnarray*}
+% f + (-f) &=& \sum_{n=0}^\infty  a_nz^n + (\sum_{n=0}^\infty  (-a_n)z^n)\\
+% &=& \sum_{n=0}^{\infty}(a_n-a_n)z^n \\
+% &=& 0_K.
+% \end{eqnarray*}
  \\
 $\left(K\lbrack\lbrack z\rbrack\rbrack, +\right)$ ist daher eine abelsche Gruppe. 
-Die Assoziativität der Multiplikation und die Distributivgesetze rechnen wir nach. \\
-Seien $f, g, h \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$, $g = \sum_{n=0}^\infty b_n z^n$ und $h = \sum_{n=0}^\infty c_n z^n$.
+Die Assoziativität der Multiplikation rechnen wir nach. \\
+Seien $f, g, h \in K\lbrack\lbrack z\rbrack\rbrack$ mit $f = \sum_{n=0}^\infty a_n z^n$, $g = \sum_{n=0}^\infty b_n z^n$ und $h = \sum_{n=0}^\infty c_n z^n$. Es gilt
 \begin{eqnarray*}
 f \cdot \left( g\cdot h\right)& =& f \cdot \sum_{n=0}^\infty \left(\sum_{j+k=n} b_j c_k\right) z^n \\
 &=& \sum_{n=0}^\infty \left(\sum_{l+j+k=n} a_l b_jc_k\right) z^n \\
 &=& \left(\sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n\right) \cdot h \\
 &=& \left(f \cdot g\right) \cdot h.
 \end{eqnarray*} 
-Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunter verstehen wir diejenige Reihe, bei der nur der konstante Koeffizient $a_0 = 1$ und alle anderen gleich $0$ sind: 
- \begin{eqnarray*} 
- g &=& \sum_{n=0}^\infty  a_nz^n,
- \end{eqnarray*}
-wobei 
- \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N \text{ sind. }\]\\ 
-Damit folgt: $ \sum_{n=0}^\infty a_nz^n \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
-Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. Es genügt somit ein Distributivgesetz nachzuweisen. Es gilt
+Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunter verstehen wir diejenige Reihe, bei der nur der konstante Koeffizient $a_0 = 1$ und alle anderen gleich $0$ sind.
+% \begin{eqnarray*} 
+% g &=& \sum_{n=0}^\infty  a_nz^n,
+% \end{eqnarray*}
+%wobei 
+% \[a_0 = 1 \text{ und } a_n = 0 \text{ für alle n } \in \N \text{ sind. }\]\\ 
+%Damit folgt: $ \sum_{n=0}^\infty a_nz^n \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
+Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. 
+%Es genügt somit ein Distributivgesetz nachzuweisen. 
+Es gilt
 \begin{eqnarray*}
 f\cdot \left(g + h\right) &=& f \cdot \sum_{n=0}^\infty \left(b_n + c_n\right) z^n\\
 &=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j \left(b_k +c_k\right)\right) z^n\\
@@ -128,7 +141,7 @@ f\cdot \left(g + h\right) &=& f \cdot \sum_{n=0}^\infty \left(b_n + c_n\right) z
 &=& \sum_{n=0}^\infty \sum_{j+k=n} a_j b_k z^n +\sum_{n=0}^\infty \sum_{j+k=n} a_j c_k z^n\\
 &=& f\cdot g + f\cdot h,
 \end{eqnarray*}
-wobei (*) aufgrund der Distributivität in $K$ folgt.\\
+wobei ($*$) aufgrund der Distributivität in $K$ folgt. Somit gilt das Distributivgesetz.\\
  }
 %
 %
@@ -136,20 +149,20 @@ wobei (*) aufgrund der Distributivität in $K$ folgt.\\
 %
 %
 %
-\begin{bem} \label{InversesPotenzreihenRingAussehen}
-Sei $f, g \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$. Wir bezeichnen $g$ als die \textit{Inverse Potenzreihe} von $f$, wenn für
-\begin{eqnarray*}
-fg &=& \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)\\  
-&\stackrel{\mathrm{def}}=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n\\ 
-\end{eqnarray*}
-%
-und 
-\begin{eqnarray*}
-\sum_{n= 0}^{\infty} c_nz^n \text{, mit } c_n = \sum_{j+k=n} (a_j b_k),
-\end{eqnarray*}
-gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N$ ist.
+%\begin{bem} \label{InversesPotenzreihenRingAussehen}
+%Sei $f, g \in K\lbrack\lbrack z\rbrack\rbrack$, mit $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$. Wir bezeichnen $g$ als die \textit{Inverse Potenzreihe} von $f$, wenn für
+%\begin{eqnarray*}
+%fg &=& \left( \sum_{j=0}^\infty a_j z^j \right) \left( \sum_{k=0}^\infty b_k z^k \right)\\  
+%&\stackrel{\mathrm{def}}=& \sum_{n=0}^\infty\sum_{j+k=n} (a_j b_k) z^n\\ 
+%\end{eqnarray*}
+%%
+%und 
+%\begin{eqnarray*}
+%\sum_{n= 0}^{\infty} c_nz^n \text{, mit } c_n = \sum_{j+k=n} (a_j b_k),
+%\end{eqnarray*}
+%gilt, dass $c_0 =1$ und $c_n = 0$ für alle $n\in\N$ ist.
 %Sei $c_n = \sum_{j+k=n} (a_j b_k)$. Damit das Produkt der Potenzreihen dem neutralen Element der Multiplikation entspricht, müssen alle Koeffizienten mit Indizes größer Null den Wert $0$ annehmen, während $c_0 =1$ gilt. 
-\end{bem}
+%\end{bem}
 %
 %
 %
@@ -173,20 +186,24 @@ Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{n=0}^\infty a
 Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
 \beweis{$``\Leftarrow "$
-Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass das Produkt der formalen Potenzreihen $f, g$  den Wert $1_K$ annimmt und somit $f$ eine Einheit ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass $f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1$ ist. \\
-Wir beweisen die Rückrichtung mithilfe des Prinzips der Induktion: \\ 
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass das $f\cdot g = 1_K$ ist. Wir müssen nun eine entsprechende Potenzreihe $g$ finden, sodass 
+\[f\cdot g= \sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1\] ist. \\
+Der Beweis erfolgt durch Induktion.  \\ 
+Sei $n=0$, dann ist $\sum_{n=0}\sum_{j+k=n}\left(a_jb_k\right)z^n = \sum\limits_{j+k=0}\left(a_jb_k\right)z^0 = a_0b_01_K = a_0b_0$.
 Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. Da $a_0$ ungleich null ist, besitzt die Gleichung eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
-Nach Induktionsvoraussetzung existieren alle $b_0, ..., b_{n-1}$ und sind bereits bestimmt. Für den n-ten Koeffizienten ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Da $ a_0$ ungleich $0$ ist, existiert die Lösung für $ b_n $. Sie ist eindeutig bestimmt durch $b_n = -\frac{1}{a_0} \sum_{j+k = n, ~j>0~}^{} a_jb_k$. Damit existiert ein eindeutiges Inverses zu $f$ und $f$ ist eine Einheit. \\
-$``\Rightarrow "$ Es gilt $\sum_{j=0}^{\infty}a_jz^j \sum_{k=0}^{\infty}b_kz^k = 1. $ \\
-Nach \ref{InversesPotenzreihenRingAussehen} folgt $\sum_{j+k=n}a_jb_k = 0 $ für $n > 0$.  Daraus erhalten wir unmittelbar $ a_0b_0 = 1 $. Somit muss $a_0$ ungleich $0$ sein.}
+Nach Induktionsvoraussetzung existieren alle $b_0, ..., b_{n-1}$ und sind bereits bestimmt. Damit zeigen wir die Induktionsbehauptung, dass $b_n$ existiert und eindeutig definiert ist.\\
+Für den n-ten Koeffizienten des Produkts ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Da $ a_0$ ungleich $0$ ist, existiert die Lösung für $ b_n $. Sie ist eindeutig bestimmt durch 
+\[b_n = -\frac{1}{a_0} \sum_{j+k = n, ~j>0~}^{} a_jb_k.\] Damit existiert ein eindeutiges Inverses zu $f$ und $f$ ist eine Einheit. \\
+$``\Rightarrow "$ Es gilt $\left(\sum_{j=0}^{\infty}a_jz^j\right) \left(\sum_{k=0}^{\infty}b_kz^k \right)= 1. $ \\
+Nach Definition \ref{definitionEinheitNullteiler} folgt, dass die $\sum_{j+k=n}a_jb_k = 0 $ sein muss für $n > 0$ und damit $ a_0b_0 = 1 $ gelten muss. Somit muss $a_0$ ungleich $0$ sein, damit $b_0$ eindeutig bestimmt ist.}
 %
 %
 Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe  konstruieren.\\
 \begin{korollar}\label{inverse Potenzreihe}
-Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die inverse Potenzreihe
-$g = \sum_{k=0}^\infty b_k z^k$ ist rekursiv definiert durch
+Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die Koeffizienten der inversen Potenzreihe
+$g = \sum_{k=0}^\infty b_k z^k$ sind rekursiv definiert durch
 \begin{equation*}
-b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k = n, ~j>0~} a_j b_{k}	 ~~~~~~\forall n\in\N_0.
+b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k = n, ~j>0~} a_j b_{k}	 ~~~~~~\forall n\in \N_0.
 \end{equation*}
 \end{korollar}
 \beweis{siehe Rückrichtung im Beweis \ref{potenzreihenringEinheit}.
@@ -201,7 +218,7 @@ b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k
 }
 %
 \begin{bsp} %\cite{taraz12}
-Es sei $z\in \R$ und $0\neq q \in \R$ beliebig und $f = \sum_{n=0}^{\infty}a_n z^n$ mit $a_n = q^n$. Wir bestimmen die inverse Potenzreihe $g = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
+Es sei $K = \R$ und $0\neq q \in \R$ beliebig und $f = \sum_{n=0}^{\infty}q^n z^n \in \R[[z]]$. Wir bestimmen die inverse Potenzreihe $g = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
 \begin{center}
 \begin{description}
 \item $b_0 = \frac{1}{a_0} = 1$,
@@ -239,35 +256,39 @@ Der Ring $K[[z]]$ ist ein Integritätsring.
 \beweis{ Es ist zu zeigen, dass der Ring nullteilerfrei ist. \\
 Seien $ f = \sum_{n=0}^\infty  a_n z^n \text{ und } g = \sum_{n=0}^\infty  b_n z^n$ mit 
 \begin{eqnarray*}
-f \cdot g &=&  \sum_{n=0}^\infty  a_n z^n \cdot \sum_{n=0}^\infty  b_n z^n
+f \cdot g &=& \left( \sum_{n=0}^\infty  a_n z^n\right) \cdot\left( \sum_{n=0}^\infty  b_n z^n\right)
 = 0.
 \end{eqnarray*} 
-Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$, für alle $n \in \N_0$.\\
-Sei nun o.B.d.A. $\sum_{n=0}^\infty  a_n z^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum_{n=0}^\infty  b_n z^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist.\\ 
-Sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. 
+Nach Definition der Multiplikation gilt $\sum_{j+k=n}a_jb_k = 0$ für alle $n \in \N_0$.\\
+Sei nun o.B.d.A. $\sum_{n=0}^\infty  a_n z^n \neq 0$. Wir zeigen, dass die Potenzreihe $\sum_{n=0}^\infty  b_n z^n$ gleich null ist. Es soll also kein Index $n$ existieren, für den $b_n \neq 0$ ist. Wir beweisen mithilfe von Induktion, dass $b_n = 0$ ist für alle $n \in\N$. \\
+%
+%folgern aus $b_0, b_1,... ,b_{n-1} = 0$ induktiv, dass $b_n=0$ für alle $n \in \N_0$ ist
+%
+Sei $n= 0$ und sei $j$ der erste Index, sodass $a_j \neq 0$ gilt. Man hat 
 \begin{eqnarray*}
 \sum_{i+k=j} a_ib_k = a_0b_j + a_1b_{j-1} + ... + a_jb_0 = a_jb_0 \stackrel{\mathrm{Vor.}}= 0. % da k+l=k
 \end{eqnarray*} 
 Da $a_j \neq 0$ ist, muss $b_0=0$ gelten. \\
-Seien jetzt $ b_0,..., b_{n-1}= 0$. Wir erhalten
+Angenommen die Behauptung gilt für alle Indizes $j\in \N$ mit $j \leq n-1$. Dann gilt $ b_0,..., b_{n-1}= 0$. Wir erhalten
 \begin{eqnarray*}
 \sum_{i+k=j+n} a_ib_{k} &=& a_0b_{j+n} + a_1b_{j+(n-1)} + ... +a_jb_n + a_{j+1}b_{n-1} + ... + a_{j+n}b_0\\
 &=& a_jb_n + a_{j+1}b_{n-1} + ... + a_{j+n}b_0= a_jb_n \stackrel{\mathrm{Vor.}}= 0.
-\end{eqnarray*} Da $a_j\neq 0$ ist folgt $b_n= 0$. 
+\end{eqnarray*}
+Da $a_j\neq 0$ ist folgt $b_n= 0$. 
 }
 %
 %
 %TODO: nochmal checken ob das stimmt, sowohl oberes als auch Konvergenzdefinition
-Da Konvergenzbetrachtungen nur im Körper der reellen und komplexen Zahlen Sinn machen, beschränken wir uns in folgendem Satz auf $\C$.  
+Nun werden konvergente Potenzreihen über dem Körper $\C$ betrachtet. 
 %
 %
 \begin{defn}\label{konvergenz}
 Eine Potenzreihe $f = \sum_{n= 0}^{\infty}a_nz^n \in \C[[z]]$ heißt \textit{konvergent}, wenn es ein $z_0\in \C$ mit $z_0 \neq 0$ gibt, sodass $\sum_{n=0}^{\infty}a_n{z_0}^n$ als Reihe in $\C$ konvergiert. \\
-Das heißt, die Folge $s_n = \sum_{k=0}^{n}a_k{z_0}^k$ der Partialsummen ist konvergent und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
+Das heißt, die Folge $\left(s_n = \sum_{k=0}^{n}a_k{z_0}^k\right)_{n\in\N_0}$ der Partialsummen ist konvergent, und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
 \begin{align}
 s= \sum_{n=0}^{\infty}a_n{z_0}^n
 \end{align}
-Auf der Menge $D$ der Punkte $z_0 \in \C$ für die $\sum_{n=0}^{\infty}a_n{z_0}^n$ konvergiert, wird somit eine Abbildung $z_0 \mapsto \sum_{n=0}^{\infty}a_n{z_0}^n $ definiert. Wir nennen $D$ den \textit{Konvergenzbereich}.
+Auf der Menge $D$ der Punkte $z_0 \in \C$, für die $\sum_{n=0}^{\infty}a_n{z_0}^n$ konvergiert, wird somit eine Abbildung $z_0 \mapsto \sum_{n=0}^{\infty}a_n{z_0}^n $ definiert. Wir nennen $D$ den \textit{Konvergenzbereich}. Wir bezeichnen die größte Zahl $r \in \R_{geq 0}\cup \infty$ für welche die Potenzreihe für alle $z_0 \in \C$ mit $|z_0| < r$ konvergiert als \textit{Konvergenzradius}. Mit $D(0, r)$ bezeichnen wir die Menge aller Punkte in der offenen Kugel um $0$ für die die Potenzreihe konvergiert.
 \end{defn}
 
 
@@ -277,8 +298,8 @@ Auf der Menge $D$ der Punkte $z_0 \in \C$ für die $\sum_{n=0}^{\infty}a_n{z_0}^
 \begin{bem}\label{konvergentUnterring}
 Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. Die Menge $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
 \end{bem}
-\beweis{Wir haben bereits in \ref{intring} gezeigt, dass $\C[[z]$ ein Integritätsring ist. Nun bleibt für $\C\lbrace z \rbrace$ noch zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
-Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des Radius min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt besitzt denselben Konvergenzradius, da beide Reihen im Radius min$\lbrace r_1, r_2\rbrace $ absolut konvergieren und nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt gegen den gleichen Wert.} 
+\beweis{Es reicht für $\C\lbrace z \rbrace$ zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
+Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des Radius min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt konvergiert innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $, denn beide Reihen konvergieren absolut. Das Cauchyprodukt existiert, da die Menge der konvergenten Potenzreihen eine Teilmenge des Rings der formalen Potenzreihen ist, auf dem das Cauchyprodukt eindeutig definiert ist. Nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $.} 
 %
 %
 %
@@ -316,10 +337,10 @@ Eine \textit{formale Laurentreihe} über dem Körper $K$ ist eine Abbildung $f \
 \begin{nota}
 Wir werden Laurentreihen im Folgenden meist als Reihe der Form
 \begin{equation*}
-\sum_{n= - k}^{\infty}a_nz^n \text{ mit } k \in \Z, n \ge -k \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N_0 
+\sum_{n= k}^{\infty}a_nz^n \text{ mit } k \in \Z, n \ge k \text{ und }a_n \in\textit{K}\text{ für alle } n\in\N_0 
 \end{equation*} 
 schreiben.
-Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
+Dabei bezeichnet $\sum_{n=k}^{-1}a_{n}z^{n}$ den Hauptteil, $\sum_{n=0}^{\infty}a_nz^n$ den Nebenteil der Laurentreihe. 
 \end{nota}
 %
 %
@@ -334,7 +355,7 @@ Dabei bezeichnet $\sum_{n=1}^{k}a_{-n}z^{-n}$ den Hauptteil, $\sum_{n=0}^{\infty
 %
 % 
 \begin{defn}\label{traeger}
-Der \textit{Träger} einer Laurentreihe $f = \sum_{n =m}^{\infty} a_nz^n \in K((z))$ ist folgendermaßen definiert: 
+Der \textit{Träger} einer Laurentreihe $f = \sum_{n =k}^{\infty} a_nz^n \in K((z))$ ist folgendermaßen definiert: 
 \[\text{supp}(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace.\] 
 \end{defn}
 %
@@ -354,14 +375,14 @@ Unter einem Träger einer Laurentreihe versteht man den Definitionsbereich der F
 Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann.
 Wir bezeichnen die Menge der formalen Laurentreihen in $z$ auf $\Z$ über $K$ mit
 \begin{equation*} %TODO: konsistent, passt das?
-K((z)) = \lbrace \sum_{n =-m}^{\infty} a_nz^n \vert a_n \in K, m \in \Z\rbrace
+K((z)) = \lbrace \sum_{n =k}^{\infty} a_nz^n \vert a_n \in K, k \in \Z\rbrace
 \end{equation*} 
 Die Addition und Multiplikation formaler Laurentreihen erfolgt analog zur Addition und Multiplikation formaler Potenzreihen.
 \begin{defn}
-Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=-k}^\infty a_n z^n$ und $g= \sum_{n=-m}^\infty b_n z^n$, werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
+Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=k}^\infty a_n z^n$ und $g= \sum_{n=m}^\infty b_n z^n$, werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
 %
 \begin{eqnarray}
-&+& \colon \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
+\sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
 \end{eqnarray}
 %
 %Eine derartige Darstellung existiert, da $\text{K}((z)) $ als Quotientenkörper von K[[z]] definiert ist, wie in \ref{quot} gezeigt wird. \\
@@ -369,7 +390,7 @@ Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=-k}^\infty a_n z^n$ und $
 Die Multiplikation erfolgt durch Faltung der Laurentreihen.
 \begin{eqnarray}
 \label{eq: multiplikationLaurent}
-\cdot \colon \sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
+\sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
 \end{eqnarray}
 %
 
@@ -381,11 +402,12 @@ Diese Forderung ist unverzichtbar, denn andernfalls wäre die Summe $\sum_{i+j=n
 \end{bem}
 
 \begin{satz}\label{traegerwohlgeordnet}
-Sei $f \in K((z))$ eine formale Laurentreihe mit endlichem Hauptteil. Dann gilt, der Träger der Laurentreihe ist wohlgeordnet.
+Sei $f \in K((z))$ eine formale Laurentreihe. Dann ist der Träger der Laurentreihe ist wohlgeordnet.
 \end{satz}
 \beweis{
-Sei $f\in K((z))$ eine formale Laurentreihe, die obige Bedingung erfüllt. Wir können $f$ nach der Definition einer formalen Laurentreihe schreiben als $f = \sum_{n= - k}^{\infty}a_nz^n = \sum_{n=1}^{k}a_{-n}z^{-n} + \sum_{n=0}^{\infty}a_nz^n = g + h$. Wie in \ref{OrdnungNundZ} gezeigt, ist die Menge der ganzen Zahlen $\Z$ total geordnet. Der Hauptteil $h$ jeder formalen Laurentreihe besteht aus endlich vielen Summanden, was die Wohlordnung von supp($h$), dem Trägers des Hauptteils, impliziert (wir erinnern an \ref{TotalGeordnetEndlichIstWOhlgeordnet}). Der Träger des Nebenteils, supp($g$), ist aufgrund der Wohlordnung der natürlichen Zahlen wohlgeordnet. \\
-Für supp$(f)$ gilt trivialerweise, dass er der Vereinigung von supp($g$) und supp($h$) entspricht. Unter Verwendung von Satz \ref{wohlgeordnvereinigung} erhalten wir die Wohlordnung des Trägers der formalen Laurentreihe. 
+Sei $f\in K((z))$ eine formale Laurentreihe. Es gilt supp$(f)$ ist eine Teilmenge der ganzen Zahlen. Nach Definition einer formalen Laurentreihe ist supp$(f)$ nach unten beschränkt. Daraus folgt mithilfe von \ref{teilmengeGanzeZahlenwohlgeordnet} die Behauptung.
+%, die obige Bedingung erfüllt. Wir können $f$ nach der Definition einer formalen Laurentreihe schreiben als $f = \sum_{n= - k}^{\infty}a_nz^n = \sum_{n=1}^{k}a_{-n}z^{-n} + \sum_{n=0}^{\infty}a_nz^n = g + h$. Wie in \ref{OrdnungNundZ} gezeigt, ist die Menge der ganzen Zahlen $\Z$ total geordnet. Der Hauptteil $h$ jeder formalen Laurentreihe besteht aus endlich vielen Summanden, was die Wohlordnung von supp($h$), dem Trägers des Hauptteils, impliziert (wir erinnern an \ref{TotalGeordnetEndlichIstWOhlgeordnet}). Der Träger des Nebenteils, supp($g$), ist aufgrund der Wohlordnung der natürlichen Zahlen wohlgeordnet. \\
+%Für supp$(f)$ gilt trivialerweise, dass er der Vereinigung von supp($g$) und supp($h$) entspricht. Unter Verwendung von Satz \ref{wohlgeordnvereinigung} erhalten wir die Wohlordnung des Trägers der formalen Laurentreihe. 
 }
 %
 %
@@ -402,7 +424,7 @@ Abschließend konstruieren wir mithilfe der Wohlordnung des Trägers eine Bewert
 \begin{satz}
 Die Menge $\left(K((z)), + \cdot\right)$ ist mit obigen Verknüpfungen ein kommutativer Ring.
 \end{satz}
-\beweis{Es genügt das Nachrechnen der Ringaxiome. Der Beweis verläuft ähnlich zu \ref{RingFormalerPR}.
+\beweis{Es genügt das Nachrechnen der Ringaxiome. Das neutrale Element der Addition ist die Nullreihe $\sum_{n=k}^{\infty} a_kz^k$ mit $a_n = 0$ für alle $n \geq k$. Das neutrale Element der Multiplikation ist die Einsreihe $\sum_{n=k}^{\infty}a_kz^k$ mit $a_0 = 1$ und $a_n = 0$ für alle $0 \neq n \geq k$. Der Beweis der verbleibenden Bedingungen verläuft ähnlich zu \ref{RingFormalerPR}.
 }
 %
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
@@ -410,13 +432,17 @@ $\left(K((z)), + \cdot\right)$ ist mit der definierten Addition und Multiplikati
 \end{satz}
 \beweis{ Sei $0 \neq f \in K((z))$ und $f = \sum_{n= m}^{\infty} a_nz^n$, mit $a_n\neq 0$ für alle $n \geq m$.
 %Dann gibt es ein $i \in \Z$, sodass $f = \sum_{n= i}^{\infty}a_nz^n$ für alle $n \in \Z $ mit $n \geq i$ ungleich Null ist und für alle $n < i$ gleich Null ist. 
-Wir wissen bereits $K((z))$ ist ein kommutativer Ring. Um zu zeigen, dass $K((z))$ ein Körper ist, genügt es zu beweisen, dass zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existiert. Wir definieren $g \in K((z))$ rekursiv und zeigen, dass die so entstandene Laurentreihe invers zu $f$ ist. Die Konstruktion von $g$ läuft ähnlich zur Konstruktion der inversen Potenzreihe in Satz \ref{inverse Potenzreihe}. \\
-Setze $g = \sum_{n= -m}^{\infty} b_nz^n$ mit $b_n = 0_K$ für alle $n < -m$ und $b_{-m} = \frac{1}{a_m}.$ Sei $l \in \N_0$ und $b_{-m},..., b_{-m+l-1}$ bereits definiert.  Wir wählen $b_{-m+l} = - \frac{1}{a_m} \sum_{n= -m}^{-m+l-1} b_na_{l-n}$. Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
+Wir wissen bereits $K((z))$ ist ein kommutativer Ring. 
+%Um zu zeigen, dass $K((z))$ ein Körper ist, genügt es zu beweisen, dass zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existiert. 
+Wir definieren das Inverse $g \in K((z))$ rekursiv und zeigen, dass die so entstandene Laurentreihe invers zu $f$ ist. Die Konstruktion von $g$ läuft ähnlich zur Konstruktion der inversen Potenzreihe in Satz \ref{inverse Potenzreihe}. \\
+Setze $g = \sum_{n= -m}^{\infty} b_nz^n$ mit $b_n = 0_K$ für alle $n < -m$ und $b_{-m} = \frac{1}{a_m}.$ Sei $l \in \N_0$ und $b_{-m},..., b_{-m+l-1}$ bereits definiert.  Wir wählen 
+\[b_{-m+l} = - \frac{1}{a_m} \sum_{n= -m}^{-m+l-1} b_na_{l-n}.\]
+Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
 \begin{eqnarray*}
 b_la_l &=& \sum_{n = m-m}^{\infty}\sum_{k+j=n}^{}\left(a_k \cdot b_j\right) z^n  \\
 &=& \sum_{n = -m}^{-m + l} b_na_{l-n}.
 \end{eqnarray*}  
-Für $l= 0 $ folgt \\$b_0a_0 = b_{-m}a_{m}= 1$. Es bleibt der Fall $l > 0 $ zu  berücksichtigen: 
+Für $l= 0 $ folgt $b_0a_0 = b_{-m}a_{m}= 1$. Es bleibt der Fall $l > 0 $ zu  berücksichtigen: 
 \begin{eqnarray*}
 b_la_l &=&
 \sum_{n = -m}^{-m + l - 1}b_na_{l-n} + b_{-m+l}a_m \\
@@ -443,7 +469,7 @@ Betrachte die Abbildung:\\
 \frac{\sum_{n=m}^{\infty}a_nz^n}{1} & \text{, falls } m\geq 0
 \end{cases}
 \end{eqnarray}
-Die Abbildung ist wohldefiniert bezüglich $m$, dem kleinsten Index für den $a_m\neq0$ gilt. Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \leq 0$ existiert ein eindeutiges $g \in K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
+Die Abbildung ist wohldefiniert im Bezug auf $m$, dem kleinsten Index für den $a_m\neq0$ gilt. Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \le 0$ existiert ein eindeutiges $g \in K[[z]]\subseteq \textup{Quot}K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
 Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunterscheidung nach unserer Definition der Abbildung $\Phi$ nicht explizit durchführen müssen, setzen wir  $z^{-k} = 1$ in beiden Äquivalenzklassen von \ref{eq: isomorphismusQuotientenkörper} falls $k \geq 0$ ist. Durch diese Vereinfachung müssen wir den unteren Fall in \ref{eq: isomorphismusQuotientenkörper} nicht gesondert formulieren. Sei $m\leq l$:\\
 \begin{eqnarray*}
 \Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
@@ -460,9 +486,9 @@ Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir 
 &=& \frac{z^{-m}\sum_{n=m}^{\infty}a_n z^n}{z^{-m}} \cdot \frac{z^{-l}\sum_{n=l}^{\infty}b_n z^n}{z^{-l}}\\
 &=& \Phi \left(\sum_{n=m}^{\infty} a_nz^n\right) \cdot \Phi\left(\sum_{n=l}^{\infty} b_nz^n \right)
 \end{eqnarray*}
-Der Kern der Abbildung ist das Element $0_K$ und da $\Phi$ ein Homomorphismus ist, erhalten wir die Injektivität.\\
-Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \in$ Quot$\left(K[[z]]\right)$, mit $\sum_{n=l} b_nz^n \neq 0$. \\
-Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann diese Reihe invertiert werden und wir erhalten
+Der Kern der Abbildung besteht aus dem Element $0_K$ und da $\Phi$ ein Homomorphismus ist, erhalten wir die Injektivität.\\
+Wir zeigen, dass der Homomorphismus auch surjektiv ist. Sei $m,l \geq 0$ und $q = \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \in$ Quot$\left(K[[z]]\right)$ mit $\sum_{n=l} b_nz^n \neq 0$. \\
+Die Reihe $\sum_{n = l}^{\infty} b_nz^n $ kann deswegen in die Gestalt $z^l\sum_{n = 0}^{\infty} c_nz^n $, $c_0 \neq 0$ gebracht werden. Nach Satz \ref{potenzreihenringEinheit} kann diese Reihe $\sum_{n = 0}^{\infty} c_nz^n $ invertiert werden und wir erhalten
 \begin{eqnarray*}
 q &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{{\sum_{n=l}^{\infty} b_nz^n}} \\
 &=& \frac{{\sum_{n=m}^{\infty} a_nz^n}}{z^l\sum_{n = 0}^{\infty} c_nz^n } \\
@@ -519,24 +545,25 @@ Der Quotientenkörper von  $\C\lbrace z\rbrace$ ist isomorph zum Körper der kon
 In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar für die $a_0 \neq 0$ gilt.
 
 \beweis{Zunächst konstruieren wir formal das Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
-Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben. Daher können wir ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt. \\
+Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben.
+Wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt, denn: \\
 Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert.  \\
-Die Folge ${(a_n|z_0|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt. Nach dem Lemma von Abel konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ in dem Konvergenzbereich $D\left(0, z_0\right)$. Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
+Die Folge ${(|a_n||{z_0}^n|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt. Nach dem Lemma von Abel \cite[S. 46]{ebeling2013funktionentheorie}konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ auf $D\left(0, |z_0|\right)$. Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
 \[
-\sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n
+\overline{f} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n = f
 \]
-ist konvergent. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
-Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $a_n$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $b_n$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
+konvergent ist. Aus dieser Gleichheit folgt, dass wir die Beschränktheit der Koeffizientenfolge $ (a_n)_{n \in \N_0}$ annehmen können. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
+Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $\left(a_n\right)_{n\in\N}$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $\left(b_n\right)_{n\in\N}$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
 \[
 b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
 \]
-Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Mithilfe von Induktion beweise wir, dass ein $C > 1$ existiert, mit $C \in \R $, sodass  
+Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben.  Wir wählen $C \in R$ mit $ 1<C> \frac{a}{a-1}$. Mithilfe von Induktion beweisen wir, dass   
 \[
 |b_n| \le (aC)^n
 \]
 ist. 
 Die Ungleichung ist für $b_0$ nach Konstruktion des Inversen \ref{inverse Potenzreihe} erfüllt. \\
-Die Abschätzung gelte für $b_n$. Wir wählen $ C> \frac{a}{a-1}$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
+Die Abschätzung gelte für $b_n$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
 \[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
 \[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
  gilt.}
@@ -555,33 +582,33 @@ Der Satz \ref{quot} liefert die Isomorphie der Abbildung $\Phi$. Damit ist die B
 %
 %
 Nun versuchen wir auf dem Körper der Laurentreihen eine Bewertung finden.
-Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. Nach \ref{bewKoerper} suchen wir einen surjektiven Gruppenhomomorphismus.
+Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f) := \lbrace n \in \Z | a_n \neq 0 \rbrace$. 
 % Betrachte min$\lbrace\left(\text{supp}(f)\right)\rbrace$, eindeutig bestimmt durch den kleinsten Index $n_0$ der Laurentreihe, ab dem der Koeffizient $a_{n_0} \neq 0 $ ist. Die Menge all dieser Elemente bildet eine angeordnete abelsche Gruppe $\Psi $ und es gibt einen Isomorphismus von $\psi: \text{ }\Psi \rightarrow \Z$. \\
 %%
 %
 %
 \begin{satz} \label{LaurentreiheBewertung}
-Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung.
+Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung wobei wir $v(\varnothing) = \infty$ setzen.
 \end{satz}
 %
 \beweis{
 %TODO DIe Surjektivität bracuh ich doch??
-Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit $v(f) = $min$\lbrace($supp$(f)\rbrace)\}$. 
-Nach Definition \ref{bewKoerper} sind für den Körper $K((z))$ und die angeordnet abelsche Gruppe $\Z$ noch B1'-B3' nachzuweisen. 
-\begin{enumerate}
-\item [zu B1']: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
-\item[zu B2']: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
-Sei
-\[v(fg) = v( \sum_{n \in \Z}\sum_{m+k=n}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$. Betrachte $ n < n_0 + m_0 $. 
+Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe mit diesem Startwert gibt und damit das Bild $v(f) = \min(\textup{supp}(f))$ ist. 
+Nach Definition \ref{bewKoerper} sind für den Körper $K((z))$ und die angeordnete abelsche Gruppe $\Z$ noch B1'-B3' nachzuweisen. 
+\begin{description}
+\item[\normalfont{zu B1'}]: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
+\item[\normalfont{zu B2'}]: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist v(f) =$ n_0$ und v(g) = $m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
+Wir wollen zeigen, dass das Bild von $fg$ unter der Abbildung
+\[v(fg) = v( \sum_{n \in \Z}\sum_{m+k=n}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] ist, wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$ gilt. Wir betrachten $ n < n_0 + m_0 $. 
 %Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
 Nach Voraussetzung folgt entweder $a_m = 0$, oder $b_k = 0$ und somit ist auch das Produkt $a_mb_k = 0. $ Weiterhin gilt nach Voraussetzung  $a_{n_0} \neq 0$ und $b_{m_0} \neq 0.$ Sei $n = n_0$ + $m_0$. Das Produkt $ a_{n_0}b_{m_0}$ ist ungleich Null und daher erhalten wir, dass $v(fg) = n_0+m_0 = v(f) + v(g)$ ist.
-\item[zu B3']: Wenn $f, g$ wie oben definiert sind, erhalten wir für $v(f+g)$ die folgende Gleichung: 
+\item[\normalfont{zu B3'}]: Wenn $f, g$ wie oben definiert sind, erhalten wir für $v(f+g)$ die folgende Gleichung: 
 \begin{eqnarray*}
 v\left(f+g\right) &=&  v\left( \sum_{n = \text{min}\lbrace n_0,m_0 \rbrace}^{\infty}(a_n + b_n) z^n\right) \\
-&=& \min\lbrace n_0,m_0 \rbrace \\ 
+&\leq& \min\lbrace n_0,m_0 \rbrace \\ 
 &\stackrel{\mathrm{def}}=& \min\lbrace v(f), v(g)\rbrace
 \end{eqnarray*}
-\end{enumerate}
+\end{description}
 } 
 %
 %\begin{satz}
@@ -596,18 +623,25 @@ Wie wir in \ref{quot} gezeigt haben, ist der Körper der Laurentreihen eine Ober
 \begin{satz}\label{bewring}
 $K[[z]] $ ist ein diskreter Bewertungsring. %\footnote{https://www.mathematik.uni-osnabrueck.de/fileadmin/mathematik/downloads/2012AlgKurven.pdf}
 \end{satz}
+\beweis{
 %
-\beweis{Wie im vorherigen Satz gezeigt, existiert auf dem Körper der Laurentreihen eine diskrete Bewertung. Wie wir in \ref{quot} bewiesen haben, ist der Quotientenkörper von $K[[z]]$ dieser Körper der Laurentreihen. 
-Nach \ref{potenzreihenringEinheit} folgt, $K[[z]]$ besitzt genau ein maximales Ideal nämlich $\mathfrak{m} = (z)$. Für eine Potenzreihe $f$, die in $K[[z]]$ keine Einheit ist, nimmt der konstante Term den Wert $0$ an und wir erhalten, dass $a_0 = 0$ ist. Somit lässt sich jede derartige Potenzreihe schreiben als $f=z \widetilde{f}$, wobei  $\widetilde{f}$ die umindizierte Potenzreihe bezeichnet.\\
-Die Nullteilerfreiheit folgt wie in \ref{intring} ausführlicher gezeigt. Sei $0 \neq f,g \in K[[z]]$ und wir definieren der Einfachheit halber $c_n := a_ib_j \neq 0$.  
-Für die Produktreihe $fg$ erhalten wir, ab den Indizes i, j, dass $a_i,~ b_j\neq 0$ ist. Der Hauptidealring $K[[z]]$ ist noethersch %definieren?
-, denn jedes Ideal ist erzeugt von $z^j$, wobei $j$ der kleinste Index ist, ab dem die Koeffizienten $c_n$ der Potenzreihen ungleich 0 in dem Ideal sind. Für das maximale Ideal muss gelten, dass es von einem Element erzeugt wird, für das gilt $a_0 = 0$.
-Andernfalls wäre die entsprechende Potenzreihe eine Einheit und würde somit ganz $K[[z]]$ erzeugen.
-Nach Definition des diskreten Bewertungsring \ref{bewertungsring} gilt die Behauptung.  } 
+Der Ring der formalen Potenzreihen $K[[z]]$ ist der Bewertungsring der Bewertung $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$. Denn nach Definition des Bewertungsrings besteht dieser aus den Elementen des Körpers $K$ deren Bewertung größer gleich dem Nullelement der Gruppe ist. Die Elemente in $K((z))$ mit $v(a) \geq 0_\Z$ sind genau die Elemente aus $K[[z]]\subseteq K((z))$. Da $K((z)) = \textup{Quot}(K[[z]])$ ist, gilt die Behauptung.
+%
+%
+
+
+%Wie im vorherigen Satz gezeigt, existiert auf dem Körper der Laurentreihen eine diskrete Bewertung. Wie wir in \ref{quot} bewiesen haben, ist der Quotientenkörper von $K[[z]]$ dieser Körper der Laurentreihen. 
+%Nach \ref{potenzreihenringEinheit} folgt, $K[[z]]$ besitzt genau ein maximales Ideal nämlich $\mathfrak{m} = (z)$. Für eine Potenzreihe $f$, die in $K[[z]]$ keine Einheit ist, nimmt der konstante Term den Wert $0$ an und wir erhalten, dass $a_0 = 0$ ist. Somit lässt sich jede derartige Potenzreihe schreiben als $f=z \widetilde{f}$, wobei  $\widetilde{f}$ die umindizierte Potenzreihe bezeichnet.\\
+%Die Nullteilerfreiheit folgt wie in \ref{intring} ausführlicher gezeigt. Sei $0 \neq f,g \in K[[z]]$ und wir definieren der Einfachheit halber $c_n := a_ib_j \neq 0$.  
+%Für die Produktreihe $fg$ erhalten wir, ab den Indizes i, j, dass $a_i,~ b_j\neq 0$ ist. Der Hauptidealring $K[[z]]$ ist noethersch %definieren?
+%, denn jedes Ideal ist erzeugt von $z^j$, wobei $j$ der kleinste Index ist, ab dem die Koeffizienten $c_n$ der Potenzreihen ungleich 0 in dem Ideal sind. Für das maximale Ideal muss gelten, dass es von einem Element erzeugt wird, für das gilt $a_0 = 0$.
+%Andernfalls wäre die entsprechende Potenzreihe eine Einheit und würde somit ganz $K[[z]]$ erzeugen.
+%Nach Definition des diskreten Bewertungsring \ref{bewertungsring} gilt die Behauptung. 
+ } 
  %
  %
-Damit folgt, dass $K[[z]]$ isomorph zu einem, wie in Punkt \ref{chap2} beschriebenen Bewertungsring $ A= \lbrace 0\rbrace \cup \{x \in K * | v(x) \geqslant 0\}$ ist.  \\
-Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z)^3 \subset (z)^4 \subset ... $. \\
+%Damit folgt, dass $K[[z]]$ isomorph zu einem, wie in Punkt \ref{chap2} beschriebenen Bewertungsring $ A= \lbrace 0\rbrace \cup \{x \in K * | v(x) \geqslant 0\}$ ist.  \\
+%Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z)^3 \subset (z)^4 \subset ... $. \\
 
 
 %\begin{lemma}\label{quotbewring}
@@ -625,7 +659,7 @@ Wie in obigem Beweis \ref{bewring} gezeigt, gilt: $ (z) \subset (z^2) \subset (z
 Die Grundlagen zur Konstruktion eines Körpers über sehr allgemein definierten formalen Potenzreihen untersuchte Hahn 1907 in seiner Arbeit \glqq Über nichtarchimedische Größensysteme\grqq. 
 %Er stellte im Rahmen seines Beweises des Hahnschen Einbettungssatzes die sogenannten Hahnschen Potenzreihen zunächst als Gruppen vor. Die so definierten Potenzreihen erlaubten nicht nur Exponenten der Unbestimmten aus der Menge der ganzen Zahlen, sondern aus beliebigen wohlgeordneten Untergruppen der Wertegruppe.
 Hahn formulierte als einer der ersten Mathematiker Potenzreihen mit verallgemeinerten Exponenten aus einer Teilmenge von $\R$, wie beispielsweise:\\
-\[ f = 1 + z^{log 2} + z^{log 3} + z^{log 4} + ... \]
+\[ f = 1 + z^{\log 2} + z^{\log 3} + z^{\log 4} + ... \]
 \[g = \frac{1}{2}z^{\frac{1}{2}} + \frac{3}{4}z^\frac{3}{4} + \frac{7}{8}z^\frac{7}{8} + ... + z + \frac{3}{2}z^\frac{3}{2} + ... + 2z^2 + ...\] 
 Die einzige, unverzichtbare Bedingung, die Hahn an diese verallgemeinerten Potenzreihen stellte, war die Wohlordnung des Trägers der verallgemeinerten Potenzreihe.
 Im Laufe des Beweises des Hahnschen Einbettungssatzes konnte er zeigen, dass die nach ihm benannten Potenzreihen nicht nur eine Gruppe, wie ursprünglich angenommen, bilden, sondern einen Körper. \\ Während seiner Beschäftigung mit Hilberts siebzehntem Problem untersuchte er die Hahnschen Potenzreihen hinsichtlich ihrer Körpereigenschaften. Neben Hahn beschäftigten sich auch die beiden Mathematiker Neumann und Mal'cev mit den von Hahn konstruierten Reihen und deren Einbettung in einen Körper. \\
@@ -655,11 +689,11 @@ Wir fokussieren unsere Betrachtungen auf verallgemeinerte Potenzreihen auf angeo
 %
 %
 %
-Wir haben bisher ausschließlich formale Reihen betrachtet, die auf einer wohlgeordneten Teilmenge der ganzen Zahlen definiert waren. In Satz \ref{traegerwohlgeordnet} haben wir gezeigt, dass die Wohldefiniertheit der Multiplikation mit der Wohlordnung des Trägers der Laurentreihe zusammenhängt. \\
-Im Folgenden betrachten wir allgemeinere Arten von Mengen, nämlich die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten abelschen Gruppen. In diesem Abschnitt zeigen wir, dass auf angeordneten abelschen Gruppen definierte Potenzreihen, unter der Voraussetzung der Wohlordnung des Trägers, addiert und multipliziert werden können.\\  
+Wir haben bisher ausschließlich formale Reihen betrachtet, deren Exponenten Elemente einer wohlgeordneten Teilmenge der ganzen Zahlen waren. In Satz \ref{traegerwohlgeordnet} haben wir gezeigt, dass die Wohldefiniertheit der Multiplikation mit der Wohlordnung des Trägers der Laurentreihe zusammenhängt. \\
+Im Folgenden betrachten wir nicht mehr nur Teilmengen der ganzen Zahlen, sondern die bereits in dem vorherigen Kapitel \ref{chap2} vorgestellten angeordneten abelschen Gruppen. In diesem Abschnitt zeigen wir, dass Potenzreihen mit Exponenten in einer angeordneten abelschen Gruppen, unter der Voraussetzung der Wohlordnung des Trägers, addiert und multipliziert werden können.\\  
 %Wir haben im vorherigen Gliederungspunkt festgestellt, dass die bisher betrachteten Potenzreihen immer auf Teilmengen der natürlichen Zahlen $\N$ (Potenzreihenring $K[[z]]$) oder den ganzen Zahlen $\Z$ (Laurentreihenkörper $K((z))$) konstruiert waren. In \ref{traegerGanz} wurde gezeigt, dass den Mengen, auf denen wir Potenzreihenringe definieren können, eine bestimmte, unverzichtbare Eigenschaft innewohnt: die Wohlordnung.
   Die nachfolgenden Ausführungen orientieren sich an \cite[S. 194 - 199]{fuchs66}, \cite[S. 601 - 655]{hahn07} und \cite[S. 49 - 64]{priesscrampe83}.\\\\
-Wir bezeichnen mit $G$ im Folgenden immer eine angeordnete abelsche Gruppe in additiver Schreibweise.
+Wir bezeichnen im Folgenden mit $K$ einen Körper und mit $G$ eine angeordnete abelsche Gruppe in additiver Schreibweise.
 %
 %
 %
@@ -668,8 +702,9 @@ Wir bezeichnen mit $G$ im Folgenden immer eine angeordnete abelsche Gruppe in ad
 %
 %
 \begin{defn}\label{funktionsDefinitionFormalePotenzreihe}
-Eine \textit{formale Potenzreihe über dem Körper $K$ auf der angeordneten abelschen Gruppe} $G$ ist eine Abbildung $f\colon G \to K, g \mapsto a_g$, wobei ein $h \in G$ existiert, sodass $f(g) = 0$ für alle $g < h$.
+Eine \textit{formale Potenzreihe über $K$ mit Exponenten in $G$} ist eine Abbildung $f\colon G \to K, g \mapsto a_g$, wobei $\textup{supp}(f) = f^{-1} (K^*)$ wohlgeordnet ist.
 \end{defn}
+%ein $h \in G$ existiert, sodass $f(g) = 0$ für alle $g < h$.
 %
 %
 %
@@ -680,7 +715,7 @@ Eine \textit{formale Potenzreihe über dem Körper $K$ auf der angeordneten abel
 
 
 \begin{defn}\label{TraegerFormalePotenzreihe}
-Der \textit{Träger} einer formalen Potenzreihe $f$ auf einer angeordneten abelschen Gruppe $G$ über einem Körper $K$ ist folgendermaßen definiert: 
+Der \textit{Träger} einer formalen Potenzreihe $f$ mit Exponenten in $G$ über $K$ ist folgendermaßen definiert: 
 \[ \text{supp}(f) = \lbrace g \in G \vert ~ a_g \neq 0\rbrace\]
 \end{defn}
 %
@@ -688,9 +723,9 @@ Der \textit{Träger} einer formalen Potenzreihe $f$ auf einer angeordneten abels
 %
 Wir stellen die in \ref{funktionsDefinitionFormalePotenzreihe} definierte formale Potenzreihe im Folgenden meist nicht mehr in Funktionsschreibweise, sondern als Reihe dar. Aus diesem Grund präsentieren wir diese gebräuchlichere Definition einer formalen Potenzreihe.
 \begin{defn}
-Sei $K$ ein Körper und $G$ eine angeordnete abelsche Gruppe. Die Reihe 
+Die Reihe 
 \[\sum_{g \in G}^{}a_g z^g, \text{ mit } a_g \in K, \text{ deren Träger supp}(f) \text{ wohlgeordnet ist}, \]
-wird als \textit{formale Potenzreihe auf einer angeordnet abelschen Gruppe} bezeichnet.
+wird als \textit{formale Potenzreihe mit Exponenten in einer angeordneten abelschen Gruppe} bezeichnet.
 \end{defn}
 %
 %
@@ -730,7 +765,7 @@ Wenn wir ab jetzt von formalen Potenzreihen auf angeordneten abelschen Gruppen �
 %
 %
 Wir bezeichnen die Menge aller formalen Potenzreihen auf einer angeordneten abelschen Gruppe $G$ über dem Körper $K$ mit 
-\[K\left(\left(z^{G}\right)\right) = \lbrace \sum_{g \in G}^{}a_g z^g |~ a_g \in K, \text{  supp}(f) \text{ ist wohlgeordnet}\rbrace\]
+\[K\left(\left(z^{G}\right)\right) = \lbrace f := \sum_{g \in G}^{}a_g z^g |~ a_g \in K, \text{  supp}(f) \text{ ist wohlgeordnet}\rbrace\]
 %
 %
 \subsection{Addition und Multiplikation in $K((z^{G}))$}
@@ -760,13 +795,10 @@ In diesem Abschnitt definieren wir die Verknüpfungen auf $K((z^{G}))$. Wir gehe
 \begin{defn}\label{AdditionFormalerPotenzreihen}
 Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in G}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
 Die Summe zweier formaler Potenzreihen $f, g$ ist definiert durch die Addition der Koeffizientenfolgen:
-%
 \begin{eqnarray*}
-+ \colon f + h &=& \sum_{g \in G}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g \\
-&=& \sum_{g \in G}^{}\left(a_g + b_g\right)z^g 
+f + h &=& \sum_{g \in G}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g
+= \sum_{g \in G}^{}\left(a_g + b_g\right)z^g 
 \end{eqnarray*}
-%
-
 \end{defn}
 %
 %
@@ -778,9 +810,12 @@ Die in \ref{AdditionFormalerPotenzreihen} definierte Addition zweier formaler Po
 \end{satz}
 \beweis{ Wir zeigen, dass der Träger der Summe $f + h$ wohlgeordnet ist.
 Es gilt offensichtlich supp$(f+ h)\subseteq $ supp$(f)~\cup$ supp$(h)$. Nach Lemma \ref{wohlgeordnvereinigung} ist die Vereinigung zweier wohlgeordneter Mengen wieder wohlgeordnet. Die Definition der Wohlordnung besagt, dass jede Teilmenge einer wohlgeordneten Menge wiederum wohlgeordnet ist. \\
-Nach Voraussetzung sind $ \text{supp}(f) = \lbrace g \in G \vert a_g \neq 0\rbrace \text{ und } \text{supp}(h) = \lbrace g \in G \vert b_g \neq 0\rbrace\ $  wohlgeordnet. Das kleinste Element von supp$(f+h)$ existiert und es gilt 
-\[\min\left( \text{supp}\left(f+ h\right)\right) = \text{min}\lbrace \text{min}\left( \text{supp}(f)\right), \text{min}\left( \text{supp}(h)\right) \rbrace.\]
-Somit ist $f + g$ eine formale Potenzreihe. }
+Nach Voraussetzung sind $ \text{supp}(f) = \lbrace g \in G \vert a_g \neq 0\rbrace \text{ und } \text{supp}(h) = \lbrace g \in G \vert b_g \neq 0\rbrace\ $  wohlgeordnet. 
+Daraus folgt die Behauptung.
+%Das kleinste Element von supp$(f+h)$ existiert und es gilt 
+%\[\min\left( \text{supp}\left(f+ h\right)\right) = \text{min}\lbrace \text{min}\left( \text{supp}(f)\right), \text{min}\left( \text{supp}(h)\right) \rbrace.\]
+%Somit ist $f + g$ eine formale Potenzreihe. 
+}
 %
 %
 %
@@ -843,10 +878,10 @@ Die oben definierte Multiplikation zweier formaler Potenzreihen $f, h \in K\left
 \end{satz}
 %
 %
-\beweis{Wir untergliedern den Beweis und zeigen zunächst, dass die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ existiert und endlich ist.
+\beweis{Wir untergliedern den Beweis und zeigen zunächst, dass für alle $g\in G$ die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ existiert und endlich ist.
 Die Summe existiert, wenn die Träger supp$(f)$ und supp$(h)$ nicht leer sind. Andernfalls erhalten wir die leere Summe. 
-Der Träger der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ kann reduziert werden auf die Elemente $g = g_1 +g_2$ für die gilt, dass $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$ ist. Andernfalls wäre $a_{g_1}$ oder $b_{g_2}$ gleich null und das Produkt somit ebenso null. Da $G$ eine angeordnete abelsche Gruppe ist und $g_1, g_2 \in G$ sind, ist aufgrund der Abgeschlossenheit der Addition $g = g_1 + g_2 \in G$. Die Existenz der Summe ist nachgewiesen. Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist ungleich null für alle $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$.\\
-Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist endlich, wenn es nur endlich viele Darstellungen für $g \in G$ in der Form $g = g_1+g_2$ gibt, wobei $g_1 \in$ supp $(f)$ und  $g_2 \in $ supp$(h)$. Nach Voraussetzung sind sowohl supp$(f)$, als auch supp$(h)$ wohlgeordnet. Die Gruppe $G$ ist angeordnet abelsch und wir können die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} anwenden. Die Aussage ist somit bewiesen.\\
+Der Träger der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ kann reduziert werden auf die Elemente $g = g_1 +g_2$ für die gilt, dass $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$ ist. Andernfalls wäre $a_{g_1}$ oder $b_{g_2}$ gleich null und das Produkt somit ebenso null. Da $G$ eine angeordnete abelsche Gruppe ist und $g_1, g_2 \in G$ sind, ist aufgrund der Abgeschlossenheit der Addition $g = g_1 + g_2 \in G$. Die Existenz der Summe ist nachgewiesen. Die Summanden der Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ sind ungleich null für alle $g_1\in$ supp$(f)$ und $g_2\in$ supp$(h)$.\\
+Die Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ ist endlich, wenn es nur endlich viele Darstellungen für $g \in G$ in der Form $g = g_1+g_2$ gibt, wobei $g_1 \in$ supp $(f)$ und  $g_2 \in $ supp$(h)$. Nach Voraussetzung sind sowohl supp$(f)$ als auch supp$(h)$ wohlgeordnet. Die Gruppe $G$ ist angeordnet abelsch und wir können die Folgerung aus dem Lemma von Neumann \ref{FolgerungNeumann} anwenden. Die Aussage ist somit bewiesen.\\
 %
 %
 %
@@ -892,11 +927,11 @@ Somit ist die Multiplikation zweier formaler Potenzreihen $f,h \in K\left(\left(
 %
 %Wir haben gezeigt, dass eine Darstellung von $a$ als Summe von $a_1+ a_2$ nur auf endlich viele Arten möglich ist, wenn Träger der beiden zu multiplizierenden Potenzreihen wohlgeordnet sind. 
 %TODO. stimmt das mit endliche Teilmenge und so schon??
-\begin{bem}
-Wir haben oben gezeigt,dass die durch Multiplikation entstandene Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ aus \ref{eq: multPotenzreihenkoerper} endlich ist. Deswegen können wir den Koeffizient $\gamma_g$ der Unbestimmten $z^g$ in dem Produkt aus \ref{eq: multPotenzreihenkoerper} für ein festes $g\in G$ explizit darstellen:
-\[\gamma_g = a_{{g_1}_1}b_{{g_2}_1} + a_{{g_1}_2}b_{{g_2}_2} + ... + a_{{g_1}_n}b_{{g_2}_n}\]
-%Die Variable $n$ ist Element einer endlichen Teilmenge der natürlichen Zahlen $\N$.
-\end{bem}
+%\begin{bem}
+%Wir haben oben gezeigt,dass die durch Multiplikation entstandene Summe $\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}$ aus \ref{eq: multPotenzreihenkoerper} endlich ist. Deswegen können wir den Koeffizient $\gamma_g$ der Unbestimmten $z^g$ in dem Produkt aus \ref{eq: multPotenzreihenkoerper} für ein festes $g\in G$ explizit darstellen:
+%\[\gamma_g = a_{{g_1}_1}b_{{g_2}_1} + a_{{g_1}_2}b_{{g_2}_2} + ... + a_{{g_1}_n}b_{{g_2}_n}\]
+%%Die Variable $n$ ist Element einer endlichen Teilmenge der natürlichen Zahlen $\N$.
+%\end{bem}
 %$\Lambda_a$ sei null, wenn es für $a$ keine Darstellung als Summe der Elemente der Träger von F und G gibt.\\ %
 %
 %
@@ -925,7 +960,7 @@ Bei der Reihe $F := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} .
 \subsection{Der verallgemeinerte Ring der formalen Potenzreihen} 
 Wir haben bisher die Addition und Multiplikation auf $K\left(\left(z^{G}\right)\right)$ definiert. In diesem Abschnitt zeigen wir, dass $K\left(\left(z^{G}\right)\right)$ ein kommutativer Ring über $K$ ist.\\
 In der verwendeten Literatur (\cite{priesscrampe83}, \cite{fuchs66}) findet sich die multiplikative Schreibweise der angeordneten Gruppe $G$. Die multiplikative Schreibweise ermöglicht eine noch allgemeinere Definition der Multiplikation zum Beispiel mithilfe von Faktorsystemen. Auf Basis dieser Definition konnte B.H. Neumann 1949 Schiefkörper von formalen Potenzreihen konstruieren.  \\
-Im Fall einer additiv geschriebenen, abelschen, angeordneten Gruppe erhalten wir den direkten Bezug zu dem beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Dieser entsteht für den Fall, dass es sich bei der angeordneten, abelschen Gruppe um $\Z$ handelt. 
+Im Fall einer additiv geschriebenen angeordneten abelschen Gruppe erhalten wir den direkten Bezug zu dem beschriebenen Laurentreihenkörper und dem darin eingebetteten Potenzreihenring. Dieser entsteht, wenn es sich bei der angeordneten abelschen Gruppe um $\Z$ handelt. 
 
 %Sei supp(F)supp(G) :=$ \lbrace a_1, a_2 \in G | \Phi_{a_1} \Psi_{a_2} \neq 0\rbrace.$ Nach der Definition des Trägers folgt, dass die Menge angeordnet ist, denn als Untermenge von $\Gamma$ überträgt sich die Anordnung. Wir müssen zeigen, dass jede Teilmenge von supp(FG) ein kleinstes Element besitzt nach \ref{wohlgeordn}. Nach Definition der Multiplikation in unserem Körper K gilt: \\ 
 %
@@ -937,7 +972,7 @@ $K\left(\left(z^{G}\right)\right)$ ist ein kommutativer Ring über $K$.
 \begin{eqnarray*}
 f &=& \sum_{g \in G}^{} a_g z^g, ~~~~~~~ h = \sum_{g \in G}^{} b_g z^g, ~~~~~~~ k = \sum_{g \in G}^{} c_g z^g.
 \end{eqnarray*}
-Es gilt $K\left(\left(z^{G}\right)\right)$ ist eine abelsche Gruppe bezüglich der Addition.
+Die Menge $K\left(\left(z^{G}\right)\right)$ ist eine abelsche Gruppe bezüglich der Addition.
 \begin{itemize}
 \item \textit{Assoziativität:} Für alle $f, h, k \in K\left(\left(z^{G}\right)\right)
 $ gilt nach Definition der Addition: 
@@ -945,13 +980,14 @@ $ gilt nach Definition der Addition:
  f+\left(h+k\right) &= & \sum_{g \in G}^{} a_g z^g + \left( \sum_{g \in G}^{} b_g z^g + \sum_{g \in G}^{}c_g z^g \right) \\
 & =& \sum_{g \in G}^{} a_g z^g + \sum_{g \in G}^{} \left(b_g + c_g\right) z^g \\
 &=& \sum_{g \in G}^{} \left( a_g + b_g + c_g\right) z^g \\
-& =& \sum_{g \in G}^{} \left(a_g + b_g\right) z^g + \sum_{g \in G}^{} c_g z^g.
+& =& \sum_{g \in G}^{} \left(a_g + b_g\right) z^g + \sum_{g \in G}^{} c_g z^g\\
+&=& \left(f + h\right)+k.
 \end{eqnarray*}
 
 \item \textit{Neutrales Element der Addition:} Bezeichne $0_K$ das neutrale Element der Addition $0_K = \sum_{g \in G}^{} a_g z^g$, wobei ähnlich wie in \ref{Rechnen} gilt $a_g = 0$ für alle $g \in G$. Der Träger von $0_K$ ist die leere Menge, welche nach Definition wohlgeordnet ist.
-\item \textit{Inverses Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein inverses Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ \left(-f\right) = 0_K$.
+\item \textit{Negatives Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein negatives Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ \left(-f\right) = 0_K$.
 \item \textit{Kommutativität:} 
-$K\left(\left(z^{G}\right)\right)$ ist abelsch bezüglich der Addition, denn es gilt 
+Die Addition ist kommutativ, denn es gilt 
 \begin{eqnarray*}
 f+ h &=& \sum_{g \in G}^{} a_gz^g + \sum_{g \in G}^{} b_gz^g 
 = \sum_{g \in G}^{} \left(a_g  + b_g\right) z^g \\
@@ -992,12 +1028,12 @@ Die Menge $K\left(\left(z^{G}\right)\right)$ ist ein kommutatives Monoid bezügl
 %
 %
 %
-\item \textit{Kommutativität:} Seien $f,h \in K\left(\left(z^{G}\right)\right)$ 
+\item \textit{Kommutativität:} Seien $f,h \in K\left(\left(z^{G}\right)\right)$. Es gilt 
 \[fh = \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g = \sum_{g \in G}^{}\sum_{g_2 + g_1 = g}^{}b_{g_2} a_{g_1}z^g = hf\]
 Die Gleichheit folgt unmittelbar aus der Kommutativität von $G$ und der Kommutativität der Multiplikation im Körper $K$.\\
 \end{itemize}
 
-Wegen der Kommutativität der Multiplikation genügt es ein Distributivgesetz nachzuweisen. Es gilt:
+Es reicht ein Distributivgesetz nachzuweisen, da die Multiplikation in $K$ kommutativ ist. Es gilt:
 \begin{eqnarray*}
 f \cdot(h + k) &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} b_g z^g + \sum_{g \in G}^{} c_g z^g\right) \\
 &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} \left(b_g + c_g\right) z^g \right)\\
@@ -1014,7 +1050,7 @@ f \cdot(h + k) &=& \sum_{g \in G}^{} a_g z^g  \left(\sum_{g \in G}^{} b_g z^g + 
 %\item[(ii)] \[(F + G) \cdot H = \left(\sum_{a \in \Gamma}^{} {\Phi_a} z^{a}  \sum_{a \in \Gamma}^{} {\Psi_a} z^{a}\right) \cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} = \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right)\cdot \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} =\]
 %\[ \sum_{a \in \Gamma}^{} {\Lambda_a} z^{a} \cdot \left(\sum_{a \in \Gamma}^{} \left({\Phi_a}+ \Psi_a\right) z^{a}\right) =   F\cdot H + G\cdot H\]
  
-In den Beweis der Distributivgesetze und die Gültigkeit der Gleichheit fließen die im Körper $K$ gültige Kommutativität der Multiplikation, die Rechengesetze für die Unbestimmte \ref{Potenzgesetze}, beziehungsweise die Kommutativität der angeordneten abelschen Gruppe $G$ mit ein.  
+In den Beweis der Distributivgesetze fließen die im Körper $K$ gültige Distributivität, die Rechengesetze für die Unbestimmte \ref{Potenzgesetze}, beziehungsweise die Kommutativität der angeordneten abelschen Gruppe $G$ mit ein.  
 }
 %
 \subsection{Das Inverse in $K\left(\left(z^{G}\right)\right)$ }
@@ -1025,7 +1061,7 @@ In den Beweis der Distributivgesetze und die Gültigkeit der Gleichheit fließen
 %
 Im vorherigen Abschnitt haben wir gezeigt, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation ein kommutativer Ring ist. \\
 In diesem Abschnitt orientieren wir uns an \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49}.
-Wir benötigen etwas Vorarbeit, bevor wir zeigen können, dass zu jeder formalen Potenzreihe ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.
+Wir benötigen etwas Vorarbeit, bevor wir zeigen können, dass zu jeder formalen Potenzreihe, die ungleich Null ist, ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.
 % 
 %
 %
@@ -1033,8 +1069,8 @@ Wir benötigen etwas Vorarbeit, bevor wir zeigen können, dass zu jeder formalen
 %
 %
 \begin{satz}\label{JedePotenzreihesoDarstellbar}
-Jede formale Potenzreihe $0 \neq f \in K\left(\left(z^{G}\right)\right)$ lässt sich in der Form  \\
-\[f = \lambda\cdot z^g\cdot \left(1_K + h\right)\text{ für } \lambda \in K, ~g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ und } \textup{min}\left(\textup{supp}\left(h\right)\right) > 0 \] darstellen.
+Jede formale Potenzreihe $0 \neq f \in K\left(\left(z^{G}\right)\right)$ lässt sich in eindeutiger Weise als  \\
+\[f = \lambda\cdot z^g\cdot \left(1_K + h\right)\text{ mit } \lambda \in K, ~g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ und } \textup{min}\left(\textup{supp}\left(h\right)\right) > 0 \] darstellen, wobei $g= \min(\textup{supp}(f))$ ist.
 \end{satz}
 %
 %
@@ -1048,8 +1084,17 @@ f&=& z^\gamma ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
 \end{eqnarray*}
 %
 %
-mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}^{-1}}$. Die Gleichheit in (*) gilt, denn zu $a_\gamma$, mit $a_\gamma \in K$ und $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$, existiert das Inverse. \\
-Es gilt weiterhin $g-\gamma > 0$ für alle $g\in G\setminus\lbrace\gamma\rbrace$, da $\gamma = $min(supp$(f))$ und damit ist $g > \gamma$ für alle $g\in G$. Wir erhalten die Positivität des Trägers der entstandenen formalen Potenzreihe $h = \sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}$.
+mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}^{-1}}$. \\
+%Die Gleichheit in (*) gilt, denn zu $a_\gamma$, mit $a_\gamma \in K$ und $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$, existiert das Inverse. \\
+Es gilt weiterhin $g-\gamma > 0$ für alle $g\in \textup{supp}(f)\setminus \lbrace \gamma\rbrace$, da $\gamma = $min(supp$(f))$.
+ %und damit ist $g > \gamma$ für alle $g\in G$. 
+ Wir erhalten die Positivität des Trägers der entstandenen formalen Potenzreihe $h = \sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}$. Die Darstellung ist eindeutig. Denn sowohl $\gamma = \min(\textup{supp}(f))$ als auch $a_\gamma$ sind nach Definition der formalen Potenzreihe $f$ eindeutig bestimmt. Angenommen es gäbe ein $h' \in K\left(\left(z^G\right)\right)$, mit $h'\neq h$, dann gelte
+\begin{eqnarray*}
+&& f = a_\gamma z^\gamma\left(1_K + h\right) = a_\gamma z^\gamma\left(1_K + h'\right) \\
+&\Leftrightarrow& \left(1_K + h\right) = \left(1_K + h'\right) \\
+&\Leftrightarrow& h = h'.
+\end{eqnarray*}
+Dies ist ein Widerspruch zur Voraussetzung und wir erhalten die Eindeutigkeit der Darstellung.
 }
 %
 % 
@@ -1063,18 +1108,18 @@ Es gilt weiterhin $g-\gamma > 0$ für alle $g\in G\setminus\lbrace\gamma\rbrace$
 %
 %
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
-Sei $f\in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$ und $f=\sum_{g \in G}^{}a_g z^g$, dann liegt für beliebige Körperelemente $\lambda_n$ die unendliche Reihe
+Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
 \begin{eqnarray*}
 h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
 &=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n
 \end{eqnarray*}
-in $K\left(\left(z^{G}\right)\right)$ und ist wohldefiniert.
+ist für beliebige Körperelemente $\lambda_n$ wohldefiniert und liegt in $K\left(\left(z^{G}\right)\right)$.
 \end{lemma}
 \beweis{
 %
 Wir unterteilen den Beweis in zwei Blöcke. Die unendliche Reihe $h$, wie im Lemma definiert, liegt genau dann in $K\left(\left(z^{G}\right)\right)$, wenn ihr Träger wohlgeordnet ist. Der Träger supp$(h)$ ist eine Teilmenge der Vereinigung der Träger supp$(f^n)$. Es genügt nachzuweisen, dass 
 \begin{itemize}
-\item[1. ] die Vereinigung der Träger, $\bigcup_{n\in\N}$supp$(f^n)$, ist wohlgeordnet,
+\item[1. ] die Vereinigung der Träger, $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet ist,
 \item[2. ] für ein festes $\gamma\in G$ gibt es nur endliche viele $n \in \N$, sodass ${\left(f^n\right)}_\gamma \neq 0$ ist. Wir schreiben ${\left(f^n\right)}_\gamma = \left({\sum_{g \in G} \sum_{g_1+ ... + g_n =g} a_{g_1}a_{g_2}... a_{g_n}z^g}\right)_\gamma =  \sum_{g_1+ ... + g_n =\gamma} a_{g_1}a_{g_2}... a_{g_n}z^\gamma $
 \end{itemize} 
 %
@@ -1223,10 +1268,10 @@ Die Folge $g_{i2} + ... + g_{in_i}$ ist, mit $i \in \N$, konstant. Damit muss di
 %
 %
 \begin{bem}
-Die in Lemma \ref{unendlicheSummeinPotenzreihenring} definierte Reihe $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n$ mit $\lambda_n \in K$ und $f:= \sum_{g \in G}^{\infty}a_g z^g \in K\left(\left(z^{G}\right)\right)$ ist in $K\left(\left(z^{G}\right)\right)$ und lässt sich aufgrund der Körpereigenschaften folgendermaßen umschreiben:
+Die in Lemma \ref{unendlicheSummeinPotenzreihenring} definierte Reihe $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{\infty}a_g z^g\right)}^n$ mit $\lambda_n \in K$ und $f:= \sum_{g \in G}^{\infty}a_g z^g \in K\left(\left(z^{G}\right)\right)$ mit $\min(\textup{supp}(f)) > 0$ liegt in $K\left(\left(z^{G}\right)\right)$ und kann folgendermaßen umgeschrieben werden:
 \begin{eqnarray*}
-\sum_{n=0}^{\infty}\lambda_n\cdot \left(f\right)^n &=& \lambda_0 f^0 + \sum_{n=1}^{\infty}\lambda_n\cdot \left(f\right)^n \\
-&=& \lambda_0 + \sum_{n=1}^{\infty}\lambda_n\cdot\left( f\right)^n.
+\sum_{n=0}^{\infty}\lambda_n\cdot \left(f\right)^n &=& \lambda_0 f^0 + \sum_{n=1}^{\infty}\lambda_n\cdot f^n \\
+&=& \lambda_0 + \sum_{n=1}^{\infty}\lambda_n\cdot f^n.
 \end{eqnarray*}
 %
 %
@@ -1249,9 +1294,9 @@ Diese Darstellung erinnert für $\lambda_0 = 1_K$ an die geometrische Reihe.
 %\[\sum_{n=0}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 F^0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n = \lambda_0 + \sum_{n=1}^{\infty}\left(\lambda_n\cdot F\right)^n.\] 
  
 \begin{defn}
-Seien $f, h\in  K\left(\left(z^{G}\right)\right)$ und $\min(\text{supp}(f)) >0,~ \min(\text{supp}(h)) >0$. Wir bezeichnen die Menge aller $1_K + f$ mit $\Upsilon$ und definieren auf $\Upsilon$ die Verknüpfung
+Seien $f, h\in  K\left(\left(z^{G}\right)\right)$ mit $\min(\text{supp}(f)) >0,~ \min(\text{supp}(h)) >0$. Wir bezeichnen die Menge aller $1_K + f$ mit $\Upsilon$ und multiplizieren Elemente aus $\Upsilon$ folgendermaßen
 \begin{eqnarray*}
-\cdot\colon \left(1_K + f\right) \cdot \left(1_K + h\right) = 1_K + \left(f+h+fh\right)
+ \left(1_K + f\right) \cdot \left(1_K + h\right) = 1_K + \left(f+h+fh\right)
 \end{eqnarray*} 
 \end{defn}
 %
@@ -1289,12 +1334,12 @@ Seien $f, h\in  K\left(\left(z^{G}\right)\right)$ und $\min(\text{supp}(f)) >0,~
 %
 \begin{lemma}
 Sei $1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und $\min(\textup{supp}(f)) >0$. Das Element 
-\[1_K +\sum_{n=1}^{\infty}(-f)^n\]
+\[\sum_{n=0}^{\infty} \left(-f\right)^n = 1_K +\sum_{n=1}^{\infty}(-f)^n\]
 liegt in $\Upsilon$ und ist invers zu $1_K + f$.
 
 \end{lemma}
-\beweis{Sei $\mathfrak{f} = 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ ist in der Vereinigung der Träger supp$(-f^n)$ enthalten. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
-Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ liegt in $\Upsilon$. Die Verknüpfung der beiden Gruppenelemente $\mathfrak{f}$ und $ \overline{\mathfrak{f}}$ hat folgende Form:
+\beweis{Sei $\mathfrak{f} := 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\overline{f} = \sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ ist in der Vereinigung der Träger supp$(-f^n)$ enthalten. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
+Wir erhalten also, dass $\overline{\mathfrak{f}} := 1_K +\sum_{n=1}^{\infty}(-f)^n $ in $\Upsilon$ liegt. Die Verknüpfung der beiden Gruppenelemente $\mathfrak{f}$ und $ \overline{\mathfrak{f}}$ hat folgende Form:
 %
 %
 %
@@ -1303,9 +1348,9 @@ Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ l
 \mathfrak{f}~ \overline{\mathfrak{f}} &=& \left(1_K + f\right) \left(1_K + \overline{f}\right) \\
 &=& 1_K + \left(f + \overline{f} + f \cdot\overline{f}\right) \\
 &=& 1_K + \left(\sum_{g \in G} a_g z^g + \sum_{n=1}^{\infty}(-f)^n + \left(\sum_{g \in G} a_g z^g\right)\cdot \left(\sum_{n=1}^{\infty}(-f)^n\right)\right) \\
+&=& 1_K + \left(\sum_{g \in G}a_gz^g + \left(-f\right)^1 + \sum_{n=2}^{\infty}\left(-f\right)^n + \left(-\left(-f\right)\cdot \sum_{n=1}^{\infty}(-f)^n\right)\right)\\
 &=& 1_K + \left( \sum_{n=2}^{\infty}(-f)^n + \left( - \sum_{n=2}^{\infty}(-f)^{n}\right)\right)\\
-&=& 1_K + 1_K = 1_K \\
-&=& \mathfrak{\overline{f}}~\mathfrak{f}
+&=& 1_K + 0_K = 1_K 
 \end{eqnarray*}
 }
 %
@@ -1322,14 +1367,15 @@ Wir erhalten somit $\overline{\mathfrak{f}} = 1_K +\sum_{n=1}^{\infty}(-f)^n $ l
 %
 %
 \begin{bem}
-Sei $1_K + f \in \Upsilon$, und $\overline{1_K +\sum_{n=1}^{\infty}(-f)^n}$ das Inverse. Der Träger supp$(f)$ ist größer Null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
-\begin{eqnarray*}
-1_K &=& \left(1_K + f\right)\left( 1_K + \sum_{n=1}^{\infty}(-f)^n \right) \Leftrightarrow\\
-\frac{1_K}{1_K + f} &=& 1_K + \sum_{n=1}^{\infty}(-f)^n \Leftrightarrow \\
-\frac{1_K}{1_K + f} &=& \sum_{n=0}^{\infty}(-f)^n \Leftrightarrow\\
-\frac{1_K}{1_K - f} &=& \sum_{n=0}^{\infty}(f)^n
-\end{eqnarray*}
-Diese Form der Darstellung zeigt deutlich die Verbindung des inversen Elements mit der geometrischen Reihe.
+Sei $1_K + f \in \Upsilon$, dann ist $1_K +f$ invertierbar mit dem Inversen $\sum_{n=0}^{\infty}\left(-f\right)^n$.
+%und $\overline{1_K +\sum_{n=1}^{\infty}(-f)^n}$ das Inverse. Der Träger supp$(f)$ ist größer Null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
+%\begin{eqnarray*}
+%1_K &=& \left(1_K + f\right)\left( 1_K + \sum_{n=1}^{\infty}(-f)^n \right) \Leftrightarrow\\
+%\frac{1_K}{1_K + f} &=& 1_K + \sum_{n=1}^{\infty}(-f)^n \Leftrightarrow \\
+%\frac{1_K}{1_K + f} &=& \sum_{n=0}^{\infty}(-f)^n \Leftrightarrow\\
+%\frac{1_K}{1_K - f} &=& \sum_{n=0}^{\infty}(f)^n
+%\end{eqnarray*}
+%Diese Form der Darstellung zeigt deutlich die Verbindung des inversen Elements mit der geometrischen Reihe.
 \end{bem}
 %
 %
@@ -1343,7 +1389,7 @@ Mithilfe dieser Erkenntnis und Lemma \ref{JedePotenzreihesoDarstellbar} sind wir
 Die formalen Potenzreihen auf einer angeordneten Gruppe $G$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{f}$ das Inverse von $1_K + f$ in der Gruppe $\Upsilon$. Mit selbiger Argumentation wie oben wissen wir $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ ist in$ K\left(\left(z^{G}\right)\right)$. Da $\lambda\in K^*$ liegt, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
+Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{h}$ das Inverse von $1_K + h$ in der Gruppe $\Upsilon$. Da $\lambda\in K^*$ ist, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein inverses Element, das wir $-g$ nennen. Mit selbiger Argumentation wie oben wissen wir, dass das Element $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ in $ K\left(\left(z^{G}\right)\right)$ liegt. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
 %
 %
 %
@@ -1356,8 +1402,8 @@ f\cdot k
 &=& \left(\lambda\cdot z^g\left(1_K + h\right)\right) \cdot \left( \left(1_K + \overline{f}\right)z^{-g}\lambda^{-1}\right) \\
 &=& \left(\lambda\cdot z^g z^{-g}\lambda^{-1}\right) = \left(\lambda  z^{g-g}\lambda^{-1}\right)= \left(\lambda\lambda^{-1}\right)\\
 &=& 1_K\\
-&=& \left(1_K + \overline{f}\right)z^{-g}\lambda^{-1}\cdot \lambda z^g \left(1_K + f\right)\\
-&=& k\cdot f
+%&=& \left(1_K + \overline{f}\right)z^{-g}\lambda^{-1}\cdot \lambda z^g \left(1_K + f\right)\\
+%&=& k\cdot f
 \end{eqnarray*}
 }
 
@@ -1366,8 +1412,8 @@ f\cdot k
 %
 %
 \begin{bsp}
-Sei $G$ eine archimedisch angeordnete Gruppe. Um den verallgemeinerten Potenzreihenkörper über $K$ angeben zu können, benötigen wir eine angeordnete abelsche Gruppe. Nach dem Satz von Hölder \ref{aga} lässt sich jede archimedisch geordnete Gruppe in eine Untergruppe der additiven reellen Zahlen einbetten.
-Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte Potenzreihenkörper auf $G$ über $K$ entsteht also durch Einbettung von $G$ in $K\left(\left(z^\R\right)\right)$
+Sei $G$ eine archimedisch angeordnete Gruppe. Nach dem Satz von Hölder \ref{aga} lässt sich $G$ in die Gruppe der additiven reellen Zahlen einbetten.
+Somit lässt sich $K\left(\left(z^G\right)\right)$ einbetten in $K\left(\left(z^\R\right)\right)$.
 \end{bsp}
 %
 %
@@ -1376,9 +1422,72 @@ Die reellen Zahlen bilden eine angeordnete abelsche Gruppe. Der verallgemeinerte
 %
 %
 %
-Potenzreihen auf einer angeordneten abelschen Gruppe $G$ mit wohlgeordnetem Träger formen über einem Körper $K$ somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
-Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden, gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
+%Potenzreihen auf einer angeordneten abelschen Gruppe $G$ mit wohlgeordnetem Träger formen über einem Körper $K$ somit den Körper der formalen Potenzreihen $K\left(\left(z^{G}\right)\right)$. \\
+%Die Grundsteine dieser Theorie wurden von Hans Hahn 1907 in seinem Beweis, dass formale Potenzreihen auf einer angeordneten abelschen Gruppe über $\R$ einen Körper bilden, gelegt. Neumann verallgemeinerte Hahns Ergebnisse und zeigte, dass formale Potenzreihen auf einer multiplikativen Gruppe in der nicht-kommutativen Sichtweise einen Schiefkörper formen. Im Laufe der Jahre konnte die Theorie der formalen Potenzreihen, als Verallgemeinerung der Laurentreihen und Pusieuxreihen, immer weiter ausgebaut werden. \\
+
+%
+%
+%
+% 
+\begin{bsp}
+Es gilt $K\left(\left(z^\Z\right)\right) = K\left(\left(z\right)\right)$
+\end{bsp}
+%
+%
+%
+%
+Wir können nun die bewertungstheoretischen Aussagen, die wir in dem Körper der formalen Laurentreihen bewiesen haben, auf den verallgemeinerten Potenzreihenkörper ausweiten.
+%
+\begin{satz}
+Die Abbildung $v\colon K\left(\left(z^G\right)\right) \to G\cup \lbrace\infty\rbrace,~ f \mapsto \min(\textup{supp}(f))$ mit $v(\varnothing)=\infty$  ist eine Bewertung auf $K\left(\left(z^G\right)\right)$.
+\end{satz}
+\beweis{Die Abbildung ist surjektiv, denn zu jedem Gruppenelement existiert eine formale Potenzreihe $f \in K\left(\left(z^G\right)\right)$ mit diesem Startwert, sodass $v(f) = \min\left(\textup{supp}(f)\right)$ gilt. Wir weisen nun die Eigenschaften B1'-B3' aus Definition \ref{bewKoerper} nach.\\
+\begin{description}
+\item[\normalfont{zu B1'}] Klar nach Definition.
+\item[\normalfont{zu B2'}] Sei $f=\sum_{g\in G}a_g z^g \text{ und } h=\sum_{g\in G}b_g z^g$, mit $g_1 = \min(\textup{supp}(f))$ und $g_2 = \min(\textup{supp}(h))$. Dann ist $v(f) = g_1$ und $v(h) = g_2$. Damit gilt, dass $v(f) + v(h) = g_1 + g_2$ entspricht. \\
+Wir wollen zeigen, dass das Bild von $fh$ unter der Abbildung
+\[v(fh) = v( \sum_{g \in G}\sum_{k+j=g}a_kb_j z^g) \stackrel{\mathrm{!}}= v(f) + v(h),\] ist, wobei $a_k = 0 \text{ für } k < g_1   \text{ und } b_j = 0$ für $j < g_2$ ist. \\
+Wir betrachten zunächst $ g < g_1 + g_2 $. 
+%Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
+Nach Voraussetzung ist entweder $a_k = 0$, oder $b_j = 0$ und wir erhalten $a_kb_j = 0. $ Weiterhin gilt nach Voraussetzung $a_{g_1} \neq 0$ und $b_{g_2} \neq 0.$ \\
+Sei nun $g = g_1 + g_2$. Das Produkt $ a_{g_1}b_{g_2}$ ist ungleich Null und daher erhalten wir, dass $v(fg) = g_1+g_2 = v(f) + v(h)$ ist.
+\item[\normalfont{zu B3'}]: Wenn $f, h$ wie oben definiert sind, erhalten wir für $v(f+h)$ die folgende Gleichung: 
+\begin{eqnarray*}
+v\left(f+h\right) &=&  v\left( \sum_{g = \text{min}\lbrace g_1,g_2 \rbrace}^{\infty}(a_g + b_g) z^g\right) \\
+&\leq& \min\lbrace g_1, g_2 \rbrace \\ 
+&\stackrel{\mathrm{def}}=& \min\lbrace v(f), v(h)\rbrace
+\end{eqnarray*}
+\end{description}
+}
+%
+%
+%
+%
+%
+%
+%
+\begin{satz}
+Die Menge $K\lbrack\lbrack z^G\rbrack\rbrack = \lbrace f \in K\left(\left(z^G\right)\right)~ \vert~ \textup{supp}(f) \geq 0\rbrace$ ist ein Bewertungsring von $v$.
+\end{satz}
+\beweis{Dies folgt unmittelbar aus der Definition von $K\lbrack\lbrack z^G\rbrack\rbrack$ und der Definition eines Bewertungsrings \ref{BewertungsringVonBewertung}.}
+%
+%
+%
+%
+%
+%
+%
+%
+\begin{bsp}
+Es gilt $K\lbrack\lbrack z^\Z\rbrack\rbrack = K\lbrack\lbrack z\rbrack\rbrack$.
+\end{bsp}
+%
+%
 Hier schließt sich der Kreis zu dem, zu Beginn des Kapitels, betrachteten Potenzreihenring $K[[z]]$ und dem Laurentreihenkörper $K((z))$. Die Menge der ganzen Zahlen ist eine angeordnete abelsche additive Gruppe. Über einem beliebigen Körper K wissen wir nun, dass der Laurentreihenkörper mit $G = \Z$ ein Beispiel für einen formalen Potenzreihenkörper darstellt.
+%
+%
+%
+%
 %
 %
 %

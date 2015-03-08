@@ -55,7 +55,7 @@ Ist die Multiplikation kommutativ, so heißt $\left(R, +, \cdot\right)$ \textit{
 \end{bem}
 %
 %evtl Definition von Nullteiler, Einheit, Integritätsbereich? alles nach Erinnerung Kaiser
-\begin{defn}
+\begin{defn}\label{definitionEinheitNullteiler}
 Sei $\left(R, +, \cdot\right)$ ein kommutativer Ring mit Eins und sei $a \in R$.
 \begin{enumerate}
 \item Ein Element $a \in R$ heißt \textit{Nullteiler}, falls $a \neq 0$ und ein $0 \neq b \in R$ existiert mit $ab =0$.
@@ -183,7 +183,7 @@ $ M \left(D\right) := $Quot$\left( \mathcal{O} \left( D \right)\right) = \lbrace
 %
 %defintion K-Algebra
 \begin{defn} %\cite{rainer08}
-Sei $K$ ein Körper. Eine \textit{K-Algebra} ist ein $K$-Vektorraum $V$, auf dem zusätzlich eine Multiplikation $\left(v,w\right) \mapsto v\cdot w$ definiert ist und für den gilt:
+Sei $K$ ein Körper. Eine \textit{K-Algebra} ist ein $K$-Vektorraum $V$ auf dem zusätzlich eine Multiplikation $\left(v,w\right) \mapsto v\cdot w$ definiert ist und für den gilt:
 \begin{itemize}
 \item[(a)] $\left(V, +, \cdot\right)$ ist ein Ring mit Einselement.
 \item[(b)] Für $v,w \in V$ und $\lambda \in K$ gilt $\lambda\left(vw\right) = \left(\lambda v\right)w = v\left(\lambda w\right)$
@@ -217,10 +217,13 @@ Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale O
 %
 %
 \begin{defn}\label{ordnungsisomorph}
-Seien $A$ und $A'$ teilweise geordnete Mengen. Eine Abbildung $\phi \colon A \rightarrow A', a \mapsto a'$ wird \textit{Ordnungsisomorphismus} von $A$ nach $A'$ genannt, falls folgende Anforderungen erfüllt sind:
+Seien $A$ und $A'$ teilweise geordnete Mengen. Eine Abbildung $\phi \colon A \rightarrow A', a \mapsto a'$ wird \textit{Ordnungshomomorphismus} von $A$ nach $A'$ genannt, falls folgende Anforderung erfüllt ist:
 \begin{enumerate}
 \item (Ordnungstreue) Wenn $a \leq b$ gilt, so folgt $\phi(a) \leq \phi(b)$ für alle $a, b  \in A$.
-\item (Bijektivität) Für jedes $a' \in A'$ existiert genau ein $a \in A$, mit $a' = \phi(a)$.
+\end{enumerate}
+Gilt zusätzlich die folgende Aussage, so bezeichnen wir $\phi$ als \textit{Ordnungsisomorphismus}
+\begin{enumerate}
+\item[(b)] (Bijektivität) Für jedes $a' \in A'$ existiert genau ein $a \in A$, mit $a' = \phi(a)$.
 \end{enumerate}
 $A$ und $A'$ werden in diesem Fall \textit{ordnungsisomorph}, kurz \textit{o-isomorph} genannt.
 %Ist $G$ mit dem Positivbereich $P$ eine angeordnete Gruppe,
@@ -307,7 +310,7 @@ Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere
 %
 Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Dieses Theorem, so stellte sich nach erfolglosen Widerlegungsversuchen zahlreicher Mathematiker heraus, ist äquivalent zum Auswahlaxiom und dem Lemma von Zorn. \\
 Beispielsweise ist die natürliche Anordnung der natürlichen Zahlen $\N$ eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $``\leq "$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
-\begin{bem} %\cite{rainer08}
+\begin{bem} \label{teilmengeGanzeZahlenwohlgeordnet}%\cite{rainer08}
 Ist $W \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $W$ ein eindeutig bestimmtes kleinstes Element. 
 \end{bem} 
 %Der Beweis wird nicht benötigt. \beweis{ Es gilt: $ \Z$ ist ein kommutativer nullteilerfreier Ring mit Einselement und somit ein Integritätsbereich. Die Rechenoperationen sind wohldefiniert, wie leicht zu zeigen ist. Sei $M \subseteq \Z \text{ eine nach unten beschränkte Teilmenge von } \Z. $ Da M nach unten beschränkt ist gibt es ein $ a \in M \text{ sodass für alle } m \in M: a \le m.$ Noch zu zeigen ist, dass a eindeutig bestimmt ist. Dies folgt da $\le$ eine totale Ordnung auf $\Z$ definiert. Angenommen es gibt ein Element a' $\in$ M mit $a' \neq a \text{ und } \forall m \in M: a' \le m.$ Dann folgt nach Voraussetzung $a\le a' \text{ und } a'\le a$, und nach Definition einer totalen Ordnung \ref{twgG} [T2] $a' = a$, damit Widerspruch zur Voraussetzung. \\
@@ -479,7 +482,7 @@ Sei \[u_1 = v_1 + w_1,~ u_2 = v_2+w_2 ~...\text{, mit } v_r \in V, w_r\in W \tex
 %
 %
 \begin{folg}\label{FolgerungNeumann} %\cite{neumann49}
-Seien V, W wohlgeordnete Teilmengen einer angeordneten Gruppe $G$, dann gibt es für ein $g \in G$ nur endlich viele Paare $\left(v, w\right) \in V\times W$ mit $v + w = g$.
+Seien V, W wohlgeordnete Teilmengen einer angeordneten abelschen Gruppe $G$, dann gibt es für ein $g \in G$ nur endlich viele Paare $\left(v, w\right) \in V\times W$ mit $v + w = g$.
 \end{folg}
 \beweis{Angenommen es gäbe unendlich viele paarweise verschiedene $\left(v_n, w_n\right) \in V\times W$ für $n \in \N$, sodass $g = v_n + w_n$. Da $V$ und $W$ wohlgeordnet sind, besitzt weder $\left(v_n\right)_{n\in\N}$ noch $\left(w_n\right)_{n\in\N}$ eine streng monoton fallende Teilfolge. Die Folge $\left(v_n + w_n\right)_{n \in \N}$ enthält keine konstante Teilfolge, da sie nach Voraussetzung paarweise verschiedene Glieder besitzt. Nach Satz \ref{unendlicheFolgeEigenschaften} hat $\left(v_n + w_n\right)_{n \in \N}$ eine streng monoton steigende Teilfolge. Widerspruch, da $g$ konstant bleiben muss.
 }
@@ -676,22 +679,24 @@ Es bleibt zu zeigen, dass $\Phi\left(g\right)+\Phi\left(h\right)$ die kleinste o
 %
 Zu (vi): Falls $g, h > 0_{G}$ ist haben wir bereit gezeigt, dass aus $g\le h$ folgt, dass $\Phi(g) \leq \Phi(h)$ ist. Die Aussage gilt offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < 0_G \text{ und } h > 0_G$, dann folgt die Behauptung nach Definition. Die Behauptung bleibt für $g, h < 0_G$ zu zeigen. Wir erhalten
 \[g \le h \Leftrightarrow -g \geq -h \Leftrightarrow \Phi\left(-g\right) \geq \Phi\left(-h\right) \Leftrightarrow \Phi\left(g\right) \le \Phi\left(h\right).\]
-Wir zeigen nun $\Phi(g+h) = \Phi\left(g\right) +\Phi\left(h\right)$ für beliebige $g,h \in G$. Es genügt dies für $g, h < 0_G$ zu beweisen. Hier kann auf das bereits Bewiesene zurückgegriffen werden: 
+Wir zeigen nun $\Phi(g+h) = \Phi\left(g\right) +\Phi\left(h\right)$ für beliebige $g,h \in G$. Wir beginnen mit dem Fall $g, h < 0_G$. Hier kann auf das bereits Bewiesene zurückgegriffen werden: 
 \[\Phi\left(g+h\right) = −\Phi\left((−g)+(−h)\right) = (−\Phi(−g))+(−\Phi(−h)) = \Phi(g)+\Phi(h).\]
-Nun betrachten wir den Fall $g\geq −h$. Dann ist $g+h \geq 0_G$, und nach der bereits gezeigten Aussage folgern wir:\\
-$\Phi(g+h)+ \Phi(−h) = \Phi(g) \Leftrightarrow \Phi(g+h)−\Phi(h) = \Phi(g) \Leftrightarrow \Phi(g+h) = \Phi(g)+ \Phi(h)$.\\
-Setzen wir nun $g < −h$ voraus. Dann ist $−g−h > 0$, also $\Phi(g)+\Phi(−g−h) = \Phi(−h)$, was äquivalent zu $\Phi(g)−\Phi(g+h) = −\Phi(h)$ und zu $\Phi(g)+ \Phi(h) = \Phi(g+ h)$ ist.
+Nun betrachten wir den Fall $g>0_G$ und $h < 0_G$. Dann gilt entweder $g\geq −h$ oder $g < -h$. Wir beschäftigen uns zunächst mit $g \geq -h$. Dann ist $g+h \geq 0_G$, und nach der bereits gezeigten Aussage folgern wir:\\
+\[\Phi(g+h)+ \Phi(−h) = \Phi(g) \Leftrightarrow \Phi(g+h)−\Phi(h) = \Phi(g) \Leftrightarrow \Phi(g+h) = \Phi(g)+ \Phi(h).\]
+Sei nun $g < −h$. Dann ist $−g−h > 0$, also $\Phi(g)+\Phi(−g−h) = \Phi(−h)$, was äquivalent zu $\Phi(g)−\Phi(g+h) = −\Phi(h)$ und zu $\Phi(g)+ \Phi(h) = \Phi(g+ h)$ ist.
 \\ Die übrigen Fälle folgen analog. 
-Da $\Phi$ offensichtlich eine monoton steigende Funktion ist, ist $\Phi$ ein ordnungserhaltender Isomorphismus.}
+Da $\Phi$ offensichtlich ordnungserhaltend nach (iii) ist, ist $\Phi$ ein ordnungserhaltender Isomorphismus.}
 %Beweis über archimedische Eigenschaft, o-Isomorphie einer einelementigen Gruppe zu der Gruppe der ganzen Zahlen (\cite{priesscrampe69} S. 8), Kommutativität von G, Dedekindschen Schnitt und Homomorphismus (\cite{fuchs66} S. 75) } 
 %
 %TODO : Nun stellt sich die Frage, wann 
 \begin{satz}\label{homomorphismus nach R} %\cite{fuchs66}
 Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gruppe der reellen Zahlen und $\phi: G \rightarrow \R$ ein injektiver o-Homomorphismus. Dann gibt es eine positive reelle Zahl $r$ mit $\phi(g) = r\cdot g$ für alle $g \in G$. 
 \end{satz}
-\beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Weiterhin gehen wir davon aus, dass $n \cdot g_1 > m\cdot g_2$ ist. Nach der archimedischen Eigenschaft der Gruppe $G$ stehen die Bilder $\phi(n\cdot g_1)$ und $\phi(m\cdot g_2)$ in umgekehrter Größenbeziehung zueinander. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
+%
+%
+\beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Damit folgt, dass $n \cdot g_1 > m\cdot g_2$ und $\phi(n\cdot g_1)< \phi(m\cdot g_2)$ ist. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
 Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}= \frac{g_1}{g_2}$. Wir erhalten somit auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
-Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{(-1)\cdot\phi(g)}{(-1)\cdot g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r = \frac{m}{n} = \frac{\Phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
+Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{(-)\cdot\phi(g)}{(-)\cdot g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  = \frac{\Phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
 }
 Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Werk $\glqq$Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
 %
@@ -701,14 +706,14 @@ Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Wer
 %
 %TODO ABELSCH MACHEN!!!
 \section{Die angeordnete Menge konvexer Untergruppen}
-In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten abelschen Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen teilweise geordneter Gruppen besitzen eine durch die teilweise Gruppenordnung induzierte teilweise Ordnung. Wir bezeichnen die Untergruppen als angeordnet, falls die ursprüngliche teilweise Ordnung ebenso eine Anordnung war.\\
-Sei $\left(G, +\right)$ eine Gruppe, $U$ eine Untergruppe und $g \in G$. 
+In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten abelschen Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen geordneter Gruppen besitzen eine durch die Gruppenordnung induzierte Ordnung. \\
+Sei $G$ eine angeordnete abelsche Gruppe, $U$ eine Untergruppe und $g \in G$. 
 Wir untersuchen nun die bezüglich der Inklusion linear angeordnete Menge $\Sigma$ konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
 
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
-Eine Untergruppe $U$ einer angeordneten abelschen Gruppe $G$ nennen wir \textit{konvex}, wenn aus $a \in U$, $x \in G$, mit $0 < |x| < |a|$ folgt $x \in U$.\\
+Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $a \in U$ und $x \in G$, mit $0 < |x| < |a|$, folgt, dass $x \in U$ ist.\\
 \end{defn}
-$``\Sigma "$ bezeichne nun die \textit{Menge konvexer Untergruppen} einer angeordneten abelschen Gruppe $\left(G, +\right)$. 
+$\Sigma$ bezeichne nun die \textit{Menge konvexer Untergruppen} von $G$. 
 \begin{defn}\label{Sprung} %\cite{fuchs66}
 Sei $C, D \in \Sigma$. Wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe zwischen $C$ und $D$ enthält, nennen wir das Paar $C,~D$ \textit{Sprung} in $\Sigma$ und bezeichnen es mit $D \prec C$.
 \end{defn}
@@ -716,25 +721,39 @@ Sei $C, D \in \Sigma$. Wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe
 % 
 %
 %
+%
+%
+\begin{lemma}\label{untergruppeangeordnet}
+$\Sigma$ ist bezüglich Inklusion total geordnet.
+\end{lemma}
+\beweis{Sei $C \in \Sigma$, dann gilt offensichtlich $C \subseteq C$. Somit ist die Inklusionsordnung reflexiv. Sei $C, D \in \Sigma$  und sei $C \subseteq D$ und $D\subseteq C$. Dann gilt für alle $c\in C$, und $d\in D$, dass $c\in D$ und $d \in C$ liegt. Weiterhin folgt aus $c \in C$ und $g \in G$ mit $ 0 < |g| < |c|$, dass $g \in C$. Da $C\subseteq D$ ist, erhalten wir $g\in D$. Der Fall für $d \in D$ folgt analog. Damit erhalten wir die Antisymmetrie der Ordnung. \\
+Sei $C \subseteq D$ und $D \subseteq E$ mit $C, D, E \in \Sigma$. Für alle $c \in C$ gilt wegen $C\subseteq D$, dass $c \in D$ ist. Da aufgrund der selben Argumentation alle Elemente aus $D$ in $E$ liegen, folgt $c\in E$. Die Konvexität zeigt man analog. Da $c$ beliebig ist, haben wir die Transitivität der Inklusion gezeigt.\\
+Die Ordnung auf $\Sigma$ ist total. Denn angenommen es gäbe $C,D \in \Sigma$ sodass weder $C \subseteq D$, noch $D \subseteq C$ noch $C= D$ gilt. Sei $c \in C$ und $d \in D$. Sei $0 < |d| <|c|$ dann gilt nach Definition der Konvexität, dass $d \in C$ liegt. Dies ist ein Widerspruch zur Voraussetzung.
+}
+%
  %evtl. auch \cite{priesscrampe83}  Nach \cite[S. 81 - 83]{fuchs66}
 \begin{satz}\label{EigenschaftenKonvexeUgr}
 Die Menge der konvexen Untergruppen $\Sigma$ besitzt folgende Eigenschaften:
 \begin{enumerate}
 \item[S1:] Die Vereinigung und der Durchschnitt beliebig vieler Untergruppen aus $\Sigma$ liegen wieder in $\Sigma$.
-\item[S2:] Ist $C \in\Sigma$ und $g \in G$, so ist $-g+C+g\in \Sigma$
-\item[S3:] Sei $D \prec C$ in $\Sigma$, so ist $D$ normal in $C$ und $C/D$ ist isomorph zu einer Untergruppe der reellen Zahlen.
+%leer wegen abelsch \item[S2:] Ist $C \in\Sigma$ und $g \in G$, so ist $-g+C+g\in \Sigma$
+\item[S2:] Sei $D \prec C$ in $\Sigma$, so ist $C/D$ isomorph zu einer Untergruppe der reellen Zahlen.
 \end{enumerate}
 \end{satz}
 \beweis{
-Zu S1: Seien $C, D \in \Sigma$ konvexe Untergruppen der angeordneten abelschen Gruppe $G$ und sei $c\in C, c\notin D$. Wir nehmen ohne Beschränkung der Allgemeinheit an, $c$ ist bezüglich der Anordnung von $G$ größer als das neutrale Element $0_G$. Da $c$ nicht in $D$ liegt, kann es kein Element $d \in D$ geben, sodass $0_G < c < d$. In diesem Fall würde $c$ nach der konvexen Eigenschaft in $D$ liegen. Dies ist ein Widerspruch zur Voraussetzung und daher gilt $D \subseteq C$. Der Schnitt $C \cap D =D$, da $D \subseteq C$. Die Untergruppe $D$ ist konvex nach Voraussetzung. Ebenso gilt $C\cup D = C$ und $C$ ist auch eine konvexe Untergruppe nach Voraussetzung. Damit folgt unmittelbar, dass sowohl der Schnitt konvexer Untergruppen wieder angeordnet und konvex ist, als auch die Vereinigung.\\
-Zu S2: Jede Untergruppe einer angeordnet abelschen Gruppen ist ein Normalteiler. Die Aussage folgt also sofort aus den Eigenschaften einer angeordneten abelschen Gruppe.
+Zu S1: Seien $C, D \in \Sigma$. Nach Lemma \ref{untergruppeangeordnet} ist $\Sigma$ angeordnet.
+%konvexe Untergruppen der angeordneten abelschen Gruppe $G$ und sei $c\in C, c\notin D$. Wir nehmen ohne Beschränkung der Allgemeinheit an, $c$ ist bezüglich der Anordnung von $G$ größer als das neutrale Element $0_G$. Da $c$ nicht in $D$ liegt, kann es kein Element $d \in D$ geben, sodass $0_G < c < d$. In diesem Fall würde $c$ nach der konvexen Eigenschaft in $D$ liegen. Dies ist ein Widerspruch zur Voraussetzung und daher gilt $D \subseteq C$. 
+Sei o.B.d.A $D\subseteq C$.
+Der Schnitt $C \cap D$ entspricht in diesem Fall $D$, da $D \subseteq C$ ist. Die Untergruppe $D$ ist konvex nach Voraussetzung. Ebenso gilt $C\cup D = C$ und $C$ ist auch eine konvexe Untergruppe nach Voraussetzung. Damit folgt unmittelbar, dass sowohl der Schnitt konvexer Untergruppen wieder angeordnet und konvex ist, als auch die Vereinigung.\\
+%Zu S2: Jede Untergruppe einer angeordnet abelschen Gruppen ist ein Normalteiler. Die Aussage folgt also sofort aus den Eigenschaften einer angeordneten abelschen Gruppe.
 %Für $g \in C$ ist offensichtlich $-g + C+ g = C \in \Sigma$. Falls $g \notin C$, so ist $-g + C+ g$ eine Untergruppe von $G$, denn für alle $c_1, c_2 \in C, g \in G$ ist $-g+ c_1+g + -g+ c_2+ g = -g + c_1+ c_2+ g \in -g + C+ g$ und $-\left(-g+ c_1+ g\right) = g + \left(- c_1\right) + -g= -g + \left(- c_1\right) +g \in -g+ C_1+ g$. Die Anordnung von $G$ überträgt sich auf $-g+ C_1+ g$ und die Untergruppe ist konvex, da $C$ nach Voraussetzung und $G$ als triviale Untergruppe konvex ist.\\
 %
 %
 %
 %
-%
-Zu S3: Der erste Teil der Aussage ist trivial (s. Beweis S2). In $\Sigma$ existiert keine Untergruppe zwischen $C$ und $D$. Die Faktorgruppe $C/D$ enthält dementsprechend nur die trivialen konvexen Untergruppen $0_G$ und $G$. Wir zeigen zunächst, dass $C/D$ archimedisch geordnet ist. Sei $0_G \neq g \in G$. Das Element $h\in C/D$ gehört nicht zu einer von $g \in C/D$ erzeugten konvexen Untergruppe, wenn $ng < h$ für $b = 0, \pm 1,\pm 2, ...$. Da $C/D$ nur die trivialen konvexen Untergruppen enthält, ist $g = 0_G$. Die Faktorgruppe ist archimedisch angeordnet.
+%TODO: fehlt argument warum C keine konvexe UGR von C/D!
+Zu S2: In $\Sigma$ existiert keine Untergruppe zwischen $C$ und $D$. Nach dem Korrespondenzsatz \cite{fischer08} entsprechen die Untergruppen von $C/D$ bijektiv den Untergruppen von $C$, die $D$ enthalten. Die Ordnung auf $C/D$ ist die induzierte Ordnung. Damit überträgt der Isomorphismus ebenfalls die Konvexitätseigenschaft. Da $C, D$ ein Sprung ist, gibt es aber zwischen $C$ und $D$ keine weiteren Untergruppen. $D$ ist das neutrale Element der Faktorgruppe $C/D$. Daraus können wir schließen, dass die Faktorgruppe $C/D$ nur die trivialen konvexen Untergruppen $0_{C/D}$ und $C/D$ enthält. \\
+Angenommen $C/D$ wäre nicht archimedisch geordnet. Dann  Sei $0_G \neq g \in G$, dann gibt es ein Element $h\in C/D$ sodass, $ng < h$ ist für $n = 0, \pm 1,\pm 2, ...$. Wie vorher gezeigt enthält $C/D$ nur die trivialen konvexen Untergruppen. Also muss $g = 0_{C/D}$ sein. Dies ist ein Widerspruch zur Annahme und wir sehen, dass die Faktorgruppe archimedisch angeordnet ist.
 %  Damit liegt $h$ nicht in $\langle g \rangle$ der von $g$ erzeugten konvexen Untergruppe. ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und 
 Der Satz von Hölder \ref{aga} liefert nun, dass $C/D$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen ist.
 % Nach Voraussetzung gilt $D \prec C$ und offensichtlich erfüllt jedes Element $g \in G$ die Bedingung $g^{-1}D_1g \prec  g^{-1}C_1g$. Weiterhin erhalten wir im Fall $g\in C$, dass  $g^{-1}C_1g = C$, und da $D \subset C$ ist $g^{-1}D_1g = D$. Infolgedessen ist $D$ normal in $C$ und die Faktorgruppe $C/D$ enthält, da in $\Sigma$ keine Untergruppe zwischen $C$ und $D$ existiert, dementsprechend nur die trivialen konvexen Untergruppen. In $C/D$ ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und nach Satz von Hölder \ref{aga} isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.
@@ -764,9 +783,19 @@ Sei $G$ eine angeordnete abelsche Gruppe. Die surjektive Funktion $v\colon G \ri
 \end{defn}
 Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
  Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $ ist.\\
-Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedische Klasse, in der das Element $a\in G$ liegt  mit $[a]$. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung $G \to [G] \colon a \mapsto [a]$ definieren wir als \textit{natürliche Bewertung}. %\cite{priesscrampe83}
+Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedische Klasse, in der das Element $a\in G$ liegt  mit $[a]$. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung $G \to [G], a \mapsto [a]$, ist eine Bewertung (dabei ist $[0]$ das kleinste Element) und wird als \textit{natürliche Bewertung} bezeichnet. %\cite{priesscrampe83}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
 \begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
-Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
+Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $, mit $g< \infty$ für alle $g \in G$. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
 %TODO: Quelle checken
 \begin{enumerate}
 \item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,
@@ -777,23 +806,40 @@ Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}
 %Ein Beispiel für eine Bewertung ist die Polordnung meromorpher Funktionen in einem festen Punkt, wie im Hauptteil \ref*{LaurentreiheBewertung} noch erörtert wird. 
 Man bezeichnet $v\colon K \to \overline{G} $ als \textit{diskrete Bewertung}, falls ${G} = \Z$ ist.
 %
-\begin{defn} %nach Priess Crampe S39
-Der Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet, wenn $a \in A$ oder $a^{-1}\in A$ für jedes $a\in K$ gilt.
+%
+%
+%
+%
+%
+% 
+\begin{defn}\label{BewertungsringVonBewertung} %\cite{priesscrampe83}
+Ist $\left(K, v\right)$ ein bewerteter Körper, so ist $A = \lbrace  a \in K\colon v(a) \geq 0_G\rbrace$ ein \textit{Bewertungsring von v}.
+
 \end{defn}
-\begin{bem}
-Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist $A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ ein Bewertungsring.
+%
+%
+%
+%
+% 
+%
+\begin{defn} %nach Priess Crampe S39
+Ein Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet, wenn $a \in A$ oder $a^{-1}\in A$ für jedes $a\in K$ gilt.
+\end{defn}
+\begin{bem} %sehr komische Formulierung aber anscheinend will Kaiser es so
+Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist der Bewertungsring von $v$ ein Bewertungsring.
+%$A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ 
 \end{bem}
 \begin{defn}   %\cite{hulek12}
-Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt und 
+Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt, sodass $R$
 %\begin{enumerate}
 %\item[D1: ]$v(ab) = v(a)+ v(b)$, 
 %\item[D2: ] $v(a+b) \ge$ min$\lbrace v(a), v(b)\rbrace$,
 %sodass $R$ der Bewertungsring von $v$ ist. Das bedeutet:
 %\end{enumerate}
-\[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
+%\[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
 der Bewertungsring von $v$ ist.
 \end{defn}
 Eine weitere, äquivalente, Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
-\begin{defn} \label{bewertungsring}%\cite{neukirch92}
-Ein \textit{diskreter Bewertungsring} ist ein Hauptidealring mit einem einzigen maximalen Ideal $\mathfrak{p}$.
-\end{defn} 
+\begin{bem} \label{bewertungsring}%\cite{neukirch92}
+Ein Integritätsring ist genau dann ein \textit{diskreter Bewertungsring}, wenn er ein Hauptidealring mit einem einzigen maximalen Ideal ist.
+\end{bem} 

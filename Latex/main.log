@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  4 MAR 2015 23:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  8 MAR 2015 22:48
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1141,111 +1141,111 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\rm' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\rm'
-(scrbook)              by `\normalfont \rmfamily ' on input line 338.
+(scrbook)              by `\normalfont \rmfamily ' on input line 341.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 385.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 388.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 385.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 388.
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 393.
+LaTeX Warning: Command \glqq invalid in math mode on input line 396.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 393.
+LaTeX Warning: Command \grqq invalid in math mode on input line 396.
 
 [14
 
 
 ] [15]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 450.
+LaTeX Warning: Command \glqq invalid in math mode on input line 453.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 450.
+LaTeX Warning: Command \grqq invalid in math mode on input line 453.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 450.
+Package hyperref Warning: Suppressing link with empty target on input line 453.
 
 
 [16]
-Overfull \hbox (3.3178pt too wide) in paragraph at lines 473--473
+Overfull \hbox (3.3178pt too wide) in paragraph at lines 476--476
 \T1/cmr/m/n/10.95 eine be-lie-bi-ge Fol-ge von Ele-men-ten aus $\OML/cmm/m/it/1
 0.95 U$\T1/cmr/m/n/10.95 . Es gibt ei-ne mo-no-ton stei-gen-de Teil-fol-ge $\OM
 L/cmm/m/it/10.95 v[]; v[]; :::$
  []
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 499.
+LaTeX Warning: Command \glqq invalid in math mode on input line 502.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 499.
+LaTeX Warning: Command \grqq invalid in math mode on input line 502.
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 556--560
+Underfull \hbox (badness 10000) in paragraph at lines 559--563
 
  []
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 605.
+LaTeX Warning: Command \glqq invalid in math mode on input line 608.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 605.
+LaTeX Warning: Command \grqq invalid in math mode on input line 608.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 685--685
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--685
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
 
  []
 
 [20] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
+Underfull \hbox (badness 10000) in paragraph at lines 688--688
+
+ []
+
 [21]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 696.
+LaTeX Warning: Command \glqq invalid in math mode on input line 701.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 696.
+LaTeX Warning: Command \grqq invalid in math mode on input line 701.
 
 
-Overfull \hbox (19.84982pt too wide) in paragraph at lines 696--703
+Overfull \hbox (19.84982pt too wide) in paragraph at lines 701--708
 []\T1/cmr/m/n/10.95 Die Grund-aus-sa-ge die-ses Sat-zes be-wies Hi-on 1954 in s
 ei-nem rus-sisch-spra-chi-gen Werk $[]$Archimedisch
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
 
 [23]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 752.
+LaTeX Warning: Command \glqq invalid in math mode on input line 771.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 752.
+LaTeX Warning: Command \grqq invalid in math mode on input line 771.
 
 [24]
-Overfull \hbox (4.65294pt too wide) in paragraph at lines 787--793
+Overfull \hbox (4.65294pt too wide) in paragraph at lines 833--841
 []\T1/cmr/m/n/10.95 Ein In-te-gri-täts-ring $\OML/cmm/m/it/10.95 R$ \T1/cmr/m/n
 /10.95 heiÿt \T1/cmr/m/it/10.95 dis-kre-ter Be-wer-tungs-ring\T1/cmr/m/n/10.95 
 , falls es auf dem Quo-ti-en-ten-kör-per Quot$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
 /10.95 R\OT1/cmr/m/n/10.95 )$
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 798.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-))
-(C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
+) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
 [25]
 Kapitel 5.
 
@@ -1265,114 +1265,107 @@ Class scrbook Warning: Usage of deprecated font command `\rm'!
 [26
 
 
-] [27] [28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-[31] [32] [33] [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
+[30] [31] [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
-
- []
-
-[36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 553--553
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
 
  []
 
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 553--553
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
 
  []
 
-[39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 609--611
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
 
  []
 
+[38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--628
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 692--704
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 658--670
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 771.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 771.
 
 [42]
+Overfull \hbox (11.98634pt too wide) in paragraph at lines 942--942
+\T1/cmr/m/n/10.95 Wir un-ter-glie-dern den Be-weis und zei-gen zu-nächst, dass 
+für al-le $\OML/cmm/m/it/10.95 g \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \
+T1/cmr/m/n/10.95 die Sum-me $[][] \OML/cmm/m/it/10.95 a[]b[]$
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 736.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 736.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 736.
-
-[43] [44]
-
-Package hyperref Warning: Suppressing link with empty target on input line 907.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 907.
-
-
-[45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+[43] [44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 
  []
 
-[47]
+[46]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1020.
+(hyperref)                removing `math shift' on input line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1020.
+(hyperref)                removing `\left' on input line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1020.
+(hyperref)                removing `\left' on input line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1020.
+(hyperref)                removing `superscript' on input line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1020.
+(hyperref)                removing `\right' on input line 1056.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
+(hyperref)                removing `\right' on input line 1056.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1056.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1073
 
  []
 
 
-Overfull \hbox (6.08646pt too wide) in paragraph at lines 1053--1053
+Overfull \hbox (6.08646pt too wide) in paragraph at lines 1098--1098
 \T1/cmr/m/n/10.95 fi-ni-ti-on der Wohl-ord-nung exis-tiert ein kleins-tes Ele-m
 ent $\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \T1/cmr
 /m/n/10.95 in supp$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 
@@ -1381,17 +1374,36 @@ ent $\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \T1/cmr
 )$\T1/cmr/m/n/10.95 .
  []
 
-[48] [49] [50]
-Overfull \hbox (7.84805pt too wide) in paragraph at lines 1226--1227
-[]\T1/cmr/m/n/10.95 Die in Lem-ma [][]5.3.16[][] de-fi-nier-te Rei-he $[][] \OM
+[47] [48] [49]
+Overfull \hbox (7.84805pt too wide) in paragraph at lines 1271--1272
+[]\T1/cmr/m/n/10.95 Die in Lem-ma [][]5.3.15[][] de-fi-nier-te Rei-he $[][] \OM
 L/cmm/m/it/10.95 [][][]$ \T1/cmr/m/n/10.95 mit $\OML/cmm/m/it/10.95 [] \OMS/c
 msy/m/n/10.95 2 \OML/cmm/m/it/10.95 K$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
 95 f \OT1/cmr/m/n/10.95 := [][] \OML/cmm/m/it/10.95 a[]z[] \OMS/cmsy/m/n/10.95 
 2$
  []
 
-[51] [52] [53]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl
-[54]
+[50]
+LaTeX Font Info:    Try loading font information for U+euf on input line 1355.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [51]
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1461
+
+ []
+
+
+Overfull \hbox (5.73273pt too wide) in paragraph at lines 1461--1461
+[]\T1/cmr/m/n/10.95 Sei $\OML/cmm/m/it/10.95 f \OT1/cmr/m/n/10.95 = [][] \OML/c
+mm/m/it/10.95 a[]z[][]h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 b[]z[]$\T
+1/cmr/m/n/10.95 , mit $\OML/cmm/m/it/10.95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/
+cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 ))$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
+95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 ))$\T
+1/cmr/m/n/10.95 .
+ []
+
+[53]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl [54]
 
 Class scrbook Warning: Usage of deprecated font command `\rm'!
 (scrbook)              You should note, that in 1994 font command `\rm' has
@@ -1425,11 +1437,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 20586 strings out of 493921
- 353046 string characters out of 3144876
- 476339 words of memory out of 3000000
- 23236 multiletter control sequences out of 15000+200000
- 28446 words of font info for 65 fonts, out of 3000000 for 9000
+ 20593 strings out of 493921
+ 353209 string characters out of 3144876
+ 476476 words of memory out of 3000000
+ 23239 multiletter control sequences out of 15000+200000
+ 28210 words of font info for 64 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,14n,71p,1085b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1460,13 +1472,12 @@ r8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (56 pages, 654235 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (56 pages, 649169 bytes).
 PDF statistics:
- 1218 PDF objects out of 1440 (max. 8388607)
- 217 named destinations out of 1000 (max. 500000)
+ 1216 PDF objects out of 1440 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
