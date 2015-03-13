@@ -397,7 +397,7 @@ K((z)) = \lbrace \sum_{n =k}^{\infty} a_nz^n \vert a_n \in K, k \in \Z\rbrace
 \end{equation*} 
 Die Addition und Multiplikation formaler Laurentreihen erfolgt analog zur Addition und Multiplikation formaler Potenzreihen.
 \begin{defn}
-Zwei Laurentreihen $f, g \in K((z))$, mit $f = \sum_{n=k}^\infty a_n z^n$ und $g= \sum_{n=m}^\infty b_n z^n$, werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
+Zwei Laurentreihen $f, g \in K((z))$ mit $f = \sum_{n=k}^\infty a_n z^n$ und $g= \sum_{n=m}^\infty b_n z^n$ werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
 %
 \begin{eqnarray}
 \sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
@@ -468,7 +468,7 @@ Die Menge $K((z))$ ist eine K-Algebra.
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
 $\left(K((z)), +, \cdot\right)$ ist mit der definierten Addition und Multiplikation ein Körper. 
 \end{satz}
-\beweis{ Sei $0 \neq f \in K((z))$ und $f = \sum_{n= m}^{\infty} a_nz^n$, mit $a_m\neq 0$.
+\beweis{ Sei $0 \neq f \in K((z))$ und $f = \sum_{n= m}^{\infty} a_nz^n$ mit $a_m\neq 0$.
 %Dann gibt es ein $i \in \Z$, sodass $f = \sum_{n= i}^{\infty}a_nz^n$ für alle $n \in \Z $ mit $n \geq i$ ungleich Null ist und für alle $n < i$ gleich Null ist. 
 %Wir wissen bereits $K((z))$ ist ein kommutativer Ring. 
 %Um zu zeigen, dass $K((z))$ ein Körper ist, genügt es zu beweisen, dass zu jedem Element $f$ von $K((z))$ ein Inverses $g$ existiert. 
@@ -630,7 +630,7 @@ Dazu betrachten wir zunächst den Träger \ref{traeger} der Laurentreihe supp$(f
 %
 %
 \begin{satz} \label{LaurentreiheBewertung}
-Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung, wobei wir $\min\left(varnothing\right)= \infty$ setzen.
+Die Abbildung  $v\colon K((z))\rightarrow \Z\cup \lbrace \infty \rbrace$ definiert durch $v(f)= \min\left(\textup{supp}(f)\right)$ ist eine diskrete Bewertung, wobei wir $\min\left(\varnothing\right)= \infty$ setzen.
 \end{satz}
 %
 \beweis{
@@ -639,7 +639,7 @@ Klar: Die Abbildung ist surjektiv, da es zu jeder ganzen Zahl eine Laurentreihe 
 Nach Definition \ref{bewKoerper} sind für den Körper $K((z))$ und die angeordnete abelsche Gruppe $\Z$ noch B1'-B3' nachzuweisen. 
 \begin{description}
 \item[\normalfont{zu B1'}]: Klar nach Definition.%$"\Leftarrow"$ Sei f = $0_K = \sum_{n=0}^{\infty} a_nz^n$, mit $a_n = 0 \forall n \in \N$. Es gilt v(f) = 0 genau dann wenn $n_0 = 0$, wenn $ f(z)=\sum_{n = n_0}{\infty}a_n z^n $. Angenommen f $\neq 0_K = \sum_{n=0}^{max}$. Nach Voraussetzung muss gelten $a_{n_0} = a_0 \neq 0$. 
-\item[\normalfont{zu B2'}]: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$, mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist $v(f) = n_0$ und $v(g) = m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
+\item[\normalfont{zu B2'}]: Sei $f=\sum_{n = n_0}^{\infty}a_n z^n \text{ und } g=\sum_{m = m_0}^{\infty}b_m z^m$ mit $a_{n_0} \neq 0$ und $b_{m_0} \neq 0$. Dann ist $v(f) = n_0$ und $v(g) = m_0$. Damit gilt, dass $v(f) + v(g) = n_0 + m_0$ entspricht. \\
 Wir wollen zeigen, dass das Bild von $fg$ unter der Abbildung
 \[v(fg) = v( \sum_{n \in \Z}\sum_{m+k=n}a_mb_kz^n) \stackrel{\mathrm{!}}= v(f) + v(g),\] ist, wobei $a_m = 0 \text{ für } m < n_0   \text{ und } b_k = 0$ für $k < m_0$ gilt. Wir betrachten $ n < n_0 + m_0 $. 
 %Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
@@ -835,7 +835,7 @@ In diesem Abschnitt definieren wir die Verknüpfungen auf $K((z^{G}))$. Wir gehe
 %
 %
 \begin{defn}\label{AdditionFormalerPotenzreihen}
-Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g \in G}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
+Seien $f, h \in K\left(\left(z^G\right)\right)$ mit $f = \sum_{g \in G}^{} a_g z^g \text{ und } h = \sum_{g \in G}^{} b_g z^g$.\\
 Die Summe zweier formaler Potenzreihen $f, g$ ist definiert durch die Addition der Koeffizientenfolgen:
 \begin{eqnarray*}
 f + h &=& \sum_{g \in G}^{} a_g z^g + \sum_{g \in G}^{} b_g z^g
@@ -896,7 +896,7 @@ Die distributive Fortsetzung der Multiplikation von Monomen führt zur Definitio
 %
 %
 \begin{defn}\label{MultiplikationformalePotenzreihen}
-Seien $f, h \in K\left(\left(z^G\right)\right)$, mit $f = \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \text{ und } h = \sum_{g_2 \in G}^{} b_{g_2} z^{g_2}$. Die Multiplikation zweier formaler Potenzreihen $f, h$ erfolgt durch Faltung: 
+Seien $f, h \in K\left(\left(z^G\right)\right)$ mit $f = \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \text{ und } h = \sum_{g_2 \in G}^{} b_{g_2} z^{g_2}$. Die Multiplikation zweier formaler Potenzreihen $f, h$ erfolgt durch Faltung: 
 \begin{eqnarray*}\label{eq: multPotenzreihenkoerper}  
  f\cdot h &=& \sum_{g_1 \in G}^{} a_{g_1} z^{g_1} \cdot \sum_{g_2 \in G}^{} b_{g_2} z^{g_2} 
 = \sum_{g \in G}^{}\sum_{g_1 + g_2 = g}^{}a_{g_1} b_{g_2}z^g.  
@@ -992,9 +992,8 @@ Insgesamt erhalten wir, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der d
 %
 % 
 %
-%TODO: genauer!
 \begin{bsp}
-Sei $G = \Q$ eine angeordnete abelsche Gruppe. Bei der Reihe $f := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$, mit $p\in \Z\setminus\lbrace0\rbrace$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ mit $\min\left(\textup{supp}(f)\right) \geq -1$ wohlgeordnet ist.
+Sei $G = \Q$ eine angeordnete abelsche Gruppe. Bei der Reihe $f := z^{\frac{-1}{p}}+  z^{\frac{-1}{p^2}} + z^{\frac{-1}{p^3}} ...$ mit $p\in \Z\setminus\lbrace0\rbrace$ handelt es sich um eine formale Potenzreihe über einem beliebigen Körper, da der Träger $\lbrace \frac{-1}{p}, \frac{-1}{p^2}, \frac{-1}{p^3}, ... \rbrace$ mit $\min\left(\textup{supp}(f)\right) \geq -1$ mit $\min\left(\textup{supp}(f)\right)\geq -1$ wohlgeordnet ist.
 \end{bsp}
 %
 %
@@ -1032,7 +1031,7 @@ $ gilt nach Definition der Addition:
 \end{eqnarray*}
 
 \item \textit{Neutrales Element der Addition:} Bezeichne $0_K$ das neutrale Element der Addition $0_K = \sum_{g \in G}^{} a_g z^g$, wobei ähnlich wie in \ref{Rechnen} gilt $a_g = 0$ für alle $g \in G$. Der Träger von $0_K$ ist die leere Menge, welche nach Definition wohlgeordnet ist.
-\item \textit{Negatives Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein negatives Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$, mit $f+ \left(-f\right) = 0_K$.
+\item \textit{Negatives Element der Addition:} Zu jedem Gruppenelement $f$ gibt es ein negatives Element der Addition $-f = \sum_{g \in G}^{} -a_g z^g$, wobei supp$(f)$ = supp$(-f)$ mit $f+ \left(-f\right) = 0_K$.
 \item \textit{Kommutativität:} 
 Die Addition ist kommutativ, denn es gilt 
 \begin{eqnarray*}
@@ -1128,16 +1127,16 @@ Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{}a_g z^g$
 \begin{eqnarray*}
 f&=& z^\gamma ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
 &=& z^\gamma \left( 1_K a_\gamma + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} a_{g} z^{g -\gamma}\right) \\
-&\stackrel{\mathrm{(*)}}=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}}z^{g-\gamma}\right) \\
+&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}}z^{g-\gamma}\right) \\
 &=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}\right),
 \end{eqnarray*}
 %
 %
 mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}^{-1}}$. \\
 %Die Gleichheit in (*) gilt, denn zu $a_\gamma$, mit $a_\gamma \in K$ und $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$, existiert das Inverse. \\
-Es gilt weiterhin $g-\gamma > 0$ für alle $g\in \textup{supp}(f)\setminus \lbrace \gamma\rbrace$, da $\gamma = $min(supp$(f))$.
+Es gilt weiterhin $g-\gamma > 0$ für alle $g\in \textup{supp}(f)\setminus \lbrace \gamma\rbrace$, da $\gamma = \min(\textup{supp}(f))$.
  %und damit ist $g > \gamma$ für alle $g\in G$. 
- Wir erhalten die Positivität des Trägers der entstandenen formalen Potenzreihe $h = \sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}$. Die Darstellung ist eindeutig. Denn sowohl $\gamma = \min(\textup{supp}(f))$ als auch $a_\gamma$ sind nach Definition der formalen Potenzreihe $f$ eindeutig bestimmt. Angenommen es gäbe ein $h' \in K\left(\left(z^G\right)\right)$, mit $h'\neq h$, dann gelte
+ Wir erhalten die Positivität des Trägers der entstandenen formalen Potenzreihe $h = \sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}$. Die Darstellung ist eindeutig. Denn sowohl $\gamma = \min(\textup{supp}(f))$ als auch $a_\gamma$ sind nach Definition der formalen Potenzreihe $f$ eindeutig bestimmt. Angenommen es gäbe ein $h' \in K\left(\left(z^G\right)\right)$ mit $h'\neq h$, dann gelte
 \begin{eqnarray*}
 && f = a_\gamma z^\gamma\left(1_K + h\right) = a_\gamma z^\gamma\left(1_K + h'\right) \\
 &\Leftrightarrow& \left(1_K + h\right) = \left(1_K + h'\right) \\
@@ -1289,7 +1288,7 @@ Nach Definition \ref{wohlgeordn} und Bemerkung \ref{Teilmengewohlgeordnet} ist s
 zu 2.: Wir nehmen nun an, es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ unendlich viele ganze Zahlen $n \in \N$, sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
 Die Vereinigung der Träger supp($f^n$) ist wohlgeordnet. Somit existiert ein kleinstes Element $g$ der oben definierten Form. Nach Lemma \ref{unendlicheFolgeEigenschaften} enthält die Folge $\left({g_i}_1\right)_{i\in \N}$ eine streng monoton steigende Teilfolge, die wir gleich indizieren:
 \[g_{11} \le ... \le g_{i1} \le ... . \] 
-Die Folge $g_{i2} + ... + g_{in_i}$ ist, mit $i \in \N$, konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die der Koeffizient der formalen Potenzreihe $\left(a^n\right)_g \neq 0$ ist.
+Die Folge $g_{i2} + ... + g_{in_i}$ ist mit $i \in \N$ konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die der Koeffizient der formalen Potenzreihe $\left(a^n\right)_g \neq 0$ ist.
 }
 %
 %
@@ -1382,12 +1381,12 @@ Seien $f, h\in  K\left(\left(z^{G}\right)\right)$ mit $\min(\text{supp}(f)) >0,~
 %
 %
 \begin{lemma}
-Sei $1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und $\min(\textup{supp}(f)) >0$. Das Element 
+Sei $1_K + f \in \Upsilon$ mit $f \in K\left(\left(z^{G}\right)\right)$ und $\min(\textup{supp}(f)) >0$. Das Element 
 \[\sum_{n=0}^{\infty} \left(-f\right)^n = 1_K +\sum_{n=1}^{\infty}(-f)^n\]
 liegt in $\Upsilon$ und ist invers zu $1_K + f$.
 
 \end{lemma}
-\beweis{Sei $\mathfrak{f} := 1_K + f \in \Upsilon$, mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\overline{f} := \sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ ist in der Vereinigung der Träger supp$(-f^n)$ enthalten. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
+\beweis{Sei $\mathfrak{f} := 1_K + f \in \Upsilon$ mit $f \in K\left(\left(z^{G}\right)\right)$ und min(supp$(f)) >0$. Die Menge $K\left(\left(z^{G}\right)\right)$ ist nach Satz \ref{verallgemeinerterPotenzreihenring} ein kommutativer Ring. Es gilt somit $-f \in K\left(\left(z^{G}\right)\right)$. Der Träger der formalen Potenzreihe $-f$ entspricht dem Träger von $f$ und es gilt min(supp$(-f)) >0$. Nach Lemma \ref{unendlicheSummeinPotenzreihenring} gilt, dass $\overline{f} := \sum_{n=1}^{\infty}(-f)^n \in K\left(\left(z^{G}\right)\right)$ ist. Der Träger von $\sum_{n=1}^{\infty}(-f)^n $ ist in der Vereinigung der Träger supp$(-f^n)$ enthalten. Der Träger supp$(f^n)$ ist positiv für jedes $n\in \N$. Die Vereinigung positiver Mengen ist ebenfalls positiv und es folgt, dass der Träger der Reihe $\sum_{n=1}^{\infty}(-f)^n $ positiv ist.
 Wir erhalten also, dass $\overline{\mathfrak{f}} := 1_K +\sum_{n=1}^{\infty}(-f)^n $ in $\Upsilon$ liegt. Die Verknüpfung der beiden Gruppenelemente $\mathfrak{f}$ und $ \overline{\mathfrak{f}}$ hat folgende Form:
 %
 %
@@ -1414,9 +1413,14 @@ Wir erhalten also, dass $\overline{\mathfrak{f}} := 1_K +\sum_{n=1}^{\infty}(-f)
 %
 %
 %
+%TODO: Wirklich draussenlassen?
+%\begin{bem}
+%Sei $1_K + f \in \Upsilon$ mit $f \in K((z^G))$ und $\min\textup{supp}(f) > 0$, dann ist $1_K +f$ invertierbar mit dem Inversen $\sum_{n=0}^{\infty}\left(-f\right)^n$.
+%\end{bem}
+% 
 %
-\begin{bem}
-Sei $1_K + f \in \Upsilon$, dann ist $1_K +f$ invertierbar mit dem Inversen $\sum_{n=0}^{\infty}\left(-f\right)^n$.
+%
+%
 %und $\overline{1_K +\sum_{n=1}^{\infty}(-f)^n}$ das Inverse. Der Träger supp$(f)$ ist größer Null und somit existiert das Inverse $1_K +\sum_{n=1}^{\infty}(-f)^n$ zu $1_K + f$.  Es gelten folgende Äquivalenzen
 %\begin{eqnarray*}
 %1_K &=& \left(1_K + f\right)\left( 1_K + \sum_{n=1}^{\infty}(-f)^n \right) \Leftrightarrow\\
@@ -1425,7 +1429,6 @@ Sei $1_K + f \in \Upsilon$, dann ist $1_K +f$ invertierbar mit dem Inversen $\su
 %\frac{1_K}{1_K - f} &=& \sum_{n=0}^{\infty}(f)^n
 %\end{eqnarray*}
 %Diese Form der Darstellung zeigt deutlich die Verbindung des inversen Elements mit der geometrischen Reihe.
-\end{bem}
 %
 %
 % 
@@ -1438,7 +1441,7 @@ Mithilfe dieser Erkenntnis und Lemma \ref{JedePotenzreihesoDarstellbar} sind wir
 Die formalen Potenzreihen auf einer angeordneten Gruppe $G$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wie oben gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden, mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0.$ Wir bezeichnen mit $1_K + \overline{h}$ das Inverse von $1_K + h$ in der Gruppe $\Upsilon$. Da $\lambda\in K^*$ ist, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein negatives Element, das wir $-g$ nennen. Mit selbiger Argumentation wie oben wissen wir, dass das Element $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ in $ K\left(\left(z^{G}\right)\right)$ liegt. Nach den Rechengesetzen für die Unbestimmte 
+Wir wissen bereits, dass $K\left(\left(z^{G}\right)\right)$ ein kommutativer Ring ist. Es genügt zu zeigen, dass zu jedem $0 \neq f \in K\left(\left(z^{G}\right)\right)$ ein Inverses besitzt. Wie in Lemma \ref{JedePotenzreihesoDarstellbar} gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0$ ist. Wir bezeichnen mit $1_K + \overline{h}$ das Inverse von $1_K + h$ in der Gruppe $\Upsilon$. Da $\lambda\in K^*$ ist, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein negatives Element, das wir $-g$ nennen. Mit selbiger Argumentation wie in Lemma \ref{JedePotenzreihesoDarstellbar} wissen wir, dass das Element $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ in $ K\left(\left(z^{G}\right)\right)$ liegt. Nach den Rechengesetzen für die Unbestimmte 
 %\ref{Potenzgesetze}
  und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
 %
@@ -1495,17 +1498,17 @@ Die Abbildung $v\colon K\left(\left(z^G\right)\right) \to G\cup \lbrace\infty\rb
 \beweis{Die Abbildung ist surjektiv, denn zu jedem Gruppenelement existiert eine formale Potenzreihe $f \in K\left(\left(z^G\right)\right)$ mit diesem Startwert, sodass $v(f) = \min\left(\textup{supp}(f)\right)$ gilt. Wir weisen nun die Eigenschaften B1'-B3' aus Definition \ref{bewKoerper} nach.\\
 \begin{description}
 \item[\normalfont{zu B1':}] Klar nach Definition.
-\item[\normalfont{zu B2':}] Sei $f=\sum_{g\in G}a_g z^g \text{ und } h=\sum_{g\in G}b_g z^g$, mit $g_1 = \min(\textup{supp}(f))$ und $g_2 = \min(\textup{supp}(h))$. Dann ist $v(f) = g_1$ und $v(h) = g_2$. Damit gilt, dass $v(f) + v(h) = g_1 + g_2$ entspricht. \\
+\item[\normalfont{zu B2':}] Sei $f=\sum_{g\in G}a_g z^g \text{ und } h=\sum_{g\in G}b_g z^g$ mit $g_1 = \min(\textup{supp}(f))$ und $g_2 = \min(\textup{supp}(h))$. Dann ist $v(f) = g_1$ und $v(h) = g_2$. Damit gilt, dass $v(f) + v(h) = g_1 + g_2$ entspricht. \\
 Wir wollen zeigen, dass das Bild von $fh$ unter der Abbildung
 \[v(fh) = v( \sum_{g \in G}\sum_{k+j=g}a_kb_j z^g) \stackrel{\mathrm{!}}= v(f) + v(h),\] ist, wobei $a_k = 0 \text{ für } k < g_1   \text{ und } b_j = 0$ für $j < g_2$ ist. \\
 Wir betrachten zunächst $ g < g_1 + g_2 $. 
 %Da $ n = m+k $ folgt m < $n_0$ oder k < $m_0$. 
-Nach Voraussetzung ist entweder $a_k = 0$, oder $b_j = 0$ und wir erhalten $a_kb_j = 0. $ Weiterhin gilt nach Voraussetzung $a_{g_1} \neq 0$ und $b_{g_2} \neq 0.$ \\
-Sei nun $g = g_1 + g_2$. Das Produkt $ a_{g_1}b_{g_2}$ ist ungleich Null und daher erhalten wir, dass $v(fg) = g_1+g_2 = v(f) + v(h)$ ist.
+Nach Voraussetzung ist entweder $a_k = 0$, oder $b_j = 0$ und wir erhalten $a_kb_j = 0. $ Weiterhin gilt nach Voraussetzung $a_{g_1} \neq 0$ und $b_{g_2} \neq 0.$ Damit ist $v(fh)= \min(\textup{supp}(fh))\geq g_1+g_2$\\
+Sei nun $g = g_1 + g_2$. Die Summe $\sum_{k + j = g_1 + g_2} a_kb_jz^{g_1+g_2} = a_{g_1}b_{g_2}z^{g_1+g_2}$ ist ungleich Null und daher erhalten wir, dass $v(fh) = g_1+g_2 = v(f) + v(h)$ ist.
 \item[\normalfont{zu B3'}]: Wenn $f, h$ wie oben definiert sind, erhalten wir für $v(f+h)$ die folgende Gleichung: 
 \begin{eqnarray*}
 v\left(f+h\right) &=&  v\left( \sum_{g = \text{min}\lbrace g_1,g_2 \rbrace}^{\infty}(a_g + b_g) z^g\right) \\
-&\leq& \min\lbrace g_1, g_2 \rbrace \\ 
+&\geq& \min\lbrace g_1, g_2 \rbrace \\ 
 &\stackrel{\mathrm{def}}=& \min\lbrace v(f), v(h)\rbrace
 \end{eqnarray*}
 \end{description}
@@ -1518,7 +1521,7 @@ v\left(f+h\right) &=&  v\left( \sum_{g = \text{min}\lbrace g_1,g_2 \rbrace}^{\in
 %
 %
 \begin{satz}
-Die Menge $K\lbrack\lbrack z^G\rbrack\rbrack = \lbrace f \in K\left(\left(z^G\right)\right)~ \vert~ \textup{supp}(f) \geq 0\rbrace$ ist ein Bewertungsring von $v$.
+Die Menge $K\lbrack\lbrack z^G\rbrack\rbrack := \lbrace f \in K\left(\left(z^G\right)\right)~ \vert~ \textup{supp}(f) \geq 0\rbrace$ ist ein Bewertungsring von $v$.
 \end{satz}
 \beweis{Dies folgt unmittelbar aus der Definition von $K\lbrack\lbrack z^G\rbrack\rbrack$ und der Definition eines Bewertungsrings \ref{BewertungsringVonBewertung}.}
 %

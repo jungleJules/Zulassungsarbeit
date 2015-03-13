@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  12 MAR 2015 23:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  13 MAR 2015 22:10
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1313,46 +1313,46 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 813.
 
 [41] [42] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1102
 
  []
 
 [45]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1105.
+(hyperref)                removing `\left' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\left' on input line 1105.
+(hyperref)                removing `\left' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1105.
+(hyperref)                removing `superscript' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1105.
+(hyperref)                removing `\right' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\right' on input line 1105.
+(hyperref)                removing `\right' on input line 1104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1104.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
 
  []
 
 
-Overfull \hbox (6.08646pt too wide) in paragraph at lines 1147--1147
+Overfull \hbox (6.08646pt too wide) in paragraph at lines 1146--1146
 \T1/cmr/m/n/10.95 fi-ni-ti-on der Wohl-ord-nung exis-tiert ein kleins-tes Ele-m
 ent $\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \T1/cmr
 /m/n/10.95 in supp$\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 
@@ -1362,7 +1362,7 @@ ent $\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 G$ \T1/cmr
  []
 
 [46] [47] [48]
-Overfull \hbox (7.84805pt too wide) in paragraph at lines 1320--1321
+Overfull \hbox (7.84805pt too wide) in paragraph at lines 1319--1320
 []\T1/cmr/m/n/10.95 Die in Lem-ma [][]5.3.15[][] de-fi-nier-te Rei-he $[][] \OM
 L/cmm/m/it/10.95 [][][]$ \T1/cmr/m/n/10.95 mit $\OML/cmm/m/it/10.95 [] \OMS/c
 msy/m/n/10.95 2 \OML/cmm/m/it/10.95 K$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
@@ -1371,23 +1371,23 @@ msy/m/n/10.95 2 \OML/cmm/m/it/10.95 K$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
  []
 
 [49]
-LaTeX Font Info:    Try loading font information for U+euf on input line 1404.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1403.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [50]
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1512--1512
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1515
 
  []
 
 
-Overfull \hbox (8.75882pt too wide) in paragraph at lines 1512--1512
+Overfull \hbox (5.7315pt too wide) in paragraph at lines 1515--1515
 []\T1/cmr/m/n/10.95 Sei $\OML/cmm/m/it/10.95 f \OT1/cmr/m/n/10.95 = [][] \OML/c
-mm/m/it/10.95 a[]z[][]h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 b[]z[]$\T
-1/cmr/m/n/10.95 , mit $\OML/cmm/m/it/10.95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/
-cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 ))$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
-95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 ))$\T
-1/cmr/m/n/10.95 .
+mm/m/it/10.95 a[]z[][]h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 b[]z[]$ \
+T1/cmr/m/n/10.95 mit $\OML/cmm/m/it/10.95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/c
+mm/m/it/10.95 f\OT1/cmr/m/n/10.95 ))$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.9
+5 g[] \OT1/cmr/m/n/10.95 = []([](\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 ))$\T1
+/cmr/m/n/10.95 .
  []
 
 [52]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.bbl [53]
@@ -1424,13 +1424,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 20595 strings out of 493921
- 353221 string characters out of 3144876
+ 20594 strings out of 493921
+ 353211 string characters out of 3144876
  476421 words of memory out of 3000000
  23238 multiletter control sequences out of 15000+200000
  28985 words of font info for 65 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,14n,71p,942b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,14n,71p,1216b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 eccc1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm0800.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -1463,9 +1463,9 @@ msy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/e
 ufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (55 pages, 654428 bytes).
+Output written on main.pdf (55 pages, 654667 bytes).
 PDF statistics:
  1237 PDF objects out of 1440 (max. 8388607)
- 223 named destinations out of 1000 (max. 500000)
+ 222 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
