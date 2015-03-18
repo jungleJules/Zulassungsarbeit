@@ -237,9 +237,9 @@ $A$ und $A'$ werden in diesem Fall \textit{ordnungsisomorph}, kurz \textit{o-iso
 Eine \textit{teilweise geordnete Gruppe} bezeichnet eine Menge $G$ mit folgenden Eigenschaften: 
 %
 \begin{enumerate}
-\item[G1:] $G$ ist eine Gruppe bezüglich der Multiplikation,
+\item[G1:] $G$ ist eine Gruppe bezüglich der Addition,
 \item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $``\leq " $, wie in \ref{defgs}, 
-\item[G3:] das Monotoniegesetz ist erfüllt: Für $a, b \in  G$ gilt: Aus $a \leq b$ folgt $ca \leq  cb$ und \\ $ac \leq bc$ für alle $c \in G$.
+\item[G3:] das Monotoniegesetz ist erfüllt: Für $a, b \in  G$ gilt: Aus $a \leq b$ folgt $c + a \leq  c + b$ und \\ $a + c \leq b+ c$ für alle $c \in G$.
 \end{enumerate}
 % 
 \end{defn}
@@ -258,16 +258,10 @@ Eine Untergruppe $U$ einer angeordneten Gruppe $G$ ist bezüglich der selben Rel
 \begin{bsp}\label{OrdnungNundZ}
 Wir betrachten die natürliche Ordnung auf den natürlichen, ganzen und reellen Zahlen.
 \begin{enumerate}
-\item Die Menge der natürlichen Zahlen $\N$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \N$, dass
-\[ a \leq b \text{ genau dann gilt, wenn } b-a \in \N_0
-\]
-für alle $a,b \in \N$.
-\item Die Gruppe der ganzen Zahlen $\Z$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \Z$, dass
-\[ a\leq b \text{ ist, genau dann, wenn } b -a \in \N_0 \text{ gilt.}
-\]
-\item Die Gruppe der reellen Zahlen $\R$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für alle $a, b \in \R$, dass
-\[a \leq b \text{ ist, genau dann, wenn } 0 \leq b -a \text{ gilt.} 
-\]
+\item Die Menge der natürlichen Zahlen $\N$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \N$, dass$ a \leq b \text{ genau dann gilt, wenn } b-a \in \N_0$
+für alle $a,b \in \N$ ist.
+\item Die Gruppe der ganzen Zahlen $\Z$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \Z$, dass $a\leq b \text{ ist, genau dann, wenn } b -a \in \N_0 \text{ gilt.}$
+\item Die Gruppe der reellen Zahlen $\R$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für alle $a, b \in \R$, dass $a \leq b \text{ ist, genau dann, wenn } 0 \leq b -a \text{ gilt.} $
 \end{enumerate}
 \end{bsp}
 %
@@ -288,7 +282,7 @@ Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe. Denn ang
 Die beiden folgenden Aussagen sind äquivalent:
 \begin{enumerate}
 \item[(i)] Die Gruppe $G$ ist bezüglich der Relation $\leq$ angeordnet.
-\item[(ii)] Die Teilmenge $P = \lbrace x \in G | x \geq 1\rbrace$ einer Gruppe $G$ den folgenden Bedingungen:
+\item[(ii)] Die Teilmenge $P = \lbrace x \in G | x \geq 0_G \rbrace$ einer Gruppe $G$ den folgenden Bedingungen:
 \begin{enumerate}
 \item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$,
 \item[P2:] $P \circ P \subseteq P$,
@@ -695,7 +689,7 @@ Da $\Phi$ nach (iii) ordnungserhaltend ist, ist $\Phi$ ein ordnungserhaltender I
 %
 %TODO : Nun stellt sich die Frage, wann 
 \begin{satz}\label{homomorphismus nach R} %\cite{fuchs66}
-Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gruppe der reellen Zahlen und $\phi: G \rightarrow \R$ ein injektiver o-Homomorphismus. Dann gibt es eine positive reelle Zahl $r$ mit $\phi(g) = r\cdot g$ für alle $g \in G$. 
+Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gruppe der reellen Zahlen und $\phi\colon G \rightarrow \R$ ein injektiver o-Homomorphismus. Dann gibt es eine positive reelle Zahl $r$ mit $\phi(g) = r\cdot g$ für alle $g \in G$. 
 \end{satz}
 %
 %
@@ -709,9 +703,13 @@ Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erh
 %
 %
 \begin{folg}
-Der o-Isomorphismus in Satz \ref{aga} ist eindeutig nach Wahl eines $\alpha \in P$ mit $\alpha \mapsto 1$.
+Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$. Dann gibt es genau einen o-Monomorphismus $\Phi\colon G \to \R$, $g\mapsto 1$.
 
 \end{folg}
+\beweis{
+Wir verwenden den Satz von Hölder, damit ist $G$ o- isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Nach Satz \ref{homomorphismus nach R} wissen wir bereits, dass es eine reelle positive Zahl $r$ gibt, sodass ein o-Monomorphismus $g \in G$ auf $rg$ abbildet. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Für ein $g> 0$ mit $g\in G$, wobei $G$ existiert also ein $0 < r \in R$ mit $r= \frac{1}{g}$. Dieser Quotient ist definiert, da $g >0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist, $r$ ist offensichtlich positiv, da $g$ nach Voraussetzung positiv ist. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g}g = 1$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
+Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{g}$, welche aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen folgt.
+}
 %
 %
 %
@@ -731,6 +729,24 @@ Wir untersuchen nun die bezüglich der Inklusion linear angeordnete Menge $\Sigm
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
 Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $a \in U$ und $x \in G$ mit $0 < |x| < |a|$ folgt, dass $x \in U$ ist.\\
 \end{defn}
+%
+%
+%
+%
+%
+\begin{satz}\label{archimedischNur TrivialeUGR}
+Eine angeordnete abelsche Gruppe $G$ ist genau dann archimedisch, wenn sie nur die trivialen konvexen Untergruppen, nämlich $\lbrace 0_G\rbrace$ und sich selbst, besitzt.
+\end{satz}
+\beweis{
+$``\Rightarrow "$ Angenommen es gibt eine nichttriviale konvexe Untergruppe $U$ von $G$. Dann gibt es nach Voraussetzung für alle Elemente $g\in G$ mit $g > u$ für alle $u\in U$, ein $v\in U$ und $n\in\N$, sodass $nv > g$ ist. Aufgrund der Abgeschlossenheit der Untergruppe gilt $nv \in U$. Wir erhalten also $U=G$. Widerspruch!\\
+$``\Leftarrow "$ Angenommen $G$ sei nicht archimedisch. Sei $0 < a <b$ mit $a,b \in G$, dann gilt für alle $n = 0, \pm 1,\pm 2, ...$ dass $na \leq b$ ist. Das heißt es gilt für alle $a\in G$ mit $a <b$ die Ungleichung $na \leq b$ und damit $na \in G$. Die von $a$ erzeugte konvexe Untergruppe $\langle a\rangle$ ist ungleich $G$ und wir erhalten somit $\langle a\rangle = 0_G$. Dies ist ein Widerspruch zur Annahme.
+}
+%
+%
+%
+%
+%
+%
 $\Sigma$ bezeichne nun die \textit{Menge konvexer Untergruppen} von $G$. 
 \begin{defn}\label{Sprung} %\cite{fuchs66}
 Sei $C, D \in \Sigma$. Wenn $D \subset C$ und $\Sigma$ keine weitere Untergruppe zwischen $C$ und $D$ enthält, nennen wir das Paar $C,~D$ \textit{Sprung} in $\Sigma$ und bezeichnen es mit $D \prec C$.
@@ -768,26 +784,27 @@ Zu S1: Seien $C, D \in \Sigma$. Nach Lemma \ref{untergruppeangeordnet} ist $\Sig
 %konvexe Untergruppen der angeordneten abelschen Gruppe $G$ und sei $c\in C, c\notin D$. Wir nehmen ohne Beschränkung der Allgemeinheit an, $c$ ist bezüglich der Anordnung von $G$ größer als das neutrale Element $0_G$. Da $c$ nicht in $D$ liegt, kann es kein Element $d \in D$ geben, sodass $0_G < c < d$. In diesem Fall würde $c$ nach der konvexen Eigenschaft in $D$ liegen. Dies ist ein Widerspruch zur Voraussetzung und daher gilt $D \subseteq C$. 
 Sei o.B.d.A $D\subseteq C$.
 Der Schnitt $C \cap D$ entspricht daher $D$. Die Untergruppe $D$ ist konvex nach Voraussetzung. Ebenso gilt $C\cup D = C$ und $C$ ist auch eine konvexe Untergruppe nach Voraussetzung. Damit folgt unmittelbar, dass sowohl der Schnitt konvexer Untergruppen als auch die Vereinigung wieder angeordnet und konvex sind.\\
-%Zu S2: Jede Untergruppe einer angeordnet abelschen Gruppen ist ein Normalteiler. Die Aussage folgt also sofort aus den Eigenschaften einer angeordneten abelschen Gruppe.
-%Für $g \in C$ ist offensichtlich $-g + C+ g = C \in \Sigma$. Falls $g \notin C$, so ist $-g + C+ g$ eine Untergruppe von $G$, denn für alle $c_1, c_2 \in C, g \in G$ ist $-g+ c_1+g + -g+ c_2+ g = -g + c_1+ c_2+ g \in -g + C+ g$ und $-\left(-g+ c_1+ g\right) = g + \left(- c_1\right) + -g= -g + \left(- c_1\right) +g \in -g+ C_1+ g$. Die Anordnung von $G$ überträgt sich auf $-g+ C_1+ g$ und die Untergruppe ist konvex, da $C$ nach Voraussetzung und $G$ als triviale Untergruppe konvex ist.\\
 %
 %
 %
 %
-%TODO: fehlt argument warum C keine konvexe UGR von C/D!
-Zu S2: Nach dem Korrespondenzsatz \cite{fischer08} entsprechen die Untergruppen von $C/D$ bijektiv den Untergruppen von $C$, die $D$ enthalten. Die Ordnung auf $C/D$ ist die induzierte Ordnung. Damit überträgt der Isomorphismus ebenfalls die Konvexitätseigenschaft. 
-Angenommen die Faktorgruppe $C/D$ enthält nicht nur die trivialen konvexen Untergruppen $0_{C/D}$ und $C/D$. Dann gibt es eine konvexe Untergruppe $H$ in $C/D$ mit $D \subset H \subset C/D$. Auf Grund des Isomorphismus gibt eine konvexe Untergruppe $H'$ in $G$ mit $D \subset H' \subset C$. Da $C, D$ ein Sprung ist, gibt es aber zwischen $C$ und $D$ keine weiteren Untergruppen. Dies ist ein Widerspruch zur Annahme. $D$ ist das neutrale Element der Faktorgruppe $C/D$.
-
-%
-%
-%In $\Sigma$ existiert keine Untergruppe zwischen $C$ und $D$. Da $C, D$ ein Sprung ist, gibt es aber zwischen $C$ und $D$ keine weiteren Untergruppen. $D$ ist das neutrale Element der Faktorgruppe $C/D$. \\
+%TODO: FEHLT QUELLE KORRESPONDENZSATZ fehlt argument warum C keine konvexe UGR von C/D!
+Zu S2: Nach einer Version des Korrespondenzsatzes für Gruppen \cite{rainer08}[S. 146] entsprechen die Untergruppen von $C/D$ bijektiv den Untergruppen von $C$, die $D$ enthalten. Die Ordnung auf $C/D$ ist die induzierte Ordnung. Zwischen den Nebenklassen gelte $c_1 + D \leq c_2 + D$ genau dann, wenn $c_1' \leq c_2'$ ist für gewisse $c_1' \in c_1 + D$ und $c_2'\in c_2 + D$. Damit überträgt der Isomorphismus ebenfalls die Konvexitätseigenschaft. 
+Angenommen die Faktorgruppe $C/D$ enthält nicht nur die trivialen konvexen Untergruppen $0_{C/D}$ und $C/D$. Dann gibt es eine konvexe Untergruppe $H$ in $C/D$ mit $D \subset H \subset C/D$. Auf Grund des Isomorphismus gibt es eine konvexe Untergruppe $H'$ in $G$ mit $D \subset H' \subset C$. Da $C, D$ ein Sprung ist, gibt es aber zwischen $C$ und $D$ keine weiteren konvexen Untergruppen. Dies ist ein Widerspruch zur Annahme. $D$ ist das neutrale Element der Faktorgruppe $C/D$.
+\\
 %
 %
 %
-Angenommen $C/D$ wäre nicht archimedisch geordnet. Sei $0_G \neq g \in G$, dann gibt es ein Element $h\in C/D$ sodass, $ng < h$ ist für $n = 0, \pm 1,\pm 2, ...$. Wie vorher gezeigt enthält $C/D$ nur die trivialen konvexen Untergruppen. Also muss $g = 0_{C/D}$ sein. Dies ist ein Widerspruch zur Annahme und wir sehen, dass die Faktorgruppe archimedisch angeordnet ist.
+%Angenommen $C/D$ wäre nicht archimedisch geordnet. Sei $0_G \neq g \in G$, dann gibt es ein Element $h+D\in C/D$ sodass, $ng < h +D$ ist für $n = 0, \pm 1,\pm 2, ...$. Wie vorher gezeigt enthält $C/D$ nur die trivialen konvexen Untergruppen. Also muss $g = 0_{C/D}$ sein. Dies ist ein Widerspruch zur Annahme und wir sehen, dass die Faktorgruppe archimedisch angeordnet ist.
+%
+%
+%
+%
 %  Damit liegt $h$ nicht in $\langle g \rangle$ der von $g$ erzeugten konvexen Untergruppe. ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und 
+%
+%
+Da $C/D$ eine angeordnete Gruppe mit der induzierten Ordnung ist, erhalten wir nach Satz \ref{archimedischNur TrivialeUGR}, dass $C/D$ archimedisch angeordnet ist.\\ 
 Der Satz von Hölder \ref{aga} liefert nun, dass $C/D$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen ist.
-% Nach Voraussetzung gilt $D \prec C$ und offensichtlich erfüllt jedes Element $g \in G$ die Bedingung $g^{-1}D_1g \prec  g^{-1}C_1g$. Weiterhin erhalten wir im Fall $g\in C$, dass  $g^{-1}C_1g = C$, und da $D \subset C$ ist $g^{-1}D_1g = D$. Infolgedessen ist $D$ normal in $C$ und die Faktorgruppe $C/D$ enthält, da in $\Sigma$ keine Untergruppe zwischen $C$ und $D$ existiert, dementsprechend nur die trivialen konvexen Untergruppen. In $C/D$ ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und nach Satz von Hölder \ref{aga} isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.
 }
 %
 %

@@ -50,32 +50,26 @@ Wir bezeichnen die Menge der formalen Potenzreihen in $z$ mit Exponenten in $\N_
 %Formale Potenzreihen werden komponentenweise addiert.
 %
 %
-Für die Unbestimmte $z$ gelten die Potenzgesetze.
-%\begin{lemma}\label{Potenzgesetze}
-%Sei $G$ eine angeordnete abelsche Gruppe und seien $g_1, g_2 \in G$, dann gilt:
-%\begin{itemize}
-%\item[(i)] $z^{g_1} \cdot z^{g_2} = z^{g_1 + g_2}$
-%\item[(ii)] $z^{0_G} = 1_K$
-%\end{itemize}
-%\end{lemma}
 %
 %
-\begin{defn}\label{AdditionMultiplikationPotenzreihen}
+\begin{defn}\label{AdditionPotenzreihen}
 %
 Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei formale Potenzreihen über $K$. Wir definieren ihre \textit{Summe} $f+g$ folgendermaßen:
 \begin{eqnarray*}
 &&\left( \sum_{n=0}^\infty a_n z^n \right) + \left( \sum_{n=0}^\infty b_n z^n \right) = \sum_{n=0}^{\infty} (a_n + b_n) z^n 
 \end{eqnarray*}
+\end{defn}
 %
 %
 % 
-\begin{defn}
+\begin{defn}\label{MultiplikationKPotenzreihen}
 Sei $\lambda \in K$ und $f \in K\lbrack\lbrack z \rbrack\rbrack$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch:
 \[\lambda f = \lambda\cdot \left(\sum_{n=0}^{\infty}a_nz^n\right) = \sum_{n=0}^{\infty} \lambda a_nz^n \in K\lbrack\lbrack z\rbrack\rbrack. 
 \]
 \end{defn}
 %
 %
+\begin{defn}\label{MultiplikationPotenzreihen}
 Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenannte Faltung:
 \begin{eqnarray*}
 \left( \sum_{j=0}^\infty a_j z^j \right)\cdot \left( \sum_{k=0}^\infty b_k z^k \right) &=&\sum_{n=0}^\infty \left(\sum_{j+k=n} a_j b_k\right) z^n \\
@@ -83,7 +77,15 @@ Die Multiplikation zweier formaler Potenzreihen $f,g$ erfolgt durch die sogenann
 \end{eqnarray*}
 \end{defn}
 %
-\vspace{0.8cm}
+Für die Unbestimmte $z$ gelten die Potenzgesetze.
+\begin{bem}\label{Potenzgesetze}
+Sei $G$ eine angeordnete abelsche Gruppe und seien $g_1, g_2 \in G$, dann gilt:
+\begin{itemize}
+\item[(i)] $z^{g_1} \cdot z^{g_2} = z^{g_1 + g_2}$
+\item[(ii)] $z^{0_G} = 1_K$
+\end{itemize}
+\end{bem}
+
 %
 %
 %
@@ -153,7 +155,7 @@ wobei ($*$) aufgrund der Distributivität in $K$ folgt. Somit gilt das Distribut
 %
 %
 \begin{bem}
-Die Menge $K\lbrack\lbrack z\rbrack\rbrack$ ist eine K-Algebra.
+Die Menge $K\lbrack\lbrack z\rbrack\rbrack$ bildet mit den in \ref{AdditionPotenzreihen}, \ref{MultiplikationKPotenzreihen} und \ref{MultiplikationPotenzreihen} definierten Verknüpfungen eine $K$-Algebra.
 \end{bem}
 %
 %
@@ -321,6 +323,39 @@ Da beide Potenzreihen $f, g$ im Inneren ihres Konvergenzradius absolut konvergie
 %
 %
 %
+\begin{satz}\label{EinheitenimKonvergentenUnterring}
+In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar, für die $a_0 \neq 0$ gilt.
+\end{satz}
+
+\beweis{Zunächst konstruieren wir formal das Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
+Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben.
+Wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt, denn: \\
+Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert. 
+Die Folge ${(|a_n||{z_0}^n|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt.
+% Nach dem Lemma von Abel \cite[S. 46]{ebeling2013funktionentheorie}konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ auf $D\left(0, |z_0|\right)$. 
+ Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
+\[
+\overline{f} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n = f
+\]
+konvergent ist. Aus dieser Gleichheit folgt, dass wir die Beschränktheit der Koeffizientenfolge $ (a_n)_{n \in \N_0}$ annehmen können. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
+Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $\left(a_n\right)_{n\in\N}$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $\left(b_n\right)_{n\in\N}$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
+\[
+b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
+\]
+Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Wir wählen $C \in R$ mit $ C> \max\lbrace\frac{a}{a-1}, 1\rbrace$. Mithilfe von Induktion beweisen wir, dass   
+\[
+|b_n| \le (aC)^n
+\]
+ist. 
+Die Ungleichung ist für $b_0$ nach Konstruktion des Inversen \ref{inverse Potenzreihe} erfüllt. \\
+Die Abschätzung gelte für $b_n$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
+\[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
+\[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
+ gilt.}
+
+
+
+
 %
 %
 %
@@ -391,30 +426,32 @@ Unter einem Träger einer Laurentreihe versteht man den Definitionsbereich der F
 %
 %
 Im Unterschied zu der funktionentheoretischen Verwendung der Laurentreihen betrachten wir nur Laurentreihen mit endlich vielen negativen Summanden. Diese Beschränkung ist notwendig, da andernfalls die Multiplikation nicht definiert werden kann.
-Wir bezeichnen die Menge der formalen Laurentreihen in $z$ auf $\Z$ über $K$ mit
+Wir bezeichnen die Menge der formalen Laurentreihen in $z$ mit Exponenten in $\Z$ über dem Körper $K$ mit
 \begin{equation*} %TODO: konsistent, passt das?
 K((z)) = \lbrace \sum_{n =k}^{\infty} a_nz^n \vert a_n \in K, k \in \Z\rbrace
 \end{equation*} 
 Die Addition und Multiplikation formaler Laurentreihen erfolgt analog zur Addition und Multiplikation formaler Potenzreihen.
-\begin{defn}
+\begin{defn}\label{AdditionLreihen}
 Zwei Laurentreihen $f, g \in K((z))$ mit $f = \sum_{n=k}^\infty a_n z^n$ und $g= \sum_{n=m}^\infty b_n z^n$ werden addiert, indem man ihre entsprechenden Koeffizienten addiert: 
 %
 \begin{eqnarray}
-\sum_{n=-k}^\infty a_n z^n  +  \sum_{n=-m}^\infty b_n z^n = \sum_{n = min(-k, -m)}^{\infty}(a_n + b_n) z^n.
+\sum_{n=k}^\infty a_n z^n  +  \sum_{n=m}^\infty b_n z^n = \sum_{n = min(k, m)}^{\infty}(a_n + b_n) z^n.
 \end{eqnarray}
+\end{defn}
 %
 %Eine derartige Darstellung existiert, da $\text{K}((z)) $ als Quotientenkörper von K[[z]] definiert ist, wie in \ref{quot} gezeigt wird. \\
 %
 % 
 %
-\begin{defn}
-Sei $\lambda \in K$ und $f \in K\lbrack\lbrack z \rbrack\rbrack$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch:
-\[\lambda f = \lambda\cdot \left(\sum_{n=0}^{\infty}a_nz^n\right) = \sum_{n=0}^{\infty} \lambda a_nz^n \in K\lbrack\lbrack z\rbrack\rbrack. 
+\begin{defn}\label{MultiplikationKLreihen}
+Sei $\lambda \in K$ und $f \in K\left(\left( z \right)\right)$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch:
+\[\lambda f = \lambda\cdot \left(\sum_{n=m}^{\infty}a_nz^n\right) = \sum_{n=m}^{\infty} \lambda a_nz^n \in K\left(\left( z\right)\right). 
 \]
 \end{defn}
 %
 %
 %
+\begin{defn}\label{MultiplikationLreihen}
 Die Multiplikation erfolgt durch Faltung der Laurentreihen.
 \begin{eqnarray}
 \label{eq: multiplikationLaurent}
@@ -462,7 +499,7 @@ Die Menge $\left(K((z)), +, \cdot\right)$ ist mit obigen Verknüpfungen ein komm
 %
 %
 \begin{bem}
-Die Menge $K((z))$ ist eine K-Algebra.
+Die Menge $K((z))$ bildet mit den in \ref{AdditionLreihen}, \ref{MultiplikationKLreihen} und \ref{MultiplikationLreihen} definierten Verknüpfungen eine $K$-Algebra.
 \end{bem}
 %
 \begin{satz}\label{Laurentreihenkoerper} %\cite{Lueneburg08}
@@ -572,6 +609,12 @@ Ist $\frac{1}{r} \in \lbrack 0,\infty\rbrack$ der Konvergenzradius von $\sum_{n=
 %
 %
 %
+\begin{satz}
+Die Menge der konvergenten Laurentreihen $\C_L\lbrace z\rbrace$ bildet einen Körper
+\end{satz}
+\beweis{Da $\C_L\lbrace z\rbrace$ offensichtlich eine Teilmenge von $K((z))$ ist sparen wir uns das Nachrechnen der Körperaxiome. Die Nullreihe und Einsreihe sind trivialerweise konvergent und liegen somit in $\C_L\lbrace z\rbrace$.\\
+Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent. Um dies zu zeigen reicht es den Nebenteil zu betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+}
 %
 %
 %
@@ -580,36 +623,8 @@ Ist $\frac{1}{r} \in \lbrack 0,\infty\rbrack$ der Konvergenzradius von $\sum_{n=
 \begin{satz}
 Der Quotientenkörper von  $\C\lbrace z\rbrace$ ist isomorph zum Körper der konvergenten Laurentreihen $\C_L \lbrace z \rbrace$.
 \end{satz}
-\beweis{Wir führen den Beweis in zwei Schritten.\\ \\
-\textbf{Zwischenbehauptung: }
-In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty} a_nz^n$ invertierbar, für die $a_0 \neq 0$ gilt.
-
-\beweis{Zunächst konstruieren wir formal das Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
-Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben.
-Wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt, denn: \\
-Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert. 
-Die Folge ${(|a_n||{z_0}^n|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt.
-% Nach dem Lemma von Abel \cite[S. 46]{ebeling2013funktionentheorie}konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ auf $D\left(0, |z_0|\right)$. 
- Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
-\[
-\overline{f} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n = f
-\]
-konvergent ist. Aus dieser Gleichheit folgt, dass wir die Beschränktheit der Koeffizientenfolge $ (a_n)_{n \in \N_0}$ annehmen können. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
-Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $\left(a_n\right)_{n\in\N}$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $\left(b_n\right)_{n\in\N}$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
-\[
-b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
-\]
-Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Wir wählen $C \in R$ mit $ C> \max\lbrace\frac{a}{a-1}, 1\rbrace$. Mithilfe von Induktion beweisen wir, dass   
-\[
-|b_n| \le (aC)^n
-\]
-ist. 
-Die Ungleichung ist für $b_0$ nach Konstruktion des Inversen \ref{inverse Potenzreihe} erfüllt. \\
-Die Abschätzung gelte für $b_n$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
-\[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
-\[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
- gilt.}
-Wie in Satz \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent. Um dies zu zeigen reicht es den Nebenteil zu betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+\beweis{Wir haben in \ref{EinheitenimKonvergentenUnterring} bereits gezeigt, dass das Inverse zu einer Potenzreihe aus $\C\lbrace z\rbrace$ wieder konvergiert und in $\C\lbrace z\rbrace$ liegt.\\
+Wie in Satz \ref{quot} zeigt man nun, dass es einen Isomorphismus zwischen dem Quotientenkörper der konvergenten Potenzreihen und dem Körper der konvergenten Laurentreihen gibt. \\
 Nun definieren wir wie in \ref{quot} die Abbildung 
 \[\Phi:\C_L\lbrace z \rbrace \rightarrow \textup{Quot}(\C \lbrace z \rbrace ) \]
 \begin{eqnarray} 
@@ -1155,6 +1170,13 @@ Dies ist ein Widerspruch zur Voraussetzung und wir erhalten die Eindeutigkeit de
 % 
 %
 %
+%
+%
+%
+%
+%
+%
+%
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
 Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
 \begin{eqnarray*}
@@ -1441,9 +1463,7 @@ Mithilfe dieser Erkenntnis und Lemma \ref{JedePotenzreihesoDarstellbar} sind wir
 Die formalen Potenzreihen auf einer angeordneten Gruppe $G$ über einem Körper $K$ bilden einen Körper $K\left(\left(z^{G}\right)\right)$.
 \end{satz}
 \beweis{
-Wir wissen bereits, dass $K\left(\left(z^{G}\right)\right)$ ein kommutativer Ring ist. Es genügt zu zeigen, dass zu jedem $0 \neq f \in K\left(\left(z^{G}\right)\right)$ ein Inverses besitzt. Wie in Lemma \ref{JedePotenzreihesoDarstellbar} gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0$ ist. Wir bezeichnen mit $1_K + \overline{h}$ das Inverse von $1_K + h$ in der Gruppe $\Upsilon$. Da $\lambda\in K^*$ ist, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein negatives Element, das wir $-g$ nennen. Mit selbiger Argumentation wie in Lemma \ref{JedePotenzreihesoDarstellbar} wissen wir, dass das Element $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ in $ K\left(\left(z^{G}\right)\right)$ liegt. Nach den Rechengesetzen für die Unbestimmte 
-%\ref{Potenzgesetze}
- und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
+Wir wissen bereits, dass $K\left(\left(z^{G}\right)\right)$ ein kommutativer Ring ist. Es genügt zu zeigen, dass zu jedem $0 \neq f \in K\left(\left(z^{G}\right)\right)$ ein Inverses besitzt. Wie in Lemma \ref{JedePotenzreihesoDarstellbar} gezeigt, kann jedes Element $f\neq 0$ des Ringes $K\left(\left(z^{G}\right)\right)$ in der Form $f = \lambda\cdot z^g\cdot \left(1_K + h\right)$ geschrieben werden mit $\lambda \in K^*, g \in G,~h \in K\left(\left(z^{G}\right)\right), \text{ wobei } \text{min}\left(\text{supp}\left(h\right)\right) > 0$ ist. Wir bezeichnen mit $1_K + \overline{h}$ das Inverse von $1_K + h$ in der Gruppe $\Upsilon$. Da $\lambda\in K^*$ ist, handelt es sich um eine Einheit und es existiert ein Inverses, welches wir mit $\lambda^{-1}$ bezeichnen. Da $g$ ein Element der angeordneten, abelschen, additiv geschriebenen Gruppe $G$ ist, gibt es auch zu $g$ ein negatives Element, das wir $-g$ nennen. Mit selbiger Argumentation wie in Lemma \ref{JedePotenzreihesoDarstellbar} wissen wir, dass das Element $k := \left(1_K + \overline{h}\right)z^{-g}\lambda^{-1} $ in $ K\left(\left(z^{G}\right)\right)$ liegt. Nach den Rechengesetzen für die Unbestimmte \ref{Potenzgesetze} und den definierten Rechenoperationen in dem Potenzreihenring $K\left(\left(z^{G}\right)\right)$ erhalten wir, dass 
 %
 %
 %
