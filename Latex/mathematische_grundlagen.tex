@@ -159,7 +159,7 @@ Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben defini
 %\begin{equation*}
 %\left(r_2s\right)\left(u_1v\right) = r_1u_2sv = \left(r_1s\right)\left(u_2v\right).
 %\end{equation*}
-Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität können leicht nachgerechnet werden. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
+Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität sind leicht zu überprüfen. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
 Weiter ist (Quot(R), $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{u}{r}$ das inverse Element ist. \\
 Das Distributivgesetz kann leicht nachgerechnet werden. \\
 Somit ist der Körper (Quot(R), +, $\cdot$) konstruiert.
@@ -191,7 +191,7 @@ $ M \left(D\right) := \text{Quot}\left( \mathcal{O} \left( D \right)\right) = \l
 %
 %
 %
-\begin{satz}[Universelle Eigenschaft des Quotientenkörpers]
+\begin{satz}[Universelle Eigenschaft des Quotientenkörpers]\label{UniverselleEigenschaftQuot}
 Sei $R$ ein Integritätsring. Sei $K$ ein Körper und sei $\varphi\colon R\to K$ ein injektiver Ringhomomorphismus. Dann gibt es genau einen Körperhomomorphismus $\Phi\colon \textup{Quot}(R) \to K$ mit $\Phi_{|R}=\varphi$.  
 \end{satz}
 \beweis{ Wir zeigen zunächst die Existenz eines derartigen Körperhomomorphismus. Wir definieren $\Phi\colon \textup{Quot}(R) \to K, \frac{a}{b} \mapsto \varphi(a){\left(\varphi(b)\right)}^{-1}$. Da $\varphi$ injektiv ist, gilt $\varphi(b) \in K^*$ für $b\in R\setminus\lbrace0\rbrace$.\\
@@ -557,7 +557,7 @@ Der \textit{absolute Betrag} $|a|$ eines Elements a $\in  G$ ist definiert als $
 
 Es gilt die \textit{Dreiecksungleichung}
 \[|a+ b | \le |a| + |b|, \text{ für alle } a, b \in G.\]
-Die Ungleichung gilt trivialerweise wenn beide Elemente das gleiche Vorzeichen haben. Sei also $a < 0$ und $b > 0$. Dann ist $a= -|a|$.\\
+Die Ungleichung gilt trivialerweise, wenn beide Elemente das gleiche Vorzeichen haben. Sei also $a < 0$ und $b > 0$. Dann ist $a= -|a|$.\\
 Falls $|a|\le b$ ist, erhalten wir
 \[ |a + b |= |-|a|+b| = b - |a| \le b = |b|\le|a| + |b|. \]
 Falls $|a| >b$ ist, erhalten wir 
@@ -606,7 +606,7 @@ Des Weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \item[(v)] $\sim$ ist eine Äquivalenzrelation.
 \end{enumerate}
 Sind alle Elemente von $G\setminus\lbrace 0 \rbrace$ archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
-Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse} in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \label{archimedischeKlassen}\\
+Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse}, in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \label{archimedischeKlassen}\\
 % evtl überflüssig: Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder für alle
 %$n \in \N$ ist $n|a|<|b|$, oder für alle $n \in \N$ ist $n|b| <|a|$.
 \end{folg}
@@ -692,7 +692,7 @@ Sei $r \notin S_g \text{ und } s \notin S_h \text{, so folgt } r+s \notin S_{g+h
 \end{enumerate}
 Insgesamt ist $\Phi$ ein injektiver Homomorphismus angeordneter abelscher Gruppen und damit ist $G$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.\\ 
 Zu (i): Wegen der archimedischen Eigenschaft gibt es zu jedem Element $g \in P$ ein $n \in \N$ mit $ng > \alpha$. Nach Definition von $S_g$ gilt $\frac{1}{n} \in S_g$ und somit ist $S_g$ nicht leer.\\ Angenommen $S_g = \Q_{>0}$, dann wäre $n \in S_g$ beziehungsweise $n\alpha \le g$ für alle $n\in\N$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
-Seien $r, s \in \Q_{>0} \text{ mit } r < s \text{ und } s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und da $s \in S_g$ liegt erhalten wir $ m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in S_g$.\\
+Seien $r, s \in \Q_{>0} \text{ mit } r < s \text{ und } s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und, da $s \in S_g$ liegt, erhalten wir $ m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in S_g$.\\
 %
 %
 % 
@@ -762,7 +762,7 @@ Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$
 
 \end{folg}
 \beweis{
-Nach dem Satz von Hölder \ref{aga} ist $G$ o-isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Wir wissen wegen Satz \ref{homomorphismus nach R} bereits, dass es eine reelle positive Zahl $r$ gibt, sodass es der o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{g}$. Dieser Quotient existiert, da $g \neq 0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist und das Inverse zu $g$, nämlich $\frac{1}{g}$ existiert. Da $g$ nach Voraussetzung positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g} \cdot g = 1_\R$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
+Nach dem Satz von Hölder \ref{aga} ist $G$ o-isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Wir wissen wegen Satz \ref{homomorphismus nach R} bereits, dass es eine reelle positive Zahl $r$ gibt, sodass der o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{g}$. Dieser Quotient existiert, da $g \neq 0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist und das Inverse zu $g$, nämlich $\frac{1}{g}$ existiert. Da $g$ nach Voraussetzung positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g} \cdot g = 1_\R$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
 Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{g}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
 }
 %
@@ -942,7 +942,7 @@ Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf 
 %\[R = \lbrace x \in \textup{Quot}(R): v(a) \ge 0 \rbrace \cup \lbrace 0 \rbrace\]
 der Bewertungsring von $v$ ist.
 \end{defn}
-Eine weitere, äquivalente, Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
+Eine weitere, äquivalente Definition eines diskreten Bewertungsrings findet man in \cite[S. 126]{neukirch92}.
 \begin{bem} \label{bewertungsring}%\cite{neukirch92}
 Ein Integritätsring ist genau dann ein \textit{diskreter Bewertungsring}, wenn er ein Hauptidealring mit einem einzigen maximalen Ideal ist.
 \end{bem} 

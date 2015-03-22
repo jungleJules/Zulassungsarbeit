@@ -31,11 +31,6 @@
 \newblock Leipzig : Ber. Verh. Sächs. Akad. Wiss. Leipzig Math. Phys. Kl.,
   1901, S. 1 -- 64
 
-\bibitem[Hah]{hahn07}
-
-\newblock \,{In:\,}\textsc{Hahn}, Hans:
-\newblock \emph{Über die nichtarchimedischen Größensysteme}
-
 \bibitem[Hul12]{hulek12}
 \textsc{Hulek}, Klaus:
 \newblock \emph{Elementare algebraische Geometrie}.
@@ -82,13 +77,19 @@
 
 \bibitem[SP08]{rainer08}
 \textsc{Schulze-Pillot}, Rainer:
-\newblock \emph{Einfuehrung in Algebra und Zahlentheorie}.
+\newblock \emph{Einführung in Algebra und Zahlentheorie}.
 \newblock Springer Verlag Berlin Heidelberg, 2008
 
 \bibitem[Tar12]{taraz12}
 \textsc{Taraz}, Anusch:
 \newblock \emph{Diskrete Mathematik - Grundlagen und Methoden}.
 \newblock Basel : Birkhäuser, 2012
+
+\bibitem[Ucs63]{ucsnay63}
+\textsc{Ucsnay}, Peter:
+\newblock \emph{Formales Rechnen in Potenzreihenkörpern}.
+\newblock Mathematisches Institut der Universität, 1963 (Bonner mathematische
+  Schriften)
 
 \bibitem[Xin05]{xin04}
 \textsc{Xin}, Guoce:
