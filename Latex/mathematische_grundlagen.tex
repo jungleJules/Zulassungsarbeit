@@ -1,5 +1,5 @@
 \chapter{Mathematische Grundlagen}
-In diesem Kapitel werden die für die Ausarbeitung benötigten theoretischen Grundlagen zusammengestellt. Wir betrachten zunächst zentrale algebraische Strukturen und fokussieren uns im weiteren Verlauf auf Gruppen und Ordnungen, die in ihnen definiert werden können.
+In diesem Kapitel werden die für die Ausarbeitung benötigten theoretischen Grundlagen zusammengestellt. Wir betrachten zunächst zentrale algebraische Strukturen und fokussieren uns im weiteren Verlauf auf Gruppen und die Ordnungen, die in ihnen definiert werden können.
 %Erster Teil: Definition Gruppe, Ring, Körper (Algebraische Strukturen)
 %Zweiter Teil: Bewertung (Einblick in die Bewertungstheorie) 
 %Dritter Teil: Anordnung Wohlordnung Definitionen.(Ordnungsbegriff) viell. erst auf teilweise Ordnung -> Anordnung -> Wohlordnung
@@ -11,8 +11,10 @@ Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightar
 \begin{enumerate}
 \item[G1: ] (Assoziativgesetz) $a\circ \left(b\circ c\right) = \left(a\circ b\right) \circ c$ für alle $a, b, c \in G$.
 \item[G2: ] (Neutrales Element) Es gibt ein eindeutig bestimmtes Element $1_G \in G$ mit $1_G \circ a  = a \circ 1_G = a$ für alle $a \in G$.
-\item[G3: ] (Inverses Element) Zu jedem $a \in G$ gibt es ein eindeutig bestimmtes Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. \\
-\item[] Die Gruppe heißt \textit{abelsch}, falls folgendes gilt: 
+\item[G3: ] (Inverses Element) Zu jedem $a \in G$ gibt es ein eindeutig bestimmtes Element $a^{-1}$ in $G$ mit $a^{-1} \circ a = a \circ a^{-1} = 1_G$. 
+\end{enumerate}
+Die Gruppe heißt \textit{abelsch}, falls folgendes gilt:
+\begin{enumerate} 
 \item[G4: ] (Kommutativgesetz) $a \circ b = b \circ a$ für alle $a, b \in G$.  
 \end{enumerate} 
 \end{defn}
@@ -20,7 +22,7 @@ Eine nichtleere Menge $G$ mit der Verknüpfung $\circ \colon G \times G \rightar
 %
 \begin{bem}
 Wenn $\left(G, \circ\right)$ eine multiplikativ geschriebene Gruppe ist, so wird das Inverse eines Elements $a\in G$ mit $a^{-1}$ bezeichnet. \\
-Wenn nichts anderes gesagt ist, verwenden wir in abelschen Gruppen die Verknüpfung $+$. Wir nennen das neutrale Element $0_G$ und $-a$ das Inverse zu $a\in G$. 
+Wenn nichts anderes gesagt ist, verwenden wir in abelschen Gruppen als Verknüpfung die Addition. Wir bezeichnen das neutrale Element $0_G$ als Nullelement und das additiv Inverse $-a$ eines Elements $a\in G$ als negatives Element. 
 \end{bem}
 %
 \begin{bsp}
@@ -30,8 +32,8 @@ $\left( \Z, +\right), \left(\Q, +\right)$ und $\left(\R, +\right)$ sind abelsche
 \begin{defn}\label{Untergruppe}
 Sei $\left(G, \circ\right)$ eine Gruppe mit neutralem Element $1_G$. Die Teilmenge $U\subseteq G$ heißt \textit{Untergruppe}, wenn gilt:
 \begin{enumerate}
-\item[U1: ] $1_G \in U$.
-\item[U2: ] $a, b \in U \Rightarrow a\circ b \in U$.
+\item[U1: ] $1_G \in U$,
+\item[U2: ] $a, b \in U \Rightarrow a\circ b \in U$,
 \item[U3: ] $a \in U \Rightarrow a^{-1} \in U$.
 \end{enumerate} 
 \end{defn}
@@ -42,8 +44,8 @@ Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot
 %
 \begin{enumerate}
 \item[R1: ] $(R, +)$ ist eine abelsche Gruppe (deren neutrales Element mit $0_R$ bezeichnet wird).
-\item[R2: ] Die Multiplikation $\cdot$ ist assoziativ: Für $a, b,c \in R$ gilt $a\cdot \left(b \cdot c\right) = \left(a \cdot b \right) \cdot c$. Das neutrale Element der Multiplikation wird mit $1_R$ bezeichnet.%Blöd weil ich Monoid brauche: $\left(R, \cdot\right)$ ist ein Monoid,
-\item[R3: ] (Distributivgesetze) Für alle $a,b,c \in$ R gilt\\
+\item[R2: ] Die Multiplikation ist assoziativ: Für $a, b,c \in R$ gilt $a\cdot \left(b \cdot c\right) = \left(a \cdot b \right) \cdot c$. Das neutrale Element der Multiplikation wird mit $1_R$ bezeichnet.%Blöd weil ich Monoid brauche: $\left(R, \cdot\right)$ ist ein Monoid,
+\item[R3: ] (Distributivgesetze) Für alle $a,b,c \in$ R gilt:
 \[a \cdot(b +c) = a \cdot b + a \cdot c \text{ und }
 (a+b) \cdot c = a \cdot c + b \cdot c. \] 
 \end{enumerate}
@@ -51,14 +53,15 @@ Sei $R$ eine nichtleere Menge und seien $+ : R \times R \to R \text{ und } \cdot
 %Das neutrale Element bezüglich der Addition wird mit \textbf{$0_R$}, das neutrale Element bezüglich der Multiplikation mit \textbf{$1_R$} bezeichnet.
 
 \begin{bem} %evtl doch keine extra Bemerkung
-Ist die Multiplikation kommutativ, so heißt $\left(R, +, \cdot\right)$ \textit{kommutativer Ring mit Eins}. Anstelle von $\left(R, +, \cdot\right)$ sprechen wir vereinfachend von dem Ring $R$.
+Ist die Multiplikation kommutativ, so heißt $\left(R, +, \cdot\right)$ \textit{kommutativer Ring mit Eins}. \\
+Anstelle von $\left(R, +, \cdot\right)$ sprechen wir vereinfachend von dem Ring $R$.
 \end{bem}
 %
 %evtl Definition von Nullteiler, Einheit, Integritätsbereich? alles nach Erinnerung Kaiser
 \begin{defn}\label{definitionEinheitNullteiler}
 Sei $\left(R, +, \cdot\right)$ ein kommutativer Ring mit Eins und sei $a \in R$.
 \begin{enumerate}
-\item Ein Element $a \in R$ heißt \textit{Nullteiler}, falls $a \neq 0$ und ein $0 \neq b \in R$ existiert mit $ab =0$.
+\item Ein Element $a \in R$ heißt \textit{Nullteiler}, falls $a \neq 0$ ist und ein $0 \neq b \in R$ existiert mit $ab =0$.
 \item Ein Element $a \in R$ heißt \textit{Einheit}, falls ein $b \in R$ existiert mit $ab = 1$. 
 \end{enumerate}
 \end{defn}
@@ -117,20 +120,29 @@ Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+$ und $\
 \begin{satz}\label{quotkoerper} %\cite{fischer08} \cite{Lueneburg08} statt RxR* mach ich RxR\0 weil R ist nicht definiert.
 Sei $R$ ein Integritätsbereich. Wir definieren auf $R\times R\setminus\lbrace 0\rbrace$ eine Äquivalenzrelation $\sim$ wie folgt. Sei $\left(r, u\right), \left(s, v\right) \in R\times R\setminus\lbrace 0\rbrace$. Es gilt, dass $\left(r,u\right) \sim \left(s, v\right)$ ist genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$. Wir können nun schreiben: \\
 \[rwv = rvw = suw = swu = tvu = tuv.\]
-Nach Voraussetzung ist $R$ ein Integritätsbereich. Da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Somit ist $\sim$ transitiv. Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
+Nach Voraussetzung ist $R$ ein Integritätsbereich. Da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Somit ist $\sim$ transitiv. \\
+Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
 \[\left(r,u\right)+ \left(s,v\right) = \left(rv + su, uv\right),\]
 \[\left(r,u\right)\left(s,v\right) = \left(rs, uv\right)\] 
-Wir setzen \textup{Quot}$(R) = \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$. Nach Definition gilt für $\left(r, u\right), \left(r_1, u_1\right) \in \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$:
-\[ \frac{r}{u} = \frac{r_1}{u_1} \text{ genau dann, wenn } ru_1 = ur_1 \text{ ist.}
+Wir setzen \textup{Quot}$(R) = \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$. Nach Definition gilt für $\left(r_1, u_1\right), \left(r_2, u_2\right) \in \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$:
+\[ \frac{r_1}{u_1} = \frac{r_2}{u_2} \text{ genau dann, wenn } r_1u_2 = u_1r_2 \text{ ist.}
 \]
 Wir definieren die Addition und Multiplikation der Äquivalenzklassen folgendermaßen: 
 \[\frac{r}{u} + \frac{s}{v} = \frac{rv + su}{uv}\]
 \[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}\]
 \textup{Quot}$\left(R, +, \cdot\right)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
 \end{satz}
-\beweis{ Wir zeigen die Wohldefiniertheit der Verknüpfungen. Sei $\left({r_1},{u_1}\right), \left({r_2},{u_2}\right), \left({s_1},{v_1}\right), \left({s_2},{v_2}\right) \in R\times R\setminus\lbrace 0\rbrace$ und $\frac{r_1}{u_1}=\frac{r_2}{u_2}$ und $\frac{s_1}{v_1} = \frac{s_2}{v_2}$. Nach Definition gilt $r_1u_2 = u_1r_2$ und $s_1v_2 = v_1s_2$. Daher erhalten wir:
-\[ u_1v_1\left(r_2v_2 + u_2s_2\right) = u_1v_1r_2v_2 + u_1v_1u_2s_2 = u_1r_2v_1v_2 + u_1u_2v_1s_2 = r_1u_2v_1v_2 + u_1u_2s_1v_2 = u_2v_2\left(r_1v_1 + u_1s_1\right)\]
-Es gilt also $\frac{r_2v_2 + u_2s_2}{u_2v_2} = \frac{r_1v_1 + u_1s_1}{u_1v_1}$. Somit ist die Addition wohldefiniert.\\
+\beweis{ Wir zeigen die Wohldefiniertheit der Verknüpfungen. Sei $\left({r_1},{u_1}\right), \left({r_2},{u_2}\right), \left({s_1},{v_1}\right), \left({s_2},{v_2}\right) \in R\times R\setminus\lbrace 0\rbrace$ und $\frac{r_1}{u_1}=\frac{r_2}{u_2}$ und $\frac{s_1}{v_1} = \frac{s_2}{v_2}$. Nach Definition gilt $r_1u_2 = u_1r_2$ und $s_1v_2 = v_1s_2$. 
+%
+%
+Wir wollen zeigen, dass $\frac{r_1}{u_1} +\frac{s_1}{v_1} = \frac{r_2}{u_2}+\frac{s_2}{v_2}$ ist. Wir erhalten
+%
+\begin{eqnarray*}
+  u_1  v_1\left(r_2v_2 + u_2s_2\right) &=& u_1v_1r_2v_2 + u_1v_1u_2s_2 = u_1r_2v_1v_2 + u_1u_2v_1s_2 \\
+ &=& r_1u_2v_1v_2 + u_1u_2s_1v_2 
+ = u_2v_2\left(r_1v_1 + u_1s_1\right).
+\end{eqnarray*}
+Es gilt also $\frac{r_1v_1 + u_1s_1}{u_1v_1} = \frac{r_2v_2 + u_2s_2}{u_2v_2} $. Somit ist die Addition wohldefiniert.\\
 %Wir prüfen die Wohldefiniertheit der Verknüpfungen der Elemente. Daraus folgt unmittelbar die Wohldefiniertheit der Äquivalenzklassen. \\Seien $\left(r_1, u_1 \right), \left(r_2, u_2\right), \left(s, v\right) \in R\times R\setminus\lbrace 0\rbrace$ und sei $\left(r_1, u_1 \right) \sim \left(r_2, u_2\right)$. Nach Definition der Äquivalenzrelation ist $r_1u_2 = r_2u_1$. Daher erhalten wir
 %\begin{equation*}
 %\left(r_1v + su_1\right)u_2v \\= r_1u_2v^2 + su_1u_2v \\
@@ -139,7 +151,7 @@ Es gilt also $\frac{r_2v_2 + u_2s_2}{u_2v_2} = \frac{r_1v_1 + u_1s_1}{u_1v_1}$. 
 %\end{equation*}
 %also 
 %\[\left(r_1v + su_1, u_1v\right) \sim \left(r_2v + su_2, u_2v\right)\]
-Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben definierten Äquivalenzklassen erhalten wir $ u_2v_2\left(r_1s_1\right) = u_2v_2r_1s_1 = r_1u_2s_1v_2 = u_1r_2v_1s_2 = u_1v_1\left(r_2s_2\right) $.\\
+Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben definierten Äquivalenzklassen erhalten wir $ u_2v_2\left(r_1s_1\right) = u_2v_2r_1s_1 = r_1u_2s_1v_2 = u_1r_2v_1s_2 = u_1v_1\left(r_2s_2\right) $ und damit $\frac{r_1s_1}{u_1v_1} = \frac{r_2s_2}{u_2v_2}$.\\
 %\begin{equation*}
 %\left(r_2s, s_2v\right) \sim \left(r_1s, u_1v\right),
 %\end{equation*}
@@ -147,9 +159,10 @@ Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben defini
 %\begin{equation*}
 %\left(r_2s\right)\left(u_1v\right) = r_1u_2sv = \left(r_1s\right)\left(u_2v\right).
 %\end{equation*}
-Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität können leicht nachgerechnet werden. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.
-Weiter ist (Quot(R), $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{b}{a}$ das inverse Element ist. \\
-Das Distributivgesetz kann leicht nachgerechnet werden. Somit ist der Körper (Quot(R), +, $\cdot$) konstruiert.
+Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität können leicht nachgerechnet werden. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
+Weiter ist (Quot(R), $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{u}{r}$ das inverse Element ist. \\
+Das Distributivgesetz kann leicht nachgerechnet werden. \\
+Somit ist der Körper (Quot(R), +, $\cdot$) konstruiert.
 %Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. %\textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
 }
 %
@@ -173,11 +186,42 @@ Es gilt Quot$(\Z) = \Q$.
 %
 \begin{bsp}
 Ist D $\subseteq \C$ ein Gebiet, so ist der Ring $ \mathcal{O} (D) $ der in $D$ holomorphen Funktionen ein Integritätsring. Man nennt
-$ M \left(D\right) := $Quot$\left( \mathcal{O} \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \mathcal{O} (D), ~g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert. 
+$ M \left(D\right) := \text{Quot}\left( \mathcal{O} \left( D \right)\right) = \lbrace \frac{f}{g}: f,g \in \mathcal{O} (D), ~g \neq 0\rbrace$ den Körper der meromorphen Funktionen. Der Nenner kann unendlich viele Nullstellen besitzen, diese liegen allerdings isoliert. 
 \end{bsp}
 %
 %
 %
+\begin{satz}[Universelle Eigenschaft des Quotientenkörpers]
+Sei $R$ ein Integritätsring. Sei $K$ ein Körper und sei $\varphi\colon R\to K$ ein injektiver Ringhomomorphismus. Dann gibt es genau einen Körperhomomorphismus $\Phi\colon \textup{Quot}(R) \to K$ mit $\Phi_{|R}=\varphi$.  
+\end{satz}
+\beweis{ Wir zeigen zunächst die Existenz eines derartigen Körperhomomorphismus. Wir definieren $\Phi\colon \textup{Quot}(R) \to K, \frac{a}{b} \mapsto \varphi(a){\left(\varphi(b)\right)}^{-1}$. Da $\varphi$ injektiv ist, gilt $\varphi(b) \in K^*$ für $b\in R\setminus\lbrace0\rbrace$.\\
+Die Abbildung $\Phi$ ist wohldefiniert. Seien $\left(a,b\right),\left(c,d\right) \in R\times R\setminus \lbrace 0 \rbrace$ mit $\frac{a}{b}=\frac{c}{d}$. Wir wollen zeigen, dass $\varphi(a){\left(\varphi(b)\right)}^{-1} = \varphi(c){\left(\varphi(d)\right)}^{-1}$.\\
+Wir wissen nach Definition der Elemente des Quotientenkörpers gilt $ad = cb$ und erhalten $\varphi(ad) = \varphi(cb)$. Da $\varphi$ ein Homomorphismus ist, gilt $\varphi(a)\varphi(d)=\varphi(c) \varphi(b)$ und damit $\varphi(a){\left(\varphi(b)\right)}^{-1} = \varphi(d){\left(\varphi(d)\right)}^{-1}$.\\
+Die Abbildung $\Phi$ ist ein Homomorphismus, denn es gilt:
+\begin{eqnarray*}
+\Phi\left(\frac{a}{b} + \frac{c}{d}\right) &=& \Phi\left(\frac{ad + bc}{bd}\right)
+ = \varphi(ad + bc){\left(\varphi(bd)\right)}^{-1} \\
+&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(d)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
+&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(d)\right){\left(\varphi(b)\right)}^{-1}{\left(\varphi(d)\right)}^{-1} \\
+&=& \varphi(a){\varphi(b)}^{-1} + \varphi(c){\varphi(d)}^{-1} 
+= \Phi\left(\frac{a}{b}\right) + \Phi\left(\frac{c}{d}\right).
+\end{eqnarray*}
+
+Die Abbildung $\Phi$ ist ebenso multiplikativ:\\
+\begin{eqnarray*}
+\Phi\left(\frac{a}{b} \frac{c}{d}\right) &=& \Phi\left(\frac{ac}{bd}\right)
+ = \varphi(ac){\left(\varphi(bd)\right)}^{-1} \\
+&=&\left(\varphi(a)\varphi(d)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
+&=& \varphi(a){\varphi(b)}^{-1} \varphi(c){\varphi(d)}^{-1} \\
+&=& \Phi\left(\frac{a}{b}\right) \Phi\left(\frac{c}{d}\right).
+\end{eqnarray*}
+Weiter gilt $\Phi(1_R) = \Phi\left(\frac{1_R}{1_R}\right) = \varphi(1_R){\varphi(1)}^{-1} = 1_K$.\\
+Sei $a\in R$, so erhalten wir $\Phi\left(\frac{a}{1}\right)=\varphi(a){\varphi(1)}^{-1} = \varphi(a)$.\\
+Der Körperhomomorphismus ist eindeutig, denn angenommen es gäbe $\Phi_1, \Phi_2$ Körperhomomorphismen mit ${\Phi_1}_{|R} = {\Phi_2}_{|R} = \varphi$. Sei $\frac{a}{b}\in \text{Quot}(R)$ mit $a\in R, b\in R\setminus\lbrace0\rbrace$. Dann gilt:
+$
+\Phi_1\left(\frac{a}{b}\right) = \Phi_1\left(ab^{-1}\right) = \Phi(a){\left(\Phi(b)\right)}^{-1} = \varphi(a){\left(\varphi(b)\right)}^{-1} = \Phi_2\left(a\right){\left(\Phi_2(b)\right)}^{-1} = \Phi\left(\frac{a}{b}\right).
+$
+}
 %
 %
 %
@@ -194,7 +238,7 @@ Sei $K$ ein Körper. Eine \textit{K-Algebra} ist ein $K$-Vektorraum $V$ auf dem 
 \section{Angeordnete algebraische Strukturen}
 \subsection{Anordnung}
 \begin{defn}\label{defgs} 
-Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $``\leq " $ auf $A$ gibt die folgende Eigenschaften für alle $ a,b,c \in A$  erfüllt.
+Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $``\leq " $ auf $A$ gibt, die folgende Eigenschaften für alle $ a,b,c \in A$  erfüllt:
 %
 \begin{enumerate}
 \item[T1:] (Reflexivität)  $a \leq  a$,
@@ -204,7 +248,7 @@ Eine Menge $A$ heißt \textit{teilweise geordnet}, wenn es eine Relation $``\leq
 %
 Die Relation $``\leq "$ bezeichnet eine teilweise Ordnung auf $A$.
 \end{defn}
-Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale Ordnung bezeichnet, wenn neben T1-T3 die anschließende Bedingung erfüllt ist:
+Die oben definierte Ordnungsrelation wird als \textit{Anordnung} beziehungsweise \textit{totale Ordnung} bezeichnet, wenn neben T1-T3 die anschließende Bedingung erfüllt ist:
 %
 \begin{enumerate}
 \item[T4:] Für alle $a, b \in A$ ist entweder $a < b$ oder $a = b$ oder $a > b$. Dabei gilt $a < b$ genau dann, wenn $a \leq b$ und $a\neq b$ ist. 
@@ -217,14 +261,15 @@ Die oben definierte Ordnungsrelation wird als Anordnung beziehungsweise totale O
 %
 %
 \begin{defn}\label{ordnungsisomorph}
-Seien $A$ und $A'$ teilweise geordnete Mengen. Eine Abbildung $\phi \colon A \rightarrow A', a \mapsto a'$ wird \textit{Ordnungshomomorphismus} von $A$ nach $A'$ genannt, falls folgende Anforderung erfüllt ist:
+Seien $A$ und $A'$ teilweise geordnete Mengen. Eine Abbildung $\varphi \colon A \rightarrow A', a \mapsto a'$ wird \textit{Ordnungshomomorphismus} von $A$ nach $A'$ genannt, falls folgende Anforderung erfüllt ist:
 \begin{enumerate}
-\item (Ordnungstreue) Wenn $a \leq b$ gilt, so folgt $\phi(a) \leq \phi(b)$ für alle $a, b  \in A$.
+\item (Ordnungstreue) Wenn $a \leq b$ gilt, so folgt $\varphi(a) \leq \varphi(b)$ für alle $a, b  \in A$.
 \end{enumerate}
-Gilt zusätzlich die folgende Aussage, so bezeichnen wir $\phi$ als \textit{Ordnungsisomorphismus}
+Gilt zusätzlich die folgende Aussage, 
 \begin{enumerate}
-\item[(b)] (Bijektivität) Für jedes $a' \in A'$ existiert genau ein $a \in A$, mit $a' = \phi(a)$.
+\item[(b)] (Bijektivität) Für jedes $a' \in A'$ existiert genau ein $a \in A$, mit $a' = \varphi(a)$,
 \end{enumerate}
+so bezeichnen wir $\varphi$ als \textit{Ordnungsisomorphismus}.
 $A$ und $A'$ werden in diesem Fall \textit{ordnungsisomorph}, kurz \textit{o-isomorph} genannt.
 %Ist $G$ mit dem Positivbereich $P$ eine angeordnete Gruppe,
 %so ist $G$ auch mit dem Positivbereich $\left(−P\right)$ eine angeordnete Gruppe. Die Abbildung
@@ -238,7 +283,7 @@ Eine \textit{teilweise geordnete Gruppe} bezeichnet eine Menge $G$ mit folgenden
 %
 \begin{enumerate}
 \item[G1:] $G$ ist eine Gruppe bezüglich der Addition,
-\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $``\leq " $, wie in \ref{defgs}, 
+\item[G2:] eine teilweise geordnete Menge bezüglich einer Relation $``\leq " $, wie in Definition \ref{defgs}, 
 \item[G3:] das Monotoniegesetz ist erfüllt: Für $a, b \in  G$ gilt: Aus $a \leq b$ folgt $c + a \leq  c + b$ und \\ $a + c \leq b+ c$ für alle $c \in G$.
 \end{enumerate}
 % 
@@ -258,7 +303,7 @@ Eine Untergruppe $U$ einer angeordneten Gruppe $G$ ist bezüglich der selben Rel
 \begin{bsp}\label{OrdnungNundZ}
 Wir betrachten die natürliche Ordnung auf den natürlichen, ganzen und reellen Zahlen.
 \begin{enumerate}
-\item Die Menge der natürlichen Zahlen $\N$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \N$, dass$ a \leq b \text{ genau dann gilt, wenn } b-a \in \N_0$
+\item Die Menge der natürlichen Zahlen $\N$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \N$, dass $ a \leq b \text{ genau dann gilt, wenn } b-a \in \N_0$
 für alle $a,b \in \N$ ist.
 \item Die Gruppe der ganzen Zahlen $\Z$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für $a, b \in \Z$, dass $a\leq b \text{ ist, genau dann, wenn } b -a \in \N_0 \text{ gilt.}$
 \item Die Gruppe der reellen Zahlen $\R$ ist total geordnet bezüglich der Relation $``\leq "$. Es gilt für alle $a, b \in \R$, dass $a \leq b \text{ ist, genau dann, wenn } 0 \leq b -a \text{ gilt.} $
@@ -274,25 +319,29 @@ Jede angeordnete Gruppe ist torsionsfrei.
 \end{bem}
 %
 \beweis{
-Dies folgt unmittelbar aus obiger Definition einer angeordneten Gruppe. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 ergeben. %(formal siehe kleiner Block)
+Dies folgt unmittelbar aus der Definition einer angeordneten Gruppe. Denn angenommen die angeordnete Gruppe wäre nicht torsionsfrei, so würde sich für die Elemente der Torsionsgruppe ein Widerspruch mit dem Monotoniegesetz G3 in \ref{twgG} ergeben. %(formal siehe kleiner Block)
 }
 %
-\begin{bem}\label{afG} %nach Fuchs S. 25
+\begin{folg}\label{angeordnetFolgtPositivbereich} %nach Fuchs S. 25
 %
 Die beiden folgenden Aussagen sind äquivalent:
 \begin{enumerate}
-\item[(i)] Die Gruppe $G$ ist bezüglich der Relation $\leq$ angeordnet.
-\item[(ii)] Die Teilmenge $P = \lbrace x \in G | x \geq 0_G \rbrace$ einer Gruppe $G$ den folgenden Bedingungen:
+\item[(i)] Die Gruppe $G$ ist bezüglich der Relation $``\leq "$ angeordnet.
+\item[(ii)] Eine Teilmenge $P$ einer Gruppe $G$ genügt den folgenden Bedingungen:
 \begin{enumerate}
-\item[P1:] $\lbrace0\rbrace \cup P\cup -P = G$, $P \cap -P = \varnothing$,
-\item[P2:] $P \circ P \subseteq P$,
+\item[P1:] $\lbrace0\rbrace \cup P\cup \left(-P\right) = G$, $P \cap \left(-P\right) = \varnothing$,
+\item[P2:] $P + P \subseteq P$,
 \item[P3:] $x+P+(-x) \subseteq P$ für jedes $x \in G$.
 \end{enumerate}
 Wir nennen $P$ den \textit{Positivbereich} von $G$.
 \end{enumerate}
 
 %
-\end{bem}
+\end{folg}
+\beweis{$(i)\Rightarrow(ii)$ Wir betrachten die Menge $P = \lbrace x \in G | x \geq 0_G \rbrace$. $P$ ist eine Teilmenge von $G$ und man sieht sofort, dass $P$ die Axiome P1-P3 erfüllt.\\
+$(ii)\Rightarrow (i)$ Wir wissen, dass die Menge $P$ der Positivbereich von $G$ ist. Wir definieren für $a,b \in G$, dass $b\leq a$ gilt, genau dann, wenn $a-b\in P$. Dies liefert uns nach den Eigenschaften der Menge $P$ eine Anordnung auf $G$.
+%TODO: REICHT DAS??
+}
 %
 %
 %
@@ -302,13 +351,13 @@ Ist $G$ mit dem Positivbereich $P$ eine angeordnete Gruppe, so ist $G$ auch mit 
 %
 
 \subsection{Wohlordnung}
-Nun beschäftigen wir uns mit dem Begriff der Wohlordnung. Diese wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. Wir definieren wohlgeordnete Mengen wie in \cite[S. 16]{fuchs66}.
+Nun beschäftigen wir uns mit dem Begriff der Wohlordnung. Diese Eigenschaft wird später bei der näheren Betrachtung des Trägers einer Potenzreihe eine wichtige Rolle spielen. Wir definieren wohlgeordnete Mengen wie in \cite[S. 16]{fuchs66}.
 \begin{defn} \label{wohlgeordn} %\cite{fuchs66} 
 Eine angeordnete Menge $W$ nennt man \textit{wohlgeordnet}, wenn jede nichtleere Teilmenge $V$ von $W$ ein kleinstes Element enthält. Es existiert also ein Element $ u \in V \text{ mit } u \le v $ für alle $ v \in V.$ 
 \end{defn}
 %
 Der Wohlordnungssatz, ein von Ernst Zermelo bewiesenes Prinzip der Mengenlehre, besagt, dass auf jeder Menge eine Wohlordnung existiert. Dieses Theorem, so stellte sich nach erfolglosen Widerlegungsversuchen zahlreicher Mathematiker heraus, ist äquivalent zum Auswahlaxiom und dem Lemma von Zorn. \\
-Beispielsweise ist die natürliche Anordnung der natürlichen Zahlen $\N$ eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $``\leq "$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
+Die natürliche Anordnung der natürlichen Zahlen $\N$ ist beispielsweise eine Wohlordnung. Die Menge $\Z$ ist mit der natürlichen Anordnung $``\leq "$ total geordnet, jedoch nicht wohlgeordnet, da die negativen Elemente von $\Z$ nicht nach unten beschränkt sind und somit $\Z$ kein kleinstes Element enthält. Der Wohlordnungssatz besagt, dass jede Menge und daher auch $\Z$ wohlgeordnet werden kann. Nach der Konstruktion der ganzen Zahlen auf Basis der natürlichen Zahlen mittels einer Äquivalenzrelation auf $\N \times \N$  überträgt sich das Wohlordnungsprinzip von $\N \text{ auf } \Z$.
 \begin{bem} \label{teilmengeGanzeZahlenwohlgeordnet}%\cite{rainer08}
 Ist $W \subseteq \Z$ eine nach unten beschränkte Teilmenge, so hat $W$ ein eindeutig bestimmtes kleinstes Element. 
 \end{bem} 
@@ -341,7 +390,8 @@ Die Relation $``\preceq "$ ist eine Wohlordnung auf $\Z$ und wir erhalten 0$  \p
 %Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
 %Teil 2: Zusammenhang angeordnete abelsche Gruppe mit Wohlordnung
 %Teil 3: Satz von Hölder
-In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Die Familie der konvexen Untergruppen führt uns zu Aussagen über die Anordnungsfähigkeit von Gruppen. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder. Der Satz besagt, dass archimedisch angeordnete Gruppen in die additive Gruppe des $\R$ eingebettet werden können. \\
+In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des verallgemeinerten Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder. Der Satz besagt, dass archimedisch angeordnete Gruppen in die additive Gruppe von $\R$ eingebettet werden können. \\
+Nachdem wir kurz auf die angeordnete Menge konvexer Untergruppen eingehen, geben wir einen kurzen Ausblick auf die Bewertungstheorie.
 %TODO: vielleicht zu ausufernd? Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
@@ -369,7 +419,7 @@ Eine angeordnete abelsche Gruppe ist ein Tripel $\left(G, +, \leq\right)$, wobei
 %
 %
 \begin{nota}
-Wir verwenden im Hauptteil \ref{chap3} für eine angeordnete abelsche Gruppe $\left(G, +, \leq\right)$ meist vereinfachend die Bezeichnung $G$.
+Wir verwenden im Kapitel \ref{chap3} für eine angeordnete abelsche Gruppe $\left(G, +, \leq\right)$ vereinfachend die Bezeichnung $G$.
 \end{nota}
 
 %\begin{bem}\label{angeordnetAbelsch} %\cite{Lueneburg08} 
@@ -392,7 +442,7 @@ Wir verwenden im Hauptteil \ref{chap3} für eine angeordnete abelsche Gruppe $\l
 %
 
 \section{Wohlordnung in angeordneten abelschen Gruppen}
-Die folgenden Aussagen orientieren sich an der Arbeit $\glqq$A residue theorem for Malcev--Neumann series$\grqq$ von Guoce Xin.
+Die folgenden Aussagen orientieren sich an der Arbeit $\glqq$A residue theorem for Malcev--Neumann series$\grqq$ von Guoce Xin (\cite{xin04}).
 \begin{satz}\label{wohlgeordnetabnehmendeFolge} 
 Sei $`` \le "$ eine totale Ordnung auf der Menge $W$. Dann ist $W$ genau dann wohlgeordnet, wenn es keine streng monoton fallende Folge in $W$ gibt.
 \end{satz}
@@ -418,10 +468,10 @@ Total geordnete endliche Mengen sind wohlgeordnet.
 %
 Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_A$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
 \begin{lemma}\label{wohlgeordnvereinigung} %\cite{xin04}
-Sei $w_{n} \in W_A$ für alle $n\in \N$, dann gilt $\bigcap_{n \in \N} w_n \in W_A$, und für $w_1, w_2 \in W_A$ gilt $w_1 \cup w_2 \in W_A$.
+Sei $U_{n} \in W_A$ für alle $n\in \N$, dann gilt $\bigcap_{n \in \N} U_n \in W_A$, und für $U_1, U_2 \in W_A$ gilt $U_1\cup U_2 \in W_A$.
 \end{lemma}
-\beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $w_1\cup w_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $a_1 > a_2 > ...$ in $w_1\cup w_2$.\\
-Betrachten wir alle Elemente der Teilmenge $w_1$. Wir können diese, da $w_1$ total geordnet ist, als Folge $a_{i_1} > a_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $w_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $w_2$ und erhalten die endliche fallende Folge $a_{j_1} > a_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $a_1 > a_2 > ...$ ist in einer der beiden endlichen Folgen enthalten.  Widerspruch!}
+\beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $U_1\cup U_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $u_1 > u_2 > ...$ in $U_1\cup U_2$.\\
+Betrachten wir alle Elemente der Teilmenge $U_1$. Wir können diese, da $U_1$ total geordnet ist, als Folge $u_{i_1} > u_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $U_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $U_2$ und erhalten die endliche fallende Folge $u_{j_1} > u_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $u_1 > u_2 > ...$ ist in einer der beiden endlichen Folgen enthalten. Widerspruch!}
 %
 %
 %
@@ -435,9 +485,9 @@ Die Menge $W_A$ ist somit unter endlicher Vereinigung und dem Schnitt abzählbar
 \begin{lemma}\label{unendlicheFolgeEigenschaften}
 Wir betrachten eine total geordnete Menge $A$. Jede Folge $\left(a_n\right)_{n \in \N}$ in $A$ erfüllt mindestens eine der drei folgenden Eigenschaften:
 \begin{enumerate}
-\item[(1)] $a_1, a_2, ...$ enthält eine streng monoton wachsende Teilfolge.
-\item[(2)] $a_1, a_2, ...$ enthält eine konstante Teilfolge.
-\item[(3)] $a_1, a_2, ...$ enthält eine streng monoton fallende Teilfolge.
+\item[(1)] $\left(a_n\right)_{n \in \N}$ enthält eine streng monoton wachsende Teilfolge.
+\item[(2)] $\left(a_n\right)_{n \in \N}$ enthält eine konstante Teilfolge.
+\item[(3)] $\left(a_n\right)_{n \in \N}$ enthält eine streng monoton fallende Teilfolge.
 \end{enumerate}
 \beweis{
 Angenommen die Folge $\left(a_n\right)_{n \in \N}$ erfüllt weder die Bedingung (2) noch (3). Wir wollen zeigen, dass sie eine streng monoton wachsende Teilfolge enthält.\\
@@ -483,7 +533,7 @@ Sei \[u_1 = v_1 + w_1,~ u_2 = v_2+w_2 ~...\text{, mit } v_r \in V, w_r\in W \tex
 \begin{folg}\label{FolgerungNeumann} %\cite{neumann49}
 Seien V, W wohlgeordnete Teilmengen einer angeordneten abelschen Gruppe $G$, dann gibt es für ein $g \in G$ nur endlich viele Paare $\left(v, w\right) \in V\times W$ mit $v + w = g$.
 \end{folg}
-\beweis{Angenommen es gäbe unendlich viele paarweise verschiedene $\left(v_n, w_n\right) \in V\times W$ für $n \in \N$, sodass $g = v_n + w_n$ ist. Da $V$ und $W$ wohlgeordnet sind, besitzt weder $\left(v_n\right)_{n\in\N}$ noch $\left(w_n\right)_{n\in\N}$ eine streng monoton fallende Teilfolge. Die Folge $\left(v_n + w_n\right)_{n \in \N}$ enthält keine konstante Teilfolge, da sie nach Voraussetzung paarweise verschiedene Glieder besitzt. Nach Satz \ref{unendlicheFolgeEigenschaften} hat $\left(v_n + w_n\right)_{n \in \N}$ eine streng monoton steigende Teilfolge. Dies ist ein Widerspruch, da $g$ konstant bleiben muss.
+\beweis{Angenommen es gäbe unendlich viele paarweise verschiedene $\left(v_n, w_n\right) \in V\times W$ für $n \in \N$, sodass $g = v_n + w_n$ ist. Da $V$ und $W$ wohlgeordnet sind, besitzt weder $\left(v_n\right)_{n\in\N}$ noch $\left(w_n\right)_{n\in\N}$ eine streng monoton fallende Teilfolge. Die Folge $\left(v_n + w_n\right)_{n \in \N}$ enthält keine konstante Teilfolge, da sie nach Voraussetzung paarweise verschiedene Glieder besitzt. Nach Lemma \ref{unendlicheFolgeEigenschaften} hat $\left(v_n + w_n\right)_{n \in \N}$ eine streng monoton steigende Teilfolge. Dies ist ein Widerspruch, da $g$ konstant bleiben muss.
 }
 %
 %
@@ -542,17 +592,17 @@ Für jedes Paar von Elementen $a, b \in G$ gilt genau eine der anschließenden R
 \begin{enumerate}
 \item[(i)] $a \ll b$
 \item[(ii)] $a \sim b$
-\item[(iii)] $b \ll a$, 
+\item[(iii)] $b \ll a$ 
 \end{enumerate}
 \end{multicols}
 %
 Des Weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \begin{enumerate}
 %\item[(i)] Aus $a \ll b$ folgt $-g+a+g $ $\ll$ $-g+b+g$ für alle $g \in G$;
-\item[(i)] Aus $a \ll b$ und $a \sim c$ folgt $c \ll b$;
-\item[(ii)] Aus $a \ll b$ und $b \sim d$, folgt $a \ll d$;
-\item[(iii)] Aus $a \ll b$ und $b \ll c$ folgt $a \ll c$;
-\item[(iv)] Aus $a \sim b$ und $b \sim c$ folgt $a \sim c$;
+\item[(i)] Aus $a \ll b$ und $a \sim c$ folgt $c \ll b$,
+\item[(ii)] Aus $a \ll b$ und $b \sim d$, folgt $a \ll d$,
+\item[(iii)] Aus $a \ll b$ und $b \ll c$ folgt $a \ll c$,
+\item[(iv)] Aus $a \sim b$ und $b \sim c$ folgt $a \sim c$,
 \item[(v)] $\sim$ ist eine Äquivalenzrelation.
 \end{enumerate}
 Sind alle Elemente von $G\setminus\lbrace 0 \rbrace$ archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
@@ -604,19 +654,19 @@ Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Kla
 %
 %
 \section{Der Satz von Hölder}
-In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der angeordneten additiven Gruppe der reellen Zahlen entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (1901)\cite{hoelder1901} zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890\cite[S. 578]{Lueneburg08}.\\
-Wir orientieren uns hierbei an \cite{hoelder1901} und \cite{priesscrampe83}. 
+In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der angeordneten additiven Gruppe der reellen Zahlen entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (\cite{hoelder1901}) zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890 \cite[S. 578]{Lueneburg08}.\\
+Wir orientieren uns im Folgenden an \cite{hoelder1901} und \cite{priesscrampe83}. 
 \begin{satz}\label{aga} %\cite{hoelder1901}
 Eine angeordnete abelsche Gruppe ist genau dann archimedisch, wenn sie zu einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist.
 \end{satz}
 %
 %
 \beweis{
-$``\Leftarrow "$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete Gruppe $G$ gelten muss. \\
-$``\Rightarrow "$ Sei $G$ eine angeordnete abelsche Gruppe. $G$ besitzt also einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace 0_G\rbrace$, wobei $0_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
+$``\Leftarrow "$ Die Rückrichtung ist klar, da jede Untergruppe der additiven Gruppe der reellen Zahlen archimedisch angeordnet ist und diese Eigenschaft durch den o-Isomorphismus ebenfalls für die angeordnete abelsche Gruppe $G$ gelten muss. \\
+$``\Rightarrow "$ Sei $G$ eine angeordnete abelsche Gruppe. $G$ besitzt nach \ref{angeordnetFolgtPositivbereich} einen Positivbereich $P$. Nach Voraussetzung erfüllt $G$ die archimedische Eigenschaft. Sei $G \neq \lbrace 0_G\rbrace$, wobei $0_G$ das neutrale Element der Addition in $G$ ist. Andernfalls wäre $G$ isomorph zu $\lbrace 0 \rbrace \subseteq \R$, der trivialen Untergruppe der additiven Gruppe der reellen Zahlen. \\
 %Jetzt den Fall, dass G nicht dicht ist (wird nur nicht explizit so bezeichnet, weil ich dann dicht wieder einführen müsste^^)
 %
-Angenommen der Positivbereich $P$ hat ein kleinstes Element. Es gibt also ein $g \in P$ mit $0_G \le g$ wobei für jedes $h\in G$, mit $0_G \leq h < g$, folgt, dass $h = 0_G$ gilt. Wegen der archimedischen Eigenschaft gibt es zu jedem $h\in G$ eine ganze Zahl $n\in \Z$, sodass $ng \leq h < \left(n+1\right)g$ gilt. Daher erhalten wir $0_G\leq h + \left(-n\right)g < (n+1)g -ng = g$. Also gilt, dass $h + \left(-n\right)g = 0_G$ ist. Infolgedessen ist $G= \langle g\rangle$, wobei $\langle g\rangle$ die von $g$ erzeugte Untergruppe ist, o-isomorph zur Gruppe der ganzen Zahlen ist bezüglich der Zuordnung $ng \mapsto n$.\\
+Angenommen der Positivbereich $P$ hat ein kleinstes Element. Es gibt also ein $g \in P$ mit $0_G \le g$ wobei für jedes $h\in G$ mit $0_G \leq h < g$ folgt, dass $h = 0_G$ gilt. Wegen der archimedischen Eigenschaft gibt es zu jedem $h\in G$ eine ganze Zahl $n\in \Z$, sodass $ng \leq h < \left(n+1\right)g$ gilt. Daher erhalten wir $0_G\leq h + \left(-n\right)g < (n+1)g -ng = g$. Also gilt, dass $h + \left(-n\right)g = 0_G$ ist. Infolgedessen ist $G= \langle g\rangle$, wobei $\langle g\rangle$ die von $g$ erzeugte Untergruppe ist, o-isomorph zur Gruppe der ganzen Zahlen bezüglich der Zuordnung $ng \mapsto n$.\\
 Im weiteren Beweis gehen wir davon aus, dass $P$ kein kleinstes Element hat. Es lässt sich also zu jedem $g\in P$ ein $h\in G$ finden, sodass $0 < h < g$ gilt. Wir bezeichnen die Gruppe $G$ dann als \textit{dicht}.\\
 %
 %
@@ -629,8 +679,8 @@ Im weiteren Beweis gehen wir davon aus, dass $P$ kein kleinstes Element hat. Es 
 %
 Wir wählen ein Element $\alpha \in P$ beliebig. Für jedes $g \in P$ definieren wir:
 \[S_g := \lbrace \frac{m}{n} \in \Q_{>0}~ |~ m, n \in \N, m\alpha \le ng\rbrace \subset \Q_{>0}.\]
-Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p \alpha$. Die Darstellung von $r \in \Q_{>0}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r$ in $S_g$ enthalten ist.\\
-Um die Behauptung zu zeigen, genügt es, einen ordnungstreuen Monomorphismus zu finden, der $G$ auf die additive Gruppe der reellen Zahlen abbildet. Wir zeigen nun folgende Aussagen: \\
+Für beliebige $m, n, p \in \N$ gilt die Äquivalenz $m\alpha \le n g \Leftrightarrow m p \alpha \le n p g$. Die Darstellung von $r \in \Q_{>0}$ als Quotient zweier natürlicher Zahlen hängt also nicht damit zusammen, ob $ r$ in $S_g$ enthalten ist.\\
+Um die Behauptung zu zeigen, genügt es einen ordnungstreuen Monomorphismus zu finden, der $G$ auf die additive Gruppe der reellen Zahlen abbildet. Wir zeigen nun folgende Aussagen: \\
 \begin{enumerate}
 \item[(i)] Für alle $g\in P$ gilt $S_g \neq \varnothing \text{ und } S_g \neq \Q_{>0}$. Für $r \in \Q_{>0} \text{ und } s \in S_g \text{ mit } r < s$ folgt $r \in S_g.$
 \item[(ii)] $S_g$ ist nach oben beschränkt für alle $g \in P$. Die Abbildung $\Phi: P \rightarrow \R_{>0}, g \mapsto$ sup$\left( S_g \right)$ ist somit wohldefiniert.  
@@ -640,7 +690,7 @@ Sei $r \notin S_g \text{ und } s \notin S_h \text{, so folgt } r+s \notin S_{g+h
 \item[(v)] Es gilt $\Phi\left( g+h\right) = \Phi\left(g\right) + \Phi\left(h\right)$ für alle $g, h \in P$. 
 \item[(vi)] $\Phi$ wird fortgesetzt auf die gesamte Gruppe $G$ durch $\Phi\left(0_G\right) = 0 \text{ und } \Phi \left(-g\right) = -\Phi \left(g\right)$ für alle g $\in P$. \\ 
 \end{enumerate}
-Insgesamt ist $\Phi$ ein injektiver Homomorphismus abelscher Gruppen und damit ist $G$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.\\ 
+Insgesamt ist $\Phi$ ein injektiver Homomorphismus angeordneter abelscher Gruppen und damit ist $G$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen.\\ 
 Zu (i): Wegen der archimedischen Eigenschaft gibt es zu jedem Element $g \in P$ ein $n \in \N$ mit $ng > \alpha$. Nach Definition von $S_g$ gilt $\frac{1}{n} \in S_g$ und somit ist $S_g$ nicht leer.\\ Angenommen $S_g = \Q_{>0}$, dann wäre $n \in S_g$ beziehungsweise $n\alpha \le g$ für alle $n\in\N$, was ein Widerspruch zur archimedischen Eigenschaft ist.\\
 Seien $r, s \in \Q_{>0} \text{ mit } r < s \text{ und } s \in S_g \text { mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Nach Voraussetzung gilt $kn < lm $ und da $s \in S_g$ liegt erhalten wir $ m\alpha \le ng$ und $kn\alpha \le lm\alpha \le lng.$ Daraus wiederum folgt: $\frac{kn}{ln} = r \in S_g$.\\
 %
@@ -653,16 +703,16 @@ Zu (ii): Angenommen $S_g$ wäre unbeschränkt, dann gäbe es für jedes $n \in \
 %
 %
 %
-Zu (iii): Zunächst beweisen wir die erste Implikation. Sei  $g, h \in P$ und es gelte $g \le h$. Sei $r \in S_g$, $r:= \frac{m}{n}, m, n \in \N $, dann erhalten wir $m\alpha \le ng$. Da $g \le h$ ist, folgt $ m\alpha \le n h$ und damit $r \in S_h$. Die zweite Implikation folgt nach Definition von $\Phi$ offensichtlich.\\
-Sei $\Phi\left(g\right) \le \Phi\left(h\right)$. Angenommen es sei $g > h$. Nach der archimedischen Eigenschaft gibt es ein $ n \in \N$ mit $n\left(g-h\right) > 2\alpha$. Wähle $m \in \N$ möglichst klein mit $m\alpha > nh$. Dieses $m$ existiert, aufgrund der Archimedizität von $G$. Es gilt $\frac{m}{n} \notin S_h$ und $\frac{m}{n} \geq \Phi\left(h\right).$
-Da m minimal ist, gilt die Ungleichung $\left(m-1\right)\alpha \le nh$ und wir erhalten $ \left(m+1\right)\alpha \le nh + 2\alpha < nh + n(g-h) = ng$ und $\frac{m+1}{n} \in S_g,$ also $\frac{m+1}{n} \leq$ sup$\left(S_g\right) = \Phi\left(g\right)$. Insgesamt ergibt sich $\Phi\left(h\right) \le \frac{m}{n} < \frac{m + 1}{n} \le \Phi\left(g\right)$, Widerspruch.\\
+Zu (iii): Zunächst beweisen wir die erste Implikation. Sei  $g, h \in P$ und es gelte $g \le h$. Für $r \in S_g$, $r:= \frac{m}{n}$ mit $m, n \in \N $ erhalten wir $m\alpha \le ng$. Da $g \le h$ ist, folgt $ m\alpha \le n h$ und damit $r \in S_h$. Die zweite Implikation folgt nach Definition von $\Phi$ offensichtlich.\\
+Sei $\Phi\left(g\right) \le \Phi\left(h\right)$. Angenommen es sei $g > h$. Nach der archimedischen Eigenschaft gibt es ein $ n \in \N$ mit $n\left(g-h\right) > 2\alpha$. Wähle $m \in \N$ möglichst klein mit $m\alpha > nh$. Dieses $m$ existiert aufgrund der Archimedizität von $G$. Es gilt $\frac{m}{n} \notin S_h$ und $\frac{m}{n} \geq \Phi\left(h\right).$
+Da m minimal ist, gilt die Ungleichung $\left(m-1\right)\alpha \le nh$ und wir erhalten $ \left(m+1\right)\alpha \le nh + 2\alpha < nh + n(g-h) = ng$ und $\frac{m+1}{n} \in S_g,$ also $\frac{m+1}{n} \leq\sup\left(S_g\right) = \Phi\left(g\right)$. Insgesamt ergibt sich $\Phi\left(h\right) \le \frac{m}{n} < \frac{m + 1}{n} \le \Phi\left(g\right)$, Widerspruch.\\
 %
 %
 %
 %
 %
 %
-Zu (iv): Sei $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt $k\alpha < lg $ und $ m\alpha \le nh$. Wir erhalten $kn\alpha \le lng \text{ und } lm\alpha \le lnh.$ Somit liegt $r+s = \frac{kn+lm}{ln}$ in der Menge $S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $``\le "$ durch $``> "$ ersetzt wird.\\
+Zu (iv): Sei $r \in S_g, s \in S_h \text{ mit } r := \frac{k}{l} \text{ und } s:= \frac{m}{n}, \text{ wobei } m, n ,k, l \in \N$. Dann gilt $k\alpha < lg $ und $ m\alpha \le nh$. Wir erhalten $kn\alpha \le lng \text{ und } lm\alpha \le lnh.$ Somit liegt $r+s = \frac{kn+lm}{ln}$ in der Menge $S_{g+h}.$ Die zweite Aussage folgt analog indem in Obigem $``\le"$ durch $``>"$ ersetzt wird.\\
 %
 %
 %
@@ -676,12 +726,17 @@ Es bleibt zu zeigen, dass $\Phi\left(g\right)+\Phi\left(h\right)$ die kleinste o
 %
 %
 %
-Zu (vi): Falls $g, h > 0_{G}$ ist haben wir bereit gezeigt, dass aus $g\le h$ folgt, dass $\Phi(g) \leq \Phi(h)$ ist. Die Aussage gilt offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < 0_G \text{ und } h > 0_G$, dann folgt die Behauptung nach Definition. Die Behauptung bleibt für $g, h < 0_G$ zu zeigen. Wir erhalten
+Zu (vi): Wir wissen für $g, h > 0_G$ und $g \leq h$ folgt, dass $\Phi(g) \leq \Phi(h)$ ist. Die Aussage gilt offensichtlich, wenn eines der beiden Elemente $g$ oder $h$ gleich Null ist. Sei $g < 0_G \text{ und } h > 0_G$, dann folgt die Behauptung nach Definition. Wir betrachten den Fall $g, h < 0_G$ und erhalten:
 \[g \le h \Leftrightarrow -g \geq -h \Leftrightarrow \Phi\left(-g\right) \geq \Phi\left(-h\right) \Leftrightarrow \Phi\left(g\right) \le \Phi\left(h\right).\]
 Wir zeigen nun $\Phi(g+h) = \Phi\left(g\right) +\Phi\left(h\right)$ für beliebige $g,h \in G$. Wir beginnen mit dem Fall $g, h < 0_G$. Hier kann auf das bereits Bewiesene zurückgegriffen werden: 
 \[\Phi\left(g+h\right) = −\Phi\left((−g)+(−h)\right) = (−\Phi(−g))+(−\Phi(−h)) = \Phi(g)+\Phi(h).\]
-Nun betrachten wir den Fall $g>0_G$ und $h < 0_G$. Dann gilt entweder $g\geq −h$ oder $g < -h$. Wir beschäftigen uns zunächst mit $g \geq -h$. Dann ist $g+h \geq 0_G$, und nach der bereits gezeigten Aussage folgern wir:\\
-\[\Phi(g+h)+ \Phi(−h) = \Phi(g) \Leftrightarrow \Phi(g+h)−\Phi(h) = \Phi(g) \Leftrightarrow \Phi(g+h) = \Phi(g)+ \Phi(h).\]
+Nun betrachten wir den Fall $g>0_G$ und $h < 0_G$. Dann gilt entweder $g\geq −h$ oder $g < -h$. \\
+Wir beschäftigen uns zunächst mit $g \geq -h$. Dann ist $g+h \geq 0_G$, und nach der bereits gezeigten Aussage folgern wir:\\
+\begin{eqnarray*}
+&&\Phi(g+h)+ \Phi(−h) = \Phi(g + h -h) = \Phi(g) \\
+&\Leftrightarrow& \Phi(g+h)−\Phi(h) = \Phi(g) \\
+&\Leftrightarrow& \Phi(g+h) = \Phi(g)+ \Phi(h).
+\end{eqnarray*}
 Sei nun $g < −h$. Dann ist $−g−h > 0$, also $\Phi(g)+\Phi(−g−h) = \Phi(−h)$, was äquivalent zu $\Phi(g)−\Phi(g+h) = −\Phi(h)$ und zu $\Phi(g)+ \Phi(h) = \Phi(g+ h)$ ist.
 \\ Die Gültigkeit im Fall $g,h > 0$ folgt sofort aus der Definition von $\Phi$. 
 Da $\Phi$ nach (iii) ordnungserhaltend ist, ist $\Phi$ ein ordnungserhaltender Isomorphismus.}
@@ -694,8 +749,8 @@ Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gru
 %
 %
 \beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Damit folgt, dass $n \cdot g_1 > m\cdot g_2$ und $\phi(n\cdot g_1)< \phi(m\cdot g_2)$ ist. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
-Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}= \frac{g_1}{g_2}$. Wir erhalten somit auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
-Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{-\cdot\phi(g)}{-\cdot g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  = \frac{\Phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
+Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}= \frac{g_1}{g_2}$. Wir erhalten, da $g_1, g_2$ beliebig gewählt sind, auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
+Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{-\phi(g)}{-g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  := \frac{\Phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
 }
 %
 %
@@ -707,14 +762,14 @@ Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$
 
 \end{folg}
 \beweis{
-Wir verwenden den Satz von Hölder, damit ist $G$ o- isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Nach Satz \ref{homomorphismus nach R} wissen wir bereits, dass es eine reelle positive Zahl $r$ gibt, sodass ein o-Monomorphismus $g \in G$ auf $rg$ abbildet. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Für ein $g> 0$ mit $g\in G$, wobei $G$ existiert also ein $0 < r \in R$ mit $r= \frac{1}{g}$. Dieser Quotient ist definiert, da $g >0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist, $r$ ist offensichtlich positiv, da $g$ nach Voraussetzung positiv ist. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g}g = 1$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
-Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{g}$, welche aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen folgt.
+Nach dem Satz von Hölder \ref{aga} ist $G$ o-isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Wir wissen wegen Satz \ref{homomorphismus nach R} bereits, dass es eine reelle positive Zahl $r$ gibt, sodass es der o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{g}$. Dieser Quotient existiert, da $g \neq 0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist und das Inverse zu $g$, nämlich $\frac{1}{g}$ existiert. Da $g$ nach Voraussetzung positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g} \cdot g = 1_\R$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
+Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{g}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
 }
 %
 %
 %
 %
-Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Werk $\glqq$Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
+Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Werk $\glqq$Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und einer Untergruppe der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
 %
 %
 %
@@ -724,7 +779,7 @@ Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Wer
 \section{Die angeordnete Menge konvexer Untergruppen}
 In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten abelschen Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen geordneter Gruppen besitzen eine durch die Gruppenordnung induzierte Ordnung. \\
 Sei $G$ eine angeordnete abelsche Gruppe.
-Wir untersuchen nun die bezüglich der Inklusion linear angeordnete Menge $\Sigma$ konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
+Wir untersuchen nun die, bezüglich der Inklusion linear angeordnete Menge konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
 
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
 Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $a \in U$ und $x \in G$ mit $0 < |x| < |a|$ folgt, dass $x \in U$ ist.\\
@@ -739,7 +794,7 @@ Eine angeordnete abelsche Gruppe $G$ ist genau dann archimedisch, wenn sie nur d
 \end{satz}
 \beweis{
 $``\Rightarrow "$ Angenommen es gibt eine nichttriviale konvexe Untergruppe $U$ von $G$. Dann gibt es nach Voraussetzung für alle Elemente $g\in G$ mit $g > u$ für alle $u\in U$, ein $v\in U$ und $n\in\N$, sodass $nv > g$ ist. Aufgrund der Abgeschlossenheit der Untergruppe gilt $nv \in U$. Wir erhalten also $U=G$. Widerspruch!\\
-$``\Leftarrow "$ Angenommen $G$ sei nicht archimedisch. Sei $0 < a <b$ mit $a,b \in G$, dann gilt für alle $n = 0, \pm 1,\pm 2, ...$ dass $na \leq b$ ist. Das heißt es gilt für alle $a\in G$ mit $a <b$ die Ungleichung $na \leq b$ und damit $na \in G$. Die von $a$ erzeugte konvexe Untergruppe $\langle a\rangle$ ist ungleich $G$ und wir erhalten somit $\langle a\rangle = 0_G$. Dies ist ein Widerspruch zur Annahme.
+$``\Leftarrow "$ Angenommen $G$ sei nicht archimedisch. Sei $0 < g <h$ mit $g,h \in G$, dann gilt für alle $n = 0, \pm 1,\pm 2, ...$ dass $ng \leq h$ ist und damit $ng \in G$. Die von $g$ erzeugte konvexe Untergruppe $\langle g\rangle$ ist ungleich $G$ und wir erhalten somit $\langle g\rangle = \lbrace 0_G\rbrace$. Dies ist ein Widerspruch zur Annahme.
 }
 %
 %
@@ -766,7 +821,7 @@ Man sieht leicht, dass die Inklusion eine Ordnung auf $\Sigma$ ist. Wir zeigen n
 %Darauf verzichtet, weil Inklusion ja eig trivialerweise eine Ordnung ist.
 %%Sei $C \in \Sigma$, dann gilt offensichtlich $C \subseteq C$. Somit ist die Inklusionsordnung reflexiv. Sei $C, D \in \Sigma$  und sei $C \subseteq D$ und $D\subseteq C$. Dann gilt für alle $c\in C$, und $d\in D$, dass $c\in D$ und $d \in C$ liegt. Weiterhin folgt aus $c \in C$ und $g \in G$ mit $ 0 < |g| < |c|$, dass $g \in C$. Da $C\subseteq D$ ist, erhalten wir $g\in D$. Der Fall für $d \in D$ folgt analog. Damit erhalten wir die Antisymmetrie der Ordnung. \\
 %Sei $C \subseteq D$ und $D \subseteq E$ mit $C, D, E \in \Sigma$. Für alle $c \in C$ gilt wegen $C\subseteq D$, dass $c \in D$ ist. Da aufgrund der selben Argumentation alle Elemente aus $D$ in $E$ liegen, folgt $c\in E$. Die Konvexität zeigt man analog. Da $c$ beliebig ist, haben wir die Transitivität der Inklusion gezeigt.\\
-Angenommen es gäbe $C,D \in \Sigma$, sodass weder $C \subset D$ noch $D \subset C$ noch $C= D$ gilt. O.B.d.A existiert für alle $c \in C$ ein $d \in D$ mit $0 < |c| <|d|$ aufgrund der Anordnung von $G$. Wegen der Konvexität von $D$ folgt, dass $c$ in $D$ liegt. Da dadurch $C$ eine Teilmenge von $D$ wäre, ist dies ein Widerspruch zur Annahme.
+Angenommen es gäbe $C,D \in \Sigma$, sodass weder $C \subset D$ noch $D \subset C$ noch $C= D$ gilt. O.B.d.A. existiert für alle $c \in C$ ein $d \in D$ mit $0 < |c| <|d|$ aufgrund der Anordnung von $G$. Wegen der Konvexität von $D$ folgt, dass $c$ in $D$ liegt. Da dadurch $C$ eine Teilmenge von $D$ wäre, ist dies ein Widerspruch zur Annahme.
 % dann gilt nach Definition der Konvexität, dass $d \in C$ liegt. Dies ist ein Widerspruch zur Voraussetzung.
 }
 %
@@ -782,7 +837,7 @@ Die Menge der konvexen Untergruppen $\Sigma$ besitzt folgende Eigenschaften:
 \beweis{
 Zu S1: Seien $C, D \in \Sigma$. Nach Lemma \ref{untergruppeangeordnet} ist $\Sigma$ bezüglich Inklusion angeordnet.
 %konvexe Untergruppen der angeordneten abelschen Gruppe $G$ und sei $c\in C, c\notin D$. Wir nehmen ohne Beschränkung der Allgemeinheit an, $c$ ist bezüglich der Anordnung von $G$ größer als das neutrale Element $0_G$. Da $c$ nicht in $D$ liegt, kann es kein Element $d \in D$ geben, sodass $0_G < c < d$. In diesem Fall würde $c$ nach der konvexen Eigenschaft in $D$ liegen. Dies ist ein Widerspruch zur Voraussetzung und daher gilt $D \subseteq C$. 
-Sei o.B.d.A $D\subseteq C$.
+Sei o.B.d.A. $D\subseteq C$.
 Der Schnitt $C \cap D$ entspricht daher $D$. Die Untergruppe $D$ ist konvex nach Voraussetzung. Ebenso gilt $C\cup D = C$ und $C$ ist auch eine konvexe Untergruppe nach Voraussetzung. Damit folgt unmittelbar, dass sowohl der Schnitt konvexer Untergruppen als auch die Vereinigung wieder angeordnet und konvex sind.\\
 %
 %
@@ -803,7 +858,7 @@ Angenommen die Faktorgruppe $C/D$ enthält nicht nur die trivialen konvexen Unte
 %  Damit liegt $h$ nicht in $\langle g \rangle$ der von $g$ erzeugten konvexen Untergruppe. ist für jedes $c \in C/D$ die Menge $\lbrace g \in C/D: \exists_{m,n \in \Z} m\cdot a \leq g \le n\cdot a\rbrace$. Damit ist $C/D$ archimedisch und 
 %
 %
-Da $C/D$ eine angeordnete Gruppe mit der induzierten Ordnung ist, erhalten wir nach Satz \ref{archimedischNur TrivialeUGR}, dass $C/D$ archimedisch angeordnet ist.\\ 
+Da $C/D$ eine angeordnete abelsche Gruppe mit der induzierten Ordnung ist, erhalten wir nach Satz \ref{archimedischNur TrivialeUGR}, dass $C/D$ archimedisch angeordnet ist.\\ 
 Der Satz von Hölder \ref{aga} liefert nun, dass $C/D$ isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen ist.
 }
 %
@@ -816,7 +871,7 @@ Der Satz von Hölder \ref{aga} liefert nun, dass $C/D$ isomorph zu einer Untergr
 %
 %
 \section{Einblick in die Bewertungstheorie}
-Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $\left(G,+\right)$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
+Im Nachfolgenden betrachten wir eine angeordnete abelsche Gruppe $G$ und eine angeordnete Menge $\Theta$ mit $0$ als kleinstem Element. Die Ausführungen sind orientiert an dem Kapitel $\glqq$Archimedische Klassen, Bewertungen und Bedingungen für die Anordnungsfähigkeit von Gruppen$\grqq$ in \cite[S. 9 - 11]{priesscrampe83}.
 %
 %
 \begin{defn} %\cite{priesscrampe83}\label{bew}
@@ -843,7 +898,7 @@ Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedisch
 %
 %
 \begin{defn}  \label{bewKoerper} %vorher nach Priess Crampe - Problem multiplikativ jetzt nach wikipedia
-Sei $K$ ein Körper, ($G, +$) eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $ mit $g< \infty$ für alle $g \in G$. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
+Sei $K$ ein Körper, $G$ eine angeordnete abelsche Gruppe und $\overline{G}  = G \cup \lbrace\infty\rbrace $ mit $g< \infty$ für alle $g \in G$. Eine Abbildung $v\colon K \to \overline{G} $ wird als \textit{Bewertung eines Körpers} bezeichnet, wenn sie folgende Bedingungen erfüllt:
 %TODO: Quelle checken
 \begin{enumerate}
 \item[B1':] $v(a) = \infty$ genau dann, wenn $a = 0$ ist,

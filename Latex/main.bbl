@@ -13,12 +13,6 @@
 \newblock {In: }\emph{Transactions of the American Mathematical Society} 63
   (1948), May, Nr. 3, S. 548 -- 559
 
-\bibitem[Ebe13]{ebeling2013funktionentheorie}
-\textsc{Ebeling}, W.:
-\newblock \emph{Funktionentheorie, Differentialtopologie und Singularitäten:
-  Eine Einführung mit Ausblicken}.
-\newblock Vieweg+Teubner Verlag, 2013
-
 \bibitem[Fis08]{fischer08}
 \textsc{Fischer}, Gerd:
 \newblock \emph{Lehrbuch der Algebra}.
@@ -95,5 +89,11 @@
 \textsc{Taraz}, Anusch:
 \newblock \emph{Diskrete Mathematik - Grundlagen und Methoden}.
 \newblock Basel : Birkhäuser, 2012
+
+\bibitem[Xin05]{xin04}
+\textsc{Xin}, Guoce:
+\newblock A residue theorem for Malcev--Neumann series.
+\newblock {In: }\emph{Advances in Applied Mathematics} 35 (2005), Nr. 3, S. 271
+  -- 293
 
 \end{thebibliography}

@@ -1,6 +1,6 @@
 \chapter{Potenzreihenkörper}\label{chap3}
 %
-Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges Werkzeug dar. In mathematischen Gebieten wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden anhand der Folge ihrer Koeffizienten. In der algebraische Sichtweise wird grundsätzlich auf Konvergenzbetrachtungen verzichtet. Dadurch kann auf beliebigen Körpern und Ringen gearbeitet werden. \\
+Die aus der Analysis bekannten Potenzreihen stellen ein bekanntes und wichtiges mathematisches Werkzeug dar. In Gebieten wie der Kombinatorik, Automaten- und Kontrolltheorie ermöglichen sie sowohl eine kompakte Darstellung von Summenformeln als auch deren Auffindung. Potenzreihen können ebenso über den Weg der Algebra definiert werden anhand der Folge ihrer Koeffizienten. Die algebraische Sichtweise verzichtet grundsätzlich auf Konvergenzbetrachtungen. Dadurch kann auf beliebigen Körpern und Ringen gearbeitet werden. \\
 Die sogenannten formalen Potenzreihen in einer Unbekannte $z$ mit Exponenten in den natürlichen Zahlen, deren Koeffizienten in einem beliebigen Körper K liegen, bilden einen Ring $K[[z]]$. Aufbauend darauf stellen wir einen Zusammenhang zu den in der Funktionentheorie häufig verwendeten Laurentreihen her. Der Ring der formalen Potenzreihen ist ein Integritätsring. Daraus folgt, dass dieser in einen kleinsten Körper eingebettet werden kann. Dieser Quotientenkörper von $K[[z]]$ entspricht genau dem Körper $K((z))$, den die Laurentreihen formen. \\
 Potenzreihen bilden somit algebraische Strukturen, deren Beschaffenheit von den Eigenschaften der Menge der Exponenten der Reihen abhängt. Daher stellt sich die Frage, ob die formalen Potenzreihen weiter verallgemeinert werden können und welche Voraussetzungen diese Menge erfüllen muss, damit diese allgemeinen formalen Potenzreihen einen Körper ergeben. %Das Kapitel endet mit dem Beweis der zentralen Aussage, dass die Menge der formalen Potenzreihen auf einer angeordneten Gruppe über einem beliebigen Körper, unter der Voraussetzung eines wohlgeordneten Trägers, ein Körper ist.
 
@@ -33,10 +33,10 @@ Anstelle von $f(z)$ schreiben wir vereinfachend $f$, da wir die Unbestimmte imme
 Wichtige Beispiele für formale Potenzreihen aus der Analysis sind Exponential-, Sinus- und Kosinusreihe:
 \begin{eqnarray*}
 \exp(z) &=& \sum_{n=0}^{\infty} \frac{1}{n!} z^n
-= 1 + z +\frac{1}{2!} z^2 + \frac{1}{3!} z^3 + ... \\ \\
-\sin(z) &=& \sum_{n= 0}^{\infty} \frac{\left(-1\right)^n}{\left(2n + 1\right)!} z^{2n+1} = z - \frac{1}{3!} z^3 + \frac{1}{5!} z^5 - ...\\\\
+= 1 + z +\frac{1}{2!} z^2 + \frac{1}{3!} z^3 + ..., \\ \\
+\sin(z) &=& \sum_{n= 0}^{\infty} \frac{\left(-1\right)^n}{\left(2n + 1\right)!} z^{2n+1} = z - \frac{1}{3!} z^3 + \frac{1}{5!} z^5 - ...,\\\\
 \cos(z) &=& \sum_{n= 0}^{\infty} \frac{\left(-1\right)^n}{\left(2n\right)!} z^{2n}
-= 1 - \frac{1}{2!} z^2 + \frac{1}{4!} z^4 - ...
+= 1 - \frac{1}{2!} z^2 + \frac{1}{4!} z^4 - ....
 \end{eqnarray*}
 \end{bsp}
 %
@@ -64,7 +64,7 @@ Seien $f = \sum_{n=0}^\infty a_n z^n$ und $g = \sum_{n=0}^\infty b_n z^n$ zwei f
 % 
 \begin{defn}\label{MultiplikationKPotenzreihen}
 Sei $\lambda \in K$ und $f \in K\lbrack\lbrack z \rbrack\rbrack$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch:
-\[\lambda f = \lambda\cdot \left(\sum_{n=0}^{\infty}a_nz^n\right) = \sum_{n=0}^{\infty} \lambda a_nz^n \in K\lbrack\lbrack z\rbrack\rbrack. 
+\[\lambda\cdot f = \lambda\cdot \left(\sum_{n=0}^{\infty}a_nz^n\right) = \sum_{n=0}^{\infty} \lambda a_nz^n \in K\lbrack\lbrack z\rbrack\rbrack. 
 \]
 \end{defn}
 %
@@ -124,7 +124,7 @@ Für $f = \sum_{n=0}^\infty  (a_n)z^n$ ist $ -f = \sum_{n=0}^\infty  (-a_n)z^n$ 
  \\
 $\left(K\lbrack\lbrack z\rbrack\rbrack, +\right)$ ist daher eine abelsche Gruppe. 
 Die Assoziativität der Multiplikation rechnen wir nach. \\
-Seien $f, g, h \in K\lbrack\lbrack z\rbrack\rbrack$ mit $f = \sum_{n=0}^\infty a_n z^n$, $g = \sum_{n=0}^\infty b_n z^n$ und $h = \sum_{n=0}^\infty c_n z^n$. Es gilt
+Seien $f, g, h \in K\lbrack\lbrack z\rbrack\rbrack$ mit $f = \sum_{n=0}^\infty a_n z^n$, $g = \sum_{n=0}^\infty b_n z^n$ und $h = \sum_{n=0}^\infty c_n z^n$. Es gilt:
 \begin{eqnarray*}
 f \cdot \left( g\cdot h\right)& =& f \cdot\left( \sum_{n=0}^\infty \left(\sum_{j+k=n} b_j c_k\right) z^n \right)\\
 &=& \sum_{n=0}^\infty \left(\sum_{l+j+k=n} a_l b_jc_k\right) z^n \\
@@ -140,7 +140,7 @@ Das \textit{neutrale Element der Multiplikation} ist die Einsreihe $1_K$. Darunt
 %Damit folgt: $ \sum_{n=0}^\infty a_nz^n \cdot \sum_{n=0}^\infty b_nz^n = \sum_{n=0}^\infty \sum_{j+k=n} \left(a_j\cdot b_k\right)z^n = \sum_{n=0}^\infty b_nz^n. $\\ 
 Die Multiplikation ist kommutativ, denn die Addition und Multiplikation in dem Körper $K$ sind kommutativ. 
 %Es genügt somit ein Distributivgesetz nachzuweisen. 
-Es gilt
+Es gilt:
 \begin{eqnarray*}
 f\cdot \left(g + h\right) &=& f \cdot \left( \sum_{n=0}^\infty \left(b_n + c_n\right) z^n \right)\\
 &=& \sum_{n=0}^\infty \left(\sum_{j+k=n} a_j \left(b_k +c_k\right)\right) z^n\\
@@ -196,22 +196,22 @@ Wir zeigen zunächst, dass zu einer formale Potenzreihe $f = \sum_{n=0}^\infty a
 Sei $K[[z]] $ der \textit{Ring der formalen Potenzreihen}. Dann ist eine formale Potenzreihe $f = \sum\limits_{n=0}^{\infty}a_nz^n $ genau dann eine Einheit, wenn $a_0 \neq 0$ ist.\\ 
 \end{satz}
 \beweis{$``\Leftarrow "$
-Sei $f = \sum\limits_{j=0}^{\infty}a_jz^j $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{k=0}^{\infty}b_kz^k$ gibt, sodass 
-\[f\cdot g= \left(\sum_{j=0}^{\infty}a_jz^j\right) \left(\sum_{k=0}^{\infty}b_kz^k\right) = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1\] ist. \\
+Sei $f \in K[[z]]$ mit $f = \sum_{n=0}^{\infty}a_nz^n $ und es gelte $a_0 \neq 0$. Wir wollen zeigen, dass es eine Potenzreihe $g = \sum_{n=0}^{\infty}b_nz^n$ in $K[[z]]$ gibt, sodass 
+\[f\cdot g= \left(\sum_{n=0}^{\infty}a_nz^n\right) \left(\sum_{n=0}^{\infty}b_nz^n\right) = \sum_{n=0}^{\infty}\sum_{j+k=n}\left(a_jb_k\right)z^n\stackrel{\mathrm{!}}=1\] ist. \\
 Der Beweis erfolgt durch Induktion.  \\ 
-Sei $n=0$, dann ist $1 \stackrel{\mathrm{!}}= \sum_{n=0}\sum_{j+k=n}\left(a_jb_k\right)z^n = \sum\limits_{j+k=0}\left(a_jb_k\right)z^0 = a_0b_01_K = a_0b_0$.
+Sei $n=0$, dann ist $1 \stackrel{\mathrm{!}}= \sum_{n=0}\sum_{j+k=n}\left(a_jb_k\right)z^n = \sum_{j+k=0}\left(a_jb_k\right)z^0 = a_0b_01_K = a_0b_0$.
 %Für $b_0$ muss die Gleichung $a_0b_0= 1$ erfüllt sein. 
 Da $a_0$ ungleich null ist, besitzt die Gleichung $a_0b_0 = 1$ eine eindeutige Lösung, nämlich $ b_0 = a_0^{-1}.$ \\
 Wir nehmen an, dass die Koeffizienten $b_0, ..., b_{n-1}$ existieren  und eindeutig bestimmt sind. Mithilfe dieser Annahme zeigen wir die Induktionsbehauptung, dass $b_n$ existiert und eindeutig definiert ist.\\
 Für den n-ten Koeffizienten des Produkts ergibt sich $0 =  a_0b_n + a_1b_{n-1} + ... + a_{n-1}b_1 + a_nb_0$. Da $ a_0$ ungleich $0$ ist, existiert die Lösung für $ b_n $. Sie ist eindeutig bestimmt durch 
 \[b_n = -\frac{1}{a_0} \sum_{j+k = n, ~j>0~}^{} a_jb_k.\] Damit existiert ein eindeutiges Inverses zu $f$ und $f$ ist eine Einheit. \\
-$``\Rightarrow "$ Es gilt $\left(\sum_{j=0}^{\infty}a_jz^j\right) \left(\sum_{k=0}^{\infty}b_kz^k \right)= 1. $ \\
-Nach Definition \ref{definitionEinheitNullteiler} folgt, dass $\sum_{j+k=n}a_jb_k = 0 $ sein muss für $n > 0$ und damit $ a_0b_0 = 1 $ gelten muss. Somit muss $a_0$ ungleich $0$ sein.}
+$``\Rightarrow "$ Es gilt $\left(\sum_{n=0}^{\infty}a_nz^n\right) \left(\sum_{n=0}^{\infty}b_nz^n \right)= 1. $ \\
+Nach Definition \ref{definitionEinheitNullteiler} folgt, dass $\sum_{j+k=n}a_jb_k = 0 $ sein muss für $n > 0$ und damit $ a_0b_0 = 1 $ gilt. Somit muss $a_0$ ungleich $0$ sein.}
 %
 %
 Wir haben gezeigt, dass die Einheiten des Potenzreihenrings genau die Elemente sind deren konstanter Term ungleich $0$ ist. In diesem Fall können wir die inverse Potenzreihe  konstruieren.\\
 \begin{korollar}\label{inverse Potenzreihe}
-Sei $f = \sum\limits_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die Koeffizienten der inversen Potenzreihe
+Sei $f = \sum_{n=0}^{\infty}a_nz^n $ und $a_0 \neq 0$. Die Koeffizienten der inversen Potenzreihe
 $g = \sum_{k=0}^\infty b_k z^k$ sind rekursiv definiert durch
 \begin{equation*}
 b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k = n, ~j>0~} a_j b_{k}	 ~~~~~~\forall n\in \N_0.
@@ -232,14 +232,14 @@ b_0 = \frac{1}{a_0} ~~~~~ \text{ und }~~~~~ b_n = -\frac{1}{a_0}\sum\limits_{j+k
 Es sei $K = \R$ und $0\neq q \in \R$ beliebig und $f = \sum_{n=0}^{\infty}q^n z^n \in \R[[z]]$. Wir bestimmen die inverse Potenzreihe $g = \sum_{n = 0}^{\infty} b_n z^n$. Dazu wenden wir die Formel aus~\ref{inverse Potenzreihe} an:
 \begin{center}
 \begin{description}
-\item $b_0 = \frac{1}{a_0} = 1$,
-\item $b_1 = -a_1b_0 = -q$,
-\item $b_2 = -\left(a_1b_1 + a_2b_0\right) = -\left(-q^2 + q^2\right) = 0$,
+\item $b_0 = \frac{1}{q_0} = 1$,
+\item $b_1 = -q_1b_0 = -q$,
+\item $b_2 = -\left(q_1b_1 + q_2b_0\right) = -\left(-q^2 + q^2\right) = 0$,
 \item ...
-\item $b_n = -\left(a_1b_{n-1} + a_2b_{n-2} + ... + a_{n-1}b_1 + a_nb_0\right) = -\left(-q^{n-1}(-q) + q^n\right) = 0$.
+\item $b_n = -\left(q_1b_{n-1} + q_2b_{n-2} + ... + q_{n-1}b_1 + q_nb_0\right) = -\left(-q^{n-1}(-q) + q^n\right) = 0$.
 \end{description}
 \end{center}
-für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $f$ ist $g := b_0 + b_1z = 1 - qz$. \\
+Für alle $n \ge 3$ folgt induktiv, dass ebenso $b_n = 0$ gilt. Die inverse Potenzreihe zu $f$ ist $g := b_0 + b_1z = 1 - qz$. \\
 Für $q = 1$ entspricht $f$ der geometrischen Reihe. Diese konvergiert bekanntlich für $|z| < 1$ und es gilt $f = \sum_{n= 0}^{\infty} z^n = \frac{1}{1-z}$.
 %Konvergenz betrachten wir ja nicht!!! Daraus können wir schließen:
 %\[\forall z \in \R \text{ mit } |z| < |\frac{1}{q}|: A(z) = \sum_{}^{}a_n z^n = \frac{1}{1-qz}\] 
@@ -256,7 +256,7 @@ Für $q = 1$ entspricht $f$ der geometrischen Reihe. Diese konvergiert bekanntli
 %
 \subsection{Eigenschaften des Potenzreihenrings}
 
-Wir beweisen zunächst, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Wir wissen also, dass der Ring $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper, eingebettet werden kann.
+Wir beweisen zunächst, dass $K[[z]]$ ein Integritätsring und damit nullteilerfrei ist. Daraus erhalten wir die Einbettbarkeit von $K[[z]]$ in einen kleinsten Körper, den Quotientenkörper.
 Anschließend betrachten wir den Zusammenhang zwischen dem Ring der formalen Potenzreihen und der Menge der konvergenten Potenzreihen im Körper der komplexen Zahlen $\C$. 
 %evtl noch möglich zu zeigen dass c[[z]] ein nullteilerfreier Ring ist stellt sich nur die Frage ob das iwie nötig ist...
 %
@@ -295,7 +295,7 @@ Nun werden konvergente Potenzreihen über dem Körper $\C$ betrachtet.
 %
 \begin{defn}\label{konvergenz}
 Eine Potenzreihe $f = \sum_{n= 0}^{\infty}a_nz^n \in \C[[z]]$ heißt \textit{konvergent}, wenn es ein $z_0\in \C$ mit $z_0 \neq 0$ gibt, sodass $\sum_{n=0}^{\infty}a_n{z_0}^n$ als Reihe in $\C$ konvergiert. \\
-Das heißt, die Folge $\left(s_n = \sum_{k=0}^{n}a_k{z_0}^k\right)_{n\in\N_0}$ der Partialsummen ist konvergent, und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
+Das heißt, die Folge  der Partialsummen $\left(s_n\right)_{n\in\N_0}$, wobei $s_n:= \sum_{k=0}^{n}a_k{z_0}^k$ ist, konvergiert, und man schreibt für den Limes $s = \lim_{n \to \infty}s_n$:
 \begin{align}
 s= \sum_{n=0}^{\infty}a_n{z_0}^n
 \end{align}
@@ -330,27 +330,33 @@ In $\C \lbrace z\rbrace$ sind genau die Potenzreihen $\sum\limits_{n=0}^{\infty}
 \beweis{Zunächst konstruieren wir formal das Inverse, wie wir es in Satz \ref{inverse Potenzreihe} bereits durchgeführt haben. Es bleibt zu zeigen, dass diese inverse Potenzreihe konvergiert. 
 Sei eine konvergente Potenzreihe $\sum_{n= 0}^{\infty} a_nz^n \in \C\lbrace z\rbrace$ mit $a_0 \neq 0$ gegeben.
 Wir können ohne Beschränkung der Allgemeinheit annehmen, dass die Koeffizientenfolge $ (a_n)_{n \in \N_0}$ beschränkt ist, also $|a_n| \le a$, für alle $n \in  \N_0$ und $a \in \R_{\geq 0}$ gilt, denn: \\
-Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f = \sum a_n {z_0}^n $ konvergiert. 
+Nach Definition der Konvergenz formaler Potenzreihen gibt es ein $z_0 \in \C$ mit $z_0 \neq 0$, sodass die Reihe $f(z_0) := \sum_{n=0}^{\infty} a_n {z_0}^n $ konvergiert. 
 Die Folge ${(|a_n||{z_0}^n|)}_{n\in\N_0} $ ist somit eine Nullfolge und daher beschränkt.
 % Nach dem Lemma von Abel \cite[S. 46]{ebeling2013funktionentheorie}konvergiert nun die Reihe $\sum_{n= 0}^{\infty} a_n{\zeta}^n$ für $\zeta \in\C$, $|\zeta| < |z_0|$ auf $D\left(0, |z_0|\right)$. 
  Wähle $q = \frac{\zeta}{z_0}$. Wir erhalten, dass
 \[
-\overline{f} = \sum_{n=0}^{\infty}a_n{z_0}^n \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n = f
+\overline{f}(q) = \sum_{n=0}^{\infty}\left(a_n{z_0}^n\right) \left({\frac{\zeta}{z_0}}\right)^n = \sum_{n=0}^{\infty}a_n\zeta^n = f(\zeta)
 \]
 konvergent ist. Aus dieser Gleichheit folgt, dass wir die Beschränktheit der Koeffizientenfolge $ (a_n)_{n \in \N_0}$ annehmen können. Nun bestimmen wir das Inverse ähnlich wie in \ref{inverse Potenzreihe} und zeigen, dass die Koeffizientenfolge wieder beschränkt ist, woraus die Konvergenz der inversen Potenzreihe folgt.
 Wir nehmen an, dass die Schranke $a$ der Koeffizientenfolge $\left(a_n\right)_{n\in\N}$ größer 1 ist und es sei ohne Einschränkung $a_0 = 1$. Wir betrachten die Koeffizientenfolge $\left(b_n\right)_{n\in\N}$ des Inversen wie wir sie in Satz \ref{inverse Potenzreihe} konstruiert haben. Es gilt:
 \[
-b_n = - \sum_{k=1}^{n} a_k b_{n-k}. 
+b_n = - \sum_{j+k=n,~j>0} a_j b_{k}. 
 \]
 Wir zeigen, dass |$b_n$|  durch ein Vielfaches von $a^n$ beschränkt ist. Ist dies gezeigt,  können wir eine positive untere Schranke des Konvergenzradius angeben. Wir wählen $C \in R$ mit $ C> \max\lbrace\frac{a}{a-1}, 1\rbrace$. Mithilfe von Induktion beweisen wir, dass   
 \[
 |b_n| \le (aC)^n
 \]
 ist. 
-Die Ungleichung ist für $b_0$ nach Konstruktion des Inversen \ref{inverse Potenzreihe} erfüllt. \\
+Wir wissen nach Konstruktion des Inversen \ref{inverse Potenzreihe} und den oben getroffenen Annahmen, dass $b_0 =\frac{1}{a_0} = 1 < a$ ist. Damit ist die Ungleichung für $b_0$ erfüllt. \\
 Die Abschätzung gelte für $b_n$. Als Abschätzung für den Koeffizienten $b_{n+1}$ erhalten wir, dass \\
-\[|b_{n+1}| = |- \sum_{k=1}^{n+1} a_k b_{n+1-k}| \le \sum_{k=1}^{n+1} |a_k| |b_{n+1-k}| \le a\sum_{k = 1}^{n+1} \left(Ca\right)^{n+1-k} \le a~C^n~\sum_{k=1}^{n+1}a^k\]
-\[ \le a~C^n~\frac{a^{n+1}}{a-1} \le \left(a~C\right)^{n+1}\]
+\begin{eqnarray*}
+|b_{n+1}| &=& |- \sum_{j+k=n+1, ~j>0} a_j b_{k}| 
+\le \sum_{j+k=n+1, ~j>0} |a_j| |b_{k}| 
+\le a\sum_{j+k=n+1, ~j>0} \left(Ca\right)^{k} \\
+&\le& a~C^n~\sum_{k=0}^{n}a^k
+\le a~C^n~\frac{a^{n+1}}{a-1} 
+\le \left(a~C\right)^{n+1}
+\end{eqnarray*}
  gilt.}
 
 
@@ -379,7 +385,7 @@ Im nächsten Teil können wir zeigen, dass der Quotientenkörper des Ringes der 
 %
 Eine Erweiterung des Begriffs einer formalen Potenzreihe führt zu der formalen Laurentreihe. Diese unterscheidet sich bezüglich ihres Anfangsindex $n_0 \in \Z$ von den formalen Potenzreihen. \\
 %Wir bezeichnen mit $K((z))$ die Menge aller Abbildungen $f$ von $\Z$ in einen $K$, für die es ein Element $x \in \Z$ gibt, mit $f(y) = 0$ für alle $y < x $. \newline 
-Laurentreihen spielen eine wichtige Rolle in der Funktionentheorie, da sie komplexe Funktionen beschreiben, welche auf einem Kreisring holomorph sind. In dieser Arbeit wird jedoch auf Konvergenzbetrachtungen verzichtet und nur formale Laurentreihen, also Laurentreihen in einer Unbestimmten z behandelt. % Quelle:  [H74] HENRICI, Peter: Applied and computational complex analysis, Volume 1, WileyInterscience publication, New York 1974.
+Laurentreihen spielen eine wichtige Rolle in der Funktionentheorie, da sie komplexe Funktionen beschreiben, welche auf einem Kreisring holomorph sind. In dieser Arbeit verzichten wir weitgehend auf Konvergenzbetrachtungen und behandeln nur formale Laurentreihen, also Laurentreihen in einer Unbestimmten $z$. % Quelle:  [H74] HENRICI, Peter: Applied and computational complex analysis, Volume 1, WileyInterscience publication, New York 1974.
 Wir orientieren uns dabei an \cite[S. 563 - 572]{Lueneburg08}.
 %
 \begin{defn}
@@ -445,7 +451,7 @@ Zwei Laurentreihen $f, g \in K((z))$ mit $f = \sum_{n=k}^\infty a_n z^n$ und $g=
 %
 \begin{defn}\label{MultiplikationKLreihen}
 Sei $\lambda \in K$ und $f \in K\left(\left( z \right)\right)$. Das Produkt der formalen Potenzreihe $f$ mit dem Körperelement $\lambda$ ist definiert durch:
-\[\lambda f = \lambda\cdot \left(\sum_{n=m}^{\infty}a_nz^n\right) = \sum_{n=m}^{\infty} \lambda a_nz^n \in K\left(\left( z\right)\right). 
+\[\lambda\cdot f = \lambda\cdot \left(\sum_{n=m}^{\infty}a_nz^n\right) = \sum_{n=m}^{\infty} \lambda a_nz^n \in K\left(\left( z\right)\right). 
 \]
 \end{defn}
 %
@@ -455,7 +461,7 @@ Sei $\lambda \in K$ und $f \in K\left(\left( z \right)\right)$. Das Produkt der 
 Die Multiplikation erfolgt durch Faltung der Laurentreihen.
 \begin{eqnarray}
 \label{eq: multiplikationLaurent}
-\sum_{n=-k}^{\infty} a_n z^n  \cdot  \sum_{n=-m}^{\infty} b_n z^n = \sum_{n = -m-k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
+\sum_{n=k}^{\infty} a_n z^n  \cdot  \sum_{n=m}^{\infty} b_n z^n = \sum_{n = m+k}^{\infty}\sum_{i+j=n}^{}\left(a_i \cdot b_j\right) z^n. 
 \end{eqnarray}
 %
 
@@ -512,14 +518,14 @@ $\left(K((z)), +, \cdot\right)$ ist mit der definierten Addition und Multiplikat
 Wir definieren das Inverse $g \in K((z))$ rekursiv und zeigen, dass die so entstandene Laurentreihe invers zu $f$ ist. Die Konstruktion von $g$ läuft ähnlich zur Konstruktion der inversen Potenzreihe in Satz \ref{inverse Potenzreihe}. \\
 Setze $g = \sum_{n= -m}^{\infty} b_nz^n$ mit $b_n = 0_K$ für alle $n < -m$ und $b_{-m} = \frac{1}{a_m}.$ Sei $l \in \N_0$ und $b_{-m},..., b_{-m+l-1}$ bereits definiert.  Wir wählen 
 \[b_{-m+l} = - \frac{1}{a_m} \sum_{n= -m}^{-m+l-1} b_na_{l-n}.\]
-Nach Definition der Multiplikation in $K((z))$ erhalten wir somit: 
+Nach Definition der Multiplikation in $K((z))$ erhalten wir für den Koeffizienten des Produkts $ba$ bei $z^l$ somit: 
 \begin{eqnarray*}
-b_la_l &=& \sum_{n = m-m}^{\infty}\sum_{k+j=n}^{}\left(a_k \cdot b_j\right) z^n  \\
+{\left(ba\right)}_l &=& \sum_{k+j=l}^{}\left(a_k \cdot b_j\right)  \\
 &=& \sum_{n = -m}^{-m + l} b_na_{l-n}.
 \end{eqnarray*}  
 Für $l= 0 $ folgt $b_0a_0 = b_{-m}a_{m}= 1$. Es bleibt der Fall $l > 0 $ zu  berücksichtigen: 
 \begin{eqnarray*}
-b_la_l &=&
+{\left(ba\right)}_l &=&
 \sum_{n = -m}^{-m + l - 1}b_na_{l-n} + b_{-m+l}a_m \\
 &=& 0.
 \end{eqnarray*}
@@ -547,7 +553,10 @@ Betrachte die Abbildung:\\
 Die Abbildung ist wohldefiniert.
 % im Bezug auf $m$, dem kleinsten Index für den $a_m\neq0$ gilt.
  Denn ist $m\geq 0$, so entspricht der Hauptteil der Laurentreihe der Nullreihe und die Reihe liegt somit in $K[[z]]$. Für den Fall $m \le 0$ existiert ein eindeutiges $g \in K[[z]]\subseteq \textup{Quot}K[[z]]$ und wir können $\sum_{n=m}^{\infty}a_nz^n = z^{-m}g$ schreiben.\\
-Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunterscheidung nach unserer Definition der Abbildung $\Phi$ nicht explizit durchführen müssen, setzen wir  $z^{-m} = 1$ falls $m \geq 0$ ist. Durch diese Vereinfachung müssen wir den unteren Fall in \ref{eq: isomorphismusQuotientenkörper} nicht gesondert formulieren. Sei $m\leq l$:\\
+Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist.\\ 
+Damit wir die Fallunterscheidung nach unserer Definition der Abbildung $\Phi$ nicht explizit durchführen müssen, setzen wir  $z^{-m} = 1$ falls $m \geq 0$ ist. Durch diese Vereinfachung müssen wir den unteren Fall in \ref{eq: isomorphismusQuotientenkörper} nicht gesondert formulieren. 
+Sei $m\leq l$: 
+%und $m<0$ und $l<0$:\\
 \begin{eqnarray*}
 \Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
 &=& \frac{{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}}{{z^{-m}}}\\
@@ -555,6 +564,28 @@ Wir weisen nach, dass $\Phi$ ein Körperisomorphismus ist. Damit wir die Fallunt
 &=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-l}\sum_{n=l}^{\infty}b_n z^n}}{{z^{-l}}} \\
 &=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
 \end{eqnarray*}
+%
+%
+%Sei $m\leq l$ und $m<0$ und $l>0$:\\
+%\begin{eqnarray*}
+%\Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
+%&=& \frac{{z^{-m}\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}}{{z^{-m}}}\\
+%&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{z^{-m}\sum_{n=l}^{\infty}b_n z^n}}{{z^{-m}}} \\
+%&=& \frac{{z^{-m}\sum_{n=m}^{\infty}a_n z^n}}{{z^{-m}}}+ \frac{{\sum_{n=l}^{\infty}b_n z^n}}{1} \\
+%&=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
+%\end{eqnarray*}
+%%
+%Sei $m\leq l$ und $m>0$:\\
+%\begin{eqnarray*}
+%\Phi \left(\left( \sum_{n=m} a_nz^n \right)+ \left( \sum_{n=l} b_nz^n \right)\right)
+%&=& \frac{\sum_{n=m}^{\infty}\left(a_n + b_n\right) z^n}{1}\\
+%&=& \frac{{\sum_{n=m}^{\infty}a_n z^n}}{1}+ \frac{{\sum_{n=l}^{\infty}b_n z^n}}{1} \\
+%&=&\Phi \left(\sum_{n=m} a_nz^n\right) + \Phi\left(\sum_{n=l} b_nz^n \right)
+%\end{eqnarray*}
+%
+% 
+%
+%
 Damit ist $\Phi$ bezüglich der Addition ein Homomorphismus. Nun betrachten wir die Multiplikation. Aufgrund der oben getroffenen Vereinfachung gilt:
 \begin{eqnarray*}
 \Phi\left( \left( \sum_{n=m} a_nz^n \right)\cdot \left( \sum_{n=l} b_nz^n \right)\right)
@@ -612,8 +643,12 @@ Ist $\frac{1}{r} \in \lbrack 0,\infty\rbrack$ der Konvergenzradius von $\sum_{n=
 \begin{satz}
 Die Menge der konvergenten Laurentreihen $\C_L\lbrace z\rbrace$ bildet einen Körper
 \end{satz}
-\beweis{Da $\C_L\lbrace z\rbrace$ offensichtlich eine Teilmenge von $K((z))$ ist sparen wir uns das Nachrechnen der Körperaxiome. Die Nullreihe und Einsreihe sind trivialerweise konvergent und liegen somit in $\C_L\lbrace z\rbrace$.\\
-Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Dies wurde bereits in \ref{konvergentUnterring} für formale Potenzreihen gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist ebenso konvergent. Um dies zu zeigen reicht es den Nebenteil zu betrachten. Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.
+\beweis{Die Nullreihe und Einsreihe sind trivialerweise konvergent und liegen somit in $\C_L\lbrace z\rbrace$.\\ %evtl Null und Einsreihe nochmal ausschreiben??
+Wir zeigen nun, dass zu jedem Element $f\in \C_L\lbrace z\rbrace$ mit $f\neq 0$ ein Inverses existiert und ebenso konvergiert. Da $\C_L\lbrace z\rbrace$ offensichtlich eine Teilmenge von $\C((z))$ ist, liegt $f$ in $\C((z))$ und nach \ref{Laurentreihenkoerper} existiert ein eindeutiges Inverses. Wir zeigen nun, dass das Inverse ebenso konvergiert und damit in $\C_L\lbrace z\rbrace$ liegt.\\
+Wir können jede Laurentreihe $f\in \C_L\lbrace z\rbrace$ mit nichtleerem Hauptteil schreiben als $f= \sum_{n=m}^{\infty} a_nz^n = z^-m g$ wobei $g\in K\lbrack\lbrack z\rbrack\rbrack$ ist. Da $f$ konvergent ist und der Faktor $z^-m$ konstant ist, konvergiert $g$. Wir haben in Satz \ref{konvergentUnterring} bereits gezeigt, dass ein Inverses zu $g$ existiert und konvergiert. Da weiterhin ein inverses Element zu $z^-m$, nämlich $z^m$ existiert, können wir die zu $f$ inverse Laurentreihe definieren als $f^{-1} = z^mg^{-1}$ und es gilt $ff^{-1}= z^-m g z^mg^{-1} = z^-m z^m g g^{-1} = 1_K$. Da $g^{-1}$ nach \ref{konvergentUnterring} konvergiert und $z^m$ konstant ist, konvergiert $f^{-1}$ ebenso.\\
+Des weiteren bleibt zu zeigen, dass die Summe sowie das Produkt zweier konvergenter Laurentreihen wieder konvergent ist. Da der Hauptteil nach Definition einer Laurentreihe endlich ist, reicht es den Nebenteil zu betrachten. Die Konvergenz der Summe und des Produkts formaler Potenzreihen wurde bereits in \ref{konvergentUnterring} gezeigt. Die Summe zweier konvergenter Laurentreihen $f,g $ ist damit ebenso konvergent. \\
+Um die Konvergenz des Produktes zweier konvergenter Laurentreihen zu beweisen, multipliziere man diese so mit den Potenzen von z, dass man eine konvergente Potenzreihe erhält und geht wie in \ref{konvergentUnterring} vor.\\
+
 }
 %
 %
@@ -1164,154 +1199,313 @@ Dies ist ein Widerspruch zur Voraussetzung und wir erhalten die Eindeutigkeit de
 %
 %
 %
-%
-%
-%
-% 
-%
-%
-%
-%
-%
-%
-%
-%
-%
-\begin{lemma}\label{unendlicheSummeinPotenzreihenring}
-Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
-\begin{eqnarray*}
-h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
-&=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n
-\end{eqnarray*}
-ist für beliebige Körperelemente $\lambda_n$ wohldefiniert und liegt in $K\left(\left(z^{G}\right)\right)$.
+\begin{lemma}\label{VereinigungWohlgeordnet}
+Sei $U$ eine wohlgeordnete Teilmenge des Positivbereichs von $G$. Dann ist die Menge $\mathfrak{U} := \bigcup_{n\in\N} U^n$ ebenfalls wohlgeordnet.
 \end{lemma}
-\beweis{
-%
-Wir unterteilen den Beweis in zwei Blöcke. Die unendliche Reihe $h$, wie im Lemma definiert, liegt genau dann in $K\left(\left(z^{G}\right)\right)$, wenn ihr Träger wohlgeordnet ist. Der Träger supp$(h)$ ist eine Teilmenge der Vereinigung der Träger supp$(f^n)$. Es genügt nachzuweisen, dass 
-\begin{itemize}
-\item[1. ] die Vereinigung der Träger, $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet ist,
-\item[2. ] für ein festes $\gamma\in G$ gibt es nur endliche viele $n \in \N$, sodass ${\left(f^n\right)}_\gamma \neq 0$ ist. Wir schreiben ${\left(f^n\right)}_\gamma = \left({\sum_{g \in G} \sum_{g_1+ ... + g_n =g} a_{g_1}a_{g_2}... a_{g_n}z^g}\right)_\gamma =  \sum_{g_1+ ... + g_n =\gamma} a_{g_1}a_{g_2}... a_{g_n}z^\gamma $
-\end{itemize} 
 %
 %
 %
-%
-%
-%
-zu 1.: Die Bedingung ist erfüllt, wenn es keine streng monoton fallende Folge
-%Die Reihe $h$ liegt im Potenzreihenring, wenn die Vereinigung der Träger supp($f^n$) wohlgeordnet ist in der Anordnung von G. Weiterhin dürfen für jedes Element des Trägers $a \in $ supp($f$) nur endliche viele ganze Zahlen n existieren, sodass der $a$-te mit n potenzierte Koeffizient ungleich null ist. \\
-
+\beweis{Angenommen $\mathfrak{U}$ sei nicht wohlgeordnet. Dann existiert eine streng monoton fallende Folge $\left(u_n\right)_{n\in\N}$ in $\mathfrak{U}$ mit $u_i\in \textup{supp}(f^{n_i})$, die wir folgendermaßen schreiben
 \begin{equation}\label{eq: folgefürinvers}
 u_1 = g_{11} +g_{12} + ...+ g_{1{n_1}} > u_2 = g_{21} +g_{22} + ...+ g_{2n_2} > ... > u_i = g_{i1} +g_{i2} + ...+ g_{in_i} > ..., 
 \end{equation} 
 $\text{mit } g_{ik} \in \text{supp}(f)\text{, gibt.}$
 %
-%Widerspruchsannahme
-Angenommen es gäbe eine derartige Folge in $\bigcup_{n\in\N}$ supp$(f^n)$.
 %
 %
 % 
 %
 %
 %Konvexe Untergruppe eines Folgenelements wird von maximum der Summanden erzeugt:
-Da $G$ insbesondere eine angeordnete Gruppe ist, können die $g_ik \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( g_{ik}\right)$ für jedes $i\in\N$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass
-\[ \langle u_i\rangle = \langle \max_k\left( g_{ik}\right)\rangle \]
-besteht. \\
+Da $G$ insbesondere eine angeordnete Gruppe ist, können die ${g_i}_k \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( {g_i}_k\right)$, für jedes $i\in\N$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass die von $u_i$ erzeugte konvexe Untergruppe der vom maximalen Element von ${g_i}_k$ erzeugten konvexen Untergruppe entspricht. Wir bezeichnen mit $\langle u_i\rangle$ die von $u_i$ erzeugte konvexe Untergruppe. Wir wissen also, dass in $G$ offensichtlich
+\[ \langle u_i\rangle = \langle \max_k\left( {g_i}_k\right)\rangle \]
+gilt. \\
 %
 %
 %
-%Da Träger supp(F) wohlgeordnet -> gibt es kleinste erzeugt Untergruppe der Elemente des Trägers.
-Der Träger der formalen Potenzreihe $f$ ist nach Voraussetzung wohlgeordnet. Betrachte die Menge der von $a \in \text{supp}(f)$ erzeugten Untergruppe $\langle a \rangle$. Aufgrund der Wohlordnung von supp$(f)$ existiert eine kleinste Untergruppe $U$ von $G$.
-Wir wählen die Untergruppe $U$ möglichst klein.\\
-%
-%
-%
-%
-Offensichtlich gilt wegen der Konvexitätseigenschaft, 
+Die Menge $U$ ist nach Voraussetzung wohlgeordnet. Da ${g_i}_k \in U$ ist, gibt es unter den ${g_k}^*$ ein Minimum, wir nennen es $g^*$.\\
+Wir erhalten also, dass $\langle u_i\rangle = \langle {g_i}^*$ für $i=1, 2,...$ ist und $\langle g^*\rangle = \langle \min\left(u_i\right), i\in \N\rangle$. Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und wir wissen, dass es unter den Elementen ${g_i}_k$ ein kleinstes gibt. Daher gibt es ein $n\in \N$, sodass $\langle u_n\rangle
+= \langle u_{n+1}\rangle = \langle u_{n+m}\rangle = \langle g^*\rangle$ für alle $m\in \N$ ist. Das bedeutet also wir können jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ in $\mathfrak{U}$ ein Element ${g^*}'$ aus $U$ zuordnen, sodass ab einem bestimmten Index $i_0$, die von ${g^*}'$ erzeugte konvexe Untergruppe der von $\left({u'}_i\right)$ erzeugten konvexen Untergruppe entspricht. Da $U$ nach Voraussetzung wohlgeordnet ist, gibt es unter den ${g^*}'$ ein kleinstes Element. Wir nehmen an unsere Folge $\left(u_n\right)_{n\in\N}$ besitzt diese Eigenschaft bezüglich $g^*$.\\
+Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und offensichtlich gilt wegen der Konvexitätseigenschaft, dass 
 \[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ....\]
-%
+
+ist.
 %obda weil es gibt in jeder untermenge kleinste Untergruppe wieso sollte es die nicht schon von Anfang an geben.
-Wir nehmen ohne Beschränkung der Allgemeinheit an, dass
-\[\langle u_i \rangle = U ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
+Wir können somit ohne Beschränkung der Allgemeinheit annehmen, dass
+\[\langle u_i \rangle = \langle g^*\rangle ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
 
 ist.
 %
-%% Offensichtlich entspricht die von $u_i$ erzeugte konvexe Untergruppe, wir bezeichnen sie mit $\langle u_i\rangle$, der von dem größten Element $max_{k}\left({a_i}_k\right)$ konvexen Untergruppe. Die anderen Summanden von $u_i$ sind nach Definition des Maximums kleiner als dieses und liegen aufgrund der Konvexität der Untergruppe in dieser. Also gilt die Gleichheit $\langle u_i\rangle = \langle\text{max}\left({a_i}_k\right)\rangle$. 
-%Da der Träger supp($F^n$) wohlgeordnet ist, gibt es unter den erzeugten Untergruppen aller Elemente des Trägers eine kleinste Untergruppe U von $\Gamma$. Die konstruierte Folge \ref{eq: folgefürinvers} ist so gewählt, dass die kleinste Untergruppe möglichst klein ist. Damit bleibt die Ordnung der Folgenglieder auch für die davon erzeugten konvexen Untergruppen erhalten:
-%\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ...\]
+Sei $\mathfrak{g}$ das kleinste Element von $U$ das in $\langle g^*\rangle$ liegt. Wir erhalten $\langle \mathfrak{g}\rangle = \langle g^*\rangle = \langle u_1 \rangle$.\\
+%
+%
+Aufgrund der Eigenschaften von konvexen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le p\mathfrak{g}$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+\[u_i \le p\mathfrak{g}\text{ für alle }i \in \N.\] 
+%
+%
+Wir wählen diese natürliche Zahl $p$ für alle $i\in\N$ so klein wie möglich. \\
+%
+%
+Jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ mit $\langle \mathfrak{g}\rangle = \langle u_k \rangle$ %u'_k ??????
+wird auf diese Weise eine natürliche Zahl $p'$ zugeordnet. Da die natürlichen Zahlen wohlgeordnet sind existiert eine unter den dadurch auftretenden natürlichen Zahlen kleinste Zahl $\overline{p}$. Wir nehmen an, dass die streng monoton fallende Folge $\left(u_i\right)_{i\in\N}$ so gewählt ist, dass wir ihr diese kleinste Zahl $\overline{p}$ zuordnen können.
 %
 %
 %
 %
+Aufgrund der Kommutativität der Gruppe $G$ kann die Darstellung eines Folgenelements $u_i$ auf die beiden folgenden Fälle eingeschränkt werden
+%
+\[
+(*) u_i = {g_i}^* ~~~~~~~~~~~~~~~~~~~~~~~   (**)    u_i = v_i+{g_i}^*,
+\]
+%
+%
+%
+wobei $v_i \in \mathfrak{U}$ gilt. 
+Die Elemente ${g_i}^*$ sind Elemente des Trägers. Nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_i}^*$. Aus diesem Grund und da die Folge ${\left(u_i\right)}_{n\in \N}$ nach Annahme streng monoton fallend ist, existieren nur endlich viele $u_i$ der ersten Form. \\
 %
 %
 %
 %
-%Wir nehmen ohne Beschränkung der Allgemeinheit an, dass die von $u_i$, wobei $i$ natürliche Zahlen sind, erzeugten konvexen Untergruppen die gesamte Untergruppe erzeugt. 
-%Wir wählen nun aus jeder Folge von ${{a_i}_k}_i$ ein ${a_i}^*$, sodass die von diesem Element erzeugte konvexe Untergruppe den von $u_i$ erzeugten konvexen Untergruppen, eventuell unter weglassen endlich vieler Elemente der Folge, entspricht. Diese ist, wie oben ohne Beschränkung angenommen, ganz $U$. 
-%
-%
-%
-%
-%
-%Es können mehrere $g\in$supp$(f)$ existieren , kann es mehrere geben, die ganz $U$ erzeugen, allerdings aufgrund der Wohlordnung des Trägers nur ein kleinstes, nennen wir es $a^*$. Die von $a^*$, ${a_1}^*$ und $u_1$ erzeugten konvexen Untergruppen sind nach Annahme gleich. Für die erzeugenden Element gilt jedoch, da $a^*$ das kleinste erzeugende Element ist und $u_1$ den Summanden ${a_1}^*$ enthält, die folgende Ungleichung bezüglich der Anordnung von $G$: 
-%\[a^* \le {a_1}^* \le u_1\]
-%
-%
-%
-%
-%
-%
-Wir wählen nun aus jeder Folge von ${g_{ik}}_i$ ein ${g_i}^*$, sodass $\langle {g_{ik}}_i\rangle = \langle u_i \rangle =  U$ gilt.
-Es können mehrere $g\in$ supp$(f)$ existieren, die die Gleichheit $\langle g\rangle = U$ erfüllen. Aufgrund der Wohlordnung des Trägers supp$(f)$ gibt es unter diesen Elementen, bezüglich der Anordnung von $G$, ein kleinstes, wir bezeichnen es mit $g^*$. 
-Es gilt $g^* \leq {g_1}^* \leq u_1$, wobei $\langle g^*\rangle = \langle {g_1}^* \rangle = \langle u_1\rangle = U$. Die erste Ungleichung erhalten wir aufgrund der Minimalität von $g^*$. Die zweite Ungleichung folgt aus der Definition von $u_1$. \\
-%
-%
-%
-%
-%Konvexitätseigenschaft
-%
-Aufgrund der Eigenschaften von konvexen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le pg^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
-\[u_i \le pg^*\text{ für alle }i \in \N.\] 
 
 %
 %
-Aufgrund der Kommutativität der Gruppe $G$ kann die Darstellung der Folge $u_i$ auf die beiden folgenden Fälle eingeschränkt werden
+%
+Folglich muss eine streng monoton fallende Teilfolge $\left(u_{\phi(i)}\right)_{i\in\N}$ von $\left(u_i\right)_{i\in\N}$ existieren, sodass alle Elemente wie in $(**)$ dargestellt werden können. Wiederum gilt nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_{\phi(i)}}^*$. Deswegen enthält $\left({v_{\phi(i)}}\right)$ eine streng monoton fallende Teilfolge $\left({{v'}_{i}}\right) $.
+
+Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle {v'}_i\rangle = \langle g^*\rangle$ ist.
 %
 %
-%Jedes Element unserer anfangs gewählten Folge $u_i$ kann in einer der folgenden Formen geschrieben werden, wobei $v_i$ Summen aus Elementen von ${a_i}_k$ sind:
+%
+%
+%
+Wir wissen, dass $v_i = u_i - {g_i}^*$ und daher ${v}_i \le u_i$ ist. Weiterhin gilt $u_i < \overline{p}\mathfrak{g}$ und wir können eine natürliche Zahl $q = \overline{p}-1$ finden, sodass $v_i \le q\mathfrak{g}^*$ für alle $i \in \N$.\\
+Dies ist ein Widerspruch zu unserer Wahl der Folge ${\left(u_i\right)}_{i\in\N}$. Folglich ist $\mathfrak{U}$ wohlgeordnet.
+%
+%
+%
+%
+%
+
+%
+%
+%
+%
+
+}
+\begin{lemma}\label{unendlicheSummeinPotenzreihenring}
+%
+%
+Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
+%
+%
+\begin{eqnarray*}
+h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
+&=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n
+\end{eqnarray*}
+%
+%
+ist für beliebige Körperelemente $\lambda_n$ wohldefiniert und liegt in $K\left(\left(z^{G}\right)\right)$.
+\end{lemma}
+% 
+% 
+%
 %
 %
 % 
 %
-\[
-u_i = {g_i}^* ~~~~~~~~~~~~~~~~~~~~~~~       u_i = v_i+{g_i}^*,
-\]
-wobei $v_i$ bestimmte Summen von $g_{ik}$ bezeichnen. 
-Die Elemente ${g_i}^*$ sind Elemente des Trägers. Nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_i}^*$. Aus diesem Grund und da die Folge ${\left(u_i\right)}_{n\in \N}$ nach Annahme streng monoton fallend ist, existieren nur endlich viele $u_i$ der ersten Form. \\
-Folglich muss eine streng monoton fallende Folge $v_i$ existieren: ${v_i}_1 > {v_i}_2 > ... > {v_i}_j > ...$. Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle v_i\rangle = U$ ist. Wir wissen, dass $v_i \le u_i$ ist, da $u_i = v_i+{g_i}^*$ gilt. Wir können also wieder eine natürliche Zahl $q = p-1$ finden, sodass $v_i \le qa^*$ für alle $i \in \N$. \\ 
-Wir haben aus $u_i$ eine Folge konstruiert, die ebenso $\langle v_i\rangle = U$ und $v_i \leq \left(p-1\right)g^*$ erfüllt.
-Dies widerspricht jedoch der Minimalitätseigenschaft von $U$. 
-%
-%
-%Daraus folgt also, dass eine Folge $v_i$ aus $u_i$ konstruiert werden kann, was ein Widerspruch zur Wahl unserer Folge und der Minimaleigenschaft darstellt. 
-Die Vereinigung der Träger supp($F^n$) muss somit wohlgeordnet sein. \\
+\beweis{Wir zeigen als erstes die Existenz der unendlichen Summe. Für $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$ kann die unendliche Summe  $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n$ für $\lambda \in K$ definiert werden, wenn ${\left(f^n\right)}_{\gamma} = {\left(\sum_{g \in G}^{}a_g z^g\right)}^n$, wobei $a_g=0$ für alle $g<\gamma$ ist, nur für endlich viele $n\in \N$ ungleich null ist.\\
 %
 %
 %
-%
-Nach Definition \ref{wohlgeordn} und Bemerkung \ref{Teilmengewohlgeordnet} ist supp$(h)$, als Teilmenge der wohlgeordneten Menge $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet.\\
-%
+Sei $U = \text{supp}(f)$ und $\gamma$ ein Element von unendlich vielen der Mengen $U^n$ mit $n\in\N$. Wir wissen aus Lemma \ref{VereinigungWohlgeordnet}, dass $\mathfrak{U} = \bigcup_{n\in\N} U^n$ wohlgeordnet ist. \\
 %
 %
 %
+Sei $\gamma$ das kleinste der Elemente, die in unendlich vielen der Mengen $U^n$, $n\in\N$ liegen. 
+Es gibt also unendlich viele Darstellungen von $\gamma$ als Summe von Elementen aus $U$. 
+Wir ordnen diese Darstellungen nach wachsender Länge $\gamma = \gamma_{i1} +\gamma_{i2}+\gamma_{i3}+... +\gamma_{in_i}$ mit $\gamma_{ij} \in U$ und $n_1 <n_2 <...$. 
+%
+Die Folge $\gamma_{i1}$ enthält eine streng monoton wachsende Teilfolge, da $U$ wohlgeordnet ist. 
 %
 %
-zu 2.: Wir nehmen nun an, es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ unendlich viele ganze Zahlen $n \in \N$, sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
-Die Vereinigung der Träger supp($f^n$) ist wohlgeordnet. Somit existiert ein kleinstes Element $g$ der oben definierten Form. Nach Lemma \ref{unendlicheFolgeEigenschaften} enthält die Folge $\left({g_i}_1\right)_{i\in \N}$ eine streng monoton steigende Teilfolge, die wir gleich indizieren:
-\[g_{11} \le ... \le g_{i1} \le ... . \] 
-Die Folge $g_{i2} + ... + g_{in_i}$ ist mit $i \in \N$ konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die der Koeffizient der formalen Potenzreihe $\left(a^n\right)_g \neq 0$ ist.
+Wir nehmen an, dass $\gamma_{i1}$ streng monoton wachsend ist. Die Folge ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ ist also fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine unendlich streng monoton fallende Folge existiert, ist ${\gamma'}_i$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $U^n$, $n\in\N$.\\
+%
+%
+Nach Definition von $\gamma'$ und weil $\gamma_{i1} > 0_G$ ist, wissen wir, dass $\gamma' <\gamma$ ist. Dies ist ein Widerspruch zur minimalen Wahl von $\gamma$. 
+Es gilt also nur für endlich viele $n\in\N$, dass ${\left(f^n\right)}_{\gamma}\neq 0$ ist.\\
+Die unendliche Summe ist somit wohldefiniert und ihr Träger ist eine Teilmenge von $\mathfrak{U}$ und nach Lemma \ref{} wohlgeordnet. Also ist \[\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n \in K\left(\left(z^G\right)\right).\]
 }
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% 
+%
+%
+%
+%
+%
+%
+%
+%
+%TODO: AB HIER URSPRÜNGLICHER LEMMA BEWEIS_EINFACH KOMMENATR ENTFERNEN WENN ICH WIEDER HABEN WILL
+%\begin{lemma}\label{unendlicheSummeinPotenzreihenring}
+%Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
+%\begin{eqnarray*}
+%h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
+%&=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n
+%\end{eqnarray*}
+%ist für beliebige Körperelemente $\lambda_n$ wohldefiniert und liegt in $K\left(\left(z^{G}\right)\right)$.
+%\end{lemma}
+%\beweis{
+%%
+%Wir unterteilen den Beweis in zwei Blöcke. Die unendliche Reihe $h$, wie im Lemma definiert, liegt genau dann in $K\left(\left(z^{G}\right)\right)$, wenn ihr Träger wohlgeordnet ist. Der Träger supp$(h)$ ist eine Teilmenge der Vereinigung der Träger supp$(f^n)$. Es genügt nachzuweisen, dass 
+%\begin{itemize}
+%\item[1. ] die Vereinigung der Träger, $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet ist,
+%\item[2. ] für ein festes $\gamma\in G$ gibt es nur endliche viele $n \in \N$, sodass ${\left(f^n\right)}_\gamma \neq 0$ ist. Wir schreiben ${\left(f^n\right)}_\gamma = \left({\sum_{g \in G} \sum_{g_1+ ... + g_n =g} a_{g_1}a_{g_2}... a_{g_n}z^g}\right)_\gamma =  \sum_{g_1+ ... + g_n =\gamma} a_{g_1}a_{g_2}... a_{g_n}z^\gamma $
+%\end{itemize} 
+%%
+%%
+%%
+%%
+%%
+%%
+%zu 1.: Die Bedingung ist erfüllt, wenn es keine streng monoton fallende Folge
+%
+%
+%\begin{equation}\label{eq: folgefürinvers}
+%u_1 = g_{11} +g_{12} + ...+ g_{1{n_1}} > u_2 = g_{21} +g_{22} + ...+ g_{2n_2} > ... > u_i = g_{i1} +g_{i2} + ...+ g_{in_i} > ..., 
+%\end{equation} 
+%$\text{mit } g_{ik} \in \text{supp}(f)\text{, gibt.}$
+%%
+%%Widerspruchsannahme
+%Angenommen es gäbe eine derartige Folge in $\bigcup_{n\in\N}$ supp$(f^n)$.
+%%
+%%
+%% 
+%%
+%%
+%%Konvexe Untergruppe eines Folgenelements wird von maximum der Summanden erzeugt:
+%Da $G$ insbesondere eine angeordnete Gruppe ist, können die $g_ik \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( g_{ik}\right)$ für jedes $i\in\N$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass
+%\[ \langle u_i\rangle = \langle \max_k\left( g_{ik}\right)\rangle \]
+%besteht. \\
+%%
+%%
+%%
+%%Da Träger supp(F) wohlgeordnet -> gibt es kleinste erzeugt Untergruppe der Elemente des Trägers.
+%Der Träger der formalen Potenzreihe $f$ ist nach Voraussetzung wohlgeordnet. Betrachte die Menge der von $a \in \text{supp}(f)$ erzeugten Untergruppe $\langle a \rangle$. Aufgrund der Wohlordnung von supp$(f)$ existiert eine kleinste Untergruppe $U$ von $G$.
+%Wir wählen die Untergruppe $U$ möglichst klein.\\
+%%
+%%
+%%
+%%
+%Offensichtlich gilt wegen der Konvexitätseigenschaft, 
+%\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ....\]
+%%
+%%obda weil es gibt in jeder untermenge kleinste Untergruppe wieso sollte es die nicht schon von Anfang an geben.
+%Wir nehmen ohne Beschränkung der Allgemeinheit an, dass
+%\[\langle u_i \rangle = U ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
+%
+%ist.
+%%
+%%% Offensichtlich entspricht die von $u_i$ erzeugte konvexe Untergruppe, wir bezeichnen sie mit $\langle u_i\rangle$, der von dem größten Element $max_{k}\left({a_i}_k\right)$ konvexen Untergruppe. Die anderen Summanden von $u_i$ sind nach Definition des Maximums kleiner als dieses und liegen aufgrund der Konvexität der Untergruppe in dieser. Also gilt die Gleichheit $\langle u_i\rangle = \langle\text{max}\left({a_i}_k\right)\rangle$. 
+%%Da der Träger supp($F^n$) wohlgeordnet ist, gibt es unter den erzeugten Untergruppen aller Elemente des Trägers eine kleinste Untergruppe U von $\Gamma$. Die konstruierte Folge \ref{eq: folgefürinvers} ist so gewählt, dass die kleinste Untergruppe möglichst klein ist. Damit bleibt die Ordnung der Folgenglieder auch für die davon erzeugten konvexen Untergruppen erhalten:
+%%\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ...\]
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%Wir nehmen ohne Beschränkung der Allgemeinheit an, dass die von $u_i$, wobei $i$ natürliche Zahlen sind, erzeugten konvexen Untergruppen die gesamte Untergruppe erzeugt. 
+%%Wir wählen nun aus jeder Folge von ${{a_i}_k}_i$ ein ${a_i}^*$, sodass die von diesem Element erzeugte konvexe Untergruppe den von $u_i$ erzeugten konvexen Untergruppen, eventuell unter weglassen endlich vieler Elemente der Folge, entspricht. Diese ist, wie oben ohne Beschränkung angenommen, ganz $U$. 
+%%
+%%
+%%
+%%
+%%
+%%Es können mehrere $g\in$supp$(f)$ existieren , kann es mehrere geben, die ganz $U$ erzeugen, allerdings aufgrund der Wohlordnung des Trägers nur ein kleinstes, nennen wir es $a^*$. Die von $a^*$, ${a_1}^*$ und $u_1$ erzeugten konvexen Untergruppen sind nach Annahme gleich. Für die erzeugenden Element gilt jedoch, da $a^*$ das kleinste erzeugende Element ist und $u_1$ den Summanden ${a_1}^*$ enthält, die folgende Ungleichung bezüglich der Anordnung von $G$: 
+%%\[a^* \le {a_1}^* \le u_1\]
+%%
+%%
+%%
+%%
+%%
+%%
+%Wir wählen nun aus jeder Folge von ${g_{ik}}_i$ ein ${g_i}^*$, sodass $\langle {g_{ik}}_i\rangle = \langle u_i \rangle =  U$ gilt.
+%Es können mehrere $g\in$ supp$(f)$ existieren, die die Gleichheit $\langle g\rangle = U$ erfüllen. Aufgrund der Wohlordnung des Trägers supp$(f)$ gibt es unter diesen Elementen, bezüglich der Anordnung von $G$, ein kleinstes, wir bezeichnen es mit $g^*$. 
+%Es gilt $g^* \leq {g_1}^* \leq u_1$, wobei $\langle g^*\rangle = \langle {g_1}^* \rangle = \langle u_1\rangle = U$. Die erste Ungleichung erhalten wir aufgrund der Minimalität von $g^*$. Die zweite Ungleichung folgt aus der Definition von $u_1$. \\
+%%
+%%
+%%
+%%
+%%Konvexitätseigenschaft
+%%
+%Aufgrund der Eigenschaften von konvexen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le pg^*$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+%\[u_i \le pg^*\text{ für alle }i \in \N.\] 
+%
+%%
+%%
+%Aufgrund der Kommutativität der Gruppe $G$ kann die Darstellung der Folge $u_i$ auf die beiden folgenden Fälle eingeschränkt werden
+%%
+%%
+%%Jedes Element unserer anfangs gewählten Folge $u_i$ kann in einer der folgenden Formen geschrieben werden, wobei $v_i$ Summen aus Elementen von ${a_i}_k$ sind:
+%%
+%%
+%% 
+%%
+%\[
+%u_i = {g_i}^* ~~~~~~~~~~~~~~~~~~~~~~~       u_i = v_i+{g_i}^*,
+%\]
+%wobei $v_i$ bestimmte Summen von $g_{ik}$ bezeichnen. 
+%Die Elemente ${g_i}^*$ sind Elemente des Trägers. Nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_i}^*$. Aus diesem Grund und da die Folge ${\left(u_i\right)}_{n\in \N}$ nach Annahme streng monoton fallend ist, existieren nur endlich viele $u_i$ der ersten Form. \\
+%Folglich muss eine streng monoton fallende Folge $v_i$ existieren: ${v_i}_1 > {v_i}_2 > ... > {v_i}_j > ...$. Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle v_i\rangle = U$ ist. Wir wissen, dass $v_i \le u_i$ ist, da $u_i = v_i+{g_i}^*$ gilt. Wir können also wieder eine natürliche Zahl $q = p-1$ finden, sodass $v_i \le qa^*$ für alle $i \in \N$. \\ 
+%Wir haben aus $u_i$ eine Folge konstruiert, die ebenso $\langle v_i\rangle = U$ und $v_i \leq \left(p-1\right)g^*$ erfüllt.
+%Dies widerspricht jedoch der Minimalitätseigenschaft von $U$. 
+%%
+%%
+%%Daraus folgt also, dass eine Folge $v_i$ aus $u_i$ konstruiert werden kann, was ein Widerspruch zur Wahl unserer Folge und der Minimaleigenschaft darstellt. 
+%Die Vereinigung der Träger supp($F^n$) muss somit wohlgeordnet sein. \\
+%%
+%%
+%%
+%%
+%Nach Definition \ref{wohlgeordn} und Bemerkung \ref{Teilmengewohlgeordnet} ist supp$(h)$, als Teilmenge der wohlgeordneten Menge $\bigcup_{n\in\N}$supp$(f^n)$, wohlgeordnet.\\
+%%
+%%
+%%
+%%
+%%
+%%
+%zu 2.: Wir nehmen nun an, es existieren für jedes festgehaltene Element der angeordneten abelschen Gruppe $G$ unendlich viele ganze Zahlen $n \in \N$, sodass \[g = g_{i1} +g_{i2} + ... + g_{in_i},~ i \in \N,~\text{ mit } n_1 < n_2 < ... < n_i < ...\text{ und } {g_i}_k \in \text{supp}(f).\]
+%Die Vereinigung der Träger supp($f^n$) ist wohlgeordnet. Somit existiert ein kleinstes Element $g$ der oben definierten Form. Nach Lemma \ref{unendlicheFolgeEigenschaften} enthält die Folge $\left({g_i}_1\right)_{i\in \N}$ eine streng monoton steigende Teilfolge, die wir gleich indizieren:
+%\[g_{11} \le ... \le g_{i1} \le ... . \] 
+%Die Folge $g_{i2} + ... + g_{in_i}$ ist mit $i \in \N$ konstant. Damit muss die durch $\left(g_i\right)'  = g_{i2} + ... + g_{in_i},~ i \in \N$ bestimmte Folge nicht wachsend und aufgrund der Wohlordnung der Vereinigung der Träger somit konstant. Es gibt also ein $j \in \N$ mit $\left(g_{j+m}\right)' = \left(g_j\right)' = g'$ für alle $m \in \N$. Damit liegt $g'$ in der Vereinigung der Träger supp($F^n$), für unendlich viele $n\in \N$. Weiterhin gilt $g' < g$, da $g' = -\left({g_i}_1\right) + g$ und ${g_i}_1 >1_G$. Dies ist ein Widerspruch zur Wahl von $g$. Damit existieren nur endlich viele ganze Zahlen $n$ für die der Koeffizient der formalen Potenzreihe $\left(a^n\right)_g \neq 0$ ist.
+%}
 %
 %
 %
