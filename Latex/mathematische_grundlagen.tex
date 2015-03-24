@@ -124,18 +124,18 @@ Nach Voraussetzung ist $R$ ein Integritätsbereich. Da $v$ ungleich null ist, fo
 Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
 \[\left(r,u\right)+ \left(s,v\right) = \left(rv + su, uv\right),\]
 \[\left(r,u\right)\left(s,v\right) = \left(rs, uv\right)\] 
-Wir setzen \textup{Quot}$(R) = \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$. Nach Definition gilt für $\left(r_1, u_1\right), \left(r_2, u_2\right) \in \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$:
+Wir setzen \textup{Quot}$(R) := \left(R\times R\setminus\lbrace 0\rbrace , \sim\right)$ und bezeichnen die Äquivalenzklasse von $(r,u) $ mit $\frac{r}{u}$. Nach Definition gilt für $\left(r_1, u_1\right), \left(r_2, u_2\right) \in \textup{Quot}(R)$:
 \[ \frac{r_1}{u_1} = \frac{r_2}{u_2} \text{ genau dann, wenn } r_1u_2 = u_1r_2 \text{ ist.}
 \]
 Wir definieren die Addition und Multiplikation der Äquivalenzklassen folgendermaßen: 
 \[\frac{r}{u} + \frac{s}{v} = \frac{rv + su}{uv}\]
-\[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}\]
-\textup{Quot}$\left(R, +, \cdot\right)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
+\[\frac{r}{u}\frac{s}{v} = \frac{rs}{uv}.\]
+Die Menge $\left(\textup{Quot}\left(R\right), +, \cdot\right)$ ist ein Körper, wir nennen ihn den \textit{Quotientenkörper} von $R$.
 \end{satz}
 \beweis{ Wir zeigen die Wohldefiniertheit der Verknüpfungen. Sei $\left({r_1},{u_1}\right), \left({r_2},{u_2}\right), \left({s_1},{v_1}\right), \left({s_2},{v_2}\right) \in R\times R\setminus\lbrace 0\rbrace$ und $\frac{r_1}{u_1}=\frac{r_2}{u_2}$ und $\frac{s_1}{v_1} = \frac{s_2}{v_2}$. Nach Definition gilt $r_1u_2 = u_1r_2$ und $s_1v_2 = v_1s_2$. 
 %
 %
-Wir wollen zeigen, dass $\frac{r_1}{u_1} +\frac{s_1}{v_1} = \frac{r_2}{u_2}+\frac{s_2}{v_2}$ ist. Wir erhalten
+Wir wollen zeigen, dass $\frac{r_1}{u_1} +\frac{s_1}{v_1} \stackrel{\mathrm{!}}= \frac{r_2}{u_2}+\frac{s_2}{v_2}$ ist. Wir erhalten
 %
 \begin{eqnarray*}
   u_1  v_1\left(r_2v_2 + u_2s_2\right) &=& u_1v_1r_2v_2 + u_1v_1u_2s_2 = u_1r_2v_1v_2 + u_1u_2v_1s_2 \\
@@ -201,9 +201,9 @@ Die Abbildung $\Phi$ ist ein Homomorphismus, denn es gilt:
 \begin{eqnarray*}
 \Phi\left(\frac{a}{b} + \frac{c}{d}\right) &=& \Phi\left(\frac{ad + bc}{bd}\right)
  = \varphi(ad + bc){\left(\varphi(bd)\right)}^{-1} \\
-&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(d)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
-&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(d)\right){\left(\varphi(b)\right)}^{-1}{\left(\varphi(d)\right)}^{-1} \\
-&=& \varphi(a){\varphi(b)}^{-1} + \varphi(c){\varphi(d)}^{-1} 
+&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(c)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
+&=& \left(\varphi(a)\varphi(d) + \varphi(b)\varphi(c)\right){\left(\varphi(b)\right)}^{-1}{\left(\varphi(d)\right)}^{-1} \\
+&=& \varphi(a){\left(\varphi(b)\right)}^{-1} + \varphi(c){\left(\varphi(d)\right)}^{-1} 
 = \Phi\left(\frac{a}{b}\right) + \Phi\left(\frac{c}{d}\right).
 \end{eqnarray*}
 
@@ -211,12 +211,12 @@ Die Abbildung $\Phi$ ist ebenso multiplikativ:\\
 \begin{eqnarray*}
 \Phi\left(\frac{a}{b} \frac{c}{d}\right) &=& \Phi\left(\frac{ac}{bd}\right)
  = \varphi(ac){\left(\varphi(bd)\right)}^{-1} \\
-&=&\left(\varphi(a)\varphi(d)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
+&=&\left(\varphi(a)\varphi(c)\right){\left(\varphi(b)\varphi(d)\right)}^{-1}\\
 &=& \varphi(a){\varphi(b)}^{-1} \varphi(c){\varphi(d)}^{-1} \\
 &=& \Phi\left(\frac{a}{b}\right) \Phi\left(\frac{c}{d}\right).
 \end{eqnarray*}
-Weiter gilt $\Phi(1_R) = \Phi\left(\frac{1_R}{1_R}\right) = \varphi(1_R){\varphi(1)}^{-1} = 1_K$.\\
-Sei $a\in R$, so erhalten wir $\Phi\left(\frac{a}{1}\right)=\varphi(a){\varphi(1)}^{-1} = \varphi(a)$.\\
+Weiter gilt $\Phi(1_R) = \Phi\left(\frac{1_R}{1_R}\right) = \varphi(1_R){\varphi(1_R)}^{-1} = 1_K$.\\
+Sei $a\in R$, so erhalten wir $\Phi\left(\frac{a}{1}\right)=\varphi(a){\varphi(1_R)}^{-1} = \varphi(a)$.\\
 Der Körperhomomorphismus ist eindeutig, denn angenommen es gäbe $\Phi_1, \Phi_2$ Körperhomomorphismen mit ${\Phi_1}_{|R} = {\Phi_2}_{|R} = \varphi$. Sei $\frac{a}{b}\in \text{Quot}(R)$ mit $a\in R, b\in R\setminus\lbrace0\rbrace$. Dann gilt:
 $
 \Phi_1\left(\frac{a}{b}\right) = \Phi_1\left(ab^{-1}\right) = \Phi(a){\left(\Phi(b)\right)}^{-1} = \varphi(a){\left(\varphi(b)\right)}^{-1} = \Phi_2\left(a\right){\left(\Phi_2(b)\right)}^{-1} = \Phi\left(\frac{a}{b}\right).
@@ -230,7 +230,7 @@ $
 Sei $K$ ein Körper. Eine \textit{K-Algebra} ist ein $K$-Vektorraum $V$ auf dem zusätzlich eine Multiplikation $\left(v,w\right) \mapsto v\cdot w$ definiert ist und für den gilt:
 \begin{itemize}
 \item[(a)] $\left(V, +, \cdot\right)$ ist ein Ring mit Einselement.
-\item[(b)] Für $v,w \in V$ und $\lambda \in K$ gilt $\lambda\left(vw\right) = \left(\lambda v\right)w = v\left(\lambda w\right)$
+\item[(b)] Für $v,w \in V$ und $\lambda \in K$ gilt $\lambda\cdot \left(v\cdot w\right) = \left(\lambda \cdot v\right)\cdot w = v\cdot \left(\lambda\cdot w\right)$
 \end{itemize}
 \end{defn}
 %
@@ -338,7 +338,7 @@ Wir nennen $P$ den \textit{Positivbereich} von $G$.
 
 %
 \end{folg}
-\beweis{$(i)\Rightarrow(ii)$ Wir betrachten die Menge $P = \lbrace x \in G | x \geq 0_G \rbrace$. $P$ ist eine Teilmenge von $G$ und man sieht sofort, dass $P$ die Axiome P1-P3 erfüllt.\\
+\beweis{$(i)\Rightarrow(ii)$ Wir betrachten die Menge $P = \lbrace x \in G ~|~ x \geq 0_G \rbrace$. $P$ ist eine Teilmenge von $G$ und man sieht sofort, dass $P$ die Axiome P1-P3 erfüllt.\\
 $(ii)\Rightarrow (i)$ Wir wissen, dass die Menge $P$ der Positivbereich von $G$ ist. Wir definieren für $a,b \in G$, dass $b\leq a$ gilt, genau dann, wenn $a-b\in P$. Dies liefert uns nach den Eigenschaften der Menge $P$ eine Anordnung auf $G$.
 %TODO: REICHT DAS??
 }
@@ -390,8 +390,8 @@ Die Relation $``\preceq "$ ist eine Wohlordnung auf $\Z$ und wir erhalten 0$  \p
 %Teil 1: Definition angeordnete abelsche Gruppe und Beispiele (Natürlichen Zahlen, usw.)
 %Teil 2: Zusammenhang angeordnete abelsche Gruppe mit Wohlordnung
 %Teil 3: Satz von Hölder
-In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des verallgemeinerten Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder. Der Satz besagt, dass archimedisch angeordnete Gruppen in die additive Gruppe von $\R$ eingebettet werden können. \\
-Nachdem wir kurz auf die angeordnete Menge konvexer Untergruppen eingehen, geben wir einen kurzen Ausblick auf die Bewertungstheorie.
+In diesem Kapitel fassen wir jene Begriffe und Bezeichnungen zusammen, die zur Betrachtung des verallgemeinerten Potenzreihenkörpers benötigt werden. Nach einer Einführung in die Theorie angeordneter abelscher Gruppen beschäftigen wir uns mit deren Wohlordnung, eine Eigenschaft, die für die Konstruktion des Potenzreihenkörpers unabdingbar ist. Mithilfe der Archimedizität führen wir eine spezielle Art der Anordnung von Gruppen ein. Daran schließt die zentrale Aussage des Kapitels an: der Satz von Hölder. Der Satz besagt, dass archimedische abelsche angeordnete Gruppen in die additive Gruppe von $\R$ eingebettet werden können. \\
+Nachdem wir kurz auf die angeordnete Menge konvexer Untergruppen einer angeordneten abelschen Gruppe eingehen, geben wir einen kurzen Ausblick auf die Bewertungstheorie.
 %TODO: vielleicht zu ausufernd? Die Theorie der angeordneten Strukturen, in unserem Fall ausschließlich Gruppen, liefert wichtige Erkenntnisse zur späteren Konstruktion des Körpers von formalen Potenzreihen. Die Funktionen, die durch Potenzreihen dargestellt werden, sind nicht mehr nur auf den natürlichen Zahlen, sondern jeder angeordneten abelschen Gruppe definierbar, wobei auf die Wohlordnung nicht verzichtet werden kann. 
 Die nachfolgenden Ausführungen sind angelehnt an \cite[S. 21 - 28]{fuchs66} und \cite[S. 1 -  4]{priesscrampe83}.
 %
@@ -468,7 +468,7 @@ Total geordnete endliche Mengen sind wohlgeordnet.
 %
 Betrachte nun die Menge aller wohlgeordneten Teilmengen $W_A$ einer total geordneten Menge $A$, die nicht zwangsläufig wohlgeordnet ist. 
 \begin{lemma}\label{wohlgeordnvereinigung} %\cite{xin04}
-Sei $U_{n} \in W_A$ für alle $n\in \N$, dann gilt $\bigcap_{n \in \N} U_n \in W_A$, und für $U_1, U_2 \in W_A$ gilt $U_1\cup U_2 \in W_A$.
+Sei $U_{n} \in W_A$ für alle $n\in \N$, dann gilt $\bigcap_{n \in \N} U_n \in W_A$, und für $U_1, U_2 \in W_A$ gilt $U_1~\cup ~U_2 \in W_A$.
 \end{lemma}
 \beweis{Die erste Aussage ist trivial. Zum Beweis der zweiten Behauptung führen wir einen Widerspruchsbeweis. Angenommen $U_1\cup U_2$ sei nicht wohlgeordnet, dann gibt es nach \ref{wohlgeordnetabnehmendeFolge} eine streng monoton fallende Folge $u_1 > u_2 > ...$ in $U_1\cup U_2$.\\
 Betrachten wir alle Elemente der Teilmenge $U_1$. Wir können diese, da $U_1$ total geordnet ist, als Folge $u_{i_1} > u_{i_2}...$ schreiben. Aufgrund der Wohlordnung von $U_1$ ist die so erhaltene fallende Folge endlich. Die selbe Argumentation wählen wir für $U_2$ und erhalten die endliche fallende Folge $u_{j_1} > u_{j_2}...$. Aber jedes Element der streng monoton fallenden Folge $u_1 > u_2 > ...$ ist in einer der beiden endlichen Folgen enthalten. Widerspruch!}
@@ -490,10 +490,11 @@ Wir betrachten eine total geordnete Menge $A$. Jede Folge $\left(a_n\right)_{n \
 \item[(3)] $\left(a_n\right)_{n \in \N}$ enthält eine streng monoton fallende Teilfolge.
 \end{enumerate}
 \beweis{
-Angenommen die Folge $\left(a_n\right)_{n \in \N}$ erfüllt weder die Bedingung (2) noch (3). Wir wollen zeigen, dass sie eine streng monoton wachsende Teilfolge enthält.\\
+Die Folge $\left(a_n\right)_{n \in \N}$ erfülle weder die Bedingung (2) noch (3). Wir wollen zeigen, dass sie eine streng monoton wachsende Teilfolge enthält.\\
 Da die Folge nach Voraussetzung keine streng monoton fallende Teilfolge enthält, gibt es ein kleinstes Element $a_{i_1}$. Andernfalls ließe sich eine streng monoton fallende Teilfolge konstruieren. Es werden alle Folgenglieder $a_n$ mit $a_n = a_{i_1}$ aus $\left( a_n\right)_{n\ge 1 }$entfernt. Die Folge bleibt unendlich, da es nur endlich viele Folgenelemente nach Voraussetzung gibt, die gleich $a_{i_1}$ sind.
 %, wenn wir die ersten Folgenglieder $i_1$  entfernen
-In der daraus entstandenen Folge ist jedes Element größer als $a_{i_1}$. Sie enthält wiederum keine streng monoton fallende oder konstante Teilfolge. In der so entstandenen Folge ist jedes enthaltene Element echt größer als $a_{i1}$. \\
+In der daraus entstandenen Folge ist jedes Element größer als $a_{i_1}$. Sie enthält wiederum keine streng monoton fallende oder konstante Teilfolge. 
+%In der so entstandenen Folge ist jedes enthaltene Element echt größer als $a_{i1}$. \\
 Wir wiederholen das durchgeführte Verfahren und konstruieren so die streng monoton wachsende Teilfolge $a_{i_1} < a_{i_2} <...$.\\
 }
 %
@@ -581,8 +582,8 @@ In Zeichen schreiben wir $a \ll b$.
 \end{defn}
 %
 \begin{defn}\label{aae}
-Die Elemente $a,b \in G$ werden als \textit{archimedisch äquivalent} bezeichnet, wenn natürliche Zahlen $m$ und $n$ existieren, so dass: 
-\[|a| < m|b| \text{ und } |b| < n|a|.\]
+Die Elemente $a,b \in G$ werden als \textit{archimedisch äquivalent} bezeichnet, wenn natürliche Zahlen $m$ und $n$ existieren, so dass 
+\[|a| < m|b| \text{ und } |b| < n|a|\text{ ist}.\]
 In diesem Fall schreiben wir $ a \sim b $. 
 \end{defn}
 %
@@ -654,7 +655,7 @@ Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Kla
 %
 %
 \section{Der Satz von Hölder}
-In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede archimedisch angeordnete Gruppe bis auf Isomorphie einer Untergruppe der angeordneten additiven Gruppe der reellen Zahlen entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (\cite{hoelder1901}) zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890 \cite[S. 578]{Lueneburg08}.\\
+In diesem Abschnitt werden wir einen sehr wichtigen Satz der Theorie angeordneter Strukturen vorstellen, den \textit{Satz von Hölder}. Dieser Satz besagt, dass jede abelsche archimedische angeordnete Gruppe bis auf Isomorphie einer Untergruppe der angeordneten additiven Gruppe der reellen Zahlen entspricht. Zwar wird der Beweis dieser Aussage in der verwendeten Literatur Otto Hölder (\cite{hoelder1901}) zugeschrieben, die grundlegenden Ideen dazu lieferte jedoch bereits Bettazi in seinem Werk $\glqq$Teoria delle grandezze$\grqq$, 1890 \cite[S. 578]{Lueneburg08}.\\
 Wir orientieren uns im Folgenden an \cite{hoelder1901} und \cite{priesscrampe83}. 
 \begin{satz}\label{aga} %\cite{hoelder1901}
 Eine angeordnete abelsche Gruppe ist genau dann archimedisch, wenn sie zu einer mit der natürlichen Ordnung versehenen Untergruppe der additiven Gruppe der reellen Zahlen o-isomorph ist.
@@ -750,7 +751,7 @@ Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gru
 %
 \beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Damit folgt, dass $n \cdot g_1 > m\cdot g_2$ und $\phi(n\cdot g_1)< \phi(m\cdot g_2)$ ist. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
 Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}= \frac{g_1}{g_2}$. Wir erhalten, da $g_1, g_2$ beliebig gewählt sind, auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
-Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{-\phi(g)}{-g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  := \frac{\Phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
+Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{-\phi(g)}{-g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  := \frac{\phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
 }
 %
 %
@@ -769,7 +770,7 @@ Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1
 %
 %
 %
-Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Werk $\glqq$Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und einer Untergruppe der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
+Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Werk $\glqq$ Archimedisch geordnete Ringe$\grqq$. Er setzte jedoch einen o-Homomorphismus zwischen zwei Untergruppen der additiven angeordneten Gruppe der reellen Zahlen voraus, ebenso wie Fuchs und Prieß-Crampe, die den Satz in ihre Arbeiten mitaufnahmen.  Der Satz \ref{homomorphismus nach R} impliziert weiterhin die o-Isomorphie zwischen der Gruppe der ordnungserhaltenden Automorphismen der archimedischen Gruppe und einer Untergruppe der multiplikativen Gruppe der positiven reellen Zahlen. \cite{priesscrampe83}
 %
 %
 %
@@ -782,7 +783,7 @@ Sei $G$ eine angeordnete abelsche Gruppe.
 Wir untersuchen nun die, bezüglich der Inklusion linear angeordnete Menge konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
 
 \begin{defn}\label{konvexUGR} %\cite{priesscrampe69}
-Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $a \in U$ und $x \in G$ mit $0 < |x| < |a|$ folgt, dass $x \in U$ ist.\\
+Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $u \in U$ und $g \in G$ mit $0 < |x| < |u|$ folgt, dass $g \in U$ ist.\\
 \end{defn}
 %
 %
@@ -886,7 +887,11 @@ Sei $G$ eine angeordnete abelsche Gruppe. Die surjektive Funktion $v\colon G \ri
 \end{defn}
 Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
  Zwei Bewertungen $\upsilon, \text{ } \upsilon' $ auf $G$ mit den Wertemengen $\Theta , \Theta' $ sind äquivalent, wenn es eine ordnungstreue bijektive Abbildung $\sigma \colon \Theta \text{ } \rightarrow \text{ } \Theta' $ gibt, so dass $ \sigma \circ \upsilon = \upsilon  $ ist.\\
-Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedische Klasse, in der das Element $a\in G$ liegt  mit $[a]$. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. Die Abbildung $G \to [G], a \mapsto [a]$, ist eine Bewertung und wird als \textit{natürliche Bewertung} bezeichnet (dabei ist $[0]$ das kleinste Element). %\cite{priesscrampe83}
+
+%Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedische Klasse, in der das Element $a\in G$ liegt  mit $[a]$. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. 
+\begin{bsp}
+Die Abbildung $G \to [G], a \mapsto [a]$, ist eine Bewertung und wird als \textit{natürliche Bewertung} bezeichnet (dabei ist $[0]$ das kleinste Element). %\cite{priesscrampe83}
+\end{bsp}
 %
 %
 %

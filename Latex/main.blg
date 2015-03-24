@@ -1,18 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: alphadin.bst
 Database file #1: literaturverzeichnis.bib
-I was expecting a `,' or a `}'---line 78 of file literaturverzeichnis.bib
+I was expecting a `,' or a `}'---line 79 of file literaturverzeichnis.bib
  : 
- : month = "Juli",
+ : month = "Juli"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "malzew48"
-Warning--I didn't find a database entry for "hahn07"
 Warning--empty chapter in hoelder1901
 You can't pop an empty literal stack for entry hoelder1901
 while executing---line 2205 of file alphadin.bst
 Warning--empty chapter in Lueneburg08
 You can't pop an empty literal stack for entry Lueneburg08
 while executing---line 2205 of file alphadin.bst
-Warning--there's no year in neumann49
 (There were 3 error messages)

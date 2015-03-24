@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt,twoside=false]{scrbook}
 
-\usepackage[left=2.7cm,right=2.7cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+\usepackage[left=3cm,right=2.7cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
 \usepackage[T1]{fontenc}        %Umlaute und Akzente
 %\usepackage[latin1]{inputenc}
 \usepackage[utf8x]{inputenc}    %UTF-8
@@ -24,7 +24,7 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows,calc} 
 \usepackage[pdftex]{hyperref}    %Hyperlinks ermöglichen
-\definecolor{linkcolor}{rgb}{0, 0, 0.7}
+\definecolor{linkcolor}{gray}{0.39}
 \hypersetup{
   pdfstartview = FitH,
   breaklinks = true,
@@ -91,7 +91,7 @@
 
 \begin{document}
 
-
+\renewcommand\contentsname{Inhaltsverzeichnis\vspace{-2ex}}
 
 \renewcommand{\labelenumi}{(\alph{enumi})}
 %\clubpenalty = 10000
@@ -102,14 +102,14 @@
 \input{deckblatt.tex}
 %\maketitle
 %
-\addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}}
+%\addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}}
 \tableofcontents
 
 %
-\nocite{fuchs66}\nocite{priesscrampe83}\nocite{priesscrampe69}\nocite{rainer08}\nocite{hulek12}\nocite{carruth48}\nocite{fischer08}\nocite{priesscrampe69}\nocite{taraz12}\nocite{ribenboi}\nocite{malzew48}\nocite{janich99}
+\nocite{fuchs66}\nocite{priesscrampe83}\nocite{priesscrampe69}\nocite{rainer08}\nocite{hulek12}\nocite{carruth48}\nocite{fischer08}\nocite{priesscrampe69}\nocite{taraz12}\nocite{ribenboi}\nocite{malzew48}\nocite{janich99}\nocite{neumann49}\nocite{ebeling2013funktionentheorie}\nocite{pickert55}
 
 \input{einleitung}
-\input{notation}
+\input{notation.tex}
 %
 \input{mathematische_grundlagen}
 %
