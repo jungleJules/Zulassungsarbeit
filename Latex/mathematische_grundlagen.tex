@@ -161,7 +161,7 @@ Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben defini
 %\end{equation*}
 Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität sind leicht zu überprüfen. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
 Weiter ist (Quot(R), $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{u}{r}$ das inverse Element ist. \\
-Das Distributivgesetz kann leicht nachgerechnet werden. \\
+Das Distributivgesetz kann leicht nachgerechnet werden.\\
 Somit ist der Körper (Quot(R), +, $\cdot$) konstruiert.
 %Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. %\textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
 }
@@ -609,10 +609,17 @@ Des Weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \item[(v)] $\sim$ ist eine Äquivalenzrelation.
 \end{enumerate}
 Sind alle Elemente von $G\setminus\lbrace 0 \rbrace$ archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
-Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse}, in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \label{archimedischeKlassen}\\
+Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse}, in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. Wir definieren auf den archimedischen Klassen die Anordnung: $\lbrack g\rbrack < \lbrack h\rbrack$ genau dann, wenn für alle $n\in \N n|a| < |b|$ ist.\label{archimedischeKlassen}\\
 % evtl überflüssig: Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder für alle
 %$n \in \N$ ist $n|a|<|b|$, oder für alle $n \in \N$ ist $n|b| <|a|$.
 \end{folg}
+
+
+\begin{lemma}\label{maximumKlasseIstGanzeKlasse}
+Die archimedische Klasse einer Summe entspricht der archimedischen Klasse des größten Summanden. 
+\end{lemma}
+\beweis{Seien $g,h\in G$, wir müssen zeigen, dass $\lbrace g +h \rbrack \stackrel{!}{=} \max(\lbrack g \rbrack, \lbrack h \rbrack)$ ist. Sei o.B.d.A. $g \leq h$, dann gilt $h < g+h \leq 2h$. Daraus folgt sofort, dass $\lbrack g+h\rbrack = \lbrack h\rbrack$ ist. 
+}
 %
 %\begin{satz}\label{agkku}
 %Eine archimedische Gruppe G enthält keine konvexen Untergruppen außer sich selbst und der trivialen.
@@ -765,8 +772,9 @@ Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$
 
 \end{folg}
 \beweis{
-Nach dem Satz von Hölder \ref{aga} ist $G$ o-isomorph zu einer Untergruppe der additiven Gruppe der reellen Zahlen. Wir wissen wegen Satz \ref{homomorphismus nach R} bereits, dass es eine reelle positive Zahl $r$ gibt, sodass der o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{g}$. Dieser Quotient existiert, da $g \neq 0$ ist und $G$ o-isomorph zu einer Untergruppe des Körpers der reellen Zahlen ist und das Inverse zu $g$, nämlich $\frac{1}{g}$ existiert. Da $g$ nach Voraussetzung positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto rg = \frac{1}{g} \cdot g = 1_\R$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
-Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{g}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
+Nach dem Satz von Hölder \ref{aga} gibt es einen o-Isomorphismus $\varphi\colon G\to U, g\mapsto u$, wobei $U$ eine Untergruppe der additiven Gruppe der reellen Zahlen ist. \\
+Weiterhin wissen wir aus Satz \ref{homomorphismus nach R}, dass es eine reelle positive Zahl $r$ gibt, sodass ein o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus $\Phi := \phi \circ\varphi$ ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{\varphi(g)}$. Dieser Quotient existiert, da $u \neq 0$ ist und da $U$ eine Untergruppe des Körpers der reellen Zahlen ist, womit das Inverse zu $\varphi(g)$ nämlich $\frac{1}{\varphi(g)}$ eindeutig existiert. Da $\varphi(g)$, da es sich um einen o-Isomorphismus handelt, positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto 1_\R$, mit $\Phi = \phi\circ \varphi$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
+Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{\varphi(g)}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
 }
 %
 %

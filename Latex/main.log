@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  25 MAR 2015 01:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.5)  25 MAR 2015 19:46
 entering extended mode
 **main.tex
 (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\main.tex
@@ -1163,58 +1163,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 611--615
  []
 
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 660.
+LaTeX Warning: Command \glqq invalid in math mode on input line 667.
 
 
-LaTeX Warning: Command \grqq invalid in math mode on input line 660.
+LaTeX Warning: Command \grqq invalid in math mode on input line 667.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 745--745
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--745
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 
  []
 
-[20] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
+[20] [21] (C:\Users\Julia\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 745--745
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 
  []
 
-[21] [22]
+[22]
 
-LaTeX Warning: Command \glqq invalid in math mode on input line 775.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 775.
+LaTeX Warning: Command \glqq invalid in math mode on input line 783.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--787
-
- []
+LaTeX Warning: Command \grqq invalid in math mode on input line 783.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
+Underfull \hbox (badness 10000) in paragraph at lines 791--795
 
  []
 
-[23] [24]
-
-LaTeX Warning: Command \glqq invalid in math mode on input line 881.
-
-
-LaTeX Warning: Command \grqq invalid in math mode on input line 881.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 894--896
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
 
  []
 
-[25]) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
+[24]
+
+LaTeX Warning: Command \glqq invalid in math mode on input line 889.
+
+
+LaTeX Warning: Command \grqq invalid in math mode on input line 889.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
+
+ []
+
+) (C:\Users\Julia\Documents\Studium\Zula\Git\Latex\potenzreihenkoerper.tex
 [26]
 Kapitel 5.
 
@@ -1344,29 +1344,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1314--1314
 
  []
 
-[50]
-Overfull \hbox (24.5374pt too wide) in paragraph at lines 1359--1359
-\T1/cmr/m/n/10.95 Wir zei-gen als ers-tes die Exis-tenz der Rei-he. Für $[][] \
-OML/cmm/m/it/10.95 a[]z[] \OT1/cmr/m/n/10.95 =: \OML/cmm/m/it/10.95 f \OMS/cmsy
-/m/n/10.95 2 \OML/cmm/m/it/10.95 K []$ \T1/cmr/m/n/10.95 mit $[] [] \OML/cmm/m/
-it/10.95 >$
- []
-
-[51]
-Overfull \hbox (6.04234pt too wide) in paragraph at lines 1557--1558
+[50] [51]
+Overfull \hbox (6.04234pt too wide) in paragraph at lines 1559--1560
 []\T1/cmr/m/n/10.95 Die in Lem-ma [][]5.3.16[][] de-fi-nier-te Rei-he $[][] \OM
 L/cmm/m/it/10.95 [][][]$ \T1/cmr/m/n/10.95 mit $\OML/cmm/m/it/10.95 [] \OMS/c
 msy/m/n/10.95 2 \OML/cmm/m/it/10.95 K$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.
 95 f \OT1/cmr/m/n/10.95 := [][] \OML/cmm/m/it/10.95 a[]z[]$
  []
 
-[52] [53]
-Underfull \hbox (badness 10000) in paragraph at lines 1751--1751
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1700--1700
+
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1753--1753
 
  []
 
 
-Overfull \hbox (14.26743pt too wide) in paragraph at lines 1751--1751
+Overfull \hbox (14.26743pt too wide) in paragraph at lines 1753--1753
 []\T1/cmr/m/n/10.95 Sei $\OML/cmm/m/it/10.95 f \OT1/cmr/m/n/10.95 = [][] \OML/c
 mm/m/it/10.95 a[]z[][]h \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 b[]z[]$ \
 T1/cmr/m/n/10.95 mit $\OML/cmm/m/it/10.95 g[] \OT1/cmr/m/n/10.95 = []([](\OML/c
@@ -1376,7 +1373,7 @@ mm/m/it/10.95 f\OT1/cmr/m/n/10.95 ))$ \T1/cmr/m/n/10.95 und $\OML/cmm/m/it/10.9
  []
 
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 
  []
 
@@ -1410,47 +1407,49 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 20617 strings out of 493921
- 353586 string characters out of 3144876
- 478809 words of memory out of 3000000
- 23249 multiletter control sequences out of 15000+200000
- 28985 words of font info for 65 fonts, out of 3000000 for 9000
+ 20621 strings out of 493921
+ 353650 string characters out of 3144876
+ 480838 words of memory out of 3000000
+ 23251 multiletter control sequences out of 15000+200000
+ 29686 words of font info for 66 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,12n,71p,1405b,596s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,12n,71p,933b,596s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 eccc1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecrm0800.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk>{C:/Program Files (x86)/MiK
-TeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Julia\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1095.pk> <C:\Users\Julia\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2488.pk> <C:\Users\Julia\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\User
-s\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+ec\dpi600\ecbi1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\Julia\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Julia\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk>{C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Julia\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1095.pk> <C:\Users\Julia\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2488.pk> <C:\User
+s\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 > <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx2986.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecbx1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/euf
-m10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (57 pages, 658734 bytes).
+cbx1440.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx2986.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Julia\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Julia\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helveti
+c/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
+b>
+Output written on main.pdf (57 pages, 663974 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 234 named destinations out of 1000 (max. 500000)
+ 1281 PDF objects out of 1440 (max. 8388607)
+ 235 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
