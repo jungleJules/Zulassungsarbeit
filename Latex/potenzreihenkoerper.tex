@@ -1189,12 +1189,12 @@ Sei  $f \in K\left(\left(z^{G}\right)\right)$ mit $f = \sum_{g \in G}^{}a_g z^g$
 \begin{eqnarray*}
 f&=& z^\gamma ~\sum_{g \in G} a_{g} z^{g-\gamma}\\
 &=& z^\gamma \left(a_\gamma 1_K  + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} a_{g} z^{g -\gamma}\right) \\
-&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}^{-1}}z^{g-\gamma}\right) \\
+&=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} \frac{a_{g}}{{a_\gamma}}z^{g-\gamma}\right) \\
 &=& z^\gamma ~ a_\gamma \left(1_K + ~\sum_{g \in G \setminus \lbrace \gamma \rbrace} b_{g-\gamma} z^{g-\gamma}\right),
 \end{eqnarray*}
 %
 %
-mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}^{-1}}$. \\
+mit $b_{g-\gamma} = \frac{a_{g}}{{a_\gamma}}$. \\
 %Die Gleichheit in (*) gilt, denn zu $a_\gamma$, mit $a_\gamma \in K$ und $a_\gamma \neq 0$ für $\gamma \in$supp$(f)$, existiert das Inverse. \\
 Es gilt weiterhin $g-\gamma > 0$ für alle $g\in \textup{supp}(f)\setminus \lbrace \gamma\rbrace$, da $\gamma = \min(\textup{supp}(f))$.
  %und damit ist $g > \gamma$ für alle $g\in G$. 
@@ -1233,40 +1233,40 @@ Da $U \subseteq G$ und $G$ eine angeordnete Gruppe ist, können die ${g_i}_k \in
 %
 Wir können ein maximales Element ${g_i}^* := \max_{k}\left( {g_i}_k\right)$ für jedes $i\in\N$ bestimmen. Da $U$ wohlgeordnet ist, gibt es unter den ${g_i}^*$ ein kleinstes Element $g^*$. \\
 Nach Voraussetzung ist $g > 0$ für jedes $g\in U$. 
-Wir bezeichnen mit $\langle u_i\rangle$ die von $u_i$ erzeugte konvexe Untergruppe. Nach Definition einer konvexen Untergruppe wissen wir, dass in der angeordneten abelschen Gruppe $G$
-\[ \langle u_i\rangle = \langle \max_k\left( {g_i}_k\right)\rangle \]
+Wir betrachten nun die archimedischen Klassen, der angeordneten abelschen Gruppe $G$ und bezeichnen mit $\lbrack u_i\rbrack$ die archimedische Klasse von $u_i \in G$. Nach Definition einer konvexen Untergruppe wissen wir, dass in der angeordneten abelschen Gruppe $G$
+\[ \lbrack u_i\rbrack = \lbrack \max_k\left( {g_i}_k\right)\rbrack \]
 gilt. \\
 %
 %
 %
-Wir erhalten also, dass $\langle u_i\rangle = \langle {g_i}^*\rangle$ für $i=1, 2,...$ ist und $\langle g^*\rangle = \min_{i\in \N}\left(\langle u_i\rangle\right)$. 
-Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und wir wissen, dass es unter den Elementen ${g_i}_k$ aufgrund der Wohlordnung von $U$ ein kleinstes gibt. Daher gibt es ein $n\in \N$, sodass $\langle u_n\rangle
-= \langle u_{n+1}\rangle = \langle u_{n+m}\rangle = \langle g^*\rangle$ für alle $m\in \N$ ist. \\
-Das bedeutet also wir können jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ in $\mathfrak{U}$ ein Element ${g^*}'$ aus $U$ zuordnen, sodass ab einem bestimmten Index $i_0$, die von ${g^*}'$ erzeugte konvexe Untergruppe der von ${u'}_i$ erzeugten konvexen Untergruppe entspricht.
+Wir erhalten also, dass $\lbrack u_i\rbrack = \lbrack {g_i}^*\rbrack$ für $i=1, 2,...$ ist und $\lbrack g^*\rbrack = \min_{i\in \N}\left(\lbrack u_i\rbrack\right)$. 
+Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und wir wissen, dass es unter den Elementen ${g_i}_k$ aufgrund der Wohlordnung von $U$ ein kleinstes gibt. Daher gibt es ein $n\in \N$, sodass $\lbrack u_n\rbrack
+= \lbrack u_{n+1}\rbrack = \lbrack u_{n+m}\rbrack = \lbrack g^*\rbrack$ für alle $m\in \N$ ist. \\
+Das bedeutet also wir können jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ in $\mathfrak{U}$ ein Element ${g^*}'$ aus $U$ zuordnen, sodass ab einem bestimmten Index $i_0$, die archimedische Klasse von ${g^*}'$ der archimedischen Klasse von ${u'}_i$ entspricht.
 Da $U$ nach Voraussetzung wohlgeordnet ist, gibt es unter den ${g^*}'$ ein kleinstes Element. \\
 Wir nehmen an für unsere Folge $\left(u_n\right)_{n\in\N}$ ist $g^*$ das kleinste Element unter den ${g^*}'$.\\
-Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und offensichtlich gilt wegen der Konvexitätseigenschaft, dass 
-\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ....\]
+%Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und offensichtlich gilt wegen der Konvexitätseigenschaft, dass 
+%\[\lbrack u_1 \rbrack \supseteq \lbrack u_2 \rbrack \supseteq ... \supseteq \lbrack u_i \rbrack \supseteq ....\]
 
-ist.
+%ist.
 %obda weil es gibt in jeder untermenge kleinste Untergruppe wieso sollte es die nicht schon von Anfang an geben.
 Wir können somit ohne Beschränkung der Allgemeinheit annehmen, dass
-\[\langle u_i \rangle = \langle g^*\rangle ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
+\[\lbrack u_i \rbrack = \lbrack g^*\rbrack ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
 
 gilt.
 %
-Es können mehrere $\gamma$ aus $U$ existieren, sodass $\langle g^*\rangle=\langle\gamma\rangle$ gilt. Unter diesen gibt es eines, nennen wir es $\mathfrak{g}$, das in der Anordnung von $G$ das kleinste ist. Wir erhalten für dieses $\mathfrak{g}$, dass $\mathfrak{g}\leq g^*\leq u_1$ ist, wobei $\langle \mathfrak{g}\rangle = \langle g^*\rangle = \langle u_1 \rangle$.\\
+Es können mehrere $\gamma$ aus $U$ existieren, sodass $\lbrack g^*\rbrack=\lbrack\gamma\rbrack$ gilt. Unter diesen gibt es eines, nennen wir es $\mathfrak{g}$, das in der Anordnung von $G$ das kleinste ist. Wir erhalten für dieses $\mathfrak{g}$, dass $\mathfrak{g}\leq g^*\leq u_1$ ist, wobei $\lbrack \mathfrak{g}\rbrack = \lbrack g^*\rbrack = \lbrack u_1 \rbrack$.\\
 %
 %
 %Da $\langle u_1\rangle$ die kleinste erzeugte konvexe Untergruppe bezüglich $\mathfrak{U}$ ist, besitzt $\langle u_1\rangle$ in $\mathfrak{U}$ nur die trivialen konvexen Untergruppen 
-Aufgrund der Eigenschaft von archimedischen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le p\mathfrak{g}$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+Aufgrund der Archimedizität existiert ein $p \in \N$, sodass $u_1 \le p\mathfrak{g}$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
 \[u_i \le p\mathfrak{g}\text{ für alle }i \in \N.\] 
 %
 %
 Wir wählen diese natürliche Zahl $p$ so klein wie möglich. \\
 %
 %
-Jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ mit $\langle \mathfrak{g}\rangle = \langle u_i \rangle$ %u'_k ??????
+Jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ mit $\lbrack \mathfrak{g}\rbrack = \lbrack u_i \rbrack$ %u'_k ??????
 wird auf diese Weise eine natürliche Zahl $p'$ zugeordnet. Da die natürlichen Zahlen wohlgeordnet sind, existiert eine unter den dadurch auftretenden natürlichen Zahlen kleinste Zahl $\overline{p}$. Wir nehmen an, dass die streng monoton fallende Folge $\left(u_i\right)_{i\in\N}$ so gewählt ist, dass wir ihr diese kleinste Zahl $\overline{p}$ zuordnen können.
 %
 %
@@ -1292,7 +1292,7 @@ Die Elemente ${g_i}^*$ sind Elemente von $U$. Nach Definition der Wohlordnung gi
 %
 Folglich muss eine streng monoton fallende Teilfolge $\left(u_{\phi(i)}\right)_{i\in\N}$ von $\left(u_i\right)_{i\in\N}$ existieren, sodass alle Elemente wie in $(**)$ dargestellt werden können. Wiederum gilt nach Definition der Wohlordnung, dass es keine streng monoton fallende Folge unter den ${g_{\phi(i)}}^*$  gibt. Deswegen muss $\left({v_{\phi(i)}}\right)$ eine streng monoton fallende Teilfolge $\left({{v'}_{i}}\right) $ enthalten.
 
-Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle {v'}_i\rangle = \langle g^*\rangle$ ist.
+Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\lbrack {v'}_i\rbrack = \lbrack g^*\rbrack$ ist.
 %
 %
 %
@@ -1347,10 +1347,10 @@ Wir wählen als $\gamma$ das kleinste der Elemente, die in unendlich vielen der 
 Es gibt also unendlich viele Darstellungen von $\gamma$ als Summe von Elementen aus $U$. 
 Wir ordnen diese Darstellungen nach wachsender Länge $\gamma = \gamma_{i1} +\gamma_{i2}+\gamma_{i3}+... +\gamma_{in_i}$ mit $\gamma_{ij} \in U$ und $n_1 <n_2 <...$. 
 %
-Die Folge ${\left(\gamma_{i1}\right)}_{i\in\N}}$ enthält eine streng monoton wachsende Teilfolge, da $U$ wohlgeordnet ist. \\
+Die Folge ${\left(\gamma_{i1}\right)}_{i\in\N}$ enthält eine streng monoton wachsende Teilfolge, da $U$ wohlgeordnet ist. \\
 %
 %
-Wir nehmen an, dass ${\left(\gamma_{i1}\right)}_{i\in\N}}$ streng monoton wachsend ist. Die durch ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ bestimmte Folge ist also fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine streng monoton fallende Folge existiert, ist ${\left({\gamma'}_i\right)}_{i\in\N}$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $nU$, $n\in\N$.\\
+Wir nehmen an, dass ${\left(\gamma_{i1}\right)}_{i\in\N}$ streng monoton wachsend ist. Die durch ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ bestimmte Folge ist also fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine streng monoton fallende Folge existiert, ist ${\left({\gamma'}_i\right)}_{i\in\N}$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $nU$, $n\in\N$.\\
 %
 %
 Nach Definition von $\gamma'$ und weil $\gamma_{i1} > 0_G$ ist, wissen wir, dass $\gamma' <\gamma$ ist. Dies ist ein Widerspruch zur minimalen Wahl von $\gamma$. 

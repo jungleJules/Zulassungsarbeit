@@ -1,0 +1,138 @@
+\begin{lemma}\label{VereinigungWohlgeordnet}
+Sei $U$ eine wohlgeordnete Teilmenge des Positivbereichs von $G$. Dann ist die Menge $\mathfrak{U} := \bigcup_{n\in\N} U^n$ ebenfalls wohlgeordnet.
+\end{lemma}
+%
+%
+%
+\beweis{Angenommen $\mathfrak{U}$ sei nicht wohlgeordnet. Dann existiert eine streng monoton fallende Folge $\left(u_n\right)_{n\in\N}$ in $\mathfrak{U}$ mit $u_i\in \textup{supp}(f^{n_i})$, die wir folgendermaßen schreiben
+\begin{equation}\label{eq: folgefürinvers}
+u_1 = g_{11} +g_{12} + ...+ g_{1{n_1}} > u_2 = g_{21} +g_{22} + ...+ g_{2n_2} > ... > u_i = g_{i1} +g_{i2} + ...+ g_{in_i} > ..., 
+\end{equation} 
+$\text{mit } g_{ik} \in \text{supp}(f)\text{, gibt.}$
+%
+%
+%
+% 
+%
+%
+%Konvexe Untergruppe eines Folgenelements wird von maximum der Summanden erzeugt:
+Da $G$ insbesondere eine angeordnete Gruppe ist, können die ${g_i}_k \in G$ angeordnet werden. Wir können ein maximales Element, $\max\left( {g_i}_k\right)$, für jedes $i\in\N$ bestimmen. Nach Definition einer konvexen Untergruppe und da $\min\left(\bigcup_{n \in \N} \text{supp}\left(f^n\right)\right) > 0$ ist, gilt in $G$ offensichtlich, dass die von $u_i$ erzeugte konvexe Untergruppe der vom maximalen Element von ${g_i}_k$ erzeugten konvexen Untergruppe entspricht. Wir bezeichnen mit $\langle u_i\rangle$ die von $u_i$ erzeugte konvexe Untergruppe. Wir wissen also, dass in $G$ offensichtlich
+\[ \langle u_i\rangle = \langle \max_k\left( {g_i}_k\right)\rangle \]
+gilt. \\
+%
+%
+%
+Die Menge $U$ ist nach Voraussetzung wohlgeordnet. Da ${g_i}_k \in U$ ist, gibt es unter den ${g_k}^*$ ein Minimum, wir nennen es $g^*$.\\
+Wir erhalten also, dass $\langle u_i\rangle = \langle {g_i}^*$ für $i=1, 2,...$ ist und $\langle g^*\rangle = \langle \min\left(u_i\right), i\in \N\right)$. Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und wir wissen, dass es unter den Elementen ${g_i}_k$ ein kleinstes gibt. Daher gibt es ein $n\in \N$, sodass $\langle u_n\rangle
+= \langle u_{n+1}\rangle = \langle u_{n+m}\rangle = \langle g^*\rangle$ für alle $m\in \N$ ist. Das bedeutet also wir können jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ in $\mathfrak{U}$ ein Element $g^*'$ aus $U$ zuordnen, sodass ab einem bestimmten Index $i_0$, die von $g^*'$ erzeugte konvexe Untergruppe der von $\left({u'}_i\right)$ erzeugten konvexen Untergruppe entspricht. Da $U$ nach Voraussetzung wohlgeordnet ist, gibt es unter den $g^*'$ ein kleinstes Element. Wir nehmen an unsere Folge $\left(u_n\right)_{n\in\N}$ besitzt diese Eigenschaft bezüglich $g^*$.\\
+Die Folge $\left(u_i\right)_{i\in\N }$ ist streng monoton fallend und offensichtlich gilt wegen der Konvexitätseigenschaft, dass 
+\[\langle u_1 \rangle \supseteq \langle u_2 \rangle \supseteq ... \supseteq \langle u_i \rangle \supseteq ....\]
+
+ist.
+%obda weil es gibt in jeder untermenge kleinste Untergruppe wieso sollte es die nicht schon von Anfang an geben.
+Wir können somit ohne Beschränkung der Allgemeinheit annehmen, dass
+\[\langle u_i \rangle = \langle g^*\rangle ~~~~~~~~~\text{ für }\left(i = 1, 2,...\right)\]
+
+ist.
+%
+Sei $\mathfrak{g}$ das kleinste Element von $U$ das in $\langle g^*\rangle$ liegt. Wir erhalten $\langle \mathfrak{g}\rangle = \langle g^*\rangle = \langle u_1 \rangle$.\\
+%
+%
+Aufgrund der Eigenschaften von konvexen Untergruppen einer angeordneten Gruppe existiert ein $p \in \N$, sodass $u_1 \le p\mathfrak{g}$ und da $u_1 > u_2 > ... > u_i > ...$ gilt 
+\[u_i \le p\mathfrak{g}\text{ für alle }i \in \N.\] 
+%
+%
+Wir wählen diese natürliche Zahl $p$ für alle $i\in\N$ so klein wie möglich. \\
+%
+%
+Jeder streng monoton fallenden Folge $\left({u'}_i\right)_{i\in\N}$ mit $\langle \mathfrak{g}\rangle = \langle u_k \rangle$ %u'_k ??????
+wird auf diese Weise eine natürliche Zahl $p'$ zugeordnet. Da die natürlichen Zahlen wohlgeordnet sind existiert eine unter den dadurch auftretenden natürlichen Zahlen kleinste Zahl $\overline{p}$. Wir nehmen an, dass die streng monoton fallende Folge $\left(u_i\right)_{i\in\N}$ so gewählt ist, dass wir ihr diese kleinste Zahl $\overline{p}$ zuordnen können.
+%
+%
+%
+%
+Aufgrund der Kommutativität der Gruppe $G$ kann die Darstellung eines Folgenelements $u_i$ auf die beiden folgenden Fälle eingeschränkt werden
+%
+\[
+(*) u_i = {g_i}^* ~~~~~~~~~~~~~~~~~~~~~~~   (**)    u_i = v_i+{g_i}^*,
+\]
+%
+%
+%
+wobei $v_i \in \mathfrak{U}$ gilt. 
+Die Elemente ${g_i}^*$ sind Elemente des Trägers. Nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_i}^*$. Aus diesem Grund und da die Folge ${\left(u_i\right)}_{n\in \N}$ nach Annahme streng monoton fallend ist, existieren nur endlich viele $u_i$ der ersten Form. \\
+%
+%
+%
+%
+
+%
+%
+%
+Folglich muss eine streng monoton fallende Teilfolge $\left(u_{\phi(i)}\right)_i\in\N$ von $\left(u_i\right)_i\in\N$ existieren, sodass alle Elemente wie in $(**)$ dargestellt werden können. Wiederum gilt nach Definition der Wohlordnung gibt es keine streng monoton fallende Folge unter den ${g_{\phi(i)}}^*$. Deswegen enthält $\left({v_{\phi(i)}}\right)$ eine streng monoton fallende Teilfolge $\left({v'}_{i}}\right) $.
+
+Diese Folge hat die selbe Form wie \ref{eq: folgefürinvers}. Wir erhalten mit der gleichen Argumentation, dass $\langle {v'}_i\rangle = \langle g^*\rangle$ ist.
+%
+%
+%
+%
+%
+Wir wissen, dass $v_i = u_i - {g_i}^*$ und daher ${v}_i \le u_i$ ist. Weiterhin gilt $u_i < \overline{p}\mathfrak{g}$ und wir können eine natürliche Zahl $q = \overline{p}-1$ finden, sodass $v_i \le q\mathfrak{g}^*$ für alle $i \in \N$.\\
+Dies ist ein Widerspruch zu unserer Wahl der Folge $\left(u_i\right)_{i\in\N}$. Folglich ist $\mathfrak{U}$ wohlgeordnet.
+%
+%
+%
+%
+%
+%TODO: ab hier weiter!
+%
+
+%
+%
+%
+%
+
+}
+\begin{lemma}\label{unendlicheSummeinPotenzreihenring}
+%
+%
+Sei $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
+%
+%
+\begin{eqnarray*}
+h &=& \sum_{n=1}^{\infty}\lambda_nf^n \\
+&=& \sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n
+\end{eqnarray*}
+%
+%
+ist für beliebige Körperelemente $\lambda_n$ wohldefiniert und liegt in $K\left(\left(z^{G}\right)\right)$.
+\end{lemma}
+% 
+% 
+%
+%
+%
+% 
+%
+\beweis{Wir zeigen als erstes die Existenz der unendlichen Summe. Für $\sum_{g \in G}^{}a_g z^g = f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$ kann die unendliche Summe  $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n$ für $\lambda \in K$ definiert werden, wenn ${\left(f^n\right)}_{\gamma} = {\left(\sum_{g \in G}^{}a_g z^g\right)}^n$, wobei $a_g=0$ für alle $g<\gamma$ ist, nur für endlich viele $n\in \N$ ungleich null ist.\\
+%
+%
+%
+Sei $U = \text{supp}(f)$ und $\gamma$ ein Element von unendlich vielen der Mengen $U^n$ mit $n\in\N$. Wir wissen aus Lemma \ref{VereinigungWohlgeordnet}, dass $\mathfrak{U} = \bigcup_{n\in\N} U^n$ wohlgeordnet ist. \\
+%
+%
+%
+Sei $\gamma$ das kleinste der Elemente, die in unendlich vielen der Mengen $U^n$, $n\in\N$ liegen. 
+Es gibt also unendlich viele Darstellungen von $\gamma$ als Summe von Elementen aus $U$. 
+Wir ordnen diese Darstellungen nach wachsender Länge $\gamma = \gamma_{i1} +\gamma_{i2}+\gamma_{i3}+... +\gamma_{in_i}$ mit $\gamma_{ij} \in U$ und $n_1 <n_2 <...$. 
+%
+Die Folge $\gamma_{i1}$ enthält eine streng monoton wachsende Teilfolge, da $U$ wohlgeordnet ist. 
+%
+%
+Wir nehmen an, dass $\gamma_{i1}$ streng monoton wachsend ist. Die Folge ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ ist also fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine unendlich streng monoton fallende Folge existiert, ist ${\gamma'}_i$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $U^n$, $n\in\N$.\\
+%
+%
+Nach Definition von $\gamma'$ und weil $\gamma_{i1} > 0_G$ ist, wissen wir, dass $\gamma' <\gamma$ ist. Dies ist ein Widerspruch zur minimalen Wahl von $\gamma$. 
+Es gilt also nur für endlich viele $n\in\N$, dass ${\left(f^n\right)}_{\gamma}\neq 0$ ist.\\
+Die unendliche Summe ist somit wohldefiniert und ihr Träger ist eine Teilmenge von $\mathfrak{U}$ und nach Lemma \ref{} wohlgeordnet. Also ist \[\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n \in K\left(\left(z^G\right)\right).\]
+}

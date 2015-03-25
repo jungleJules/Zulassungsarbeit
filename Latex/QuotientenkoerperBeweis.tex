@@ -1,0 +1,14 @@
+%\begin{satz}
+%Sei $R$ ein Integritätsring. Sei $K$ ein Körper und sei $\phi\colon R \to K$ ein injektiver Ringhomomorphismus. Dann gibt es genau einen Körperhomomorphismus $\Phi \colon \textup{Quot}(R) \to K$ mit $\Phi_{|R} = \phi$.
+%\end{satz}
+%\beweis{
+%}
+
+
+
+
+%Quotientenkörper Beweis nach Kaiser:
+\beweis{Wir definieren zunächst die naheliegende Abbildung $\phi \colon K[[z]] \to K((z)), \sum_{n=0}^{\infty} a_nz^n \mapsto \sum_{n=0}^{\infty} a_nz^n$. Wie leicht zu sehen ist, handelt es sich bei der Abbildung $\phi$ um einen injektiven Homomorphismus. Wir wissen bereits nach Satz \ref{Laurentreihenkörper}, dass $K((z))$ ein Körper ist und $K[[z]]$ ist, wie in  \ref{intring} gezeigt, ein Integritätsring. Die Abbildung $\varphi\colon R\to \textup{Quot}(R), f\mapsto \frac{1}{f}$ ist ein Monomorphismus, wie leicht zu sehen ist. Nach der universellen Eigenschaft des Quotientenkörpers gibt es genau einen Körperhomomorphismus $\Phi\colon \textup{Quot}(K[[z]])\to K((z)), \frac{\sum_{n=0}^{\infty}a_nz^n}{\sum_{m=0}^{\infty}b_mz^m}\mapsto \sum_{k=n-m}^{\infty}\frac{a_k}{b_k}z^k$, sodass $\Phi = \varphi \circ \phi$ ist.\\
+Die Abbildung $\Phi$ erfüllt die Homomorphismusaxiome, wie sich leicht nachrechnen lässt.
+Wir zeigen nun die Surjektivität der Abbildung $\Phi$ und erhalten somit die Isomorphieeigenschaft. Sei $f\in K((z^G))$ mit $\gamma = \min(\textup{supp}(f)) < 0$. Die Laurentreihe $f= \sum_{n=\gamma}a_nz^n$ kann man nach \ref{potenzgesetze} als $a_\gamma z^{\gamma} \cdot \left(\sum_{n=0}^{\infty} b_nz^n\right)$, wobei $b_n = \frac{a_n}{a_\gamma}$ ist, schreiben. Man sieht sofort, dass $\sum_{n=0}^{\infty} b_nz^n \in K[[z]]$ ist und da $a_\gamma z^\gamma$ nach Voraussetzung ungleich null und Körperelemente sind, können wir $a_\gamma z^\gamma = \frac{1}{{\left(a_\gamma\right)}^{-1}z^{-\gamma}}$ schreiben mit $\left(a_\gamma\right)}^{-1}z^{-\gamma} \in K[[z]]$. Dieser Quotient ist für $\gamma \in G$ eindeutig. Jede Laurentreihe lässt sich daher in eindeutiger Weise als Quotient zweier Potenzreihen darstellen. Die Surjektivität ist gezeigt und da die Konkatenation der Monomorphismen$\varphi \circ\phi$ die Injektivität erhält, ist die Behauptung gezeigt.
+}

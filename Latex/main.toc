@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {4.1}Wohlordnung in angeordneten abelschen Gruppen}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Archimedisch angeordnete abelsche Gruppen}{17}{section.4.2}
 \contentsline {section}{\numberline {4.3}Der Satz von H\IeC {\"o}lder}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Die angeordnete Menge konvexer Untergruppen}{23}{section.4.4}
+\contentsline {section}{\numberline {4.4}Die Menge konvexer Untergruppen}{23}{section.4.4}
 \contentsline {section}{\numberline {4.5}Einblick in die Bewertungstheorie}{25}{section.4.5}
 \contentsline {chapter}{\numberline {5}Potenzreihenk\IeC {\"o}rper}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Formale Potenzreihen}{27}{section.5.1}

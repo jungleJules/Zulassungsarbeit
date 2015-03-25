@@ -506,7 +506,9 @@ Die Menge $W$ ist genau dann wohlgeordnet, wenn jede Folge $\left(w_n\right)_{n\
 \end{lemma}
 \beweis{$``\Rightarrow "$ Sei die total geordnete Menge $W$ wohlgeordnet. Dann gilt nach Lemma \ref{unendlicheFolgeEigenschaften} und mit Satz \ref{wohlgeordnetabnehmendeFolge}, dass eine Folge $\left(w_n\right)_{n\in\N}$ von Elementen aus $W$ entweder eine streng monoton steigende oder konstante Teilfolge enthält. Jede Folge aus $W$ besitzt daher eine monoton steigende Teilfolge.\\
 $``\Leftarrow "$ Jede Folge von Elementen aus $W$ enthält eine monoton steigende Teilfolge. Angenommen $W$ sei nicht wohlgeordnet. Nach Satz \ref{wohlgeordnetabnehmendeFolge} existiert somit eine streng monoton fallende Folge in $W$. Nach Voraussetzung muss jede Folge eine monoton steigende Teilfolge enthalten. Dies führt zu einem Widerspruch, da eine streng monoton fallende Folge keine monoton steigende Teilfolge enthalten kann.}
-Wir bezeichnen die Menge der wohlgeordneten Teilmengen einer angeordneten abelschen Gruppe $G$ mit $W_G$.
+
+
+%Wir bezeichnen die Menge der wohlgeordneten Teilmengen einer angeordneten abelschen Gruppe $G$ mit $W_G$.
 %
 %
 
@@ -749,7 +751,7 @@ Sei $\left(G, +\right)$ eine Untergruppe der natürlich geordneten additiven Gru
 \end{satz}
 %
 %
-\beweis{Nach Voraussetzung ist $\phi$ ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Damit folgt, dass $n \cdot g_1 > m\cdot g_2$ und $\phi(n\cdot g_1)< \phi(m\cdot g_2)$ ist. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
+\beweis{Nach Voraussetzung ist $\phi$ ein o-Monomorphismus, also ein injektiver o-Homomorphismus und damit sind mit $0 < g_1$, $ g_2\in G $ auch $\phi(g_1)$ und $\phi(g_2)$ positiv. Angenommen es gilt, dass $\frac{\phi(g_1)}{\phi(g_2)}\neq \frac{g_1}{g_2}$, so gibt es eine rationale Zahl $\frac{m}{n}$ mit $m, n \in \N$, die zwischen $\frac{\phi(g_1)}{\phi(g_2)}$ und $ \frac{g_1}{g_2}$ liegt. Wir nehmen ohne Beschränkung der Allgemeinheit an, dass $\frac{\phi(g_1)}{\phi(g_2)} < \frac{m}{n} < \frac{g_1}{g_2}$ ist. Damit folgt, dass $n \cdot g_1 > m\cdot g_2$ und $\phi(n\cdot g_1)< \phi(m\cdot g_2)$ ist. Dies steht jedoch im Widerspruch zur Ordnungstreue der Abbildung $\phi$. 
 Folglich ist $\frac{\phi(g_1)}{\phi(g_2)}= \frac{g_1}{g_2}$. Wir erhalten, da $g_1, g_2$ beliebig gewählt sind, auch für alle positiven Elemente $g \in G$, dass die Gleichung $\frac{\phi(g_1)}{g_1} = \frac{\phi(g)}{g}$ erfüllt ist. \\
 Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erhalten wir aufgrund der Homomorphismuseigenschaften $\frac{\phi(g)}{g} = \frac{-\phi(g)}{-g} = \frac{\phi(-g)}{-g} = \frac{\phi(g_1)}{g_1}$. Mit der positiven Konstanten $r  := \frac{\phi(g_1)}{g_1}$ ist die Aussage $\phi(g) = r \cdot g$ für alle $g \in G$ gezeigt. 
 }
@@ -777,8 +779,12 @@ Die Grundaussage dieses Satzes bewies Hion 1954 in seinem russischsprachigen Wer
 %
 %
 %TODO ABELSCH MACHEN!!!
-\section{Die angeordnete Menge konvexer Untergruppen}
-In diesem Abschnitt geht es um konvexe Untergruppen einer angeordneten abelschen Gruppe. Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper. Untergruppen geordneter Gruppen besitzen eine durch die Gruppenordnung induzierte Ordnung. \\
+\section{Die Menge konvexer Untergruppen}
+In diesem Abschnitt geht es um die Menge der konvexen Untergruppen einer angeordneten abelschen Gruppe. Diese spielen in der Theorie der angeordneten Gruppe eine bedeutende Rolle, da sie Kriterien zur Anordnungsfähigkeit von Gruppen liefern. Im Folgenden stellen wir den Zusammenhang zur Archimedizität als weitere Möglichkeit der Ordnung her. So könnte man den späteren Beweis der Wohlordnung einer abzählbar unendlichen Vereinigung wohlgeordneter Mengen (\ref{VereinigungWohlgeordnet}) analog unter Verwendung konvexer Untergruppen führen.
+ Untergruppen geordneter Gruppen besitzen eine durch die Gruppenordnung induzierte Ordnung. \\
+% 
+%Wir benötigen einige Eigenschaften dieser Menge an speziellen Untergruppen für den Nachweis des Inversen im verallgemeinerten Potenzreihenkörper.  
+ 
 Sei $G$ eine angeordnete abelsche Gruppe.
 Wir untersuchen nun die, bezüglich der Inklusion linear angeordnete Menge konvexer Untergruppen von $G$. Wir orientieren unsere Ausführungen an \cite[S. 81 - 83]{fuchs66}  und \cite[S. 3]{priesscrampe83}.
 
@@ -890,7 +896,7 @@ Die Gleichheit in der Bedingung [B3] gilt dann, wenn $v{(a)} \ne v{(b)} $ ist.\\
 
 %Sei $\left(G, +\right)$ eine angeordnete Gruppe. Wir bezeichnen die archimedische Klasse, in der das Element $a\in G$ liegt  mit $[a]$. Die Gesamtheit der archimedischen Klassen von $G$ nennen wir $[G]$. 
 \begin{bsp}
-Die Abbildung $G \to [G], a \mapsto [a]$, ist eine Bewertung und wird als \textit{natürliche Bewertung} bezeichnet (dabei ist $[0]$ das kleinste Element). %\cite{priesscrampe83}
+Die Abbildung $G \to [G], a \mapsto [a]$, ist eine Bewertung und wird als \textit{natürliche Bewertung} bezeichnet, wobei $[0]$ das kleinste Element ist. %\cite{priesscrampe83}
 \end{bsp}
 %
 %
@@ -933,10 +939,16 @@ Ist $\left(K, v\right)$ ein bewerteter Körper, so ist $A = \lbrace  a \in K\col
 \begin{defn} %nach Priess Crampe S39
 Ein Unterring $A$ eines Körpers $K$ wird als \textit{Bewertungsring} bezeichnet, wenn $a \in A$ oder $a^{-1}\in A$ für jedes $a\in K$ gilt.
 \end{defn}
-\begin{bem} %sehr komische Formulierung aber anscheinend will Kaiser es so
-Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist der Bewertungsring von $v$ ein Bewertungsring.
-%$A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ 
-\end{bem}
+%
+%
+%
+%\begin{bem} %sehr komische Formulierung aber anscheinend will Kaiser es so
+%Ist $\left(K, v\right)$ ein bewerteter Körper, dann ist der Bewertungsring von $v$ ein Bewertungsring.
+%%$A = \lbrace a \in K\colon v(a) \geq 0_K\rbrace$ 
+%\end{bem}
+%
+% 
+%
 \begin{defn}   %\cite{hulek12}
 Ein Integritätsring $R$ heißt \textit{diskreter Bewertungsring}, falls es auf dem Quotientenkörper \textup{Quot}$(R)$ von $R$ eine Bewertung $v: \textup{Quot}(R) \rightarrow \Z \cup \lbrace\infty\rbrace$ gibt, sodass $R$
 %\begin{enumerate}
