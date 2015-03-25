@@ -316,7 +316,7 @@ Insbesondere konvergiert f auf der offenen Kugel $B(0,R(f))$ absolut.
 \begin{bem}\label{konvergentUnterring}
 Sei $\C\lbrace z \rbrace$ die Menge der konvergenten Potenzreihen über dem Körper der komplexen Zahlen $\C$. Die Menge $\C\lbrace z \rbrace$ ist ein Unterring des Rings der formalen Potenzreihen $\C[[z]]$. 
 \end{bem}
-\beweis{Das neutrale Element der Addition $0_\C$ und das neutrale Element der Multiplikation $1_\C$ sind trivialerweise konvergent und liegen in $\C\lbrace z \rbrace$. Es reicht, für $\C\lbrace z \rbrace$ zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
+\beweis{Das neutrale Element der Addition $0_\C$ und das neutrale Element der Multiplikation $1_\C$ liegen trivialerweise in $\C\lbrace z \rbrace$. Es reicht, für $\C\lbrace z \rbrace$ zu beweisen, dass die Summe und das Produkt zweier konvergenter Potenzreihen wieder konvergent ist. \\
 Seien $f= \sum_{n=0}^{\infty} a_nz^n, g= \sum_{n=0}^{\infty} b_nz^n$ konvergente Potenzreihen. Die Summe $f+g$ ist ebenfalls eine konvergente Potenzreihe mit $R(f+g) \geq \min\lbrace R(f), R(g)\rbrace$.\\
 Da beide Potenzreihen $f, g$ im Inneren ihres Konvergenzradius absolut konvergieren, kann das Cauchyprodukt bestimmt werden und das Produkt konvergiert absolut mit $R(fg) \geq \min\lbrace R(f), R(g)\rbrace$.
 %Betrachte zwei konvergente Potenzreihen mit den Konvergenzradien $r_1$ und $r_2$. Innerhalb des Radius min$\lbrace r_1, r_2\rbrace $ konvergieren beide Potenzreihen und somit auch die Summe der beiden Potenzreihen. Das Produkt konvergiert innerhalb des Radius $r$ mit $r \geq\min\lbrace r_1, r_2\rbrace $, denn beide Reihen konvergieren absolut. Das Cauchyprodukt existiert, da die Menge der konvergenten Potenzreihen eine Teilmenge des Rings der formalen Potenzreihen ist, auf dem das Cauchyprodukt eindeutig definiert ist. Nach dem großen Umordnungssatz konvergiert auch das Cauchyprodukt mit Konvergenzradius $r \geq\min\lbrace r_1, r_2\rbrace $.
@@ -1171,7 +1171,7 @@ In den Beweis der Distributivgesetze fließen die im Körper $K$ gültige Distri
 %
 Im vorherigen Abschnitt haben wir gezeigt, dass $K\left(\left(z^{G}\right)\right)$ bezüglich der definierten Addition und Multiplikation einen kommutativen Ring bildet. \\
 Wir benötigen etwas Vorarbeit, bevor wir zeigen können, dass zu jeder formalen Potenzreihe, die ungleich Null ist, ein Inverses existiert und die Menge  $K\left(\left(z^{G}\right)\right)$ ein Körper ist.\\
-In diesem Abschnitt orientieren wir uns an \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49}.
+In diesem Abschnitt orientieren wir uns an \cite{priesscrampe83}[S. 56- 58], \cite[S. 196- 198]{fuchs66} und \cite[S. 210- 213]{neumann49}.
 % 
 %
 %
@@ -1315,7 +1315,7 @@ Dies ist ein Widerspruch zu unserer Wahl der Folge ${\left(u_i\right)}_{i\in\N}$
 \begin{lemma}\label{unendlicheSummeinPotenzreihenring}
 %
 %
-Sei $\sum_{g \in G}^{}a_g z^g =: f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die \textbf{unendliche Reihe}
+Sei $\sum_{g \in G}^{}a_g z^g =: f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$. Die unendliche Reihe
 %
 %
 \begin{eqnarray*}
@@ -1334,7 +1334,7 @@ ist für beliebige Körperelemente $\lambda_n \in K$ wohldefiniert und liegt in 
 % 
 %
 \beweis{Wir zeigen zunächst die Wohldefiniertheit der unendlichen Reihe.\\
-Für $\sum_{g \in G}^{}a_g z^g =: f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$ kann  $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n$ für $\lambda_n \in K$ definiert werden, wenn für ein $\gamma \in \textup{supp}(f)$ der Koeffizient von $z^{\gamma}$ in $f^n$ nur für endlich viele $n\in \N$ ungleich null ist. Wir bezeichnen diesen Koeffizienten von $f^n$ bei $z^\gamma$ mit ${\left(f^n\right)}_\gamma$.\\
+Für $\sum_{g \in G}^{}a_g z^g =: f \in K\left(\left(z^{G}\right)\right)$ mit $\min\left(\textup{supp}\left(f\right)\right) > 0$ kann  $\sum_{n=1}^{\infty}\lambda_n{\left(\sum_{g \in G}^{}a_g z^g\right)}^n$ für $\lambda_n \in K$ definiert werden, wenn für ein $\gamma$ der Koeffizient von $z^{\gamma}$ in $f^n$ nur für endlich viele $n\in \N$ ungleich null ist. Wir bezeichnen diesen Koeffizienten von $f^n$ bei $z^\gamma$ mit ${\left(f^n\right)}_\gamma$.\\
 %$f^n$  ${\left(f^n\right)}_{\gamma} := {\left(\sum_{g \in G}^{}a_g z^g\right)}^n$, wobei $a_g=0$ für alle $g<\gamma$ ist, nur für endlich viele $n\in \N$ ungleich null ist.\\ %oder ist das g\neq \gamma??? also is es die summe über g = \gamma oder g\geq \gamma???
 %
 %
@@ -1351,7 +1351,7 @@ Wir ordnen diese Darstellungen nach wachsender Länge $\gamma = \gamma_{i1} +\ga
 Die Folge ${\left(\gamma_{i1}\right)}_{i\in\N}$ enthält eine monoton wachsende Teilfolge, da $U$ wohlgeordnet ist. \\
 %
 %
-Wir nehmen an, dass ${\left(\gamma_{i1}\right)}_{i\in\N}$ monoton wachsend ist. Die durch ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ bestimmte Folge ist also fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine streng monoton fallende Folge existiert, ist ${\left({\gamma'}_i\right)}_{i\in\N}$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $nU$, $n\in\N$.\\
+Wir nehmen an, dass ${\left(\gamma_{i1}\right)}_{i\in\N}$ monoton wachsend ist. Die durch ${\gamma'}_i = -{\gamma_{i1}} +\gamma$ bestimmte Folge ist monoton fallend und weil $\mathfrak{U}$ wohlgeordnet ist und keine streng monoton fallende Folge existiert, ist ${\left({\gamma'}_i\right)}_{i\in\N}$ ab einem bestimmten Index konstant. Es gibt also ein $j\in\N$ mit ${\gamma'}_{j+m} = {\gamma'}_j = \gamma'$ für alle $m\in\N$. Das Element $\gamma'$ liegt somit in $\mathfrak{U}$ und daher in unendlich vielen der Mengen $nU$, $n\in\N$.\\
 %
 %
 Nach Definition von $\gamma'$ und weil $\gamma_{i1} > 0_G$ ist, wissen wir, dass $\gamma' <\gamma$ ist. Dies ist ein Widerspruch zur minimalen Wahl von $\gamma$. 

@@ -10,7 +10,7 @@
 \bibitem[Car48]{carruth48}
 \textsc{Carruth}, Philip~W.:
 \newblock Generalized Power Series Fields.
-\newblock {In: }\emph{Transactions of the American Mathematical Society} 63
+\newblock \emph{Transactions of the American Mathematical Society} 63
   (1948), May, Nr. 3, S. 548 -- 559
 
 \bibitem[Ebe13]{ebeling2013funktionentheorie}
@@ -40,7 +40,7 @@
 \bibitem[Hah95]{hahn07}
 \textsc{Hahn}, Hans:
 \newblock Über die nichtarchimedischen Größensysteme.
-\newblock {In: }\textsc{Schmetterer}, Leopold (Hrsg.) ; \textsc{Sigmund}, Karl
+\newblock { }\textsc{Schmetterer}, Leopold (Hrsg.) ; \textsc{Sigmund}, Karl
   (Hrsg.): \emph{Hans Hahn Gesammelte Abhandlungen Band 1/Hans Hahn Collected
   Works Volume 1}.
 \newblock Springer Vienna, 1995, S. 439--499
@@ -65,7 +65,7 @@
 \bibitem[Neu49]{neumann49}
 \textsc{Neumann}, Bernhard~H.:
 \newblock On ordered division rings.
-\newblock {In: }\emph{Transactions of the American Mathematical Society} 66
+\newblock \emph{Transactions of the American Mathematical Society} 66
   (1949), Nr. 1, S. 202 -- 252
 
 \bibitem[Neu92]{neukirch92}
@@ -74,7 +74,7 @@
 \newblock Springer, 1992
 
 \bibitem[PC70]{priesscrampe69}
-\textsc{Priess-Crampe}, Sibylla:
+\textsc{Prieß-Crampe}, Sibylla:
 \newblock Archimedische Klassen von Kommutatoren in angeordneten Gruppen.
 \newblock {In: }\emph{Archiv der Mathematik} 21 (1970), Nr. 1, S. 362 -- 365
 
@@ -114,7 +114,7 @@
 \bibitem[Xin05]{xin04}
 \textsc{Xin}, Guoce:
 \newblock A residue theorem for Malcev--Neumann series.
-\newblock {In: }\emph{Advances in Applied Mathematics} 35 (2005), Nr. 3, S. 271
+\newblock \emph{Advances in Applied Mathematics} 35 (2005), Nr. 3, S. 271
   -- 293
 
 \end{thebibliography}

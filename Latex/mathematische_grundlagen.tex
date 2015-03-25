@@ -118,7 +118,7 @@ Sei $K$ eine nichtleere Menge mit mindestens zwei Elementen und seien $+$ und $\
 %In seinem großen Werk $\glqq$Von Zahlen und Größen - Dritthalbtausend Jahre Praxis und Theorie$\grqq$ beschreibt Lüneburg die lange Entwicklungsgeschichte der Mathematik und ihre Ursprünge. Darin definiert er auch den Quotientenkörper \cite[S. 557]{Lueneburg08}.
 
 \begin{satz}\label{quotkoerper} %\cite{fischer08} \cite{Lueneburg08} statt RxR* mach ich RxR\0 weil R ist nicht definiert.
-Sei $R$ ein Integritätsbereich. Wir definieren auf $R\times R\setminus\lbrace 0\rbrace$ eine Äquivalenzrelation $\sim$ wie folgt. Sei $\left(r, u\right), \left(s, v\right) \in R\times R\setminus\lbrace 0\rbrace$. Es gilt, dass $\left(r,u\right) \sim \left(s, v\right)$ ist genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$. Wir können nun schreiben: \\
+Sei $R$ ein Integritätsbereich. Wir definieren auf $R\times R\setminus\lbrace 0\rbrace$ eine Äquivalenzrelation $\sim$ wie folgt. Sei $\left(r, u\right), \left(s, v\right) \in R\times R\setminus\lbrace 0\rbrace$. Es gilt $\left(r,u\right) \sim \left(s, v\right)$ genau dann, wenn $rv = su$ ist. Man sieht sofort, dass die Relation reflexiv und symmetrisch ist. Sei $\left(r,u\right) \sim \left(s, v\right)$ und $ \left(s, v\right) \sim \left(t, w\right) $, also $rv = su$ und $sw = tv$. Wir können nun schreiben: \\
 \[rwv = rvw = suw = swu = tvu = tuv.\]
 Nach Voraussetzung ist $R$ ein Integritätsbereich. Da $v$ ungleich null ist, folgt $rw = tu$, so dass $\left(r,u \right) \sim \left(t, w\right)$ ist. Somit ist $\sim$ transitiv. \\
 Auf $R\times R\setminus \lbrace 0\rbrace$ definieren wir eine Addition und eine Multiplikation durch 
@@ -159,10 +159,10 @@ Die Wohldefiniertheit der Multiplikation folgt analog. Denn für die oben defini
 %\begin{equation*}
 %\left(r_2s\right)\left(u_1v\right) = r_1u_2sv = \left(r_1s\right)\left(u_2v\right).
 %\end{equation*}
-Die Menge (Quot(R), +) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität sind leicht zu überprüfen. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
-Weiter ist (Quot(R), $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{u}{r}$ das inverse Element ist. \\
+Die Menge (Quot$(R), +$) ist eine abelsche Gruppe. Die Assoziativität und Kommutativität sind leicht zu überprüfen. Das neutrale Element der Addition ist $0 = \frac{0}{1}$, das negative Element der Addition ist $-\left(\frac{r}{u}\right) = \frac{-r}{u}$.\\
+Weiter ist (Quot$(R)$, $\cdot$) eine abelsche Gruppe, wobei $\frac{1}{1}$ das neutrale Element und $\left(\frac{r}{u}\right)^{-1} = \frac{u}{r}$ das inverse Element ist. \\
 Das Distributivgesetz kann leicht nachgerechnet werden.\\
-Somit ist der Körper (Quot(R), +, $\cdot$) konstruiert.
+Somit ist der Körper (Quot$(R)$, +, $\cdot$) konstruiert.
 %Der Quotientenkörper ist nach Definition der kleinste Körper in den ein Integritätsring \textit{R} eingebettet werden kann. %\textit{Quot(R)} enthält alle Elemente der Form $\frac{a}{b}, \text{ mit} a,b \in R, b \neq 0. $ Es gibt einen injektiven Ringhomomorphismus $\phi : R \rightarrow Quot(R), \phi(a) = frac{a}{1}$.
 }
 %
@@ -207,7 +207,7 @@ Die Abbildung $\Phi$ ist ein Homomorphismus, denn es gilt:
 = \Phi\left(\frac{a}{b}\right) + \Phi\left(\frac{c}{d}\right).
 \end{eqnarray*}
 
-Die Abbildung $\Phi$ ist ebenso multiplikativ:\\
+Die Abbildung $\Phi$ ist ebenso multiplikativ:
 \begin{eqnarray*}
 \Phi\left(\frac{a}{b} \frac{c}{d}\right) &=& \Phi\left(\frac{ac}{bd}\right)
  = \varphi(ac){\left(\varphi(bd)\right)}^{-1} \\
@@ -215,8 +215,8 @@ Die Abbildung $\Phi$ ist ebenso multiplikativ:\\
 &=& \varphi(a){\varphi(b)}^{-1} \varphi(c){\varphi(d)}^{-1} \\
 &=& \Phi\left(\frac{a}{b}\right) \Phi\left(\frac{c}{d}\right).
 \end{eqnarray*}
-Weiter gilt $\Phi(1_R) = \Phi\left(\frac{1_R}{1_R}\right) = \varphi(1_R){\varphi(1_R)}^{-1} = 1_K$.\\
-Sei $a\in R$, so erhalten wir $\Phi\left(\frac{a}{1}\right)=\varphi(a){\varphi(1_R)}^{-1} = \varphi(a)$.\\
+Weiter gilt $\Phi(1_R) = \Phi\left(\frac{1_R}{1_R}\right) = \varphi(1_R){\varphi(1_R)}^{-1} = 1_K$.
+Sei $a\in R$, so erhalten wir $\Phi\left(\frac{a}{1}\right)=\varphi(a){\varphi(1_R)}^{-1} = \varphi(a)$.
 Der Körperhomomorphismus ist eindeutig, denn angenommen es gäbe $\Phi_1, \Phi_2$ Körperhomomorphismen mit ${\Phi_1}_{|R} = {\Phi_2}_{|R} = \varphi$. Sei $\frac{a}{b}\in \text{Quot}(R)$ mit $a\in R, b\in R\setminus\lbrace0\rbrace$. Dann gilt:
 $
 \Phi_1\left(\frac{a}{b}\right) = \Phi_1\left(ab^{-1}\right) = \Phi(a){\left(\Phi(b)\right)}^{-1} = \varphi(a){\left(\varphi(b)\right)}^{-1} = \Phi_2\left(a\right){\left(\Phi_2(b)\right)}^{-1} = \Phi\left(\frac{a}{b}\right).
@@ -419,7 +419,9 @@ Eine angeordnete abelsche Gruppe ist ein Tripel $\left(G, +, \leq\right)$, wobei
 %
 %
 \begin{nota}
-Wir verwenden im Kapitel \ref{chap3} für eine angeordnete abelsche Gruppe $\left(G, +, \leq\right)$ vereinfachend die Bezeichnung $G$.
+Wir verwenden 
+% im Kapitel \ref{chap3}
+ für eine angeordnete abelsche Gruppe $\left(G, +, \leq\right)$ vereinfachend die Bezeichnung $G$.
 \end{nota}
 
 %\begin{bem}\label{angeordnetAbelsch} %\cite{Lueneburg08} 
@@ -558,13 +560,14 @@ Im Folgenden sei $G$ eine angeordnete abelsche Gruppe.
 Der \textit{absolute Betrag} $|a|$ eines Elements a $\in  G$ ist definiert als $|a| = \textup{max}\lbrace a, -a \rbrace$.
 \end{defn}
 
-Es gilt die \textit{Dreiecksungleichung}
-\[|a+ b | \le |a| + |b|, \text{ für alle } a, b \in G.\]
+\begin{lemma}
+Für alle $a,b \in G$ gilt die Dreiecksungleichung:
+\[|a+ b | \le |a| + |b|.\]
+\end{lemma}
+\beweis{
 Die Ungleichung gilt trivialerweise, wenn beide Elemente das gleiche Vorzeichen haben. Sei also $a < 0$ und $b > 0$. Dann ist $a= -|a|$.\\
-Falls $|a|\le b$ ist, erhalten wir
-\[ |a + b |= |-|a|+b| = b - |a| \le b = |b|\le|a| + |b|. \]
-Falls $|a| >b$ ist, erhalten wir 
-\[|a+b| = |-|a| +b| = |a| - b \le |a|\le |a| + |b|.\]  
+Falls $|a|\le b$ ist, erhalten wir $|a + b |= |-|a|+b| = b - |a| \le b = |b|\le|a| + |b|$.\\
+Falls $|a| >b$ ist, erhalten wir $|a+b| = |-|a| +b| = |a| - b \le |a|\le |a| + |b|$.} 
 %
 % 
 %
@@ -609,16 +612,18 @@ Des Weiteren schließen wir aus Definition \ref{uek} und \ref{aae}:
 \item[(v)] $\sim$ ist eine Äquivalenzrelation.
 \end{enumerate}
 Sind alle Elemente von $G\setminus\lbrace 0 \rbrace$ archimedisch äquivalent, so ist die Gruppe \textit{archimedisch angeordnet}. \\ 
-Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse}, in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. Wir definieren auf den archimedischen Klassen die Anordnung: $\lbrack g\rbrack < \lbrack h\rbrack$ genau dann, wenn für alle $n\in \N n|a| < |b|$ ist.\label{archimedischeKlassen}\\
+Durch die archimedische Äquivalenz werden die Elemente von $G$ in disjunkte Klassen unterteilt, die angeordnet werden können. Es bezeichne $[g]$ die \textit{archimedische Klasse}, in der das Element $g \in G$ liegt, $[G]$ die Gesamtheit aller archimedischen Klassen von $G$. \\
+Wir definieren auf den archimedischen Klassen die Anordnung: 
+\[\lbrack g\rbrack < \lbrack h\rbrack \Leftrightarrow \forall n\in \N: n|a| < |b| \]\label{archimedischeKlassen}
 % evtl überflüssig: Sind zwei Elemente $a,~b \in G$ nicht archimedisch äquivalent, gilt entweder für alle
 %$n \in \N$ ist $n|a|<|b|$, oder für alle $n \in \N$ ist $n|b| <|a|$.
 \end{folg}
 
 
 \begin{lemma}\label{maximumKlasseIstGanzeKlasse}
-Die archimedische Klasse einer Summe entspricht der archimedischen Klasse des größten Summanden. 
+Sei $g_1, ..., g_n \in G$ und $g_k >0$ für alle $k=1,...,n$, dann gilt: \[\lbrack g_1 + ... + g_n \rbrack = \max_{k}(\lbrack g_k \rbrack).\]
 \end{lemma}
-\beweis{Seien $g,h\in G$, wir müssen zeigen, dass $\lbrace g +h \rbrack \stackrel{!}{=} \max(\lbrack g \rbrack, \lbrack h \rbrack)$ ist. Sei o.B.d.A. $g \leq h$, dann gilt $h < g+h \leq 2h$. Daraus folgt sofort, dass $\lbrack g+h\rbrack = \lbrack h\rbrack$ ist. 
+\beweis{Die Aussage gilt offensichtlich für eine endliche Anzahl von Summanden, wenn die Behauptung für zwei Summanden erfüllt ist. Seien also $g,h\in G$ und größer null. Wir nehmen o.B.d.A. $g \leq h$ an, damit gilt $h < g+h \leq 2h$. Es folgt sofort, dass $\lbrack g+h\rbrack = \lbrack h\rbrack$ ist. 
 }
 %
 %\begin{satz}\label{agkku}
@@ -768,13 +773,16 @@ Für die negativen Gruppenelemente $g \in G$, mit $g < 0$  und daher $-g >0$ erh
 %
 %
 \begin{folg}
-Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$. Dann gibt es genau einen o-Monomorphismus $\Phi\colon G \to \R$, $g\mapsto 1$.
+Sei $G$ eine archimedisch angeordnete abelsche Gruppe und sei $g\in G$ mit $g>0$. Dann gibt es genau einen o-Monomorphismus $\Phi\colon G \to \R$ mit $\Phi(g) = 1$.
 
 \end{folg}
 \beweis{
 Nach dem Satz von Hölder \ref{aga} gibt es einen o-Isomorphismus $\varphi\colon G\to U, g\mapsto u$, wobei $U$ eine Untergruppe der additiven Gruppe der reellen Zahlen ist. \\
-Weiterhin wissen wir aus Satz \ref{homomorphismus nach R}, dass es eine reelle positive Zahl $r$ gibt, sodass ein o-Monomorphismus die Form $\phi\colon G\to \R,g \mapsto rg$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus $\Phi := \phi \circ\varphi$ ergibt wiederum einen o-Monomorphismus. Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{\varphi(g)}$. Dieser Quotient existiert, da $u \neq 0$ ist und da $U$ eine Untergruppe des Körpers der reellen Zahlen ist, womit das Inverse zu $\varphi(g)$ nämlich $\frac{1}{\varphi(g)}$ eindeutig existiert. Da $\varphi(g)$, da es sich um einen o-Isomorphismus handelt, positiv ist, folgt die Positivität von $r$. Die Abbildung $\Phi \colon G\to \R, g\mapsto 1_\R$, mit $\Phi = \phi\circ \varphi$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
-Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R, g\mapsto 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{\varphi(g)}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
+Weiterhin wissen wir aus Satz \ref{homomorphismus nach R}, dass es eine reelle positive Zahl $r$ gibt, sodass ein o-Monomorphismus die Form $\phi\colon U\to \R,u \mapsto ru$ hat. Die Konkatenation des o-Isomorphismus und o-Monomorphismus $\Phi := \phi \circ\varphi$ ergibt wiederum einen o-Monomorphismus. 
+Wegen $0<g$ folgt $0\neq \varphi(g)\in\R$ und somit existiert $\frac{1}{\varphi(g)}=: r$.
+%Wir wählen für $0 < g \in G$ ein $r:= \frac{1}{\varphi(g)}$. Dieser Quotient existiert, da $\varphi(g) \neq 0$ ist und da $U$ eine Untergruppe des Körpers der reellen Zahlen ist, womit das Inverse zu $\varphi(g)$ nämlich $\frac{1}{\varphi(g)}$ eindeutig existiert. Da $\varphi(g)$, da es sich um einen o-Isomorphismus handelt, positiv ist, folgt die Positivität von $r$. 
+%Die Abbildung $\Phi \colon G\to \R, g\mapsto 1_\R$, mit $\Phi = \phi\circ \varphi$ ist nach Satz \ref{homomorphismus nach R} ein o-Monomorphismus. \\
+Die Eindeutigkeit des o-Monomorphismus der Form $\Phi \colon G\to \R$ mit $\Phi(g)= 1$ folgt direkt aus der Eindeutigkeit des Quotienten $\frac{1}{\varphi(g)}$, welche wir aufgrund der o-Isomorphie zu einer Untergruppe der reellen Zahlen erhalten.
 }
 %
 %
@@ -808,8 +816,8 @@ Eine Untergruppe $U$ von $G$ nennen wir \textit{konvex}, wenn aus $u \in U$ und 
 Eine angeordnete abelsche Gruppe $G$ ist genau dann archimedisch, wenn sie nur die trivialen konvexen Untergruppen, nämlich $\lbrace 0_G\rbrace$ und sich selbst, besitzt.
 \end{satz}
 \beweis{
-$``\Rightarrow "$ Angenommen es gibt eine nichttriviale konvexe Untergruppe $U$ von $G$. Dann gibt es nach Voraussetzung für alle Elemente $g\in G$ mit $g > u$ für alle $u\in U$, ein $v\in U$ und $n\in\N$, sodass $nv > g$ ist. Aufgrund der Abgeschlossenheit der Untergruppe gilt $nv \in U$. Wir erhalten also $U=G$. Widerspruch!\\
-$``\Leftarrow "$ Angenommen $G$ sei nicht archimedisch. Sei $0 < g <h$ mit $g,h \in G$, dann gilt für alle $n = 0, \pm 1,\pm 2, ...$ dass $ng \leq h$ ist und damit $ng \in G$. Die von $g$ erzeugte konvexe Untergruppe $\langle g\rangle$ ist ungleich $G$ und wir erhalten somit $\langle g\rangle = \lbrace 0_G\rbrace$. Dies ist ein Widerspruch zur Annahme.
+$``\Rightarrow "$ Angenommen es gibt eine nichttriviale konvexe Untergruppe $U$ von $G$. Sei $g\in G$ mit $g > u$ für alle $u\in U$ und damit $g$ nicht Element der konvexen Untergruppe $U$. Wegen der Archimedizität von $G$ gibt es ein $v\in U$ und $n\in\N$, sodass $nv > g$ ist. Da die Untergruppe abgeschlossen bezüglich der Addition ist, gilt $nv \in U$. Aufgrund der Konvexität von $U$ erhalten wir $g\in U$. Widerspruch!\\
+$``\Leftarrow "$ Angenommen $G$ sei nicht archimedisch. Sei $0 < g <h$ mit $g,h \in G$, dann gilt für alle $n = 0, \pm 1,\pm 2, ...$ dass $ng < h$ ist. Also ist die von $g$ erzeugte konvexe Untergruppe $\langle g\rangle$ ungleich $G$, da sie $h$ nicht enthält. Nach Voraussetzung erhalten wir $\langle g\rangle = \lbrace 0_G\rbrace$. Dies ist ein Widerspruch zur Annahme.
 }
 %
 %
@@ -836,7 +844,7 @@ Man sieht leicht, dass die Inklusion eine Ordnung auf $\Sigma$ ist. Wir zeigen n
 %Darauf verzichtet, weil Inklusion ja eig trivialerweise eine Ordnung ist.
 %%Sei $C \in \Sigma$, dann gilt offensichtlich $C \subseteq C$. Somit ist die Inklusionsordnung reflexiv. Sei $C, D \in \Sigma$  und sei $C \subseteq D$ und $D\subseteq C$. Dann gilt für alle $c\in C$, und $d\in D$, dass $c\in D$ und $d \in C$ liegt. Weiterhin folgt aus $c \in C$ und $g \in G$ mit $ 0 < |g| < |c|$, dass $g \in C$. Da $C\subseteq D$ ist, erhalten wir $g\in D$. Der Fall für $d \in D$ folgt analog. Damit erhalten wir die Antisymmetrie der Ordnung. \\
 %Sei $C \subseteq D$ und $D \subseteq E$ mit $C, D, E \in \Sigma$. Für alle $c \in C$ gilt wegen $C\subseteq D$, dass $c \in D$ ist. Da aufgrund der selben Argumentation alle Elemente aus $D$ in $E$ liegen, folgt $c\in E$. Die Konvexität zeigt man analog. Da $c$ beliebig ist, haben wir die Transitivität der Inklusion gezeigt.\\
-Angenommen es gäbe $C,D \in \Sigma$, sodass weder $C \subset D$ noch $D \subset C$ noch $C= D$ gilt. O.B.d.A. existiert für alle $c \in C$ ein $d \in D$ mit $0 < |c| <|d|$ aufgrund der Anordnung von $G$. Wegen der Konvexität von $D$ folgt, dass $c$ in $D$ liegt. Da dadurch $C$ eine Teilmenge von $D$ wäre, ist dies ein Widerspruch zur Annahme.
+Angenommen es gäbe $C,D \in \Sigma$, sodass weder $C \subset D$ noch $D \subset C$ noch $C= D$ gilt. O.B.d.A. existiert für alle $c \in C$ ein $d \in D$ mit $0 < |c| \leq|d|$ aufgrund der Anordnung von $G$. Wegen der Konvexität von $D$ folgt, dass $c$ in $D$ liegt. Da dadurch $C$ eine Teilmenge von $D$ wäre, ist dies ein Widerspruch zur Annahme.
 % dann gilt nach Definition der Konvexität, dass $d \in C$ liegt. Dies ist ein Widerspruch zur Voraussetzung.
 }
 %
